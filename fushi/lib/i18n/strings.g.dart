@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 156927 (9231 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8798,6 +8798,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Toggle subtitle list';
   String get shortcut_action_video_volume_down => 'Volume down';
   String get shortcut_action_video_volume_up => 'Volume up';
+  String get shortcut_action_web_browser_back => 'Back';
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  String get shortcut_action_web_browser_forward => 'Forward';
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  String get shortcut_action_web_browser_reload => 'Reload';
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
   String get shortcut_add_binding => 'Add another binding';
   String get shortcut_assign_pick_action => 'Assign to action…';
   String get shortcut_clear => 'Clear';
@@ -13087,11 +13103,158 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_adblock_update_done => 'Filter lists updated';
   String get web_adblock_update_failed => 'Failed to update filter lists';
   String get web_adblock_update_now => 'Update filter lists now';
+  String get web_browser_bookmark_add => 'Add bookmark';
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  String get web_browser_bookmark_folder_new => 'New folder';
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  String get web_browser_bookmark_title_label => 'Title';
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  String get web_browser_clear_data_action => 'Clear data';
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  String get web_browser_clear_data_history => 'Browsing history';
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  String get web_browser_download_open => 'Open';
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  String get web_browser_download_remove => 'Remove from list';
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  String get web_browser_download_state_failed => 'Failed';
+  String get web_browser_downloads_empty => 'No downloads yet';
+  String get web_browser_downloads_title => 'Downloads';
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  String get web_browser_error_offline_title => 'You\'re offline';
+  String get web_browser_error_title => 'This page can\'t be reached';
+  String get web_browser_find_close => 'Close find bar';
+  String get web_browser_find_hint => 'Find in page';
+  String get web_browser_find_next => 'Next match';
+  String get web_browser_find_none => 'No matches';
+  String get web_browser_find_previous => 'Previous match';
   String get web_browser_forward => 'Forward';
+  String get web_browser_furigana => 'Furigana';
+  String get web_browser_history_clear => 'Clear history';
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  String get web_browser_history_empty => 'No browsing history yet';
+  String get web_browser_history_search_hint => 'Search history';
+  String get web_browser_history_title => 'History';
+  String get web_browser_image_copy_url => 'Copy image address';
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  String get web_browser_image_save => 'Save image';
+  String get web_browser_known_words => 'Highlight new words';
+  String get web_browser_link_copy => 'Copy link address';
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  String get web_browser_link_share => 'Share link';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  String get web_browser_menu_downloads => 'Downloads';
+  String get web_browser_menu_history => 'History';
+  String get web_browser_menu_open_external => 'Open in system browser';
+  String get web_browser_menu_settings => 'Browser settings';
+  String get web_browser_menu_text_size => 'Text size';
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  String get web_browser_permission_ask => 'Ask';
+  String get web_browser_permission_autoplay => 'Autoplay';
+  String get web_browser_permission_camera => 'Camera';
+  String get web_browser_permission_clipboard => 'Clipboard';
+  String get web_browser_permission_geolocation => 'Location';
+  String get web_browser_permission_microphone => 'Microphone';
+  String get web_browser_permission_notifications => 'Notifications';
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  String get web_browser_permission_request_allow => 'Allow';
+  String get web_browser_permission_request_block => 'Block';
+  String get web_browser_permission_request_camera => 'your camera';
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  String get web_browser_permission_request_geolocation => 'your location';
+  String get web_browser_permission_request_microphone => 'your microphone';
+  String get web_browser_permission_request_notifications => 'notifications';
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  String get web_browser_range_all => 'All time';
+  String get web_browser_range_last_day => 'Last 24 hours';
+  String get web_browser_range_last_hour => 'Last hour';
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  String get web_browser_range_last_week => 'Last 7 days';
+  String get web_browser_range_title => 'Time range';
+  String get web_browser_reader_mode => 'Reader mode';
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  String get web_browser_reader_mode_save => 'Save to library';
   String get web_browser_search_engine => 'Search engine';
+  String get web_browser_search_engine_add => 'Add search engine';
+  String get web_browser_search_engine_builtin => 'Built-in';
+  String get web_browser_search_engine_custom => 'Custom';
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
   String get web_browser_search_hint => 'Search or enter address';
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  String get web_browser_settings_site_settings => 'Site settings';
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  String get web_browser_sidebar_toggle => 'Sidebar';
   String get web_browser_site_add => 'Add to sites';
   String get web_browser_site_added => 'Added to sites';
   String get web_browser_site_edit => 'Edit site';
@@ -13099,13 +13262,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_site_name_hint => 'Leave empty to use the host name';
   String get web_browser_site_new => 'Add site';
   String get web_browser_site_remove => 'Remove from sites';
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  String get web_browser_site_settings_title => 'Site settings';
   String get web_browser_site_url => 'Address';
   String get web_browser_site_url_invalid =>
       'Enter a web address, such as https://example.com or http://localhost:8080';
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
   String get web_browser_sites_title => 'Sites';
+  String get web_browser_tab_close => 'Close tab';
+  String get web_browser_tab_close_others => 'Close other tabs';
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  String get web_browser_tab_incognito => 'Incognito';
+  String get web_browser_tab_list_empty => 'No open tabs';
+  String get web_browser_tab_list_title => 'Tabs';
+  String get web_browser_tab_new => 'New tab';
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  String get web_browser_tab_style => 'Tab style';
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  String get web_browser_tab_style_top => 'Top tab bar';
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  String get web_browser_text_size_decrease => 'Smaller text';
+  String get web_browser_text_size_increase => 'Larger text';
+  String get web_browser_text_size_reset => 'Reset text size';
   String get web_browser_title => 'Browser';
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   String get web_hub_browse => 'Web';
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -27767,6 +27957,36 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'رفع الصوت';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'تعيين لإجراء…';
@@ -35073,15 +35293,278 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -35097,6 +35580,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -35107,7 +35601,48 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -50125,6 +50660,36 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Lauter';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Aktion zuweisen…';
@@ -57526,15 +58091,278 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -57550,6 +58378,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -57560,7 +58399,48 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -72607,6 +73487,36 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Subir volumen';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Asignar a acción…';
@@ -80034,15 +80944,278 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -80058,6 +81231,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -80068,7 +81252,48 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -95178,6 +96403,36 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Volume +';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Assigner à une action…';
@@ -102624,15 +103879,278 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -102648,6 +104166,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -102658,7 +104187,48 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -117515,6 +119085,36 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Volume +';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Tetapkan ke tindakan…';
@@ -124873,15 +126473,278 @@ class _StringsId extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -124897,6 +126760,17 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -124907,7 +126781,48 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -139890,6 +141805,36 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Alza volume';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Assegna ad azione…';
@@ -147279,15 +149224,278 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -147303,6 +149511,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -147313,7 +149532,48 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -161561,6 +163821,36 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => '音量＋';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'アクションに割り当て…';
@@ -168653,15 +170943,278 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -168677,6 +171230,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -168687,7 +171251,48 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -182958,6 +185563,36 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => '음량 +';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => '동작에 할당…';
@@ -190087,15 +192722,278 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -190111,6 +193009,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -190121,7 +193030,48 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -205060,6 +208010,36 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Volume omhoog';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Aan actie toewijzen…';
@@ -212443,15 +215423,278 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -212467,6 +215710,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -212477,7 +215731,48 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -227466,6 +230761,36 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Aumentar volume';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Atribuir a ação…';
@@ -234870,15 +238195,278 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -234894,6 +238482,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -234904,7 +238503,48 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -249852,6 +253492,36 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Громче';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Назначить действие…';
@@ -257243,15 +260913,278 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -257267,6 +261200,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -257277,7 +261221,48 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -271989,6 +275974,36 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'เพิ่มเสียง';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'กำหนดให้กับการกระทำ…';
@@ -279292,15 +283307,278 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -279316,6 +283594,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -279326,7 +283615,48 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -294189,6 +298519,36 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Ses Artır';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Eyleme ata…';
@@ -301545,15 +305905,278 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -301569,6 +306192,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -301579,7 +306213,48 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -316389,6 +321064,36 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => 'Tăng âm lượng';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => 'Gán cho hành động…';
@@ -323726,15 +328431,278 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -323750,6 +328718,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -323760,7 +328739,48 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -337308,6 +342328,34 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => '音量+';
   @override
+  String get shortcut_action_web_browser_back => '后退';
+  @override
+  String get shortcut_action_web_browser_close_tab => '关闭标签页';
+  @override
+  String get shortcut_action_web_browser_find_in_page => '在页面中查找';
+  @override
+  String get shortcut_action_web_browser_focus_address => '聚焦地址栏';
+  @override
+  String get shortcut_action_web_browser_forward => '前进';
+  @override
+  String get shortcut_action_web_browser_new_tab => '新建标签页';
+  @override
+  String get shortcut_action_web_browser_next_tab => '下一个标签页';
+  @override
+  String get shortcut_action_web_browser_previous_tab => '上一个标签页';
+  @override
+  String get shortcut_action_web_browser_reload => '刷新';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab => '重新打开关闭的标签页';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark => '收藏 / 取消收藏本页';
+  @override
+  String get shortcut_action_web_browser_zoom_in => '放大';
+  @override
+  String get shortcut_action_web_browser_zoom_out => '缩小';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => '重置缩放';
+  @override
   String get shortcut_add_binding => '添加绑定';
   @override
   String get shortcut_assign_pick_action => '分配到动作…';
@@ -343997,15 +349045,260 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_adblock_update_now => '立即更新过滤列表';
   @override
+  String get web_browser_bookmark_add => '加入书签';
+  @override
+  String get web_browser_bookmark_edit => '编辑书签';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      '删除「${name}」及其中的全部内容？';
+  @override
+  String get web_browser_bookmark_folder_name => '文件夹名称';
+  @override
+  String get web_browser_bookmark_folder_new => '新建文件夹';
+  @override
+  String get web_browser_bookmark_folder_rename => '重命名文件夹';
+  @override
+  String get web_browser_bookmark_move_title => '移动到文件夹';
+  @override
+  String get web_browser_bookmark_remove => '移除书签';
+  @override
+  String get web_browser_bookmark_reorder => '拖动以调整顺序';
+  @override
+  String get web_browser_bookmark_title_label => '标题';
+  @override
+  String get web_browser_bookmarks_empty => '这里还没有书签';
+  @override
+  String get web_browser_bookmarks_title => '书签';
+  @override
+  String get web_browser_clear_data_action => '清除数据';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      '在此设备上，Cookie、网站数据和缓存会全部清除，不受时间范围限制';
+  @override
+  String get web_browser_clear_data_cache => '缓存的图片和文件';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookie 和网站数据';
+  @override
+  String get web_browser_clear_data_cookies_hint => '会退出大多数网站的登录';
+  @override
+  String get web_browser_clear_data_done => '已清除浏览数据';
+  @override
+  String get web_browser_clear_data_failed => '部分数据未能清除';
+  @override
+  String get web_browser_clear_data_history => '浏览历史';
+  @override
+  String get web_browser_clear_data_title => '清除浏览数据';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      '已下载 ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) => '无法下载 ${name}';
+  @override
+  String get web_browser_download_file_missing => '文件已被移动或删除';
+  @override
+  String get web_browser_download_open => '打开';
+  @override
+  String get web_browser_download_open_failed => '无法打开文件';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} / ${total}';
+  @override
+  String get web_browser_download_remove => '从列表中移除';
+  @override
+  String web_browser_download_started({required Object name}) => '正在下载 ${name}';
+  @override
+  String get web_browser_download_state_cancelled => '已取消';
+  @override
+  String get web_browser_download_state_failed => '失败';
+  @override
+  String get web_browser_downloads_empty => '还没有下载记录';
+  @override
+  String get web_browser_downloads_title => '下载';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      '网站返回了 HTTP ${code}，页面为空。';
+  @override
+  String get web_browser_error_offline_body => '请检查网络连接后重试。';
+  @override
+  String get web_browser_error_offline_title => '没有网络连接';
+  @override
+  String get web_browser_error_title => '无法打开此网页';
+  @override
+  String get web_browser_find_close => '关闭查找';
+  @override
+  String get web_browser_find_hint => '在页面中查找';
+  @override
+  String get web_browser_find_next => '下一个';
+  @override
+  String get web_browser_find_none => '无结果';
+  @override
+  String get web_browser_find_previous => '上一个';
+  @override
   String get web_browser_forward => '前进';
+  @override
+  String get web_browser_furigana => '注音';
+  @override
+  String get web_browser_history_clear => '清除历史记录';
+  @override
+  String get web_browser_history_clear_confirm => '删除这段时间的历史记录？此操作无法撤销。';
+  @override
+  String get web_browser_history_empty => '还没有浏览记录';
+  @override
+  String get web_browser_history_search_hint => '搜索历史记录';
+  @override
+  String get web_browser_history_title => '历史记录';
+  @override
+  String get web_browser_image_copy_url => '复制图片地址';
+  @override
+  String get web_browser_image_load_failed => '无法加载图片';
+  @override
+  String get web_browser_image_ocr_lookup => '识别图中文字查词';
+  @override
+  String get web_browser_image_open_new_tab => '在新标签页中打开图片';
+  @override
+  String get web_browser_image_save => '保存图片';
+  @override
+  String get web_browser_known_words => '生词高亮';
+  @override
+  String get web_browser_link_copy => '复制链接地址';
+  @override
+  String get web_browser_link_open_background_tab => '在后台标签页中打开';
+  @override
+  String get web_browser_link_open_incognito_tab => '在无痕标签页中打开';
+  @override
+  String get web_browser_link_open_new_tab => '在新标签页中打开';
+  @override
+  String get web_browser_link_share => '分享链接';
   @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
   @override
+  String get web_browser_menu_bookmarks => '书签';
+  @override
+  String get web_browser_menu_desktop_site => '桌面版网页';
+  @override
+  String get web_browser_menu_downloads => '下载';
+  @override
+  String get web_browser_menu_history => '历史记录';
+  @override
+  String get web_browser_menu_open_external => '在系统浏览器打开';
+  @override
+  String get web_browser_menu_settings => '浏览器设置';
+  @override
+  String get web_browser_menu_text_size => '文字大小';
+  @override
+  String get web_browser_open_external_failed => '无法在其他应用中打开链接';
+  @override
+  String get web_browser_permission_ask => '询问';
+  @override
+  String get web_browser_permission_autoplay => '自动播放';
+  @override
+  String get web_browser_permission_camera => '摄像头';
+  @override
+  String get web_browser_permission_clipboard => '剪贴板';
+  @override
+  String get web_browser_permission_geolocation => '位置';
+  @override
+  String get web_browser_permission_microphone => '麦克风';
+  @override
+  String get web_browser_permission_notifications => '通知';
+  @override
+  String get web_browser_permission_popups => '弹出式窗口和重定向';
+  @override
+  String get web_browser_permission_request_allow => '允许';
+  @override
+  String get web_browser_permission_request_block => '阻止';
+  @override
+  String get web_browser_permission_request_camera => '摄像头';
+  @override
+  String get web_browser_permission_request_camera_microphone => '摄像头和麦克风';
+  @override
+  String get web_browser_permission_request_clipboard => '剪贴板';
+  @override
+  String get web_browser_permission_request_geolocation => '位置信息';
+  @override
+  String get web_browser_permission_request_microphone => '麦克风';
+  @override
+  String get web_browser_permission_request_notifications => '通知';
+  @override
+  String get web_browser_permission_request_remember => '记住对此网站的选择';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => '允许 ${site} 使用${what}？';
+  @override
+  String get web_browser_play_in_fushi => '用 Fushi 播放';
+  @override
+  String get web_browser_range_all => '全部时间';
+  @override
+  String get web_browser_range_last_day => '过去 24 小时';
+  @override
+  String get web_browser_range_last_hour => '过去一小时';
+  @override
+  String get web_browser_range_last_month => '过去 4 周';
+  @override
+  String get web_browser_range_last_week => '过去 7 天';
+  @override
+  String get web_browser_range_title => '时间范围';
+  @override
+  String get web_browser_reader_mode => '阅读模式';
+  @override
+  String get web_browser_reader_mode_empty => '这一页没有识别到正文';
+  @override
+  String get web_browser_reader_mode_exit => '退出阅读模式';
+  @override
+  String get web_browser_reader_mode_save => '存进书架';
+  @override
   String get web_browser_search_engine => '搜索引擎';
   @override
+  String get web_browser_search_engine_add => '添加搜索引擎';
+  @override
+  String get web_browser_search_engine_builtin => '内置';
+  @override
+  String get web_browser_search_engine_custom => '自定义';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      '删除「${name}」？';
+  @override
+  String get web_browser_search_engine_edit => '编辑搜索引擎';
+  @override
+  String get web_browser_search_engine_suggest_template => '联想网址（可选）';
+  @override
+  String get web_browser_search_engine_template => '搜索网址（用 %s 代替搜索词）';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      '请输入包含 %s 的 http(s) 网址';
+  @override
   String get web_browser_search_hint => '搜索或输入网址';
+  @override
+  String get web_browser_settings_clear_data => '清除浏览数据';
+  @override
+  String get web_browser_settings_collapse_on_scroll => '滚动时收起工具栏';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      '手机上往下滚收起成小地址条，往上滚或点一下展开';
+  @override
+  String get web_browser_settings_desktop_default => '默认打开桌面版网页';
+  @override
+  String get web_browser_settings_force_dark => '网页深色模式';
+  @override
+  String get web_browser_settings_force_dark_hint => '应用为深色时网页也用深色显示';
+  @override
+  String get web_browser_settings_manage_search_engines => '管理搜索引擎';
+  @override
+  String get web_browser_settings_restore_tabs => '恢复上次的标签页';
+  @override
+  String get web_browser_settings_restore_tabs_hint => '无痕标签页不会恢复';
+  @override
+  String get web_browser_settings_site_settings => '网站设置';
+  @override
+  String get web_browser_settings_tab_style_hint => '只影响宽窗口（横屏、平板、桌面）';
+  @override
+  String get web_browser_sidebar_toggle => '侧边栏';
   @override
   String get web_browser_site_add => '加入站点';
   @override
@@ -344021,6 +349314,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_site_remove => '从站点移除';
   @override
+  String get web_browser_site_settings_clear_all => '重置所有网站';
+  @override
+  String get web_browser_site_settings_clear_all_confirm => '重置所有网站的权限？';
+  @override
+  String get web_browser_site_settings_clear_site => '重置权限';
+  @override
+  String get web_browser_site_settings_empty => '还没有保存任何网站权限';
+  @override
+  String get web_browser_site_settings_title => '网站设置';
+  @override
   String get web_browser_site_url => '地址';
   @override
   String get web_browser_site_url_invalid =>
@@ -344030,7 +349333,47 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_sites_title => '站点';
   @override
+  String get web_browser_tab_close => '关闭标签页';
+  @override
+  String get web_browser_tab_close_others => '关闭其他标签页';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} 个标签页';
+  @override
+  String get web_browser_tab_incognito => '无痕';
+  @override
+  String get web_browser_tab_list_empty => '没有打开的标签页';
+  @override
+  String get web_browser_tab_list_title => '标签页';
+  @override
+  String get web_browser_tab_new => '新标签页';
+  @override
+  String get web_browser_tab_new_incognito => '新无痕标签页';
+  @override
+  String get web_browser_tab_reopen_closed => '重新打开关闭的标签页';
+  @override
+  String get web_browser_tab_style => '标签页样式';
+  @override
+  String get web_browser_tab_style_hint => '宽窗口（横屏、平板、桌面）下标签页摆在哪里';
+  @override
+  String get web_browser_tab_style_sidebar => '侧边栏';
+  @override
+  String get web_browser_tab_style_top => '顶部标签栏';
+  @override
+  String get web_browser_tab_style_use_sidebar => '改为侧边栏';
+  @override
+  String get web_browser_tab_style_use_top => '改为顶部标签栏';
+  @override
+  String get web_browser_text_size_decrease => '缩小文字';
+  @override
+  String get web_browser_text_size_increase => '放大文字';
+  @override
+  String get web_browser_text_size_reset => '恢复文字大小';
+  @override
   String get web_browser_title => '浏览器';
+  @override
+  String get web_browser_toolbar_expand => '展开工具栏';
+  @override
+  String get web_browser_youtube_subtitles => 'YouTube 字幕查词';
   @override
   String get web_hub_browse => '网页';
   @override
@@ -357834,6 +363177,36 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_volume_up => '音量＋';
   @override
+  String get shortcut_action_web_browser_back => 'Back';
+  @override
+  String get shortcut_action_web_browser_close_tab => 'Close tab';
+  @override
+  String get shortcut_action_web_browser_find_in_page => 'Find in page';
+  @override
+  String get shortcut_action_web_browser_focus_address => 'Focus address bar';
+  @override
+  String get shortcut_action_web_browser_forward => 'Forward';
+  @override
+  String get shortcut_action_web_browser_new_tab => 'New tab';
+  @override
+  String get shortcut_action_web_browser_next_tab => 'Next tab';
+  @override
+  String get shortcut_action_web_browser_previous_tab => 'Previous tab';
+  @override
+  String get shortcut_action_web_browser_reload => 'Reload';
+  @override
+  String get shortcut_action_web_browser_reopen_closed_tab =>
+      'Reopen closed tab';
+  @override
+  String get shortcut_action_web_browser_toggle_bookmark =>
+      'Bookmark this page';
+  @override
+  String get shortcut_action_web_browser_zoom_in => 'Zoom in';
+  @override
+  String get shortcut_action_web_browser_zoom_out => 'Zoom out';
+  @override
+  String get shortcut_action_web_browser_zoom_reset => 'Reset zoom';
+  @override
   String get shortcut_add_binding => 'Add another binding';
   @override
   String get shortcut_assign_pick_action => '分配到動作…';
@@ -364768,15 +370141,278 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
+  String get web_browser_bookmark_add => 'Add bookmark';
+  @override
+  String get web_browser_bookmark_edit => 'Edit bookmark';
+  @override
+  String web_browser_bookmark_folder_delete_confirm({required Object name}) =>
+      'Delete "${name}" and everything in it?';
+  @override
+  String get web_browser_bookmark_folder_name => 'Folder name';
+  @override
+  String get web_browser_bookmark_folder_new => 'New folder';
+  @override
+  String get web_browser_bookmark_folder_rename => 'Rename folder';
+  @override
+  String get web_browser_bookmark_move_title => 'Move to folder';
+  @override
+  String get web_browser_bookmark_remove => 'Remove bookmark';
+  @override
+  String get web_browser_bookmark_reorder => 'Drag to reorder';
+  @override
+  String get web_browser_bookmark_title_label => 'Title';
+  @override
+  String get web_browser_bookmarks_empty => 'No bookmarks here yet';
+  @override
+  String get web_browser_bookmarks_title => 'Bookmarks';
+  @override
+  String get web_browser_clear_data_action => 'Clear data';
+  @override
+  String get web_browser_clear_data_all_time_note =>
+      'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+  @override
+  String get web_browser_clear_data_cache => 'Cached images and files';
+  @override
+  String get web_browser_clear_data_cookies => 'Cookies and site data';
+  @override
+  String get web_browser_clear_data_cookies_hint =>
+      'Signs you out of most sites';
+  @override
+  String get web_browser_clear_data_done => 'Browsing data cleared';
+  @override
+  String get web_browser_clear_data_failed => 'Some data couldn\'t be cleared';
+  @override
+  String get web_browser_clear_data_history => 'Browsing history';
+  @override
+  String get web_browser_clear_data_title => 'Clear browsing data';
+  @override
+  String web_browser_download_completed({required Object name}) =>
+      'Downloaded ${name}';
+  @override
+  String web_browser_download_failed({required Object name}) =>
+      'Couldn\'t download ${name}';
+  @override
+  String get web_browser_download_file_missing =>
+      'The file was moved or deleted';
+  @override
+  String get web_browser_download_open => 'Open';
+  @override
+  String get web_browser_download_open_failed => 'Couldn\'t open the file';
+  @override
+  String web_browser_download_progress({
+    required Object received,
+    required Object total,
+  }) => '${received} of ${total}';
+  @override
+  String get web_browser_download_remove => 'Remove from list';
+  @override
+  String web_browser_download_started({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String get web_browser_download_state_cancelled => 'Cancelled';
+  @override
+  String get web_browser_download_state_failed => 'Failed';
+  @override
+  String get web_browser_downloads_empty => 'No downloads yet';
+  @override
+  String get web_browser_downloads_title => 'Downloads';
+  @override
+  String web_browser_error_http_body({required Object code}) =>
+      'The site returned HTTP ${code} with an empty page.';
+  @override
+  String get web_browser_error_offline_body =>
+      'Check your network connection, then try again.';
+  @override
+  String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_title => 'This page can\'t be reached';
+  @override
+  String get web_browser_find_close => 'Close find bar';
+  @override
+  String get web_browser_find_hint => 'Find in page';
+  @override
+  String get web_browser_find_next => 'Next match';
+  @override
+  String get web_browser_find_none => 'No matches';
+  @override
+  String get web_browser_find_previous => 'Previous match';
+  @override
   String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_furigana => 'Furigana';
+  @override
+  String get web_browser_history_clear => 'Clear history';
+  @override
+  String get web_browser_history_clear_confirm =>
+      'Delete history for this time range? This can\'t be undone.';
+  @override
+  String get web_browser_history_empty => 'No browsing history yet';
+  @override
+  String get web_browser_history_search_hint => 'Search history';
+  @override
+  String get web_browser_history_title => 'History';
+  @override
+  String get web_browser_image_copy_url => 'Copy image address';
+  @override
+  String get web_browser_image_load_failed => 'Couldn\'t load the image';
+  @override
+  String get web_browser_image_ocr_lookup => 'Look up text in image';
+  @override
+  String get web_browser_image_open_new_tab => 'Open image in new tab';
+  @override
+  String get web_browser_image_save => 'Save image';
+  @override
+  String get web_browser_known_words => 'Highlight new words';
+  @override
+  String get web_browser_link_copy => 'Copy link address';
+  @override
+  String get web_browser_link_open_background_tab => 'Open in background tab';
+  @override
+  String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
+  @override
+  String get web_browser_link_open_new_tab => 'Open in new tab';
+  @override
+  String get web_browser_link_share => 'Share link';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
   @override
+  String get web_browser_menu_bookmarks => 'Bookmarks';
+  @override
+  String get web_browser_menu_desktop_site => 'Desktop site';
+  @override
+  String get web_browser_menu_downloads => 'Downloads';
+  @override
+  String get web_browser_menu_history => 'History';
+  @override
+  String get web_browser_menu_open_external => 'Open in system browser';
+  @override
+  String get web_browser_menu_settings => 'Browser settings';
+  @override
+  String get web_browser_menu_text_size => 'Text size';
+  @override
+  String get web_browser_open_external_failed =>
+      'Couldn\'t open the link in another app';
+  @override
+  String get web_browser_permission_ask => 'Ask';
+  @override
+  String get web_browser_permission_autoplay => 'Autoplay';
+  @override
+  String get web_browser_permission_camera => 'Camera';
+  @override
+  String get web_browser_permission_clipboard => 'Clipboard';
+  @override
+  String get web_browser_permission_geolocation => 'Location';
+  @override
+  String get web_browser_permission_microphone => 'Microphone';
+  @override
+  String get web_browser_permission_notifications => 'Notifications';
+  @override
+  String get web_browser_permission_popups => 'Pop-ups and redirects';
+  @override
+  String get web_browser_permission_request_allow => 'Allow';
+  @override
+  String get web_browser_permission_request_block => 'Block';
+  @override
+  String get web_browser_permission_request_camera => 'your camera';
+  @override
+  String get web_browser_permission_request_camera_microphone =>
+      'your camera and microphone';
+  @override
+  String get web_browser_permission_request_clipboard => 'your clipboard';
+  @override
+  String get web_browser_permission_request_geolocation => 'your location';
+  @override
+  String get web_browser_permission_request_microphone => 'your microphone';
+  @override
+  String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_remember =>
+      'Remember for this site';
+  @override
+  String web_browser_permission_request_title({
+    required Object site,
+    required Object what,
+  }) => 'Allow ${site} to use ${what}?';
+  @override
+  String get web_browser_play_in_fushi => 'Play in Fushi';
+  @override
+  String get web_browser_range_all => 'All time';
+  @override
+  String get web_browser_range_last_day => 'Last 24 hours';
+  @override
+  String get web_browser_range_last_hour => 'Last hour';
+  @override
+  String get web_browser_range_last_month => 'Last 4 weeks';
+  @override
+  String get web_browser_range_last_week => 'Last 7 days';
+  @override
+  String get web_browser_range_title => 'Time range';
+  @override
+  String get web_browser_reader_mode => 'Reader mode';
+  @override
+  String get web_browser_reader_mode_empty =>
+      'No article text was found on this page';
+  @override
+  String get web_browser_reader_mode_exit => 'Exit reader mode';
+  @override
+  String get web_browser_reader_mode_save => 'Save to library';
+  @override
   String get web_browser_search_engine => 'Search engine';
   @override
+  String get web_browser_search_engine_add => 'Add search engine';
+  @override
+  String get web_browser_search_engine_builtin => 'Built-in';
+  @override
+  String get web_browser_search_engine_custom => 'Custom';
+  @override
+  String web_browser_search_engine_delete_confirm({required Object name}) =>
+      'Delete "${name}"?';
+  @override
+  String get web_browser_search_engine_edit => 'Edit search engine';
+  @override
+  String get web_browser_search_engine_suggest_template =>
+      'Suggestions URL (optional)';
+  @override
+  String get web_browser_search_engine_template =>
+      'Search URL (use %s for the query)';
+  @override
+  String get web_browser_search_engine_template_invalid =>
+      'Enter an http(s) address that contains %s';
+  @override
   String get web_browser_search_hint => 'Search or enter address';
+  @override
+  String get web_browser_settings_clear_data => 'Clear browsing data';
+  @override
+  String get web_browser_settings_collapse_on_scroll =>
+      'Hide toolbar while scrolling';
+  @override
+  String get web_browser_settings_collapse_on_scroll_hint =>
+      'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+  @override
+  String get web_browser_settings_desktop_default =>
+      'Open desktop sites by default';
+  @override
+  String get web_browser_settings_force_dark => 'Dark mode for web pages';
+  @override
+  String get web_browser_settings_force_dark_hint =>
+      'Show pages in dark colors when the app is dark';
+  @override
+  String get web_browser_settings_manage_search_engines =>
+      'Manage search engines';
+  @override
+  String get web_browser_settings_restore_tabs => 'Restore tabs from last time';
+  @override
+  String get web_browser_settings_restore_tabs_hint =>
+      'Incognito tabs are never restored';
+  @override
+  String get web_browser_settings_site_settings => 'Site settings';
+  @override
+  String get web_browser_settings_tab_style_hint =>
+      'Only affects wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_sidebar_toggle => 'Sidebar';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -364792,6 +370428,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
+  String get web_browser_site_settings_clear_all => 'Reset all sites';
+  @override
+  String get web_browser_site_settings_clear_all_confirm =>
+      'Reset permissions for all sites?';
+  @override
+  String get web_browser_site_settings_clear_site => 'Reset permissions';
+  @override
+  String get web_browser_site_settings_empty => 'No site permissions saved yet';
+  @override
+  String get web_browser_site_settings_title => 'Site settings';
+  @override
   String get web_browser_site_url => 'Address';
   @override
   String get web_browser_site_url_invalid =>
@@ -364802,7 +370449,48 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_sites_title => 'Sites';
   @override
+  String get web_browser_tab_close => 'Close tab';
+  @override
+  String get web_browser_tab_close_others => 'Close other tabs';
+  @override
+  String web_browser_tab_count({required Object count}) => '${count} tabs';
+  @override
+  String get web_browser_tab_incognito => 'Incognito';
+  @override
+  String get web_browser_tab_list_empty => 'No open tabs';
+  @override
+  String get web_browser_tab_list_title => 'Tabs';
+  @override
+  String get web_browser_tab_new => 'New tab';
+  @override
+  String get web_browser_tab_new_incognito => 'New incognito tab';
+  @override
+  String get web_browser_tab_reopen_closed => 'Reopen closed tab';
+  @override
+  String get web_browser_tab_style => 'Tab style';
+  @override
+  String get web_browser_tab_style_hint =>
+      'Where tabs go in wide windows (landscape, tablet, desktop)';
+  @override
+  String get web_browser_tab_style_sidebar => 'Sidebar';
+  @override
+  String get web_browser_tab_style_top => 'Top tab bar';
+  @override
+  String get web_browser_tab_style_use_sidebar => 'Switch to sidebar';
+  @override
+  String get web_browser_tab_style_use_top => 'Switch to top tab bar';
+  @override
+  String get web_browser_text_size_decrease => 'Smaller text';
+  @override
+  String get web_browser_text_size_increase => 'Larger text';
+  @override
+  String get web_browser_text_size_reset => 'Reset text size';
+  @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_browser_toolbar_expand => 'Show toolbar';
+  @override
+  String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -377374,6 +383062,34 @@ extension on _StringsEn {
         return 'Volume down';
       case 'shortcut_action_video_volume_up':
         return 'Volume up';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -383652,16 +389368,252 @@ extension on _StringsEn {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -383676,6 +389628,16 @@ extension on _StringsEn {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -383684,8 +389646,48 @@ extension on _StringsEn {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -396244,6 +402246,34 @@ extension on _StringsAr {
         return 'خفض الصوت';
       case 'shortcut_action_video_volume_up':
         return 'رفع الصوت';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -402520,16 +408550,252 @@ extension on _StringsAr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -402544,6 +408810,16 @@ extension on _StringsAr {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -402552,8 +408828,48 @@ extension on _StringsAr {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -415170,6 +421486,34 @@ extension on _StringsDe {
         return 'Leiser';
       case 'shortcut_action_video_volume_up':
         return 'Lauter';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -421464,16 +427808,252 @@ extension on _StringsDe {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -421488,6 +428068,16 @@ extension on _StringsDe {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -421496,8 +428086,48 @@ extension on _StringsDe {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -434100,6 +440730,34 @@ extension on _StringsEs {
         return 'Bajar volumen';
       case 'shortcut_action_video_volume_up':
         return 'Subir volumen';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -440390,16 +447048,252 @@ extension on _StringsEs {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -440414,6 +447308,16 @@ extension on _StringsEs {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -440422,8 +447326,48 @@ extension on _StringsEs {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -453041,6 +459985,34 @@ extension on _StringsFr {
         return 'Volume -';
       case 'shortcut_action_video_volume_up':
         return 'Volume +';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -459334,16 +466306,252 @@ extension on _StringsFr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -459358,6 +466566,16 @@ extension on _StringsFr {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -459366,8 +466584,48 @@ extension on _StringsFr {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -471942,6 +479200,34 @@ extension on _StringsId {
         return 'Volume -';
       case 'shortcut_action_video_volume_up':
         return 'Volume +';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -478222,16 +485508,252 @@ extension on _StringsId {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -478246,6 +485768,16 @@ extension on _StringsId {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -478254,8 +485786,48 @@ extension on _StringsId {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -490852,6 +498424,34 @@ extension on _StringsIt {
         return 'Abbassa volume';
       case 'shortcut_action_video_volume_up':
         return 'Alza volume';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -497146,16 +504746,252 @@ extension on _StringsIt {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -497170,6 +505006,16 @@ extension on _StringsIt {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -497178,8 +505024,48 @@ extension on _StringsIt {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -509696,6 +517582,34 @@ extension on _StringsJa {
         return '音量−';
       case 'shortcut_action_video_volume_up':
         return '音量＋';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -515938,16 +523852,252 @@ extension on _StringsJa {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -515962,6 +524112,16 @@ extension on _StringsJa {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -515970,8 +524130,48 @@ extension on _StringsJa {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -528489,6 +536689,34 @@ extension on _StringsKo {
         return '음량 -';
       case 'shortcut_action_video_volume_up':
         return '음량 +';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -534743,16 +542971,252 @@ extension on _StringsKo {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -534767,6 +543231,16 @@ extension on _StringsKo {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -534775,8 +543249,48 @@ extension on _StringsKo {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -547372,6 +555886,34 @@ extension on _StringsNl {
         return 'Volume omlaag';
       case 'shortcut_action_video_volume_up':
         return 'Volume omhoog';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -553659,16 +562201,252 @@ extension on _StringsNl {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -553683,6 +562461,16 @@ extension on _StringsNl {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -553691,8 +562479,48 @@ extension on _StringsNl {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -566286,6 +575114,34 @@ extension on _StringsPtBr {
         return 'Diminuir volume';
       case 'shortcut_action_video_volume_up':
         return 'Aumentar volume';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -572570,16 +581426,252 @@ extension on _StringsPtBr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -572594,6 +581686,16 @@ extension on _StringsPtBr {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -572602,8 +581704,48 @@ extension on _StringsPtBr {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -585204,6 +594346,34 @@ extension on _StringsRu {
         return 'Тише';
       case 'shortcut_action_video_volume_up':
         return 'Громче';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -591486,16 +600656,252 @@ extension on _StringsRu {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -591510,6 +600916,16 @@ extension on _StringsRu {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -591518,8 +600934,48 @@ extension on _StringsRu {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -604082,6 +613538,34 @@ extension on _StringsTh {
         return 'ลดเสียง';
       case 'shortcut_action_video_volume_up':
         return 'เพิ่มเสียง';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -610358,16 +619842,252 @@ extension on _StringsTh {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -610382,6 +620102,16 @@ extension on _StringsTh {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -610390,8 +620120,48 @@ extension on _StringsTh {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -622978,6 +632748,34 @@ extension on _StringsTr {
         return 'Ses Azalt';
       case 'shortcut_action_video_volume_up':
         return 'Ses Artır';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -629261,16 +639059,252 @@ extension on _StringsTr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -629285,6 +639319,16 @@ extension on _StringsTr {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -629293,8 +639337,48 @@ extension on _StringsTr {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -641869,6 +651953,34 @@ extension on _StringsVi {
         return 'Giảm âm lượng';
       case 'shortcut_action_video_volume_up':
         return 'Tăng âm lượng';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -648147,16 +658259,252 @@ extension on _StringsVi {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -648171,6 +658519,16 @@ extension on _StringsVi {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -648179,8 +658537,48 @@ extension on _StringsVi {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -660612,6 +671010,34 @@ extension on _StringsZhCn {
         return '音量-';
       case 'shortcut_action_video_volume_up':
         return '音量+';
+      case 'shortcut_action_web_browser_back':
+        return '后退';
+      case 'shortcut_action_web_browser_close_tab':
+        return '关闭标签页';
+      case 'shortcut_action_web_browser_find_in_page':
+        return '在页面中查找';
+      case 'shortcut_action_web_browser_focus_address':
+        return '聚焦地址栏';
+      case 'shortcut_action_web_browser_forward':
+        return '前进';
+      case 'shortcut_action_web_browser_new_tab':
+        return '新建标签页';
+      case 'shortcut_action_web_browser_next_tab':
+        return '下一个标签页';
+      case 'shortcut_action_web_browser_previous_tab':
+        return '上一个标签页';
+      case 'shortcut_action_web_browser_reload':
+        return '刷新';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return '重新打开关闭的标签页';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return '收藏 / 取消收藏本页';
+      case 'shortcut_action_web_browser_zoom_in':
+        return '放大';
+      case 'shortcut_action_web_browser_zoom_out':
+        return '缩小';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return '重置缩放';
       case 'shortcut_add_binding':
         return '添加绑定';
       case 'shortcut_assign_pick_action':
@@ -666802,16 +677228,250 @@ extension on _StringsZhCn {
         return '过滤列表更新失败';
       case 'web_adblock_update_now':
         return '立即更新过滤列表';
+      case 'web_browser_bookmark_add':
+        return '加入书签';
+      case 'web_browser_bookmark_edit':
+        return '编辑书签';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) => '删除「${name}」及其中的全部内容？';
+      case 'web_browser_bookmark_folder_name':
+        return '文件夹名称';
+      case 'web_browser_bookmark_folder_new':
+        return '新建文件夹';
+      case 'web_browser_bookmark_folder_rename':
+        return '重命名文件夹';
+      case 'web_browser_bookmark_move_title':
+        return '移动到文件夹';
+      case 'web_browser_bookmark_remove':
+        return '移除书签';
+      case 'web_browser_bookmark_reorder':
+        return '拖动以调整顺序';
+      case 'web_browser_bookmark_title_label':
+        return '标题';
+      case 'web_browser_bookmarks_empty':
+        return '这里还没有书签';
+      case 'web_browser_bookmarks_title':
+        return '书签';
+      case 'web_browser_clear_data_action':
+        return '清除数据';
+      case 'web_browser_clear_data_all_time_note':
+        return '在此设备上，Cookie、网站数据和缓存会全部清除，不受时间范围限制';
+      case 'web_browser_clear_data_cache':
+        return '缓存的图片和文件';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookie 和网站数据';
+      case 'web_browser_clear_data_cookies_hint':
+        return '会退出大多数网站的登录';
+      case 'web_browser_clear_data_done':
+        return '已清除浏览数据';
+      case 'web_browser_clear_data_failed':
+        return '部分数据未能清除';
+      case 'web_browser_clear_data_history':
+        return '浏览历史';
+      case 'web_browser_clear_data_title':
+        return '清除浏览数据';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => '已下载 ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => '无法下载 ${name}';
+      case 'web_browser_download_file_missing':
+        return '文件已被移动或删除';
+      case 'web_browser_download_open':
+        return '打开';
+      case 'web_browser_download_open_failed':
+        return '无法打开文件';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} / ${total}';
+      case 'web_browser_download_remove':
+        return '从列表中移除';
+      case 'web_browser_download_started':
+        return ({required Object name}) => '正在下载 ${name}';
+      case 'web_browser_download_state_cancelled':
+        return '已取消';
+      case 'web_browser_download_state_failed':
+        return '失败';
+      case 'web_browser_downloads_empty':
+        return '还没有下载记录';
+      case 'web_browser_downloads_title':
+        return '下载';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) => '网站返回了 HTTP ${code}，页面为空。';
+      case 'web_browser_error_offline_body':
+        return '请检查网络连接后重试。';
+      case 'web_browser_error_offline_title':
+        return '没有网络连接';
+      case 'web_browser_error_title':
+        return '无法打开此网页';
+      case 'web_browser_find_close':
+        return '关闭查找';
+      case 'web_browser_find_hint':
+        return '在页面中查找';
+      case 'web_browser_find_next':
+        return '下一个';
+      case 'web_browser_find_none':
+        return '无结果';
+      case 'web_browser_find_previous':
+        return '上一个';
       case 'web_browser_forward':
         return '前进';
+      case 'web_browser_furigana':
+        return '注音';
+      case 'web_browser_history_clear':
+        return '清除历史记录';
+      case 'web_browser_history_clear_confirm':
+        return '删除这段时间的历史记录？此操作无法撤销。';
+      case 'web_browser_history_empty':
+        return '还没有浏览记录';
+      case 'web_browser_history_search_hint':
+        return '搜索历史记录';
+      case 'web_browser_history_title':
+        return '历史记录';
+      case 'web_browser_image_copy_url':
+        return '复制图片地址';
+      case 'web_browser_image_load_failed':
+        return '无法加载图片';
+      case 'web_browser_image_ocr_lookup':
+        return '识别图中文字查词';
+      case 'web_browser_image_open_new_tab':
+        return '在新标签页中打开图片';
+      case 'web_browser_image_save':
+        return '保存图片';
+      case 'web_browser_known_words':
+        return '生词高亮';
+      case 'web_browser_link_copy':
+        return '复制链接地址';
+      case 'web_browser_link_open_background_tab':
+        return '在后台标签页中打开';
+      case 'web_browser_link_open_incognito_tab':
+        return '在无痕标签页中打开';
+      case 'web_browser_link_open_new_tab':
+        return '在新标签页中打开';
+      case 'web_browser_link_share':
+        return '分享链接';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
         return '点词查词：开';
+      case 'web_browser_menu_bookmarks':
+        return '书签';
+      case 'web_browser_menu_desktop_site':
+        return '桌面版网页';
+      case 'web_browser_menu_downloads':
+        return '下载';
+      case 'web_browser_menu_history':
+        return '历史记录';
+      case 'web_browser_menu_open_external':
+        return '在系统浏览器打开';
+      case 'web_browser_menu_settings':
+        return '浏览器设置';
+      case 'web_browser_menu_text_size':
+        return '文字大小';
+      case 'web_browser_open_external_failed':
+        return '无法在其他应用中打开链接';
+      case 'web_browser_permission_ask':
+        return '询问';
+      case 'web_browser_permission_autoplay':
+        return '自动播放';
+      case 'web_browser_permission_camera':
+        return '摄像头';
+      case 'web_browser_permission_clipboard':
+        return '剪贴板';
+      case 'web_browser_permission_geolocation':
+        return '位置';
+      case 'web_browser_permission_microphone':
+        return '麦克风';
+      case 'web_browser_permission_notifications':
+        return '通知';
+      case 'web_browser_permission_popups':
+        return '弹出式窗口和重定向';
+      case 'web_browser_permission_request_allow':
+        return '允许';
+      case 'web_browser_permission_request_block':
+        return '阻止';
+      case 'web_browser_permission_request_camera':
+        return '摄像头';
+      case 'web_browser_permission_request_camera_microphone':
+        return '摄像头和麦克风';
+      case 'web_browser_permission_request_clipboard':
+        return '剪贴板';
+      case 'web_browser_permission_request_geolocation':
+        return '位置信息';
+      case 'web_browser_permission_request_microphone':
+        return '麦克风';
+      case 'web_browser_permission_request_notifications':
+        return '通知';
+      case 'web_browser_permission_request_remember':
+        return '记住对此网站的选择';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            '允许 ${site} 使用${what}？';
+      case 'web_browser_play_in_fushi':
+        return '用 Fushi 播放';
+      case 'web_browser_range_all':
+        return '全部时间';
+      case 'web_browser_range_last_day':
+        return '过去 24 小时';
+      case 'web_browser_range_last_hour':
+        return '过去一小时';
+      case 'web_browser_range_last_month':
+        return '过去 4 周';
+      case 'web_browser_range_last_week':
+        return '过去 7 天';
+      case 'web_browser_range_title':
+        return '时间范围';
+      case 'web_browser_reader_mode':
+        return '阅读模式';
+      case 'web_browser_reader_mode_empty':
+        return '这一页没有识别到正文';
+      case 'web_browser_reader_mode_exit':
+        return '退出阅读模式';
+      case 'web_browser_reader_mode_save':
+        return '存进书架';
       case 'web_browser_search_engine':
         return '搜索引擎';
+      case 'web_browser_search_engine_add':
+        return '添加搜索引擎';
+      case 'web_browser_search_engine_builtin':
+        return '内置';
+      case 'web_browser_search_engine_custom':
+        return '自定义';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => '删除「${name}」？';
+      case 'web_browser_search_engine_edit':
+        return '编辑搜索引擎';
+      case 'web_browser_search_engine_suggest_template':
+        return '联想网址（可选）';
+      case 'web_browser_search_engine_template':
+        return '搜索网址（用 %s 代替搜索词）';
+      case 'web_browser_search_engine_template_invalid':
+        return '请输入包含 %s 的 http(s) 网址';
       case 'web_browser_search_hint':
         return '搜索或输入网址';
+      case 'web_browser_settings_clear_data':
+        return '清除浏览数据';
+      case 'web_browser_settings_collapse_on_scroll':
+        return '滚动时收起工具栏';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return '手机上往下滚收起成小地址条，往上滚或点一下展开';
+      case 'web_browser_settings_desktop_default':
+        return '默认打开桌面版网页';
+      case 'web_browser_settings_force_dark':
+        return '网页深色模式';
+      case 'web_browser_settings_force_dark_hint':
+        return '应用为深色时网页也用深色显示';
+      case 'web_browser_settings_manage_search_engines':
+        return '管理搜索引擎';
+      case 'web_browser_settings_restore_tabs':
+        return '恢复上次的标签页';
+      case 'web_browser_settings_restore_tabs_hint':
+        return '无痕标签页不会恢复';
+      case 'web_browser_settings_site_settings':
+        return '网站设置';
+      case 'web_browser_settings_tab_style_hint':
+        return '只影响宽窗口（横屏、平板、桌面）';
+      case 'web_browser_sidebar_toggle':
+        return '侧边栏';
       case 'web_browser_site_add':
         return '加入站点';
       case 'web_browser_site_added':
@@ -666826,6 +677486,16 @@ extension on _StringsZhCn {
         return '添加站点';
       case 'web_browser_site_remove':
         return '从站点移除';
+      case 'web_browser_site_settings_clear_all':
+        return '重置所有网站';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return '重置所有网站的权限？';
+      case 'web_browser_site_settings_clear_site':
+        return '重置权限';
+      case 'web_browser_site_settings_empty':
+        return '还没有保存任何网站权限';
+      case 'web_browser_site_settings_title':
+        return '网站设置';
       case 'web_browser_site_url':
         return '地址';
       case 'web_browser_site_url_invalid':
@@ -666834,8 +677504,48 @@ extension on _StringsZhCn {
         return '还没有站点。在地址栏打开网页后，可以把它加入站点。';
       case 'web_browser_sites_title':
         return '站点';
+      case 'web_browser_tab_close':
+        return '关闭标签页';
+      case 'web_browser_tab_close_others':
+        return '关闭其他标签页';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} 个标签页';
+      case 'web_browser_tab_incognito':
+        return '无痕';
+      case 'web_browser_tab_list_empty':
+        return '没有打开的标签页';
+      case 'web_browser_tab_list_title':
+        return '标签页';
+      case 'web_browser_tab_new':
+        return '新标签页';
+      case 'web_browser_tab_new_incognito':
+        return '新无痕标签页';
+      case 'web_browser_tab_reopen_closed':
+        return '重新打开关闭的标签页';
+      case 'web_browser_tab_style':
+        return '标签页样式';
+      case 'web_browser_tab_style_hint':
+        return '宽窗口（横屏、平板、桌面）下标签页摆在哪里';
+      case 'web_browser_tab_style_sidebar':
+        return '侧边栏';
+      case 'web_browser_tab_style_top':
+        return '顶部标签栏';
+      case 'web_browser_tab_style_use_sidebar':
+        return '改为侧边栏';
+      case 'web_browser_tab_style_use_top':
+        return '改为顶部标签栏';
+      case 'web_browser_text_size_decrease':
+        return '缩小文字';
+      case 'web_browser_text_size_increase':
+        return '放大文字';
+      case 'web_browser_text_size_reset':
+        return '恢复文字大小';
       case 'web_browser_title':
         return '浏览器';
+      case 'web_browser_toolbar_expand':
+        return '展开工具栏';
+      case 'web_browser_youtube_subtitles':
+        return 'YouTube 字幕查词';
       case 'web_hub_browse':
         return '网页';
       case 'web_hub_video_sites':
@@ -679302,6 +690012,34 @@ extension on _StringsZhHk {
         return '音量－';
       case 'shortcut_action_video_volume_up':
         return '音量＋';
+      case 'shortcut_action_web_browser_back':
+        return 'Back';
+      case 'shortcut_action_web_browser_close_tab':
+        return 'Close tab';
+      case 'shortcut_action_web_browser_find_in_page':
+        return 'Find in page';
+      case 'shortcut_action_web_browser_focus_address':
+        return 'Focus address bar';
+      case 'shortcut_action_web_browser_forward':
+        return 'Forward';
+      case 'shortcut_action_web_browser_new_tab':
+        return 'New tab';
+      case 'shortcut_action_web_browser_next_tab':
+        return 'Next tab';
+      case 'shortcut_action_web_browser_previous_tab':
+        return 'Previous tab';
+      case 'shortcut_action_web_browser_reload':
+        return 'Reload';
+      case 'shortcut_action_web_browser_reopen_closed_tab':
+        return 'Reopen closed tab';
+      case 'shortcut_action_web_browser_toggle_bookmark':
+        return 'Bookmark this page';
+      case 'shortcut_action_web_browser_zoom_in':
+        return 'Zoom in';
+      case 'shortcut_action_web_browser_zoom_out':
+        return 'Zoom out';
+      case 'shortcut_action_web_browser_zoom_reset':
+        return 'Reset zoom';
       case 'shortcut_add_binding':
         return 'Add another binding';
       case 'shortcut_assign_pick_action':
@@ -685525,16 +696263,252 @@ extension on _StringsZhHk {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
+      case 'web_browser_bookmark_add':
+        return 'Add bookmark';
+      case 'web_browser_bookmark_edit':
+        return 'Edit bookmark';
+      case 'web_browser_bookmark_folder_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and everything in it?';
+      case 'web_browser_bookmark_folder_name':
+        return 'Folder name';
+      case 'web_browser_bookmark_folder_new':
+        return 'New folder';
+      case 'web_browser_bookmark_folder_rename':
+        return 'Rename folder';
+      case 'web_browser_bookmark_move_title':
+        return 'Move to folder';
+      case 'web_browser_bookmark_remove':
+        return 'Remove bookmark';
+      case 'web_browser_bookmark_reorder':
+        return 'Drag to reorder';
+      case 'web_browser_bookmark_title_label':
+        return 'Title';
+      case 'web_browser_bookmarks_empty':
+        return 'No bookmarks here yet';
+      case 'web_browser_bookmarks_title':
+        return 'Bookmarks';
+      case 'web_browser_clear_data_action':
+        return 'Clear data';
+      case 'web_browser_clear_data_all_time_note':
+        return 'On this device, cookies, site data and cache are cleared for all time regardless of the range';
+      case 'web_browser_clear_data_cache':
+        return 'Cached images and files';
+      case 'web_browser_clear_data_cookies':
+        return 'Cookies and site data';
+      case 'web_browser_clear_data_cookies_hint':
+        return 'Signs you out of most sites';
+      case 'web_browser_clear_data_done':
+        return 'Browsing data cleared';
+      case 'web_browser_clear_data_failed':
+        return 'Some data couldn\'t be cleared';
+      case 'web_browser_clear_data_history':
+        return 'Browsing history';
+      case 'web_browser_clear_data_title':
+        return 'Clear browsing data';
+      case 'web_browser_download_completed':
+        return ({required Object name}) => 'Downloaded ${name}';
+      case 'web_browser_download_failed':
+        return ({required Object name}) => 'Couldn\'t download ${name}';
+      case 'web_browser_download_file_missing':
+        return 'The file was moved or deleted';
+      case 'web_browser_download_open':
+        return 'Open';
+      case 'web_browser_download_open_failed':
+        return 'Couldn\'t open the file';
+      case 'web_browser_download_progress':
+        return ({required Object received, required Object total}) =>
+            '${received} of ${total}';
+      case 'web_browser_download_remove':
+        return 'Remove from list';
+      case 'web_browser_download_started':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'web_browser_download_state_cancelled':
+        return 'Cancelled';
+      case 'web_browser_download_state_failed':
+        return 'Failed';
+      case 'web_browser_downloads_empty':
+        return 'No downloads yet';
+      case 'web_browser_downloads_title':
+        return 'Downloads';
+      case 'web_browser_error_http_body':
+        return ({required Object code}) =>
+            'The site returned HTTP ${code} with an empty page.';
+      case 'web_browser_error_offline_body':
+        return 'Check your network connection, then try again.';
+      case 'web_browser_error_offline_title':
+        return 'You\'re offline';
+      case 'web_browser_error_title':
+        return 'This page can\'t be reached';
+      case 'web_browser_find_close':
+        return 'Close find bar';
+      case 'web_browser_find_hint':
+        return 'Find in page';
+      case 'web_browser_find_next':
+        return 'Next match';
+      case 'web_browser_find_none':
+        return 'No matches';
+      case 'web_browser_find_previous':
+        return 'Previous match';
       case 'web_browser_forward':
         return 'Forward';
+      case 'web_browser_furigana':
+        return 'Furigana';
+      case 'web_browser_history_clear':
+        return 'Clear history';
+      case 'web_browser_history_clear_confirm':
+        return 'Delete history for this time range? This can\'t be undone.';
+      case 'web_browser_history_empty':
+        return 'No browsing history yet';
+      case 'web_browser_history_search_hint':
+        return 'Search history';
+      case 'web_browser_history_title':
+        return 'History';
+      case 'web_browser_image_copy_url':
+        return 'Copy image address';
+      case 'web_browser_image_load_failed':
+        return 'Couldn\'t load the image';
+      case 'web_browser_image_ocr_lookup':
+        return 'Look up text in image';
+      case 'web_browser_image_open_new_tab':
+        return 'Open image in new tab';
+      case 'web_browser_image_save':
+        return 'Save image';
+      case 'web_browser_known_words':
+        return 'Highlight new words';
+      case 'web_browser_link_copy':
+        return 'Copy link address';
+      case 'web_browser_link_open_background_tab':
+        return 'Open in background tab';
+      case 'web_browser_link_open_incognito_tab':
+        return 'Open in incognito tab';
+      case 'web_browser_link_open_new_tab':
+        return 'Open in new tab';
+      case 'web_browser_link_share':
+        return 'Share link';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_menu_bookmarks':
+        return 'Bookmarks';
+      case 'web_browser_menu_desktop_site':
+        return 'Desktop site';
+      case 'web_browser_menu_downloads':
+        return 'Downloads';
+      case 'web_browser_menu_history':
+        return 'History';
+      case 'web_browser_menu_open_external':
+        return 'Open in system browser';
+      case 'web_browser_menu_settings':
+        return 'Browser settings';
+      case 'web_browser_menu_text_size':
+        return 'Text size';
+      case 'web_browser_open_external_failed':
+        return 'Couldn\'t open the link in another app';
+      case 'web_browser_permission_ask':
+        return 'Ask';
+      case 'web_browser_permission_autoplay':
+        return 'Autoplay';
+      case 'web_browser_permission_camera':
+        return 'Camera';
+      case 'web_browser_permission_clipboard':
+        return 'Clipboard';
+      case 'web_browser_permission_geolocation':
+        return 'Location';
+      case 'web_browser_permission_microphone':
+        return 'Microphone';
+      case 'web_browser_permission_notifications':
+        return 'Notifications';
+      case 'web_browser_permission_popups':
+        return 'Pop-ups and redirects';
+      case 'web_browser_permission_request_allow':
+        return 'Allow';
+      case 'web_browser_permission_request_block':
+        return 'Block';
+      case 'web_browser_permission_request_camera':
+        return 'your camera';
+      case 'web_browser_permission_request_camera_microphone':
+        return 'your camera and microphone';
+      case 'web_browser_permission_request_clipboard':
+        return 'your clipboard';
+      case 'web_browser_permission_request_geolocation':
+        return 'your location';
+      case 'web_browser_permission_request_microphone':
+        return 'your microphone';
+      case 'web_browser_permission_request_notifications':
+        return 'notifications';
+      case 'web_browser_permission_request_remember':
+        return 'Remember for this site';
+      case 'web_browser_permission_request_title':
+        return ({required Object site, required Object what}) =>
+            'Allow ${site} to use ${what}?';
+      case 'web_browser_play_in_fushi':
+        return 'Play in Fushi';
+      case 'web_browser_range_all':
+        return 'All time';
+      case 'web_browser_range_last_day':
+        return 'Last 24 hours';
+      case 'web_browser_range_last_hour':
+        return 'Last hour';
+      case 'web_browser_range_last_month':
+        return 'Last 4 weeks';
+      case 'web_browser_range_last_week':
+        return 'Last 7 days';
+      case 'web_browser_range_title':
+        return 'Time range';
+      case 'web_browser_reader_mode':
+        return 'Reader mode';
+      case 'web_browser_reader_mode_empty':
+        return 'No article text was found on this page';
+      case 'web_browser_reader_mode_exit':
+        return 'Exit reader mode';
+      case 'web_browser_reader_mode_save':
+        return 'Save to library';
       case 'web_browser_search_engine':
         return 'Search engine';
+      case 'web_browser_search_engine_add':
+        return 'Add search engine';
+      case 'web_browser_search_engine_builtin':
+        return 'Built-in';
+      case 'web_browser_search_engine_custom':
+        return 'Custom';
+      case 'web_browser_search_engine_delete_confirm':
+        return ({required Object name}) => 'Delete "${name}"?';
+      case 'web_browser_search_engine_edit':
+        return 'Edit search engine';
+      case 'web_browser_search_engine_suggest_template':
+        return 'Suggestions URL (optional)';
+      case 'web_browser_search_engine_template':
+        return 'Search URL (use %s for the query)';
+      case 'web_browser_search_engine_template_invalid':
+        return 'Enter an http(s) address that contains %s';
       case 'web_browser_search_hint':
         return 'Search or enter address';
+      case 'web_browser_settings_clear_data':
+        return 'Clear browsing data';
+      case 'web_browser_settings_collapse_on_scroll':
+        return 'Hide toolbar while scrolling';
+      case 'web_browser_settings_collapse_on_scroll_hint':
+        return 'On phones, scrolling down shrinks the toolbar to a small address bar; scroll up or tap it to expand';
+      case 'web_browser_settings_desktop_default':
+        return 'Open desktop sites by default';
+      case 'web_browser_settings_force_dark':
+        return 'Dark mode for web pages';
+      case 'web_browser_settings_force_dark_hint':
+        return 'Show pages in dark colors when the app is dark';
+      case 'web_browser_settings_manage_search_engines':
+        return 'Manage search engines';
+      case 'web_browser_settings_restore_tabs':
+        return 'Restore tabs from last time';
+      case 'web_browser_settings_restore_tabs_hint':
+        return 'Incognito tabs are never restored';
+      case 'web_browser_settings_site_settings':
+        return 'Site settings';
+      case 'web_browser_settings_tab_style_hint':
+        return 'Only affects wide windows (landscape, tablet, desktop)';
+      case 'web_browser_sidebar_toggle':
+        return 'Sidebar';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -685549,6 +696523,16 @@ extension on _StringsZhHk {
         return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_settings_clear_all':
+        return 'Reset all sites';
+      case 'web_browser_site_settings_clear_all_confirm':
+        return 'Reset permissions for all sites?';
+      case 'web_browser_site_settings_clear_site':
+        return 'Reset permissions';
+      case 'web_browser_site_settings_empty':
+        return 'No site permissions saved yet';
+      case 'web_browser_site_settings_title':
+        return 'Site settings';
       case 'web_browser_site_url':
         return 'Address';
       case 'web_browser_site_url_invalid':
@@ -685557,8 +696541,48 @@ extension on _StringsZhHk {
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
         return 'Sites';
+      case 'web_browser_tab_close':
+        return 'Close tab';
+      case 'web_browser_tab_close_others':
+        return 'Close other tabs';
+      case 'web_browser_tab_count':
+        return ({required Object count}) => '${count} tabs';
+      case 'web_browser_tab_incognito':
+        return 'Incognito';
+      case 'web_browser_tab_list_empty':
+        return 'No open tabs';
+      case 'web_browser_tab_list_title':
+        return 'Tabs';
+      case 'web_browser_tab_new':
+        return 'New tab';
+      case 'web_browser_tab_new_incognito':
+        return 'New incognito tab';
+      case 'web_browser_tab_reopen_closed':
+        return 'Reopen closed tab';
+      case 'web_browser_tab_style':
+        return 'Tab style';
+      case 'web_browser_tab_style_hint':
+        return 'Where tabs go in wide windows (landscape, tablet, desktop)';
+      case 'web_browser_tab_style_sidebar':
+        return 'Sidebar';
+      case 'web_browser_tab_style_top':
+        return 'Top tab bar';
+      case 'web_browser_tab_style_use_sidebar':
+        return 'Switch to sidebar';
+      case 'web_browser_tab_style_use_top':
+        return 'Switch to top tab bar';
+      case 'web_browser_text_size_decrease':
+        return 'Smaller text';
+      case 'web_browser_text_size_increase':
+        return 'Larger text';
+      case 'web_browser_text_size_reset':
+        return 'Reset text size';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_browser_toolbar_expand':
+        return 'Show toolbar';
+      case 'web_browser_youtube_subtitles':
+        return 'Clickable YouTube subtitles';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
