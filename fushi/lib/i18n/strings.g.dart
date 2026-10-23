@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153017 (9001 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11671,6 +11671,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The computer is busy; try again shortly';
   String get video_remote_error_subtitle_busy =>
       'Subtitles are still loading on the computer. Try again shortly';
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
   String get video_remote_error_subtitle_track_unavailable =>
       'That subtitle track can\'t be selected';
   String get video_remote_error_subtitles_changed =>
@@ -11733,6 +11739,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_subtitle_refetch_pick => 'Choose subtitles to fetch';
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   String get video_remote_subtitles => 'Subtitles';
   String get video_remote_title => 'Video remote';
   String get video_remote_transcript_empty => 'No subtitles yet';
@@ -32603,6 +32611,15 @@ class _StringsAr extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'لا تزال الترجمات قيد التحميل على الكمبيوتر. حاول مرة أخرى بعد قليل';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'لا يمكن اختيار مسار الترجمة هذا';
   @override
@@ -32707,6 +32724,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -54804,6 +54824,15 @@ class _StringsDe extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Die Untertitel werden auf dem Computer noch geladen. Versuche es gleich noch einmal';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Diese Untertitelspur kann nicht ausgewählt werden';
   @override
@@ -54908,6 +54937,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -77095,6 +77127,15 @@ class _StringsEs extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Los subtítulos aún se están cargando en el ordenador. Inténtalo de nuevo en breve';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'No se puede seleccionar esa pista de subtítulos';
   @override
@@ -77199,6 +77240,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -99463,6 +99507,15 @@ class _StringsFr extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Les sous-titres sont encore en cours de chargement sur l\'ordinateur. Réessayez dans un instant';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Cette piste de sous-titres ne peut pas être sélectionnée';
   @override
@@ -99567,6 +99620,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -121552,6 +121608,15 @@ class _StringsId extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Subtitel masih dimuat di komputer. Coba lagi sebentar lagi';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Trek subtitel itu tidak dapat dipilih';
   @override
@@ -121656,6 +121721,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -143730,6 +143798,15 @@ class _StringsIt extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'I sottotitoli sono ancora in caricamento sul computer. Riprova tra poco';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Impossibile selezionare quella traccia di sottotitoli';
   @override
@@ -143834,6 +143911,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -165041,6 +165121,15 @@ class _StringsJa extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'パソコンで字幕を読み込み中です。しばらくしてからもう一度お試しください';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'その字幕トラックは選択できません';
   @override
@@ -165140,6 +165229,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -186237,6 +186329,15 @@ class _StringsKo extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       '컴퓨터에서 아직 자막을 불러오는 중입니다. 잠시 후 다시 시도하세요';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       '해당 자막 트랙을 선택할 수 없습니다';
   @override
@@ -186341,6 +186442,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -208285,6 +208389,15 @@ class _StringsNl extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'De ondertitels worden nog geladen op de computer. Probeer het zo opnieuw';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Dat ondertitelspoor kan niet worden geselecteerd';
   @override
@@ -208389,6 +208502,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -230490,6 +230606,15 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'As legendas ainda estão carregando no computador. Tente novamente em instantes';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Essa faixa de legenda não pode ser selecionada';
   @override
@@ -230594,6 +230719,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -252656,6 +252784,15 @@ class _StringsRu extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Субтитры на компьютере ещё загружаются. Повторите попытку чуть позже';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Эту дорожку субтитров нельзя выбрать';
   @override
@@ -252760,6 +252897,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -274547,6 +274687,15 @@ class _StringsTh extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'คำบรรยายบนคอมพิวเตอร์ยังโหลดอยู่ โปรดลองอีกครั้งในอีกสักครู่';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'ไม่สามารถเลือกแทร็กคำบรรยายนั้นได้';
   @override
@@ -274651,6 +274800,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -296566,6 +296718,15 @@ class _StringsTr extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Altyazılar bilgisayarda hâlâ yükleniyor. Birazdan tekrar deneyin';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Bu altyazı parçası seçilemez';
   @override
@@ -296670,6 +296831,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -318552,6 +318716,15 @@ class _StringsVi extends _StringsEn {
   String get video_remote_error_subtitle_busy =>
       'Phụ đề trên máy tính vẫn đang tải. Vui lòng thử lại sau giây lát';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable =>
       'Không thể chọn bản phụ đề đó';
   @override
@@ -318656,6 +318829,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -338851,6 +339027,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_error_subtitle_busy => '电脑上的字幕还在加载，请稍后再试';
   @override
+  String get video_remote_error_subtitle_candidate_missing => '搜索结果已过期，请重新搜索';
+  @override
+  String get video_remote_error_subtitle_search_failed => '字幕来源没有响应，请稍后再试';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      '电脑上没有配置在线字幕来源（设置 → 视频 → 字幕）';
+  @override
   String get video_remote_error_subtitle_track_unavailable => '这条字幕当前无法选择';
   @override
   String get video_remote_error_subtitles_changed => '电脑上的字幕已变化，正在刷新';
@@ -338937,6 +339120,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_subtitle_refetch_pick => '选择要拉取的字幕';
   @override
   String get video_remote_subtitle_refetched => '已从服务端重新拉取字幕';
+  @override
+  String get video_remote_subtitle_search_applied => '已在电脑上下载并应用字幕';
   @override
   String get video_remote_subtitles => '字幕';
   @override
@@ -359378,6 +359563,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_subtitle_busy => '電腦上的字幕仍在載入，請稍後再試';
   @override
+  String get video_remote_error_subtitle_candidate_missing =>
+      'These search results expired; search again';
+  @override
+  String get video_remote_error_subtitle_search_failed =>
+      'The subtitle sources didn\'t respond; try again later';
+  @override
+  String get video_remote_error_subtitle_source_missing =>
+      'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
+  @override
   String get video_remote_error_subtitle_track_unavailable => '目前無法選擇這條字幕';
   @override
   String get video_remote_error_subtitles_changed =>
@@ -359476,6 +359670,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_subtitle_refetched =>
       'Subtitles re-fetched from server';
+  @override
+  String get video_remote_subtitle_search_applied =>
+      'Subtitle downloaded and applied on the computer';
   @override
   String get video_remote_subtitles => 'Subtitles';
   @override
@@ -378288,6 +378485,12 @@ extension on _StringsEn {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
@@ -378374,6 +378577,8 @@ extension on _StringsEn {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -396986,6 +397191,12 @@ extension on _StringsAr {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'لا تزال الترجمات قيد التحميل على الكمبيوتر. حاول مرة أخرى بعد قليل';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'لا يمكن اختيار مسار الترجمة هذا';
       case 'video_remote_error_subtitles_changed':
@@ -397072,6 +397283,8 @@ extension on _StringsAr {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -415760,6 +415973,12 @@ extension on _StringsDe {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Die Untertitel werden auf dem Computer noch geladen. Versuche es gleich noch einmal';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Diese Untertitelspur kann nicht ausgewählt werden';
       case 'video_remote_error_subtitles_changed':
@@ -415846,6 +416065,8 @@ extension on _StringsDe {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -434519,6 +434740,12 @@ extension on _StringsEs {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Los subtítulos aún se están cargando en el ordenador. Inténtalo de nuevo en breve';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'No se puede seleccionar esa pista de subtítulos';
       case 'video_remote_error_subtitles_changed':
@@ -434605,6 +434832,8 @@ extension on _StringsEs {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -453294,6 +453523,12 @@ extension on _StringsFr {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Les sous-titres sont encore en cours de chargement sur l\'ordinateur. Réessayez dans un instant';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Cette piste de sous-titres ne peut pas être sélectionnée';
       case 'video_remote_error_subtitles_changed':
@@ -453380,6 +453615,8 @@ extension on _StringsFr {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -472017,6 +472254,12 @@ extension on _StringsId {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Subtitel masih dimuat di komputer. Coba lagi sebentar lagi';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Trek subtitel itu tidak dapat dipilih';
       case 'video_remote_error_subtitles_changed':
@@ -472103,6 +472346,8 @@ extension on _StringsId {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -490770,6 +491015,12 @@ extension on _StringsIt {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'I sottotitoli sono ancora in caricamento sul computer. Riprova tra poco';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Impossibile selezionare quella traccia di sottotitoli';
       case 'video_remote_error_subtitles_changed':
@@ -490856,6 +491107,8 @@ extension on _StringsIt {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -509408,6 +509661,12 @@ extension on _StringsJa {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'パソコンで字幕を読み込み中です。しばらくしてからもう一度お試しください';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'その字幕トラックは選択できません';
       case 'video_remote_error_subtitles_changed':
@@ -509494,6 +509753,8 @@ extension on _StringsJa {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -528040,6 +528301,12 @@ extension on _StringsKo {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return '컴퓨터에서 아직 자막을 불러오는 중입니다. 잠시 후 다시 시도하세요';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return '해당 자막 트랙을 선택할 수 없습니다';
       case 'video_remote_error_subtitles_changed':
@@ -528126,6 +528393,8 @@ extension on _StringsKo {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -546778,6 +547047,12 @@ extension on _StringsNl {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'De ondertitels worden nog geladen op de computer. Probeer het zo opnieuw';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Dat ondertitelspoor kan niet worden geselecteerd';
       case 'video_remote_error_subtitles_changed':
@@ -546864,6 +547139,8 @@ extension on _StringsNl {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -565523,6 +565800,12 @@ extension on _StringsPtBr {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'As legendas ainda estão carregando no computador. Tente novamente em instantes';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Essa faixa de legenda não pode ser selecionada';
       case 'video_remote_error_subtitles_changed':
@@ -565609,6 +565892,8 @@ extension on _StringsPtBr {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -584272,6 +584557,12 @@ extension on _StringsRu {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Субтитры на компьютере ещё загружаются. Повторите попытку чуть позже';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Эту дорожку субтитров нельзя выбрать';
       case 'video_remote_error_subtitles_changed':
@@ -584358,6 +584649,8 @@ extension on _StringsRu {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -602978,6 +603271,12 @@ extension on _StringsTh {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'คำบรรยายบนคอมพิวเตอร์ยังโหลดอยู่ โปรดลองอีกครั้งในอีกสักครู่';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'ไม่สามารถเลือกแทร็กคำบรรยายนั้นได้';
       case 'video_remote_error_subtitles_changed':
@@ -603064,6 +603363,8 @@ extension on _StringsTh {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -621710,6 +622011,12 @@ extension on _StringsTr {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Altyazılar bilgisayarda hâlâ yükleniyor. Birazdan tekrar deneyin';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Bu altyazı parçası seçilemez';
       case 'video_remote_error_subtitles_changed':
@@ -621796,6 +622103,8 @@ extension on _StringsTr {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -640431,6 +640740,12 @@ extension on _StringsVi {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return 'Phụ đề trên máy tính vẫn đang tải. Vui lòng thử lại sau giây lát';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return 'Không thể chọn bản phụ đề đó';
       case 'video_remote_error_subtitles_changed':
@@ -640517,6 +640832,8 @@ extension on _StringsVi {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
@@ -658947,6 +659264,12 @@ extension on _StringsZhCn {
         return '电脑忙，请稍后再试';
       case 'video_remote_error_subtitle_busy':
         return '电脑上的字幕还在加载，请稍后再试';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return '搜索结果已过期，请重新搜索';
+      case 'video_remote_error_subtitle_search_failed':
+        return '字幕来源没有响应，请稍后再试';
+      case 'video_remote_error_subtitle_source_missing':
+        return '电脑上没有配置在线字幕来源（设置 → 视频 → 字幕）';
       case 'video_remote_error_subtitle_track_unavailable':
         return '这条字幕当前无法选择';
       case 'video_remote_error_subtitles_changed':
@@ -659033,6 +659356,8 @@ extension on _StringsZhCn {
         return '选择要拉取的字幕';
       case 'video_remote_subtitle_refetched':
         return '已从服务端重新拉取字幕';
+      case 'video_remote_subtitle_search_applied':
+        return '已在电脑上下载并应用字幕';
       case 'video_remote_subtitles':
         return '字幕';
       case 'video_remote_title':
@@ -677498,6 +677823,12 @@ extension on _StringsZhHk {
         return 'The computer is busy; try again shortly';
       case 'video_remote_error_subtitle_busy':
         return '電腦上的字幕仍在載入，請稍後再試';
+      case 'video_remote_error_subtitle_candidate_missing':
+        return 'These search results expired; search again';
+      case 'video_remote_error_subtitle_search_failed':
+        return 'The subtitle sources didn\'t respond; try again later';
+      case 'video_remote_error_subtitle_source_missing':
+        return 'No online subtitle source is set up on the computer (Settings → Video → Subtitles)';
       case 'video_remote_error_subtitle_track_unavailable':
         return '目前無法選擇這條字幕';
       case 'video_remote_error_subtitles_changed':
@@ -677584,6 +677915,8 @@ extension on _StringsZhHk {
         return 'Choose subtitles to fetch';
       case 'video_remote_subtitle_refetched':
         return 'Subtitles re-fetched from server';
+      case 'video_remote_subtitle_search_applied':
+        return 'Subtitle downloaded and applied on the computer';
       case 'video_remote_subtitles':
         return 'Subtitles';
       case 'video_remote_title':
