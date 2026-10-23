@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152983 (8999 per locale)
+/// Strings: 153017 (9001 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4249,6 +4249,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_toolbar_auto_hide_hint =>
       'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
   String get gal_hook_toolbar_label_close => 'Close';
+  String get gal_hook_toolbar_label_copy => 'Copy';
   String get gal_hook_toolbar_label_follow => 'Follow';
   String get gal_hook_toolbar_label_lock => 'Lock';
   String get gal_hook_toolbar_label_passthrough => 'Click-thru';
@@ -4400,6 +4401,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Fushi refuses to install unverified injector code.';
   String get game_home_subtitle => 'Game library and capture monitoring';
   String get game_hook_btn_close => 'Close the overlay';
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   String get game_hook_btn_follow => 'Follow new lines';
   String get game_hook_btn_lock => 'Lock the position';
   String get game_hook_btn_passthrough => 'Click through to the game';
@@ -19879,6 +19881,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -20157,6 +20161,8 @@ class _StringsAr extends _StringsEn {
   String get game_home_subtitle => 'مكتبة الألعاب ومراقبة الالتقاط';
   @override
   String get game_hook_btn_close => 'إغلاق النافذة العائمة';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'متابعة الجمل الجديدة';
   @override
@@ -41856,6 +41862,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -42139,6 +42147,8 @@ class _StringsDe extends _StringsEn {
   String get game_home_subtitle => 'Spielebibliothek und Aufnahmeüberwachung';
   @override
   String get game_hook_btn_close => 'Overlay schließen';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Neuen Zeilen folgen';
   @override
@@ -64123,6 +64133,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -64407,6 +64419,8 @@ class _StringsEs extends _StringsEn {
       'Biblioteca de juegos y monitoreo de captura';
   @override
   String get game_hook_btn_close => 'Cerrar la ventana flotante';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Seguir las líneas nuevas';
   @override
@@ -86455,6 +86469,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -86736,6 +86752,8 @@ class _StringsFr extends _StringsEn {
   String get game_home_subtitle => 'Ludothèque et surveillance de capture';
   @override
   String get game_hook_btn_close => 'Fermer la superposition';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Suivre les nouvelles lignes';
   @override
@@ -108730,6 +108748,8 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -109009,6 +109029,8 @@ class _StringsId extends _StringsEn {
   String get game_home_subtitle => 'Pustaka game dan pemantauan tangkapan';
   @override
   String get game_hook_btn_close => 'Tutup overlay';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Ikuti baris baru';
   @override
@@ -130823,6 +130845,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -131101,6 +131125,8 @@ class _StringsIt extends _StringsEn {
   String get game_home_subtitle => 'Libreria giochi e monitoraggio cattura';
   @override
   String get game_hook_btn_close => 'Chiudi la finestra mobile';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Segui le nuove battute';
   @override
@@ -152725,6 +152751,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'コピー';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -152996,6 +153024,8 @@ class _StringsJa extends _StringsEn {
   String get game_home_subtitle => 'ゲームライブラリとキャプチャ監視';
   @override
   String get game_hook_btn_close => 'オーバーレイを閉じる';
+  @override
+  String get game_hook_btn_copy => 'このセリフをクリップボードにコピー';
   @override
   String get game_hook_btn_follow => '新しい台詞に追従';
   @override
@@ -173903,6 +173933,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -174173,6 +174205,8 @@ class _StringsKo extends _StringsEn {
   String get game_home_subtitle => '게임 라이브러리 및 캡처 모니터링';
   @override
   String get game_hook_btn_close => '오버레이 닫기';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => '새 대사 따라가기';
   @override
@@ -195417,6 +195451,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -195695,6 +195731,8 @@ class _StringsNl extends _StringsEn {
   String get game_home_subtitle => 'Spelbibliotheek en opnamemonitoring';
   @override
   String get game_hook_btn_close => 'Overlay sluiten';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Nieuwe regels volgen';
   @override
@@ -217597,6 +217635,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -217879,6 +217919,8 @@ class _StringsPtBr extends _StringsEn {
       'Biblioteca de jogos e monitoramento de captura';
   @override
   String get game_hook_btn_close => 'Fechar a janela flutuante';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Acompanhar novas falas';
   @override
@@ -239790,6 +239832,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -240068,6 +240112,8 @@ class _StringsRu extends _StringsEn {
   String get game_home_subtitle => 'Библиотека игр и мониторинг захвата';
   @override
   String get game_hook_btn_close => 'Закрыть оверлей';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Следовать за новыми репликами';
   @override
@@ -261867,6 +261913,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -262143,6 +262191,8 @@ class _StringsTh extends _StringsEn {
   String get game_home_subtitle => 'คลังเกมและการติดตามการจับข้อมูล';
   @override
   String get game_hook_btn_close => 'ปิดหน้าต่างลอย';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'ตามประโยคใหม่';
   @override
@@ -283781,6 +283831,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -284060,6 +284112,8 @@ class _StringsTr extends _StringsEn {
   String get game_home_subtitle => 'Oyun kütüphanesi ve yakalama izleme';
   @override
   String get game_hook_btn_close => 'Yer paylaşımını kapat';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Yeni satırları takip et';
   @override
@@ -305815,6 +305869,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -306095,6 +306151,8 @@ class _StringsVi extends _StringsEn {
   String get game_home_subtitle => 'Thư viện trò chơi và giám sát thu thập';
   @override
   String get game_hook_btn_close => 'Đóng cửa sổ nổi';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Bám theo câu thoại mới';
   @override
@@ -327196,6 +327254,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => '关闭';
   @override
+  String get gal_hook_toolbar_label_copy => '复制';
+  @override
   String get gal_hook_toolbar_label_follow => '跟随';
   @override
   String get gal_hook_toolbar_label_lock => '锁定';
@@ -327458,6 +327518,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_home_subtitle => '游戏库与捕获监控';
   @override
   String get game_hook_btn_close => '关闭浮窗';
+  @override
+  String get game_hook_btn_copy => '复制这句台词';
   @override
   String get game_hook_btn_follow => '跟随新台词';
   @override
@@ -347437,6 +347499,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => '複製';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -347699,6 +347763,8 @@ class _StringsZhHk extends _StringsEn {
   String get game_home_subtitle => '遊戲庫與捕獲監控';
   @override
   String get game_hook_btn_close => '關閉浮窗';
+  @override
+  String get game_hook_btn_copy => '複製這句台詞';
   @override
   String get game_hook_btn_follow => '跟隨新台詞';
   @override
@@ -367350,6 +367416,8 @@ extension on _StringsEn {
         return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -367604,6 +367672,8 @@ extension on _StringsEn {
         return 'Game library and capture monitoring';
       case 'game_hook_btn_close':
         return 'Close the overlay';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Follow new lines';
       case 'game_hook_btn_lock':
@@ -386060,6 +386130,8 @@ extension on _StringsAr {
         return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -386313,6 +386385,8 @@ extension on _StringsAr {
         return 'مكتبة الألعاب ومراقبة الالتقاط';
       case 'game_hook_btn_close':
         return 'إغلاق النافذة العائمة';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'متابعة الجمل الجديدة';
       case 'game_hook_btn_lock':
@@ -404796,6 +404870,8 @@ extension on _StringsDe {
         return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -405050,6 +405126,8 @@ extension on _StringsDe {
         return 'Spielebibliothek und Aufnahmeüberwachung';
       case 'game_hook_btn_close':
         return 'Overlay schließen';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Neuen Zeilen folgen';
       case 'game_hook_btn_lock':
@@ -423566,6 +423644,8 @@ extension on _StringsEs {
         return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -423820,6 +423900,8 @@ extension on _StringsEs {
         return 'Biblioteca de juegos y monitoreo de captura';
       case 'game_hook_btn_close':
         return 'Cerrar la ventana flotante';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Seguir las líneas nuevas';
       case 'game_hook_btn_lock':
@@ -442341,6 +442423,8 @@ extension on _StringsFr {
         return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -442595,6 +442679,8 @@ extension on _StringsFr {
         return 'Ludothèque et surveillance de capture';
       case 'game_hook_btn_close':
         return 'Fermer la superposition';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Suivre les nouvelles lignes';
       case 'game_hook_btn_lock':
@@ -461097,6 +461183,8 @@ extension on _StringsId {
         return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -461351,6 +461439,8 @@ extension on _StringsId {
         return 'Pustaka game dan pemantauan tangkapan';
       case 'game_hook_btn_close':
         return 'Tutup overlay';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Ikuti baris baru';
       case 'game_hook_btn_lock':
@@ -479831,6 +479921,8 @@ extension on _StringsIt {
         return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -480085,6 +480177,8 @@ extension on _StringsIt {
         return 'Libreria giochi e monitoraggio cattura';
       case 'game_hook_btn_close':
         return 'Chiudi la finestra mobile';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Segui le nuove battute';
       case 'game_hook_btn_lock':
@@ -498546,6 +498640,8 @@ extension on _StringsJa {
         return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'コピー';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -498800,6 +498896,8 @@ extension on _StringsJa {
         return 'ゲームライブラリとキャプチャ監視';
       case 'game_hook_btn_close':
         return 'オーバーレイを閉じる';
+      case 'game_hook_btn_copy':
+        return 'このセリフをクリップボードにコピー';
       case 'game_hook_btn_follow':
         return '新しい台詞に追従';
       case 'game_hook_btn_lock':
@@ -517175,6 +517273,8 @@ extension on _StringsKo {
         return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -517428,6 +517528,8 @@ extension on _StringsKo {
         return '게임 라이브러리 및 캡처 모니터링';
       case 'game_hook_btn_close':
         return '오버레이 닫기';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return '새 대사 따라가기';
       case 'game_hook_btn_lock':
@@ -535855,6 +535957,8 @@ extension on _StringsNl {
         return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -536109,6 +536213,8 @@ extension on _StringsNl {
         return 'Spelbibliotheek en opnamemonitoring';
       case 'game_hook_btn_close':
         return 'Overlay sluiten';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Nieuwe regels volgen';
       case 'game_hook_btn_lock':
@@ -554609,6 +554715,8 @@ extension on _StringsPtBr {
         return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -554863,6 +554971,8 @@ extension on _StringsPtBr {
         return 'Biblioteca de jogos e monitoramento de captura';
       case 'game_hook_btn_close':
         return 'Fechar a janela flutuante';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Acompanhar novas falas';
       case 'game_hook_btn_lock':
@@ -573363,6 +573473,8 @@ extension on _StringsRu {
         return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -573617,6 +573729,8 @@ extension on _StringsRu {
         return 'Библиотека игр и мониторинг захвата';
       case 'game_hook_btn_close':
         return 'Закрыть оверлей';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Следовать за новыми репликами';
       case 'game_hook_btn_lock':
@@ -592091,6 +592205,8 @@ extension on _StringsTh {
         return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -592345,6 +592461,8 @@ extension on _StringsTh {
         return 'คลังเกมและการติดตามการจับข้อมูล';
       case 'game_hook_btn_close':
         return 'ปิดหน้าต่างลอย';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'ตามประโยคใหม่';
       case 'game_hook_btn_lock':
@@ -610816,6 +610934,8 @@ extension on _StringsTr {
         return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -611070,6 +611190,8 @@ extension on _StringsTr {
         return 'Oyun kütüphanesi ve yakalama izleme';
       case 'game_hook_btn_close':
         return 'Yer paylaşımını kapat';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Yeni satırları takip et';
       case 'game_hook_btn_lock':
@@ -629548,6 +629670,8 @@ extension on _StringsVi {
         return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -629802,6 +629926,8 @@ extension on _StringsVi {
         return 'Thư viện trò chơi và giám sát thu thập';
       case 'game_hook_btn_close':
         return 'Đóng cửa sổ nổi';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Bám theo câu thoại mới';
       case 'game_hook_btn_lock':
@@ -648174,6 +648300,8 @@ extension on _StringsZhCn {
         return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
       case 'gal_hook_toolbar_label_close':
         return '关闭';
+      case 'gal_hook_toolbar_label_copy':
+        return '复制';
       case 'gal_hook_toolbar_label_follow':
         return '跟随';
       case 'gal_hook_toolbar_label_lock':
@@ -648427,6 +648555,8 @@ extension on _StringsZhCn {
         return '游戏库与捕获监控';
       case 'game_hook_btn_close':
         return '关闭浮窗';
+      case 'game_hook_btn_copy':
+        return '复制这句台词';
       case 'game_hook_btn_follow':
         return '跟随新台词';
       case 'game_hook_btn_lock':
@@ -666689,6 +666819,8 @@ extension on _StringsZhHk {
         return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return '複製';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -666942,6 +667074,8 @@ extension on _StringsZhHk {
         return '遊戲庫與捕獲監控';
       case 'game_hook_btn_close':
         return '關閉浮窗';
+      case 'game_hook_btn_copy':
+        return '複製這句台詞';
       case 'game_hook_btn_follow':
         return '跟隨新台詞';
       case 'game_hook_btn_lock':
