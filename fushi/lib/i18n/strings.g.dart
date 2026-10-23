@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153391 (9023 per locale)
+/// Strings: 153646 (9038 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9571,16 +9571,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   String get srs_note_format_color => 'Text color';
   String get srs_note_format_color_default => 'Default color';
   String get srs_note_format_highlight => 'Highlight';
   String get srs_note_format_highlight_none => 'No highlight';
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   String get srs_note_furigana_edit_text => 'Edit text';
   String get srs_note_furigana_hint => 'Tap a word to change its reading';
@@ -9997,6 +10002,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
+  String get srs_visual_image_auto => 'Auto';
+  String get srs_visual_image_full => 'Full';
+  String get srs_visual_image_large => 'L';
+  String get srs_visual_image_medium => 'M';
+  String get srs_visual_image_small => 'S';
   String get srs_visual_kind_divider => 'Divider';
   String get srs_visual_kind_front_side => 'Front side';
   String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
@@ -10013,10 +10023,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_prop_hide_empty => 'Hide when empty';
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  String get srs_visual_prop_image_size => 'Image size';
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
   String get srs_visual_prop_italic => 'Italic';
   String get srs_visual_prop_label => 'Caption';
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   String get srs_visual_prop_size => 'Size';
+  String get srs_visual_prop_spacing => 'Spacing';
   String get srs_visual_prop_text => 'Text';
   String get srs_visual_prop_tone => 'Colour';
   String get srs_visual_replace => 'Replace';
@@ -10024,6 +10038,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_size_display => 'Huge';
   String get srs_visual_size_small => 'Small';
   String get srs_visual_size_title => 'Large';
+  String get srs_visual_spacing_compact => 'Compact';
+  String get srs_visual_spacing_loose => 'Loose';
+  String get srs_visual_spacing_none => 'None';
+  String get srs_visual_spacing_normal => 'Normal';
   String get srs_visual_tab => 'Visual';
   String get srs_visual_text_default => 'Text';
   String get srs_visual_tone_accent => 'Accent';
@@ -29013,11 +29031,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -29030,6 +29048,14 @@ class _StringsAr extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -29748,6 +29774,16 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -29779,6 +29815,11 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -29786,6 +29827,8 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -29800,6 +29843,14 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -51225,11 +51276,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -51242,6 +51293,14 @@ class _StringsDe extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -51960,6 +52019,16 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -51991,6 +52060,11 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -51998,6 +52072,8 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -52012,6 +52088,14 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -73561,11 +73645,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -73578,6 +73662,14 @@ class _StringsEs extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -74296,6 +74388,16 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -74327,6 +74429,11 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -74334,6 +74441,8 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -74348,6 +74457,14 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -95985,11 +96102,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -96002,6 +96119,14 @@ class _StringsFr extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -96720,6 +96845,16 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -96751,6 +96886,11 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -96758,6 +96898,8 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -96772,6 +96914,14 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -118173,11 +118323,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -118190,6 +118340,14 @@ class _StringsId extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -118908,6 +119066,16 @@ class _StringsId extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -118939,6 +119107,11 @@ class _StringsId extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -118946,6 +119119,8 @@ class _StringsId extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -118960,6 +119135,14 @@ class _StringsId extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -140402,11 +140585,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -140419,6 +140602,14 @@ class _StringsIt extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -141137,6 +141328,16 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -141168,6 +141369,11 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -141175,6 +141381,8 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -141189,6 +141397,14 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -161925,11 +162141,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -161942,6 +162158,14 @@ class _StringsJa extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -162660,6 +162884,16 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -162691,6 +162925,11 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -162698,6 +162937,8 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -162712,6 +162953,14 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -183174,11 +183423,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -183191,6 +183440,14 @@ class _StringsKo extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -183909,6 +184166,16 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -183940,6 +184207,11 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -183947,6 +184219,8 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -183961,6 +184235,14 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -205133,11 +205415,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -205150,6 +205432,14 @@ class _StringsNl extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -205868,6 +206158,16 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -205899,6 +206199,11 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -205906,6 +206211,8 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -205920,6 +206227,14 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -227393,11 +227708,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -227410,6 +227725,14 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -228128,6 +228451,16 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -228159,6 +228492,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -228166,6 +228504,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -228180,6 +228520,14 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -249631,11 +249979,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -249648,6 +249996,14 @@ class _StringsRu extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -250366,6 +250722,16 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -250397,6 +250763,11 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -250404,6 +250775,8 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -250418,6 +250791,14 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -271620,11 +272001,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -271637,6 +272018,14 @@ class _StringsTh extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -272355,6 +272744,16 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -272386,6 +272785,11 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -272393,6 +272797,8 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -272407,6 +272813,14 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -293675,11 +294089,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -293692,6 +294106,14 @@ class _StringsTr extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -294410,6 +294832,16 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -294441,6 +294873,11 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -294448,6 +294885,8 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -294462,6 +294901,14 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -315726,11 +316173,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -315743,6 +316190,14 @@ class _StringsVi extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -316461,6 +316916,16 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -316492,6 +316957,11 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -316499,6 +316969,8 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -316513,6 +316985,14 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -336412,9 +336892,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML 源码（Ctrl+Shift+X）';
   @override
-  String get srs_note_field_structured_edit_hint => '词典排版内容：在下方逐段改文字；要改结构再切到源码';
-  @override
   String get srs_note_field_structured_hint => '词典排版内容：改 HTML 源码来修改';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      '词典排版内容：点「编辑文字」直接在排版里改字；要改结构再切到源码';
   @override
   String get srs_note_format_bold => '加粗（Ctrl+B）';
   @override
@@ -336427,6 +336908,12 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_format_highlight_none => '无高亮';
   @override
   String get srs_note_format_italic => '斜体（Ctrl+I）';
+  @override
+  String get srs_note_format_ruby => '注音';
+  @override
+  String get srs_note_format_ruby_select_hint => '先选中要注音的文字';
+  @override
+  String get srs_note_format_ruby_single_line => '注音不能跨行';
   @override
   String get srs_note_format_underline => '下划线（Ctrl+U）';
   @override
@@ -337088,6 +337575,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_generate_confirm_title => '替换当前模板？';
   @override
+  String get srs_visual_image_auto => '自动';
+  @override
+  String get srs_visual_image_full => '满宽';
+  @override
+  String get srs_visual_image_large => '大';
+  @override
+  String get srs_visual_image_medium => '中';
+  @override
+  String get srs_visual_image_small => '小';
+  @override
   String get srs_visual_kind_divider => '分隔线';
   @override
   String get srs_visual_kind_front_side => '正面内容';
@@ -337118,6 +337615,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint => '字段为空时整块（连同小标题）都不出现。';
   @override
+  String get srs_visual_prop_image_size => '图片大小';
+  @override
+  String get srs_visual_prop_image_size_hint => '这个字段里图片的宽度（相对卡面）';
+  @override
   String get srs_visual_prop_italic => '斜体';
   @override
   String get srs_visual_prop_label => '小标题';
@@ -337125,6 +337626,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_visual_prop_label_hint => '可选，例如「例句」';
   @override
   String get srs_visual_prop_size => '字号';
+  @override
+  String get srs_visual_prop_spacing => '间距';
   @override
   String get srs_visual_prop_text => '文字';
   @override
@@ -337139,6 +337642,14 @@ class _StringsZhCn extends _StringsEn {
   String get srs_visual_size_small => '小';
   @override
   String get srs_visual_size_title => '大';
+  @override
+  String get srs_visual_spacing_compact => '紧凑';
+  @override
+  String get srs_visual_spacing_loose => '宽松';
+  @override
+  String get srs_visual_spacing_none => '无';
+  @override
+  String get srs_visual_spacing_normal => '标准';
   @override
   String get srs_visual_tab => '可视化';
   @override
@@ -356892,11 +357403,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
   @override
-  String get srs_note_field_structured_edit_hint =>
-      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
-  @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_field_structured_wysiwyg_hint =>
+      'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
   @override
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   @override
@@ -356909,6 +357420,14 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_ruby => 'Ruby (reading above text)';
+  @override
+  String get srs_note_format_ruby_select_hint =>
+      'Select the text to annotate first';
+  @override
+  String get srs_note_format_ruby_single_line =>
+      'A reading can\'t span multiple lines';
   @override
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   @override
@@ -357626,6 +358145,16 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_generate_confirm_title =>
       'Replace the current template?';
   @override
+  String get srs_visual_image_auto => 'Auto';
+  @override
+  String get srs_visual_image_full => 'Full';
+  @override
+  String get srs_visual_image_large => 'L';
+  @override
+  String get srs_visual_image_medium => 'M';
+  @override
+  String get srs_visual_image_small => 'S';
+  @override
   String get srs_visual_kind_divider => 'Divider';
   @override
   String get srs_visual_kind_front_side => 'Front side';
@@ -357657,6 +358186,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
   @override
+  String get srs_visual_prop_image_size => 'Image size';
+  @override
+  String get srs_visual_prop_image_size_hint =>
+      'Width of pictures in this field, relative to the card';
+  @override
   String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
@@ -357664,6 +358198,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   @override
   String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_spacing => 'Spacing';
   @override
   String get srs_visual_prop_text => 'Text';
   @override
@@ -357678,6 +358214,14 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_size_small => 'Small';
   @override
   String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_spacing_compact => 'Compact';
+  @override
+  String get srs_visual_spacing_loose => 'Loose';
+  @override
+  String get srs_visual_spacing_none => 'None';
+  @override
+  String get srs_visual_spacing_normal => 'Normal';
   @override
   String get srs_visual_tab => 'Visual';
   @override
@@ -376144,10 +376688,10 @@ extension on _StringsEn {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -376160,6 +376704,12 @@ extension on _StringsEn {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -376787,6 +377337,16 @@ extension on _StringsEn {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -376817,6 +377377,10 @@ extension on _StringsEn {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -376825,6 +377389,8 @@ extension on _StringsEn {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -376839,6 +377405,14 @@ extension on _StringsEn {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -394899,10 +395473,10 @@ extension on _StringsAr {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -394915,6 +395489,12 @@ extension on _StringsAr {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -395542,6 +396122,16 @@ extension on _StringsAr {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -395572,6 +396162,10 @@ extension on _StringsAr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -395580,6 +396174,8 @@ extension on _StringsAr {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -395594,6 +396190,14 @@ extension on _StringsAr {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -413710,10 +414314,10 @@ extension on _StringsDe {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -413726,6 +414330,12 @@ extension on _StringsDe {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -414353,6 +414963,16 @@ extension on _StringsDe {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -414383,6 +415003,10 @@ extension on _StringsDe {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -414391,6 +415015,8 @@ extension on _StringsDe {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -414405,6 +415031,14 @@ extension on _StringsDe {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -432525,10 +433159,10 @@ extension on _StringsEs {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -432541,6 +433175,12 @@ extension on _StringsEs {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -433168,6 +433808,16 @@ extension on _StringsEs {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -433198,6 +433848,10 @@ extension on _StringsEs {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -433206,6 +433860,8 @@ extension on _StringsEs {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -433220,6 +433876,14 @@ extension on _StringsEs {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -451351,10 +452015,10 @@ extension on _StringsFr {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -451367,6 +452031,12 @@ extension on _StringsFr {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -451994,6 +452664,16 @@ extension on _StringsFr {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -452024,6 +452704,10 @@ extension on _StringsFr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -452032,6 +452716,8 @@ extension on _StringsFr {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -452046,6 +452732,14 @@ extension on _StringsFr {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -470137,10 +470831,10 @@ extension on _StringsId {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -470153,6 +470847,12 @@ extension on _StringsId {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -470780,6 +471480,16 @@ extension on _StringsId {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -470810,6 +471520,10 @@ extension on _StringsId {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -470818,6 +471532,8 @@ extension on _StringsId {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -470832,6 +471548,14 @@ extension on _StringsId {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -488932,10 +489656,10 @@ extension on _StringsIt {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -488948,6 +489672,12 @@ extension on _StringsIt {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -489575,6 +490305,16 @@ extension on _StringsIt {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -489605,6 +490345,10 @@ extension on _StringsIt {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -489613,6 +490357,8 @@ extension on _StringsIt {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -489627,6 +490373,14 @@ extension on _StringsIt {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -507661,10 +508415,10 @@ extension on _StringsJa {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -507677,6 +508431,12 @@ extension on _StringsJa {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -508304,6 +509064,16 @@ extension on _StringsJa {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -508334,6 +509104,10 @@ extension on _StringsJa {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -508342,6 +509116,8 @@ extension on _StringsJa {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -508356,6 +509132,14 @@ extension on _StringsJa {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -526339,10 +527123,10 @@ extension on _StringsKo {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -526355,6 +527139,12 @@ extension on _StringsKo {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -526982,6 +527772,16 @@ extension on _StringsKo {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -527012,6 +527812,10 @@ extension on _StringsKo {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -527020,6 +527824,8 @@ extension on _StringsKo {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -527034,6 +527840,14 @@ extension on _StringsKo {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -545107,10 +545921,10 @@ extension on _StringsNl {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -545123,6 +545937,12 @@ extension on _StringsNl {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -545750,6 +546570,16 @@ extension on _StringsNl {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -545780,6 +546610,10 @@ extension on _StringsNl {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -545788,6 +546622,8 @@ extension on _StringsNl {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -545802,6 +546638,14 @@ extension on _StringsNl {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -563906,10 +564750,10 @@ extension on _StringsPtBr {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -563922,6 +564766,12 @@ extension on _StringsPtBr {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -564549,6 +565399,16 @@ extension on _StringsPtBr {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -564579,6 +565439,10 @@ extension on _StringsPtBr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -564587,6 +565451,8 @@ extension on _StringsPtBr {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -564601,6 +565467,14 @@ extension on _StringsPtBr {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -582709,10 +583583,10 @@ extension on _StringsRu {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -582725,6 +583599,12 @@ extension on _StringsRu {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -583352,6 +584232,16 @@ extension on _StringsRu {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -583382,6 +584272,10 @@ extension on _StringsRu {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -583390,6 +584284,8 @@ extension on _StringsRu {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -583404,6 +584300,14 @@ extension on _StringsRu {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -601472,10 +602376,10 @@ extension on _StringsTh {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -601488,6 +602392,12 @@ extension on _StringsTh {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -602115,6 +603025,16 @@ extension on _StringsTh {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -602145,6 +603065,10 @@ extension on _StringsTh {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -602153,6 +603077,8 @@ extension on _StringsTh {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -602167,6 +603093,14 @@ extension on _StringsTh {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -620253,10 +621187,10 @@ extension on _StringsTr {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -620269,6 +621203,12 @@ extension on _StringsTr {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -620896,6 +621836,16 @@ extension on _StringsTr {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -620926,6 +621876,10 @@ extension on _StringsTr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -620934,6 +621888,8 @@ extension on _StringsTr {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -620948,6 +621904,14 @@ extension on _StringsTr {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -639029,10 +639993,10 @@ extension on _StringsVi {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -639045,6 +640009,12 @@ extension on _StringsVi {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -639672,6 +640642,16 @@ extension on _StringsVi {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -639702,6 +640682,10 @@ extension on _StringsVi {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -639710,6 +640694,8 @@ extension on _StringsVi {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -639724,6 +640710,14 @@ extension on _StringsVi {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
@@ -657635,10 +658629,10 @@ extension on _StringsZhCn {
         return '回到可视化编辑（Ctrl+Shift+X）';
       case 'srs_note_field_source_show':
         return 'HTML 源码（Ctrl+Shift+X）';
-      case 'srs_note_field_structured_edit_hint':
-        return '词典排版内容：在下方逐段改文字；要改结构再切到源码';
       case 'srs_note_field_structured_hint':
         return '词典排版内容：改 HTML 源码来修改';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return '词典排版内容：点「编辑文字」直接在排版里改字；要改结构再切到源码';
       case 'srs_note_format_bold':
         return '加粗（Ctrl+B）';
       case 'srs_note_format_color':
@@ -657651,6 +658645,12 @@ extension on _StringsZhCn {
         return '无高亮';
       case 'srs_note_format_italic':
         return '斜体（Ctrl+I）';
+      case 'srs_note_format_ruby':
+        return '注音';
+      case 'srs_note_format_ruby_select_hint':
+        return '先选中要注音的文字';
+      case 'srs_note_format_ruby_single_line':
+        return '注音不能跨行';
       case 'srs_note_format_underline':
         return '下划线（Ctrl+U）';
       case 'srs_note_furigana_edit_text':
@@ -658274,6 +659274,16 @@ extension on _StringsZhCn {
         return '正反两面会按字段重新生成。点保存之前不会写入，仍可放弃。';
       case 'srs_visual_generate_confirm_title':
         return '替换当前模板？';
+      case 'srs_visual_image_auto':
+        return '自动';
+      case 'srs_visual_image_full':
+        return '满宽';
+      case 'srs_visual_image_large':
+        return '大';
+      case 'srs_visual_image_medium':
+        return '中';
+      case 'srs_visual_image_small':
+        return '小';
       case 'srs_visual_kind_divider':
         return '分隔线';
       case 'srs_visual_kind_front_side':
@@ -658304,6 +659314,10 @@ extension on _StringsZhCn {
         return '为空时隐藏';
       case 'srs_visual_prop_hide_empty_hint':
         return '字段为空时整块（连同小标题）都不出现。';
+      case 'srs_visual_prop_image_size':
+        return '图片大小';
+      case 'srs_visual_prop_image_size_hint':
+        return '这个字段里图片的宽度（相对卡面）';
       case 'srs_visual_prop_italic':
         return '斜体';
       case 'srs_visual_prop_label':
@@ -658312,6 +659326,8 @@ extension on _StringsZhCn {
         return '可选，例如「例句」';
       case 'srs_visual_prop_size':
         return '字号';
+      case 'srs_visual_prop_spacing':
+        return '间距';
       case 'srs_visual_prop_text':
         return '文字';
       case 'srs_visual_prop_tone':
@@ -658326,6 +659342,14 @@ extension on _StringsZhCn {
         return '小';
       case 'srs_visual_size_title':
         return '大';
+      case 'srs_visual_spacing_compact':
+        return '紧凑';
+      case 'srs_visual_spacing_loose':
+        return '宽松';
+      case 'srs_visual_spacing_none':
+        return '无';
+      case 'srs_visual_spacing_normal':
+        return '标准';
       case 'srs_visual_tab':
         return '可视化';
       case 'srs_visual_text_default':
@@ -676234,10 +677258,10 @@ extension on _StringsZhHk {
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
-      case 'srs_note_field_structured_edit_hint':
-        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_field_structured_wysiwyg_hint':
+        return 'Dictionary layout: tap Edit text to change the words right inside the layout; switch to source to change the structure';
       case 'srs_note_format_bold':
         return 'Bold (Ctrl+B)';
       case 'srs_note_format_color':
@@ -676250,6 +677274,12 @@ extension on _StringsZhHk {
         return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
+      case 'srs_note_format_ruby':
+        return 'Ruby (reading above text)';
+      case 'srs_note_format_ruby_select_hint':
+        return 'Select the text to annotate first';
+      case 'srs_note_format_ruby_single_line':
+        return 'A reading can\'t span multiple lines';
       case 'srs_note_format_underline':
         return 'Underline (Ctrl+U)';
       case 'srs_note_furigana_edit_text':
@@ -676877,6 +677907,16 @@ extension on _StringsZhHk {
         return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_generate_confirm_title':
         return 'Replace the current template?';
+      case 'srs_visual_image_auto':
+        return 'Auto';
+      case 'srs_visual_image_full':
+        return 'Full';
+      case 'srs_visual_image_large':
+        return 'L';
+      case 'srs_visual_image_medium':
+        return 'M';
+      case 'srs_visual_image_small':
+        return 'S';
       case 'srs_visual_kind_divider':
         return 'Divider';
       case 'srs_visual_kind_front_side':
@@ -676907,6 +677947,10 @@ extension on _StringsZhHk {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_image_size':
+        return 'Image size';
+      case 'srs_visual_prop_image_size_hint':
+        return 'Width of pictures in this field, relative to the card';
       case 'srs_visual_prop_italic':
         return 'Italic';
       case 'srs_visual_prop_label':
@@ -676915,6 +677959,8 @@ extension on _StringsZhHk {
         return 'Optional, e.g. Sentence';
       case 'srs_visual_prop_size':
         return 'Size';
+      case 'srs_visual_prop_spacing':
+        return 'Spacing';
       case 'srs_visual_prop_text':
         return 'Text';
       case 'srs_visual_prop_tone':
@@ -676929,6 +677975,14 @@ extension on _StringsZhHk {
         return 'Small';
       case 'srs_visual_size_title':
         return 'Large';
+      case 'srs_visual_spacing_compact':
+        return 'Compact';
+      case 'srs_visual_spacing_loose':
+        return 'Loose';
+      case 'srs_visual_spacing_none':
+        return 'None';
+      case 'srs_visual_spacing_normal':
+        return 'Normal';
       case 'srs_visual_tab':
         return 'Visual';
       case 'srs_visual_text_default':
