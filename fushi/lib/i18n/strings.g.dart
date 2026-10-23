@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153238 (9014 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1549,6 +1549,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
   String get audiobook_transcribe_discard => 'Discard progress';
   String audiobook_transcribe_done({
     required Object cues,
@@ -1599,6 +1606,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_intro =>
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   String get audiobook_transcribe_language_label => 'Speech language';
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
@@ -1693,17 +1702,33 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object eta,
     required Object speed,
   }) => 'Elapsed ${elapsed} · remaining ${eta} · ${speed}× realtime';
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  String get audiobook_transcribe_stage_import => 'Import';
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
   String get audiobook_transcribe_start => 'Start transcription';
   String get audiobook_transcribe_status_done => 'Added to library';
   String get audiobook_transcribe_status_downloading_model =>
       'Downloading speech model';
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  String get audiobook_transcribe_status_matching => 'Matching text';
   String get audiobook_transcribe_status_preparing => 'Preparing';
   String get audiobook_transcribe_status_queued_after_download =>
       'Queued for transcription';
   String get audiobook_transcribe_status_skipped =>
       'A book with this title is already in the library; skipped';
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -15307,6 +15332,16 @@ class _StringsAr extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'تجاهل التقدّم';
   @override
   String audiobook_transcribe_done({
@@ -15384,6 +15419,9 @@ class _StringsAr extends _StringsEn {
       'ينسخ الصوت محليًا باستخدام نموذج كلام على الجهاز للغة المحددة وينشئ ترجمة للمحاذاة. لا يتم رفع أي شيء.';
   @override
   String get audiobook_transcribe_language_label => 'لغة الكلام';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'إضافة نموذج محلي…';
   @override
@@ -15528,6 +15566,27 @@ class _StringsAr extends _StringsEn {
     required Object speed,
   }) => 'المنقضي ${elapsed} · المتبقي ${eta} · ${speed}× من الزمن الفعلي';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'بدء النسخ';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -15536,6 +15595,11 @@ class _StringsAr extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -15546,6 +15610,9 @@ class _StringsAr extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -37195,6 +37262,16 @@ class _StringsDe extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Fortschritt verwerfen';
   @override
   String audiobook_transcribe_done({
@@ -37273,6 +37350,9 @@ class _StringsDe extends _StringsEn {
       'Transkribiert das Audio lokal mit einem Sprachmodell auf dem Gerät für die gewählte Sprache und erzeugt Untertitel zur Ausrichtung. Es wird nichts hochgeladen.';
   @override
   String get audiobook_transcribe_language_label => 'Sprache der Aufnahme';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add =>
       'Lokales Modell hinzufügen…';
@@ -37421,6 +37501,27 @@ class _StringsDe extends _StringsEn {
     required Object speed,
   }) => 'Vergangen ${elapsed} · verbleibend ${eta} · ${speed}× Echtzeit';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Transkription starten';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -37429,6 +37530,11 @@ class _StringsDe extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -37439,6 +37545,9 @@ class _StringsDe extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -59454,6 +59563,16 @@ class _StringsEs extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Descartar progreso';
   @override
   String audiobook_transcribe_done({
@@ -59532,6 +59651,9 @@ class _StringsEs extends _StringsEn {
       'Transcribe el audio localmente con un modelo de voz del dispositivo para el idioma seleccionado y genera subtítulos para la alineación. No se sube nada.';
   @override
   String get audiobook_transcribe_language_label => 'Idioma de la voz';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Añadir un modelo local…';
   @override
@@ -59680,6 +59802,27 @@ class _StringsEs extends _StringsEn {
     required Object speed,
   }) => 'Transcurrido ${elapsed} · restante ${eta} · ${speed}× tiempo real';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Iniciar transcripción';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -59688,6 +59831,11 @@ class _StringsEs extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -59698,6 +59846,9 @@ class _StringsEs extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -81763,6 +81914,16 @@ class _StringsFr extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Abandonner la progression';
   @override
   String audiobook_transcribe_done({
@@ -81845,6 +82006,9 @@ class _StringsFr extends _StringsEn {
       'Transcrit l\'audio localement avec un modèle vocal sur l\'appareil pour la langue sélectionnée et génère des sous-titres pour l\'alignement. Rien n\'est envoyé en ligne.';
   @override
   String get audiobook_transcribe_language_label => 'Langue parlée';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add =>
       'Ajouter un modèle local…';
@@ -81994,6 +82158,27 @@ class _StringsFr extends _StringsEn {
     required Object speed,
   }) => 'Écoulé ${elapsed} · restant ${eta} · ${speed}× temps réel';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Démarrer la transcription';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -82002,6 +82187,11 @@ class _StringsFr extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -82012,6 +82202,9 @@ class _StringsFr extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -104115,6 +104308,16 @@ class _StringsId extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Buang progres';
   @override
   String audiobook_transcribe_done({
@@ -104192,6 +104395,9 @@ class _StringsId extends _StringsEn {
       'Mentranskripsikan audio secara lokal dengan model suara di perangkat untuk bahasa yang dipilih dan membuat subtitel untuk penyelarasan. Tidak ada yang diunggah.';
   @override
   String get audiobook_transcribe_language_label => 'Bahasa ucapan';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Tambah model lokal…';
   @override
@@ -104337,6 +104543,27 @@ class _StringsId extends _StringsEn {
     required Object speed,
   }) => 'Berlalu ${elapsed} · sisa ${eta} · ${speed}× waktu nyata';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Mulai transkripsi';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -104345,6 +104572,11 @@ class _StringsId extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -104355,6 +104587,9 @@ class _StringsId extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -126166,6 +126401,16 @@ class _StringsIt extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Scarta avanzamento';
   @override
   String audiobook_transcribe_done({
@@ -126244,6 +126489,9 @@ class _StringsIt extends _StringsEn {
       'Trascrive l\'audio in locale con un modello vocale sul dispositivo per la lingua selezionata e genera sottotitoli per l\'allineamento. Non viene caricato nulla.';
   @override
   String get audiobook_transcribe_language_label => 'Lingua parlata';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add =>
       'Aggiungi un modello locale…';
@@ -126392,6 +126640,27 @@ class _StringsIt extends _StringsEn {
     required Object speed,
   }) => 'Trascorso ${elapsed} · rimanente ${eta} · ${speed}× tempo reale';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Avvia trascrizione';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -126400,6 +126669,11 @@ class _StringsIt extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -126410,6 +126684,9 @@ class _StringsIt extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -148274,6 +148551,16 @@ class _StringsJa extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} 文がヒット';
+  @override
+  String get audiobook_transcribe_coverage_last => '前回の本文マッチ';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      '本文カバー率 ${pct}%';
+  @override
   String get audiobook_transcribe_discard => '進捗を破棄';
   @override
   String audiobook_transcribe_done({
@@ -148351,6 +148638,9 @@ class _StringsJa extends _StringsEn {
       '選択した言語の音声モデルで音声をローカルで文字起こしし、アラインメント用の字幕を生成します。何もアップロードされません。';
   @override
   String get audiobook_transcribe_language_label => '音声の言語';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      '「字幕を使う」を押すと本文とマッチして取り込みます';
   @override
   String get audiobook_transcribe_model_custom_add => 'ローカルモデルを追加…';
   @override
@@ -148490,6 +148780,26 @@ class _StringsJa extends _StringsEn {
     required Object speed,
   }) => '経過 ${elapsed} · 残り ${eta} · ${speed} 倍速';
   @override
+  String get audiobook_transcribe_stage_download_model => 'モデルDL';
+  @override
+  String get audiobook_transcribe_stage_import => '取り込み';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'モデル読込';
+  @override
+  String get audiobook_transcribe_stage_match_text => '本文マッチ';
+  @override
+  String get audiobook_transcribe_stage_state_active => '進行中';
+  @override
+  String get audiobook_transcribe_stage_state_done => '完了';
+  @override
+  String get audiobook_transcribe_stage_state_failed => '失敗';
+  @override
+  String get audiobook_transcribe_stage_state_pending => '未開始';
+  @override
+  String get audiobook_transcribe_stage_state_skipped => '準備済み・スキップ';
+  @override
+  String get audiobook_transcribe_stage_transcribe => '文字起こし';
+  @override
   String get audiobook_transcribe_start => '文字起こしを開始';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -148498,6 +148808,10 @@ class _StringsJa extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model => '音声モデルを読み込み中';
+  @override
+  String get audiobook_transcribe_status_matching => '本文とマッチ中';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -148508,6 +148822,8 @@ class _StringsJa extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing => '文境界を調整中…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -169432,6 +169748,16 @@ class _StringsKo extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => '진행 상황 삭제';
   @override
   String audiobook_transcribe_done({
@@ -169509,6 +169835,9 @@ class _StringsKo extends _StringsEn {
       '선택한 언어의 기기 내 음성 모델로 오디오를 로컬에서 전사하고, 정렬에 사용할 자막을 생성합니다. 아무것도 업로드되지 않습니다.';
   @override
   String get audiobook_transcribe_language_label => '음성 언어';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => '로컬 모델 추가…';
   @override
@@ -169648,6 +169977,27 @@ class _StringsKo extends _StringsEn {
     required Object speed,
   }) => '경과 ${elapsed} · 남은 시간 ${eta} · 실시간의 ${speed}배';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => '전사 시작';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -169656,6 +170006,11 @@ class _StringsKo extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -169666,6 +170021,9 @@ class _StringsKo extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -190758,6 +191116,16 @@ class _StringsNl extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Voortgang verwerpen';
   @override
   String audiobook_transcribe_done({
@@ -190836,6 +191204,9 @@ class _StringsNl extends _StringsEn {
       'Transcribeert de audio lokaal met een spraakmodel op het apparaat voor de geselecteerde taal en genereert ondertitels voor uitlijning. Er wordt niets geüpload.';
   @override
   String get audiobook_transcribe_language_label => 'Spraaktaal';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Lokaal model toevoegen…';
   @override
@@ -190983,6 +191354,27 @@ class _StringsNl extends _StringsEn {
     required Object speed,
   }) => 'Verstreken ${elapsed} · resterend ${eta} · ${speed}× realtime';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Transcriptie starten';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -190991,6 +191383,11 @@ class _StringsNl extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -191001,6 +191398,9 @@ class _StringsNl extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -212921,6 +213321,16 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Descartar progresso';
   @override
   String audiobook_transcribe_done({
@@ -212998,6 +213408,9 @@ class _StringsPtBr extends _StringsEn {
       'Transcreve o áudio localmente com um modelo de fala no dispositivo para o idioma selecionado e gera legendas para alinhamento. Nada é enviado.';
   @override
   String get audiobook_transcribe_language_label => 'Idioma da fala';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Adicionar modelo local…';
   @override
@@ -213146,6 +213559,27 @@ class _StringsPtBr extends _StringsEn {
     required Object speed,
   }) => 'Decorrido ${elapsed} · restante ${eta} · ${speed}× tempo real';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Iniciar transcrição';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -213154,6 +213588,11 @@ class _StringsPtBr extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -213164,6 +213603,9 @@ class _StringsPtBr extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -235129,6 +235571,16 @@ class _StringsRu extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Сбросить прогресс';
   @override
   String audiobook_transcribe_done({
@@ -235206,6 +235658,9 @@ class _StringsRu extends _StringsEn {
       'Транскрибирует аудио локально с помощью речевой модели на устройстве для выбранного языка и создаёт субтитры для выравнивания. Ничего не загружается в сеть.';
   @override
   String get audiobook_transcribe_language_label => 'Язык речи';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add =>
       'Добавить локальную модель…';
@@ -235353,6 +235808,27 @@ class _StringsRu extends _StringsEn {
     required Object speed,
   }) => 'Прошло ${elapsed} · осталось ${eta} · ${speed}× реального времени';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Начать транскрибацию';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -235361,6 +235837,11 @@ class _StringsRu extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -235371,6 +235852,9 @@ class _StringsRu extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -257258,6 +257742,16 @@ class _StringsTh extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'ทิ้งความคืบหน้า';
   @override
   String audiobook_transcribe_done({
@@ -257335,6 +257829,9 @@ class _StringsTh extends _StringsEn {
       'ถอดเสียงในเครื่องด้วยโมเดลเสียงพูดบนอุปกรณ์สำหรับภาษาที่เลือก และสร้างคำบรรยายสำหรับการจัดแนว ไม่มีการอัปโหลดใดๆ';
   @override
   String get audiobook_transcribe_language_label => 'ภาษาเสียงพูด';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'เพิ่มโมเดลในเครื่อง…';
   @override
@@ -257478,6 +257975,27 @@ class _StringsTh extends _StringsEn {
     required Object speed,
   }) => 'ผ่านไป ${elapsed} · เหลือ ${eta} · ${speed}× เรียลไทม์';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'เริ่มถอดเสียง';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -257486,6 +258004,11 @@ class _StringsTh extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -257496,6 +258019,9 @@ class _StringsTh extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -279122,6 +279648,16 @@ class _StringsTr extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'İlerlemeyi at';
   @override
   String audiobook_transcribe_done({
@@ -279199,6 +279735,9 @@ class _StringsTr extends _StringsEn {
       'Sesi, seçilen dil için cihaz üzerindeki bir konuşma modeliyle yerel olarak yazıya döker ve hizalama için altyazı oluşturur. Hiçbir şey yüklenmez.';
   @override
   String get audiobook_transcribe_language_label => 'Konuşma dili';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Yerel model ekle…';
   @override
@@ -279344,6 +279883,27 @@ class _StringsTr extends _StringsEn {
     required Object speed,
   }) => 'Geçen ${elapsed} · kalan ${eta} · ${speed}× gerçek zamanlı';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Yazıya dökmeyi başlat';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -279352,6 +279912,11 @@ class _StringsTr extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -279362,6 +279927,9 @@ class _StringsTr extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -301161,6 +301729,16 @@ class _StringsVi extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '${matched}/${total} cues matched';
+  @override
+  String get audiobook_transcribe_coverage_last => 'Last text match';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      'Text coverage ${pct}%';
+  @override
   String get audiobook_transcribe_discard => 'Bỏ tiến độ';
   @override
   String audiobook_transcribe_done({
@@ -301238,6 +301816,9 @@ class _StringsVi extends _StringsEn {
       'Phiên âm âm thanh ngay trên máy bằng mô hình giọng nói trên thiết bị cho ngôn ngữ đã chọn và tạo phụ đề để căn chỉnh. Không có gì được tải lên.';
   @override
   String get audiobook_transcribe_language_label => 'Ngôn ngữ giọng nói';
+  @override
+  String get audiobook_transcribe_match_after_use =>
+      'Text matching and import run after you tap Use subtitles';
   @override
   String get audiobook_transcribe_model_custom_add => 'Thêm mô hình cục bộ…';
   @override
@@ -301383,6 +301964,27 @@ class _StringsVi extends _StringsEn {
     required Object speed,
   }) => 'Đã trôi qua ${elapsed} · còn lại ${eta} · ${speed}× thời gian thực';
   @override
+  String get audiobook_transcribe_stage_download_model => 'Download model';
+  @override
+  String get audiobook_transcribe_stage_import => 'Import';
+  @override
+  String get audiobook_transcribe_stage_load_model => 'Load model';
+  @override
+  String get audiobook_transcribe_stage_match_text => 'Match text';
+  @override
+  String get audiobook_transcribe_stage_state_active => 'In progress';
+  @override
+  String get audiobook_transcribe_stage_state_done => 'Done';
+  @override
+  String get audiobook_transcribe_stage_state_failed => 'Failed';
+  @override
+  String get audiobook_transcribe_stage_state_pending => 'Not started';
+  @override
+  String get audiobook_transcribe_stage_state_skipped =>
+      'Skipped, already available';
+  @override
+  String get audiobook_transcribe_stage_transcribe => 'Transcribe';
+  @override
   String get audiobook_transcribe_start => 'Bắt đầu phiên âm';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -301391,6 +301993,11 @@ class _StringsVi extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model =>
+      'Loading speech model';
+  @override
+  String get audiobook_transcribe_status_matching => 'Matching text';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -301401,6 +302008,9 @@ class _StringsVi extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing =>
+      'Refining sentence boundaries…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -322943,6 +323553,16 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       '音频文件已损坏或没有下载完整，只能解出其中一部分。请重新下载或替换文件后再转录。';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '命中 ${matched}/${total} 句';
+  @override
+  String get audiobook_transcribe_coverage_last => '上次匹配正文';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      '正文覆盖 ${pct}%';
+  @override
   String get audiobook_transcribe_discard => '放弃进度';
   @override
   String audiobook_transcribe_done({
@@ -323018,6 +323638,8 @@ class _StringsZhCn extends _StringsEn {
       '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
   @override
   String get audiobook_transcribe_language_label => '语音语言';
+  @override
+  String get audiobook_transcribe_match_after_use => '点「使用字幕」后匹配正文并入库';
   @override
   String get audiobook_transcribe_model_custom_add => '手动指定模型…';
   @override
@@ -323154,6 +323776,26 @@ class _StringsZhCn extends _StringsEn {
     required Object speed,
   }) => '已用 ${elapsed} · 剩余 ${eta} · ${speed} 倍速';
   @override
+  String get audiobook_transcribe_stage_download_model => '下载模型';
+  @override
+  String get audiobook_transcribe_stage_import => '入库';
+  @override
+  String get audiobook_transcribe_stage_load_model => '加载模型';
+  @override
+  String get audiobook_transcribe_stage_match_text => '匹配正文';
+  @override
+  String get audiobook_transcribe_stage_state_active => '进行中';
+  @override
+  String get audiobook_transcribe_stage_state_done => '已完成';
+  @override
+  String get audiobook_transcribe_stage_state_failed => '失败';
+  @override
+  String get audiobook_transcribe_stage_state_pending => '未开始';
+  @override
+  String get audiobook_transcribe_stage_state_skipped => '已就绪，跳过';
+  @override
+  String get audiobook_transcribe_stage_transcribe => '转录';
+  @override
   String get audiobook_transcribe_start => '开始转录';
   @override
   String get audiobook_transcribe_status_done => '已入库';
@@ -323162,6 +323804,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_status_importing => '入库中';
   @override
+  String get audiobook_transcribe_status_loading_model => '加载语音模型中';
+  @override
+  String get audiobook_transcribe_status_matching => '匹配正文中';
+  @override
   String get audiobook_transcribe_status_preparing => '准备中';
   @override
   String get audiobook_transcribe_status_queued_after_download => '已排队转录';
@@ -323169,6 +323815,8 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_transcribe_status_skipped => '库中已有同名书，已跳过';
   @override
   String get audiobook_transcribe_status_transcribing => '转录中';
+  @override
+  String get audiobook_transcribe_step_finishing => '句界重切…';
   @override
   String get audiobook_transcribe_task_subtitle => '有声书 · 转录后入库';
   @override
@@ -343060,6 +343708,16 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_transcribe_audio_incomplete =>
       'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
   @override
+  String audiobook_transcribe_coverage_cues({
+    required Object matched,
+    required Object total,
+  }) => '命中 ${matched}/${total} 句';
+  @override
+  String get audiobook_transcribe_coverage_last => '上次匹配正文';
+  @override
+  String audiobook_transcribe_coverage_text({required Object pct}) =>
+      '正文覆蓋 ${pct}%';
+  @override
   String get audiobook_transcribe_discard => '放棄進度';
   @override
   String audiobook_transcribe_done({
@@ -343136,6 +343794,8 @@ class _StringsZhHk extends _StringsEn {
       '在本機用所選語言的語音模型轉錄音頻並生成用於對齊的字幕，不會上傳任何內容。';
   @override
   String get audiobook_transcribe_language_label => '語音語言';
+  @override
+  String get audiobook_transcribe_match_after_use => '按「使用字幕」後匹配正文並入庫';
   @override
   String get audiobook_transcribe_model_custom_add => '手動指定模型…';
   @override
@@ -343272,6 +343932,26 @@ class _StringsZhHk extends _StringsEn {
     required Object speed,
   }) => '已用 ${elapsed} · 剩餘 ${eta} · ${speed} 倍速';
   @override
+  String get audiobook_transcribe_stage_download_model => '下載模型';
+  @override
+  String get audiobook_transcribe_stage_import => '入庫';
+  @override
+  String get audiobook_transcribe_stage_load_model => '載入模型';
+  @override
+  String get audiobook_transcribe_stage_match_text => '匹配正文';
+  @override
+  String get audiobook_transcribe_stage_state_active => '進行中';
+  @override
+  String get audiobook_transcribe_stage_state_done => '已完成';
+  @override
+  String get audiobook_transcribe_stage_state_failed => '失敗';
+  @override
+  String get audiobook_transcribe_stage_state_pending => '未開始';
+  @override
+  String get audiobook_transcribe_stage_state_skipped => '已就緒，略過';
+  @override
+  String get audiobook_transcribe_stage_transcribe => '轉錄';
+  @override
   String get audiobook_transcribe_start => '開始轉錄';
   @override
   String get audiobook_transcribe_status_done => 'Added to library';
@@ -343280,6 +343960,10 @@ class _StringsZhHk extends _StringsEn {
       'Downloading speech model';
   @override
   String get audiobook_transcribe_status_importing => 'Adding to library';
+  @override
+  String get audiobook_transcribe_status_loading_model => '載入語音模型中';
+  @override
+  String get audiobook_transcribe_status_matching => '匹配正文中';
   @override
   String get audiobook_transcribe_status_preparing => 'Preparing';
   @override
@@ -343290,6 +343974,8 @@ class _StringsZhHk extends _StringsEn {
       'A book with this title is already in the library; skipped';
   @override
   String get audiobook_transcribe_status_transcribing => 'Transcribing';
+  @override
+  String get audiobook_transcribe_step_finishing => '句界重切…';
   @override
   String get audiobook_transcribe_task_subtitle =>
       'Audiobook · transcribe and add to library';
@@ -363366,6 +364052,13 @@ extension on _StringsEn {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Discard progress';
       case 'audiobook_transcribe_done':
@@ -363428,6 +364121,8 @@ extension on _StringsEn {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_added':
@@ -363547,6 +364242,26 @@ extension on _StringsEn {
           required Object eta,
           required Object speed,
         }) => 'Elapsed ${elapsed} · remaining ${eta} · ${speed}× realtime';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Start transcription';
       case 'audiobook_transcribe_status_done':
@@ -363555,6 +364270,10 @@ extension on _StringsEn {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -363563,6 +364282,8 @@ extension on _StringsEn {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -382072,6 +382793,13 @@ extension on _StringsAr {
         return 'إنشاء الترجمة على الجهاز';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'تجاهل التقدّم';
       case 'audiobook_transcribe_done':
@@ -382134,6 +382862,8 @@ extension on _StringsAr {
         return 'ينسخ الصوت محليًا باستخدام نموذج كلام على الجهاز للغة المحددة وينشئ ترجمة للمحاذاة. لا يتم رفع أي شيء.';
       case 'audiobook_transcribe_language_label':
         return 'لغة الكلام';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'إضافة نموذج محلي…';
       case 'audiobook_transcribe_model_custom_added':
@@ -382253,6 +382983,26 @@ extension on _StringsAr {
           required Object eta,
           required Object speed,
         }) => 'المنقضي ${elapsed} · المتبقي ${eta} · ${speed}× من الزمن الفعلي';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'بدء النسخ';
       case 'audiobook_transcribe_status_done':
@@ -382261,6 +383011,10 @@ extension on _StringsAr {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -382269,6 +383023,8 @@ extension on _StringsAr {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -400790,6 +401546,13 @@ extension on _StringsDe {
         return 'Untertitel auf dem Gerät erzeugen';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Fortschritt verwerfen';
       case 'audiobook_transcribe_done':
@@ -400853,6 +401616,8 @@ extension on _StringsDe {
         return 'Transkribiert das Audio lokal mit einem Sprachmodell auf dem Gerät für die gewählte Sprache und erzeugt Untertitel zur Ausrichtung. Es wird nichts hochgeladen.';
       case 'audiobook_transcribe_language_label':
         return 'Sprache der Aufnahme';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Lokales Modell hinzufügen…';
       case 'audiobook_transcribe_model_custom_added':
@@ -400973,6 +401738,26 @@ extension on _StringsDe {
           required Object eta,
           required Object speed,
         }) => 'Vergangen ${elapsed} · verbleibend ${eta} · ${speed}× Echtzeit';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Transkription starten';
       case 'audiobook_transcribe_status_done':
@@ -400981,6 +401766,10 @@ extension on _StringsDe {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -400989,6 +401778,8 @@ extension on _StringsDe {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -419559,6 +420350,13 @@ extension on _StringsEs {
         return 'Generar subtítulos en el dispositivo';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Descartar progreso';
       case 'audiobook_transcribe_done':
@@ -419622,6 +420420,8 @@ extension on _StringsEs {
         return 'Transcribe el audio localmente con un modelo de voz del dispositivo para el idioma seleccionado y genera subtítulos para la alineación. No se sube nada.';
       case 'audiobook_transcribe_language_label':
         return 'Idioma de la voz';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Añadir un modelo local…';
       case 'audiobook_transcribe_model_custom_added':
@@ -419744,6 +420544,26 @@ extension on _StringsEs {
           required Object speed,
         }) =>
             'Transcurrido ${elapsed} · restante ${eta} · ${speed}× tiempo real';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Iniciar transcripción';
       case 'audiobook_transcribe_status_done':
@@ -419752,6 +420572,10 @@ extension on _StringsEs {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -419760,6 +420584,8 @@ extension on _StringsEs {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -438323,6 +439149,13 @@ extension on _StringsFr {
         return 'Générer les sous-titres sur l\'appareil';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Abandonner la progression';
       case 'audiobook_transcribe_done':
@@ -438386,6 +439219,8 @@ extension on _StringsFr {
         return 'Transcrit l\'audio localement avec un modèle vocal sur l\'appareil pour la langue sélectionnée et génère des sous-titres pour l\'alignement. Rien n\'est envoyé en ligne.';
       case 'audiobook_transcribe_language_label':
         return 'Langue parlée';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Ajouter un modèle local…';
       case 'audiobook_transcribe_model_custom_added':
@@ -438507,6 +439342,26 @@ extension on _StringsFr {
           required Object eta,
           required Object speed,
         }) => 'Écoulé ${elapsed} · restant ${eta} · ${speed}× temps réel';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Démarrer la transcription';
       case 'audiobook_transcribe_status_done':
@@ -438515,6 +439370,10 @@ extension on _StringsFr {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -438523,6 +439382,8 @@ extension on _StringsFr {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -457089,6 +457950,13 @@ extension on _StringsId {
         return 'Buat subtitel di perangkat';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Buang progres';
       case 'audiobook_transcribe_done':
@@ -457151,6 +458019,8 @@ extension on _StringsId {
         return 'Mentranskripsikan audio secara lokal dengan model suara di perangkat untuk bahasa yang dipilih dan membuat subtitel untuk penyelarasan. Tidak ada yang diunggah.';
       case 'audiobook_transcribe_language_label':
         return 'Bahasa ucapan';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Tambah model lokal…';
       case 'audiobook_transcribe_model_custom_added':
@@ -457270,6 +458140,26 @@ extension on _StringsId {
           required Object eta,
           required Object speed,
         }) => 'Berlalu ${elapsed} · sisa ${eta} · ${speed}× waktu nyata';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Mulai transkripsi';
       case 'audiobook_transcribe_status_done':
@@ -457278,6 +458168,10 @@ extension on _StringsId {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -457286,6 +458180,8 @@ extension on _StringsId {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -475812,6 +476708,13 @@ extension on _StringsIt {
         return 'Genera sottotitoli sul dispositivo';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Scarta avanzamento';
       case 'audiobook_transcribe_done':
@@ -475875,6 +476778,8 @@ extension on _StringsIt {
         return 'Trascrive l\'audio in locale con un modello vocale sul dispositivo per la lingua selezionata e genera sottotitoli per l\'allineamento. Non viene caricato nulla.';
       case 'audiobook_transcribe_language_label':
         return 'Lingua parlata';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Aggiungi un modello locale…';
       case 'audiobook_transcribe_model_custom_added':
@@ -475995,6 +476900,26 @@ extension on _StringsIt {
           required Object eta,
           required Object speed,
         }) => 'Trascorso ${elapsed} · rimanente ${eta} · ${speed}× tempo reale';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Avvia trascrizione';
       case 'audiobook_transcribe_status_done':
@@ -476003,6 +476928,10 @@ extension on _StringsIt {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -476011,6 +476940,8 @@ extension on _StringsIt {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -494549,6 +495480,13 @@ extension on _StringsJa {
         return 'デバイス上で字幕を生成';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} 文がヒット';
+      case 'audiobook_transcribe_coverage_last':
+        return '前回の本文マッチ';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => '本文カバー率 ${pct}%';
       case 'audiobook_transcribe_discard':
         return '進捗を破棄';
       case 'audiobook_transcribe_done':
@@ -494611,6 +495549,8 @@ extension on _StringsJa {
         return '選択した言語の音声モデルで音声をローカルで文字起こしし、アラインメント用の字幕を生成します。何もアップロードされません。';
       case 'audiobook_transcribe_language_label':
         return '音声の言語';
+      case 'audiobook_transcribe_match_after_use':
+        return '「字幕を使う」を押すと本文とマッチして取り込みます';
       case 'audiobook_transcribe_model_custom_add':
         return 'ローカルモデルを追加…';
       case 'audiobook_transcribe_model_custom_added':
@@ -494728,6 +495668,26 @@ extension on _StringsJa {
           required Object eta,
           required Object speed,
         }) => '経過 ${elapsed} · 残り ${eta} · ${speed} 倍速';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'モデルDL';
+      case 'audiobook_transcribe_stage_import':
+        return '取り込み';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'モデル読込';
+      case 'audiobook_transcribe_stage_match_text':
+        return '本文マッチ';
+      case 'audiobook_transcribe_stage_state_active':
+        return '進行中';
+      case 'audiobook_transcribe_stage_state_done':
+        return '完了';
+      case 'audiobook_transcribe_stage_state_failed':
+        return '失敗';
+      case 'audiobook_transcribe_stage_state_pending':
+        return '未開始';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return '準備済み・スキップ';
+      case 'audiobook_transcribe_stage_transcribe':
+        return '文字起こし';
       case 'audiobook_transcribe_start':
         return '文字起こしを開始';
       case 'audiobook_transcribe_status_done':
@@ -494736,6 +495696,10 @@ extension on _StringsJa {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return '音声モデルを読み込み中';
+      case 'audiobook_transcribe_status_matching':
+        return '本文とマッチ中';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -494744,6 +495708,8 @@ extension on _StringsJa {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return '文境界を調整中…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -513169,6 +514135,13 @@ extension on _StringsKo {
         return '기기에서 자막 생성';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return '진행 상황 삭제';
       case 'audiobook_transcribe_done':
@@ -513231,6 +514204,8 @@ extension on _StringsKo {
         return '선택한 언어의 기기 내 음성 모델로 오디오를 로컬에서 전사하고, 정렬에 사용할 자막을 생성합니다. 아무것도 업로드되지 않습니다.';
       case 'audiobook_transcribe_language_label':
         return '음성 언어';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return '로컬 모델 추가…';
       case 'audiobook_transcribe_model_custom_added':
@@ -513347,6 +514322,26 @@ extension on _StringsKo {
           required Object eta,
           required Object speed,
         }) => '경과 ${elapsed} · 남은 시간 ${eta} · 실시간의 ${speed}배';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return '전사 시작';
       case 'audiobook_transcribe_status_done':
@@ -513355,6 +514350,10 @@ extension on _StringsKo {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -513363,6 +514362,8 @@ extension on _StringsKo {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -531826,6 +532827,13 @@ extension on _StringsNl {
         return 'Ondertitels genereren op apparaat';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Voortgang verwerpen';
       case 'audiobook_transcribe_done':
@@ -531888,6 +532896,8 @@ extension on _StringsNl {
         return 'Transcribeert de audio lokaal met een spraakmodel op het apparaat voor de geselecteerde taal en genereert ondertitels voor uitlijning. Er wordt niets geüpload.';
       case 'audiobook_transcribe_language_label':
         return 'Spraaktaal';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Lokaal model toevoegen…';
       case 'audiobook_transcribe_model_custom_added':
@@ -532007,6 +533017,26 @@ extension on _StringsNl {
           required Object eta,
           required Object speed,
         }) => 'Verstreken ${elapsed} · resterend ${eta} · ${speed}× realtime';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Transcriptie starten';
       case 'audiobook_transcribe_status_done':
@@ -532015,6 +533045,10 @@ extension on _StringsNl {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -532023,6 +533057,8 @@ extension on _StringsNl {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -550578,6 +551614,13 @@ extension on _StringsPtBr {
         return 'Gerar legendas no dispositivo';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Descartar progresso';
       case 'audiobook_transcribe_done':
@@ -550640,6 +551683,8 @@ extension on _StringsPtBr {
         return 'Transcreve o áudio localmente com um modelo de fala no dispositivo para o idioma selecionado e gera legendas para alinhamento. Nada é enviado.';
       case 'audiobook_transcribe_language_label':
         return 'Idioma da fala';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Adicionar modelo local…';
       case 'audiobook_transcribe_model_custom_added':
@@ -550760,6 +551805,26 @@ extension on _StringsPtBr {
           required Object eta,
           required Object speed,
         }) => 'Decorrido ${elapsed} · restante ${eta} · ${speed}× tempo real';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Iniciar transcrição';
       case 'audiobook_transcribe_status_done':
@@ -550768,6 +551833,10 @@ extension on _StringsPtBr {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -550776,6 +551845,8 @@ extension on _StringsPtBr {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -569323,6 +570394,13 @@ extension on _StringsRu {
         return 'Создать субтитры на устройстве';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Сбросить прогресс';
       case 'audiobook_transcribe_done':
@@ -569386,6 +570464,8 @@ extension on _StringsRu {
         return 'Транскрибирует аудио локально с помощью речевой модели на устройстве для выбранного языка и создаёт субтитры для выравнивания. Ничего не загружается в сеть.';
       case 'audiobook_transcribe_language_label':
         return 'Язык речи';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Добавить локальную модель…';
       case 'audiobook_transcribe_model_custom_added':
@@ -569506,6 +570586,26 @@ extension on _StringsRu {
           required Object speed,
         }) =>
             'Прошло ${elapsed} · осталось ${eta} · ${speed}× реального времени';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Начать транскрибацию';
       case 'audiobook_transcribe_status_done':
@@ -569514,6 +570614,10 @@ extension on _StringsRu {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -569522,6 +570626,8 @@ extension on _StringsRu {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -588058,6 +589164,13 @@ extension on _StringsTh {
         return 'สร้างคำบรรยายบนอุปกรณ์';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'ทิ้งความคืบหน้า';
       case 'audiobook_transcribe_done':
@@ -588120,6 +589233,8 @@ extension on _StringsTh {
         return 'ถอดเสียงในเครื่องด้วยโมเดลเสียงพูดบนอุปกรณ์สำหรับภาษาที่เลือก และสร้างคำบรรยายสำหรับการจัดแนว ไม่มีการอัปโหลดใดๆ';
       case 'audiobook_transcribe_language_label':
         return 'ภาษาเสียงพูด';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'เพิ่มโมเดลในเครื่อง…';
       case 'audiobook_transcribe_model_custom_added':
@@ -588239,6 +589354,26 @@ extension on _StringsTh {
           required Object eta,
           required Object speed,
         }) => 'ผ่านไป ${elapsed} · เหลือ ${eta} · ${speed}× เรียลไทม์';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'เริ่มถอดเสียง';
       case 'audiobook_transcribe_status_done':
@@ -588247,6 +589382,10 @@ extension on _StringsTh {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -588255,6 +589394,8 @@ extension on _StringsTh {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -606772,6 +607913,13 @@ extension on _StringsTr {
         return 'Cihazda altyazı oluştur';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'İlerlemeyi at';
       case 'audiobook_transcribe_done':
@@ -606835,6 +607983,8 @@ extension on _StringsTr {
         return 'Sesi, seçilen dil için cihaz üzerindeki bir konuşma modeliyle yerel olarak yazıya döker ve hizalama için altyazı oluşturur. Hiçbir şey yüklenmez.';
       case 'audiobook_transcribe_language_label':
         return 'Konuşma dili';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Yerel model ekle…';
       case 'audiobook_transcribe_model_custom_added':
@@ -606955,6 +608105,26 @@ extension on _StringsTr {
           required Object eta,
           required Object speed,
         }) => 'Geçen ${elapsed} · kalan ${eta} · ${speed}× gerçek zamanlı';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Yazıya dökmeyi başlat';
       case 'audiobook_transcribe_status_done':
@@ -606963,6 +608133,10 @@ extension on _StringsTr {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -606971,6 +608145,8 @@ extension on _StringsTr {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -625501,6 +626677,13 @@ extension on _StringsVi {
         return 'Tạo phụ đề trên thiết bị';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '${matched}/${total} cues matched';
+      case 'audiobook_transcribe_coverage_last':
+        return 'Last text match';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => 'Text coverage ${pct}%';
       case 'audiobook_transcribe_discard':
         return 'Bỏ tiến độ';
       case 'audiobook_transcribe_done':
@@ -625563,6 +626746,8 @@ extension on _StringsVi {
         return 'Phiên âm âm thanh ngay trên máy bằng mô hình giọng nói trên thiết bị cho ngôn ngữ đã chọn và tạo phụ đề để căn chỉnh. Không có gì được tải lên.';
       case 'audiobook_transcribe_language_label':
         return 'Ngôn ngữ giọng nói';
+      case 'audiobook_transcribe_match_after_use':
+        return 'Text matching and import run after you tap Use subtitles';
       case 'audiobook_transcribe_model_custom_add':
         return 'Thêm mô hình cục bộ…';
       case 'audiobook_transcribe_model_custom_added':
@@ -625684,6 +626869,26 @@ extension on _StringsVi {
           required Object speed,
         }) =>
             'Đã trôi qua ${elapsed} · còn lại ${eta} · ${speed}× thời gian thực';
+      case 'audiobook_transcribe_stage_download_model':
+        return 'Download model';
+      case 'audiobook_transcribe_stage_import':
+        return 'Import';
+      case 'audiobook_transcribe_stage_load_model':
+        return 'Load model';
+      case 'audiobook_transcribe_stage_match_text':
+        return 'Match text';
+      case 'audiobook_transcribe_stage_state_active':
+        return 'In progress';
+      case 'audiobook_transcribe_stage_state_done':
+        return 'Done';
+      case 'audiobook_transcribe_stage_state_failed':
+        return 'Failed';
+      case 'audiobook_transcribe_stage_state_pending':
+        return 'Not started';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return 'Skipped, already available';
+      case 'audiobook_transcribe_stage_transcribe':
+        return 'Transcribe';
       case 'audiobook_transcribe_start':
         return 'Bắt đầu phiên âm';
       case 'audiobook_transcribe_status_done':
@@ -625692,6 +626897,10 @@ extension on _StringsVi {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return 'Loading speech model';
+      case 'audiobook_transcribe_status_matching':
+        return 'Matching text';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -625700,6 +626909,8 @@ extension on _StringsVi {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return 'Refining sentence boundaries…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
@@ -644187,6 +645398,13 @@ extension on _StringsZhCn {
         return '设备端转录生成字幕';
       case 'audiobook_transcribe_audio_incomplete':
         return '音频文件已损坏或没有下载完整，只能解出其中一部分。请重新下载或替换文件后再转录。';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '命中 ${matched}/${total} 句';
+      case 'audiobook_transcribe_coverage_last':
+        return '上次匹配正文';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => '正文覆盖 ${pct}%';
       case 'audiobook_transcribe_discard':
         return '放弃进度';
       case 'audiobook_transcribe_done':
@@ -644245,6 +645463,8 @@ extension on _StringsZhCn {
         return '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
       case 'audiobook_transcribe_language_label':
         return '语音语言';
+      case 'audiobook_transcribe_match_after_use':
+        return '点「使用字幕」后匹配正文并入库';
       case 'audiobook_transcribe_model_custom_add':
         return '手动指定模型…';
       case 'audiobook_transcribe_model_custom_added':
@@ -644361,6 +645581,26 @@ extension on _StringsZhCn {
           required Object eta,
           required Object speed,
         }) => '已用 ${elapsed} · 剩余 ${eta} · ${speed} 倍速';
+      case 'audiobook_transcribe_stage_download_model':
+        return '下载模型';
+      case 'audiobook_transcribe_stage_import':
+        return '入库';
+      case 'audiobook_transcribe_stage_load_model':
+        return '加载模型';
+      case 'audiobook_transcribe_stage_match_text':
+        return '匹配正文';
+      case 'audiobook_transcribe_stage_state_active':
+        return '进行中';
+      case 'audiobook_transcribe_stage_state_done':
+        return '已完成';
+      case 'audiobook_transcribe_stage_state_failed':
+        return '失败';
+      case 'audiobook_transcribe_stage_state_pending':
+        return '未开始';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return '已就绪，跳过';
+      case 'audiobook_transcribe_stage_transcribe':
+        return '转录';
       case 'audiobook_transcribe_start':
         return '开始转录';
       case 'audiobook_transcribe_status_done':
@@ -644369,6 +645609,10 @@ extension on _StringsZhCn {
         return '下载语音模型中';
       case 'audiobook_transcribe_status_importing':
         return '入库中';
+      case 'audiobook_transcribe_status_loading_model':
+        return '加载语音模型中';
+      case 'audiobook_transcribe_status_matching':
+        return '匹配正文中';
       case 'audiobook_transcribe_status_preparing':
         return '准备中';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -644377,6 +645621,8 @@ extension on _StringsZhCn {
         return '库中已有同名书，已跳过';
       case 'audiobook_transcribe_status_transcribing':
         return '转录中';
+      case 'audiobook_transcribe_step_finishing':
+        return '句界重切…';
       case 'audiobook_transcribe_task_subtitle':
         return '有声书 · 转录后入库';
       case 'audiobook_transcribe_title':
@@ -662673,6 +663919,13 @@ extension on _StringsZhHk {
         return '裝置端轉錄生成字幕';
       case 'audiobook_transcribe_audio_incomplete':
         return 'The audio file is damaged or not fully downloaded, so only part of it can be decoded. Re-download or replace the file, then transcribe again.';
+      case 'audiobook_transcribe_coverage_cues':
+        return ({required Object matched, required Object total}) =>
+            '命中 ${matched}/${total} 句';
+      case 'audiobook_transcribe_coverage_last':
+        return '上次匹配正文';
+      case 'audiobook_transcribe_coverage_text':
+        return ({required Object pct}) => '正文覆蓋 ${pct}%';
       case 'audiobook_transcribe_discard':
         return '放棄進度';
       case 'audiobook_transcribe_done':
@@ -662734,6 +663987,8 @@ extension on _StringsZhHk {
         return '在本機用所選語言的語音模型轉錄音頻並生成用於對齊的字幕，不會上傳任何內容。';
       case 'audiobook_transcribe_language_label':
         return '語音語言';
+      case 'audiobook_transcribe_match_after_use':
+        return '按「使用字幕」後匹配正文並入庫';
       case 'audiobook_transcribe_model_custom_add':
         return '手動指定模型…';
       case 'audiobook_transcribe_model_custom_added':
@@ -662850,6 +664105,26 @@ extension on _StringsZhHk {
           required Object eta,
           required Object speed,
         }) => '已用 ${elapsed} · 剩餘 ${eta} · ${speed} 倍速';
+      case 'audiobook_transcribe_stage_download_model':
+        return '下載模型';
+      case 'audiobook_transcribe_stage_import':
+        return '入庫';
+      case 'audiobook_transcribe_stage_load_model':
+        return '載入模型';
+      case 'audiobook_transcribe_stage_match_text':
+        return '匹配正文';
+      case 'audiobook_transcribe_stage_state_active':
+        return '進行中';
+      case 'audiobook_transcribe_stage_state_done':
+        return '已完成';
+      case 'audiobook_transcribe_stage_state_failed':
+        return '失敗';
+      case 'audiobook_transcribe_stage_state_pending':
+        return '未開始';
+      case 'audiobook_transcribe_stage_state_skipped':
+        return '已就緒，略過';
+      case 'audiobook_transcribe_stage_transcribe':
+        return '轉錄';
       case 'audiobook_transcribe_start':
         return '開始轉錄';
       case 'audiobook_transcribe_status_done':
@@ -662858,6 +664133,10 @@ extension on _StringsZhHk {
         return 'Downloading speech model';
       case 'audiobook_transcribe_status_importing':
         return 'Adding to library';
+      case 'audiobook_transcribe_status_loading_model':
+        return '載入語音模型中';
+      case 'audiobook_transcribe_status_matching':
+        return '匹配正文中';
       case 'audiobook_transcribe_status_preparing':
         return 'Preparing';
       case 'audiobook_transcribe_status_queued_after_download':
@@ -662866,6 +664145,8 @@ extension on _StringsZhHk {
         return 'A book with this title is already in the library; skipped';
       case 'audiobook_transcribe_status_transcribing':
         return 'Transcribing';
+      case 'audiobook_transcribe_step_finishing':
+        return '句界重切…';
       case 'audiobook_transcribe_task_subtitle':
         return 'Audiobook · transcribe and add to library';
       case 'audiobook_transcribe_title':
