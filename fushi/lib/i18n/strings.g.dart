@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 152983 (8999 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9996,6 +9996,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_tone_muted => 'Muted';
   String get srs_visual_tone_normal => 'Normal';
   String get srt_audio_unresolved => 'Audio file not found — please re-attach';
+  String get srt_book_attach_epub => 'Add book file';
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   String get srt_book_reimport => 'Re-import';
   String get srt_book_reimport_body_rebuilt =>
       'Book text rebuilt — reopen the book to read it';
@@ -29719,6 +29722,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'إعادة الاستيراد';
   @override
@@ -51871,6 +51879,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Audiodatei nicht gefunden — bitte erneut anhängen';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Erneut importieren';
   @override
@@ -74147,6 +74160,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Reimportar';
   @override
@@ -96512,6 +96530,11 @@ class _StringsFr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Fichier audio introuvable — veuillez le rattacher';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Réimporter';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -118639,6 +118662,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'File audio tidak ditemukan — silakan lampirkan ulang';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Impor ulang';
   @override
@@ -140808,6 +140836,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srt_audio_unresolved => 'File audio non trovato — ricollegare';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Reimporta';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -162271,6 +162304,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srt_audio_unresolved => '音声ファイルが見つかりません。再紐付けしてください';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => '再インポート';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -183459,6 +183497,11 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => '다시 가져오기';
   @override
@@ -205359,6 +205402,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Audiobestand niet gevonden — koppel opnieuw';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Opnieuw importeren';
   @override
@@ -227560,6 +227608,11 @@ class _StringsPtBr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Arquivo de áudio não encontrado — reanexe-o';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Reimportar';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -249737,6 +249790,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srt_audio_unresolved => 'Аудиофайл не найден — привяжите заново';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Повторный импорт';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -271665,6 +271723,11 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'นำเข้าใหม่';
   @override
@@ -293662,6 +293725,11 @@ class _StringsTr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Yeniden içe aktar';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -315653,6 +315721,11 @@ class _StringsVi extends _StringsEn {
   String get srt_audio_unresolved =>
       'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => 'Nhập lại';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -336222,6 +336295,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srt_audio_unresolved => '未找到音频文件 — 请重新附加';
   @override
+  String get srt_book_attach_epub => '添加书籍文件';
+  @override
+  String get srt_book_attach_epub_remove_old_hint => '已用书籍正文生成新的有声书，原来的字幕书可以删除';
+  @override
   String get srt_book_reimport => '重新导入';
   @override
   String get srt_book_reimport_body_rebuilt => '正文已重建，请重新打开本书';
@@ -356701,6 +356778,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srt_audio_unresolved => '未找到音訊檔案 — 請重新附加';
   @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
+  @override
   String get srt_book_reimport => '重新導入';
   @override
   String get srt_book_reimport_body_rebuilt => '正文已重建，請重新打開本書';
@@ -375808,6 +375890,10 @@ extension on _StringsEn {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audio file not found — please re-attach';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Re-import';
       case 'srt_book_reimport_body_rebuilt':
@@ -394510,6 +394596,10 @@ extension on _StringsAr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'إعادة الاستيراد';
       case 'srt_book_reimport_body_rebuilt':
@@ -413268,6 +413358,10 @@ extension on _StringsDe {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiodatei nicht gefunden — bitte erneut anhängen';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Erneut importieren';
       case 'srt_book_reimport_body_rebuilt':
@@ -432030,6 +432124,10 @@ extension on _StringsEs {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -450803,6 +450901,10 @@ extension on _StringsFr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Fichier audio introuvable — veuillez le rattacher';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Réimporter';
       case 'srt_book_reimport_body_rebuilt':
@@ -469536,6 +469638,10 @@ extension on _StringsId {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio tidak ditemukan — silakan lampirkan ulang';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Impor ulang';
       case 'srt_book_reimport_body_rebuilt':
@@ -488278,6 +488384,10 @@ extension on _StringsIt {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio non trovato — ricollegare';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimporta';
       case 'srt_book_reimport_body_rebuilt':
@@ -506954,6 +507064,10 @@ extension on _StringsJa {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '音声ファイルが見つかりません。再紐付けしてください';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '再インポート';
       case 'srt_book_reimport_body_rebuilt':
@@ -525579,6 +525693,10 @@ extension on _StringsKo {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '다시 가져오기';
       case 'srt_book_reimport_body_rebuilt':
@@ -544294,6 +544412,10 @@ extension on _StringsNl {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiobestand niet gevonden — koppel opnieuw';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Opnieuw importeren';
       case 'srt_book_reimport_body_rebuilt':
@@ -563040,6 +563162,10 @@ extension on _StringsPtBr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Arquivo de áudio não encontrado — reanexe-o';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -581790,6 +581916,10 @@ extension on _StringsRu {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Аудиофайл не найден — привяжите заново';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Повторный импорт';
       case 'srt_book_reimport_body_rebuilt':
@@ -600500,6 +600630,10 @@ extension on _StringsTh {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'นำเข้าใหม่';
       case 'srt_book_reimport_body_rebuilt':
@@ -619228,6 +619362,10 @@ extension on _StringsTr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Yeniden içe aktar';
       case 'srt_book_reimport_body_rebuilt':
@@ -637951,6 +638089,10 @@ extension on _StringsVi {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Nhập lại';
       case 'srt_book_reimport_body_rebuilt':
@@ -656500,6 +656642,10 @@ extension on _StringsZhCn {
         return '正常';
       case 'srt_audio_unresolved':
         return '未找到音频文件 — 请重新附加';
+      case 'srt_book_attach_epub':
+        return '添加书籍文件';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return '已用书籍正文生成新的有声书，原来的字幕书可以删除';
       case 'srt_book_reimport':
         return '重新导入';
       case 'srt_book_reimport_body_rebuilt':
@@ -675050,6 +675196,10 @@ extension on _StringsZhHk {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '未找到音訊檔案 — 請重新附加';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '重新導入';
       case 'srt_book_reimport_body_rebuilt':
