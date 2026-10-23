@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 152966 (8998 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5524,6 +5524,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Fushi Interconnect category';
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   String get interconnect_peer_forget_title => 'Forget this device?';
@@ -22035,6 +22037,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -44060,6 +44065,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -66323,6 +66331,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -88660,6 +88671,9 @@ class _StringsFr extends _StringsEn {
   String get interconnect_moved_note =>
       'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -110899,6 +110913,9 @@ class _StringsId extends _StringsEn {
   String get interconnect_moved_note =>
       'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -133005,6 +133022,9 @@ class _StringsIt extends _StringsEn {
   String get interconnect_moved_note =>
       'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -154780,6 +154800,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_moved_note => '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -175950,6 +175973,9 @@ class _StringsKo extends _StringsEn {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   @override
   String get interconnect_moved_note => '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -197576,6 +197602,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -219766,6 +219795,9 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_moved_note =>
       'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -241945,6 +241977,9 @@ class _StringsRu extends _StringsEn {
   String get interconnect_moved_note =>
       'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -263977,6 +264012,9 @@ class _StringsTh extends _StringsEn {
   String get interconnect_moved_note =>
       'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -285921,6 +285959,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -307939,6 +307980,9 @@ class _StringsVi extends _StringsEn {
   String get interconnect_moved_note =>
       'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -329112,6 +329156,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Fushi 互联」分类';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      '这条地址没有记录对端证书，无法建立加密连接。点这一行的「重新配对」。';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
   @override
@@ -349372,6 +349419,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_moved_note => '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
   @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
+  @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   @override
@@ -369118,6 +369168,8 @@ extension on _StringsEn {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Fushi Interconnect category';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -387822,6 +387874,8 @@ extension on _StringsAr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -406560,6 +406614,8 @@ extension on _StringsDe {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -425325,6 +425381,8 @@ extension on _StringsEs {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -444098,6 +444156,8 @@ extension on _StringsFr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -462846,6 +462906,8 @@ extension on _StringsId {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -481578,6 +481640,8 @@ extension on _StringsIt {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -500279,6 +500343,8 @@ extension on _StringsJa {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -518904,6 +518970,8 @@ extension on _StringsKo {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -537589,6 +537657,8 @@ extension on _StringsNl {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -556339,6 +556409,8 @@ extension on _StringsPtBr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -575089,6 +575161,8 @@ extension on _StringsRu {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -593811,6 +593885,8 @@ extension on _StringsTh {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -612534,6 +612610,8 @@ extension on _StringsTr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -631260,6 +631338,8 @@ extension on _StringsVi {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -649872,6 +649952,8 @@ extension on _StringsZhCn {
         return '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Fushi 互联」分类';
+      case 'interconnect_peer_certificate_unpinned':
+        return '这条地址没有记录对端证书，无法建立加密连接。点这一行的「重新配对」。';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
@@ -668384,6 +668466,8 @@ extension on _StringsZhHk {
         return '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
       case 'interconnect_moved_note':
         return '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
