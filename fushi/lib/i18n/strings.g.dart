@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154326 (9078 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9770,6 +9770,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   String get srs_review_layout_replay_button_hint =>
       'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
@@ -29437,6 +29440,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -51796,6 +51804,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -74279,6 +74292,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -96851,6 +96869,11 @@ class _StringsFr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -119185,6 +119208,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -141562,6 +141590,11 @@ class _StringsIt extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -163230,6 +163263,11 @@ class _StringsJa extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -184625,6 +184663,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -206731,6 +206774,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -229139,6 +229187,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -251524,6 +251577,11 @@ class _StringsRu extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -273659,6 +273717,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -295862,6 +295925,11 @@ class _StringsTr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -318060,6 +318128,11 @@ class _StringsVi extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -338867,6 +338940,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint => '键盘 2 / 4 仍可评「困难」「简单」';
   @override
+  String get srs_review_layout_floating_top_bar => '悬浮顶栏';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      '默认收起，点卡面空白处或右键唤出，再点一次收起';
+  @override
   String get srs_review_layout_replay_button => '底部重播键';
   @override
   String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
@@ -359501,6 +359579,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_floating_top_bar => 'Floating top bar';
+  @override
+  String get srs_review_layout_floating_top_bar_hint =>
+      'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -378847,6 +378930,10 @@ extension on _StringsEn {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -397717,6 +397804,10 @@ extension on _StringsAr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -416643,6 +416734,10 @@ extension on _StringsDe {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -435573,6 +435668,10 @@ extension on _StringsEs {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -454514,6 +454613,10 @@ extension on _StringsFr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -473415,6 +473518,10 @@ extension on _StringsId {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -492325,6 +492432,10 @@ extension on _StringsIt {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -511169,6 +511280,10 @@ extension on _StringsJa {
         return '「Hard」と「Easy」ボタンを隠す';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -529962,6 +530077,10 @@ extension on _StringsKo {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -548845,6 +548964,10 @@ extension on _StringsNl {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -567759,6 +567882,10 @@ extension on _StringsPtBr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -586677,6 +586804,10 @@ extension on _StringsRu {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -605555,6 +605686,10 @@ extension on _StringsTh {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -624451,6 +624586,10 @@ extension on _StringsTr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -643342,6 +643481,10 @@ extension on _StringsVi {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -662059,6 +662202,10 @@ extension on _StringsZhCn {
         return '隐藏「困难」和「简单」按钮';
       case 'srs_review_hide_hard_easy_hint':
         return '键盘 2 / 4 仍可评「困难」「简单」';
+      case 'srs_review_layout_floating_top_bar':
+        return '悬浮顶栏';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return '默认收起，点卡面空白处或右键唤出，再点一次收起';
       case 'srs_review_layout_replay_button':
         return '底部重播键';
       case 'srs_review_layout_replay_button_hint':
@@ -680773,6 +680920,10 @@ extension on _StringsZhHk {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_floating_top_bar':
+        return 'Floating top bar';
+      case 'srs_review_layout_floating_top_bar_hint':
+        return 'Hidden by default. Tap a blank spot on the card or right-click to show it, and again to hide it.';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
