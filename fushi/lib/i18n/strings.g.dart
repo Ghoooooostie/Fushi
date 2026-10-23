@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153051 (9003 per locale)
+/// Strings: 153068 (9004 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3066,6 +3066,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_alist_username => 'Username';
   String get discovery_alist_username_hint =>
       'Leave empty to browse as a guest';
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   String get discovery_all_sources => 'All sources';
   String get discovery_audiobookshelf_api_key_hint =>
       'With an API key, username and password are not needed';
@@ -17879,6 +17881,9 @@ class _StringsAr extends _StringsEn {
   String get discovery_alist_username => 'اسم المستخدم';
   @override
   String get discovery_alist_username_hint => 'اتركه فارغًا للتصفح كضيف';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'جميع المصادر';
   @override
@@ -39823,6 +39828,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_alist_username_hint =>
       'Leer lassen, um als Gast zu stöbern';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'Alle Quellen';
   @override
@@ -62097,6 +62105,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_alist_username_hint =>
       'Déjalo vacío para explorar como invitado';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'Todas las fuentes';
   @override
@@ -84440,6 +84451,9 @@ class _StringsFr extends _StringsEn {
   String get discovery_alist_username_hint =>
       'Laissez vide pour naviguer en invité';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'Toutes les sources';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -106753,6 +106767,9 @@ class _StringsId extends _StringsEn {
   String get discovery_alist_username_hint =>
       'Kosongkan untuk menjelajah sebagai tamu';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'Semua sumber';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -128838,6 +128855,9 @@ class _StringsIt extends _StringsEn {
   String get discovery_alist_username_hint =>
       'Lascia vuoto per navigare come ospite';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'Tutte le fonti';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -150845,6 +150865,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_alist_username_hint => '空欄の場合はゲストとして閲覧します';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'すべてのソース';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -172015,6 +172038,9 @@ class _StringsKo extends _StringsEn {
   String get discovery_alist_username => '사용자 이름';
   @override
   String get discovery_alist_username_hint => '비워 두면 게스트로 둘러봅니다';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => '모든 소스';
   @override
@@ -193466,6 +193492,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_alist_username_hint =>
       'Laat leeg om als gast te bladeren';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'Alle bronnen';
   @override
@@ -215644,6 +215673,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_alist_username_hint =>
       'Deixe vazio para navegar como convidado';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'Todas as fontes';
   @override
@@ -237858,6 +237890,9 @@ class _StringsRu extends _StringsEn {
   String get discovery_alist_username_hint =>
       'Оставьте пустым, чтобы просматривать как гость';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'Все источники';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -259968,6 +260003,9 @@ class _StringsTh extends _StringsEn {
   String get discovery_alist_username_hint =>
       'เว้นว่างไว้เพื่อเรียกดูในฐานะแขก';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'แหล่งทั้งหมด';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -281871,6 +281909,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_alist_username_hint =>
       'Konuk olarak göz atmak için boş bırakın';
+  @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
   @override
   String get discovery_all_sources => 'Tüm kaynaklar';
   @override
@@ -303919,6 +303960,9 @@ class _StringsVi extends _StringsEn {
   String get discovery_alist_username_hint =>
       'Để trống để duyệt với tư cách khách';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => 'Tất cả nguồn';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -325486,6 +325530,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_alist_username_hint => '留空则以游客访问';
   @override
+  String get discovery_alist_video_hint =>
+      '站点上的视频在「视频 › 导入」里添加：添加来源并选 AList，视频直接在线播放、无需下载。';
+  @override
   String get discovery_all_sources => '全部源';
   @override
   String get discovery_audiobookshelf_api_key_hint => '填了 API key 就不需要用户名和密码';
@@ -345696,6 +345743,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_alist_username_hint => '留空則以遊客訪問';
   @override
+  String get discovery_alist_video_hint =>
+      'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
+  @override
   String get discovery_all_sources => '全部源';
   @override
   String get discovery_audiobookshelf_api_key_hint =>
@@ -365788,6 +365838,8 @@ extension on _StringsEn {
         return 'Username';
       case 'discovery_alist_username_hint':
         return 'Leave empty to browse as a guest';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'All sources';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -384507,6 +384559,8 @@ extension on _StringsAr {
         return 'اسم المستخدم';
       case 'discovery_alist_username_hint':
         return 'اتركه فارغًا للتصفح كضيف';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'جميع المصادر';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -403247,6 +403301,8 @@ extension on _StringsDe {
         return 'Benutzername';
       case 'discovery_alist_username_hint':
         return 'Leer lassen, um als Gast zu stöbern';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Alle Quellen';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -422026,6 +422082,8 @@ extension on _StringsEs {
         return 'Usuario';
       case 'discovery_alist_username_hint':
         return 'Déjalo vacío para explorar como invitado';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Todas las fuentes';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -440806,6 +440864,8 @@ extension on _StringsFr {
         return 'Nom d\'utilisateur';
       case 'discovery_alist_username_hint':
         return 'Laissez vide pour naviguer en invité';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Toutes les sources';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -459574,6 +459634,8 @@ extension on _StringsId {
         return 'Nama pengguna';
       case 'discovery_alist_username_hint':
         return 'Kosongkan untuk menjelajah sebagai tamu';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Semua sumber';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -478315,6 +478377,8 @@ extension on _StringsIt {
         return 'Nome utente';
       case 'discovery_alist_username_hint':
         return 'Lascia vuoto per navigare come ospite';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Tutte le fonti';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -497046,6 +497110,8 @@ extension on _StringsJa {
         return 'ユーザー名';
       case 'discovery_alist_username_hint':
         return '空欄の場合はゲストとして閲覧します';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'すべてのソース';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -515680,6 +515746,8 @@ extension on _StringsKo {
         return '사용자 이름';
       case 'discovery_alist_username_hint':
         return '비워 두면 게스트로 둘러봅니다';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return '모든 소스';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -534365,6 +534433,8 @@ extension on _StringsNl {
         return 'Gebruikersnaam';
       case 'discovery_alist_username_hint':
         return 'Laat leeg om als gast te bladeren';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Alle bronnen';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -553127,6 +553197,8 @@ extension on _StringsPtBr {
         return 'Nome de usuário';
       case 'discovery_alist_username_hint':
         return 'Deixe vazio para navegar como convidado';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Todas as fontes';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -571887,6 +571959,8 @@ extension on _StringsRu {
         return 'Имя пользователя';
       case 'discovery_alist_username_hint':
         return 'Оставьте пустым, чтобы просматривать как гость';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Все источники';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -590624,6 +590698,8 @@ extension on _StringsTh {
         return 'ชื่อผู้ใช้';
       case 'discovery_alist_username_hint':
         return 'เว้นว่างไว้เพื่อเรียกดูในฐานะแขก';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'แหล่งทั้งหมด';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -609357,6 +609433,8 @@ extension on _StringsTr {
         return 'Kullanıcı adı';
       case 'discovery_alist_username_hint':
         return 'Konuk olarak göz atmak için boş bırakın';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Tüm kaynaklar';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -628096,6 +628174,8 @@ extension on _StringsVi {
         return 'Tên người dùng';
       case 'discovery_alist_username_hint':
         return 'Để trống để duyệt với tư cách khách';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return 'Tất cả nguồn';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -646760,6 +646840,8 @@ extension on _StringsZhCn {
         return '用户名';
       case 'discovery_alist_username_hint':
         return '留空则以游客访问';
+      case 'discovery_alist_video_hint':
+        return '站点上的视频在「视频 › 导入」里添加：添加来源并选 AList，视频直接在线播放、无需下载。';
       case 'discovery_all_sources':
         return '全部源';
       case 'discovery_audiobookshelf_api_key_hint':
@@ -665269,6 +665351,8 @@ extension on _StringsZhHk {
         return '使用者名';
       case 'discovery_alist_username_hint':
         return '留空則以遊客訪問';
+      case 'discovery_alist_video_hint':
+        return 'Videos on an AList / OpenList site are added in Video › Import: add a source and pick AList. They play online without downloading.';
       case 'discovery_all_sources':
         return '全部源';
       case 'discovery_audiobookshelf_api_key_hint':
