@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153119 (9007 per locale)
+/// Strings: 153204 (9012 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10822,6 +10822,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get torrent_upload_intro_enable => 'Enable upload / seeding';
   String get torrent_upload_intro_keep_off => 'Keep off';
   String get torrent_upload_intro_title => 'Upload / seeding';
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  String get tts_system_language_default => 'the system default language';
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   String get undo => 'Undo';
   String get unit_kbps => 'kbps';
   String get unit_milliseconds => 'ms';
@@ -31200,6 +31209,20 @@ class _StringsAr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'الإبقاء معطلاً';
   @override
   String get torrent_upload_intro_title => 'الرفع / البذر';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'تراجع';
   @override
@@ -53403,6 +53426,20 @@ class _StringsDe extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Deaktiviert lassen';
   @override
   String get torrent_upload_intro_title => 'Upload / Seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Rückgängig';
   @override
@@ -75715,6 +75752,20 @@ class _StringsEs extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Mantener apagado';
   @override
   String get torrent_upload_intro_title => 'Subida / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Deshacer';
   @override
@@ -98104,6 +98155,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Envoi / seeding';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Annuler';
   @override
   String get unit_kbps => 'kbit/s';
@@ -120237,6 +120302,20 @@ class _StringsId extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Tetap matikan';
   @override
   String get torrent_upload_intro_title => 'Unggah / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Urungkan';
   @override
@@ -142443,6 +142522,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Annulla';
   @override
   String get unit_kbps => 'kbps';
@@ -163853,6 +163946,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'アップロード/シード';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => '元に戻す';
   @override
   String get unit_kbps => 'kbps';
@@ -185072,6 +185179,20 @@ class _StringsKo extends _StringsEn {
   String get torrent_upload_intro_keep_off => '끈 상태 유지';
   @override
   String get torrent_upload_intro_title => '업로드 / 시딩';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => '되돌리기';
   @override
@@ -207079,6 +207200,20 @@ class _StringsNl extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Uit laten';
   @override
   String get torrent_upload_intro_title => 'Uploaden / seeden';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Ongedaan maken';
   @override
@@ -229303,6 +229438,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Envio / seeding';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Desfazer';
   @override
   String get unit_kbps => 'kbps';
@@ -251503,6 +251652,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Раздача / сидирование';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Отменить';
   @override
   String get unit_kbps => 'кбит/с';
@@ -273444,6 +273607,20 @@ class _StringsTh extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'ปิดไว้';
   @override
   String get torrent_upload_intro_title => 'อัปโหลด / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'เลิกทำ';
   @override
@@ -295480,6 +295657,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Yükleme / paylaşma';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Geri al';
   @override
   String get unit_kbps => 'kbps';
@@ -317492,6 +317683,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Tải lên / seeding';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => 'Hoàn tác';
   @override
   String get unit_kbps => 'kbps';
@@ -337958,6 +338163,18 @@ class _StringsZhCn extends _StringsEn {
   String get torrent_upload_intro_keep_off => '保持关闭';
   @override
   String get torrent_upload_intro_title => '上传 / 做种';
+  @override
+  String get tts_system_engine_unavailable => '本机没有可用的系统语音引擎，可在设置里换一个 TTS 声音。';
+  @override
+  String get tts_system_language_default => '系统默认语言';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      '系统语音没有安装${language}的语音数据，可在系统「文字转语音」设置里下载，或在设置里换一个 TTS 声音。';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      '系统语音不支持${language}，可在设置里换一个 TTS 声音，或在系统里装支持该语言的语音引擎。';
+  @override
+  String get tts_system_synthesis_failed => '系统语音合成失败。';
   @override
   String get undo => '撤销';
   @override
@@ -358481,6 +358698,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get torrent_upload_intro_title => '上傳 / 做種';
   @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
+  @override
   String get undo => '復原';
   @override
   String get unit_kbps => 'kbps';
@@ -377552,6 +377783,18 @@ extension on _StringsEn {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Undo';
       case 'unit_kbps':
@@ -396272,6 +396515,18 @@ extension on _StringsAr {
         return 'الإبقاء معطلاً';
       case 'torrent_upload_intro_title':
         return 'الرفع / البذر';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'تراجع';
       case 'unit_kbps':
@@ -415060,6 +415315,18 @@ extension on _StringsDe {
         return 'Deaktiviert lassen';
       case 'torrent_upload_intro_title':
         return 'Upload / Seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Rückgängig';
       case 'unit_kbps':
@@ -433840,6 +434107,18 @@ extension on _StringsEs {
         return 'Mantener apagado';
       case 'torrent_upload_intro_title':
         return 'Subida / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Deshacer';
       case 'unit_kbps':
@@ -452634,6 +452913,18 @@ extension on _StringsFr {
         return 'Garder désactivé';
       case 'torrent_upload_intro_title':
         return 'Envoi / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Annuler';
       case 'unit_kbps':
@@ -471386,6 +471677,18 @@ extension on _StringsId {
         return 'Tetap matikan';
       case 'torrent_upload_intro_title':
         return 'Unggah / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Urungkan';
       case 'unit_kbps':
@@ -490153,6 +490456,18 @@ extension on _StringsIt {
         return 'Mantieni disattivato';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Annulla';
       case 'unit_kbps':
@@ -508833,6 +509148,18 @@ extension on _StringsJa {
         return 'オフのまま';
       case 'torrent_upload_intro_title':
         return 'アップロード/シード';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '元に戻す';
       case 'unit_kbps':
@@ -527480,6 +527807,18 @@ extension on _StringsKo {
         return '끈 상태 유지';
       case 'torrent_upload_intro_title':
         return '업로드 / 시딩';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '되돌리기';
       case 'unit_kbps':
@@ -546228,6 +546567,18 @@ extension on _StringsNl {
         return 'Uit laten';
       case 'torrent_upload_intro_title':
         return 'Uploaden / seeden';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Ongedaan maken';
       case 'unit_kbps':
@@ -564992,6 +565343,18 @@ extension on _StringsPtBr {
         return 'Manter desligado';
       case 'torrent_upload_intro_title':
         return 'Envio / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Desfazer';
       case 'unit_kbps':
@@ -583764,6 +584127,18 @@ extension on _StringsRu {
         return 'Оставить выключенным';
       case 'torrent_upload_intro_title':
         return 'Раздача / сидирование';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Отменить';
       case 'unit_kbps':
@@ -602495,6 +602870,18 @@ extension on _StringsTh {
         return 'ปิดไว้';
       case 'torrent_upload_intro_title':
         return 'อัปโหลด / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'เลิกทำ';
       case 'unit_kbps':
@@ -621244,6 +621631,18 @@ extension on _StringsTr {
         return 'Kapalı tut';
       case 'torrent_upload_intro_title':
         return 'Yükleme / paylaşma';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Geri al';
       case 'unit_kbps':
@@ -639989,6 +640388,18 @@ extension on _StringsVi {
         return 'Giữ tắt';
       case 'torrent_upload_intro_title':
         return 'Tải lên / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Hoàn tác';
       case 'unit_kbps':
@@ -658543,6 +658954,18 @@ extension on _StringsZhCn {
         return '保持关闭';
       case 'torrent_upload_intro_title':
         return '上传 / 做种';
+      case 'tts_system_engine_unavailable':
+        return '本机没有可用的系统语音引擎，可在设置里换一个 TTS 声音。';
+      case 'tts_system_language_default':
+        return '系统默认语言';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            '系统语音没有安装${language}的语音数据，可在系统「文字转语音」设置里下载，或在设置里换一个 TTS 声音。';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            '系统语音不支持${language}，可在设置里换一个 TTS 声音，或在系统里装支持该语言的语音引擎。';
+      case 'tts_system_synthesis_failed':
+        return '系统语音合成失败。';
       case 'undo':
         return '撤销';
       case 'unit_kbps':
@@ -677115,6 +677538,18 @@ extension on _StringsZhHk {
         return '保持關閉';
       case 'torrent_upload_intro_title':
         return '上傳 / 做種';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '復原';
       case 'unit_kbps':
