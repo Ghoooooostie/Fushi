@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153425 (9025 per locale)
+/// Strings: 153578 (9034 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3706,6 +3706,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_center_empty => 'You haven\'t sent any feedback yet.';
   String get feedback_compose_add_image => 'Add image';
   String get feedback_compose_add_video => 'Add video';
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
   String get feedback_compose_attach_device => 'Attach device info';
   String get feedback_compose_attach_device_hint =>
       'App version, system version, device model, language and window size';
@@ -4291,6 +4292,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_toolbar_auto_hide_hint =>
       'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
   String get gal_hook_toolbar_label_close => 'Close';
+  String get gal_hook_toolbar_label_copy => 'Copy';
   String get gal_hook_toolbar_label_follow => 'Follow';
   String get gal_hook_toolbar_label_lock => 'Lock';
   String get gal_hook_toolbar_label_passthrough => 'Click-thru';
@@ -4442,6 +4444,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Engine component blocked: its checksum could not be verified (the .sha256 file from GitHub is unreachable, missing, or does not match). Fushi refuses to install unverified injector code.';
   String get game_home_subtitle => 'Game library and capture monitoring';
   String get game_hook_btn_close => 'Close the overlay';
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   String get game_hook_btn_follow => 'Follow new lines';
   String get game_hook_btn_lock => 'Lock the position';
   String get game_hook_btn_passthrough => 'Click through to the game';
@@ -7367,6 +7370,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_action_badge_recommended => 'Recommended';
   String get onboarding_action_badge_required => 'Required';
   String get onboarding_action_next => 'Next';
+  String get onboarding_action_scroll_more => 'Scroll down';
   String get onboarding_action_skip => 'Skip for now';
   String get onboarding_action_start => 'Start using Fushi';
   String get onboarding_actions_more => 'Other ways';
@@ -8464,6 +8468,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get section_services_metadata => 'Metadata scraping';
   String get section_services_resources => 'Resource indexers';
   String get section_services_subtitles => 'Subtitle sources';
+  String get section_tabs_order_done => 'Done';
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  String get section_tabs_order_reset => 'Reset order';
+  String get section_tabs_order_title => 'Reorder tabs';
   String get section_typography => 'Typography';
   String get section_update => 'Update settings';
   String get section_video_capture => 'Screenshots and clips';
@@ -8555,6 +8564,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_module_keep_one_navigation =>
       'Keep at least one page in the navigation bar';
   String get settings_module_nav_order => 'Navigation bar order';
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   String get settings_page_reset_confirm => 'Reset';
@@ -18997,6 +19008,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -19991,6 +20004,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -20269,6 +20284,8 @@ class _StringsAr extends _StringsEn {
   String get game_home_subtitle => 'مكتبة الألعاب ومراقبة الالتقاط';
   @override
   String get game_hook_btn_close => 'إغلاق النافذة العائمة';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'متابعة الجمل الجديدة';
   @override
@@ -25210,6 +25227,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_action_next => 'التالي';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'تخطّي الآن';
   @override
   String get onboarding_action_start => 'ابدأ استخدام Fushi';
@@ -27093,6 +27112,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get section_services_subtitles => 'مصادر الترجمة';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'الطباعة';
   @override
   String get section_update => 'إعدادات التحديث';
@@ -27258,6 +27286,9 @@ class _StringsAr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -41030,6 +41061,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -42042,6 +42075,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -42325,6 +42360,8 @@ class _StringsDe extends _StringsEn {
   String get game_home_subtitle => 'Spielebibliothek und Aufnahmeüberwachung';
   @override
   String get game_hook_btn_close => 'Overlay schließen';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Neuen Zeilen folgen';
   @override
@@ -47383,6 +47420,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_action_next => 'Weiter';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Vorerst überspringen';
   @override
   String get onboarding_action_start => 'Fushi starten';
@@ -49306,6 +49345,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get section_services_subtitles => 'Untertitelquellen';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Typografie';
   @override
   String get section_update => 'Update-Einstellungen';
@@ -49475,6 +49523,9 @@ class _StringsDe extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -63372,6 +63423,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -64383,6 +64436,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -64667,6 +64722,8 @@ class _StringsEs extends _StringsEn {
       'Biblioteca de juegos y monitoreo de captura';
   @override
   String get game_hook_btn_close => 'Cerrar la ventana flotante';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Seguir las líneas nuevas';
   @override
@@ -69731,6 +69788,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_action_next => 'Siguiente';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Omitir por ahora';
   @override
   String get onboarding_action_start => 'Empezar a usar Fushi';
@@ -71651,6 +71710,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get section_services_subtitles => 'Fuentes de subtítulos';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografía';
   @override
   String get section_update => 'Configuración de actualizaciones';
@@ -71821,6 +71889,9 @@ class _StringsEs extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -85778,6 +85849,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -86789,6 +86862,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -87070,6 +87145,8 @@ class _StringsFr extends _StringsEn {
   String get game_home_subtitle => 'Ludothèque et surveillance de capture';
   @override
   String get game_hook_btn_close => 'Fermer la superposition';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Suivre les nouvelles lignes';
   @override
@@ -92159,6 +92236,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_action_next => 'Suivant';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Passer pour le moment';
   @override
   String get onboarding_action_start => 'Commencer à utiliser Fushi';
@@ -94094,6 +94173,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get section_services_subtitles => 'Sources de sous-titres';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Typographie';
   @override
   String get section_update => 'Paramètres de mise à jour';
@@ -94263,6 +94351,9 @@ class _StringsFr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -108139,6 +108230,8 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -109138,6 +109231,8 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -109417,6 +109512,8 @@ class _StringsId extends _StringsEn {
   String get game_home_subtitle => 'Pustaka game dan pemantauan tangkapan';
   @override
   String get game_hook_btn_close => 'Tutup overlay';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Ikuti baris baru';
   @override
@@ -114420,6 +114517,8 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_action_next => 'Berikutnya';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Lewati untuk sekarang';
   @override
   String get onboarding_action_start => 'Mulai pakai Fushi';
@@ -116322,6 +116421,15 @@ class _StringsId extends _StringsEn {
   @override
   String get section_services_subtitles => 'Sumber subtitle';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografi';
   @override
   String get section_update => 'Pengaturan Pembaruan';
@@ -116489,6 +116597,9 @@ class _StringsId extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -130300,6 +130411,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -131305,6 +131418,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -131583,6 +131698,8 @@ class _StringsIt extends _StringsEn {
   String get game_home_subtitle => 'Libreria giochi e monitoraggio cattura';
   @override
   String get game_hook_btn_close => 'Chiudi la finestra mobile';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Segui le nuove battute';
   @override
@@ -136635,6 +136752,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_action_next => 'Avanti';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Salta per ora';
   @override
   String get onboarding_action_start => 'Inizia a usare Fushi';
@@ -138547,6 +138666,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get section_services_subtitles => 'Fonti dei sottotitoli';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografia';
   @override
   String get section_update => 'Impostazioni aggiornamento';
@@ -138718,6 +138846,9 @@ class _StringsIt extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -152326,6 +152457,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => '開いた時の画面を添付';
+  @override
   String get feedback_compose_attach_device => '端末情報を添付';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -153281,6 +153414,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'コピー';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -153552,6 +153687,8 @@ class _StringsJa extends _StringsEn {
   String get game_home_subtitle => 'ゲームライブラリとキャプチャ監視';
   @override
   String get game_hook_btn_close => 'オーバーレイを閉じる';
+  @override
+  String get game_hook_btn_copy => 'このセリフをクリップボードにコピー';
   @override
   String get game_hook_btn_follow => '新しい台詞に追従';
   @override
@@ -158321,6 +158458,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_action_next => '次へ';
   @override
+  String get onboarding_action_scroll_more => '下にスクロール';
+  @override
   String get onboarding_action_skip => '今はスキップ';
   @override
   String get onboarding_action_start => 'Fushi を使い始める';
@@ -160144,6 +160283,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕のソース';
   @override
+  String get section_tabs_order_done => '完了';
+  @override
+  String get section_tabs_order_hint => 'ドラッグか矢印ボタンで並べ替えます。後から増えたタブは末尾に入ります。';
+  @override
+  String get section_tabs_order_reset => '既定の順序に戻す';
+  @override
+  String get section_tabs_order_title => 'タブの並べ替え';
+  @override
   String get section_typography => 'タイポグラフィ';
   @override
   String get section_update => '更新設定';
@@ -160304,6 +160451,8 @@ class _StringsJa extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on => '常に表示（オフにできません）';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -173560,6 +173709,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -174533,6 +174684,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -174803,6 +174956,8 @@ class _StringsKo extends _StringsEn {
   String get game_home_subtitle => '게임 라이브러리 및 캡처 모니터링';
   @override
   String get game_hook_btn_close => '오버레이 닫기';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => '새 대사 따라가기';
   @override
@@ -179586,6 +179741,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_action_next => '다음';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => '나중에 하기';
   @override
   String get onboarding_action_start => 'Fushi 시작하기';
@@ -181412,6 +181569,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get section_services_subtitles => '자막 소스';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => '타이포그래피';
   @override
   String get section_update => '업데이트 설정';
@@ -181570,6 +181736,9 @@ class _StringsKo extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -195121,6 +195290,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -196121,6 +196292,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -196399,6 +196572,8 @@ class _StringsNl extends _StringsEn {
   String get game_home_subtitle => 'Spelbibliotheek en opnamemonitoring';
   @override
   String get game_hook_btn_close => 'Overlay sluiten';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Nieuwe regels volgen';
   @override
@@ -201425,6 +201600,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_action_next => 'Volgende';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Later';
   @override
   String get onboarding_action_start => 'Fushi gaan gebruiken';
@@ -203343,6 +203520,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get section_services_subtitles => 'Ondertitelbronnen';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Typografie';
   @override
   String get section_update => 'Update-instellingen';
@@ -203510,6 +203696,9 @@ class _StringsNl extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -217369,6 +217558,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -218375,6 +218566,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -218657,6 +218850,8 @@ class _StringsPtBr extends _StringsEn {
       'Biblioteca de jogos e monitoramento de captura';
   @override
   String get game_hook_btn_close => 'Fechar a janela flutuante';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Acompanhar novas falas';
   @override
@@ -223703,6 +223898,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_action_next => 'Próximo';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Pular por enquanto';
   @override
   String get onboarding_action_start => 'Começar a usar o Fushi';
@@ -225617,6 +225814,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get section_services_subtitles => 'Fontes de legendas';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografia';
   @override
   String get section_update => 'Configurações de atualização';
@@ -225787,6 +225993,9 @@ class _StringsPtBr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -239639,6 +239848,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -240642,6 +240853,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -240920,6 +241133,8 @@ class _StringsRu extends _StringsEn {
   String get game_home_subtitle => 'Библиотека игр и мониторинг захвата';
   @override
   String get game_hook_btn_close => 'Закрыть оверлей';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Следовать за новыми репликами';
   @override
@@ -245956,6 +246171,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_action_next => 'Далее';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Пропустить';
   @override
   String get onboarding_action_start => 'Начать работу с Fushi';
@@ -247873,6 +248090,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get section_services_subtitles => 'Источники субтитров';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Типографика';
   @override
   String get section_update => 'Настройки обновлений';
@@ -248042,6 +248268,9 @@ class _StringsRu extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -261803,6 +262032,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -262793,6 +263024,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -263069,6 +263302,8 @@ class _StringsTh extends _StringsEn {
   String get game_home_subtitle => 'คลังเกมและการติดตามการจับข้อมูล';
   @override
   String get game_hook_btn_close => 'ปิดหน้าต่างลอย';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'ตามประโยคใหม่';
   @override
@@ -268015,6 +268250,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_action_next => 'ถัดไป';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'ข้ามไปก่อน';
   @override
   String get onboarding_action_start => 'เริ่มใช้ Fushi';
@@ -269899,6 +270136,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get section_services_subtitles => 'แหล่งคำบรรยาย';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'รูปแบบตัวอักษร';
   @override
   String get section_update => 'ตั้งค่าการอัปเดต';
@@ -270066,6 +270312,9 @@ class _StringsTh extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -283783,6 +284032,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -284781,6 +285032,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -285060,6 +285313,8 @@ class _StringsTr extends _StringsEn {
   String get game_home_subtitle => 'Oyun kütüphanesi ve yakalama izleme';
   @override
   String get game_hook_btn_close => 'Yer paylaşımını kapat';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Yeni satırları takip et';
   @override
@@ -290065,6 +290320,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_action_next => 'İleri';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Şimdilik atla';
   @override
   String get onboarding_action_start => 'Fushi\'yi kullanmaya başla';
@@ -291965,6 +292222,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get section_services_subtitles => 'Altyazı kaynakları';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografi';
   @override
   String get section_update => 'Güncelleme Ayarları';
@@ -292132,6 +292398,9 @@ class _StringsTr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -305891,6 +306160,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -306889,6 +307160,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => 'Copy';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -307169,6 +307442,8 @@ class _StringsVi extends _StringsEn {
   String get game_home_subtitle => 'Thư viện trò chơi và giám sát thu thập';
   @override
   String get game_hook_btn_close => 'Đóng cửa sổ nổi';
+  @override
+  String get game_hook_btn_copy => 'Copy this line to the clipboard';
   @override
   String get game_hook_btn_follow => 'Bám theo câu thoại mới';
   @override
@@ -312149,6 +312424,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_action_next => 'Tiếp theo';
   @override
+  String get onboarding_action_scroll_more => 'Scroll down';
+  @override
   String get onboarding_action_skip => 'Bỏ qua';
   @override
   String get onboarding_action_start => 'Bắt đầu dùng Fushi';
@@ -314038,6 +314315,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get section_services_subtitles => 'Nguồn phụ đề';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Kiểu chữ';
   @override
   String get section_update => 'Cài đặt cập nhật';
@@ -314205,6 +314491,9 @@ class _StringsVi extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -327440,6 +327729,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_add_video => '添加视频';
   @override
+  String get feedback_compose_attach_auto_shot => '附上当时画面';
+  @override
   String get feedback_compose_attach_device => '附带设备信息';
   @override
   String get feedback_compose_attach_device_hint => 'App 版本、系统版本、机型、界面语言与窗口尺寸';
@@ -328339,6 +328630,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => '关闭';
   @override
+  String get gal_hook_toolbar_label_copy => '复制';
+  @override
   String get gal_hook_toolbar_label_follow => '跟随';
   @override
   String get gal_hook_toolbar_label_lock => '锁定';
@@ -328601,6 +328894,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_home_subtitle => '游戏库与捕获监控';
   @override
   String get game_hook_btn_close => '关闭浮窗';
+  @override
+  String get game_hook_btn_copy => '复制这句台词';
   @override
   String get game_hook_btn_follow => '跟随新台词';
   @override
@@ -333156,6 +333451,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_action_next => '下一步';
   @override
+  String get onboarding_action_scroll_more => '往下看';
+  @override
   String get onboarding_action_skip => '暂时跳过';
   @override
   String get onboarding_action_start => '开始使用';
@@ -334882,6 +335179,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕来源';
   @override
+  String get section_tabs_order_done => '完成';
+  @override
+  String get section_tabs_order_hint => '拖动或用上下按钮调整；之后新增的页签排在最后。';
+  @override
+  String get section_tabs_order_reset => '恢复默认顺序';
+  @override
+  String get section_tabs_order_title => '调整页签顺序';
+  @override
   String get section_typography => '排版';
   @override
   String get section_update => '更新设置';
@@ -335036,6 +335341,8 @@ class _StringsZhCn extends _StringsEn {
   String get settings_module_keep_one_navigation => '导航栏里至少要保留一个页面';
   @override
   String get settings_module_nav_order => '导航栏顺序';
+  @override
+  String get settings_module_nav_settings_always_on => '始终显示，不能关闭';
   @override
   String get settings_page_reset_all_default => '本页均为默认值';
   @override
@@ -347721,6 +348028,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => '附上當時畫面';
+  @override
   String get feedback_compose_attach_device => '附帶裝置資訊';
   @override
   String get feedback_compose_attach_device_hint => 'App 版本、系統版本、機型、介面語言與視窗尺寸';
@@ -348650,6 +348959,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_toolbar_label_close => 'Close';
   @override
+  String get gal_hook_toolbar_label_copy => '複製';
+  @override
   String get gal_hook_toolbar_label_follow => 'Follow';
   @override
   String get gal_hook_toolbar_label_lock => 'Lock';
@@ -348912,6 +349223,8 @@ class _StringsZhHk extends _StringsEn {
   String get game_home_subtitle => '遊戲庫與捕獲監控';
   @override
   String get game_hook_btn_close => '關閉浮窗';
+  @override
+  String get game_hook_btn_copy => '複製這句台詞';
   @override
   String get game_hook_btn_follow => '跟隨新台詞';
   @override
@@ -353518,6 +353831,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_action_next => '下一步';
   @override
+  String get onboarding_action_scroll_more => '往下看';
+  @override
   String get onboarding_action_skip => '暫時跳過';
   @override
   String get onboarding_action_start => '開始使用';
@@ -355277,6 +355592,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕來源';
   @override
+  String get section_tabs_order_done => '完成';
+  @override
+  String get section_tabs_order_hint => '拖動或用上下按鈕調整；之後新增的頁籤排在最後。';
+  @override
+  String get section_tabs_order_reset => '恢復預設順序';
+  @override
+  String get section_tabs_order_title => '調整頁籤順序';
+  @override
   String get section_typography => '排版';
   @override
   String get section_update => '更新設定';
@@ -355433,6 +355756,8 @@ class _StringsZhHk extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on => '始終顯示，不能關閉';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -367776,6 +368101,8 @@ extension on _StringsEn {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -368621,6 +368948,8 @@ extension on _StringsEn {
         return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -368875,6 +369204,8 @@ extension on _StringsEn {
         return 'Game library and capture monitoring';
       case 'game_hook_btn_close':
         return 'Close the overlay';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Follow new lines';
       case 'game_hook_btn_lock':
@@ -373111,6 +373442,8 @@ extension on _StringsEn {
         return 'Required';
       case 'onboarding_action_next':
         return 'Next';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Skip for now';
       case 'onboarding_action_start':
@@ -374719,6 +375052,14 @@ extension on _StringsEn {
         return 'Resource indexers';
       case 'section_services_subtitles':
         return 'Subtitle sources';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typography';
       case 'section_update':
@@ -374871,6 +375212,8 @@ extension on _StringsEn {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -386542,6 +386885,8 @@ extension on _StringsAr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -387387,6 +387732,8 @@ extension on _StringsAr {
         return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -387640,6 +387987,8 @@ extension on _StringsAr {
         return 'مكتبة الألعاب ومراقبة الالتقاط';
       case 'game_hook_btn_close':
         return 'إغلاق النافذة العائمة';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'متابعة الجمل الجديدة';
       case 'game_hook_btn_lock':
@@ -391872,6 +392221,8 @@ extension on _StringsAr {
         return 'مطلوب';
       case 'onboarding_action_next':
         return 'التالي';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'تخطّي الآن';
       case 'onboarding_action_start':
@@ -393481,6 +393832,14 @@ extension on _StringsAr {
         return 'مفهرسات الموارد';
       case 'section_services_subtitles':
         return 'مصادر الترجمة';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'الطباعة';
       case 'section_update':
@@ -393633,6 +393992,8 @@ extension on _StringsAr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -405334,6 +405695,8 @@ extension on _StringsDe {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -406179,6 +406542,8 @@ extension on _StringsDe {
         return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -406433,6 +406798,8 @@ extension on _StringsDe {
         return 'Spielebibliothek und Aufnahmeüberwachung';
       case 'game_hook_btn_close':
         return 'Overlay schließen';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Neuen Zeilen folgen';
       case 'game_hook_btn_lock':
@@ -410686,6 +411053,8 @@ extension on _StringsDe {
         return 'Erforderlich';
       case 'onboarding_action_next':
         return 'Weiter';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Vorerst überspringen';
       case 'onboarding_action_start':
@@ -412299,6 +412668,14 @@ extension on _StringsDe {
         return 'Ressourcen-Indexer';
       case 'section_services_subtitles':
         return 'Untertitelquellen';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typografie';
       case 'section_update':
@@ -412451,6 +412828,8 @@ extension on _StringsDe {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -424160,6 +424539,8 @@ extension on _StringsEs {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -425005,6 +425386,8 @@ extension on _StringsEs {
         return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -425259,6 +425642,8 @@ extension on _StringsEs {
         return 'Biblioteca de juegos y monitoreo de captura';
       case 'game_hook_btn_close':
         return 'Cerrar la ventana flotante';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Seguir las líneas nuevas';
       case 'game_hook_btn_lock':
@@ -429507,6 +429892,8 @@ extension on _StringsEs {
         return 'Obligatorio';
       case 'onboarding_action_next':
         return 'Siguiente';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Omitir por ahora';
       case 'onboarding_action_start':
@@ -431121,6 +431508,14 @@ extension on _StringsEs {
         return 'Indexadores de recursos';
       case 'section_services_subtitles':
         return 'Fuentes de subtítulos';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografía';
       case 'section_update':
@@ -431273,6 +431668,8 @@ extension on _StringsEs {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -442991,6 +443388,8 @@ extension on _StringsFr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -443836,6 +444235,8 @@ extension on _StringsFr {
         return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -444090,6 +444491,8 @@ extension on _StringsFr {
         return 'Ludothèque et surveillance de capture';
       case 'game_hook_btn_close':
         return 'Fermer la superposition';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Suivre les nouvelles lignes';
       case 'game_hook_btn_lock':
@@ -448340,6 +448743,8 @@ extension on _StringsFr {
         return 'Requis';
       case 'onboarding_action_next':
         return 'Suivant';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Passer pour le moment';
       case 'onboarding_action_start':
@@ -449954,6 +450359,14 @@ extension on _StringsFr {
         return 'Indexeurs de ressources';
       case 'section_services_subtitles':
         return 'Sources de sous-titres';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typographie';
       case 'section_update':
@@ -450106,6 +450519,8 @@ extension on _StringsFr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -461803,6 +462218,8 @@ extension on _StringsId {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -462648,6 +463065,8 @@ extension on _StringsId {
         return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -462902,6 +463321,8 @@ extension on _StringsId {
         return 'Pustaka game dan pemantauan tangkapan';
       case 'game_hook_btn_close':
         return 'Tutup overlay';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Ikuti baris baru';
       case 'game_hook_btn_lock':
@@ -467139,6 +467560,8 @@ extension on _StringsId {
         return 'Wajib';
       case 'onboarding_action_next':
         return 'Berikutnya';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Lewati untuk sekarang';
       case 'onboarding_action_start':
@@ -468747,6 +469170,14 @@ extension on _StringsId {
         return 'Pengindeks sumber daya';
       case 'section_services_subtitles':
         return 'Sumber subtitle';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografi';
       case 'section_update':
@@ -468899,6 +469330,8 @@ extension on _StringsId {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -480593,6 +481026,8 @@ extension on _StringsIt {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -481438,6 +481873,8 @@ extension on _StringsIt {
         return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -481692,6 +482129,8 @@ extension on _StringsIt {
         return 'Libreria giochi e monitoraggio cattura';
       case 'game_hook_btn_close':
         return 'Chiudi la finestra mobile';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Segui le nuove battute';
       case 'game_hook_btn_lock':
@@ -485938,6 +486377,8 @@ extension on _StringsIt {
         return 'Obbligatorio';
       case 'onboarding_action_next':
         return 'Avanti';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Salta per ora';
       case 'onboarding_action_start':
@@ -487549,6 +487990,14 @@ extension on _StringsIt {
         return 'Indicizzatori di risorse';
       case 'section_services_subtitles':
         return 'Fonti dei sottotitoli';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografia';
       case 'section_update':
@@ -487701,6 +488150,8 @@ extension on _StringsIt {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -499366,6 +499817,8 @@ extension on _StringsJa {
         return '画像を追加';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return '開いた時の画面を添付';
       case 'feedback_compose_attach_device':
         return '端末情報を添付';
       case 'feedback_compose_attach_device_hint':
@@ -500209,6 +500662,8 @@ extension on _StringsJa {
         return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'コピー';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -500463,6 +500918,8 @@ extension on _StringsJa {
         return 'ゲームライブラリとキャプチャ監視';
       case 'game_hook_btn_close':
         return 'オーバーレイを閉じる';
+      case 'game_hook_btn_copy':
+        return 'このセリフをクリップボードにコピー';
       case 'game_hook_btn_follow':
         return '新しい台詞に追従';
       case 'game_hook_btn_lock':
@@ -504680,6 +505137,8 @@ extension on _StringsJa {
         return '必須';
       case 'onboarding_action_next':
         return '次へ';
+      case 'onboarding_action_scroll_more':
+        return '下にスクロール';
       case 'onboarding_action_skip':
         return '今はスキップ';
       case 'onboarding_action_start':
@@ -506285,6 +506744,14 @@ extension on _StringsJa {
         return 'リソースインデクサー';
       case 'section_services_subtitles':
         return '字幕のソース';
+      case 'section_tabs_order_done':
+        return '完了';
+      case 'section_tabs_order_hint':
+        return 'ドラッグか矢印ボタンで並べ替えます。後から増えたタブは末尾に入ります。';
+      case 'section_tabs_order_reset':
+        return '既定の順序に戻す';
+      case 'section_tabs_order_title':
+        return 'タブの並べ替え';
       case 'section_typography':
         return 'タイポグラフィ';
       case 'section_update':
@@ -506437,6 +506904,8 @@ extension on _StringsJa {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return '常に表示（オフにできません）';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -518049,6 +518518,8 @@ extension on _StringsKo {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -518894,6 +519365,8 @@ extension on _StringsKo {
         return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -519147,6 +519620,8 @@ extension on _StringsKo {
         return '게임 라이브러리 및 캡처 모니터링';
       case 'game_hook_btn_close':
         return '오버레이 닫기';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return '새 대사 따라가기';
       case 'game_hook_btn_lock':
@@ -523364,6 +523839,8 @@ extension on _StringsKo {
         return '필수';
       case 'onboarding_action_next':
         return '다음';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return '나중에 하기';
       case 'onboarding_action_start':
@@ -524970,6 +525447,14 @@ extension on _StringsKo {
         return '리소스 인덱서';
       case 'section_services_subtitles':
         return '자막 소스';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return '타이포그래피';
       case 'section_update':
@@ -525122,6 +525607,8 @@ extension on _StringsKo {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -536785,6 +537272,8 @@ extension on _StringsNl {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -537630,6 +538119,8 @@ extension on _StringsNl {
         return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -537884,6 +538375,8 @@ extension on _StringsNl {
         return 'Spelbibliotheek en opnamemonitoring';
       case 'game_hook_btn_close':
         return 'Overlay sluiten';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Nieuwe regels volgen';
       case 'game_hook_btn_lock':
@@ -542134,6 +542627,8 @@ extension on _StringsNl {
         return 'Verplicht';
       case 'onboarding_action_next':
         return 'Volgende';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Later';
       case 'onboarding_action_start':
@@ -543745,6 +544240,14 @@ extension on _StringsNl {
         return 'Resource-indexers';
       case 'section_services_subtitles':
         return 'Ondertitelbronnen';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typografie';
       case 'section_update':
@@ -543897,6 +544400,8 @@ extension on _StringsNl {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -555595,6 +556100,8 @@ extension on _StringsPtBr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -556440,6 +556947,8 @@ extension on _StringsPtBr {
         return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -556694,6 +557203,8 @@ extension on _StringsPtBr {
         return 'Biblioteca de jogos e monitoramento de captura';
       case 'game_hook_btn_close':
         return 'Fechar a janela flutuante';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Acompanhar novas falas';
       case 'game_hook_btn_lock':
@@ -560940,6 +561451,8 @@ extension on _StringsPtBr {
         return 'Obrigatório';
       case 'onboarding_action_next':
         return 'Próximo';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Pular por enquanto';
       case 'onboarding_action_start':
@@ -562551,6 +563064,14 @@ extension on _StringsPtBr {
         return 'Indexadores de recursos';
       case 'section_services_subtitles':
         return 'Fontes de legendas';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografia';
       case 'section_update':
@@ -562703,6 +563224,8 @@ extension on _StringsPtBr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -574405,6 +574928,8 @@ extension on _StringsRu {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -575250,6 +575775,8 @@ extension on _StringsRu {
         return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -575504,6 +576031,8 @@ extension on _StringsRu {
         return 'Библиотека игр и мониторинг захвата';
       case 'game_hook_btn_close':
         return 'Закрыть оверлей';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Следовать за новыми репликами';
       case 'game_hook_btn_lock':
@@ -579750,6 +580279,8 @@ extension on _StringsRu {
         return 'Обязательно';
       case 'onboarding_action_next':
         return 'Далее';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Пропустить';
       case 'onboarding_action_start':
@@ -581361,6 +581892,14 @@ extension on _StringsRu {
         return 'Индексаторы ресурсов';
       case 'section_services_subtitles':
         return 'Источники субтитров';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Типографика';
       case 'section_update':
@@ -581513,6 +582052,8 @@ extension on _StringsRu {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -593189,6 +593730,8 @@ extension on _StringsTh {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -594034,6 +594577,8 @@ extension on _StringsTh {
         return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -594288,6 +594833,8 @@ extension on _StringsTh {
         return 'คลังเกมและการติดตามการจับข้อมูล';
       case 'game_hook_btn_close':
         return 'ปิดหน้าต่างลอย';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'ตามประโยคใหม่';
       case 'game_hook_btn_lock':
@@ -598523,6 +599070,8 @@ extension on _StringsTh {
         return 'จำเป็น';
       case 'onboarding_action_next':
         return 'ถัดไป';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'ข้ามไปก่อน';
       case 'onboarding_action_start':
@@ -600131,6 +600680,14 @@ extension on _StringsTh {
         return 'ตัวจัดทำดัชนีทรัพยากร';
       case 'section_services_subtitles':
         return 'แหล่งคำบรรยาย';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'รูปแบบตัวอักษร';
       case 'section_update':
@@ -600283,6 +600840,8 @@ extension on _StringsTh {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -611970,6 +612529,8 @@ extension on _StringsTr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -612815,6 +613376,8 @@ extension on _StringsTr {
         return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -613069,6 +613632,8 @@ extension on _StringsTr {
         return 'Oyun kütüphanesi ve yakalama izleme';
       case 'game_hook_btn_close':
         return 'Yer paylaşımını kapat';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Yeni satırları takip et';
       case 'game_hook_btn_lock':
@@ -617311,6 +617876,8 @@ extension on _StringsTr {
         return 'Zorunlu';
       case 'onboarding_action_next':
         return 'İleri';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Şimdilik atla';
       case 'onboarding_action_start':
@@ -618919,6 +619486,14 @@ extension on _StringsTr {
         return 'Kaynak dizinleyicileri';
       case 'section_services_subtitles':
         return 'Altyazı kaynakları';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografi';
       case 'section_update':
@@ -619071,6 +619646,8 @@ extension on _StringsTr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -630758,6 +631335,8 @@ extension on _StringsVi {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -631603,6 +632182,8 @@ extension on _StringsVi {
         return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return 'Copy';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -631857,6 +632438,8 @@ extension on _StringsVi {
         return 'Thư viện trò chơi và giám sát thu thập';
       case 'game_hook_btn_close':
         return 'Đóng cửa sổ nổi';
+      case 'game_hook_btn_copy':
+        return 'Copy this line to the clipboard';
       case 'game_hook_btn_follow':
         return 'Bám theo câu thoại mới';
       case 'game_hook_btn_lock':
@@ -636091,6 +636674,8 @@ extension on _StringsVi {
         return 'Bắt buộc';
       case 'onboarding_action_next':
         return 'Tiếp theo';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Bỏ qua';
       case 'onboarding_action_start':
@@ -637702,6 +638287,14 @@ extension on _StringsVi {
         return 'Trình lập chỉ mục tài nguyên';
       case 'section_services_subtitles':
         return 'Nguồn phụ đề';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Kiểu chữ';
       case 'section_update':
@@ -637854,6 +638447,8 @@ extension on _StringsVi {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -649453,6 +650048,8 @@ extension on _StringsZhCn {
         return '添加图片';
       case 'feedback_compose_add_video':
         return '添加视频';
+      case 'feedback_compose_attach_auto_shot':
+        return '附上当时画面';
       case 'feedback_compose_attach_device':
         return '附带设备信息';
       case 'feedback_compose_attach_device_hint':
@@ -650283,6 +650880,8 @@ extension on _StringsZhCn {
         return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
       case 'gal_hook_toolbar_label_close':
         return '关闭';
+      case 'gal_hook_toolbar_label_copy':
+        return '复制';
       case 'gal_hook_toolbar_label_follow':
         return '跟随';
       case 'gal_hook_toolbar_label_lock':
@@ -650536,6 +651135,8 @@ extension on _StringsZhCn {
         return '游戏库与捕获监控';
       case 'game_hook_btn_close':
         return '关闭浮窗';
+      case 'game_hook_btn_copy':
+        return '复制这句台词';
       case 'game_hook_btn_follow':
         return '跟随新台词';
       case 'game_hook_btn_lock':
@@ -654737,6 +655338,8 @@ extension on _StringsZhCn {
         return '必做';
       case 'onboarding_action_next':
         return '下一步';
+      case 'onboarding_action_scroll_more':
+        return '往下看';
       case 'onboarding_action_skip':
         return '暂时跳过';
       case 'onboarding_action_start':
@@ -656339,6 +656942,14 @@ extension on _StringsZhCn {
         return '资源索引器';
       case 'section_services_subtitles':
         return '字幕来源';
+      case 'section_tabs_order_done':
+        return '完成';
+      case 'section_tabs_order_hint':
+        return '拖动或用上下按钮调整；之后新增的页签排在最后。';
+      case 'section_tabs_order_reset':
+        return '恢复默认顺序';
+      case 'section_tabs_order_title':
+        return '调整页签顺序';
       case 'section_typography':
         return '排版';
       case 'section_update':
@@ -656491,6 +657102,8 @@ extension on _StringsZhCn {
         return '导航栏里至少要保留一个页面';
       case 'settings_module_nav_order':
         return '导航栏顺序';
+      case 'settings_module_nav_settings_always_on':
+        return '始终显示，不能关闭';
       case 'settings_page_reset_all_default':
         return '本页均为默认值';
       case 'settings_page_reset_confirm':
@@ -668012,6 +668625,8 @@ extension on _StringsZhHk {
         return '加入圖片';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return '附上當時畫面';
       case 'feedback_compose_attach_device':
         return '附帶裝置資訊';
       case 'feedback_compose_attach_device_hint':
@@ -668854,6 +669469,8 @@ extension on _StringsZhHk {
         return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
       case 'gal_hook_toolbar_label_close':
         return 'Close';
+      case 'gal_hook_toolbar_label_copy':
+        return '複製';
       case 'gal_hook_toolbar_label_follow':
         return 'Follow';
       case 'gal_hook_toolbar_label_lock':
@@ -669107,6 +669724,8 @@ extension on _StringsZhHk {
         return '遊戲庫與捕獲監控';
       case 'game_hook_btn_close':
         return '關閉浮窗';
+      case 'game_hook_btn_copy':
+        return '複製這句台詞';
       case 'game_hook_btn_follow':
         return '跟隨新台詞';
       case 'game_hook_btn_lock':
@@ -673316,6 +673935,8 @@ extension on _StringsZhHk {
         return '必做';
       case 'onboarding_action_next':
         return '下一步';
+      case 'onboarding_action_scroll_more':
+        return '往下看';
       case 'onboarding_action_skip':
         return '暫時跳過';
       case 'onboarding_action_start':
@@ -674921,6 +675542,14 @@ extension on _StringsZhHk {
         return '資源索引器';
       case 'section_services_subtitles':
         return '字幕來源';
+      case 'section_tabs_order_done':
+        return '完成';
+      case 'section_tabs_order_hint':
+        return '拖動或用上下按鈕調整；之後新增的頁籤排在最後。';
+      case 'section_tabs_order_reset':
+        return '恢復預設順序';
+      case 'section_tabs_order_title':
+        return '調整頁籤順序';
       case 'section_typography':
         return '排版';
       case 'section_update':
@@ -675073,6 +675702,8 @@ extension on _StringsZhHk {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return '始終顯示，不能關閉';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
