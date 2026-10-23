@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153034 (9002 per locale)
+/// Strings: 153068 (9004 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7113,6 +7113,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_animated_format_avif => 'AVIF (smallest)';
   String get mining_animated_format_gif => 'GIF (most compatible)';
   String get mining_animated_format_webp => 'WebP (wider support)';
+  String get mining_animated_play_once => 'Play animated images once';
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   String get mining_audio_follow_playback_speed =>
       'Match sentence audio to playback speed';
   String get mining_audio_follow_playback_speed_hint =>
@@ -24741,6 +24744,11 @@ class _StringsAr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (الأكثر توافقًا)';
   @override
   String get mining_animated_format_webp => 'WebP (دعم أوسع)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'مطابقة صوت الجملة لسرعة التشغيل';
@@ -46846,6 +46854,11 @@ class _StringsDe extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (höchste Kompatibilität)';
   @override
   String get mining_animated_format_webp => 'WebP (breitere Unterstützung)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Satz-Audio an Wiedergabegeschwindigkeit anpassen';
@@ -69128,6 +69141,11 @@ class _StringsEs extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (más compatible)';
   @override
   String get mining_animated_format_webp => 'WebP (soporte más amplio)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Ajustar el audio de la frase a la velocidad de reproducción';
@@ -91489,6 +91507,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (plus large compatibilité)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Adapter l\'audio de la phrase à la vitesse de lecture';
   @override
@@ -113686,6 +113709,11 @@ class _StringsId extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (dukungan lebih luas)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Sesuaikan audio kalimat dengan kecepatan putar';
   @override
@@ -135835,6 +135863,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (supporto più ampio)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Adatta l\'audio della frase alla velocità di riproduzione';
   @override
@@ -157470,6 +157503,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP（幅広い互換性）';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed => '文の音声を再生速度に合わせる';
   @override
   String get mining_audio_follow_playback_speed_hint =>
@@ -178663,6 +178701,11 @@ class _StringsKo extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (가장 호환)';
   @override
   String get mining_animated_format_webp => 'WebP (호환성 양호)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed => '문장 오디오를 재생 속도에 맞추기';
   @override
@@ -200426,6 +200469,11 @@ class _StringsNl extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (meest compatibel)';
   @override
   String get mining_animated_format_webp => 'WebP (bredere ondersteuning)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Zinsaudio afstemmen op afspeelsnelheid';
@@ -222639,6 +222687,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (suporte mais amplo)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Ajustar o áudio da frase à velocidade de reprodução';
   @override
@@ -244824,6 +244877,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (широкая поддержка)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Согласовывать аудио предложения со скоростью воспроизведения';
   @override
@@ -266821,6 +266879,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (รองรับกว้างกว่า)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'ปรับเสียงประโยคให้ตรงกับความเร็วการเล่น';
   @override
@@ -288802,6 +288865,11 @@ class _StringsTr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (en uyumlu)';
   @override
   String get mining_animated_format_webp => 'WebP (daha geniş destek)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Cümle sesini oynatma hızına uydur';
@@ -310821,6 +310889,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP (tương thích rộng hơn)';
   @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
+  @override
   String get mining_audio_follow_playback_speed =>
       'Khớp âm thanh câu với tốc độ phát';
   @override
@@ -331798,6 +331871,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP（兼容性更广）';
   @override
+  String get mining_animated_play_once => '动图只播放一次';
+  @override
+  String get mining_animated_play_once_hint =>
+      '卡片里的动图（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循环，和视频片段一样。只对之后新制的卡生效。';
+  @override
   String get mining_audio_follow_playback_speed => '句子音频跟随播放倍速';
   @override
   String get mining_audio_follow_playback_speed_hint =>
@@ -352090,6 +352168,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mining_animated_format_webp => 'WebP（兼容性更廣）';
   @override
+  String get mining_animated_play_once => '動圖只播放一次';
+  @override
+  String get mining_animated_play_once_hint =>
+      '卡片裡的動圖（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循環，和影片片段一樣。只對之後新製的卡生效。';
+  @override
   String get mining_audio_follow_playback_speed => '句子音頻跟隨播放倍速';
   @override
   String get mining_audio_follow_playback_speed_hint =>
@@ -371659,6 +371742,10 @@ extension on _StringsEn {
         return 'GIF (most compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (wider support)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Match sentence audio to playback speed';
       case 'mining_audio_follow_playback_speed_hint':
@@ -390370,6 +390457,10 @@ extension on _StringsAr {
         return 'GIF (الأكثر توافقًا)';
       case 'mining_animated_format_webp':
         return 'WebP (دعم أوسع)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'مطابقة صوت الجملة لسرعة التشغيل';
       case 'mining_audio_follow_playback_speed_hint':
@@ -409132,6 +409223,10 @@ extension on _StringsDe {
         return 'GIF (höchste Kompatibilität)';
       case 'mining_animated_format_webp':
         return 'WebP (breitere Unterstützung)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Satz-Audio an Wiedergabegeschwindigkeit anpassen';
       case 'mining_audio_follow_playback_speed_hint':
@@ -427904,6 +427999,10 @@ extension on _StringsEs {
         return 'GIF (más compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (soporte más amplio)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Ajustar el audio de la frase a la velocidad de reproducción';
       case 'mining_audio_follow_playback_speed_hint':
@@ -446686,6 +446785,10 @@ extension on _StringsFr {
         return 'GIF (plus compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (plus large compatibilité)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Adapter l\'audio de la phrase à la vitesse de lecture';
       case 'mining_audio_follow_playback_speed_hint':
@@ -465437,6 +465540,10 @@ extension on _StringsId {
         return 'GIF (paling kompatibel)';
       case 'mining_animated_format_webp':
         return 'WebP (dukungan lebih luas)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Sesuaikan audio kalimat dengan kecepatan putar';
       case 'mining_audio_follow_playback_speed_hint':
@@ -484185,6 +484292,10 @@ extension on _StringsIt {
         return 'GIF (più compatibile)';
       case 'mining_animated_format_webp':
         return 'WebP (supporto più ampio)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Adatta l\'audio della frase alla velocità di riproduzione';
       case 'mining_audio_follow_playback_speed_hint':
@@ -502881,6 +502992,10 @@ extension on _StringsJa {
         return 'GIF（最も互換性が高い）';
       case 'mining_animated_format_webp':
         return 'WebP（幅広い互換性）';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return '文の音声を再生速度に合わせる';
       case 'mining_audio_follow_playback_speed_hint':
@@ -521514,6 +521629,10 @@ extension on _StringsKo {
         return 'GIF (가장 호환)';
       case 'mining_animated_format_webp':
         return 'WebP (호환성 양호)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return '문장 오디오를 재생 속도에 맞추기';
       case 'mining_audio_follow_playback_speed_hint':
@@ -540231,6 +540350,10 @@ extension on _StringsNl {
         return 'GIF (meest compatibel)';
       case 'mining_animated_format_webp':
         return 'WebP (bredere ondersteuning)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Zinsaudio afstemmen op afspeelsnelheid';
       case 'mining_audio_follow_playback_speed_hint':
@@ -558987,6 +559110,10 @@ extension on _StringsPtBr {
         return 'GIF (mais compatível)';
       case 'mining_animated_format_webp':
         return 'WebP (suporte mais amplo)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Ajustar o áudio da frase à velocidade de reprodução';
       case 'mining_audio_follow_playback_speed_hint':
@@ -577747,6 +577874,10 @@ extension on _StringsRu {
         return 'GIF (максимальная совместимость)';
       case 'mining_animated_format_webp':
         return 'WebP (широкая поддержка)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Согласовывать аудио предложения со скоростью воспроизведения';
       case 'mining_audio_follow_playback_speed_hint':
@@ -596472,6 +596603,10 @@ extension on _StringsTh {
         return 'GIF (เข้ากันได้มากที่สุด)';
       case 'mining_animated_format_webp':
         return 'WebP (รองรับกว้างกว่า)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'ปรับเสียงประโยคให้ตรงกับความเร็วการเล่น';
       case 'mining_audio_follow_playback_speed_hint':
@@ -615210,6 +615345,10 @@ extension on _StringsTr {
         return 'GIF (en uyumlu)';
       case 'mining_animated_format_webp':
         return 'WebP (daha geniş destek)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Cümle sesini oynatma hızına uydur';
       case 'mining_audio_follow_playback_speed_hint':
@@ -633940,6 +634079,10 @@ extension on _StringsVi {
         return 'GIF (tương thích nhất)';
       case 'mining_animated_format_webp':
         return 'WebP (tương thích rộng hơn)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Khớp âm thanh câu với tốc độ phát';
       case 'mining_audio_follow_playback_speed_hint':
@@ -652541,6 +652684,10 @@ extension on _StringsZhCn {
         return 'GIF（兼容性最好，体积最大，无压缩）';
       case 'mining_animated_format_webp':
         return 'WebP（兼容性更广）';
+      case 'mining_animated_play_once':
+        return '动图只播放一次';
+      case 'mining_animated_play_once_hint':
+        return '卡片里的动图（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循环，和视频片段一样。只对之后新制的卡生效。';
       case 'mining_audio_follow_playback_speed':
         return '句子音频跟随播放倍速';
       case 'mining_audio_follow_playback_speed_hint':
@@ -671069,6 +671216,10 @@ extension on _StringsZhHk {
         return 'GIF（兼容性最好）';
       case 'mining_animated_format_webp':
         return 'WebP（兼容性更廣）';
+      case 'mining_animated_play_once':
+        return '動圖只播放一次';
+      case 'mining_animated_play_once_hint':
+        return '卡片裡的動圖（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循環，和影片片段一樣。只對之後新製的卡生效。';
       case 'mining_audio_follow_playback_speed':
         return '句子音頻跟隨播放倍速';
       case 'mining_audio_follow_playback_speed_hint':
