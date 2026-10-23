@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153017 (9001 per locale)
+/// Strings: 153187 (9011 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -231,6 +231,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_error_quota_exhausted => 'Out of credit or quota';
   String get ai_error_rate_limited => 'Rate limited, try again later';
   String get ai_error_unauthorized => 'API key was rejected';
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
   String get ai_feature_acquire => 'AI download';
   String get ai_feature_acquire_summary =>
       'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
@@ -239,6 +241,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_audiobook_cast => 'Audiobook casting';
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   String get ai_feature_collection_order => 'Collection order';
   String get ai_feature_collection_order_summary =>
       'When numbering rules can\'t place specials, OVAs or volumes, let AI decide where they go in a collection';
@@ -275,7 +280,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Let AI lay out review cards from a description and explain fields';
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   String get ai_feature_subtitle_proofread_summary =>
-      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Also used by AI proofread in the transcribe sheet (fixes words and punctuation; lines and timing unchanged). Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   String get ai_feature_unset => 'Not set';
   String get ai_feature_video_identify => 'Video identification';
   String get ai_feature_video_identify_assist_summary =>
@@ -1556,6 +1561,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Done: ${cues} cues from ${segments} speech segments';
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
   String get audiobook_transcribe_engine_system => 'System speech (Apple)';
   String get audiobook_transcribe_engine_system_hint =>
       'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
@@ -1663,6 +1673,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · file ${file}/${files}';
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
   String audiobook_transcribe_remote_running({
@@ -2646,8 +2675,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get custom_fonts_archive_error => 'Failed to extract archive';
   String get custom_fonts_catalog_title => 'Font library';
   String get custom_fonts_download_failed => 'Download failed';
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   String get custom_fonts_downloading => 'Downloading...';
   String get custom_fonts_drag_hint => 'Drag to reorder font priority';
   String get custom_fonts_empty => 'No custom fonts added';
@@ -6137,7 +6164,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_blur => 'Blur lyrics';
   String get lyrics_blur_hint =>
       'Blur the current line for listening immersion; hover or tap to reveal';
-  String get lyrics_exit_to_library => 'Close and return to library';
   String get lyrics_font_size => 'Lyrics font size';
   String get lyrics_font_size_hint =>
       'Lyrics font size is independent of book mode';
@@ -9999,9 +10025,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_tone_muted => 'Muted';
   String get srs_visual_tone_normal => 'Normal';
   String get srt_audio_unresolved => 'Audio file not found — please re-attach';
-  String get srt_book_attach_epub => 'Add book file';
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   String get srt_book_reimport => 'Re-import';
   String get srt_book_reimport_body_rebuilt =>
       'Book text rebuilt — reopen the book to read it';
@@ -13161,6 +13184,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'تم رفض مفتاح API';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'تنزيل بالذكاء الاصطناعي';
   @override
   String get ai_feature_acquire_summary =>
@@ -13173,6 +13199,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'ترتيب المجموعة';
   @override
@@ -15323,6 +15354,14 @@ class _StringsAr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'الوقت الإجمالي ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'الكلام النظامي (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -15490,6 +15529,33 @@ class _StringsAr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · الملف ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       'لا يملك ${device} نموذجًا لهذه اللغة';
@@ -17158,9 +17224,6 @@ class _StringsAr extends _StringsEn {
   String get custom_fonts_catalog_title => 'مكتبة الخطوط';
   @override
   String get custom_fonts_download_failed => 'فشل التنزيل';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'جارٍ التنزيل...';
   @override
@@ -23059,8 +23122,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'حجم خط كلمات الأغاني';
   @override
@@ -29731,11 +29792,6 @@ class _StringsAr extends _StringsEn {
   String get srt_audio_unresolved =>
       'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'إعادة الاستيراد';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -35028,6 +35084,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-Schlüssel wurde abgelehnt';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'KI-Download';
   @override
   String get ai_feature_acquire_summary =>
@@ -35040,6 +35099,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Sammlungsreihenfolge';
   @override
@@ -37221,6 +37285,14 @@ class _StringsDe extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Gesamtzeit ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Systemsprache (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -37393,6 +37465,33 @@ class _StringsDe extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · Datei ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} hat kein Modell für diese Sprache';
@@ -39081,9 +39180,6 @@ class _StringsDe extends _StringsEn {
   String get custom_fonts_catalog_title => 'Schriftbibliothek';
   @override
   String get custom_fonts_download_failed => 'Download fehlgeschlagen';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Wird heruntergeladen...';
   @override
@@ -45117,8 +45213,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Liedtext-Schriftgröße';
   @override
@@ -51893,11 +51987,6 @@ class _StringsDe extends _StringsEn {
   String get srt_audio_unresolved =>
       'Audiodatei nicht gefunden — bitte erneut anhängen';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Erneut importieren';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -57284,6 +57373,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'Se rechazó la clave de API';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Descarga con IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -57296,6 +57388,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Orden de la colección';
   @override
@@ -59490,6 +59587,14 @@ class _StringsEs extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tiempo total ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Voz del sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -59662,6 +59767,33 @@ class _StringsEs extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · archivo ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} no tiene un modelo para este idioma';
@@ -61347,9 +61479,6 @@ class _StringsEs extends _StringsEn {
   String get custom_fonts_catalog_title => 'Biblioteca de fuentes';
   @override
   String get custom_fonts_download_failed => 'Error en la descarga';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Descargando...';
   @override
@@ -67395,8 +67524,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamaño de fuente de letras';
   @override
@@ -74179,11 +74306,6 @@ class _StringsEs extends _StringsEn {
   String get srt_audio_unresolved =>
       'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Reimportar';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -79596,6 +79718,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'La clé API a été refusée';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Téléchargement par IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -79608,6 +79733,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordre de la collection';
   @override
@@ -81810,6 +81940,14 @@ class _StringsFr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Durée totale ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system =>
       'Reconnaissance vocale du système (Apple)';
   @override
@@ -81986,6 +82124,33 @@ class _StringsFr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · fichier ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} n\'a pas de modèle pour cette langue';
@@ -83681,9 +83846,6 @@ class _StringsFr extends _StringsEn {
   String get custom_fonts_catalog_title => 'Bibliothèque de polices';
   @override
   String get custom_fonts_download_failed => 'Échec du téléchargement';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Téléchargement...';
   @override
@@ -89744,8 +89906,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Taille de police des paroles';
   @override
@@ -96553,11 +96713,6 @@ class _StringsFr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Fichier audio introuvable — veuillez le rattacher';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Réimporter';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -101990,6 +102145,9 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'Kunci API ditolak';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Unduhan AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -102002,6 +102160,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Urutan koleksi';
   @override
@@ -104171,6 +104334,14 @@ class _StringsId extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total waktu ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Ucapan sistem (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -104339,6 +104510,33 @@ class _StringsId extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · berkas ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} tidak memiliki model untuk bahasa ini';
@@ -106010,9 +106208,6 @@ class _StringsId extends _StringsEn {
   String get custom_fonts_catalog_title => 'Pustaka font';
   @override
   String get custom_fonts_download_failed => 'Unduhan gagal';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Mengunduh…';
   @override
@@ -111975,8 +112170,6 @@ class _StringsId extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Ukuran Font Lirik';
   @override
@@ -118691,11 +118884,6 @@ class _StringsId extends _StringsEn {
   String get srt_audio_unresolved =>
       'File audio tidak ditemukan — silakan lampirkan ulang';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Impor ulang';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -124040,6 +124228,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'La chiave API è stata rifiutata';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Download con IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -124052,6 +124243,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordine della raccolta';
   @override
@@ -126232,6 +126428,14 @@ class _StringsIt extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tempo totale ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Voce di sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -126404,6 +126608,33 @@ class _StringsIt extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · file ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} non ha un modello per questa lingua';
@@ -128087,9 +128318,6 @@ class _StringsIt extends _StringsEn {
   String get custom_fonts_catalog_title => 'Libreria di caratteri';
   @override
   String get custom_fonts_download_failed => 'Scaricamento fallito';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Scaricamento...';
   @override
@@ -134095,8 +134323,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Dimensione carattere testi';
   @override
@@ -140869,11 +141095,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srt_audio_unresolved => 'File audio non trovato — ricollegare';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Reimporta';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -146248,6 +146469,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API キーが拒否されました';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'AI ダウンロード';
   @override
   String get ai_feature_acquire_summary =>
@@ -146260,6 +146484,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'コレクションの並び順';
   @override
@@ -148350,6 +148579,14 @@ class _StringsJa extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '合計時間 ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'システム音声認識（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -148513,6 +148750,33 @@ class _StringsJa extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · ファイル ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} にこの言語のモデルがありません';
@@ -150131,9 +150395,6 @@ class _StringsJa extends _StringsEn {
   String get custom_fonts_catalog_title => 'フォントライブラリ';
   @override
   String get custom_fonts_download_failed => 'ダウンロード失敗';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'ダウンロード中…';
   @override
@@ -155827,8 +156088,6 @@ class _StringsJa extends _StringsEn {
   String get lyrics_blur => '歌詞をぼかす';
   @override
   String get lyrics_blur_hint => 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞フォントサイズ';
   @override
@@ -162342,11 +162601,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srt_audio_unresolved => '音声ファイルが見つかりません。再紐付けしてください';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => '再インポート';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -167420,6 +167674,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API 키가 거부되었습니다';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'AI 다운로드';
   @override
   String get ai_feature_acquire_summary =>
@@ -167432,6 +167689,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => '컬렉션 순서';
   @override
@@ -169518,6 +169780,14 @@ class _StringsKo extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '총 소요 시간 ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => '시스템 음성 인식 (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -169681,6 +169951,33 @@ class _StringsKo extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 파일 ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device}에 이 언어용 모델이 없습니다';
@@ -171303,9 +171600,6 @@ class _StringsKo extends _StringsEn {
   String get custom_fonts_catalog_title => '글꼴 라이브러리';
   @override
   String get custom_fonts_download_failed => '다운로드 실패';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => '다운로드 중…';
   @override
@@ -177009,8 +177303,6 @@ class _StringsKo extends _StringsEn {
   String get lyrics_blur => '가사 흐리게';
   @override
   String get lyrics_blur_hint => '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '가사 글꼴 크기';
   @override
@@ -183541,11 +183833,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srt_audio_unresolved => '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => '다시 가져오기';
   @override
   String get srt_book_reimport_body_rebuilt => '책 텍스트 재구성됨 — 책을 다시 열어 읽으세요';
@@ -188663,6 +188950,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-sleutel werd geweigerd';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'AI-download';
   @override
   String get ai_feature_acquire_summary =>
@@ -188675,6 +188965,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Volgorde van verzameling';
   @override
@@ -190854,6 +191149,14 @@ class _StringsNl extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Totale tijd ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Systeemspraak (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -191025,6 +191328,33 @@ class _StringsNl extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · bestand ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} heeft geen model voor deze taal';
@@ -192708,9 +193038,6 @@ class _StringsNl extends _StringsEn {
   String get custom_fonts_catalog_title => 'Lettertypebibliotheek';
   @override
   String get custom_fonts_download_failed => 'Download mislukt';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Downloaden...';
   @override
@@ -198698,8 +199025,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Lettergrootte songtekst';
   @override
@@ -205451,11 +205776,6 @@ class _StringsNl extends _StringsEn {
   String get srt_audio_unresolved =>
       'Audiobestand niet gevonden — koppel opnieuw';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Opnieuw importeren';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -210826,6 +211146,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'A chave de API foi rejeitada';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Download com IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -210838,6 +211161,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordem da coleção';
   @override
@@ -213027,6 +213355,14 @@ class _StringsPtBr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tempo total ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Fala do sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -213198,6 +213534,33 @@ class _StringsPtBr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · arquivo ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} não tem modelo para este idioma';
@@ -214880,9 +215243,6 @@ class _StringsPtBr extends _StringsEn {
   String get custom_fonts_catalog_title => 'Biblioteca de fontes';
   @override
   String get custom_fonts_download_failed => 'Falha no download';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Baixando...';
   @override
@@ -220901,8 +221261,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamanho da fonte das letras';
   @override
@@ -227661,11 +228019,6 @@ class _StringsPtBr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Arquivo de áudio não encontrado — reanexe-o';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Reimportar';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -233054,6 +233407,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-ключ отклонён';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'ИИ-загрузка';
   @override
   String get ai_feature_acquire_summary =>
@@ -233066,6 +233422,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Порядок в коллекции';
   @override
@@ -235245,6 +235606,14 @@ class _StringsRu extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Общее время ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Системная речь (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -235415,6 +235784,33 @@ class _StringsRu extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · файл ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       'На ${device} нет модели для этого языка';
@@ -237094,9 +237490,6 @@ class _StringsRu extends _StringsEn {
   String get custom_fonts_catalog_title => 'Библиотека шрифтов';
   @override
   String get custom_fonts_download_failed => 'Ошибка загрузки';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Загрузка…';
   @override
@@ -243088,8 +243481,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Размер шрифта текста песен';
   @override
@@ -249848,11 +250239,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srt_audio_unresolved => 'Аудиофайл не найден — привяжите заново';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Повторный импорт';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -255228,6 +255614,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API key ถูกปฏิเสธ';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'ดาวน์โหลดด้วย AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -255240,6 +255629,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'ลำดับในคอลเลกชัน';
   @override
@@ -257384,6 +257778,14 @@ class _StringsTh extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'เวลารวม ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'เสียงพูดของระบบ (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -257551,6 +257953,33 @@ class _StringsTh extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · ไฟล์ ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} ไม่มีโมเดลสำหรับภาษานี้';
@@ -259212,9 +259641,6 @@ class _StringsTh extends _StringsEn {
   String get custom_fonts_catalog_title => 'คลังฟอนต์';
   @override
   String get custom_fonts_download_failed => 'ดาวน์โหลดล้มเหลว';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'กำลังดาวน์โหลด…';
   @override
@@ -265110,8 +265536,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'ขนาดตัวอักษรเนื้อเพลง';
   @override
@@ -271787,11 +272211,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srt_audio_unresolved => 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'นำเข้าใหม่';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -277082,6 +277501,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API anahtarı reddedildi';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Yapay zeka ile indirme';
   @override
   String get ai_feature_acquire_summary =>
@@ -277094,6 +277516,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Koleksiyon sırası';
   @override
@@ -279258,6 +279685,14 @@ class _StringsTr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Toplam süre ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Sistem konuşması (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -279426,6 +279861,33 @@ class _StringsTr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · dosya ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} cihazında bu dil için model yok';
@@ -281102,9 +281564,6 @@ class _StringsTr extends _StringsEn {
   String get custom_fonts_catalog_title => 'Yazı tipi kitaplığı';
   @override
   String get custom_fonts_download_failed => 'İndirme başarısız';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'İndiriliyor…';
   @override
@@ -287075,8 +287534,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Şarkı Sözü Yazı Boyutu';
   @override
@@ -293793,11 +294250,6 @@ class _StringsTr extends _StringsEn {
   String get srt_audio_unresolved =>
       'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Yeniden içe aktar';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -299138,6 +299590,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API key bị từ chối';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'Tải bằng AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -299150,6 +299605,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Thứ tự bộ sưu tập';
   @override
@@ -301307,6 +301767,14 @@ class _StringsVi extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tổng thời gian ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => 'Giọng nói hệ thống (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -301475,6 +301943,33 @@ class _StringsVi extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · tệp ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} không có mô hình cho ngôn ngữ này';
@@ -303146,9 +303641,6 @@ class _StringsVi extends _StringsEn {
   String get custom_fonts_catalog_title => 'Thư viện phông';
   @override
   String get custom_fonts_download_failed => 'Tải xuống thất bại';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Đang tải…';
   @override
@@ -309100,8 +309592,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Cỡ chữ lời bài hát';
   @override
@@ -315794,11 +316284,6 @@ class _StringsVi extends _StringsEn {
   String get srt_audio_unresolved =>
       'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => 'Nhập lại';
   @override
   String get srt_book_reimport_body_rebuilt =>
@@ -321116,6 +321601,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API Key 被拒绝';
   @override
+  String get ai_error_unsupported_protocol =>
+      '该提供商的协议没有语音转录接口（请用 OpenAI 兼容协议的提供商）';
+  @override
   String get ai_feature_acquire => 'AI 下载';
   @override
   String get ai_feature_acquire_summary =>
@@ -321126,6 +321614,11 @@ class _StringsZhCn extends _StringsEn {
   String get ai_feature_audiobook_cast => '有声书角色标注';
   @override
   String get ai_feature_audiobook_cast_summary => '标注每句台词的说话人，供多声优配音';
+  @override
+  String get ai_feature_cloud_transcription => '云端语音转录';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      '用 OpenAI 兼容的 Whisper 接口（如 Groq）转录音频。这家提供商的模型请填 Whisper 模型名（如 whisper-large-v3）。只在转录弹层里选「云端转录」时才会把音频上传给该提供商，并由其计费；不跟随默认提供商。';
   @override
   String get ai_feature_collection_order => '合集排序';
   @override
@@ -321177,7 +321670,7 @@ class _StringsZhCn extends _StringsEn {
   String get ai_feature_subtitle_proofread => '字幕校对';
   @override
   String get ai_feature_subtitle_proofread_summary =>
-      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
+      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词；转录弹层里的「AI 校对」也用它（修错字、补标点，行数与时间轴不变）。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -323099,6 +323592,14 @@ class _StringsZhCn extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '总耗时 ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => '云端转录（Whisper API）';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      '上传音频到 ${name} · 由其计费';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      '请先在 设置 › AI 里给「云端语音转录」指派一家提供商（模型填 Whisper 模型名，如 whisper-large-v3）。';
+  @override
   String get audiobook_transcribe_engine_system => '系统语音识别（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -323257,6 +323758,31 @@ class _StringsZhCn extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 文件 ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI 校对';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) => 'AI 校对完成：改了 ${changed} 行，${skipped} 块保留原文';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI 校对失败：${reason}。字幕未改动。';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI 校对会修正听错的字、补上标点；行数与时间轴不变。';
+  @override
+  String get audiobook_transcribe_proofread_restore => '还原原稿';
+  @override
+  String get audiobook_transcribe_proofread_restored => '已还原为校对前的原稿';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI 校对中… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      '请先在 设置 › AI 里给「字幕校对」指派一家提供商。';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} 没有该语言的模型';
@@ -324769,9 +325295,6 @@ class _StringsZhCn extends _StringsEn {
   String get custom_fonts_catalog_title => '字体库';
   @override
   String get custom_fonts_download_failed => '下载失败';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
   @override
   String get custom_fonts_downloading => '正在下载…';
   @override
@@ -330200,8 +330723,6 @@ class _StringsZhCn extends _StringsEn {
   String get lyrics_blur => '模糊歌词';
   @override
   String get lyrics_blur_hint => '听力沉浸：模糊当前句，悬停或点击显形';
-  @override
-  String get lyrics_exit_to_library => '关闭并返回书架';
   @override
   String get lyrics_font_size => '歌词字号';
   @override
@@ -336373,10 +336894,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srt_audio_unresolved => '未找到音频文件 — 请重新附加';
   @override
-  String get srt_book_attach_epub => '添加书籍文件';
-  @override
-  String get srt_book_attach_epub_remove_old_hint => '已用书籍正文生成新的有声书，原来的字幕书可以删除';
-  @override
   String get srt_book_reimport => '重新导入';
   @override
   String get srt_book_reimport_body_rebuilt => '正文已重建，请重新打开本书';
@@ -341197,6 +341714,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API Key 被拒絕';
   @override
+  String get ai_error_unsupported_protocol =>
+      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
+  @override
   String get ai_feature_acquire => 'AI 下載';
   @override
   String get ai_feature_acquire_summary =>
@@ -341208,6 +341728,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
+  @override
+  String get ai_feature_cloud_transcription => 'Cloud transcription';
+  @override
+  String get ai_feature_cloud_transcription_summary =>
+      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => '合集排序';
   @override
@@ -343225,6 +343750,14 @@ class _StringsZhHk extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '總耗時 ${elapsed}';
   @override
+  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
+  @override
+  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
+      'Uploads audio to ${name} · billed by it';
+  @override
+  String get audiobook_transcribe_engine_cloud_unset =>
+      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
+  @override
   String get audiobook_transcribe_engine_system => '系統語音識別（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -343384,6 +343917,33 @@ class _StringsZhHk extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 檔案 ${file}/${files}';
+  @override
+  String get audiobook_transcribe_proofread => 'AI proofread';
+  @override
+  String audiobook_transcribe_proofread_done({
+    required Object changed,
+    required Object skipped,
+  }) =>
+      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+  @override
+  String audiobook_transcribe_proofread_failed({required Object reason}) =>
+      'AI proofreading failed: ${reason}. The transcript was not changed.';
+  @override
+  String get audiobook_transcribe_proofread_hint =>
+      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+  @override
+  String get audiobook_transcribe_proofread_restore => 'Restore original';
+  @override
+  String get audiobook_transcribe_proofread_restored =>
+      'Original transcript restored';
+  @override
+  String audiobook_transcribe_proofread_running({
+    required Object done,
+    required Object total,
+  }) => 'AI proofreading… ${done}/${total}';
+  @override
+  String get audiobook_transcribe_proofread_unset =>
+      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} 沒有該語言的模型';
@@ -344970,9 +345530,6 @@ class _StringsZhHk extends _StringsEn {
   String get custom_fonts_catalog_title => '字型庫';
   @override
   String get custom_fonts_download_failed => '下載失敗';
-  @override
-  String get custom_fonts_download_unreachable_hint =>
-      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => '正在下載…';
   @override
@@ -350475,8 +351032,6 @@ class _StringsZhHk extends _StringsEn {
   String get lyrics_blur => '模糊歌詞';
   @override
   String get lyrics_blur_hint => '聽力沉浸：模糊當前句，懸停或點擊顯形';
-  @override
-  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞字體大小';
   @override
@@ -356861,11 +357416,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srt_audio_unresolved => '未找到音訊檔案 — 請重新附加';
   @override
-  String get srt_book_attach_epub => 'Add book file';
-  @override
-  String get srt_book_attach_epub_remove_old_hint =>
-      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
-  @override
   String get srt_book_reimport => '重新導入';
   @override
   String get srt_book_reimport_body_rebuilt => '正文已重建，請重新打開本書';
@@ -361745,6 +362295,8 @@ extension on _StringsEn {
         return 'Rate limited, try again later';
       case 'ai_error_unauthorized':
         return 'API key was rejected';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI download';
       case 'ai_feature_acquire_summary':
@@ -361755,6 +362307,10 @@ extension on _StringsEn {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Collection order';
       case 'ai_feature_collection_order_summary':
@@ -361802,7 +362358,7 @@ extension on _StringsEn {
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
-        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Also used by AI proofread in the transcribe sheet (fixes words and punctuation; lines and timing unchanged). Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Not set';
       case 'ai_feature_video_identify':
@@ -363538,6 +364094,13 @@ extension on _StringsEn {
             'Done: ${cues} cues from ${segments} speech segments';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'System speech (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -363675,6 +364238,25 @@ extension on _StringsEn {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · file ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
@@ -365102,8 +365684,6 @@ extension on _StringsEn {
         return 'Font library';
       case 'custom_fonts_download_failed':
         return 'Download failed';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloading...';
       case 'custom_fonts_drag_hint':
@@ -370137,8 +370717,6 @@ extension on _StringsEn {
         return 'Blur lyrics';
       case 'lyrics_blur_hint':
         return 'Blur the current line for listening immersion; hover or tap to reveal';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lyrics font size';
       case 'lyrics_font_size_hint':
@@ -375977,10 +376555,6 @@ extension on _StringsEn {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audio file not found — please re-attach';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Re-import';
       case 'srt_book_reimport_body_rebuilt':
@@ -380459,6 +381033,8 @@ extension on _StringsAr {
         return 'تم تجاوز حد المعدل، حاول لاحقًا';
       case 'ai_error_unauthorized':
         return 'تم رفض مفتاح API';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'تنزيل بالذكاء الاصطناعي';
       case 'ai_feature_acquire_summary':
@@ -380469,6 +381045,10 @@ extension on _StringsAr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'ترتيب المجموعة';
       case 'ai_feature_collection_order_summary':
@@ -382252,6 +382832,13 @@ extension on _StringsAr {
             'تم: ${cues} سطر ترجمة من ${segments} مقطع كلام';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'الوقت الإجمالي ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'الكلام النظامي (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -382389,6 +382976,25 @@ extension on _StringsAr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · الملف ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             'لا يملك ${device} نموذجًا لهذه اللغة';
@@ -383817,8 +384423,6 @@ extension on _StringsAr {
         return 'مكتبة الخطوط';
       case 'custom_fonts_download_failed':
         return 'فشل التنزيل';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'جارٍ التنزيل...';
       case 'custom_fonts_drag_hint':
@@ -388846,8 +389450,6 @@ extension on _StringsAr {
         return 'تمويه كلمات الأغاني';
       case 'lyrics_blur_hint':
         return 'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'حجم خط كلمات الأغاني';
       case 'lyrics_font_size_hint':
@@ -394687,10 +395289,6 @@ extension on _StringsAr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'إعادة الاستيراد';
       case 'srt_book_reimport_body_rebuilt':
@@ -399168,6 +399766,8 @@ extension on _StringsDe {
         return 'Ratenbegrenzt, versuche es später erneut';
       case 'ai_error_unauthorized':
         return 'API-Schlüssel wurde abgelehnt';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'KI-Download';
       case 'ai_feature_acquire_summary':
@@ -399178,6 +399778,10 @@ extension on _StringsDe {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Sammlungsreihenfolge';
       case 'ai_feature_collection_order_summary':
@@ -400978,6 +401582,13 @@ extension on _StringsDe {
             'Fertig: ${cues} Cues aus ${segments} Sprachsegmenten';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Gesamtzeit ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Systemsprache (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -401117,6 +401728,25 @@ extension on _StringsDe {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · Datei ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} hat kein Modell für diese Sprache';
@@ -402546,8 +403176,6 @@ extension on _StringsDe {
         return 'Schriftbibliothek';
       case 'custom_fonts_download_failed':
         return 'Download fehlgeschlagen';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Wird heruntergeladen...';
       case 'custom_fonts_drag_hint':
@@ -407596,8 +408224,6 @@ extension on _StringsDe {
         return 'Liedtext unscharf';
       case 'lyrics_blur_hint':
         return 'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Liedtext-Schriftgröße';
       case 'lyrics_font_size_hint':
@@ -413453,10 +414079,6 @@ extension on _StringsDe {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiodatei nicht gefunden — bitte erneut anhängen';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Erneut importieren';
       case 'srt_book_reimport_body_rebuilt':
@@ -417952,6 +418574,8 @@ extension on _StringsEs {
         return 'Límite de solicitudes alcanzado, inténtalo más tarde';
       case 'ai_error_unauthorized':
         return 'Se rechazó la clave de API';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Descarga con IA';
       case 'ai_feature_acquire_summary':
@@ -417962,6 +418586,10 @@ extension on _StringsEs {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Orden de la colección';
       case 'ai_feature_collection_order_summary':
@@ -419755,6 +420383,13 @@ extension on _StringsEs {
             'Listo: ${cues} líneas a partir de ${segments} segmentos de voz';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tiempo total ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Voz del sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -419894,6 +420529,25 @@ extension on _StringsEs {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · archivo ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} no tiene un modelo para este idioma';
@@ -421325,8 +421979,6 @@ extension on _StringsEs {
         return 'Biblioteca de fuentes';
       case 'custom_fonts_download_failed':
         return 'Error en la descarga';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Descargando...';
       case 'custom_fonts_drag_hint':
@@ -426367,8 +427019,6 @@ extension on _StringsEs {
         return 'Difuminar letras';
       case 'lyrics_blur_hint':
         return 'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamaño de fuente de letras';
       case 'lyrics_font_size_hint':
@@ -432223,10 +432873,6 @@ extension on _StringsEs {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -436718,6 +437364,8 @@ extension on _StringsFr {
         return 'Débit limité, réessayez plus tard';
       case 'ai_error_unauthorized':
         return 'La clé API a été refusée';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Téléchargement par IA';
       case 'ai_feature_acquire_summary':
@@ -436728,6 +437376,10 @@ extension on _StringsFr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordre de la collection';
       case 'ai_feature_collection_order_summary':
@@ -438527,6 +439179,13 @@ extension on _StringsFr {
             'Terminé : ${cues} répliques à partir de ${segments} segments de parole';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Durée totale ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Reconnaissance vocale du système (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -438666,6 +439325,25 @@ extension on _StringsFr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · fichier ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} n\'a pas de modèle pour cette langue';
@@ -440096,8 +440774,6 @@ extension on _StringsFr {
         return 'Bibliothèque de polices';
       case 'custom_fonts_download_failed':
         return 'Échec du téléchargement';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Téléchargement...';
       case 'custom_fonts_drag_hint':
@@ -445148,8 +445824,6 @@ extension on _StringsFr {
         return 'Flouter les paroles';
       case 'lyrics_blur_hint':
         return 'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Taille de police des paroles';
       case 'lyrics_font_size_hint':
@@ -451004,10 +451678,6 @@ extension on _StringsFr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Fichier audio introuvable — veuillez le rattacher';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Réimporter';
       case 'srt_book_reimport_body_rebuilt':
@@ -455501,6 +456171,8 @@ extension on _StringsId {
         return 'Dibatasi laju, coba lagi nanti';
       case 'ai_error_unauthorized':
         return 'Kunci API ditolak';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Unduhan AI';
       case 'ai_feature_acquire_summary':
@@ -455511,6 +456183,10 @@ extension on _StringsId {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Urutan koleksi';
       case 'ai_feature_collection_order_summary':
@@ -457301,6 +457977,13 @@ extension on _StringsId {
             'Selesai: ${cues} cue dari ${segments} segmen ucapan';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total waktu ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Ucapan sistem (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -457438,6 +458121,25 @@ extension on _StringsId {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · berkas ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} tidak memiliki model untuk bahasa ini';
@@ -458866,8 +459568,6 @@ extension on _StringsId {
         return 'Pustaka font';
       case 'custom_fonts_download_failed':
         return 'Unduhan gagal';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Mengunduh…';
       case 'custom_fonts_drag_hint':
@@ -463904,8 +464604,6 @@ extension on _StringsId {
         return 'Buramkan lirik';
       case 'lyrics_blur_hint':
         return 'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Ukuran Font Lirik';
       case 'lyrics_font_size_hint':
@@ -469745,10 +470443,6 @@ extension on _StringsId {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio tidak ditemukan — silakan lampirkan ulang';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Impor ulang';
       case 'srt_book_reimport_body_rebuilt':
@@ -474230,6 +474924,8 @@ extension on _StringsIt {
         return 'Limite di richieste raggiunto, riprova più tardi';
       case 'ai_error_unauthorized':
         return 'La chiave API è stata rifiutata';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Download con IA';
       case 'ai_feature_acquire_summary':
@@ -474240,6 +474936,10 @@ extension on _StringsIt {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordine della raccolta';
       case 'ai_feature_collection_order_summary':
@@ -476032,6 +476732,13 @@ extension on _StringsIt {
             'Fatto: ${cues} battute da ${segments} segmenti vocali';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tempo totale ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Voce di sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -476171,6 +476878,25 @@ extension on _StringsIt {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · file ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} non ha un modello per questa lingua';
@@ -477600,8 +478326,6 @@ extension on _StringsIt {
         return 'Libreria di caratteri';
       case 'custom_fonts_download_failed':
         return 'Scaricamento fallito';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Scaricamento...';
       case 'custom_fonts_drag_hint':
@@ -482644,8 +483368,6 @@ extension on _StringsIt {
         return 'Sfoca testi';
       case 'lyrics_blur_hint':
         return 'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Dimensione carattere testi';
       case 'lyrics_font_size_hint':
@@ -488495,10 +489217,6 @@ extension on _StringsIt {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio non trovato — ricollegare';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimporta';
       case 'srt_book_reimport_body_rebuilt':
@@ -492992,6 +493710,8 @@ extension on _StringsJa {
         return 'レート制限されました。しばらくしてからもう一度お試しください';
       case 'ai_error_unauthorized':
         return 'API キーが拒否されました';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI ダウンロード';
       case 'ai_feature_acquire_summary':
@@ -493002,6 +493722,10 @@ extension on _StringsJa {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'コレクションの並び順';
       case 'ai_feature_collection_order_summary':
@@ -494777,6 +495501,13 @@ extension on _StringsJa {
             '完了：${segments} 個の音声区間から字幕 ${cues} 件を生成';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '合計時間 ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'システム音声認識（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -494914,6 +495645,25 @@ extension on _StringsJa {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · ファイル ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} にこの言語のモデルがありません';
       case 'audiobook_transcribe_remote_running':
@@ -496334,8 +497084,6 @@ extension on _StringsJa {
         return 'フォントライブラリ';
       case 'custom_fonts_download_failed':
         return 'ダウンロード失敗';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'ダウンロード中…';
       case 'custom_fonts_drag_hint':
@@ -501348,8 +502096,6 @@ extension on _StringsJa {
         return '歌詞をぼかす';
       case 'lyrics_blur_hint':
         return 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞フォントサイズ';
       case 'lyrics_font_size_hint':
@@ -507179,10 +507925,6 @@ extension on _StringsJa {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '音声ファイルが見つかりません。再紐付けしてください';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '再インポート';
       case 'srt_book_reimport_body_rebuilt':
@@ -511621,6 +512363,8 @@ extension on _StringsKo {
         return '요청이 제한되었습니다. 나중에 다시 시도하세요';
       case 'ai_error_unauthorized':
         return 'API 키가 거부되었습니다';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI 다운로드';
       case 'ai_feature_acquire_summary':
@@ -511631,6 +512375,10 @@ extension on _StringsKo {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return '컬렉션 순서';
       case 'ai_feature_collection_order_summary':
@@ -513405,6 +514153,13 @@ extension on _StringsKo {
             '완료: 음성 구간 ${segments}개에서 큐 ${cues}개';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '총 소요 시간 ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return '시스템 음성 인식 (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -513541,6 +514296,25 @@ extension on _StringsKo {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 파일 ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device}에 이 언어용 모델이 없습니다';
       case 'audiobook_transcribe_remote_running':
@@ -514963,8 +515737,6 @@ extension on _StringsKo {
         return '글꼴 라이브러리';
       case 'custom_fonts_download_failed':
         return '다운로드 실패';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '다운로드 중…';
       case 'custom_fonts_drag_hint':
@@ -519981,8 +520753,6 @@ extension on _StringsKo {
         return '가사 흐리게';
       case 'lyrics_blur_hint':
         return '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return '가사 글꼴 크기';
       case 'lyrics_font_size_hint':
@@ -525812,10 +526582,6 @@ extension on _StringsKo {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '다시 가져오기';
       case 'srt_book_reimport_body_rebuilt':
@@ -530267,6 +531033,8 @@ extension on _StringsNl {
         return 'Verzoeken beperkt, probeer het later opnieuw';
       case 'ai_error_unauthorized':
         return 'API-sleutel werd geweigerd';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI-download';
       case 'ai_feature_acquire_summary':
@@ -530277,6 +531045,10 @@ extension on _StringsNl {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Volgorde van verzameling';
       case 'ai_feature_collection_order_summary':
@@ -532070,6 +532842,13 @@ extension on _StringsNl {
             'Klaar: ${cues} cues uit ${segments} spraaksegmenten';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Totale tijd ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Systeemspraak (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -532207,6 +532986,25 @@ extension on _StringsNl {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · bestand ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} heeft geen model voor deze taal';
@@ -533636,8 +534434,6 @@ extension on _StringsNl {
         return 'Lettertypebibliotheek';
       case 'custom_fonts_download_failed':
         return 'Download mislukt';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloaden...';
       case 'custom_fonts_drag_hint':
@@ -538681,8 +539477,6 @@ extension on _StringsNl {
         return 'Songtekst vervagen';
       case 'lyrics_blur_hint':
         return 'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lettergrootte songtekst';
       case 'lyrics_font_size_hint':
@@ -544535,10 +545329,6 @@ extension on _StringsNl {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiobestand niet gevonden — koppel opnieuw';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Opnieuw importeren';
       case 'srt_book_reimport_body_rebuilt':
@@ -549027,6 +549817,8 @@ extension on _StringsPtBr {
         return 'Limite de requisições atingido, tente novamente mais tarde';
       case 'ai_error_unauthorized':
         return 'A chave de API foi rejeitada';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Download com IA';
       case 'ai_feature_acquire_summary':
@@ -549037,6 +549829,10 @@ extension on _StringsPtBr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordem da coleção';
       case 'ai_feature_collection_order_summary':
@@ -550830,6 +551626,13 @@ extension on _StringsPtBr {
             'Concluído: ${cues} falas de ${segments} segmentos de voz';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tempo total ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Fala do sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -550968,6 +551771,25 @@ extension on _StringsPtBr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · arquivo ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} não tem modelo para este idioma';
@@ -552397,8 +553219,6 @@ extension on _StringsPtBr {
         return 'Biblioteca de fontes';
       case 'custom_fonts_download_failed':
         return 'Falha no download';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Baixando...';
       case 'custom_fonts_drag_hint':
@@ -557437,8 +558257,6 @@ extension on _StringsPtBr {
         return 'Desfocar letras';
       case 'lyrics_blur_hint':
         return 'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamanho da fonte das letras';
       case 'lyrics_font_size_hint':
@@ -563289,10 +564107,6 @@ extension on _StringsPtBr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Arquivo de áudio não encontrado — reanexe-o';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -567776,6 +568590,8 @@ extension on _StringsRu {
         return 'Превышен лимит запросов, повторите позже';
       case 'ai_error_unauthorized':
         return 'API-ключ отклонён';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'ИИ-загрузка';
       case 'ai_feature_acquire_summary':
@@ -567786,6 +568602,10 @@ extension on _StringsRu {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Порядок в коллекции';
       case 'ai_feature_collection_order_summary':
@@ -569583,6 +570403,13 @@ extension on _StringsRu {
             'Готово: реплик ${cues} из речевых сегментов ${segments}';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Общее время ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Системная речь (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -569721,6 +570548,25 @@ extension on _StringsRu {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · файл ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             'На ${device} нет модели для этого языка';
@@ -571152,8 +571998,6 @@ extension on _StringsRu {
         return 'Библиотека шрифтов';
       case 'custom_fonts_download_failed':
         return 'Ошибка загрузки';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Загрузка…';
       case 'custom_fonts_drag_hint':
@@ -576195,8 +577039,6 @@ extension on _StringsRu {
         return 'Размытие текста песен';
       case 'lyrics_blur_hint':
         return 'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Размер шрифта текста песен';
       case 'lyrics_font_size_hint':
@@ -582047,10 +582889,6 @@ extension on _StringsRu {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Аудиофайл не найден — привяжите заново';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Повторный импорт';
       case 'srt_book_reimport_body_rebuilt':
@@ -586533,6 +587371,8 @@ extension on _StringsTh {
         return 'ถูกจำกัดอัตราคำขอ ลองอีกครั้งภายหลัง';
       case 'ai_error_unauthorized':
         return 'API key ถูกปฏิเสธ';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'ดาวน์โหลดด้วย AI';
       case 'ai_feature_acquire_summary':
@@ -586543,6 +587383,10 @@ extension on _StringsTh {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'ลำดับในคอลเลกชัน';
       case 'ai_feature_collection_order_summary':
@@ -588326,6 +589170,13 @@ extension on _StringsTh {
             'เสร็จแล้ว: ${cues} cue จาก ${segments} ช่วงเสียงพูด';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'เวลารวม ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'เสียงพูดของระบบ (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -588463,6 +589314,25 @@ extension on _StringsTh {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · ไฟล์ ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} ไม่มีโมเดลสำหรับภาษานี้';
@@ -589890,8 +590760,6 @@ extension on _StringsTh {
         return 'คลังฟอนต์';
       case 'custom_fonts_download_failed':
         return 'ดาวน์โหลดล้มเหลว';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'กำลังดาวน์โหลด…';
       case 'custom_fonts_drag_hint':
@@ -594926,8 +595794,6 @@ extension on _StringsTh {
         return 'เบลอเนื้อเพลง';
       case 'lyrics_blur_hint':
         return 'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'ขนาดตัวอักษรเนื้อเพลง';
       case 'lyrics_font_size_hint':
@@ -600765,10 +601631,6 @@ extension on _StringsTh {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'นำเข้าใหม่';
       case 'srt_book_reimport_body_rebuilt':
@@ -605245,6 +606107,8 @@ extension on _StringsTr {
         return 'Hız sınırına takıldı, daha sonra tekrar deneyin';
       case 'ai_error_unauthorized':
         return 'API anahtarı reddedildi';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Yapay zeka ile indirme';
       case 'ai_feature_acquire_summary':
@@ -605255,6 +606119,10 @@ extension on _StringsTr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Koleksiyon sırası';
       case 'ai_feature_collection_order_summary':
@@ -607048,6 +607916,13 @@ extension on _StringsTr {
             'Tamamlandı: ${segments} konuşma bölümünden ${cues} altyazı satırı';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Toplam süre ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Sistem konuşması (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -607186,6 +608061,25 @@ extension on _StringsTr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · dosya ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} cihazında bu dil için model yok';
@@ -608618,8 +609512,6 @@ extension on _StringsTr {
         return 'Yazı tipi kitaplığı';
       case 'custom_fonts_download_failed':
         return 'İndirme başarısız';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'İndiriliyor…';
       case 'custom_fonts_drag_hint':
@@ -613657,8 +614549,6 @@ extension on _StringsTr {
         return 'Sözleri bulanıklaştır';
       case 'lyrics_blur_hint':
         return 'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Şarkı Sözü Yazı Boyutu';
       case 'lyrics_font_size_hint':
@@ -619501,10 +620391,6 @@ extension on _StringsTr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Yeniden içe aktar';
       case 'srt_book_reimport_body_rebuilt':
@@ -623987,6 +624873,8 @@ extension on _StringsVi {
         return 'Bị giới hạn tần suất, hãy thử lại sau';
       case 'ai_error_unauthorized':
         return 'API key bị từ chối';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Tải bằng AI';
       case 'ai_feature_acquire_summary':
@@ -623997,6 +624885,10 @@ extension on _StringsVi {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Thứ tự bộ sưu tập';
       case 'ai_feature_collection_order_summary':
@@ -625785,6 +626677,13 @@ extension on _StringsVi {
             'Hoàn tất: ${cues} dòng phụ đề từ ${segments} đoạn giọng nói';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tổng thời gian ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Giọng nói hệ thống (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -625923,6 +626822,25 @@ extension on _StringsVi {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · tệp ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} không có mô hình cho ngôn ngữ này';
@@ -627351,8 +628269,6 @@ extension on _StringsVi {
         return 'Thư viện phông';
       case 'custom_fonts_download_failed':
         return 'Tải xuống thất bại';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Đang tải…';
       case 'custom_fonts_drag_hint':
@@ -632390,8 +633306,6 @@ extension on _StringsVi {
         return 'Làm mờ lời bài';
       case 'lyrics_blur_hint':
         return 'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Cỡ chữ lời bài hát';
       case 'lyrics_font_size_hint':
@@ -638232,10 +639146,6 @@ extension on _StringsVi {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Nhập lại';
       case 'srt_book_reimport_body_rebuilt':
@@ -642713,6 +643623,8 @@ extension on _StringsZhCn {
         return '被限流，请稍后重试';
       case 'ai_error_unauthorized':
         return 'API Key 被拒绝';
+      case 'ai_error_unsupported_protocol':
+        return '该提供商的协议没有语音转录接口（请用 OpenAI 兼容协议的提供商）';
       case 'ai_feature_acquire':
         return 'AI 下载';
       case 'ai_feature_acquire_summary':
@@ -642723,6 +643635,10 @@ extension on _StringsZhCn {
         return '有声书角色标注';
       case 'ai_feature_audiobook_cast_summary':
         return '标注每句台词的说话人，供多声优配音';
+      case 'ai_feature_cloud_transcription':
+        return '云端语音转录';
+      case 'ai_feature_cloud_transcription_summary':
+        return '用 OpenAI 兼容的 Whisper 接口（如 Groq）转录音频。这家提供商的模型请填 Whisper 模型名（如 whisper-large-v3）。只在转录弹层里选「云端转录」时才会把音频上传给该提供商，并由其计费；不跟随默认提供商。';
       case 'ai_feature_collection_order':
         return '合集排序';
       case 'ai_feature_collection_order_summary':
@@ -642770,7 +643686,7 @@ extension on _StringsZhCn {
       case 'ai_feature_subtitle_proofread':
         return '字幕校对';
       case 'ai_feature_subtitle_proofread_summary':
-        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
+        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词；转录弹层里的「AI 校对」也用它（修错字、补标点，行数与时间轴不变）。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -644479,6 +645395,12 @@ extension on _StringsZhCn {
             '完成：${segments} 段语音生成 ${cues} 条字幕';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '总耗时 ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return '云端转录（Whisper API）';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) => '上传音频到 ${name} · 由其计费';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return '请先在 设置 › AI 里给「云端语音转录」指派一家提供商（模型填 Whisper 模型名，如 whisper-large-v3）。';
       case 'audiobook_transcribe_engine_system':
         return '系统语音识别（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -644611,6 +645533,24 @@ extension on _StringsZhCn {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 文件 ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI 校对';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI 校对完成：改了 ${changed} 行，${skipped} 块保留原文';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) => 'AI 校对失败：${reason}。字幕未改动。';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI 校对会修正听错的字、补上标点；行数与时间轴不变。';
+      case 'audiobook_transcribe_proofread_restore':
+        return '还原原稿';
+      case 'audiobook_transcribe_proofread_restored':
+        return '已还原为校对前的原稿';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI 校对中… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return '请先在 设置 › AI 里给「字幕校对」指派一家提供商。';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} 没有该语言的模型';
       case 'audiobook_transcribe_remote_running':
@@ -646021,8 +646961,6 @@ extension on _StringsZhCn {
         return '字体库';
       case 'custom_fonts_download_failed':
         return '下载失败';
-      case 'custom_fonts_download_unreachable_hint':
-        return '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
       case 'custom_fonts_downloading':
         return '正在下载…';
       case 'custom_fonts_drag_hint':
@@ -651003,8 +651941,6 @@ extension on _StringsZhCn {
         return '模糊歌词';
       case 'lyrics_blur_hint':
         return '听力沉浸：模糊当前句，悬停或点击显形';
-      case 'lyrics_exit_to_library':
-        return '关闭并返回书架';
       case 'lyrics_font_size':
         return '歌词字号';
       case 'lyrics_font_size_hint':
@@ -656789,10 +657725,6 @@ extension on _StringsZhCn {
         return '正常';
       case 'srt_audio_unresolved':
         return '未找到音频文件 — 请重新附加';
-      case 'srt_book_attach_epub':
-        return '添加书籍文件';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return '已用书籍正文生成新的有声书，原来的字幕书可以删除';
       case 'srt_book_reimport':
         return '重新导入';
       case 'srt_book_reimport_body_rebuilt':
@@ -661205,6 +662137,8 @@ extension on _StringsZhHk {
         return '被限流，請稍後重試';
       case 'ai_error_unauthorized':
         return 'API Key 被拒絕';
+      case 'ai_error_unsupported_protocol':
+        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI 下載';
       case 'ai_feature_acquire_summary':
@@ -661215,6 +662149,10 @@ extension on _StringsZhHk {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
+      case 'ai_feature_cloud_transcription':
+        return 'Cloud transcription';
+      case 'ai_feature_cloud_transcription_summary':
+        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return '合集排序';
       case 'ai_feature_collection_order_summary':
@@ -662973,6 +663911,13 @@ extension on _StringsZhHk {
             '完成：${segments} 段語音生成 ${cues} 條字幕';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '總耗時 ${elapsed}';
+      case 'audiobook_transcribe_engine_cloud':
+        return 'Cloud (Whisper API)';
+      case 'audiobook_transcribe_engine_cloud_hint':
+        return ({required Object name}) =>
+            'Uploads audio to ${name} · billed by it';
+      case 'audiobook_transcribe_engine_cloud_unset':
+        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return '系統語音識別（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -663108,6 +664053,25 @@ extension on _StringsZhHk {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 檔案 ${file}/${files}';
+      case 'audiobook_transcribe_proofread':
+        return 'AI proofread';
+      case 'audiobook_transcribe_proofread_done':
+        return ({required Object changed, required Object skipped}) =>
+            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
+      case 'audiobook_transcribe_proofread_failed':
+        return ({required Object reason}) =>
+            'AI proofreading failed: ${reason}. The transcript was not changed.';
+      case 'audiobook_transcribe_proofread_hint':
+        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
+      case 'audiobook_transcribe_proofread_restore':
+        return 'Restore original';
+      case 'audiobook_transcribe_proofread_restored':
+        return 'Original transcript restored';
+      case 'audiobook_transcribe_proofread_running':
+        return ({required Object done, required Object total}) =>
+            'AI proofreading… ${done}/${total}';
+      case 'audiobook_transcribe_proofread_unset':
+        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} 沒有該語言的模型';
       case 'audiobook_transcribe_remote_running':
@@ -664523,8 +665487,6 @@ extension on _StringsZhHk {
         return '字型庫';
       case 'custom_fonts_download_failed':
         return '下載失敗';
-      case 'custom_fonts_download_unreachable_hint':
-        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '正在下載…';
       case 'custom_fonts_drag_hint':
@@ -669523,8 +670485,6 @@ extension on _StringsZhHk {
         return '模糊歌詞';
       case 'lyrics_blur_hint':
         return '聽力沉浸：模糊當前句，懸停或點擊顯形';
-      case 'lyrics_exit_to_library':
-        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞字體大小';
       case 'lyrics_font_size_hint':
@@ -675347,10 +676307,6 @@ extension on _StringsZhHk {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '未找到音訊檔案 — 請重新附加';
-      case 'srt_book_attach_epub':
-        return 'Add book file';
-      case 'srt_book_attach_epub_remove_old_hint':
-        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '重新導入';
       case 'srt_book_reimport_body_rebuilt':
