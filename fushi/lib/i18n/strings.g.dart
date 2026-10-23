@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154734 (9102 per locale)
+/// Strings: 154768 (9104 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9916,6 +9916,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   String get srs_settings_rwkv_repeat_hint =>
       'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
@@ -29714,6 +29718,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -52133,6 +52143,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -74676,6 +74692,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -97308,6 +97330,12 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -119702,6 +119730,12 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -142139,6 +142173,12 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -163867,6 +163907,12 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -185322,6 +185368,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -207488,6 +207540,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -229956,6 +230014,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -252401,6 +252465,12 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -274596,6 +274666,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
   @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
@@ -296859,6 +296935,12 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -319117,6 +319199,12 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -339960,6 +340048,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
   @override
+  String get srs_settings_rwkv_refresh_every => '每答几题刷新一次 RWKV 队列';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      '两次整体刷新 RWKV 分数之间隔几次作答。1 = 每答一题都刷新（在后台算，从下一张卡起生效）。调大能减少复习时 RWKV 的计算，代价是两次刷新之间队列用的是较旧的估计。';
+  @override
   String get srs_settings_rwkv_repeat => '同日重复';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -360674,6 +360767,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_rwkv_rebuild_hint =>
       'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
   @override
+  String get srs_settings_rwkv_refresh_every =>
+      'Update the RWKV queue every N answers';
+  @override
+  String get srs_settings_rwkv_refresh_every_hint =>
+      'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
+  @override
   String get srs_settings_rwkv_repeat => 'Same-day repeats';
   @override
   String get srs_settings_rwkv_repeat_hint =>
@@ -380037,6 +380136,10 @@ extension on _StringsEn {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -398960,6 +399063,10 @@ extension on _StringsAr {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -417939,6 +418046,10 @@ extension on _StringsDe {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -436922,6 +437033,10 @@ extension on _StringsEs {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -455916,6 +456031,10 @@ extension on _StringsFr {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -474870,6 +474989,10 @@ extension on _StringsId {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -493833,6 +493956,10 @@ extension on _StringsIt {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -512730,6 +512857,10 @@ extension on _StringsJa {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -531576,6 +531707,10 @@ extension on _StringsKo {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -550512,6 +550647,10 @@ extension on _StringsNl {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -569479,6 +569618,10 @@ extension on _StringsPtBr {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -588450,6 +588593,10 @@ extension on _StringsRu {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -607381,6 +607528,10 @@ extension on _StringsTh {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -626330,6 +626481,10 @@ extension on _StringsTr {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -645274,6 +645429,10 @@ extension on _StringsVi {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
@@ -664042,6 +664201,10 @@ extension on _StringsZhCn {
         return '重建 RWKV 状态';
       case 'srs_settings_rwkv_rebuild_hint':
         return '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
+      case 'srs_settings_rwkv_refresh_every':
+        return '每答几题刷新一次 RWKV 队列';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return '两次整体刷新 RWKV 分数之间隔几次作答。1 = 每答一题都刷新（在后台算，从下一张卡起生效）。调大能减少复习时 RWKV 的计算，代价是两次刷新之间队列用的是较旧的估计。';
       case 'srs_settings_rwkv_repeat':
         return '同日重复';
       case 'srs_settings_rwkv_repeat_hint':
@@ -682811,6 +682974,10 @@ extension on _StringsZhHk {
         return 'Rebuild RWKV state';
       case 'srs_settings_rwkv_rebuild_hint':
         return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_refresh_every':
+        return 'Update the RWKV queue every N answers';
+      case 'srs_settings_rwkv_refresh_every_hint':
+        return 'How many answers to wait between full RWKV score updates. 1 updates after every answer (in the background, used from the next card). Higher values reduce the work RWKV does while you review, but the queue may use older estimates between updates.';
       case 'srs_settings_rwkv_repeat':
         return 'Same-day repeats';
       case 'srs_settings_rwkv_repeat_hint':
