@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154632 (9096 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6554,10 +6554,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_auto_scroll_speed => 'Auto scroll speed (px/s)';
   String get manga_reader_automatic_background => 'Automatic background';
   String get manga_reader_back_to_start => 'Back to the beginning';
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  String get manga_reader_bookmarks => 'Bookmarks';
   String get manga_reader_brightness => 'Brightness';
   String get manga_reader_color_filter_color => 'Filter color';
   String get manga_reader_color_filter_opacity => 'Filter opacity';
   String get manga_reader_contrast => 'Contrast';
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  String get manga_reader_control_item_spread => 'Single / double page';
+  String get manga_reader_control_layout => 'Toolbar layout';
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  String get manga_reader_control_zone_top => 'Top bar';
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   String get manga_reader_crop_borders => 'Crop borders';
   String get manga_reader_custom_color => 'Custom color';
   String get manga_reader_custom_color_filter => 'Custom color filter';
@@ -8063,8 +8076,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_blur_images => 'Blur images (spoiler guard)';
   String get reader_body_font => 'Body font';
   String get reader_body_font_default => 'Default (book / system font)';
+  String get reader_bookmark_add => 'Add bookmark';
+  String get reader_bookmark_added => 'Bookmark added';
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  String get reader_bookmark_delete => 'Delete bookmark';
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  String get reader_bookmark_remove => 'Remove bookmark';
+  String get reader_bookmark_removed => 'Bookmark removed';
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
   String get reader_content_timeout =>
       'Content loading timed out. Reopen if display is abnormal';
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
   String get reader_control_editor_hint =>
@@ -8213,6 +8239,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => '${current} / ${total} chars';
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  String get reader_nav_segment_favorites => 'Saved sentences';
   String get reader_nav_tab_contents => 'Contents';
   String get reader_nav_tab_favorites => 'Favorites';
   String get reader_nav_tab_search => 'Search';
@@ -23888,6 +23916,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'العودة إلى البداية';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'السطوع';
   @override
   String get manga_reader_color_filter_color => 'لون المرشح';
@@ -23895,6 +23928,23 @@ class _StringsAr extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'عتامة المرشح';
   @override
   String get manga_reader_contrast => 'التباين';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'قص الحواف';
   @override
@@ -26468,8 +26518,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'انتهت مهلة تحميل المحتوى. أعد الفتح إذا كان العرض غير طبيعي';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -26722,6 +26794,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -46155,6 +46231,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Zurück zum Anfang';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Helligkeit';
   @override
   String get manga_reader_color_filter_color => 'Filterfarbe';
@@ -46162,6 +46243,23 @@ class _StringsDe extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Filterdeckkraft';
   @override
   String get manga_reader_contrast => 'Kontrast';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Ränder zuschneiden';
   @override
@@ -48797,8 +48895,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Zeitüberschreitung beim Laden des Inhalts. Bei fehlerhafter Anzeige erneut öffnen';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -49056,6 +49176,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -68627,6 +68751,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Volver al principio';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Brillo';
   @override
   String get manga_reader_color_filter_color => 'Color del filtro';
@@ -68634,6 +68763,23 @@ class _StringsEs extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Opacidad del filtro';
   @override
   String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Recortar bordes';
   @override
@@ -71269,8 +71415,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Se agotó el tiempo al cargar el contenido. Reabre si la visualización es anómala';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -71530,6 +71698,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -91178,6 +91350,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Revenir au début';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Luminosité';
   @override
   String get manga_reader_color_filter_color => 'Couleur du filtre';
@@ -91185,6 +91362,23 @@ class _StringsFr extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Opacité du filtre';
   @override
   String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Rogner les marges';
   @override
@@ -93833,8 +94027,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Délai de chargement du contenu dépassé. Rouvrez si l\'affichage est anormal';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -94095,6 +94311,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -113598,6 +113818,11 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Kembali ke awal';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Kecerahan';
   @override
   String get manga_reader_color_filter_color => 'Warna filter';
@@ -113605,6 +113830,23 @@ class _StringsId extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Opasitas filter';
   @override
   String get manga_reader_contrast => 'Kontras';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Pangkas tepi';
   @override
@@ -116201,8 +116443,30 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Pemuatan konten habis waktu. Buka ulang jika tampilan tidak normal';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -116461,6 +116725,10 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -135922,6 +136190,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Torna all\'inizio';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Luminosità';
   @override
   String get manga_reader_color_filter_color => 'Colore del filtro';
@@ -135929,6 +136202,23 @@ class _StringsIt extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Opacità del filtro';
   @override
   String get manga_reader_contrast => 'Contrasto';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Ritaglia i bordi';
   @override
@@ -138550,8 +138840,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Timeout nel caricamento del contenuto. Riapri se la visualizzazione è anomala';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -138812,6 +139124,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -157822,6 +158138,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_back_to_start => '最初に戻る';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => '明るさ';
   @override
   String get manga_reader_color_filter_color => 'フィルターの色';
@@ -157829,6 +158150,23 @@ class _StringsJa extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'フィルターの不透明度';
   @override
   String get manga_reader_contrast => 'コントラスト';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => '余白をトリミング';
   @override
@@ -160318,8 +160656,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'コンテンツの読み込みがタイムアウトしました。表示が異常な場合は開き直してください';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -160561,6 +160921,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -179207,6 +179571,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_back_to_start => '처음으로 돌아가기';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => '밝기';
   @override
   String get manga_reader_color_filter_color => '필터 색상';
@@ -179214,6 +179583,23 @@ class _StringsKo extends _StringsEn {
   String get manga_reader_color_filter_opacity => '필터 불투명도';
   @override
   String get manga_reader_contrast => '대비';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => '여백 자르기';
   @override
@@ -181712,8 +182098,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       '콘텐츠 로딩 시간이 초과되었습니다. 표시가 비정상이면 다시 열어 주세요';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -181956,6 +182364,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -201109,6 +201521,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Terug naar het begin';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Helderheid';
   @override
   String get manga_reader_color_filter_color => 'Filterkleur';
@@ -201116,6 +201533,23 @@ class _StringsNl extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Filterdekking';
   @override
   String get manga_reader_contrast => 'Contrast';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Randen bijsnijden';
   @override
@@ -203732,8 +204166,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Time-out bij laden van inhoud. Open opnieuw als de weergave afwijkt';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -203993,6 +204449,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -223509,6 +223969,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Voltar ao início';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Brilho';
   @override
   String get manga_reader_color_filter_color => 'Cor do filtro';
@@ -223516,6 +223981,23 @@ class _StringsPtBr extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Opacidade do filtro';
   @override
   String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Cortar bordas';
   @override
@@ -226138,8 +226620,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'O carregamento do conteúdo expirou. Reabra se a exibição estiver anormal';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -226399,6 +226903,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -245891,6 +246399,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Вернуться в начало';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Яркость';
   @override
   String get manga_reader_color_filter_color => 'Цвет фильтра';
@@ -245898,6 +246411,23 @@ class _StringsRu extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Непрозрачность фильтра';
   @override
   String get manga_reader_contrast => 'Контрастность';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Обрезать поля';
   @override
@@ -248525,8 +249055,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Время загрузки контента истекло. Откройте заново, если отображение некорректно';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -248784,6 +249336,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -268105,6 +268661,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'กลับไปที่จุดเริ่มต้น';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'ความสว่าง';
   @override
   String get manga_reader_color_filter_color => 'สีฟิลเตอร์';
@@ -268112,6 +268673,23 @@ class _StringsTh extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'ความทึบของฟิลเตอร์';
   @override
   String get manga_reader_contrast => 'คอนทราสต์';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'ครอปขอบ';
   @override
@@ -270688,8 +271266,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'โหลดเนื้อหาหมดเวลา หากแสดงผลผิดปกติให้เปิดใหม่';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -270944,6 +271544,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -290270,6 +290874,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Başa dön';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Parlaklık';
   @override
   String get manga_reader_color_filter_color => 'Filtre rengi';
@@ -290277,6 +290886,23 @@ class _StringsTr extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Filtre opaklığı';
   @override
   String get manga_reader_contrast => 'Kontrast';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Kenarları kırp';
   @override
@@ -292879,8 +293505,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'İçerik yüklemesi zaman aşımına uğradı. Görüntü anormalse yeniden açın';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -293137,6 +293785,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -312492,6 +313144,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_back_to_start => 'Quay lại đầu';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => 'Độ sáng';
   @override
   String get manga_reader_color_filter_color => 'Màu bộ lọc';
@@ -312499,6 +313156,23 @@ class _StringsVi extends _StringsEn {
   String get manga_reader_color_filter_opacity => 'Độ mờ đục của bộ lọc';
   @override
   String get manga_reader_contrast => 'Độ tương phản';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => 'Cắt viền';
   @override
@@ -315082,8 +315756,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout =>
       'Tải nội dung quá thời gian. Mở lại nếu hiển thị bất thường';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
@@ -315339,6 +316035,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_nav_search_empty_hint =>
       'Search the whole book, or jump to a character position';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => 'Contents';
   @override
@@ -333737,6 +334437,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_back_to_start => '回到开头';
   @override
+  String get manga_reader_bookmark_chapter_missing => '书签所在的章节已不在章节列表里';
+  @override
+  String get manga_reader_bookmarks => '书签';
+  @override
   String get manga_reader_brightness => '亮度';
   @override
   String get manga_reader_color_filter_color => '滤镜颜色';
@@ -333744,6 +334448,21 @@ class _StringsZhCn extends _StringsEn {
   String get manga_reader_color_filter_opacity => '滤镜不透明度';
   @override
   String get manga_reader_contrast => '对比度';
+  @override
+  String get manga_reader_control_item_ocr_cancel => '取消整卷识别';
+  @override
+  String get manga_reader_control_item_spread => '单双页';
+  @override
+  String get manga_reader_control_layout => '工具栏布局';
+  @override
+  String get manga_reader_control_layout_hint =>
+      '把按钮拖到顶栏、底部工具栏或 ⋯ 菜单，或移出阅读器，改动立即生效。对当前书不适用的按钮（如本地卷的章节目录）即使摆上也不显示。';
+  @override
+  String get manga_reader_control_zone_toolbar_hint => '拇指区，放不下时降到顶栏';
+  @override
+  String get manga_reader_control_zone_top => '顶栏';
+  @override
+  String get manga_reader_control_zone_top_hint => '默认平铺，放不下时才收进 ⋯';
   @override
   String get manga_reader_crop_borders => '裁剪白边';
   @override
@@ -336114,7 +336833,28 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_body_font_default => '默认（书籍自带 / 系统字体）';
   @override
+  String get reader_bookmark_add => '添加书签';
+  @override
+  String get reader_bookmark_added => '已添加书签';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · 第 ${page} 页';
+  @override
+  String get reader_bookmark_delete => '删除书签';
+  @override
+  String reader_bookmark_page_label({required Object page}) => '第 ${page} 页';
+  @override
+  String get reader_bookmark_remove => '移除书签';
+  @override
+  String get reader_bookmark_removed => '已移除书签';
+  @override
+  String get reader_bookmarks_empty => '还没有书签。给当前页加个书签，之后可以随时跳回来。';
+  @override
   String get reader_content_timeout => '内容加载超时，如显示异常请重新打开';
+  @override
+  String get reader_control_bookmarks => '书签与收藏';
   @override
   String get reader_control_editor_drag_hint =>
       '拖动按钮（触屏长按）即可排序或换区；用键盘时在按钮上按 Enter 选择位置。改动立即生效。';
@@ -336346,6 +337086,10 @@ class _StringsZhCn extends _StringsEn {
   }) => '${current} / ${total} 字';
   @override
   String get reader_nav_search_empty_hint => '搜索全书，或跳到指定字数位置';
+  @override
+  String get reader_nav_segment_bookmarks => '书签';
+  @override
+  String get reader_nav_segment_favorites => '收藏句子';
   @override
   String get reader_nav_tab_contents => '目录';
   @override
@@ -354203,6 +354947,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_back_to_start => '返回開頭';
   @override
+  String get manga_reader_bookmark_chapter_missing =>
+      'This bookmark\'s chapter is no longer in the chapter list';
+  @override
+  String get manga_reader_bookmarks => 'Bookmarks';
+  @override
   String get manga_reader_brightness => '亮度';
   @override
   String get manga_reader_color_filter_color => '濾鏡顏色';
@@ -354210,6 +354959,23 @@ class _StringsZhHk extends _StringsEn {
   String get manga_reader_color_filter_opacity => '濾鏡不透明度';
   @override
   String get manga_reader_contrast => '對比度';
+  @override
+  String get manga_reader_control_item_ocr_cancel => 'Cancel volume OCR';
+  @override
+  String get manga_reader_control_item_spread => 'Single / double page';
+  @override
+  String get manga_reader_control_layout => 'Toolbar layout';
+  @override
+  String get manga_reader_control_layout_hint =>
+      'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+  @override
+  String get manga_reader_control_zone_toolbar_hint =>
+      'Thumb zone; moves to the top bar when space runs out';
+  @override
+  String get manga_reader_control_zone_top => 'Top bar';
+  @override
+  String get manga_reader_control_zone_top_hint =>
+      'Shown in full; folded into ⋯ only when space runs out';
   @override
   String get manga_reader_crop_borders => '裁剪白邊';
   @override
@@ -356623,7 +357389,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_body_font_default => 'Default (book / system font)';
   @override
+  String get reader_bookmark_add => 'Add bookmark';
+  @override
+  String get reader_bookmark_added => 'Bookmark added';
+  @override
+  String reader_bookmark_chapter_page_label({
+    required Object chapter,
+    required Object page,
+  }) => '${chapter} · Page ${page}';
+  @override
+  String get reader_bookmark_delete => 'Delete bookmark';
+  @override
+  String reader_bookmark_page_label({required Object page}) => 'Page ${page}';
+  @override
+  String get reader_bookmark_remove => 'Remove bookmark';
+  @override
+  String get reader_bookmark_removed => 'Bookmark removed';
+  @override
+  String get reader_bookmarks_empty =>
+      'No bookmarks yet. Bookmark a page to jump back to it later.';
+  @override
   String get reader_content_timeout => '內容載入逾時，如顯示異常請重新開啟';
+  @override
+  String get reader_control_bookmarks => 'Bookmarks & saved sentences';
   @override
   String get reader_control_editor_drag_hint =>
       '拖動按鈕（觸控長按）即可排序或換區；用鍵盤時在按鈕上按 Enter 選擇位置。改動立即生效。';
@@ -356857,6 +357645,10 @@ class _StringsZhHk extends _StringsEn {
   }) => '${current} / ${total} 字';
   @override
   String get reader_nav_search_empty_hint => '搜尋全書，或跳到指定字數位置';
+  @override
+  String get reader_nav_segment_bookmarks => 'Bookmarks';
+  @override
+  String get reader_nav_segment_favorites => 'Saved sentences';
   @override
   String get reader_nav_tab_contents => '目錄';
   @override
@@ -373990,6 +374782,10 @@ extension on _StringsEn {
         return 'Automatic background';
       case 'manga_reader_back_to_start':
         return 'Back to the beginning';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Brightness';
       case 'manga_reader_color_filter_color':
@@ -373998,6 +374794,20 @@ extension on _StringsEn {
         return 'Filter opacity';
       case 'manga_reader_contrast':
         return 'Contrast';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Crop borders';
       case 'manga_reader_custom_color':
@@ -376217,8 +377027,27 @@ extension on _StringsEn {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Content loading timed out. Reopen if display is abnormal';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -376438,6 +377267,10 @@ extension on _StringsEn {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -392859,6 +393692,10 @@ extension on _StringsAr {
         return 'خلفية تلقائية';
       case 'manga_reader_back_to_start':
         return 'العودة إلى البداية';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'السطوع';
       case 'manga_reader_color_filter_color':
@@ -392867,6 +393704,20 @@ extension on _StringsAr {
         return 'عتامة المرشح';
       case 'manga_reader_contrast':
         return 'التباين';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'قص الحواف';
       case 'manga_reader_custom_color':
@@ -395087,8 +395938,27 @@ extension on _StringsAr {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'انتهت مهلة تحميل المحتوى. أعد الفتح إذا كان العرض غير طبيعي';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -395308,6 +396178,10 @@ extension on _StringsAr {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -411774,6 +412648,10 @@ extension on _StringsDe {
         return 'Automatischer Hintergrund';
       case 'manga_reader_back_to_start':
         return 'Zurück zum Anfang';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Helligkeit';
       case 'manga_reader_color_filter_color':
@@ -411782,6 +412660,20 @@ extension on _StringsDe {
         return 'Filterdeckkraft';
       case 'manga_reader_contrast':
         return 'Kontrast';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Ränder zuschneiden';
       case 'manga_reader_custom_color':
@@ -414011,8 +414903,27 @@ extension on _StringsDe {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Zeitüberschreitung beim Laden des Inhalts. Bei fehlerhafter Anzeige erneut öffnen';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -414234,6 +415145,10 @@ extension on _StringsDe {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -430704,6 +431619,10 @@ extension on _StringsEs {
         return 'Fondo automático';
       case 'manga_reader_back_to_start':
         return 'Volver al principio';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Brillo';
       case 'manga_reader_color_filter_color':
@@ -430712,6 +431631,20 @@ extension on _StringsEs {
         return 'Opacidad del filtro';
       case 'manga_reader_contrast':
         return 'Contraste';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Recortar bordes';
       case 'manga_reader_custom_color':
@@ -432941,8 +433874,27 @@ extension on _StringsEs {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Se agotó el tiempo al cargar el contenido. Reabre si la visualización es anómala';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -433164,6 +434116,10 @@ extension on _StringsEs {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -449643,6 +450599,10 @@ extension on _StringsFr {
         return 'Arrière-plan automatique';
       case 'manga_reader_back_to_start':
         return 'Revenir au début';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Luminosité';
       case 'manga_reader_color_filter_color':
@@ -449651,6 +450611,20 @@ extension on _StringsFr {
         return 'Opacité du filtre';
       case 'manga_reader_contrast':
         return 'Contraste';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Rogner les marges';
       case 'manga_reader_custom_color':
@@ -451882,8 +452856,27 @@ extension on _StringsFr {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Délai de chargement du contenu dépassé. Rouvrez si l\'affichage est anormal';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -452105,6 +453098,10 @@ extension on _StringsFr {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -468558,6 +469555,10 @@ extension on _StringsId {
         return 'Latar belakang otomatis';
       case 'manga_reader_back_to_start':
         return 'Kembali ke awal';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Kecerahan';
       case 'manga_reader_color_filter_color':
@@ -468566,6 +469567,20 @@ extension on _StringsId {
         return 'Opasitas filter';
       case 'manga_reader_contrast':
         return 'Kontras';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Pangkas tepi';
       case 'manga_reader_custom_color':
@@ -470785,8 +471800,27 @@ extension on _StringsId {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Pemuatan konten habis waktu. Buka ulang jika tampilan tidak normal';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -471006,6 +472040,10 @@ extension on _StringsId {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -487459,6 +488497,10 @@ extension on _StringsIt {
         return 'Sfondo automatico';
       case 'manga_reader_back_to_start':
         return 'Torna all\'inizio';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Luminosità';
       case 'manga_reader_color_filter_color':
@@ -487467,6 +488509,20 @@ extension on _StringsIt {
         return 'Opacità del filtro';
       case 'manga_reader_contrast':
         return 'Contrasto';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Ritaglia i bordi';
       case 'manga_reader_custom_color':
@@ -489693,8 +490749,27 @@ extension on _StringsIt {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Timeout nel caricamento del contenuto. Riapri se la visualizzazione è anomala';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -489916,6 +490991,10 @@ extension on _StringsIt {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -506320,6 +507399,10 @@ extension on _StringsJa {
         return '背景を自動設定';
       case 'manga_reader_back_to_start':
         return '最初に戻る';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return '明るさ';
       case 'manga_reader_color_filter_color':
@@ -506328,6 +507411,20 @@ extension on _StringsJa {
         return 'フィルターの不透明度';
       case 'manga_reader_contrast':
         return 'コントラスト';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return '余白をトリミング';
       case 'manga_reader_custom_color':
@@ -508541,8 +509638,27 @@ extension on _StringsJa {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'コンテンツの読み込みがタイムアウトしました。表示が異常な場合は開き直してください';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -508761,6 +509877,10 @@ extension on _StringsJa {
             '${current} / ${total} 字';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -525113,6 +526233,10 @@ extension on _StringsKo {
         return '자동 배경';
       case 'manga_reader_back_to_start':
         return '처음으로 돌아가기';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return '밝기';
       case 'manga_reader_color_filter_color':
@@ -525121,6 +526245,20 @@ extension on _StringsKo {
         return '필터 불투명도';
       case 'manga_reader_contrast':
         return '대비';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return '여백 자르기';
       case 'manga_reader_custom_color':
@@ -527333,8 +528471,27 @@ extension on _StringsKo {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return '콘텐츠 로딩 시간이 초과되었습니다. 표시가 비정상이면 다시 열어 주세요';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -527553,6 +528710,10 @@ extension on _StringsKo {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -543978,6 +545139,10 @@ extension on _StringsNl {
         return 'Automatische achtergrond';
       case 'manga_reader_back_to_start':
         return 'Terug naar het begin';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Helderheid';
       case 'manga_reader_color_filter_color':
@@ -543986,6 +545151,20 @@ extension on _StringsNl {
         return 'Filterdekking';
       case 'manga_reader_contrast':
         return 'Contrast';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Randen bijsnijden';
       case 'manga_reader_custom_color':
@@ -546213,8 +547392,27 @@ extension on _StringsNl {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Time-out bij laden van inhoud. Open opnieuw als de weergave afwijkt';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -546436,6 +547634,10 @@ extension on _StringsNl {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -562893,6 +564095,10 @@ extension on _StringsPtBr {
         return 'Fundo automático';
       case 'manga_reader_back_to_start':
         return 'Voltar ao início';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Brilho';
       case 'manga_reader_color_filter_color':
@@ -562901,6 +564107,20 @@ extension on _StringsPtBr {
         return 'Opacidade do filtro';
       case 'manga_reader_contrast':
         return 'Contraste';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Cortar bordas';
       case 'manga_reader_custom_color':
@@ -565127,8 +566347,27 @@ extension on _StringsPtBr {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'O carregamento do conteúdo expirou. Reabra se a exibição estiver anormal';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -565350,6 +566589,10 @@ extension on _StringsPtBr {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -581811,6 +583054,10 @@ extension on _StringsRu {
         return 'Автоматический фон';
       case 'manga_reader_back_to_start':
         return 'Вернуться в начало';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Яркость';
       case 'manga_reader_color_filter_color':
@@ -581819,6 +583066,20 @@ extension on _StringsRu {
         return 'Непрозрачность фильтра';
       case 'manga_reader_contrast':
         return 'Контрастность';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Обрезать поля';
       case 'manga_reader_custom_color':
@@ -584045,8 +585306,27 @@ extension on _StringsRu {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Время загрузки контента истекло. Откройте заново, если отображение некорректно';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -584268,6 +585548,10 @@ extension on _StringsRu {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -600699,6 +601983,10 @@ extension on _StringsTh {
         return 'พื้นหลังอัตโนมัติ';
       case 'manga_reader_back_to_start':
         return 'กลับไปที่จุดเริ่มต้น';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'ความสว่าง';
       case 'manga_reader_color_filter_color':
@@ -600707,6 +601995,20 @@ extension on _StringsTh {
         return 'ความทึบของฟิลเตอร์';
       case 'manga_reader_contrast':
         return 'คอนทราสต์';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'ครอปขอบ';
       case 'manga_reader_custom_color':
@@ -602925,8 +604227,27 @@ extension on _StringsTh {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'โหลดเนื้อหาหมดเวลา หากแสดงผลผิดปกติให้เปิดใหม่';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -603146,6 +604467,10 @@ extension on _StringsTh {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -619592,6 +620917,10 @@ extension on _StringsTr {
         return 'Otomatik arka plan';
       case 'manga_reader_back_to_start':
         return 'Başa dön';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Parlaklık';
       case 'manga_reader_color_filter_color':
@@ -619600,6 +620929,20 @@ extension on _StringsTr {
         return 'Filtre opaklığı';
       case 'manga_reader_contrast':
         return 'Kontrast';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Kenarları kırp';
       case 'manga_reader_custom_color':
@@ -621821,8 +623164,27 @@ extension on _StringsTr {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'İçerik yüklemesi zaman aşımına uğradı. Görüntü anormalse yeniden açın';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -622042,6 +623404,10 @@ extension on _StringsTr {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -638483,6 +639849,10 @@ extension on _StringsVi {
         return 'Nền tự động';
       case 'manga_reader_back_to_start':
         return 'Quay lại đầu';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return 'Độ sáng';
       case 'manga_reader_color_filter_color':
@@ -638491,6 +639861,20 @@ extension on _StringsVi {
         return 'Độ mờ đục của bộ lọc';
       case 'manga_reader_contrast':
         return 'Độ tương phản';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return 'Cắt viền';
       case 'manga_reader_custom_color':
@@ -640710,8 +642094,27 @@ extension on _StringsVi {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return 'Tải nội dung quá thời gian. Mở lại nếu hiển thị bất thường';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return 'Drag a button (long-press on touch) to reorder it or move it to another area. With a keyboard, press Enter on a button to choose where it goes. Changes apply right away.';
       case 'reader_control_editor_hint':
@@ -640933,6 +642336,10 @@ extension on _StringsVi {
             '${current} / ${total} chars';
       case 'reader_nav_search_empty_hint':
         return 'Search the whole book, or jump to a character position';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return 'Contents';
       case 'reader_nav_tab_favorites':
@@ -657251,6 +658658,10 @@ extension on _StringsZhCn {
         return '自动背景';
       case 'manga_reader_back_to_start':
         return '回到开头';
+      case 'manga_reader_bookmark_chapter_missing':
+        return '书签所在的章节已不在章节列表里';
+      case 'manga_reader_bookmarks':
+        return '书签';
       case 'manga_reader_brightness':
         return '亮度';
       case 'manga_reader_color_filter_color':
@@ -657259,6 +658670,20 @@ extension on _StringsZhCn {
         return '滤镜不透明度';
       case 'manga_reader_contrast':
         return '对比度';
+      case 'manga_reader_control_item_ocr_cancel':
+        return '取消整卷识别';
+      case 'manga_reader_control_item_spread':
+        return '单双页';
+      case 'manga_reader_control_layout':
+        return '工具栏布局';
+      case 'manga_reader_control_layout_hint':
+        return '把按钮拖到顶栏、底部工具栏或 ⋯ 菜单，或移出阅读器，改动立即生效。对当前书不适用的按钮（如本地卷的章节目录）即使摆上也不显示。';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return '拇指区，放不下时降到顶栏';
+      case 'manga_reader_control_zone_top':
+        return '顶栏';
+      case 'manga_reader_control_zone_top_hint':
+        return '默认平铺，放不下时才收进 ⋯';
       case 'manga_reader_crop_borders':
         return '裁剪白边';
       case 'manga_reader_custom_color':
@@ -659458,8 +660883,27 @@ extension on _StringsZhCn {
         return '正文字体';
       case 'reader_body_font_default':
         return '默认（书籍自带 / 系统字体）';
+      case 'reader_bookmark_add':
+        return '添加书签';
+      case 'reader_bookmark_added':
+        return '已添加书签';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · 第 ${page} 页';
+      case 'reader_bookmark_delete':
+        return '删除书签';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => '第 ${page} 页';
+      case 'reader_bookmark_remove':
+        return '移除书签';
+      case 'reader_bookmark_removed':
+        return '已移除书签';
+      case 'reader_bookmarks_empty':
+        return '还没有书签。给当前页加个书签，之后可以随时跳回来。';
       case 'reader_content_timeout':
         return '内容加载超时，如显示异常请重新打开';
+      case 'reader_control_bookmarks':
+        return '书签与收藏';
       case 'reader_control_editor_drag_hint':
         return '拖动按钮（触屏长按）即可排序或换区；用键盘时在按钮上按 Enter 选择位置。改动立即生效。';
       case 'reader_control_editor_hint':
@@ -659678,6 +661122,10 @@ extension on _StringsZhCn {
             '${current} / ${total} 字';
       case 'reader_nav_search_empty_hint':
         return '搜索全书，或跳到指定字数位置';
+      case 'reader_nav_segment_bookmarks':
+        return '书签';
+      case 'reader_nav_segment_favorites':
+        return '收藏句子';
       case 'reader_nav_tab_contents':
         return '目录';
       case 'reader_nav_tab_favorites':
@@ -675930,6 +677378,10 @@ extension on _StringsZhHk {
         return '自動背景';
       case 'manga_reader_back_to_start':
         return '返回開頭';
+      case 'manga_reader_bookmark_chapter_missing':
+        return 'This bookmark\'s chapter is no longer in the chapter list';
+      case 'manga_reader_bookmarks':
+        return 'Bookmarks';
       case 'manga_reader_brightness':
         return '亮度';
       case 'manga_reader_color_filter_color':
@@ -675938,6 +677390,20 @@ extension on _StringsZhHk {
         return '濾鏡不透明度';
       case 'manga_reader_contrast':
         return '對比度';
+      case 'manga_reader_control_item_ocr_cancel':
+        return 'Cancel volume OCR';
+      case 'manga_reader_control_item_spread':
+        return 'Single / double page';
+      case 'manga_reader_control_layout':
+        return 'Toolbar layout';
+      case 'manga_reader_control_layout_hint':
+        return 'Drag buttons between the top bar, the bottom toolbar and the ⋯ menu, or remove them. Changes apply immediately. Buttons that don\'t apply to the current book (such as chapters for a local volume) stay hidden even when placed.';
+      case 'manga_reader_control_zone_toolbar_hint':
+        return 'Thumb zone; moves to the top bar when space runs out';
+      case 'manga_reader_control_zone_top':
+        return 'Top bar';
+      case 'manga_reader_control_zone_top_hint':
+        return 'Shown in full; folded into ⋯ only when space runs out';
       case 'manga_reader_crop_borders':
         return '裁剪白邊';
       case 'manga_reader_custom_color':
@@ -678147,8 +679613,27 @@ extension on _StringsZhHk {
         return 'Body font';
       case 'reader_body_font_default':
         return 'Default (book / system font)';
+      case 'reader_bookmark_add':
+        return 'Add bookmark';
+      case 'reader_bookmark_added':
+        return 'Bookmark added';
+      case 'reader_bookmark_chapter_page_label':
+        return ({required Object chapter, required Object page}) =>
+            '${chapter} · Page ${page}';
+      case 'reader_bookmark_delete':
+        return 'Delete bookmark';
+      case 'reader_bookmark_page_label':
+        return ({required Object page}) => 'Page ${page}';
+      case 'reader_bookmark_remove':
+        return 'Remove bookmark';
+      case 'reader_bookmark_removed':
+        return 'Bookmark removed';
+      case 'reader_bookmarks_empty':
+        return 'No bookmarks yet. Bookmark a page to jump back to it later.';
       case 'reader_content_timeout':
         return '內容載入逾時，如顯示異常請重新開啟';
+      case 'reader_control_bookmarks':
+        return 'Bookmarks & saved sentences';
       case 'reader_control_editor_drag_hint':
         return '拖動按鈕（觸控長按）即可排序或換區；用鍵盤時在按鈕上按 Enter 選擇位置。改動立即生效。';
       case 'reader_control_editor_hint':
@@ -678367,6 +679852,10 @@ extension on _StringsZhHk {
             '${current} / ${total} 字';
       case 'reader_nav_search_empty_hint':
         return '搜尋全書，或跳到指定字數位置';
+      case 'reader_nav_segment_bookmarks':
+        return 'Bookmarks';
+      case 'reader_nav_segment_favorites':
+        return 'Saved sentences';
       case 'reader_nav_tab_contents':
         return '目錄';
       case 'reader_nav_tab_favorites':
