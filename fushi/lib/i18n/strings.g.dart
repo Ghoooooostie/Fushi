@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 152983 (8999 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7172,6 +7172,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_game => 'Game';
   String get nav_home => 'Home';
   String get nav_lookup => 'Lookup';
+  String get nav_peek_open => 'Open';
+  String get nav_peek_recent => 'Recent';
   String get nav_srs => 'Review';
   String get nav_video => 'Video';
   String get nav_web => 'Browser';
@@ -24836,6 +24838,10 @@ class _StringsAr extends _StringsEn {
   String get nav_home => 'الرئيسية';
   @override
   String get nav_lookup => 'بحث';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => 'المراجعة';
   @override
@@ -46929,6 +46935,10 @@ class _StringsDe extends _StringsEn {
   String get nav_home => 'Startseite';
   @override
   String get nav_lookup => 'Nachschlagen';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => 'Wiederholen';
   @override
@@ -69199,6 +69209,10 @@ class _StringsEs extends _StringsEn {
   String get nav_home => 'Inicio';
   @override
   String get nav_lookup => 'Consultar';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => 'Repaso';
   @override
@@ -91548,6 +91562,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get nav_lookup => 'Recherche';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Révision';
   @override
   String get nav_video => 'Vidéo';
@@ -113733,6 +113751,10 @@ class _StringsId extends _StringsEn {
   @override
   String get nav_lookup => 'Cari Kata';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Ulasan';
   @override
   String get nav_video => 'Video';
@@ -135870,6 +135892,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get nav_lookup => 'Ricerca';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Ripasso';
   @override
   String get nav_video => 'Video';
@@ -157488,6 +157514,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get nav_lookup => '辞書';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => '復習';
   @override
   String get nav_video => '動画';
@@ -178670,6 +178700,10 @@ class _StringsKo extends _StringsEn {
   String get nav_home => '홈';
   @override
   String get nav_lookup => '단어 찾기';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => '복습';
   @override
@@ -200425,6 +200459,10 @@ class _StringsNl extends _StringsEn {
   String get nav_home => 'Start';
   @override
   String get nav_lookup => 'Opzoeken';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => 'Herhalen';
   @override
@@ -222626,6 +222664,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get nav_lookup => 'Consultar';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Revisão';
   @override
   String get nav_video => 'Vídeo';
@@ -244799,6 +244841,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get nav_lookup => 'Поиск';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Повторение';
   @override
   String get nav_video => 'Видео';
@@ -266783,6 +266829,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get nav_lookup => 'ค้นคำ';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'ทบทวน';
   @override
   String get nav_video => 'วิดีโอ';
@@ -288753,6 +288803,10 @@ class _StringsTr extends _StringsEn {
   String get nav_home => 'Ana sayfa';
   @override
   String get nav_lookup => 'Ara';
+  @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
   @override
   String get nav_srs => 'Tekrar';
   @override
@@ -310760,6 +310814,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get nav_lookup => 'Tra từ';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => 'Ôn tập';
   @override
   String get nav_video => 'Video';
@@ -331714,6 +331772,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get nav_lookup => '查词';
   @override
+  String get nav_peek_open => '打开';
+  @override
+  String get nav_peek_recent => '最近';
+  @override
   String get nav_srs => '复习';
   @override
   String get nav_video => '视频';
@@ -351998,6 +352060,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get nav_lookup => '查詞';
   @override
+  String get nav_peek_open => 'Open';
+  @override
+  String get nav_peek_recent => 'Recent';
+  @override
   String get nav_srs => '複習';
   @override
   String get nav_video => '影片';
@@ -371548,6 +371614,10 @@ extension on _StringsEn {
         return 'Home';
       case 'nav_lookup':
         return 'Lookup';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Review';
       case 'nav_video':
@@ -390249,6 +390319,10 @@ extension on _StringsAr {
         return 'الرئيسية';
       case 'nav_lookup':
         return 'بحث';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'المراجعة';
       case 'nav_video':
@@ -409001,6 +409075,10 @@ extension on _StringsDe {
         return 'Startseite';
       case 'nav_lookup':
         return 'Nachschlagen';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Wiederholen';
       case 'nav_video':
@@ -427763,6 +427841,10 @@ extension on _StringsEs {
         return 'Inicio';
       case 'nav_lookup':
         return 'Consultar';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Repaso';
       case 'nav_video':
@@ -446535,6 +446617,10 @@ extension on _StringsFr {
         return 'Accueil';
       case 'nav_lookup':
         return 'Recherche';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Révision';
       case 'nav_video':
@@ -465276,6 +465362,10 @@ extension on _StringsId {
         return 'Beranda';
       case 'nav_lookup':
         return 'Cari Kata';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Ulasan';
       case 'nav_video':
@@ -484014,6 +484104,10 @@ extension on _StringsIt {
         return 'Home';
       case 'nav_lookup':
         return 'Ricerca';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Ripasso';
       case 'nav_video':
@@ -502700,6 +502794,10 @@ extension on _StringsJa {
         return 'ホーム';
       case 'nav_lookup':
         return '辞書';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return '復習';
       case 'nav_video':
@@ -521323,6 +521421,10 @@ extension on _StringsKo {
         return '홈';
       case 'nav_lookup':
         return '단어 찾기';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return '복습';
       case 'nav_video':
@@ -540030,6 +540132,10 @@ extension on _StringsNl {
         return 'Start';
       case 'nav_lookup':
         return 'Opzoeken';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Herhalen';
       case 'nav_video':
@@ -558776,6 +558882,10 @@ extension on _StringsPtBr {
         return 'Início';
       case 'nav_lookup':
         return 'Consultar';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Revisão';
       case 'nav_video':
@@ -577526,6 +577636,10 @@ extension on _StringsRu {
         return 'Главная';
       case 'nav_lookup':
         return 'Поиск';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Повторение';
       case 'nav_video':
@@ -596241,6 +596355,10 @@ extension on _StringsTh {
         return 'หน้าหลัก';
       case 'nav_lookup':
         return 'ค้นคำ';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'ทบทวน';
       case 'nav_video':
@@ -614969,6 +615087,10 @@ extension on _StringsTr {
         return 'Ana sayfa';
       case 'nav_lookup':
         return 'Ara';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Tekrar';
       case 'nav_video':
@@ -633689,6 +633811,10 @@ extension on _StringsVi {
         return 'Trang chủ';
       case 'nav_lookup':
         return 'Tra từ';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return 'Ôn tập';
       case 'nav_video':
@@ -652280,6 +652406,10 @@ extension on _StringsZhCn {
         return '首页';
       case 'nav_lookup':
         return '查词';
+      case 'nav_peek_open':
+        return '打开';
+      case 'nav_peek_recent':
+        return '最近';
       case 'nav_srs':
         return '复习';
       case 'nav_video':
@@ -670798,6 +670928,10 @@ extension on _StringsZhHk {
         return '首頁';
       case 'nav_lookup':
         return '查詞';
+      case 'nav_peek_open':
+        return 'Open';
+      case 'nav_peek_recent':
+        return 'Recent';
       case 'nav_srs':
         return '複習';
       case 'nav_video':
