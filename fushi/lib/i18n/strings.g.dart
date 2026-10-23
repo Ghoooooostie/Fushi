@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153170 (9010 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9798,6 +9798,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  String get srs_starter_add => 'Download and import';
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  String get srs_starter_empty => 'No starter decks yet';
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  String get srs_starter_importing => 'Importing';
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  String get srs_starter_title => 'Starter decks';
   String get srs_stats_added_title => 'Added';
   String get srs_stats_avg_answer_time => 'Average answer time';
   String get srs_stats_avg_per_day => 'Average per day';
@@ -29359,6 +29385,45 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -51511,6 +51576,45 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -73787,6 +73891,45 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -96152,6 +96295,45 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -118279,6 +118461,45 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -140449,6 +140670,45 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -161912,6 +162172,45 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -183100,6 +183399,45 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -204999,6 +205337,45 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -227200,6 +227577,45 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -249378,6 +249794,45 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -271306,6 +271761,45 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
   @override
   String get srs_stats_added_title => 'Added';
   @override
@@ -293302,6 +293796,45 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -315293,6 +315826,45 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -335884,6 +336456,42 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_steps_invalid => '请输入正数分钟，且每一步都短于一天';
   @override
+  String get srs_starter_add => '下载并导入';
+  @override
+  String get srs_starter_already_added => '牌组里已经有这个卡组了';
+  @override
+  String get srs_starter_body => '入门卡组从作者的发布页下载，按 .apkg 导入。';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => '正在下载 ${received} / ${total}';
+  @override
+  String get srs_starter_empty => '暂无入门卡组';
+  @override
+  String srs_starter_failed({required Object error}) => '下载失败：${error}';
+  @override
+  String get srs_starter_hint => '下载现成的入门卡组';
+  @override
+  String get srs_starter_importing => '正在导入';
+  @override
+  String srs_starter_license({required Object license}) => '许可：${license}';
+  @override
+  String get srs_starter_license_unspecified => '作者未声明';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} 张卡 · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => '来源：${source} · v${version}';
+  @override
+  String get srs_starter_title => '入门卡组';
+  @override
   String get srs_stats_added_title => '新增卡片';
   @override
   String get srs_stats_avg_answer_time => '平均答题用时';
@@ -356343,6 +356951,45 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_steps_invalid =>
       'Enter positive numbers of minutes, each shorter than one day';
   @override
+  String get srs_starter_add => 'Download and import';
+  @override
+  String get srs_starter_already_added => 'This deck is already in your decks';
+  @override
+  String get srs_starter_body =>
+      'Starter decks download from their authors\' release pages and import like any .apkg.';
+  @override
+  String srs_starter_downloading({
+    required Object received,
+    required Object total,
+  }) => 'Downloading ${received} / ${total}';
+  @override
+  String get srs_starter_empty => 'No starter decks yet';
+  @override
+  String srs_starter_failed({required Object error}) =>
+      'Download failed: ${error}';
+  @override
+  String get srs_starter_hint => 'Download a ready-made beginner deck';
+  @override
+  String get srs_starter_importing => 'Importing';
+  @override
+  String srs_starter_license({required Object license}) =>
+      'License: ${license}';
+  @override
+  String get srs_starter_license_unspecified => 'not stated by the author';
+  @override
+  String srs_starter_meta({
+    required Object language,
+    required Object cards,
+    required Object size,
+  }) => '${language} · ${cards} cards · ${size}';
+  @override
+  String srs_starter_source({
+    required Object source,
+    required Object version,
+  }) => 'Source: ${source} · v${version}';
+  @override
+  String get srs_starter_title => 'Starter decks';
+  @override
   String get srs_stats_added_title => 'Added';
   @override
   String get srs_stats_avg_answer_time => 'Average answer time';
@@ -375475,6 +376122,38 @@ extension on _StringsEn {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -394177,6 +394856,38 @@ extension on _StringsAr {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -412935,6 +413646,38 @@ extension on _StringsDe {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -431697,6 +432440,38 @@ extension on _StringsEs {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -450470,6 +451245,38 @@ extension on _StringsFr {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -469203,6 +470010,38 @@ extension on _StringsId {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -487945,6 +488784,38 @@ extension on _StringsIt {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -506621,6 +507492,38 @@ extension on _StringsJa {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -525246,6 +526149,38 @@ extension on _StringsKo {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -543961,6 +544896,38 @@ extension on _StringsNl {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -562707,6 +563674,38 @@ extension on _StringsPtBr {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -581457,6 +582456,38 @@ extension on _StringsRu {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -600167,6 +601198,38 @@ extension on _StringsTh {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -618895,6 +619958,38 @@ extension on _StringsTr {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -637618,6 +638713,38 @@ extension on _StringsVi {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
@@ -656169,6 +657296,38 @@ extension on _StringsZhCn {
         return '用空格分隔，如 1 10；每一步都要短于一天';
       case 'srs_settings_steps_invalid':
         return '请输入正数分钟，且每一步都短于一天';
+      case 'srs_starter_add':
+        return '下载并导入';
+      case 'srs_starter_already_added':
+        return '牌组里已经有这个卡组了';
+      case 'srs_starter_body':
+        return '入门卡组从作者的发布页下载，按 .apkg 导入。';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            '正在下载 ${received} / ${total}';
+      case 'srs_starter_empty':
+        return '暂无入门卡组';
+      case 'srs_starter_failed':
+        return ({required Object error}) => '下载失败：${error}';
+      case 'srs_starter_hint':
+        return '下载现成的入门卡组';
+      case 'srs_starter_importing':
+        return '正在导入';
+      case 'srs_starter_license':
+        return ({required Object license}) => '许可：${license}';
+      case 'srs_starter_license_unspecified':
+        return '作者未声明';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} 张卡 · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            '来源：${source} · v${version}';
+      case 'srs_starter_title':
+        return '入门卡组';
       case 'srs_stats_added_title':
         return '新增卡片';
       case 'srs_stats_avg_answer_time':
@@ -674717,6 +675876,38 @@ extension on _StringsZhHk {
         return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
       case 'srs_settings_steps_invalid':
         return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_starter_add':
+        return 'Download and import';
+      case 'srs_starter_already_added':
+        return 'This deck is already in your decks';
+      case 'srs_starter_body':
+        return 'Starter decks download from their authors\' release pages and import like any .apkg.';
+      case 'srs_starter_downloading':
+        return ({required Object received, required Object total}) =>
+            'Downloading ${received} / ${total}';
+      case 'srs_starter_empty':
+        return 'No starter decks yet';
+      case 'srs_starter_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
+      case 'srs_starter_hint':
+        return 'Download a ready-made beginner deck';
+      case 'srs_starter_importing':
+        return 'Importing';
+      case 'srs_starter_license':
+        return ({required Object license}) => 'License: ${license}';
+      case 'srs_starter_license_unspecified':
+        return 'not stated by the author';
+      case 'srs_starter_meta':
+        return ({
+          required Object language,
+          required Object cards,
+          required Object size,
+        }) => '${language} · ${cards} cards · ${size}';
+      case 'srs_starter_source':
+        return ({required Object source, required Object version}) =>
+            'Source: ${source} · v${version}';
+      case 'srs_starter_title':
+        return 'Starter decks';
       case 'srs_stats_added_title':
         return 'Added';
       case 'srs_stats_avg_answer_time':
