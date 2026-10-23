@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154309 (9077 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7791,6 +7791,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get options_github => 'View repository on GitHub';
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
   String get options_hide => 'Hide in lookup';
+  String get options_ko_fi => 'Support Fushi on Ko-fi';
   String get options_language => 'Language settings';
   String get options_show => 'Show in lookup';
   String get options_website => 'Visit the official website';
@@ -25983,6 +25984,8 @@ class _StringsAr extends _StringsEn {
   String get options_github_sponsors => 'ادعم Fushi على GitHub Sponsors';
   @override
   String get options_hide => 'إخفاء عند البحث';
+  @override
+  String get options_ko_fi => 'ادعم Fushi على Ko-fi';
   @override
   String get options_language => 'إعدادات اللغة';
   @override
@@ -48304,6 +48307,8 @@ class _StringsDe extends _StringsEn {
       'Fushi über GitHub Sponsors unterstützen';
   @override
   String get options_hide => 'Bei Suche ausblenden';
+  @override
+  String get options_ko_fi => 'Fushi auf Ko-fi unterstützen';
   @override
   String get options_language => 'Spracheinstellungen';
   @override
@@ -70778,6 +70783,8 @@ class _StringsEs extends _StringsEn {
   String get options_github_sponsors => 'Apoya a Fushi en GitHub Sponsors';
   @override
   String get options_hide => 'Ocultar en búsqueda';
+  @override
+  String get options_ko_fi => 'Apoya a Fushi en Ko-fi';
   @override
   String get options_language => 'Configuración de idioma';
   @override
@@ -93343,6 +93350,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get options_hide => 'Masquer lors de la recherche';
   @override
+  String get options_ko_fi => 'Soutenir Fushi sur Ko-fi';
+  @override
   String get options_language => 'Paramètres de langue';
   @override
   String get options_show => 'Afficher lors de la recherche';
@@ -115715,6 +115724,8 @@ class _StringsId extends _StringsEn {
   @override
   String get options_hide => 'Sembunyikan saat pencarian';
   @override
+  String get options_ko_fi => 'Dukung Fushi di Ko-fi';
+  @override
   String get options_language => 'Pengaturan bahasa';
   @override
   String get options_show => 'Tampilkan saat pencarian';
@@ -138064,6 +138075,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get options_hide => 'Nascondi nella ricerca';
   @override
+  String get options_ko_fi => 'Sostieni Fushi su Ko-fi';
+  @override
   String get options_language => 'Impostazioni lingua';
   @override
   String get options_show => 'Mostra nella ricerca';
@@ -159842,6 +159855,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get options_hide => '検索時に非表示';
   @override
+  String get options_ko_fi => 'Ko-fi で Fushi を支援';
+  @override
   String get options_language => '言語設定';
   @override
   String get options_show => '検索時に表示';
@@ -181232,6 +181247,8 @@ class _StringsKo extends _StringsEn {
   String get options_github_sponsors => 'GitHub Sponsors에서 Fushi 후원하기';
   @override
   String get options_hide => '검색 시 숨기기';
+  @override
+  String get options_ko_fi => 'Ko-fi에서 Fushi 후원하기';
   @override
   String get options_language => '언어 설정';
   @override
@@ -203242,6 +203259,8 @@ class _StringsNl extends _StringsEn {
   String get options_github_sponsors => 'Steun Fushi via GitHub Sponsors';
   @override
   String get options_hide => 'Verbergen bij opzoeken';
+  @override
+  String get options_ko_fi => 'Steun Fushi via Ko-fi';
   @override
   String get options_language => 'Taalinstellingen';
   @override
@@ -225649,6 +225668,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get options_hide => 'Ocultar na busca';
   @override
+  String get options_ko_fi => 'Apoie o Fushi no Ko-fi';
+  @override
   String get options_language => 'Configurações de idioma';
   @override
   String get options_show => 'Mostrar na busca';
@@ -248033,6 +248054,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get options_hide => 'Скрыть при поиске';
   @override
+  String get options_ko_fi => 'Поддержать Fushi на Ko-fi';
+  @override
   String get options_language => 'Настройки языка';
   @override
   String get options_show => 'Показать при поиске';
@@ -270203,6 +270226,8 @@ class _StringsTh extends _StringsEn {
   String get options_github_sponsors => 'สนับสนุน Fushi บน GitHub Sponsors';
   @override
   String get options_hide => 'ซ่อนในการค้นหา';
+  @override
+  String get options_ko_fi => 'สนับสนุน Fushi บน Ko-fi';
   @override
   String get options_language => 'ตั้งค่าภาษา';
   @override
@@ -292392,6 +292417,8 @@ class _StringsTr extends _StringsEn {
       'Fushi\'yi GitHub Sponsors\'ta destekleyin';
   @override
   String get options_hide => 'Gizle';
+  @override
+  String get options_ko_fi => 'Fushi\'yi Ko-fi\'de destekle';
   @override
   String get options_language => 'Dil ayarları';
   @override
@@ -314597,6 +314624,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get options_hide => 'Ẩn khi tra cứu';
   @override
+  String get options_ko_fi => 'Ủng hộ Fushi trên Ko-fi';
+  @override
   String get options_language => 'Cài đặt ngôn ngữ';
   @override
   String get options_show => 'Hiện khi tra cứu';
@@ -335663,6 +335692,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get options_hide => '查词时隐藏';
   @override
+  String get options_ko_fi => '在 Ko-fi 上赞助 Fushi';
+  @override
   String get options_language => '语言设置';
   @override
   String get options_show => '查词时显示';
@@ -356155,6 +356186,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get options_hide => '查詞時隱藏';
   @override
+  String get options_ko_fi => '在 Ko-fi 上贊助 Fushi';
+  @override
   String get options_language => '語言設定';
   @override
   String get options_show => '查詞時顯示';
@@ -375788,6 +375821,8 @@ extension on _StringsEn {
         return 'Support Fushi on GitHub Sponsors';
       case 'options_hide':
         return 'Hide in lookup';
+      case 'options_ko_fi':
+        return 'Support Fushi on Ko-fi';
       case 'options_language':
         return 'Language settings';
       case 'options_show':
@@ -394658,6 +394693,8 @@ extension on _StringsAr {
         return 'ادعم Fushi على GitHub Sponsors';
       case 'options_hide':
         return 'إخفاء عند البحث';
+      case 'options_ko_fi':
+        return 'ادعم Fushi على Ko-fi';
       case 'options_language':
         return 'إعدادات اللغة';
       case 'options_show':
@@ -413582,6 +413619,8 @@ extension on _StringsDe {
         return 'Fushi über GitHub Sponsors unterstützen';
       case 'options_hide':
         return 'Bei Suche ausblenden';
+      case 'options_ko_fi':
+        return 'Fushi auf Ko-fi unterstützen';
       case 'options_language':
         return 'Spracheinstellungen';
       case 'options_show':
@@ -432510,6 +432549,8 @@ extension on _StringsEs {
         return 'Apoya a Fushi en GitHub Sponsors';
       case 'options_hide':
         return 'Ocultar en búsqueda';
+      case 'options_ko_fi':
+        return 'Apoya a Fushi en Ko-fi';
       case 'options_language':
         return 'Configuración de idioma';
       case 'options_show':
@@ -451452,6 +451493,8 @@ extension on _StringsFr {
         return 'Soutenir Fushi sur GitHub Sponsors';
       case 'options_hide':
         return 'Masquer lors de la recherche';
+      case 'options_ko_fi':
+        return 'Soutenir Fushi sur Ko-fi';
       case 'options_language':
         return 'Paramètres de langue';
       case 'options_show':
@@ -470356,6 +470399,8 @@ extension on _StringsId {
         return 'Dukung Fushi di GitHub Sponsors';
       case 'options_hide':
         return 'Sembunyikan saat pencarian';
+      case 'options_ko_fi':
+        return 'Dukung Fushi di Ko-fi';
       case 'options_language':
         return 'Pengaturan bahasa';
       case 'options_show':
@@ -489264,6 +489309,8 @@ extension on _StringsIt {
         return 'Sostieni Fushi su GitHub Sponsors';
       case 'options_hide':
         return 'Nascondi nella ricerca';
+      case 'options_ko_fi':
+        return 'Sostieni Fushi su Ko-fi';
       case 'options_language':
         return 'Impostazioni lingua';
       case 'options_show':
@@ -508112,6 +508159,8 @@ extension on _StringsJa {
         return 'GitHub Sponsors で Fushi を支援';
       case 'options_hide':
         return '検索時に非表示';
+      case 'options_ko_fi':
+        return 'Ko-fi で Fushi を支援';
       case 'options_language':
         return '言語設定';
       case 'options_show':
@@ -526904,6 +526953,8 @@ extension on _StringsKo {
         return 'GitHub Sponsors에서 Fushi 후원하기';
       case 'options_hide':
         return '검색 시 숨기기';
+      case 'options_ko_fi':
+        return 'Ko-fi에서 Fushi 후원하기';
       case 'options_language':
         return '언어 설정';
       case 'options_show':
@@ -545784,6 +545835,8 @@ extension on _StringsNl {
         return 'Steun Fushi via GitHub Sponsors';
       case 'options_hide':
         return 'Verbergen bij opzoeken';
+      case 'options_ko_fi':
+        return 'Steun Fushi via Ko-fi';
       case 'options_language':
         return 'Taalinstellingen';
       case 'options_show':
@@ -564698,6 +564751,8 @@ extension on _StringsPtBr {
         return 'Apoie o Fushi no GitHub Sponsors';
       case 'options_hide':
         return 'Ocultar na busca';
+      case 'options_ko_fi':
+        return 'Apoie o Fushi no Ko-fi';
       case 'options_language':
         return 'Configurações de idioma';
       case 'options_show':
@@ -583616,6 +583671,8 @@ extension on _StringsRu {
         return 'Поддержать Fushi на GitHub Sponsors';
       case 'options_hide':
         return 'Скрыть при поиске';
+      case 'options_ko_fi':
+        return 'Поддержать Fushi на Ko-fi';
       case 'options_language':
         return 'Настройки языка';
       case 'options_show':
@@ -602496,6 +602553,8 @@ extension on _StringsTh {
         return 'สนับสนุน Fushi บน GitHub Sponsors';
       case 'options_hide':
         return 'ซ่อนในการค้นหา';
+      case 'options_ko_fi':
+        return 'สนับสนุน Fushi บน Ko-fi';
       case 'options_language':
         return 'ตั้งค่าภาษา';
       case 'options_show':
@@ -621392,6 +621451,8 @@ extension on _StringsTr {
         return 'Fushi\'yi GitHub Sponsors\'ta destekleyin';
       case 'options_hide':
         return 'Gizle';
+      case 'options_ko_fi':
+        return 'Fushi\'yi Ko-fi\'de destekle';
       case 'options_language':
         return 'Dil ayarları';
       case 'options_show':
@@ -640281,6 +640342,8 @@ extension on _StringsVi {
         return 'Ủng hộ Fushi trên GitHub Sponsors';
       case 'options_hide':
         return 'Ẩn khi tra cứu';
+      case 'options_ko_fi':
+        return 'Ủng hộ Fushi trên Ko-fi';
       case 'options_language':
         return 'Cài đặt ngôn ngữ';
       case 'options_show':
@@ -659030,6 +659093,8 @@ extension on _StringsZhCn {
         return '通过 GitHub Sponsors 赞助 Fushi';
       case 'options_hide':
         return '查词时隐藏';
+      case 'options_ko_fi':
+        return '在 Ko-fi 上赞助 Fushi';
       case 'options_language':
         return '语言设置';
       case 'options_show':
@@ -677718,6 +677783,8 @@ extension on _StringsZhHk {
         return '通過 GitHub Sponsors 贊助 Fushi';
       case 'options_hide':
         return '查詞時隱藏';
+      case 'options_ko_fi':
+        return '在 Ko-fi 上贊助 Fushi';
       case 'options_language':
         return '語言設定';
       case 'options_show':
