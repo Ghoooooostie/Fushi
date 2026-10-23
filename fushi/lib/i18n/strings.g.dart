@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153017 (9001 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6795,6 +6795,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String media_source_count_book({required Object n}) => '${n} books';
   String media_source_count_manga({required Object n}) => '${n} volumes';
   String media_source_count_video({required Object n}) => '${n} videos';
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   String media_source_last_scan({required Object time}) => 'Last scan ${time}';
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -24205,6 +24213,18 @@ class _StringsAr extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n} مجلد';
   @override
   String media_source_count_video({required Object n}) => '${n} فيديوهات';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) => 'آخر فحص ${time}';
   @override
@@ -46285,6 +46305,18 @@ class _StringsDe extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n} Bände';
   @override
   String media_source_count_video({required Object n}) => '${n} Videos';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) =>
       'Letzter Scan ${time}';
@@ -68558,6 +68590,18 @@ class _StringsEs extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n} volúmenes';
   @override
   String media_source_count_video({required Object n}) => '${n} vídeos';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) =>
       'Último escaneo ${time}';
@@ -90903,6 +90947,18 @@ class _StringsFr extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} vidéos';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Dernier scan ${time}';
   @override
@@ -113097,6 +113153,18 @@ class _StringsId extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Pemindaian terakhir ${time}';
   @override
@@ -135227,6 +135295,18 @@ class _StringsIt extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Ultima scansione ${time}';
   @override
@@ -156885,6 +156965,18 @@ class _StringsJa extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n}本の動画';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) => '最終スキャン ${time}';
   @override
   String get media_source_list_empty =>
@@ -178065,6 +178157,18 @@ class _StringsKo extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n}권';
   @override
   String media_source_count_video({required Object n}) => '동영상 ${n}개';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) => '마지막 스캔 ${time}';
   @override
@@ -199786,6 +199890,18 @@ class _StringsNl extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n} delen';
   @override
   String media_source_count_video({required Object n}) => '${n} video\'s';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) =>
       'Laatste scan ${time}';
@@ -221985,6 +222101,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} vídeos';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Última varredura ${time}';
   @override
@@ -244157,6 +244285,18 @@ class _StringsRu extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} видео';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Последнее сканирование ${time}';
   @override
@@ -266149,6 +266289,18 @@ class _StringsTh extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} วิดีโอ';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) => 'สแกนล่าสุด ${time}';
   @override
   String get media_source_list_empty =>
@@ -288114,6 +288266,18 @@ class _StringsTr extends _StringsEn {
   String media_source_count_manga({required Object n}) => '${n} cilt';
   @override
   String media_source_count_video({required Object n}) => '${n} video';
+  @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
   @override
   String media_source_last_scan({required Object time}) => 'Son tarama ${time}';
   @override
@@ -310126,6 +310290,18 @@ class _StringsVi extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} video';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) =>
       'Quét lần cuối ${time}';
   @override
@@ -331143,6 +331319,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} 个视频';
   @override
+  String get media_source_folder_access_missing =>
+      '未保存此文件夹的访问授权。请重新添加同一个文件夹以恢复访问。';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      '此文件夹已移动到 ${path}，请从新位置重新添加。';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      '无法保存所选文件夹的访问授权：${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      '无法重新取得此文件夹的访问权限（可能已被移动、删除，或所在存储不可用）：${reason}。请重新添加该文件夹。';
+  @override
   String media_source_last_scan({required Object time}) => '上次扫描 ${time}';
   @override
   String get media_source_list_empty => '还没有常驻来源。添加文件夹或网络共享后会自动扫描。';
@@ -351421,6 +351609,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String media_source_count_video({required Object n}) => '${n} 個影片';
   @override
+  String get media_source_folder_access_missing =>
+      'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+  @override
+  String media_source_folder_access_moved({required Object path}) =>
+      'This folder has moved to ${path}. Add it again from its new location.';
+  @override
+  String media_source_folder_access_pick_failed({required Object reason}) =>
+      'Could not save access to the selected folder: ${reason}';
+  @override
+  String media_source_folder_access_resolve_failed({required Object reason}) =>
+      'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
+  @override
   String media_source_last_scan({required Object time}) => '上次掃描 ${time}';
   @override
   String get media_source_list_empty =>
@@ -371002,6 +371202,17 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} volumes';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} videos';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Last scan ${time}';
       case 'media_source_list_empty':
@@ -389703,6 +389914,17 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} مجلد';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} فيديوهات';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'آخر فحص ${time}';
       case 'media_source_list_empty':
@@ -408451,6 +408673,17 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} Bände';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} Videos';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Letzter Scan ${time}';
       case 'media_source_list_empty':
@@ -427213,6 +427446,17 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} volúmenes';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vídeos';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Último escaneo ${time}';
       case 'media_source_list_empty':
@@ -445985,6 +446229,17 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} tomes';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vidéos';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Dernier scan ${time}';
       case 'media_source_list_empty':
@@ -464730,6 +464985,17 @@ extension on _StringsId {
         return ({required Object n}) => '${n} volume';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Pemindaian terakhir ${time}';
       case 'media_source_list_empty':
@@ -483464,6 +483730,17 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} volumi';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Ultima scansione ${time}';
       case 'media_source_list_empty':
@@ -502156,6 +502433,17 @@ extension on _StringsJa {
         return ({required Object n}) => '${n}巻';
       case 'media_source_count_video':
         return ({required Object n}) => '${n}本の動画';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => '最終スキャン ${time}';
       case 'media_source_list_empty':
@@ -520780,6 +521068,17 @@ extension on _StringsKo {
         return ({required Object n}) => '${n}권';
       case 'media_source_count_video':
         return ({required Object n}) => '동영상 ${n}개';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => '마지막 스캔 ${time}';
       case 'media_source_list_empty':
@@ -539480,6 +539779,17 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} delen';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video\'s';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Laatste scan ${time}';
       case 'media_source_list_empty':
@@ -558226,6 +558536,17 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} volumes';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} vídeos';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Última varredura ${time}';
       case 'media_source_list_empty':
@@ -576976,6 +577297,17 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} томов';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} видео';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Последнее сканирование ${time}';
       case 'media_source_list_empty':
@@ -595695,6 +596027,17 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} เล่ม';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} วิดีโอ';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'สแกนล่าสุด ${time}';
       case 'media_source_list_empty':
@@ -614420,6 +614763,17 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} cilt';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Son tarama ${time}';
       case 'media_source_list_empty':
@@ -633143,6 +633497,17 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} tập';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} video';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => 'Quét lần cuối ${time}';
       case 'media_source_list_empty':
@@ -651740,6 +652105,15 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 卷';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} 个视频';
+      case 'media_source_folder_access_missing':
+        return '未保存此文件夹的访问授权。请重新添加同一个文件夹以恢复访问。';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) => '此文件夹已移动到 ${path}，请从新位置重新添加。';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) => '无法保存所选文件夹的访问授权：${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            '无法重新取得此文件夹的访问权限（可能已被移动、删除，或所在存储不可用）：${reason}。请重新添加该文件夹。';
       case 'media_source_last_scan':
         return ({required Object time}) => '上次扫描 ${time}';
       case 'media_source_list_empty':
@@ -670257,6 +670631,17 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 卷';
       case 'media_source_count_video':
         return ({required Object n}) => '${n} 個影片';
+      case 'media_source_folder_access_missing':
+        return 'This folder\'s access permission was not saved. Add the same folder again to restore access.';
+      case 'media_source_folder_access_moved':
+        return ({required Object path}) =>
+            'This folder has moved to ${path}. Add it again from its new location.';
+      case 'media_source_folder_access_pick_failed':
+        return ({required Object reason}) =>
+            'Could not save access to the selected folder: ${reason}';
+      case 'media_source_folder_access_resolve_failed':
+        return ({required Object reason}) =>
+            'Cannot regain access to this folder (it may have been moved or deleted, or its storage is unavailable): ${reason}. Add the folder again.';
       case 'media_source_last_scan':
         return ({required Object time}) => '上次掃描 ${time}';
       case 'media_source_list_empty':
