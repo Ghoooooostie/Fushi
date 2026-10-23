@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153017 (9001 per locale)
+/// Strings: 153034 (9002 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8512,6 +8512,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_module_keep_one_navigation =>
       'Keep at least one page in the navigation bar';
   String get settings_module_nav_order => 'Navigation bar order';
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   String get settings_page_reset_confirm => 'Reset';
@@ -27147,6 +27149,9 @@ class _StringsAr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -49294,6 +49299,9 @@ class _StringsDe extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -71570,6 +71578,9 @@ class _StringsEs extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -93943,6 +93954,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -116098,6 +116112,9 @@ class _StringsId extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -138258,6 +138275,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -159774,6 +159794,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on => '常に表示（オフにできません）';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -180969,6 +180991,9 @@ class _StringsKo extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -202839,6 +202864,9 @@ class _StringsNl extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -225047,6 +225075,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -247232,6 +247263,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -269185,6 +269219,9 @@ class _StringsTh extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -291181,6 +291218,9 @@ class _StringsTr extends _StringsEn {
       'Keep at least one page in the navigation bar';
   @override
   String get settings_module_nav_order => 'Navigation bar order';
+  @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
   @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
@@ -313185,6 +313225,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on =>
+      'Always shown, can\'t be turned off';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -333951,6 +333994,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get settings_module_nav_order => '导航栏顺序';
   @override
+  String get settings_module_nav_settings_always_on => '始终显示，不能关闭';
+  @override
   String get settings_page_reset_all_default => '本页均为默认值';
   @override
   String get settings_page_reset_confirm => '恢复';
@@ -354282,6 +354327,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings_module_nav_order => 'Navigation bar order';
   @override
+  String get settings_module_nav_settings_always_on => '始終顯示，不能關閉';
+  @override
   String get settings_page_reset_all_default =>
       'Everything on this page is at its default';
   @override
@@ -373666,6 +373713,8 @@ extension on _StringsEn {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -392376,6 +392425,8 @@ extension on _StringsAr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -411142,6 +411193,8 @@ extension on _StringsDe {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -429912,6 +429965,8 @@ extension on _StringsEs {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -448693,6 +448748,8 @@ extension on _StringsFr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -467434,6 +467491,8 @@ extension on _StringsId {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -486184,6 +486243,8 @@ extension on _StringsIt {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -504868,6 +504929,8 @@ extension on _StringsJa {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return '常に表示（オフにできません）';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -523501,6 +523564,8 @@ extension on _StringsKo {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -542224,6 +542289,8 @@ extension on _StringsNl {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -560978,6 +561045,8 @@ extension on _StringsPtBr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -579736,6 +579805,8 @@ extension on _StringsRu {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -598454,6 +598525,8 @@ extension on _StringsTh {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -617190,6 +617263,8 @@ extension on _StringsTr {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -635921,6 +635996,8 @@ extension on _StringsVi {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return 'Always shown, can\'t be turned off';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
@@ -654508,6 +654585,8 @@ extension on _StringsZhCn {
         return '导航栏里至少要保留一个页面';
       case 'settings_module_nav_order':
         return '导航栏顺序';
+      case 'settings_module_nav_settings_always_on':
+        return '始终显示，不能关闭';
       case 'settings_page_reset_all_default':
         return '本页均为默认值';
       case 'settings_page_reset_confirm':
@@ -673038,6 +673117,8 @@ extension on _StringsZhHk {
         return 'Keep at least one page in the navigation bar';
       case 'settings_module_nav_order':
         return 'Navigation bar order';
+      case 'settings_module_nav_settings_always_on':
+        return '始終顯示，不能關閉';
       case 'settings_page_reset_all_default':
         return 'Everything on this page is at its default';
       case 'settings_page_reset_confirm':
