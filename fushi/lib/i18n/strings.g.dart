@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152983 (8999 per locale)
+/// Strings: 153000 (9000 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6135,6 +6135,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_blur => 'Blur lyrics';
   String get lyrics_blur_hint =>
       'Blur the current line for listening immersion; hover or tap to reveal';
+  String get lyrics_exit_to_library => 'Close and return to library';
   String get lyrics_font_size => 'Lyrics font size';
   String get lyrics_font_size_hint =>
       'Lyrics font size is independent of book mode';
@@ -23053,6 +23054,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'حجم خط كلمات الأغاني';
   @override
@@ -45106,6 +45109,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Liedtext-Schriftgröße';
   @override
@@ -67379,6 +67384,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamaño de fuente de letras';
   @override
@@ -89724,6 +89731,8 @@ class _StringsFr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Taille de police des paroles';
   @override
   String get lyrics_font_size_hint =>
@@ -111950,6 +111959,8 @@ class _StringsId extends _StringsEn {
   String get lyrics_blur_hint =>
       'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Ukuran Font Lirik';
   @override
   String get lyrics_font_size_hint =>
@@ -134065,6 +134076,8 @@ class _StringsIt extends _StringsEn {
   String get lyrics_blur_hint =>
       'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Dimensione carattere testi';
   @override
   String get lyrics_font_size_hint =>
@@ -155792,6 +155805,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get lyrics_blur_hint => 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => '歌詞フォントサイズ';
   @override
   String get lyrics_font_size_hint => '歌詞フォントサイズはブックモードとは独立しています';
@@ -176968,6 +176983,8 @@ class _StringsKo extends _StringsEn {
   String get lyrics_blur => '가사 흐리게';
   @override
   String get lyrics_blur_hint => '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '가사 글꼴 크기';
   @override
@@ -198652,6 +198669,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Lettergrootte songtekst';
   @override
@@ -220851,6 +220870,8 @@ class _StringsPtBr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Tamanho da fonte das letras';
   @override
   String get lyrics_font_size_hint =>
@@ -243033,6 +243054,8 @@ class _StringsRu extends _StringsEn {
   String get lyrics_blur_hint =>
       'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Размер шрифта текста песен';
   @override
   String get lyrics_font_size_hint =>
@@ -265050,6 +265073,8 @@ class _StringsTh extends _StringsEn {
   String get lyrics_blur_hint =>
       'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'ขนาดตัวอักษรเนื้อเพลง';
   @override
   String get lyrics_font_size_hint =>
@@ -287009,6 +287034,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Şarkı Sözü Yazı Boyutu';
   @override
@@ -309030,6 +309057,8 @@ class _StringsVi extends _StringsEn {
   String get lyrics_blur_hint =>
       'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => 'Cỡ chữ lời bài hát';
   @override
   String get lyrics_font_size_hint =>
@@ -330125,6 +330154,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lyrics_blur_hint => '听力沉浸：模糊当前句，悬停或点击显形';
   @override
+  String get lyrics_exit_to_library => '关闭并返回书架';
+  @override
   String get lyrics_font_size => '歌词字号';
   @override
   String get lyrics_font_size_hint => '歌词字号与书籍模式独立';
@@ -350395,6 +350426,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lyrics_blur_hint => '聽力沉浸：模糊當前句，懸停或點擊顯形';
   @override
+  String get lyrics_exit_to_library => 'Close and return to library';
+  @override
   String get lyrics_font_size => '歌詞字體大小';
   @override
   String get lyrics_font_size_hint => '歌詞字體大小獨立於書籍模式';
@@ -370052,6 +370085,8 @@ extension on _StringsEn {
         return 'Blur lyrics';
       case 'lyrics_blur_hint':
         return 'Blur the current line for listening immersion; hover or tap to reveal';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lyrics font size';
       case 'lyrics_font_size_hint':
@@ -388757,6 +388792,8 @@ extension on _StringsAr {
         return 'تمويه كلمات الأغاني';
       case 'lyrics_blur_hint':
         return 'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'حجم خط كلمات الأغاني';
       case 'lyrics_font_size_hint':
@@ -407503,6 +407540,8 @@ extension on _StringsDe {
         return 'Liedtext unscharf';
       case 'lyrics_blur_hint':
         return 'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Liedtext-Schriftgröße';
       case 'lyrics_font_size_hint':
@@ -426270,6 +426309,8 @@ extension on _StringsEs {
         return 'Difuminar letras';
       case 'lyrics_blur_hint':
         return 'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamaño de fuente de letras';
       case 'lyrics_font_size_hint':
@@ -445047,6 +445088,8 @@ extension on _StringsFr {
         return 'Flouter les paroles';
       case 'lyrics_blur_hint':
         return 'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Taille de police des paroles';
       case 'lyrics_font_size_hint':
@@ -463799,6 +463842,8 @@ extension on _StringsId {
         return 'Buramkan lirik';
       case 'lyrics_blur_hint':
         return 'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Ukuran Font Lirik';
       case 'lyrics_font_size_hint':
@@ -482535,6 +482580,8 @@ extension on _StringsIt {
         return 'Sfoca testi';
       case 'lyrics_blur_hint':
         return 'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Dimensione carattere testi';
       case 'lyrics_font_size_hint':
@@ -501235,6 +501282,8 @@ extension on _StringsJa {
         return '歌詞をぼかす';
       case 'lyrics_blur_hint':
         return 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞フォントサイズ';
       case 'lyrics_font_size_hint':
@@ -519864,6 +519913,8 @@ extension on _StringsKo {
         return '가사 흐리게';
       case 'lyrics_blur_hint':
         return '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '가사 글꼴 크기';
       case 'lyrics_font_size_hint':
@@ -538560,6 +538611,8 @@ extension on _StringsNl {
         return 'Songtekst vervagen';
       case 'lyrics_blur_hint':
         return 'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lettergrootte songtekst';
       case 'lyrics_font_size_hint':
@@ -557312,6 +557365,8 @@ extension on _StringsPtBr {
         return 'Desfocar letras';
       case 'lyrics_blur_hint':
         return 'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamanho da fonte das letras';
       case 'lyrics_font_size_hint':
@@ -576066,6 +576121,8 @@ extension on _StringsRu {
         return 'Размытие текста песен';
       case 'lyrics_blur_hint':
         return 'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Размер шрифта текста песен';
       case 'lyrics_font_size_hint':
@@ -594793,6 +594850,8 @@ extension on _StringsTh {
         return 'เบลอเนื้อเพลง';
       case 'lyrics_blur_hint':
         return 'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'ขนาดตัวอักษรเนื้อเพลง';
       case 'lyrics_font_size_hint':
@@ -613520,6 +613579,8 @@ extension on _StringsTr {
         return 'Sözleri bulanıklaştır';
       case 'lyrics_blur_hint':
         return 'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Şarkı Sözü Yazı Boyutu';
       case 'lyrics_font_size_hint':
@@ -632249,6 +632310,8 @@ extension on _StringsVi {
         return 'Làm mờ lời bài';
       case 'lyrics_blur_hint':
         return 'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Cỡ chữ lời bài hát';
       case 'lyrics_font_size_hint':
@@ -650858,6 +650921,8 @@ extension on _StringsZhCn {
         return '模糊歌词';
       case 'lyrics_blur_hint':
         return '听力沉浸：模糊当前句，悬停或点击显形';
+      case 'lyrics_exit_to_library':
+        return '关闭并返回书架';
       case 'lyrics_font_size':
         return '歌词字号';
       case 'lyrics_font_size_hint':
@@ -669374,6 +669439,8 @@ extension on _StringsZhHk {
         return '模糊歌詞';
       case 'lyrics_blur_hint':
         return '聽力沉浸：模糊當前句，懸停或點擊顯形';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞字體大小';
       case 'lyrics_font_size_hint':
