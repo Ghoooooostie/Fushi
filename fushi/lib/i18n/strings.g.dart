@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153051 (9003 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12973,7 +12973,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_search_hint => 'Search or enter address';
   String get web_browser_site_add => 'Add to sites';
   String get web_browser_site_added => 'Added to sites';
+  String get web_browser_site_edit => 'Edit site';
+  String get web_browser_site_name => 'Name';
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  String get web_browser_site_new => 'Add site';
   String get web_browser_site_remove => 'Remove from sites';
+  String get web_browser_site_url => 'Address';
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
   String get web_browser_sites_title => 'Sites';
@@ -34765,7 +34772,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -57011,7 +57031,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -79312,7 +79345,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -101695,7 +101741,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -123737,7 +123796,20 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -145936,7 +146008,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -167105,7 +167190,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -188332,7 +188430,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -210481,7 +210592,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -232701,7 +232825,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -254867,7 +255004,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -276709,7 +276859,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -298755,7 +298918,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -320729,7 +320905,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -340812,7 +341001,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_site_added => '已加入站点';
   @override
+  String get web_browser_site_edit => '编辑站点';
+  @override
+  String get web_browser_site_name => '名称';
+  @override
+  String get web_browser_site_name_hint => '留空则使用域名';
+  @override
+  String get web_browser_site_new => '添加站点';
+  @override
   String get web_browser_site_remove => '从站点移除';
+  @override
+  String get web_browser_site_url => '地址';
+  @override
+  String get web_browser_site_url_invalid =>
+      '请输入网址，如 https://example.com 或 http://localhost:8080';
   @override
   String get web_browser_sites_empty => '还没有站点。在地址栏打开网页后，可以把它加入站点。';
   @override
@@ -361381,7 +361583,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_site_added => 'Added to sites';
   @override
+  String get web_browser_site_edit => 'Edit site';
+  @override
+  String get web_browser_site_name => 'Name';
+  @override
+  String get web_browser_site_name_hint => 'Leave empty to use the host name';
+  @override
+  String get web_browser_site_new => 'Add site';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_site_url => 'Address';
+  @override
+  String get web_browser_site_url_invalid =>
+      'Enter a web address, such as https://example.com or http://localhost:8080';
   @override
   String get web_browser_sites_empty =>
       'No sites yet. Open a page from the address bar, then add it to your sites.';
@@ -380096,8 +380311,20 @@ extension on _StringsEn {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -398796,8 +399023,20 @@ extension on _StringsAr {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -417572,8 +417811,20 @@ extension on _StringsDe {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -436330,8 +436581,20 @@ extension on _StringsEs {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -455106,8 +455369,20 @@ extension on _StringsFr {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -473826,8 +474101,20 @@ extension on _StringsId {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -492582,8 +492869,20 @@ extension on _StringsIt {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -511206,8 +511505,20 @@ extension on _StringsJa {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -529843,8 +530154,20 @@ extension on _StringsKo {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -548591,8 +548914,20 @@ extension on _StringsNl {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -567334,8 +567669,20 @@ extension on _StringsPtBr {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -586082,8 +586429,20 @@ extension on _StringsRu {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -604786,8 +605145,20 @@ extension on _StringsTh {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -623521,8 +623892,20 @@ extension on _StringsTr {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -642239,8 +642622,20 @@ extension on _StringsVi {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
@@ -660730,8 +661125,20 @@ extension on _StringsZhCn {
         return '加入站点';
       case 'web_browser_site_added':
         return '已加入站点';
+      case 'web_browser_site_edit':
+        return '编辑站点';
+      case 'web_browser_site_name':
+        return '名称';
+      case 'web_browser_site_name_hint':
+        return '留空则使用域名';
+      case 'web_browser_site_new':
+        return '添加站点';
       case 'web_browser_site_remove':
         return '从站点移除';
+      case 'web_browser_site_url':
+        return '地址';
+      case 'web_browser_site_url_invalid':
+        return '请输入网址，如 https://example.com 或 http://localhost:8080';
       case 'web_browser_sites_empty':
         return '还没有站点。在地址栏打开网页后，可以把它加入站点。';
       case 'web_browser_sites_title':
@@ -679285,8 +679692,20 @@ extension on _StringsZhHk {
         return 'Add to sites';
       case 'web_browser_site_added':
         return 'Added to sites';
+      case 'web_browser_site_edit':
+        return 'Edit site';
+      case 'web_browser_site_name':
+        return 'Name';
+      case 'web_browser_site_name_hint':
+        return 'Leave empty to use the host name';
+      case 'web_browser_site_new':
+        return 'Add site';
       case 'web_browser_site_remove':
         return 'Remove from sites';
+      case 'web_browser_site_url':
+        return 'Address';
+      case 'web_browser_site_url_invalid':
+        return 'Enter a web address, such as https://example.com or http://localhost:8080';
       case 'web_browser_sites_empty':
         return 'No sites yet. Open a page from the address bar, then add it to your sites.';
       case 'web_browser_sites_title':
