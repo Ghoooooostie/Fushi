@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153068 (9004 per locale)
+/// Strings: 153102 (9006 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7060,6 +7060,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Clears this source preferences and cookies. Installed extensions are kept.';
   String get mihon_source_empty =>
       'No enabled manga sources. Install and enable an extension first.';
+  String get mihon_source_languages => 'Languages';
   String get mihon_source_latest => 'Latest';
   String get mihon_source_login => 'Log in';
   String get mihon_source_login_done => 'Done';
@@ -7079,6 +7080,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_move_down => 'Move down';
   String get mihon_source_move_up => 'Move up';
   String get mihon_source_no_results => 'No manga found.';
+  String get mihon_source_pick_language => 'Choose a language';
   String get mihon_source_pin => 'Pin to top';
   String get mihon_source_popular => 'Popular';
   String get mihon_source_preferences => 'Source preferences';
@@ -24650,6 +24652,8 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_empty =>
       'لا توجد مصادر مانغا مفعّلة. قم بتثبيت وتفعيل إضافة أولًا.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'الأحدث';
   @override
   String get mihon_source_login => 'تسجيل الدخول';
@@ -24682,6 +24686,8 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_move_up => 'نقل لأعلى';
   @override
   String get mihon_source_no_results => 'لم يتم العثور على مانغا.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'تثبيت في الأعلى';
   @override
@@ -46759,6 +46765,8 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_empty =>
       'Keine aktivierten Manga-Quellen. Installieren und aktivieren Sie zuerst eine Erweiterung.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Neueste';
   @override
   String get mihon_source_login => 'Anmelden';
@@ -46791,6 +46799,8 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_move_up => 'Nach oben';
   @override
   String get mihon_source_no_results => 'Kein Manga gefunden.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Oben anheften';
   @override
@@ -69045,6 +69055,8 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_empty =>
       'Sin fuentes de manga activas. Instale y active una extensión primero.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Último';
   @override
   String get mihon_source_login => 'Iniciar sesión';
@@ -69077,6 +69089,8 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_move_up => 'Subir';
   @override
   String get mihon_source_no_results => 'No se encontró manga.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Fijar arriba';
   @override
@@ -91408,6 +91422,8 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_empty =>
       'Aucune source de manga activée. Installez et activez d\'abord une extension.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Récents';
   @override
   String get mihon_source_login => 'Se connecter';
@@ -91441,6 +91457,8 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_move_up => 'Monter';
   @override
   String get mihon_source_no_results => 'Aucun manga trouvé.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Épingler en haut';
   @override
@@ -113610,6 +113628,8 @@ class _StringsId extends _StringsEn {
   String get mihon_source_empty =>
       'Tidak ada sumber manga yang aktif. Instal dan aktifkan ekstensi terlebih dahulu.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Terbaru';
   @override
   String get mihon_source_login => 'Masuk';
@@ -113642,6 +113662,8 @@ class _StringsId extends _StringsEn {
   String get mihon_source_move_up => 'Naikkan';
   @override
   String get mihon_source_no_results => 'Manga tidak ditemukan.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Sematkan di atas';
   @override
@@ -135763,6 +135785,8 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_empty =>
       'Nessuna fonte manga abilitata. Installa e abilita prima un\'estensione.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Ultimi';
   @override
   String get mihon_source_login => 'Accedi';
@@ -135795,6 +135819,8 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_move_up => 'Sposta su';
   @override
   String get mihon_source_no_results => 'Nessun manga trovato.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Fissa in alto';
   @override
@@ -157406,6 +157432,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_source_empty => '有効なマンガソースがありません。先に拡張機能をインストールして有効にしてください。';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => '最新';
   @override
   String get mihon_source_login => 'ログイン';
@@ -157436,6 +157464,8 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_move_up => '上へ移動';
   @override
   String get mihon_source_no_results => 'マンガが見つかりませんでした。';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => '先頭に固定';
   @override
@@ -178605,6 +178635,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_source_empty => '활성화된 만화 소스가 없습니다. 먼저 확장 프로그램을 설치하고 활성화하세요.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => '최신';
   @override
   String get mihon_source_login => '로그인';
@@ -178634,6 +178666,8 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_move_up => '위로 이동';
   @override
   String get mihon_source_no_results => '만화를 찾을 수 없습니다.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => '맨 위에 고정';
   @override
@@ -200367,6 +200401,8 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_empty =>
       'Geen ingeschakelde mangabronnen. Installeer en schakel eerst een extensie in.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Nieuwste';
   @override
   String get mihon_source_login => 'Inloggen';
@@ -200399,6 +200435,8 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_move_up => 'Omhoog verplaatsen';
   @override
   String get mihon_source_no_results => 'Geen manga gevonden.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Bovenaan vastzetten';
   @override
@@ -222583,6 +222621,8 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_empty =>
       'Nenhuma fonte de mangá ativada. Instale e ative uma extensão primeiro.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Recentes';
   @override
   String get mihon_source_login => 'Entrar';
@@ -222615,6 +222655,8 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_move_up => 'Mover para cima';
   @override
   String get mihon_source_no_results => 'Nenhum mangá encontrado.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Fixar no topo';
   @override
@@ -244772,6 +244814,8 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_empty =>
       'Нет включённых источников манги. Сначала установите и включите расширение.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Новинки';
   @override
   String get mihon_source_login => 'Войти';
@@ -244804,6 +244848,8 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_move_up => 'Переместить вверх';
   @override
   String get mihon_source_no_results => 'Манга не найдена.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Закрепить вверху';
   @override
@@ -266773,6 +266819,8 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_empty =>
       'ไม่มีแหล่งมังงะที่เปิดใช้งาน ติดตั้งและเปิดใช้งานส่วนขยายก่อน';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'ล่าสุด';
   @override
   String get mihon_source_login => 'เข้าสู่ระบบ';
@@ -266805,6 +266853,8 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_move_up => 'เลื่อนขึ้น';
   @override
   String get mihon_source_no_results => 'ไม่พบมังงะ';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'ปักหมุดไว้บนสุด';
   @override
@@ -288759,6 +288809,8 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_empty =>
       'Etkin manga kaynağı yok. Önce bir eklenti yükleyin ve etkinleştirin.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'En yeni';
   @override
   String get mihon_source_login => 'Giriş yap';
@@ -288791,6 +288843,8 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_move_up => 'Yukarı taşı';
   @override
   String get mihon_source_no_results => 'Manga bulunamadı.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'En üste sabitle';
   @override
@@ -310781,6 +310835,8 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_empty =>
       'Không có nguồn truyện tranh nào. Hãy cài đặt và bật tiện ích trước.';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => 'Mới nhất';
   @override
   String get mihon_source_login => 'Đăng nhập';
@@ -310813,6 +310869,8 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_move_up => 'Chuyển lên';
   @override
   String get mihon_source_no_results => 'Không tìm thấy truyện tranh.';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => 'Ghim lên đầu';
   @override
@@ -331771,6 +331829,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_source_empty => '没有已启用的漫画源。请先安装并启用漫画扩展。';
   @override
+  String get mihon_source_languages => '语言';
+  @override
   String get mihon_source_latest => '最新';
   @override
   String get mihon_source_login => '登录';
@@ -331800,6 +331860,8 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_move_up => '上移';
   @override
   String get mihon_source_no_results => '没有找到漫画。';
+  @override
+  String get mihon_source_pick_language => '选择语言';
   @override
   String get mihon_source_pin => '置顶';
   @override
@@ -352068,6 +352130,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_empty => '沒有已啟用的漫畫源。請先安裝並啟用漫畫擴展。';
   @override
+  String get mihon_source_languages => 'Languages';
+  @override
   String get mihon_source_latest => '最新';
   @override
   String get mihon_source_login => '登入';
@@ -352097,6 +352161,8 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_source_move_up => '上移';
   @override
   String get mihon_source_no_results => '沒有找到漫畫。';
+  @override
+  String get mihon_source_pick_language => 'Choose a language';
   @override
   String get mihon_source_pin => '置頂';
   @override
@@ -371644,6 +371710,8 @@ extension on _StringsEn {
         return 'Clears this source preferences and cookies. Installed extensions are kept.';
       case 'mihon_source_empty':
         return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Latest';
       case 'mihon_source_login':
@@ -371673,6 +371741,8 @@ extension on _StringsEn {
         return 'Move up';
       case 'mihon_source_no_results':
         return 'No manga found.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Pin to top';
       case 'mihon_source_popular':
@@ -390359,6 +390429,8 @@ extension on _StringsAr {
         return 'يمسح تفضيلات وملفات تعريف الارتباط لهذا المصدر. الإضافات المثبتة تبقى.';
       case 'mihon_source_empty':
         return 'لا توجد مصادر مانغا مفعّلة. قم بتثبيت وتفعيل إضافة أولًا.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'الأحدث';
       case 'mihon_source_login':
@@ -390388,6 +390460,8 @@ extension on _StringsAr {
         return 'نقل لأعلى';
       case 'mihon_source_no_results':
         return 'لم يتم العثور على مانغا.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'تثبيت في الأعلى';
       case 'mihon_source_popular':
@@ -409125,6 +409199,8 @@ extension on _StringsDe {
         return 'Löscht die Einstellungen und Cookies dieser Quelle. Installierte Erweiterungen bleiben erhalten.';
       case 'mihon_source_empty':
         return 'Keine aktivierten Manga-Quellen. Installieren und aktivieren Sie zuerst eine Erweiterung.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Neueste';
       case 'mihon_source_login':
@@ -409154,6 +409230,8 @@ extension on _StringsDe {
         return 'Nach oben';
       case 'mihon_source_no_results':
         return 'Kein Manga gefunden.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Oben anheften';
       case 'mihon_source_popular':
@@ -427901,6 +427979,8 @@ extension on _StringsEs {
         return 'Borra las preferencias y cookies de esta fuente. Las extensiones instaladas se conservan.';
       case 'mihon_source_empty':
         return 'Sin fuentes de manga activas. Instale y active una extensión primero.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Último';
       case 'mihon_source_login':
@@ -427930,6 +428010,8 @@ extension on _StringsEs {
         return 'Subir';
       case 'mihon_source_no_results':
         return 'No se encontró manga.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Fijar arriba';
       case 'mihon_source_popular':
@@ -446687,6 +446769,8 @@ extension on _StringsFr {
         return 'Efface les préférences et cookies de cette source. Les extensions installées sont conservées.';
       case 'mihon_source_empty':
         return 'Aucune source de manga activée. Installez et activez d\'abord une extension.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Récents';
       case 'mihon_source_login':
@@ -446716,6 +446800,8 @@ extension on _StringsFr {
         return 'Monter';
       case 'mihon_source_no_results':
         return 'Aucun manga trouvé.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Épingler en haut';
       case 'mihon_source_popular':
@@ -465442,6 +465528,8 @@ extension on _StringsId {
         return 'Menghapus preferensi dan cookie sumber ini. Ekstensi yang terinstal dipertahankan.';
       case 'mihon_source_empty':
         return 'Tidak ada sumber manga yang aktif. Instal dan aktifkan ekstensi terlebih dahulu.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Terbaru';
       case 'mihon_source_login':
@@ -465471,6 +465559,8 @@ extension on _StringsId {
         return 'Naikkan';
       case 'mihon_source_no_results':
         return 'Manga tidak ditemukan.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Sematkan di atas';
       case 'mihon_source_popular':
@@ -484194,6 +484284,8 @@ extension on _StringsIt {
         return 'Cancella le preferenze e i cookie di questa fonte. Le estensioni installate vengono mantenute.';
       case 'mihon_source_empty':
         return 'Nessuna fonte manga abilitata. Installa e abilita prima un\'estensione.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Ultimi';
       case 'mihon_source_login':
@@ -484223,6 +484315,8 @@ extension on _StringsIt {
         return 'Sposta su';
       case 'mihon_source_no_results':
         return 'Nessun manga trovato.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Fissa in alto';
       case 'mihon_source_popular':
@@ -502894,6 +502988,8 @@ extension on _StringsJa {
         return 'このソースの設定とCookieをクリアします。インストール済みの拡張機能は保持されます。';
       case 'mihon_source_empty':
         return '有効なマンガソースがありません。先に拡張機能をインストールして有効にしてください。';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return '最新';
       case 'mihon_source_login':
@@ -502923,6 +503019,8 @@ extension on _StringsJa {
         return '上へ移動';
       case 'mihon_source_no_results':
         return 'マンガが見つかりませんでした。';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return '先頭に固定';
       case 'mihon_source_popular':
@@ -521532,6 +521630,8 @@ extension on _StringsKo {
         return '이 소스의 환경설정과 쿠키를 삭제합니다. 설치된 확장 프로그램은 유지됩니다.';
       case 'mihon_source_empty':
         return '활성화된 만화 소스가 없습니다. 먼저 확장 프로그램을 설치하고 활성화하세요.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return '최신';
       case 'mihon_source_login':
@@ -521560,6 +521660,8 @@ extension on _StringsKo {
         return '위로 이동';
       case 'mihon_source_no_results':
         return '만화를 찾을 수 없습니다.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return '맨 위에 고정';
       case 'mihon_source_popular':
@@ -540252,6 +540354,8 @@ extension on _StringsNl {
         return 'Wist de voorkeuren en cookies van deze bron. Geïnstalleerde extensies worden bewaard.';
       case 'mihon_source_empty':
         return 'Geen ingeschakelde mangabronnen. Installeer en schakel eerst een extensie in.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Nieuwste';
       case 'mihon_source_login':
@@ -540281,6 +540385,8 @@ extension on _StringsNl {
         return 'Omhoog verplaatsen';
       case 'mihon_source_no_results':
         return 'Geen manga gevonden.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Bovenaan vastzetten';
       case 'mihon_source_popular':
@@ -559012,6 +559118,8 @@ extension on _StringsPtBr {
         return 'Limpa as preferências e cookies desta fonte. Extensões instaladas são mantidas.';
       case 'mihon_source_empty':
         return 'Nenhuma fonte de mangá ativada. Instale e ative uma extensão primeiro.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Recentes';
       case 'mihon_source_login':
@@ -559041,6 +559149,8 @@ extension on _StringsPtBr {
         return 'Mover para cima';
       case 'mihon_source_no_results':
         return 'Nenhum mangá encontrado.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Fixar no topo';
       case 'mihon_source_popular':
@@ -577776,6 +577886,8 @@ extension on _StringsRu {
         return 'Очищает настройки и куки этого источника. Установленные расширения сохраняются.';
       case 'mihon_source_empty':
         return 'Нет включённых источников манги. Сначала установите и включите расширение.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Новинки';
       case 'mihon_source_login':
@@ -577805,6 +577917,8 @@ extension on _StringsRu {
         return 'Переместить вверх';
       case 'mihon_source_no_results':
         return 'Манга не найдена.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Закрепить вверху';
       case 'mihon_source_popular':
@@ -596505,6 +596619,8 @@ extension on _StringsTh {
         return 'ล้างการตั้งค่าและคุกกี้ของแหล่งนี้ ส่วนขยายที่ติดตั้งจะยังคงอยู่';
       case 'mihon_source_empty':
         return 'ไม่มีแหล่งมังงะที่เปิดใช้งาน ติดตั้งและเปิดใช้งานส่วนขยายก่อน';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'ล่าสุด';
       case 'mihon_source_login':
@@ -596534,6 +596650,8 @@ extension on _StringsTh {
         return 'เลื่อนขึ้น';
       case 'mihon_source_no_results':
         return 'ไม่พบมังงะ';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'ปักหมุดไว้บนสุด';
       case 'mihon_source_popular':
@@ -615247,6 +615365,8 @@ extension on _StringsTr {
         return 'Bu kaynağın tercihlerini ve çerezlerini temizler. Yüklü eklentiler korunur.';
       case 'mihon_source_empty':
         return 'Etkin manga kaynağı yok. Önce bir eklenti yükleyin ve etkinleştirin.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'En yeni';
       case 'mihon_source_login':
@@ -615276,6 +615396,8 @@ extension on _StringsTr {
         return 'Yukarı taşı';
       case 'mihon_source_no_results':
         return 'Manga bulunamadı.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'En üste sabitle';
       case 'mihon_source_popular':
@@ -633981,6 +634103,8 @@ extension on _StringsVi {
         return 'Xóa cài đặt và cookie của nguồn này. Tiện ích đã cài đặt vẫn được giữ lại.';
       case 'mihon_source_empty':
         return 'Không có nguồn truyện tranh nào. Hãy cài đặt và bật tiện ích trước.';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return 'Mới nhất';
       case 'mihon_source_login':
@@ -634010,6 +634134,8 @@ extension on _StringsVi {
         return 'Chuyển lên';
       case 'mihon_source_no_results':
         return 'Không tìm thấy truyện tranh.';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return 'Ghim lên đầu';
       case 'mihon_source_popular':
@@ -652587,6 +652713,8 @@ extension on _StringsZhCn {
         return '清除该来源的偏好与 Cookie，不会卸载扩展。';
       case 'mihon_source_empty':
         return '没有已启用的漫画源。请先安装并启用漫画扩展。';
+      case 'mihon_source_languages':
+        return '语言';
       case 'mihon_source_latest':
         return '最新';
       case 'mihon_source_login':
@@ -652615,6 +652743,8 @@ extension on _StringsZhCn {
         return '上移';
       case 'mihon_source_no_results':
         return '没有找到漫画。';
+      case 'mihon_source_pick_language':
+        return '选择语言';
       case 'mihon_source_pin':
         return '置顶';
       case 'mihon_source_popular':
@@ -671119,6 +671249,8 @@ extension on _StringsZhHk {
         return '清除該來源的偏好與 Cookie，不會解除安裝擴展。';
       case 'mihon_source_empty':
         return '沒有已啟用的漫畫源。請先安裝並啟用漫畫擴展。';
+      case 'mihon_source_languages':
+        return 'Languages';
       case 'mihon_source_latest':
         return '最新';
       case 'mihon_source_login':
@@ -671147,6 +671279,8 @@ extension on _StringsZhHk {
         return '上移';
       case 'mihon_source_no_results':
         return '沒有找到漫畫。';
+      case 'mihon_source_pick_language':
+        return 'Choose a language';
       case 'mihon_source_pin':
         return '置頂';
       case 'mihon_source_popular':
