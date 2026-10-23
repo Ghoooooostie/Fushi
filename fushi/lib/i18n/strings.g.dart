@@ -31777,7 +31777,7 @@ class _StringsAr extends _StringsEn {
   String get updates_notify_video_episode => 'إشعار بحلقات الأنمي الجديدة';
   @override
   String get updates_notify_video_episode_hint =>
-      'تنبيه عند انتهاء تنزيل حلقة جديدة لمسلسل مشترك به.';
+      'تنبيه عند انتهاء تنزيل حلقة جديدة لمسلسل مشترك به، أو عند صدور حلقات جديدة لعمل في مكتبة الفيديو.';
   @override
   String get updates_system_notifications => 'إشعارات النظام';
   @override
@@ -54175,7 +54175,7 @@ class _StringsDe extends _StringsEn {
       'Über neue Anime-Folgen benachrichtigen';
   @override
   String get updates_notify_video_episode_hint =>
-      'Benachrichtigen, wenn bei einer abonnierten Serie der Download einer neuen Folge abgeschlossen ist.';
+      'Benachrichtigen, wenn bei einer abonnierten Serie der Download einer neuen Folge abgeschlossen ist oder eine Serie in deiner Videobibliothek neue Folgen bekommt.';
   @override
   String get updates_system_notifications => 'Systembenachrichtigungen';
   @override
@@ -76678,7 +76678,7 @@ class _StringsEs extends _StringsEn {
       'Avisar de nuevos episodios de anime';
   @override
   String get updates_notify_video_episode_hint =>
-      'Avisa cuando una serie suscrita termina de descargar un episodio nuevo.';
+      'Avisa cuando una serie suscrita termina de descargar un episodio nuevo o cuando una serie de tu videoteca recibe episodios nuevos.';
   @override
   String get updates_system_notifications => 'Notificaciones del sistema';
   @override
@@ -99256,7 +99256,7 @@ class _StringsFr extends _StringsEn {
       'Notifier des nouveaux épisodes d\'anime';
   @override
   String get updates_notify_video_episode_hint =>
-      'Alerte quand une série suivie a fini de télécharger un nouvel épisode.';
+      'Alerte quand une série suivie a fini de télécharger un nouvel épisode ou quand une série de ta vidéothèque reçoit de nouveaux épisodes.';
   @override
   String get updates_system_notifications => 'Notifications système';
   @override
@@ -121574,7 +121574,7 @@ class _StringsId extends _StringsEn {
       'Beri tahu tentang episode anime baru';
   @override
   String get updates_notify_video_episode_hint =>
-      'Peringatkan saat serial yang dilanggan selesai mengunduh episode baru.';
+      'Peringatkan saat serial yang dilanggan selesai mengunduh episode baru, atau saat serial di pustaka video mendapat episode baru.';
   @override
   String get updates_system_notifications => 'Notifikasi sistem';
   @override
@@ -143971,7 +143971,7 @@ class _StringsIt extends _StringsEn {
   String get updates_notify_video_episode => 'Notifica nuovi episodi anime';
   @override
   String get updates_notify_video_episode_hint =>
-      'Avvisa quando una serie seguita finisce di scaricare un nuovo episodio.';
+      'Avvisa quando una serie seguita finisce di scaricare un nuovo episodio o quando una serie nella tua videoteca riceve nuovi episodi.';
   @override
   String get updates_system_notifications => 'Notifiche di sistema';
   @override
@@ -165556,7 +165556,7 @@ class _StringsJa extends _StringsEn {
   String get updates_notify_video_episode => 'アニメの新エピソードを通知';
   @override
   String get updates_notify_video_episode_hint =>
-      '購読中のシリーズの新エピソードのダウンロードが完了したときに通知します。';
+      '購読中のシリーズの新エピソードのダウンロードが完了したとき、またはビデオライブラリの作品に新しいエピソードが出たときに通知します。';
   @override
   String get updates_system_notifications => 'システム通知';
   @override
@@ -186963,7 +186963,7 @@ class _StringsKo extends _StringsEn {
   String get updates_notify_video_episode => '새 애니메이션 에피소드 알림';
   @override
   String get updates_notify_video_episode_hint =>
-      '구독한 시리즈의 새 에피소드 다운로드가 끝나면 알립니다.';
+      '구독한 시리즈의 새 에피소드 다운로드가 끝나거나 동영상 라이브러리의 작품에 새 에피소드가 나오면 알립니다.';
   @override
   String get updates_system_notifications => '시스템 알림';
   @override
@@ -209172,7 +209172,7 @@ class _StringsNl extends _StringsEn {
       'Melden bij nieuwe anime-afleveringen';
   @override
   String get updates_notify_video_episode_hint =>
-      'Waarschuwt wanneer een geabonneerde serie een nieuwe aflevering heeft gedownload.';
+      'Waarschuwt wanneer een geabonneerde serie een nieuwe aflevering heeft gedownload of een serie in je videobibliotheek nieuwe afleveringen krijgt.';
   @override
   String get updates_system_notifications => 'Systeemmeldingen';
   @override
@@ -231585,7 +231585,7 @@ class _StringsPtBr extends _StringsEn {
       'Notificar sobre novos episódios de anime';
   @override
   String get updates_notify_video_episode_hint =>
-      'Avisa quando uma série assinada termina de baixar um novo episódio.';
+      'Avisa quando uma série assinada termina de baixar um novo episódio ou quando uma série da sua videoteca recebe novos episódios.';
   @override
   String get updates_system_notifications => 'Notificações do sistema';
   @override
@@ -253972,7 +253972,7 @@ class _StringsRu extends _StringsEn {
   String get updates_notify_video_episode => 'Уведомлять о новых сериях аниме';
   @override
   String get updates_notify_video_episode_hint =>
-      'Оповещать, когда для подписанного сериала скачана новая серия.';
+      'Оповещать, когда для подписанного сериала скачана новая серия или у сериала в видеотеке выходят новые серии.';
   @override
   String get updates_system_notifications => 'Системные уведомления';
   @override
@@ -276099,7 +276099,7 @@ class _StringsTh extends _StringsEn {
   String get updates_notify_video_episode => 'แจ้งเตือนตอนอนิเมะใหม่';
   @override
   String get updates_notify_video_episode_hint =>
-      'แจ้งเตือนเมื่อซีรีส์ที่ติดตามดาวน์โหลดตอนใหม่เสร็จ';
+      'แจ้งเตือนเมื่อซีรีส์ที่ติดตามดาวน์โหลดตอนใหม่เสร็จ หรือเมื่อผลงานในคลังวิดีโอมีตอนใหม่';
   @override
   String get updates_system_notifications => 'การแจ้งเตือนของระบบ';
   @override
@@ -298327,7 +298327,7 @@ class _StringsTr extends _StringsEn {
   String get updates_notify_video_episode => 'Yeni anime bölümlerini bildir';
   @override
   String get updates_notify_video_episode_hint =>
-      'Abone olunan bir dizi yeni bir bölümü indirmeyi bitirdiğinde uyar.';
+      'Abone olunan bir dizi yeni bir bölümü indirmeyi bitirdiğinde veya video kitaplığındaki bir diziye yeni bölümler geldiğinde uyar.';
   @override
   String get updates_system_notifications => 'Sistem bildirimleri';
   @override
@@ -320525,7 +320525,7 @@ class _StringsVi extends _StringsEn {
   String get updates_notify_video_episode => 'Thông báo về tập anime mới';
   @override
   String get updates_notify_video_episode_hint =>
-      'Báo khi một series đã đăng ký tải xong tập mới.';
+      'Báo khi một series đã đăng ký tải xong tập mới, hoặc khi một tác phẩm trong thư viện video có tập mới.';
   @override
   String get updates_system_notifications => 'Thông báo hệ thống';
   @override
@@ -399921,7 +399921,7 @@ extension on _StringsAr {
       case 'updates_notify_video_episode':
         return 'إشعار بحلقات الأنمي الجديدة';
       case 'updates_notify_video_episode_hint':
-        return 'تنبيه عند انتهاء تنزيل حلقة جديدة لمسلسل مشترك به.';
+        return 'تنبيه عند انتهاء تنزيل حلقة جديدة لمسلسل مشترك به، أو عند صدور حلقات جديدة لعمل في مكتبة الفيديو.';
       case 'updates_system_notifications':
         return 'إشعارات النظام';
       case 'updates_system_notifications_hint':
@@ -418864,7 +418864,7 @@ extension on _StringsDe {
       case 'updates_notify_video_episode':
         return 'Über neue Anime-Folgen benachrichtigen';
       case 'updates_notify_video_episode_hint':
-        return 'Benachrichtigen, wenn bei einer abonnierten Serie der Download einer neuen Folge abgeschlossen ist.';
+        return 'Benachrichtigen, wenn bei einer abonnierten Serie der Download einer neuen Folge abgeschlossen ist oder eine Serie in deiner Videobibliothek neue Folgen bekommt.';
       case 'updates_system_notifications':
         return 'Systembenachrichtigungen';
       case 'updates_system_notifications_hint':
@@ -437798,7 +437798,7 @@ extension on _StringsEs {
       case 'updates_notify_video_episode':
         return 'Avisar de nuevos episodios de anime';
       case 'updates_notify_video_episode_hint':
-        return 'Avisa cuando una serie suscrita termina de descargar un episodio nuevo.';
+        return 'Avisa cuando una serie suscrita termina de descargar un episodio nuevo o cuando una serie de tu videoteca recibe episodios nuevos.';
       case 'updates_system_notifications':
         return 'Notificaciones del sistema';
       case 'updates_system_notifications_hint':
@@ -456746,7 +456746,7 @@ extension on _StringsFr {
       case 'updates_notify_video_episode':
         return 'Notifier des nouveaux épisodes d\'anime';
       case 'updates_notify_video_episode_hint':
-        return 'Alerte quand une série suivie a fini de télécharger un nouvel épisode.';
+        return 'Alerte quand une série suivie a fini de télécharger un nouvel épisode ou quand une série de ta vidéothèque reçoit de nouveaux épisodes.';
       case 'updates_system_notifications':
         return 'Notifications système';
       case 'updates_system_notifications_hint':
@@ -475647,7 +475647,7 @@ extension on _StringsId {
       case 'updates_notify_video_episode':
         return 'Beri tahu tentang episode anime baru';
       case 'updates_notify_video_episode_hint':
-        return 'Peringatkan saat serial yang dilanggan selesai mengunduh episode baru.';
+        return 'Peringatkan saat serial yang dilanggan selesai mengunduh episode baru, atau saat serial di pustaka video mendapat episode baru.';
       case 'updates_system_notifications':
         return 'Notifikasi sistem';
       case 'updates_system_notifications_hint':
@@ -494572,7 +494572,7 @@ extension on _StringsIt {
       case 'updates_notify_video_episode':
         return 'Notifica nuovi episodi anime';
       case 'updates_notify_video_episode_hint':
-        return 'Avvisa quando una serie seguita finisce di scaricare un nuovo episodio.';
+        return 'Avvisa quando una serie seguita finisce di scaricare un nuovo episodio o quando una serie nella tua videoteca riceve nuovi episodi.';
       case 'updates_system_notifications':
         return 'Notifiche di sistema';
       case 'updates_system_notifications_hint':
@@ -513397,7 +513397,7 @@ extension on _StringsJa {
       case 'updates_notify_video_episode':
         return 'アニメの新エピソードを通知';
       case 'updates_notify_video_episode_hint':
-        return '購読中のシリーズの新エピソードのダウンロードが完了したときに通知します。';
+        return '購読中のシリーズの新エピソードのダウンロードが完了したとき、またはビデオライブラリの作品に新しいエピソードが出たときに通知します。';
       case 'updates_system_notifications':
         return 'システム通知';
       case 'updates_system_notifications_hint':
@@ -532198,7 +532198,7 @@ extension on _StringsKo {
       case 'updates_notify_video_episode':
         return '새 애니메이션 에피소드 알림';
       case 'updates_notify_video_episode_hint':
-        return '구독한 시리즈의 새 에피소드 다운로드가 끝나면 알립니다.';
+        return '구독한 시리즈의 새 에피소드 다운로드가 끝나거나 동영상 라이브러리의 작품에 새 에피소드가 나오면 알립니다.';
       case 'updates_system_notifications':
         return '시스템 알림';
       case 'updates_system_notifications_hint':
@@ -551102,7 +551102,7 @@ extension on _StringsNl {
       case 'updates_notify_video_episode':
         return 'Melden bij nieuwe anime-afleveringen';
       case 'updates_notify_video_episode_hint':
-        return 'Waarschuwt wanneer een geabonneerde serie een nieuwe aflevering heeft gedownload.';
+        return 'Waarschuwt wanneer een geabonneerde serie een nieuwe aflevering heeft gedownload of een serie in je videobibliotheek nieuwe afleveringen krijgt.';
       case 'updates_system_notifications':
         return 'Systeemmeldingen';
       case 'updates_system_notifications_hint':
@@ -570020,7 +570020,7 @@ extension on _StringsPtBr {
       case 'updates_notify_video_episode':
         return 'Notificar sobre novos episódios de anime';
       case 'updates_notify_video_episode_hint':
-        return 'Avisa quando uma série assinada termina de baixar um novo episódio.';
+        return 'Avisa quando uma série assinada termina de baixar um novo episódio ou quando uma série da sua videoteca recebe novos episódios.';
       case 'updates_system_notifications':
         return 'Notificações do sistema';
       case 'updates_system_notifications_hint':
@@ -588945,7 +588945,7 @@ extension on _StringsRu {
       case 'updates_notify_video_episode':
         return 'Уведомлять о новых сериях аниме';
       case 'updates_notify_video_episode_hint':
-        return 'Оповещать, когда для подписанного сериала скачана новая серия.';
+        return 'Оповещать, когда для подписанного сериала скачана новая серия или у сериала в видеотеке выходят новые серии.';
       case 'updates_system_notifications':
         return 'Системные уведомления';
       case 'updates_system_notifications_hint':
@@ -607827,7 +607827,7 @@ extension on _StringsTh {
       case 'updates_notify_video_episode':
         return 'แจ้งเตือนตอนอนิเมะใหม่';
       case 'updates_notify_video_episode_hint':
-        return 'แจ้งเตือนเมื่อซีรีส์ที่ติดตามดาวน์โหลดตอนใหม่เสร็จ';
+        return 'แจ้งเตือนเมื่อซีรีส์ที่ติดตามดาวน์โหลดตอนใหม่เสร็จ หรือเมื่อผลงานในคลังวิดีโอมีตอนใหม่';
       case 'updates_system_notifications':
         return 'การแจ้งเตือนของระบบ';
       case 'updates_system_notifications_hint':
@@ -626731,7 +626731,7 @@ extension on _StringsTr {
       case 'updates_notify_video_episode':
         return 'Yeni anime bölümlerini bildir';
       case 'updates_notify_video_episode_hint':
-        return 'Abone olunan bir dizi yeni bir bölümü indirmeyi bitirdiğinde uyar.';
+        return 'Abone olunan bir dizi yeni bir bölümü indirmeyi bitirdiğinde veya video kitaplığındaki bir diziye yeni bölümler geldiğinde uyar.';
       case 'updates_system_notifications':
         return 'Sistem bildirimleri';
       case 'updates_system_notifications_hint':
@@ -645629,7 +645629,7 @@ extension on _StringsVi {
       case 'updates_notify_video_episode':
         return 'Thông báo về tập anime mới';
       case 'updates_notify_video_episode_hint':
-        return 'Báo khi một series đã đăng ký tải xong tập mới.';
+        return 'Báo khi một series đã đăng ký tải xong tập mới, hoặc khi một tác phẩm trong thư viện video có tập mới.';
       case 'updates_system_notifications':
         return 'Thông báo hệ thống';
       case 'updates_system_notifications_hint':
