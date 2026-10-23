@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152966 (8998 per locale)
+/// Strings: 152983 (8999 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8586,6 +8586,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'App-external lookup shortcut';
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_page_down =>
@@ -27282,6 +27284,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'إحضار إلى الواجهة وفتح صفحة البحث';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'التمرير لأسفل خطوة واحدة';
@@ -49426,6 +49431,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'In den Vordergrund holen und Nachschlageseite öffnen';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Einen Schritt nach unten scrollen';
@@ -71699,6 +71707,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Traer al frente y abrir la página de consulta';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Desplazar un paso hacia abajo';
@@ -94066,6 +94077,9 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Mettre au premier plan et ouvrir la page de recherche';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Défiler d\'un cran vers le bas';
   @override
@@ -116210,6 +116224,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Bawa ke depan dan buka halaman pencarian';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Gulir turun satu langkah';
@@ -138368,6 +138385,9 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Porta in primo piano e apri la pagina di ricerca';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Scorri in basso di un passo';
   @override
@@ -159871,6 +159891,9 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       '前面に出して辞書検索ページを開く';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down => '1行下にスクロール';
   @override
   String get shortcut_action_global_scroll_line_up => '1行上にスクロール';
@@ -181060,6 +181083,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       '앞으로 가져와 검색 페이지 열기';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => '한 단계 아래로 스크롤';
   @override
@@ -202929,6 +202955,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Naar voren halen en opzoekpagina openen';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Één stap omlaag scrollen';
@@ -225132,6 +225161,9 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Trazer para frente e abrir a página de consulta';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Rolar uma etapa para baixo';
   @override
@@ -247311,6 +247343,9 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Вывести на передний план и открыть страницу поиска';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Прокрутить вниз на один шаг';
   @override
@@ -269254,6 +269289,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => 'เลื่อนลงหนึ่งขั้น';
   @override
@@ -291246,6 +291284,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Öne getir ve arama sayfasını aç';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => 'Bir adım aşağı kaydır';
   @override
@@ -313242,6 +313283,9 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Đưa lên trước và mở trang tra từ';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down => 'Cuộn xuống một bước';
   @override
   String get shortcut_action_global_scroll_line_up => 'Cuộn lên một bước';
@@ -333995,6 +334039,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
   @override
+  String get shortcut_action_global_external_screen_ocr => '截屏识字（全局）';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滚动一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滚动一行';
@@ -354324,6 +354370,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
   @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滾動一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滾動一行';
@@ -373696,6 +373745,8 @@ extension on _StringsEn {
         return 'App-external lookup shortcut';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scroll down one step';
       case 'shortcut_action_global_scroll_line_up':
@@ -392400,6 +392451,8 @@ extension on _StringsAr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'إحضار إلى الواجهة وفتح صفحة البحث';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'التمرير لأسفل خطوة واحدة';
       case 'shortcut_action_global_scroll_line_up':
@@ -411160,6 +411213,8 @@ extension on _StringsDe {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'In den Vordergrund holen und Nachschlageseite öffnen';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Einen Schritt nach unten scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -429924,6 +429979,8 @@ extension on _StringsEs {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Traer al frente y abrir la página de consulta';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Desplazar un paso hacia abajo';
       case 'shortcut_action_global_scroll_line_up':
@@ -448699,6 +448756,8 @@ extension on _StringsFr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Mettre au premier plan et ouvrir la page de recherche';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Défiler d\'un cran vers le bas';
       case 'shortcut_action_global_scroll_line_up':
@@ -467434,6 +467493,8 @@ extension on _StringsId {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bawa ke depan dan buka halaman pencarian';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Gulir turun satu langkah';
       case 'shortcut_action_global_scroll_line_up':
@@ -486178,6 +486239,8 @@ extension on _StringsIt {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Porta in primo piano e apri la pagina di ricerca';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scorri in basso di un passo';
       case 'shortcut_action_global_scroll_line_up':
@@ -504856,6 +504919,8 @@ extension on _StringsJa {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return '前面に出して辞書検索ページを開く';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '1行下にスクロール';
       case 'shortcut_action_global_scroll_line_up':
@@ -523483,6 +523548,8 @@ extension on _StringsKo {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return '앞으로 가져와 검색 페이지 열기';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '한 단계 아래로 스크롤';
       case 'shortcut_action_global_scroll_line_up':
@@ -542200,6 +542267,8 @@ extension on _StringsNl {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Naar voren halen en opzoekpagina openen';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Één stap omlaag scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -560948,6 +561017,8 @@ extension on _StringsPtBr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Trazer para frente e abrir a página de consulta';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Rolar uma etapa para baixo';
       case 'shortcut_action_global_scroll_line_up':
@@ -579700,6 +579771,8 @@ extension on _StringsRu {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Вывести на передний план и открыть страницу поиска';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Прокрутить вниз на один шаг';
       case 'shortcut_action_global_scroll_line_up':
@@ -598412,6 +598485,8 @@ extension on _StringsTh {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'เลื่อนลงหนึ่งขั้น';
       case 'shortcut_action_global_scroll_line_up':
@@ -617142,6 +617217,8 @@ extension on _StringsTr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Öne getir ve arama sayfasını aç';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Bir adım aşağı kaydır';
       case 'shortcut_action_global_scroll_line_up':
@@ -635867,6 +635944,8 @@ extension on _StringsVi {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Đưa lên trước và mở trang tra từ';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Cuộn xuống một bước';
       case 'shortcut_action_global_scroll_line_up':
@@ -654448,6 +654527,8 @@ extension on _StringsZhCn {
         return '应用外查词快捷键';
       case 'shortcut_action_global_external_open_lookup_page':
         return '唤起主窗并打开查词页';
+      case 'shortcut_action_global_external_screen_ocr':
+        return '截屏识字（全局）';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滚动一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -672972,6 +673053,8 @@ extension on _StringsZhHk {
         return '應用外查詞快捷鍵';
       case 'shortcut_action_global_external_open_lookup_page':
         return '喚起主視窗並開啟查詞頁';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滾動一行';
       case 'shortcut_action_global_scroll_line_up':
