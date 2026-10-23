@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153187 (9011 per locale)
+/// Strings: 153119 (9007 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -231,8 +231,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_error_quota_exhausted => 'Out of credit or quota';
   String get ai_error_rate_limited => 'Rate limited, try again later';
   String get ai_error_unauthorized => 'API key was rejected';
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
   String get ai_feature_acquire => 'AI download';
   String get ai_feature_acquire_summary =>
       'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
@@ -241,9 +239,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_audiobook_cast => 'Audiobook casting';
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   String get ai_feature_collection_order => 'Collection order';
   String get ai_feature_collection_order_summary =>
       'When numbering rules can\'t place specials, OVAs or volumes, let AI decide where they go in a collection';
@@ -280,7 +275,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Let AI lay out review cards from a description and explain fields';
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   String get ai_feature_subtitle_proofread_summary =>
-      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Also used by AI proofread in the transcribe sheet (fixes words and punctuation; lines and timing unchanged). Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   String get ai_feature_unset => 'Not set';
   String get ai_feature_video_identify => 'Video identification';
   String get ai_feature_video_identify_assist_summary =>
@@ -1206,7 +1201,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_include_fushi => 'Add "fushi" tag';
   String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
+  String get anki_tags_global => 'Tags for all profiles';
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
   String get anki_tags_hint => 'Space-separated tags added to every card';
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
   String get anki_video_template_apply => 'Enable / update';
@@ -1561,11 +1561,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Done: ${cues} cues from ${segments} speech segments';
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
   String get audiobook_transcribe_engine_system => 'System speech (Apple)';
   String get audiobook_transcribe_engine_system_hint =>
       'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
@@ -1673,25 +1668,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · file ${file}/${files}';
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
   String audiobook_transcribe_remote_running({
@@ -2361,7 +2337,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  String get card_creation_notice_success => 'Show mining confirmations';
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
   String get card_creation_section_content => 'Card content';
+  String get card_creation_section_notices => 'Mining notifications';
   String get card_duplicate => 'Duplicate card — not exported.';
   String get card_export_failed => 'Failed to export card.';
   String card_export_failed_detail({required Object reason}) =>
@@ -7135,6 +7118,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_animated_format_avif => 'AVIF (smallest)';
   String get mining_animated_format_gif => 'GIF (most compatible)';
   String get mining_animated_format_webp => 'WebP (wider support)';
+  String get mining_animated_play_once => 'Play animated images once';
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   String get mining_audio_follow_playback_speed =>
       'Match sentence audio to playback speed';
   String get mining_audio_follow_playback_speed_hint =>
@@ -13184,9 +13170,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'تم رفض مفتاح API';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'تنزيل بالذكاء الاصطناعي';
   @override
   String get ai_feature_acquire_summary =>
@@ -13199,11 +13182,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'ترتيب المجموعة';
   @override
@@ -14773,7 +14751,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_tags => 'الوسوم';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'وسوم مفصولة بمسافات تُضاف لكل بطاقة';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -15354,14 +15340,6 @@ class _StringsAr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'الوقت الإجمالي ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'الكلام النظامي (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -15529,33 +15507,6 @@ class _StringsAr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · الملف ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       'لا يملك ${device} نموذجًا لهذه اللغة';
@@ -16667,7 +16618,19 @@ class _StringsAr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'تراجع غلاف البطاقة إلى صورة ثابتة (المقطع المتحرك غير متاح): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'بطاقة مكررة — لم يتم تصديرها.';
   @override
@@ -24794,6 +24757,11 @@ class _StringsAr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (الأكثر توافقًا)';
   @override
   String get mining_animated_format_webp => 'WebP (دعم أوسع)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'مطابقة صوت الجملة لسرعة التشغيل';
@@ -35084,9 +35052,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-Schlüssel wurde abgelehnt';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'KI-Download';
   @override
   String get ai_feature_acquire_summary =>
@@ -35099,11 +35064,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Sammlungsreihenfolge';
   @override
@@ -36701,8 +36661,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_tags => 'Tags';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Leerzeichen-getrennte Tags, die jeder Karte hinzugefügt werden';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -37285,14 +37253,6 @@ class _StringsDe extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Gesamtzeit ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Systemsprache (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -37465,33 +37425,6 @@ class _StringsDe extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · Datei ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} hat kein Modell für diese Sprache';
@@ -38619,7 +38552,19 @@ class _StringsDe extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Karten-Cover auf Standbild zurückgefallen (animierter Clip nicht verfügbar): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Doppelte Karte — nicht exportiert.';
   @override
@@ -46930,6 +46875,11 @@ class _StringsDe extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (höchste Kompatibilität)';
   @override
   String get mining_animated_format_webp => 'WebP (breitere Unterstützung)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Satz-Audio an Wiedergabegeschwindigkeit anpassen';
@@ -57373,9 +57323,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'Se rechazó la clave de API';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Descarga con IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -57388,11 +57335,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Orden de la colección';
   @override
@@ -58998,8 +58940,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_tags => 'Etiquetas';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Etiquetas separadas por espacios añadidas a cada tarjeta';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -59587,14 +59537,6 @@ class _StringsEs extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tiempo total ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Voz del sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -59767,33 +59709,6 @@ class _StringsEs extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · archivo ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} no tiene un modelo para este idioma';
@@ -60918,7 +60833,19 @@ class _StringsEs extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La portada de la tarjeta recurrió a un fotograma estático (clip animado no disponible): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Tarjeta duplicada — no exportada.';
   @override
@@ -69243,6 +69170,11 @@ class _StringsEs extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (más compatible)';
   @override
   String get mining_animated_format_webp => 'WebP (soporte más amplio)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Ajustar el audio de la frase a la velocidad de reproducción';
@@ -79718,9 +79650,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'La clé API a été refusée';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Téléchargement par IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -79733,11 +79662,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordre de la collection';
   @override
@@ -81349,8 +81273,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_tags => 'Étiquettes';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Étiquettes séparées par des espaces ajoutées à chaque carte';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -81940,14 +81872,6 @@ class _StringsFr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Durée totale ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system =>
       'Reconnaissance vocale du système (Apple)';
   @override
@@ -82124,33 +82048,6 @@ class _StringsFr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · fichier ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} n\'a pas de modèle pour cette langue';
@@ -83279,7 +83176,19 @@ class _StringsFr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La couverture de carte est retombée sur une image fixe (clip animé indisponible) : ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Carte en double — non exportée.';
   @override
@@ -91634,6 +91543,11 @@ class _StringsFr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (plus compatible)';
   @override
   String get mining_animated_format_webp => 'WebP (plus large compatibilité)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Adapter l\'audio de la phrase à la vitesse de lecture';
@@ -102145,9 +102059,6 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'Kunci API ditolak';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Unduhan AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -102160,11 +102071,6 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Urutan koleksi';
   @override
@@ -103750,8 +103656,16 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_tags => 'Tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Tag dipisahkan spasi yang ditambahkan ke setiap kartu';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -104334,14 +104248,6 @@ class _StringsId extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total waktu ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Ucapan sistem (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -104510,33 +104416,6 @@ class _StringsId extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · berkas ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} tidak memiliki model untuk bahasa ini';
@@ -105653,7 +105532,19 @@ class _StringsId extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Sampul kartu menggunakan bingkai diam (klip animasi tidak tersedia): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Kartu duplikat — tidak diekspor.';
   @override
@@ -113862,6 +113753,11 @@ class _StringsId extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (paling kompatibel)';
   @override
   String get mining_animated_format_webp => 'WebP (dukungan lebih luas)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Sesuaikan audio kalimat dengan kecepatan putar';
@@ -124228,9 +124124,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'La chiave API è stata rifiutata';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Download con IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -124243,11 +124136,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordine della raccolta';
   @override
@@ -125842,7 +125730,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_tags => 'Tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'Tag separati da spazi aggiunti a ogni carta';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -126428,14 +126324,6 @@ class _StringsIt extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tempo totale ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Voce di sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -126608,33 +126496,6 @@ class _StringsIt extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · file ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} non ha un modello per questa lingua';
@@ -127758,7 +127619,19 @@ class _StringsIt extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La copertina della carta è tornata a un fotogramma fisso (clip animata non disponibile): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Carta duplicata — non esportata.';
   @override
@@ -136042,6 +135915,11 @@ class _StringsIt extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (più compatibile)';
   @override
   String get mining_animated_format_webp => 'WebP (supporto più ampio)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Adatta l\'audio della frase alla velocità di riproduzione';
@@ -146469,9 +146347,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API キーが拒否されました';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'AI ダウンロード';
   @override
   String get ai_feature_acquire_summary =>
@@ -146484,11 +146359,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'コレクションの並び順';
   @override
@@ -148004,7 +147874,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_tags => 'タグ';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'スペース区切りで、すべてのカードに追加されます';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -148579,14 +148457,6 @@ class _StringsJa extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '合計時間 ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'システム音声認識（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -148750,33 +148620,6 @@ class _StringsJa extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · ファイル ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} にこの言語のモデルがありません';
@@ -149864,7 +149707,19 @@ class _StringsJa extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'カードカバーが静止画にフォールバックしました（アニメーションクリップ利用不可）: ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => '重複カード — エクスポートされませんでした。';
   @override
@@ -157708,6 +157563,11 @@ class _StringsJa extends _StringsEn {
   String get mining_animated_format_gif => 'GIF（最も互換性が高い）';
   @override
   String get mining_animated_format_webp => 'WebP（幅広い互換性）';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed => '文の音声を再生速度に合わせる';
   @override
@@ -167674,9 +167534,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API 키가 거부되었습니다';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'AI 다운로드';
   @override
   String get ai_feature_acquire_summary =>
@@ -167689,11 +167546,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => '컬렉션 순서';
   @override
@@ -169206,7 +169058,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_tags => '태그';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => '모든 카드에 추가되는 공백 구분 태그';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -169780,14 +169640,6 @@ class _StringsKo extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '총 소요 시간 ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => '시스템 음성 인식 (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -169951,33 +169803,6 @@ class _StringsKo extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 파일 ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device}에 이 언어용 모델이 없습니다';
@@ -171065,7 +170890,19 @@ class _StringsKo extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '카드 표지가 정지 프레임으로 대체됨 (애니메이션 클립 사용 불가): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => '중복 카드 — 내보내지 않았습니다.';
   @override
@@ -178933,6 +178770,11 @@ class _StringsKo extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (가장 호환)';
   @override
   String get mining_animated_format_webp => 'WebP (호환성 양호)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed => '문장 오디오를 재생 속도에 맞추기';
   @override
@@ -188950,9 +188792,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-sleutel werd geweigerd';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'AI-download';
   @override
   String get ai_feature_acquire_summary =>
@@ -188965,11 +188804,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Volgorde van verzameling';
   @override
@@ -190563,8 +190397,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_tags => 'Tags';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Door spaties gescheiden tags die aan elke kaart worden toegevoegd';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -191149,14 +190991,6 @@ class _StringsNl extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Totale tijd ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Systeemspraak (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -191328,33 +191162,6 @@ class _StringsNl extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · bestand ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} heeft geen model voor deze taal';
@@ -192476,7 +192283,19 @@ class _StringsNl extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Kaartomslag teruggevallen op een stilstaand beeld (geanimeerde clip niet beschikbaar): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Dubbele kaart — niet geëxporteerd.';
   @override
@@ -200727,6 +200546,11 @@ class _StringsNl extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (meest compatibel)';
   @override
   String get mining_animated_format_webp => 'WebP (bredere ondersteuning)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Zinsaudio afstemmen op afspeelsnelheid';
@@ -211146,9 +210970,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'A chave de API foi rejeitada';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Download com IA';
   @override
   String get ai_feature_acquire_summary =>
@@ -211161,11 +210982,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Ordem da coleção';
   @override
@@ -212769,8 +212585,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_tags => 'Etiquetas';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Tags separadas por espaços adicionadas a cada cartão';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -213355,14 +213179,6 @@ class _StringsPtBr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tempo total ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Fala do sistema (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -213534,33 +213350,6 @@ class _StringsPtBr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · arquivo ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} não tem modelo para este idioma';
@@ -214684,7 +214473,19 @@ class _StringsPtBr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Capa do cartão voltou para imagem estática (clipe animado indisponível): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Cartão duplicado — não exportado.';
   @override
@@ -222970,6 +222771,11 @@ class _StringsPtBr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (mais compatível)';
   @override
   String get mining_animated_format_webp => 'WebP (suporte mais amplo)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Ajustar o áudio da frase à velocidade de reprodução';
@@ -233407,9 +233213,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API-ключ отклонён';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'ИИ-загрузка';
   @override
   String get ai_feature_acquire_summary =>
@@ -233422,11 +233225,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Порядок в коллекции';
   @override
@@ -235020,8 +234818,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_tags => 'Теги';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Теги через пробел, добавляемые к каждой карточке';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -235606,14 +235412,6 @@ class _StringsRu extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Общее время ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Системная речь (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -235784,33 +235582,6 @@ class _StringsRu extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · файл ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       'На ${device} нет модели для этого языка';
@@ -236932,7 +236703,19 @@ class _StringsRu extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Обложка карточки заменена статичным кадром (анимированный клип недоступен): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Дубликат карточки — не экспортирован.';
   @override
@@ -245186,6 +244969,11 @@ class _StringsRu extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (максимальная совместимость)';
   @override
   String get mining_animated_format_webp => 'WebP (широкая поддержка)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Согласовывать аудио предложения со скоростью воспроизведения';
@@ -255614,9 +255402,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API key ถูกปฏิเสธ';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'ดาวน์โหลดด้วย AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -255629,11 +255414,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'ลำดับในคอลเลกชัน';
   @override
@@ -257195,7 +256975,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_tags => 'แท็ก';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'แท็กคั่นด้วยช่องว่างที่จะเพิ่มในทุกการ์ด';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -257778,14 +257566,6 @@ class _StringsTh extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'เวลารวม ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'เสียงพูดของระบบ (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -257953,33 +257733,6 @@ class _StringsTh extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · ไฟล์ ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} ไม่มีโมเดลสำหรับภาษานี้';
@@ -259089,7 +258842,19 @@ class _StringsTh extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'ปกบัตรใช้ภาพนิ่งแทน (คลิปเคลื่อนไหวไม่พร้อมใช้งาน): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'การ์ดซ้ำ — ไม่ได้ส่งออก';
   @override
@@ -267214,6 +266979,11 @@ class _StringsTh extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (เข้ากันได้มากที่สุด)';
   @override
   String get mining_animated_format_webp => 'WebP (รองรับกว้างกว่า)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'ปรับเสียงประโยคให้ตรงกับความเร็วการเล่น';
@@ -277501,9 +277271,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API anahtarı reddedildi';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Yapay zeka ile indirme';
   @override
   String get ai_feature_acquire_summary =>
@@ -277516,11 +277283,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Koleksiyon sırası';
   @override
@@ -279102,7 +278864,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_tags => 'Etiketler';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'Her karta eklenen boşlukla ayrılmış etiketler';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -279685,14 +279455,6 @@ class _StringsTr extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Toplam süre ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Sistem konuşması (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -279861,33 +279623,6 @@ class _StringsTr extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · dosya ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} cihazında bu dil için model yok';
@@ -281008,7 +280743,19 @@ class _StringsTr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Kart kapağı durağan kareye düştü (animasyonlu klip kullanılamıyor): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Tekrar kart — dışa aktarılmadı.';
   @override
@@ -289227,6 +288974,11 @@ class _StringsTr extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (en uyumlu)';
   @override
   String get mining_animated_format_webp => 'WebP (daha geniş destek)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Cümle sesini oynatma hızına uydur';
@@ -299590,9 +299342,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API key bị từ chối';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'Tải bằng AI';
   @override
   String get ai_feature_acquire_summary =>
@@ -299605,11 +299354,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => 'Thứ tự bộ sưu tập';
   @override
@@ -301183,8 +300927,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_tags => 'Thẻ tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Các tag cách nhau bằng dấu cách, thêm vào mỗi thẻ';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -301767,14 +301519,6 @@ class _StringsVi extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Tổng thời gian ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => 'Giọng nói hệ thống (Apple)';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -301943,33 +301687,6 @@ class _StringsVi extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · tệp ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} không có mô hình cho ngôn ngữ này';
@@ -303088,7 +302805,19 @@ class _StringsVi extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Bìa thẻ đã chuyển về ảnh tĩnh (clip động không khả dụng): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Thẻ trùng lặp — không xuất.';
   @override
@@ -311276,6 +311005,11 @@ class _StringsVi extends _StringsEn {
   String get mining_animated_format_gif => 'GIF (tương thích nhất)';
   @override
   String get mining_animated_format_webp => 'WebP (tương thích rộng hơn)';
+  @override
+  String get mining_animated_play_once => 'Play animated images once';
+  @override
+  String get mining_animated_play_once_hint =>
+      'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
   @override
   String get mining_audio_follow_playback_speed =>
       'Khớp âm thanh câu với tốc độ phát';
@@ -321601,9 +321335,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API Key 被拒绝';
   @override
-  String get ai_error_unsupported_protocol =>
-      '该提供商的协议没有语音转录接口（请用 OpenAI 兼容协议的提供商）';
-  @override
   String get ai_feature_acquire => 'AI 下载';
   @override
   String get ai_feature_acquire_summary =>
@@ -321614,11 +321345,6 @@ class _StringsZhCn extends _StringsEn {
   String get ai_feature_audiobook_cast => '有声书角色标注';
   @override
   String get ai_feature_audiobook_cast_summary => '标注每句台词的说话人，供多声优配音';
-  @override
-  String get ai_feature_cloud_transcription => '云端语音转录';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      '用 OpenAI 兼容的 Whisper 接口（如 Groq）转录音频。这家提供商的模型请填 Whisper 模型名（如 whisper-large-v3）。只在转录弹层里选「云端转录」时才会把音频上传给该提供商，并由其计费；不跟随默认提供商。';
   @override
   String get ai_feature_collection_order => '合集排序';
   @override
@@ -321670,7 +321396,7 @@ class _StringsZhCn extends _StringsEn {
   String get ai_feature_subtitle_proofread => '字幕校对';
   @override
   String get ai_feature_subtitle_proofread_summary =>
-      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词；转录弹层里的「AI 校对」也用它（修错字、补标点，行数与时间轴不变）。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
+      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -323062,7 +322788,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tags => '标签';
   @override
+  String get anki_tags_global => '全局标签';
+  @override
+  String get anki_tags_global_hint => '无论当前是哪个配置，每张卡片都会添加。';
+  @override
   String get anki_tags_hint => '空格分隔，每张卡片都会添加';
+  @override
+  String get anki_tags_profile_hint => '只对当前配置制的卡生效，切换配置时随之切换。';
   @override
   String get anki_video_template_applied => '适配已保存，请在复习设备上测试真实视频卡片。';
   @override
@@ -323592,14 +323324,6 @@ class _StringsZhCn extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '总耗时 ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => '云端转录（Whisper API）';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      '上传音频到 ${name} · 由其计费';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      '请先在 设置 › AI 里给「云端语音转录」指派一家提供商（模型填 Whisper 模型名，如 whisper-large-v3）。';
-  @override
   String get audiobook_transcribe_engine_system => '系统语音识别（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -323758,31 +323482,6 @@ class _StringsZhCn extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 文件 ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI 校对';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) => 'AI 校对完成：改了 ${changed} 行，${skipped} 块保留原文';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI 校对失败：${reason}。字幕未改动。';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI 校对会修正听错的字、补上标点；行数与时间轴不变。';
-  @override
-  String get audiobook_transcribe_proofread_restore => '还原原稿';
-  @override
-  String get audiobook_transcribe_proofread_restored => '已还原为校对前的原稿';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI 校对中… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      '请先在 设置 › AI 里给「字幕校对」指派一家提供商。';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} 没有该语言的模型';
@@ -324778,7 +324477,18 @@ class _StringsZhCn extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '卡片封面已降级为静态帧（动图不可用）：${reason}';
   @override
+  String get card_creation_notice_duplicate => '重复制卡提示';
+  @override
+  String get card_creation_notice_duplicate_hint => '卡片已在 Anki 中、这次未导出时弹出提示。';
+  @override
+  String get card_creation_notice_success => '制卡成功提示';
+  @override
+  String get card_creation_notice_success_hint =>
+      '制卡成功、制卡中、已存入待发卡片时弹出提示。制卡失败与缺少音频的提示始终显示。';
+  @override
   String get card_creation_section_content => '卡片内容';
+  @override
+  String get card_creation_section_notices => '制卡提示';
   @override
   String get card_duplicate => '重复卡片，未导出。';
   @override
@@ -332283,6 +331993,11 @@ class _StringsZhCn extends _StringsEn {
   String get mining_animated_format_gif => 'GIF（兼容性最好，体积最大，无压缩）';
   @override
   String get mining_animated_format_webp => 'WebP（兼容性更广）';
+  @override
+  String get mining_animated_play_once => '动图只播放一次';
+  @override
+  String get mining_animated_play_once_hint =>
+      '卡片里的动图（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循环，和视频片段一样。只对之后新制的卡生效。';
   @override
   String get mining_audio_follow_playback_speed => '句子音频跟随播放倍速';
   @override
@@ -341714,9 +341429,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_error_unauthorized => 'API Key 被拒絕';
   @override
-  String get ai_error_unsupported_protocol =>
-      'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
-  @override
   String get ai_feature_acquire => 'AI 下載';
   @override
   String get ai_feature_acquire_summary =>
@@ -341728,11 +341440,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_audiobook_cast_summary =>
       'Mark which character speaks each line so different voices can read them';
-  @override
-  String get ai_feature_cloud_transcription => 'Cloud transcription';
-  @override
-  String get ai_feature_cloud_transcription_summary =>
-      'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
   @override
   String get ai_feature_collection_order => '合集排序';
   @override
@@ -343188,7 +342895,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tags => '標籤';
   @override
+  String get anki_tags_global => '全域標籤';
+  @override
+  String get anki_tags_global_hint => '無論目前是哪個設定檔，每張卡片都會加上。';
+  @override
   String get anki_tags_hint => '以空格分隔，每張卡片都會加入';
+  @override
+  String get anki_tags_profile_hint => '只對目前設定檔製的卡生效，切換設定檔時隨之切換。';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -343750,14 +343463,6 @@ class _StringsZhHk extends _StringsEn {
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '總耗時 ${elapsed}';
   @override
-  String get audiobook_transcribe_engine_cloud => 'Cloud (Whisper API)';
-  @override
-  String audiobook_transcribe_engine_cloud_hint({required Object name}) =>
-      'Uploads audio to ${name} · billed by it';
-  @override
-  String get audiobook_transcribe_engine_cloud_unset =>
-      'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
-  @override
   String get audiobook_transcribe_engine_system => '系統語音識別（Apple）';
   @override
   String get audiobook_transcribe_engine_system_hint =>
@@ -343917,33 +343622,6 @@ class _StringsZhHk extends _StringsEn {
     required Object file,
     required Object files,
   }) => '${done} / ${total} · 檔案 ${file}/${files}';
-  @override
-  String get audiobook_transcribe_proofread => 'AI proofread';
-  @override
-  String audiobook_transcribe_proofread_done({
-    required Object changed,
-    required Object skipped,
-  }) =>
-      'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-  @override
-  String audiobook_transcribe_proofread_failed({required Object reason}) =>
-      'AI proofreading failed: ${reason}. The transcript was not changed.';
-  @override
-  String get audiobook_transcribe_proofread_hint =>
-      'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-  @override
-  String get audiobook_transcribe_proofread_restore => 'Restore original';
-  @override
-  String get audiobook_transcribe_proofread_restored =>
-      'Original transcript restored';
-  @override
-  String audiobook_transcribe_proofread_running({
-    required Object done,
-    required Object total,
-  }) => 'AI proofreading… ${done}/${total}';
-  @override
-  String get audiobook_transcribe_proofread_unset =>
-      'Assign a provider to Subtitle proofreading in Settings › AI first.';
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} 沒有該語言的模型';
@@ -345011,7 +344689,18 @@ class _StringsZhHk extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '卡片封面已降級為靜態幀（動圖不可用）：${reason}';
   @override
+  String get card_creation_notice_duplicate => '重複製卡提示';
+  @override
+  String get card_creation_notice_duplicate_hint => '卡片已在 Anki 中、這次未匯出時彈出提示。';
+  @override
+  String get card_creation_notice_success => '製卡成功提示';
+  @override
+  String get card_creation_notice_success_hint =>
+      '製卡成功、製卡中、已存入待發卡片時彈出提示。製卡失敗與缺少音訊的提示始終顯示。';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => '製卡提示';
   @override
   String get card_duplicate => '重複卡片 — 未匯出。';
   @override
@@ -352607,6 +352296,11 @@ class _StringsZhHk extends _StringsEn {
   String get mining_animated_format_gif => 'GIF（兼容性最好）';
   @override
   String get mining_animated_format_webp => 'WebP（兼容性更廣）';
+  @override
+  String get mining_animated_play_once => '動圖只播放一次';
+  @override
+  String get mining_animated_play_once_hint =>
+      '卡片裡的動圖（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循環，和影片片段一樣。只對之後新製的卡生效。';
   @override
   String get mining_audio_follow_playback_speed => '句子音頻跟隨播放倍速';
   @override
@@ -362295,8 +361989,6 @@ extension on _StringsEn {
         return 'Rate limited, try again later';
       case 'ai_error_unauthorized':
         return 'API key was rejected';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI download';
       case 'ai_feature_acquire_summary':
@@ -362307,10 +361999,6 @@ extension on _StringsEn {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Collection order';
       case 'ai_feature_collection_order_summary':
@@ -362358,7 +362046,7 @@ extension on _StringsEn {
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
-        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Also used by AI proofread in the transcribe sheet (fixes words and punctuation; lines and timing unchanged). Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Not set';
       case 'ai_feature_video_identify':
@@ -363621,8 +363309,14 @@ extension on _StringsEn {
         return 'Mark every card mined by Fushi';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Space-separated tags added to every card';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -364094,13 +363788,6 @@ extension on _StringsEn {
             'Done: ${cues} cues from ${segments} speech segments';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'System speech (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -364238,25 +363925,6 @@ extension on _StringsEn {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · file ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
@@ -365190,8 +364858,18 @@ extension on _StringsEn {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Duplicate card — not exported.';
       case 'card_export_failed':
@@ -372199,6 +371877,10 @@ extension on _StringsEn {
         return 'GIF (most compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (wider support)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Match sentence audio to playback speed';
       case 'mining_audio_follow_playback_speed_hint':
@@ -381033,8 +380715,6 @@ extension on _StringsAr {
         return 'تم تجاوز حد المعدل، حاول لاحقًا';
       case 'ai_error_unauthorized':
         return 'تم رفض مفتاح API';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'تنزيل بالذكاء الاصطناعي';
       case 'ai_feature_acquire_summary':
@@ -381045,10 +380725,6 @@ extension on _StringsAr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'ترتيب المجموعة';
       case 'ai_feature_collection_order_summary':
@@ -382360,8 +382036,14 @@ extension on _StringsAr {
         return 'وسم كل بطاقة أنشأها Fushi';
       case 'anki_tags':
         return 'الوسوم';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'وسوم مفصولة بمسافات تُضاف لكل بطاقة';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -382832,13 +382514,6 @@ extension on _StringsAr {
             'تم: ${cues} سطر ترجمة من ${segments} مقطع كلام';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'الوقت الإجمالي ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'الكلام النظامي (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -382976,25 +382651,6 @@ extension on _StringsAr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · الملف ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             'لا يملك ${device} نموذجًا لهذه اللغة';
@@ -383928,8 +383584,18 @@ extension on _StringsAr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'تراجع غلاف البطاقة إلى صورة ثابتة (المقطع المتحرك غير متاح): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'بطاقة مكررة — لم يتم تصديرها.';
       case 'card_export_failed':
@@ -390932,6 +390598,10 @@ extension on _StringsAr {
         return 'GIF (الأكثر توافقًا)';
       case 'mining_animated_format_webp':
         return 'WebP (دعم أوسع)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'مطابقة صوت الجملة لسرعة التشغيل';
       case 'mining_audio_follow_playback_speed_hint':
@@ -399766,8 +399436,6 @@ extension on _StringsDe {
         return 'Ratenbegrenzt, versuche es später erneut';
       case 'ai_error_unauthorized':
         return 'API-Schlüssel wurde abgelehnt';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'KI-Download';
       case 'ai_feature_acquire_summary':
@@ -399778,10 +399446,6 @@ extension on _StringsDe {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Sammlungsreihenfolge';
       case 'ai_feature_collection_order_summary':
@@ -401105,8 +400769,14 @@ extension on _StringsDe {
         return 'Jede von Fushi erstellte Karte kennzeichnen';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Leerzeichen-getrennte Tags, die jeder Karte hinzugefügt werden';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -401582,13 +401252,6 @@ extension on _StringsDe {
             'Fertig: ${cues} Cues aus ${segments} Sprachsegmenten';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Gesamtzeit ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Systemsprache (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -401728,25 +401391,6 @@ extension on _StringsDe {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · Datei ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} hat kein Modell für diese Sprache';
@@ -402681,8 +402325,18 @@ extension on _StringsDe {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Karten-Cover auf Standbild zurückgefallen (animierter Clip nicht verfügbar): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Doppelte Karte — nicht exportiert.';
       case 'card_export_failed':
@@ -409716,6 +409370,10 @@ extension on _StringsDe {
         return 'GIF (höchste Kompatibilität)';
       case 'mining_animated_format_webp':
         return 'WebP (breitere Unterstützung)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Satz-Audio an Wiedergabegeschwindigkeit anpassen';
       case 'mining_audio_follow_playback_speed_hint':
@@ -418574,8 +418232,6 @@ extension on _StringsEs {
         return 'Límite de solicitudes alcanzado, inténtalo más tarde';
       case 'ai_error_unauthorized':
         return 'Se rechazó la clave de API';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Descarga con IA';
       case 'ai_feature_acquire_summary':
@@ -418586,10 +418242,6 @@ extension on _StringsEs {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Orden de la colección';
       case 'ai_feature_collection_order_summary':
@@ -419906,8 +419558,14 @@ extension on _StringsEs {
         return 'Marca todas las tarjetas creadas por Fushi';
       case 'anki_tags':
         return 'Etiquetas';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Etiquetas separadas por espacios añadidas a cada tarjeta';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -420383,13 +420041,6 @@ extension on _StringsEs {
             'Listo: ${cues} líneas a partir de ${segments} segmentos de voz';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tiempo total ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Voz del sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -420529,25 +420180,6 @@ extension on _StringsEs {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · archivo ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} no tiene un modelo para este idioma';
@@ -421484,8 +421116,18 @@ extension on _StringsEs {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La portada de la tarjeta recurrió a un fotograma estático (clip animado no disponible): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Tarjeta duplicada — no exportada.';
       case 'card_export_failed':
@@ -428510,6 +428152,10 @@ extension on _StringsEs {
         return 'GIF (más compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (soporte más amplio)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Ajustar el audio de la frase a la velocidad de reproducción';
       case 'mining_audio_follow_playback_speed_hint':
@@ -437364,8 +437010,6 @@ extension on _StringsFr {
         return 'Débit limité, réessayez plus tard';
       case 'ai_error_unauthorized':
         return 'La clé API a été refusée';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Téléchargement par IA';
       case 'ai_feature_acquire_summary':
@@ -437376,10 +437020,6 @@ extension on _StringsFr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordre de la collection';
       case 'ai_feature_collection_order_summary':
@@ -438701,8 +438341,14 @@ extension on _StringsFr {
         return 'Marquer chaque carte créée par Fushi';
       case 'anki_tags':
         return 'Étiquettes';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Étiquettes séparées par des espaces ajoutées à chaque carte';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -439179,13 +438825,6 @@ extension on _StringsFr {
             'Terminé : ${cues} répliques à partir de ${segments} segments de parole';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Durée totale ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Reconnaissance vocale du système (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -439325,25 +438964,6 @@ extension on _StringsFr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · fichier ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} n\'a pas de modèle pour cette langue';
@@ -440279,8 +439899,18 @@ extension on _StringsFr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La couverture de carte est retombée sur une image fixe (clip animé indisponible) : ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Carte en double — non exportée.';
       case 'card_export_failed':
@@ -447314,6 +446944,10 @@ extension on _StringsFr {
         return 'GIF (plus compatible)';
       case 'mining_animated_format_webp':
         return 'WebP (plus large compatibilité)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Adapter l\'audio de la phrase à la vitesse de lecture';
       case 'mining_audio_follow_playback_speed_hint':
@@ -456171,8 +455805,6 @@ extension on _StringsId {
         return 'Dibatasi laju, coba lagi nanti';
       case 'ai_error_unauthorized':
         return 'Kunci API ditolak';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Unduhan AI';
       case 'ai_feature_acquire_summary':
@@ -456183,10 +455815,6 @@ extension on _StringsId {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Urutan koleksi';
       case 'ai_feature_collection_order_summary':
@@ -457502,8 +457130,14 @@ extension on _StringsId {
         return 'Tandai setiap kartu yang dibuat oleh Fushi';
       case 'anki_tags':
         return 'Tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tag dipisahkan spasi yang ditambahkan ke setiap kartu';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -457977,13 +457611,6 @@ extension on _StringsId {
             'Selesai: ${cues} cue dari ${segments} segmen ucapan';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total waktu ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Ucapan sistem (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -458121,25 +457748,6 @@ extension on _StringsId {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · berkas ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} tidak memiliki model untuk bahasa ini';
@@ -459073,8 +458681,18 @@ extension on _StringsId {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Sampul kartu menggunakan bingkai diam (klip animasi tidak tersedia): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Kartu duplikat — tidak diekspor.';
       case 'card_export_failed':
@@ -466087,6 +465705,10 @@ extension on _StringsId {
         return 'GIF (paling kompatibel)';
       case 'mining_animated_format_webp':
         return 'WebP (dukungan lebih luas)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Sesuaikan audio kalimat dengan kecepatan putar';
       case 'mining_audio_follow_playback_speed_hint':
@@ -474924,8 +474546,6 @@ extension on _StringsIt {
         return 'Limite di richieste raggiunto, riprova più tardi';
       case 'ai_error_unauthorized':
         return 'La chiave API è stata rifiutata';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Download con IA';
       case 'ai_feature_acquire_summary':
@@ -474936,10 +474556,6 @@ extension on _StringsIt {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordine della raccolta';
       case 'ai_feature_collection_order_summary':
@@ -476257,8 +475873,14 @@ extension on _StringsIt {
         return 'Contrassegna ogni carta creata con Fushi';
       case 'anki_tags':
         return 'Tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tag separati da spazi aggiunti a ogni carta';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -476732,13 +476354,6 @@ extension on _StringsIt {
             'Fatto: ${cues} battute da ${segments} segmenti vocali';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tempo totale ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Voce di sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -476878,25 +476493,6 @@ extension on _StringsIt {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · file ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} non ha un modello per questa lingua';
@@ -477831,8 +477427,18 @@ extension on _StringsIt {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La copertina della carta è tornata a un fotogramma fisso (clip animata non disponibile): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Carta duplicata — non esportata.';
       case 'card_export_failed':
@@ -484857,6 +484463,10 @@ extension on _StringsIt {
         return 'GIF (più compatibile)';
       case 'mining_animated_format_webp':
         return 'WebP (supporto più ampio)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Adatta l\'audio della frase alla velocità di riproduzione';
       case 'mining_audio_follow_playback_speed_hint':
@@ -493710,8 +493320,6 @@ extension on _StringsJa {
         return 'レート制限されました。しばらくしてからもう一度お試しください';
       case 'ai_error_unauthorized':
         return 'API キーが拒否されました';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI ダウンロード';
       case 'ai_feature_acquire_summary':
@@ -493722,10 +493330,6 @@ extension on _StringsJa {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'コレクションの並び順';
       case 'ai_feature_collection_order_summary':
@@ -495030,8 +494634,14 @@ extension on _StringsJa {
         return 'Fushi で作成したすべてのカードに目印を付けます';
       case 'anki_tags':
         return 'タグ';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'スペース区切りで、すべてのカードに追加されます';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -495501,13 +495111,6 @@ extension on _StringsJa {
             '完了：${segments} 個の音声区間から字幕 ${cues} 件を生成';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '合計時間 ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'システム音声認識（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -495645,25 +495248,6 @@ extension on _StringsJa {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · ファイル ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} にこの言語のモデルがありません';
       case 'audiobook_transcribe_remote_running':
@@ -496590,8 +496174,18 @@ extension on _StringsJa {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'カードカバーが静止画にフォールバックしました（アニメーションクリップ利用不可）: ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return '重複カード — エクスポートされませんでした。';
       case 'card_export_failed':
@@ -503575,6 +503169,10 @@ extension on _StringsJa {
         return 'GIF（最も互換性が高い）';
       case 'mining_animated_format_webp':
         return 'WebP（幅広い互換性）';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return '文の音声を再生速度に合わせる';
       case 'mining_audio_follow_playback_speed_hint':
@@ -512363,8 +511961,6 @@ extension on _StringsKo {
         return '요청이 제한되었습니다. 나중에 다시 시도하세요';
       case 'ai_error_unauthorized':
         return 'API 키가 거부되었습니다';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI 다운로드';
       case 'ai_feature_acquire_summary':
@@ -512375,10 +511971,6 @@ extension on _StringsKo {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return '컬렉션 순서';
       case 'ai_feature_collection_order_summary':
@@ -513682,8 +513274,14 @@ extension on _StringsKo {
         return 'Fushi로 만든 모든 카드에 표시합니다';
       case 'anki_tags':
         return '태그';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return '모든 카드에 추가되는 공백 구분 태그';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -514153,13 +513751,6 @@ extension on _StringsKo {
             '완료: 음성 구간 ${segments}개에서 큐 ${cues}개';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '총 소요 시간 ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return '시스템 음성 인식 (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -514296,25 +513887,6 @@ extension on _StringsKo {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 파일 ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device}에 이 언어용 모델이 없습니다';
       case 'audiobook_transcribe_remote_running':
@@ -515243,8 +514815,18 @@ extension on _StringsKo {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             '카드 표지가 정지 프레임으로 대체됨 (애니메이션 클립 사용 불가): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return '중복 카드 — 내보내지 않았습니다.';
       case 'card_export_failed':
@@ -522230,6 +521812,10 @@ extension on _StringsKo {
         return 'GIF (가장 호환)';
       case 'mining_animated_format_webp':
         return 'WebP (호환성 양호)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return '문장 오디오를 재생 속도에 맞추기';
       case 'mining_audio_follow_playback_speed_hint':
@@ -531033,8 +530619,6 @@ extension on _StringsNl {
         return 'Verzoeken beperkt, probeer het later opnieuw';
       case 'ai_error_unauthorized':
         return 'API-sleutel werd geweigerd';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI-download';
       case 'ai_feature_acquire_summary':
@@ -531045,10 +530629,6 @@ extension on _StringsNl {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Volgorde van verzameling';
       case 'ai_feature_collection_order_summary':
@@ -532368,8 +531948,14 @@ extension on _StringsNl {
         return 'Markeer elke kaart die met Fushi is gemaakt';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Door spaties gescheiden tags die aan elke kaart worden toegevoegd';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -532842,13 +532428,6 @@ extension on _StringsNl {
             'Klaar: ${cues} cues uit ${segments} spraaksegmenten';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Totale tijd ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Systeemspraak (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -532986,25 +532565,6 @@ extension on _StringsNl {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · bestand ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} heeft geen model voor deze taal';
@@ -533939,8 +533499,18 @@ extension on _StringsNl {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Kaartomslag teruggevallen op een stilstaand beeld (geanimeerde clip niet beschikbaar): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Dubbele kaart — niet geëxporteerd.';
       case 'card_export_failed':
@@ -540969,6 +540539,10 @@ extension on _StringsNl {
         return 'GIF (meest compatibel)';
       case 'mining_animated_format_webp':
         return 'WebP (bredere ondersteuning)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Zinsaudio afstemmen op afspeelsnelheid';
       case 'mining_audio_follow_playback_speed_hint':
@@ -549817,8 +549391,6 @@ extension on _StringsPtBr {
         return 'Limite de requisições atingido, tente novamente mais tarde';
       case 'ai_error_unauthorized':
         return 'A chave de API foi rejeitada';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Download com IA';
       case 'ai_feature_acquire_summary':
@@ -549829,10 +549401,6 @@ extension on _StringsPtBr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Ordem da coleção';
       case 'ai_feature_collection_order_summary':
@@ -551150,8 +550718,14 @@ extension on _StringsPtBr {
         return 'Marca todo cartão criado pelo Fushi';
       case 'anki_tags':
         return 'Etiquetas';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tags separadas por espaços adicionadas a cada cartão';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -551626,13 +551200,6 @@ extension on _StringsPtBr {
             'Concluído: ${cues} falas de ${segments} segmentos de voz';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tempo total ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Fala do sistema (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -551771,25 +551338,6 @@ extension on _StringsPtBr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · arquivo ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} não tem modelo para este idioma';
@@ -552724,8 +552272,18 @@ extension on _StringsPtBr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Capa do cartão voltou para imagem estática (clipe animado indisponível): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Cartão duplicado — não exportado.';
       case 'card_export_failed':
@@ -559747,6 +559305,10 @@ extension on _StringsPtBr {
         return 'GIF (mais compatível)';
       case 'mining_animated_format_webp':
         return 'WebP (suporte mais amplo)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Ajustar o áudio da frase à velocidade de reprodução';
       case 'mining_audio_follow_playback_speed_hint':
@@ -568590,8 +568152,6 @@ extension on _StringsRu {
         return 'Превышен лимит запросов, повторите позже';
       case 'ai_error_unauthorized':
         return 'API-ключ отклонён';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'ИИ-загрузка';
       case 'ai_feature_acquire_summary':
@@ -568602,10 +568162,6 @@ extension on _StringsRu {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Порядок в коллекции';
       case 'ai_feature_collection_order_summary':
@@ -569926,8 +569482,14 @@ extension on _StringsRu {
         return 'Помечать каждую карточку, созданную в Fushi';
       case 'anki_tags':
         return 'Теги';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Теги через пробел, добавляемые к каждой карточке';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -570403,13 +569965,6 @@ extension on _StringsRu {
             'Готово: реплик ${cues} из речевых сегментов ${segments}';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Общее время ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Системная речь (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -570548,25 +570103,6 @@ extension on _StringsRu {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · файл ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             'На ${device} нет модели для этого языка';
@@ -571502,8 +571038,18 @@ extension on _StringsRu {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Обложка карточки заменена статичным кадром (анимированный клип недоступен): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Дубликат карточки — не экспортирован.';
       case 'card_export_failed':
@@ -578529,6 +578075,10 @@ extension on _StringsRu {
         return 'GIF (максимальная совместимость)';
       case 'mining_animated_format_webp':
         return 'WebP (широкая поддержка)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Согласовывать аудио предложения со скоростью воспроизведения';
       case 'mining_audio_follow_playback_speed_hint':
@@ -587371,8 +586921,6 @@ extension on _StringsTh {
         return 'ถูกจำกัดอัตราคำขอ ลองอีกครั้งภายหลัง';
       case 'ai_error_unauthorized':
         return 'API key ถูกปฏิเสธ';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'ดาวน์โหลดด้วย AI';
       case 'ai_feature_acquire_summary':
@@ -587383,10 +586931,6 @@ extension on _StringsTh {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'ลำดับในคอลเลกชัน';
       case 'ai_feature_collection_order_summary':
@@ -588697,8 +588241,14 @@ extension on _StringsTh {
         return 'ทำเครื่องหมายทุกการ์ดที่สร้างโดย Fushi';
       case 'anki_tags':
         return 'แท็ก';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'แท็กคั่นด้วยช่องว่างที่จะเพิ่มในทุกการ์ด';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -589170,13 +588720,6 @@ extension on _StringsTh {
             'เสร็จแล้ว: ${cues} cue จาก ${segments} ช่วงเสียงพูด';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'เวลารวม ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'เสียงพูดของระบบ (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -589314,25 +588857,6 @@ extension on _StringsTh {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · ไฟล์ ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} ไม่มีโมเดลสำหรับภาษานี้';
@@ -590266,8 +589790,18 @@ extension on _StringsTh {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'ปกบัตรใช้ภาพนิ่งแทน (คลิปเคลื่อนไหวไม่พร้อมใช้งาน): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'การ์ดซ้ำ — ไม่ได้ส่งออก';
       case 'card_export_failed':
@@ -597276,6 +596810,10 @@ extension on _StringsTh {
         return 'GIF (เข้ากันได้มากที่สุด)';
       case 'mining_animated_format_webp':
         return 'WebP (รองรับกว้างกว่า)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'ปรับเสียงประโยคให้ตรงกับความเร็วการเล่น';
       case 'mining_audio_follow_playback_speed_hint':
@@ -606107,8 +605645,6 @@ extension on _StringsTr {
         return 'Hız sınırına takıldı, daha sonra tekrar deneyin';
       case 'ai_error_unauthorized':
         return 'API anahtarı reddedildi';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Yapay zeka ile indirme';
       case 'ai_feature_acquire_summary':
@@ -606119,10 +605655,6 @@ extension on _StringsTr {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Koleksiyon sırası';
       case 'ai_feature_collection_order_summary':
@@ -607441,8 +606973,14 @@ extension on _StringsTr {
         return 'Fushi ile çıkarılan her kartı işaretle';
       case 'anki_tags':
         return 'Etiketler';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Her karta eklenen boşlukla ayrılmış etiketler';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -607916,13 +607454,6 @@ extension on _StringsTr {
             'Tamamlandı: ${segments} konuşma bölümünden ${cues} altyazı satırı';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Toplam süre ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Sistem konuşması (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -608061,25 +607592,6 @@ extension on _StringsTr {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · dosya ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} cihazında bu dil için model yok';
@@ -609014,8 +608526,18 @@ extension on _StringsTr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Kart kapağı durağan kareye düştü (animasyonlu klip kullanılamıyor): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Tekrar kart — dışa aktarılmadı.';
       case 'card_export_failed':
@@ -616036,6 +615558,10 @@ extension on _StringsTr {
         return 'GIF (en uyumlu)';
       case 'mining_animated_format_webp':
         return 'WebP (daha geniş destek)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Cümle sesini oynatma hızına uydur';
       case 'mining_audio_follow_playback_speed_hint':
@@ -624873,8 +624399,6 @@ extension on _StringsVi {
         return 'Bị giới hạn tần suất, hãy thử lại sau';
       case 'ai_error_unauthorized':
         return 'API key bị từ chối';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'Tải bằng AI';
       case 'ai_feature_acquire_summary':
@@ -624885,10 +624409,6 @@ extension on _StringsVi {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return 'Thứ tự bộ sưu tập';
       case 'ai_feature_collection_order_summary':
@@ -626204,8 +625724,14 @@ extension on _StringsVi {
         return 'Đánh dấu mọi thẻ được tạo bởi Fushi';
       case 'anki_tags':
         return 'Thẻ tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Các tag cách nhau bằng dấu cách, thêm vào mỗi thẻ';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -626677,13 +626203,6 @@ extension on _StringsVi {
             'Hoàn tất: ${cues} dòng phụ đề từ ${segments} đoạn giọng nói';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Tổng thời gian ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return 'Giọng nói hệ thống (Apple)';
       case 'audiobook_transcribe_engine_system_hint':
@@ -626822,25 +626341,6 @@ extension on _StringsVi {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · tệp ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} không có mô hình cho ngôn ngữ này';
@@ -627775,8 +627275,18 @@ extension on _StringsVi {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Bìa thẻ đã chuyển về ảnh tĩnh (clip động không khả dụng): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Thẻ trùng lặp — không xuất.';
       case 'card_export_failed':
@@ -634788,6 +634298,10 @@ extension on _StringsVi {
         return 'GIF (tương thích nhất)';
       case 'mining_animated_format_webp':
         return 'WebP (tương thích rộng hơn)';
+      case 'mining_animated_play_once':
+        return 'Play animated images once';
+      case 'mining_animated_play_once_hint':
+        return 'Animated card images (GIF / WebP / AVIF) play through once in Anki instead of looping, like video clips. Applies to newly mined cards.';
       case 'mining_audio_follow_playback_speed':
         return 'Khớp âm thanh câu với tốc độ phát';
       case 'mining_audio_follow_playback_speed_hint':
@@ -643623,8 +643137,6 @@ extension on _StringsZhCn {
         return '被限流，请稍后重试';
       case 'ai_error_unauthorized':
         return 'API Key 被拒绝';
-      case 'ai_error_unsupported_protocol':
-        return '该提供商的协议没有语音转录接口（请用 OpenAI 兼容协议的提供商）';
       case 'ai_feature_acquire':
         return 'AI 下载';
       case 'ai_feature_acquire_summary':
@@ -643635,10 +643147,6 @@ extension on _StringsZhCn {
         return '有声书角色标注';
       case 'ai_feature_audiobook_cast_summary':
         return '标注每句台词的说话人，供多声优配音';
-      case 'ai_feature_cloud_transcription':
-        return '云端语音转录';
-      case 'ai_feature_cloud_transcription_summary':
-        return '用 OpenAI 兼容的 Whisper 接口（如 Groq）转录音频。这家提供商的模型请填 Whisper 模型名（如 whisper-large-v3）。只在转录弹层里选「云端转录」时才会把音频上传给该提供商，并由其计费；不跟随默认提供商。';
       case 'ai_feature_collection_order':
         return '合集排序';
       case 'ai_feature_collection_order_summary':
@@ -643686,7 +643194,7 @@ extension on _StringsZhCn {
       case 'ai_feature_subtitle_proofread':
         return '字幕校对';
       case 'ai_feature_subtitle_proofread_summary':
-        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词；转录弹层里的「AI 校对」也用它（修错字、补标点，行数与时间轴不变）。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
+        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -644924,8 +644432,14 @@ extension on _StringsZhCn {
         return '为每张 Fushi 制出的卡片打上标记';
       case 'anki_tags':
         return '标签';
+      case 'anki_tags_global':
+        return '全局标签';
+      case 'anki_tags_global_hint':
+        return '无论当前是哪个配置，每张卡片都会添加。';
       case 'anki_tags_hint':
         return '空格分隔，每张卡片都会添加';
+      case 'anki_tags_profile_hint':
+        return '只对当前配置制的卡生效，切换配置时随之切换。';
       case 'anki_video_template_applied':
         return '适配已保存，请在复习设备上测试真实视频卡片。';
       case 'anki_video_template_apply':
@@ -645395,12 +644909,6 @@ extension on _StringsZhCn {
             '完成：${segments} 段语音生成 ${cues} 条字幕';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '总耗时 ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return '云端转录（Whisper API）';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) => '上传音频到 ${name} · 由其计费';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return '请先在 设置 › AI 里给「云端语音转录」指派一家提供商（模型填 Whisper 模型名，如 whisper-large-v3）。';
       case 'audiobook_transcribe_engine_system':
         return '系统语音识别（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -645533,24 +645041,6 @@ extension on _StringsZhCn {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 文件 ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI 校对';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI 校对完成：改了 ${changed} 行，${skipped} 块保留原文';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) => 'AI 校对失败：${reason}。字幕未改动。';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI 校对会修正听错的字、补上标点；行数与时间轴不变。';
-      case 'audiobook_transcribe_proofread_restore':
-        return '还原原稿';
-      case 'audiobook_transcribe_proofread_restored':
-        return '已还原为校对前的原稿';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI 校对中… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return '请先在 设置 › AI 里给「字幕校对」指派一家提供商。';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} 没有该语言的模型';
       case 'audiobook_transcribe_remote_running':
@@ -646470,8 +645960,18 @@ extension on _StringsZhCn {
         return '取消';
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) => '卡片封面已降级为静态帧（动图不可用）：${reason}';
+      case 'card_creation_notice_duplicate':
+        return '重复制卡提示';
+      case 'card_creation_notice_duplicate_hint':
+        return '卡片已在 Anki 中、这次未导出时弹出提示。';
+      case 'card_creation_notice_success':
+        return '制卡成功提示';
+      case 'card_creation_notice_success_hint':
+        return '制卡成功、制卡中、已存入待发卡片时弹出提示。制卡失败与缺少音频的提示始终显示。';
       case 'card_creation_section_content':
         return '卡片内容';
+      case 'card_creation_section_notices':
+        return '制卡提示';
       case 'card_duplicate':
         return '重复卡片，未导出。';
       case 'card_export_failed':
@@ -653409,6 +652909,10 @@ extension on _StringsZhCn {
         return 'GIF（兼容性最好，体积最大，无压缩）';
       case 'mining_animated_format_webp':
         return 'WebP（兼容性更广）';
+      case 'mining_animated_play_once':
+        return '动图只播放一次';
+      case 'mining_animated_play_once_hint':
+        return '卡片里的动图（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循环，和视频片段一样。只对之后新制的卡生效。';
       case 'mining_audio_follow_playback_speed':
         return '句子音频跟随播放倍速';
       case 'mining_audio_follow_playback_speed_hint':
@@ -662137,8 +661641,6 @@ extension on _StringsZhHk {
         return '被限流，請稍後重試';
       case 'ai_error_unauthorized':
         return 'API Key 被拒絕';
-      case 'ai_error_unsupported_protocol':
-        return 'This provider\'s protocol has no transcription endpoint (use an OpenAI-compatible provider)';
       case 'ai_feature_acquire':
         return 'AI 下載';
       case 'ai_feature_acquire_summary':
@@ -662149,10 +661651,6 @@ extension on _StringsZhHk {
         return 'Audiobook casting';
       case 'ai_feature_audiobook_cast_summary':
         return 'Mark which character speaks each line so different voices can read them';
-      case 'ai_feature_cloud_transcription':
-        return 'Cloud transcription';
-      case 'ai_feature_cloud_transcription_summary':
-        return 'Transcribes audio with an OpenAI-compatible Whisper endpoint (e.g. Groq). Set this provider\'s model to a Whisper model such as whisper-large-v3. Audio is uploaded to this provider and billed by it, only when you pick Cloud in the transcribe sheet. Does not follow the default provider.';
       case 'ai_feature_collection_order':
         return '合集排序';
       case 'ai_feature_collection_order_summary':
@@ -663440,8 +662938,14 @@ extension on _StringsZhHk {
         return '為每張由 Fushi 製作的卡片打上標記';
       case 'anki_tags':
         return '標籤';
+      case 'anki_tags_global':
+        return '全域標籤';
+      case 'anki_tags_global_hint':
+        return '無論目前是哪個設定檔，每張卡片都會加上。';
       case 'anki_tags_hint':
         return '以空格分隔，每張卡片都會加入';
+      case 'anki_tags_profile_hint':
+        return '只對目前設定檔製的卡生效，切換設定檔時隨之切換。';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -663911,13 +663415,6 @@ extension on _StringsZhHk {
             '完成：${segments} 段語音生成 ${cues} 條字幕';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '總耗時 ${elapsed}';
-      case 'audiobook_transcribe_engine_cloud':
-        return 'Cloud (Whisper API)';
-      case 'audiobook_transcribe_engine_cloud_hint':
-        return ({required Object name}) =>
-            'Uploads audio to ${name} · billed by it';
-      case 'audiobook_transcribe_engine_cloud_unset':
-        return 'Assign a provider to Cloud transcription in Settings › AI first (model: a Whisper model such as whisper-large-v3).';
       case 'audiobook_transcribe_engine_system':
         return '系統語音識別（Apple）';
       case 'audiobook_transcribe_engine_system_hint':
@@ -664053,25 +663550,6 @@ extension on _StringsZhHk {
           required Object file,
           required Object files,
         }) => '${done} / ${total} · 檔案 ${file}/${files}';
-      case 'audiobook_transcribe_proofread':
-        return 'AI proofread';
-      case 'audiobook_transcribe_proofread_done':
-        return ({required Object changed, required Object skipped}) =>
-            'AI proofreading done: ${changed} lines changed, ${skipped} blocks kept as is';
-      case 'audiobook_transcribe_proofread_failed':
-        return ({required Object reason}) =>
-            'AI proofreading failed: ${reason}. The transcript was not changed.';
-      case 'audiobook_transcribe_proofread_hint':
-        return 'AI proofread fixes misheard words and adds punctuation; the number of lines and the timing stay the same.';
-      case 'audiobook_transcribe_proofread_restore':
-        return 'Restore original';
-      case 'audiobook_transcribe_proofread_restored':
-        return 'Original transcript restored';
-      case 'audiobook_transcribe_proofread_running':
-        return ({required Object done, required Object total}) =>
-            'AI proofreading… ${done}/${total}';
-      case 'audiobook_transcribe_proofread_unset':
-        return 'Assign a provider to Subtitle proofreading in Settings › AI first.';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} 沒有該語言的模型';
       case 'audiobook_transcribe_remote_running':
@@ -664995,8 +664473,18 @@ extension on _StringsZhHk {
         return '取消';
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) => '卡片封面已降級為靜態幀（動圖不可用）：${reason}';
+      case 'card_creation_notice_duplicate':
+        return '重複製卡提示';
+      case 'card_creation_notice_duplicate_hint':
+        return '卡片已在 Anki 中、這次未匯出時彈出提示。';
+      case 'card_creation_notice_success':
+        return '製卡成功提示';
+      case 'card_creation_notice_success_hint':
+        return '製卡成功、製卡中、已存入待發卡片時彈出提示。製卡失敗與缺少音訊的提示始終顯示。';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return '製卡提示';
       case 'card_duplicate':
         return '重複卡片 — 未匯出。';
       case 'card_export_failed':
@@ -671959,6 +671447,10 @@ extension on _StringsZhHk {
         return 'GIF（兼容性最好）';
       case 'mining_animated_format_webp':
         return 'WebP（兼容性更廣）';
+      case 'mining_animated_play_once':
+        return '動圖只播放一次';
+      case 'mining_animated_play_once_hint':
+        return '卡片裡的動圖（GIF / WebP / AVIF）在 Anki 中只播放一遍，不再循環，和影片片段一樣。只對之後新製的卡生效。';
       case 'mining_audio_follow_playback_speed':
         return '句子音頻跟隨播放倍速';
       case 'mining_audio_follow_playback_speed_hint':
