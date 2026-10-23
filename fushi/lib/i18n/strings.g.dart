@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152983 (8999 per locale)
+/// Strings: 153102 (9006 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8400,6 +8400,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not get a valid response from the cover source. Check your network and retry.';
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  String get screen_ocr_session_stop => 'Stop';
   String get search => 'Search';
   String get search_ellipsis => 'Search...';
   String get search_view_recent_remove => 'Remove from history';
@@ -26938,6 +26949,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'أرجع مصدر الغلاف خطأً. حاول لاحقاً أو اختر مرشحاً آخر.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'بحث';
   @override
@@ -49078,6 +49107,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'Die Cover-Quelle hat einen Fehler zurückgegeben. Versuchen Sie es später erneut oder wählen Sie einen anderen Kandidaten.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'Suchen';
   @override
@@ -71350,6 +71397,24 @@ class _StringsEs extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'La fuente de portadas devolvió un error. Inténtelo más tarde o elija otro candidato.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'Buscar';
   @override
@@ -93721,6 +93786,24 @@ class _StringsFr extends _StringsEn {
   String get scrape_reason_server =>
       'La source de couverture a renvoyé une erreur. Réessayez plus tard ou choisissez un autre candidat.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Rechercher';
   @override
   String get search_ellipsis => 'Rechercher...';
@@ -115876,6 +115959,24 @@ class _StringsId extends _StringsEn {
   String get scrape_reason_server =>
       'Sumber sampul mengembalikan error. Coba lagi nanti atau pilih kandidat lain.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Cari';
   @override
   String get search_ellipsis => 'Cari...';
@@ -138028,6 +138129,24 @@ class _StringsIt extends _StringsEn {
   String get scrape_reason_server =>
       'La fonte della copertina ha restituito un errore. Riprova più tardi o scegli un altro candidato.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Cerca';
   @override
   String get search_ellipsis => 'Cerca...';
@@ -159552,6 +159671,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get scrape_reason_server => 'カバーソースがエラーを返しました。後で再試行するか、別の候補を選択してください。';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => '検索';
   @override
   String get search_ellipsis => '検索...';
@@ -180746,6 +180883,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get scrape_reason_server =>
       '커버 소스에서 오류를 반환했습니다. 나중에 다시 시도하거나 다른 후보를 선택하세요.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => '검색';
   @override
@@ -202604,6 +202759,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'De omslagbron gaf een fout terug. Probeer het later opnieuw of kies een andere kandidaat.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'Zoeken';
   @override
@@ -224806,6 +224979,24 @@ class _StringsPtBr extends _StringsEn {
   String get scrape_reason_server =>
       'A fonte de capas retornou um erro. Tente novamente mais tarde ou escolha outro candidato.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Buscar';
   @override
   String get search_ellipsis => 'Buscar...';
@@ -246989,6 +247180,24 @@ class _StringsRu extends _StringsEn {
   String get scrape_reason_server =>
       'Источник обложки вернул ошибку. Попробуйте позже или выберите другой вариант.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Поиск';
   @override
   String get search_ellipsis => 'Поиск...';
@@ -268941,6 +269150,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'แหล่งปกส่งกลับข้อผิดพลาด ลองใหม่ภายหลังหรือเลือกตัวเลือกอื่น';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'ค้นหา';
   @override
@@ -290934,6 +291161,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'Kapak kaynağı bir hata döndürdü. Daha sonra tekrar deneyin veya başka bir aday seçin.';
+  @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
   @override
   String get search => 'Ara';
   @override
@@ -312935,6 +313180,24 @@ class _StringsVi extends _StringsEn {
   String get scrape_reason_server =>
       'Nguồn ảnh bìa trả về lỗi. Thử lại sau hoặc chọn ứng viên khác.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Tìm kiếm';
   @override
   String get search_ellipsis => 'Tìm kiếm…';
@@ -333711,6 +333974,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get scrape_reason_server => '封面源返回了错误，请稍后重试或换一个候选。';
   @override
+  String get screen_ocr_card_image => '截屏识字制卡带截图';
+  @override
+  String get screen_ocr_card_image_hint =>
+      '截屏识字和拍照查词制卡时，把所点文字所在的文本块（带一点留白）放进卡片的图片字段，清晰度跟随制卡图片质量';
+  @override
+  String get screen_ocr_keep_session => '保持截屏会话';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      '同意一次录屏后，之后截屏识字不再每次弹出系统确认框。保持期间通知栏有说明；点「停止」或系统结束共享后，下次截屏识字会重新询问';
+  @override
+  String get screen_ocr_session_hint => '点「停止」或系统结束共享之前，截屏识字不会再弹出确认框';
+  @override
+  String get screen_ocr_session_notification => '截屏识字：截屏会话保持中';
+  @override
+  String get screen_ocr_session_stop => '停止';
+  @override
   String get search => '搜索';
   @override
   String get search_ellipsis => '搜索…';
@@ -354037,6 +354316,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get scrape_reason_server => '封面源返回了錯誤，請稍後重試或換一個候選。';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => '搜尋';
   @override
   String get search_ellipsis => '搜尋…';
@@ -373423,6 +373720,20 @@ extension on _StringsEn {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Search';
       case 'search_ellipsis':
@@ -392129,6 +392440,20 @@ extension on _StringsAr {
         return 'تعذر الحصول على استجابة صالحة من مصدر الغلاف. تحقق من اتصالك بالشبكة وأعد المحاولة.';
       case 'scrape_reason_server':
         return 'أرجع مصدر الغلاف خطأً. حاول لاحقاً أو اختر مرشحاً آخر.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'بحث';
       case 'search_ellipsis':
@@ -410891,6 +411216,20 @@ extension on _StringsDe {
         return 'Es konnte keine gültige Antwort von der Cover-Quelle erhalten werden. Prüfen Sie Ihr Netzwerk und versuchen Sie es erneut.';
       case 'scrape_reason_server':
         return 'Die Cover-Quelle hat einen Fehler zurückgegeben. Versuchen Sie es später erneut oder wählen Sie einen anderen Kandidaten.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Suchen';
       case 'search_ellipsis':
@@ -429657,6 +429996,20 @@ extension on _StringsEs {
         return 'No se pudo obtener una respuesta válida de la fuente de portadas. Verifique su red y reintente.';
       case 'scrape_reason_server':
         return 'La fuente de portadas devolvió un error. Inténtelo más tarde o elija otro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Buscar';
       case 'search_ellipsis':
@@ -448434,6 +448787,20 @@ extension on _StringsFr {
         return 'Impossible d\'obtenir une réponse valide de la source de couverture. Vérifiez votre réseau et réessayez.';
       case 'scrape_reason_server':
         return 'La source de couverture a renvoyé une erreur. Réessayez plus tard ou choisissez un autre candidat.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Rechercher';
       case 'search_ellipsis':
@@ -467171,6 +467538,20 @@ extension on _StringsId {
         return 'Tidak bisa mendapatkan respons yang valid dari sumber sampul. Periksa jaringan Anda dan coba lagi.';
       case 'scrape_reason_server':
         return 'Sumber sampul mengembalikan error. Coba lagi nanti atau pilih kandidat lain.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Cari';
       case 'search_ellipsis':
@@ -485917,6 +486298,20 @@ extension on _StringsIt {
         return 'Impossibile ottenere una risposta valida dalla fonte della copertina. Controlla la rete e riprova.';
       case 'scrape_reason_server':
         return 'La fonte della copertina ha restituito un errore. Riprova più tardi o scegli un altro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Cerca';
       case 'search_ellipsis':
@@ -504597,6 +504992,20 @@ extension on _StringsJa {
         return 'カバーソースから有効な応答を取得できませんでした。ネットワークを確認して再試行してください。';
       case 'scrape_reason_server':
         return 'カバーソースがエラーを返しました。後で再試行するか、別の候補を選択してください。';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '検索';
       case 'search_ellipsis':
@@ -523226,6 +523635,20 @@ extension on _StringsKo {
         return '커버 소스에서 유효한 응답을 받을 수 없습니다. 네트워크를 확인하고 다시 시도하세요.';
       case 'scrape_reason_server':
         return '커버 소스에서 오류를 반환했습니다. 나중에 다시 시도하거나 다른 후보를 선택하세요.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '검색';
       case 'search_ellipsis':
@@ -541945,6 +542368,20 @@ extension on _StringsNl {
         return 'Kon geen geldig antwoord krijgen van de omslagbron. Controleer je netwerk en probeer opnieuw.';
       case 'scrape_reason_server':
         return 'De omslagbron gaf een fout terug. Probeer het later opnieuw of kies een andere kandidaat.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Zoeken';
       case 'search_ellipsis':
@@ -560695,6 +561132,20 @@ extension on _StringsPtBr {
         return 'Não foi possível obter uma resposta válida da fonte de capas. Verifique sua rede e tente novamente.';
       case 'scrape_reason_server':
         return 'A fonte de capas retornou um erro. Tente novamente mais tarde ou escolha outro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Buscar';
       case 'search_ellipsis':
@@ -579449,6 +579900,20 @@ extension on _StringsRu {
         return 'Не удалось получить корректный ответ от источника обложки. Проверьте сеть и повторите.';
       case 'scrape_reason_server':
         return 'Источник обложки вернул ошибку. Попробуйте позже или выберите другой вариант.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Поиск';
       case 'search_ellipsis':
@@ -598163,6 +598628,20 @@ extension on _StringsTh {
         return 'ไม่สามารถรับการตอบกลับที่ถูกต้องจากแหล่งปก ตรวจสอบเครือข่ายแล้วลองใหม่';
       case 'scrape_reason_server':
         return 'แหล่งปกส่งกลับข้อผิดพลาด ลองใหม่ภายหลังหรือเลือกตัวเลือกอื่น';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'ค้นหา';
       case 'search_ellipsis':
@@ -616895,6 +617374,20 @@ extension on _StringsTr {
         return 'Kapak kaynağından geçerli bir yanıt alınamadı. Ağ bağlantınızı kontrol edip tekrar deneyin.';
       case 'scrape_reason_server':
         return 'Kapak kaynağı bir hata döndürdü. Daha sonra tekrar deneyin veya başka bir aday seçin.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Ara';
       case 'search_ellipsis':
@@ -635622,6 +636115,20 @@ extension on _StringsVi {
         return 'Không nhận được phản hồi hợp lệ từ nguồn ảnh bìa. Kiểm tra mạng và thử lại.';
       case 'scrape_reason_server':
         return 'Nguồn ảnh bìa trả về lỗi. Thử lại sau hoặc chọn ứng viên khác.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Tìm kiếm';
       case 'search_ellipsis':
@@ -654205,6 +654712,20 @@ extension on _StringsZhCn {
         return '没能从封面源取到有效响应，请检查网络后重试。';
       case 'scrape_reason_server':
         return '封面源返回了错误，请稍后重试或换一个候选。';
+      case 'screen_ocr_card_image':
+        return '截屏识字制卡带截图';
+      case 'screen_ocr_card_image_hint':
+        return '截屏识字和拍照查词制卡时，把所点文字所在的文本块（带一点留白）放进卡片的图片字段，清晰度跟随制卡图片质量';
+      case 'screen_ocr_keep_session':
+        return '保持截屏会话';
+      case 'screen_ocr_keep_session_hint':
+        return '同意一次录屏后，之后截屏识字不再每次弹出系统确认框。保持期间通知栏有说明；点「停止」或系统结束共享后，下次截屏识字会重新询问';
+      case 'screen_ocr_session_hint':
+        return '点「停止」或系统结束共享之前，截屏识字不会再弹出确认框';
+      case 'screen_ocr_session_notification':
+        return '截屏识字：截屏会话保持中';
+      case 'screen_ocr_session_stop':
+        return '停止';
       case 'search':
         return '搜索';
       case 'search_ellipsis':
@@ -672731,6 +673252,20 @@ extension on _StringsZhHk {
         return '沒能從封面源取到有效響應，請檢查網路後重試。';
       case 'scrape_reason_server':
         return '封面源返回了錯誤，請稍後重試或換一個候選。';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '搜尋';
       case 'search_ellipsis':
