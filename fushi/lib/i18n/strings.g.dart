@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153578 (9034 per locale)
+/// Strings: 153748 (9044 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2516,6 +2516,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String collection_episode_link_season({required Object number}) =>
       'Season ${number}';
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
   String get collection_episode_no_missing => 'No missing episodes';
   String get collection_episode_rename => 'Rename episodes from scrape';
   String collection_episode_rename_apply({required Object n}) =>
@@ -5479,6 +5485,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String init_error_message({required Object error}) =>
       'Initialization failed: ${error}';
   String get initialization_failed => 'Initialisation failed';
+  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
   String get interconnect_backup_backend =>
       'Use interconnect as the backup backend';
   String get interconnect_backup_backend_active =>
@@ -5495,8 +5506,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_devices_page => 'Pairing & devices';
   String interconnect_devices_paired_count({required Object n}) =>
       'Paired devices: ${n}';
+  String get interconnect_download_cancel => 'Cancel download';
   String interconnect_download_notification_title({required Object count}) =>
       'Downloading ${count} items from paired devices';
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_footer =>
       'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
@@ -5570,6 +5585,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Fushi Interconnect category';
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
   String get interconnect_peer_forget_title => 'Forget this device?';
@@ -16958,6 +16975,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'استخرج بيانات العمل أولًا';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'لا توجد حلقات مفقودة';
   @override
   String get collection_episode_rename => 'إعادة تسمية الحلقات من الجلب';
@@ -22028,6 +22054,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get initialization_failed => 'فشل التهيئة';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'استخدام الترابط كواجهة النسخ الاحتياطي';
   @override
@@ -22054,8 +22088,15 @@ class _StringsAr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'الأجهزة المقترنة: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'جارٍ تنزيل ${count} عنصر من الأجهزة المقترنة';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'تفعيل الترابط';
   @override
@@ -22168,6 +22209,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -38967,6 +39011,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape zuerst die Serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Keine fehlenden Episoden';
   @override
   String get collection_episode_rename => 'Episoden nach Abruf umbenennen';
@@ -44151,6 +44204,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get initialization_failed => 'Initialisierung fehlgeschlagen';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Interconnect als Sicherungs-Backend verwenden';
   @override
@@ -44177,8 +44238,15 @@ class _StringsDe extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Gekoppelte Geräte: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '${count} Elemente von gekoppelten Geräten werden heruntergeladen';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Interconnect aktivieren';
   @override
@@ -44291,6 +44359,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -61323,6 +61394,15 @@ class _StringsEs extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Extrae primero los datos de la serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Sin episodios faltantes';
   @override
   String get collection_episode_rename => 'Renombrar episodios desde metadatos';
@@ -66512,6 +66592,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get initialization_failed => 'Error de inicialización';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Usar Interconnect como backend de copia de seguridad';
   @override
@@ -66538,8 +66626,15 @@ class _StringsEs extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivos emparejados: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Descargando ${count} elementos de dispositivos emparejados';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Activar Interconnect';
   @override
@@ -66652,6 +66747,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -83741,6 +83839,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrapez d\'abord la série';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Aucun épisode manquant';
   @override
   String get collection_episode_rename =>
@@ -88946,6 +89053,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get initialization_failed => 'Échec de l\'initialisation';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Utiliser l\'interconnexion comme support de sauvegarde';
   @override
@@ -88972,8 +89087,15 @@ class _StringsFr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Appareils appairés : ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Téléchargement de ${count} éléments depuis les appareils appairés';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Activer l\'interconnexion';
   @override
@@ -89086,6 +89208,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -106162,6 +106287,15 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape acaranya dulu';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Tidak ada episode yang kurang';
   @override
   String get collection_episode_rename => 'Ganti nama episode dari scrape';
@@ -111283,6 +111417,14 @@ class _StringsId extends _StringsEn {
   @override
   String get initialization_failed => 'Inisialisasi gagal';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Gunakan interconnect sebagai backend cadangan';
   @override
@@ -111309,8 +111451,15 @@ class _StringsId extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Perangkat terpasang: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Mengunduh ${count} item dari perangkat terpasang';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Aktifkan interconnect';
   @override
@@ -111423,6 +111572,9 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -128327,6 +128479,15 @@ class _StringsIt extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Fai prima lo scraping della serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Nessun episodio mancante';
   @override
   String get collection_episode_rename => 'Rinomina episodi dallo scrape';
@@ -133487,6 +133648,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get initialization_failed => 'Inizializzazione fallita';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Usa interconnect come backend di backup';
   @override
@@ -133513,8 +133682,15 @@ class _StringsIt extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivi abbinati: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Download di ${count} elementi dai dispositivi abbinati';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Abilita interconnect';
   @override
@@ -133627,6 +133803,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -150471,6 +150650,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先に作品をスクレイピングしてください';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '欠けているエピソードはありません';
   @override
   String get collection_episode_rename => 'スクレイプからエピソード名を変更';
@@ -155366,6 +155554,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get initialization_failed => '初期化に失敗しました';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend => 'バックアップバックエンド';
   @override
   String get interconnect_backup_backend_active =>
@@ -155388,8 +155584,15 @@ class _StringsJa extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'ペアリング済みデバイス：${n} 台';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'ペアリング済みデバイスから ${count} 件をダウンロード中';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'インターコネクトを有効にする';
   @override
@@ -155500,6 +155703,9 @@ class _StringsJa extends _StringsEn {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   @override
   String get interconnect_moved_note => '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -171727,6 +171933,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '먼저 작품을 스크레이핑하세요';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '누락 에피소드 없음';
   @override
   String get collection_episode_rename => '스크래핑에서 에피소드 이름 변경';
@@ -176633,6 +176848,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get initialization_failed => '초기화 실패';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend => '인터커넥트를 백업 백엔드로 사용';
   @override
   String get interconnect_backup_backend_active =>
@@ -176655,8 +176878,15 @@ class _StringsKo extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       '페어링된 기기: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '페어링된 기기에서 항목 ${count}개 다운로드 중';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => '인터커넥트 활성화';
   @override
@@ -176767,6 +176997,9 @@ class _StringsKo extends _StringsEn {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   @override
   String get interconnect_moved_note => '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -193208,6 +193441,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape eerst de serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Geen ontbrekende afleveringen';
   @override
   String get collection_episode_rename =>
@@ -198351,6 +198593,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get initialization_failed => 'Initialisatie mislukt';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Interconnect als back-upbackend gebruiken';
   @override
@@ -198377,8 +198627,15 @@ class _StringsNl extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Gekoppelde apparaten: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '${count} items downloaden van gekoppelde apparaten';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Interconnect inschakelen';
   @override
@@ -198491,6 +198748,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -215470,6 +215730,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Raspe a série primeiro';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Nenhum episódio faltante';
   @override
   String get collection_episode_rename => 'Renomear episódios do scrape';
@@ -220638,6 +220907,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get initialization_failed => 'Falha na inicialização';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Usar interconexão como backend de backup';
   @override
@@ -220664,8 +220941,15 @@ class _StringsPtBr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivos pareados: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Baixando ${count} itens de dispositivos pareados';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Ativar interconexão';
   @override
@@ -220778,6 +221062,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -237773,6 +238060,15 @@ class _StringsRu extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Сначала соберите данные о сериале';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Нет недостающих эпизодов';
   @override
   String get collection_episode_rename => 'Переименовать эпизоды из метаданных';
@@ -242915,6 +243211,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get initialization_failed => 'Ошибка инициализации';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Использовать взаимосвязь как бэкенд резервного копирования';
   @override
@@ -242941,8 +243245,15 @@ class _StringsRu extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Сопряжённых устройств: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Загрузка элементов с сопряжённых устройств: ${count}';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Включить взаимосвязь';
   @override
@@ -243055,6 +243366,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -259982,6 +260296,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'ดึงข้อมูลรายการก่อน';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'ไม่มีตอนที่ขาดหายไป';
   @override
   String get collection_episode_rename => 'เปลี่ยนชื่อตอนจากข้อมูลที่ดึงมา';
@@ -265045,6 +265368,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get initialization_failed => 'เริ่มต้นล้มเหลว';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'ใช้การเชื่อมต่ออุปกรณ์เป็นแบ็กเอนด์สำรองข้อมูล';
   @override
@@ -265071,8 +265402,15 @@ class _StringsTh extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'อุปกรณ์ที่จับคู่แล้ว: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'กำลังดาวน์โหลด ${count} รายการจากอุปกรณ์ที่จับคู่';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'เปิดใช้การเชื่อมต่ออุปกรณ์';
   @override
@@ -265185,6 +265523,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -281955,6 +282296,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Önce diziyi kazıyın';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Eksik bölüm yok';
   @override
   String get collection_episode_rename =>
@@ -287088,6 +287438,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get initialization_failed => 'Başlatma başarısız';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Yedekleme arka ucu olarak bağlantıyı kullan';
   @override
@@ -287114,8 +287472,15 @@ class _StringsTr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Eşleştirilmiş cihazlar: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Eşleştirilmiş cihazlardan ${count} öğe indiriliyor';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Bağlantıyı etkinleştir';
   @override
@@ -287228,6 +287593,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -304091,6 +304459,15 @@ class _StringsVi extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Hãy quét thông tin chương trình trước';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Không có tập nào bị thiếu';
   @override
   String get collection_episode_rename => 'Đổi tên tập từ dữ liệu quét';
@@ -309204,6 +309581,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get initialization_failed => 'Khởi tạo thất bại';
   @override
+  String get interconnect_auto_sync_entry => 'When to sync';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  @override
   String get interconnect_backup_backend =>
       'Dùng kết nối liên thiết bị làm backend sao lưu';
   @override
@@ -309229,8 +309614,15 @@ class _StringsVi extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Thiết bị đã ghép nối: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Đang tải ${count} mục từ thiết bị đã ghép nối';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Bật kết nối liên thiết bị';
   @override
@@ -309343,6 +309735,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -325809,6 +326204,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先刮出作品资料再指定';
   @override
+  String get collection_episode_local_copy_delete => '删除本机副本';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) => '删除「${title}」下载到本机的副本？配对设备上的原片不受影响，之后仍可从配对设备播放或重新下载。';
+  @override
+  String get collection_episode_local_copy_deleted => '已删除本机副本';
+  @override
   String get collection_episode_no_missing => '没有缺集';
   @override
   String get collection_episode_rename => '按刮削重命名各集';
@@ -330492,6 +330895,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get initialization_failed => '初始化失败';
   @override
+  String get interconnect_auto_sync_entry => '同步时机';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      '自动同步已关闭：上面这些内容只在点「立即同步」时才与对端合并。点此去开启';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      '自动同步已开启：打开应用、切到后台时以及运行中定期与对端合并上面这些内容';
+  @override
   String get interconnect_backup_backend => '用互联做备份后端';
   @override
   String get interconnect_backup_backend_active =>
@@ -330513,8 +330924,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String interconnect_devices_paired_count({required Object n}) => '已配对 ${n} 台';
   @override
+  String get interconnect_download_cancel => '取消下载';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '正在从配对设备下载 ${count} 项';
+  @override
+  String get interconnect_download_tasks_hint => '暂停、继续或取消从配对设备下载到本机的任务';
+  @override
+  String get interconnect_download_tasks_title => '互联下载';
   @override
   String get interconnect_enable => '启用互联';
   @override
@@ -330609,6 +331026,9 @@ class _StringsZhCn extends _StringsEn {
       '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
   @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Fushi 互联」分类';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      '这条地址没有记录对端证书，无法建立加密连接。点这一行的「重新配对」。';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
@@ -346093,6 +346513,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先刮出作品資料再指定';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '沒有缺集';
   @override
   String get collection_episode_rename => '按刮削重命名各集';
@@ -350831,6 +351260,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get initialization_failed => '初始化失敗';
   @override
+  String get interconnect_auto_sync_entry => '同步時機';
+  @override
+  String get interconnect_auto_sync_entry_off =>
+      '自動同步已關閉：上面這些內容只在點「立即同步」時才與對端合併。點此去開啟';
+  @override
+  String get interconnect_auto_sync_entry_on =>
+      '自動同步已開啟：開啟應用、切到背景時以及運行中定期與對端合併上面這些內容';
+  @override
   String get interconnect_backup_backend => '用互聯做備份後端';
   @override
   String get interconnect_backup_backend_active =>
@@ -350852,8 +351289,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String interconnect_devices_paired_count({required Object n}) => '已配對 ${n} 台';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '正在從配對裝置下載 ${count} 項';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => '啟用互聯';
   @override
@@ -350961,6 +351405,9 @@ class _StringsZhHk extends _StringsEn {
       '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
   @override
   String get interconnect_moved_note => '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
+  @override
+  String get interconnect_peer_certificate_unpinned =>
+      'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
   @override
   String interconnect_peer_forget_confirm({required Object count}) =>
       'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -366305,6 +366752,13 @@ extension on _StringsEn {
         return ({required Object number}) => 'Season ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'No missing episodes';
       case 'collection_episode_rename':
@@ -370685,6 +371139,12 @@ extension on _StringsEn {
         return ({required Object error}) => 'Initialization failed: ${error}';
       case 'initialization_failed':
         return 'Initialisation failed';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Use interconnect as the backup backend';
       case 'interconnect_backup_backend_active':
@@ -370704,9 +371164,15 @@ extension on _StringsEn {
         return 'Pairing & devices';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Paired devices: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Downloading ${count} items from paired devices';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_footer':
@@ -370788,6 +371254,8 @@ extension on _StringsEn {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Fushi Interconnect category';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -385090,6 +385558,13 @@ extension on _StringsAr {
         return ({required Object number}) => 'الموسم ${number}';
       case 'collection_episode_link_unavailable':
         return 'استخرج بيانات العمل أولًا';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'لا توجد حلقات مفقودة';
       case 'collection_episode_rename':
@@ -389467,6 +389942,12 @@ extension on _StringsAr {
         return ({required Object error}) => 'فشلت التهيئة: ${error}';
       case 'initialization_failed':
         return 'فشل التهيئة';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'استخدام الترابط كواجهة النسخ الاحتياطي';
       case 'interconnect_backup_backend_active':
@@ -389486,9 +389967,15 @@ extension on _StringsAr {
         return 'الاقتران والأجهزة';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'الأجهزة المقترنة: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'جارٍ تنزيل ${count} عنصر من الأجهزة المقترنة';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'تفعيل الترابط';
       case 'interconnect_enable_footer':
@@ -389570,6 +390057,8 @@ extension on _StringsAr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -403889,6 +404378,13 @@ extension on _StringsDe {
         return ({required Object number}) => 'Staffel ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape zuerst die Serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Keine fehlenden Episoden';
       case 'collection_episode_rename':
@@ -408283,6 +408779,12 @@ extension on _StringsDe {
             'Initialisierung fehlgeschlagen: ${error}';
       case 'initialization_failed':
         return 'Initialisierung fehlgeschlagen';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Interconnect als Sicherungs-Backend verwenden';
       case 'interconnect_backup_backend_active':
@@ -408302,9 +408804,15 @@ extension on _StringsDe {
         return 'Kopplung & Geräte';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Gekoppelte Geräte: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             '${count} Elemente von gekoppelten Geräten werden heruntergeladen';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Interconnect aktivieren';
       case 'interconnect_enable_footer':
@@ -408386,6 +408894,8 @@ extension on _StringsDe {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -422738,6 +423248,13 @@ extension on _StringsEs {
         return ({required Object number}) => 'Temporada ${number}';
       case 'collection_episode_link_unavailable':
         return 'Extrae primero los datos de la serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Sin episodios faltantes';
       case 'collection_episode_rename':
@@ -427126,6 +427643,12 @@ extension on _StringsEs {
         return ({required Object error}) => 'Error de inicialización: ${error}';
       case 'initialization_failed':
         return 'Error de inicialización';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Usar Interconnect como backend de copia de seguridad';
       case 'interconnect_backup_backend_active':
@@ -427145,9 +427668,15 @@ extension on _StringsEs {
         return 'Emparejamiento y dispositivos';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivos emparejados: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Descargando ${count} elementos de dispositivos emparejados';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Activar Interconnect';
       case 'interconnect_enable_footer':
@@ -427229,6 +427758,8 @@ extension on _StringsEs {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -441579,6 +442110,13 @@ extension on _StringsFr {
         return ({required Object number}) => 'Saison ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrapez d\'abord la série';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Aucun épisode manquant';
       case 'collection_episode_rename':
@@ -445977,6 +446515,12 @@ extension on _StringsFr {
             'Échec de l\'initialisation : ${error}';
       case 'initialization_failed':
         return 'Échec de l\'initialisation';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Utiliser l\'interconnexion comme support de sauvegarde';
       case 'interconnect_backup_backend_active':
@@ -445996,9 +446540,15 @@ extension on _StringsFr {
         return 'Appairage et appareils';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Appareils appairés : ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Téléchargement de ${count} éléments depuis les appareils appairés';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Activer l\'interconnexion';
       case 'interconnect_enable_footer':
@@ -446080,6 +446630,8 @@ extension on _StringsFr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -460419,6 +460971,13 @@ extension on _StringsId {
         return ({required Object number}) => 'Musim ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape acaranya dulu';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Tidak ada episode yang kurang';
       case 'collection_episode_rename':
@@ -464803,6 +465362,12 @@ extension on _StringsId {
         return ({required Object error}) => 'Inisialisasi gagal: ${error}';
       case 'initialization_failed':
         return 'Inisialisasi gagal';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Gunakan interconnect sebagai backend cadangan';
       case 'interconnect_backup_backend_active':
@@ -464822,9 +465387,15 @@ extension on _StringsId {
         return 'Pemasangan & perangkat';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Perangkat terpasang: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Mengunduh ${count} item dari perangkat terpasang';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Aktifkan interconnect';
       case 'interconnect_enable_footer':
@@ -464906,6 +465477,8 @@ extension on _StringsId {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -479223,6 +479796,13 @@ extension on _StringsIt {
         return ({required Object number}) => 'Stagione ${number}';
       case 'collection_episode_link_unavailable':
         return 'Fai prima lo scraping della serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Nessun episodio mancante';
       case 'collection_episode_rename':
@@ -483613,6 +484193,12 @@ extension on _StringsIt {
             'Inizializzazione fallita: ${error}';
       case 'initialization_failed':
         return 'Inizializzazione fallita';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Usa interconnect come backend di backup';
       case 'interconnect_backup_backend_active':
@@ -483632,9 +484218,15 @@ extension on _StringsIt {
         return 'Abbinamento e dispositivi';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivi abbinati: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Download di ${count} elementi dai dispositivi abbinati';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Abilita interconnect';
       case 'interconnect_enable_footer':
@@ -483716,6 +484308,8 @@ extension on _StringsIt {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -498027,6 +498621,13 @@ extension on _StringsJa {
         return ({required Object number}) => '第 ${number} シーズン';
       case 'collection_episode_link_unavailable':
         return '先に作品をスクレイピングしてください';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '欠けているエピソードはありません';
       case 'collection_episode_rename':
@@ -502394,6 +502995,12 @@ extension on _StringsJa {
         return ({required Object error}) => '初期化に失敗しました：${error}';
       case 'initialization_failed':
         return '初期化に失敗しました';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'バックアップバックエンド';
       case 'interconnect_backup_backend_active':
@@ -502412,8 +503019,14 @@ extension on _StringsJa {
         return 'ペアリングとデバイス';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'ペアリング済みデバイス：${n} 台';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => 'ペアリング済みデバイスから ${count} 件をダウンロード中';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'インターコネクトを有効にする';
       case 'interconnect_enable_footer':
@@ -502495,6 +503108,8 @@ extension on _StringsJa {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -516726,6 +517341,13 @@ extension on _StringsKo {
         return ({required Object number}) => '시즌 ${number}';
       case 'collection_episode_link_unavailable':
         return '먼저 작품을 스크레이핑하세요';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '누락 에피소드 없음';
       case 'collection_episode_rename':
@@ -521097,6 +521719,12 @@ extension on _StringsKo {
         return ({required Object error}) => '초기화 실패: ${error}';
       case 'initialization_failed':
         return '초기화 실패';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return '인터커넥트를 백업 백엔드로 사용';
       case 'interconnect_backup_backend_active':
@@ -521115,8 +521743,14 @@ extension on _StringsKo {
         return '페어링 및 기기';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '페어링된 기기: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '페어링된 기기에서 항목 ${count}개 다운로드 중';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return '인터커넥트 활성화';
       case 'interconnect_enable_footer':
@@ -521198,6 +521832,8 @@ extension on _StringsKo {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -535469,6 +536105,13 @@ extension on _StringsNl {
         return ({required Object number}) => 'Seizoen ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape eerst de serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Geen ontbrekende afleveringen';
       case 'collection_episode_rename':
@@ -539858,6 +540501,12 @@ extension on _StringsNl {
         return ({required Object error}) => 'Initialisatie mislukt: ${error}';
       case 'initialization_failed':
         return 'Initialisatie mislukt';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Interconnect als back-upbackend gebruiken';
       case 'interconnect_backup_backend_active':
@@ -539877,9 +540526,15 @@ extension on _StringsNl {
         return 'Koppelen en apparaten';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Gekoppelde apparaten: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             '${count} items downloaden van gekoppelde apparaten';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Interconnect inschakelen';
       case 'interconnect_enable_footer':
@@ -539961,6 +540616,8 @@ extension on _StringsNl {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -554300,6 +554957,13 @@ extension on _StringsPtBr {
         return ({required Object number}) => 'Temporada ${number}';
       case 'collection_episode_link_unavailable':
         return 'Raspe a série primeiro';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Nenhum episódio faltante';
       case 'collection_episode_rename':
@@ -558686,6 +559350,12 @@ extension on _StringsPtBr {
         return ({required Object error}) => 'Falha na inicialização: ${error}';
       case 'initialization_failed':
         return 'Falha na inicialização';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Usar interconexão como backend de backup';
       case 'interconnect_backup_backend_active':
@@ -558705,9 +559375,15 @@ extension on _StringsPtBr {
         return 'Pareamento e dispositivos';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivos pareados: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Baixando ${count} itens de dispositivos pareados';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Ativar interconexão';
       case 'interconnect_enable_footer':
@@ -558789,6 +559465,8 @@ extension on _StringsPtBr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -573125,6 +573803,13 @@ extension on _StringsRu {
         return ({required Object number}) => 'Сезон ${number}';
       case 'collection_episode_link_unavailable':
         return 'Сначала соберите данные о сериале';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Нет недостающих эпизодов';
       case 'collection_episode_rename':
@@ -577514,6 +578199,12 @@ extension on _StringsRu {
         return ({required Object error}) => 'Ошибка инициализации: ${error}';
       case 'initialization_failed':
         return 'Ошибка инициализации';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Использовать взаимосвязь как бэкенд резервного копирования';
       case 'interconnect_backup_backend_active':
@@ -577533,9 +578224,15 @@ extension on _StringsRu {
         return 'Сопряжение и устройства';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Сопряжённых устройств: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Загрузка элементов с сопряжённых устройств: ${count}';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Включить взаимосвязь';
       case 'interconnect_enable_footer':
@@ -577617,6 +578314,8 @@ extension on _StringsRu {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -591933,6 +592632,13 @@ extension on _StringsTh {
         return ({required Object number}) => 'ซีซัน ${number}';
       case 'collection_episode_link_unavailable':
         return 'ดึงข้อมูลรายการก่อน';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'ไม่มีตอนที่ขาดหายไป';
       case 'collection_episode_rename':
@@ -596314,6 +597020,12 @@ extension on _StringsTh {
         return ({required Object error}) => 'เริ่มต้นล้มเหลว: ${error}';
       case 'initialization_failed':
         return 'เริ่มต้นล้มเหลว';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'ใช้การเชื่อมต่ออุปกรณ์เป็นแบ็กเอนด์สำรองข้อมูล';
       case 'interconnect_backup_backend_active':
@@ -596333,9 +597045,15 @@ extension on _StringsTh {
         return 'การจับคู่และอุปกรณ์';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'อุปกรณ์ที่จับคู่แล้ว: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'กำลังดาวน์โหลด ${count} รายการจากอุปกรณ์ที่จับคู่';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'เปิดใช้การเชื่อมต่ออุปกรณ์';
       case 'interconnect_enable_footer':
@@ -596417,6 +597135,8 @@ extension on _StringsTh {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -610730,6 +611450,13 @@ extension on _StringsTr {
         return ({required Object number}) => 'Sezon ${number}';
       case 'collection_episode_link_unavailable':
         return 'Önce diziyi kazıyın';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Eksik bölüm yok';
       case 'collection_episode_rename':
@@ -615114,6 +615841,12 @@ extension on _StringsTr {
         return ({required Object error}) => 'Başlatma başarısız: ${error}';
       case 'initialization_failed':
         return 'Başlatma başarısız';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Yedekleme arka ucu olarak bağlantıyı kullan';
       case 'interconnect_backup_backend_active':
@@ -615133,9 +615866,15 @@ extension on _StringsTr {
         return 'Eşleştirme ve cihazlar';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Eşleştirilmiş cihazlar: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Eşleştirilmiş cihazlardan ${count} öğe indiriliyor';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Bağlantıyı etkinleştir';
       case 'interconnect_enable_footer':
@@ -615218,6 +615957,8 @@ extension on _StringsTr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -629534,6 +630275,13 @@ extension on _StringsVi {
         return ({required Object number}) => 'Mùa ${number}';
       case 'collection_episode_link_unavailable':
         return 'Hãy quét thông tin chương trình trước';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Không có tập nào bị thiếu';
       case 'collection_episode_rename':
@@ -633919,6 +634667,12 @@ extension on _StringsVi {
         return ({required Object error}) => 'Khởi tạo thất bại: ${error}';
       case 'initialization_failed':
         return 'Khởi tạo thất bại';
+      case 'interconnect_auto_sync_entry':
+        return 'When to sync';
+      case 'interconnect_auto_sync_entry_off':
+        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
+      case 'interconnect_auto_sync_entry_on':
+        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
       case 'interconnect_backup_backend':
         return 'Dùng kết nối liên thiết bị làm backend sao lưu';
       case 'interconnect_backup_backend_active':
@@ -633938,9 +634692,15 @@ extension on _StringsVi {
         return 'Ghép nối & thiết bị';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Thiết bị đã ghép nối: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Đang tải ${count} mục từ thiết bị đã ghép nối';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Bật kết nối liên thiết bị';
       case 'interconnect_enable_footer':
@@ -634022,6 +634782,8 @@ extension on _StringsVi {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
@@ -648273,6 +649035,13 @@ extension on _StringsZhCn {
         return ({required Object number}) => '第 ${number} 季';
       case 'collection_episode_link_unavailable':
         return '先刮出作品资料再指定';
+      case 'collection_episode_local_copy_delete':
+        return '删除本机副本';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            '删除「${title}」下载到本机的副本？配对设备上的原片不受影响，之后仍可从配对设备播放或重新下载。';
+      case 'collection_episode_local_copy_deleted':
+        return '已删除本机副本';
       case 'collection_episode_no_missing':
         return '没有缺集';
       case 'collection_episode_rename':
@@ -652610,6 +653379,12 @@ extension on _StringsZhCn {
         return ({required Object error}) => '初始化失败：${error}';
       case 'initialization_failed':
         return '初始化失败';
+      case 'interconnect_auto_sync_entry':
+        return '同步时机';
+      case 'interconnect_auto_sync_entry_off':
+        return '自动同步已关闭：上面这些内容只在点「立即同步」时才与对端合并。点此去开启';
+      case 'interconnect_auto_sync_entry_on':
+        return '自动同步已开启：打开应用、切到后台时以及运行中定期与对端合并上面这些内容';
       case 'interconnect_backup_backend':
         return '用互联做备份后端';
       case 'interconnect_backup_backend_active':
@@ -652628,8 +653403,14 @@ extension on _StringsZhCn {
         return '配对与设备';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '已配对 ${n} 台';
+      case 'interconnect_download_cancel':
+        return '取消下载';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '正在从配对设备下载 ${count} 项';
+      case 'interconnect_download_tasks_hint':
+        return '暂停、继续或取消从配对设备下载到本机的任务';
+      case 'interconnect_download_tasks_title':
+        return '互联下载';
       case 'interconnect_enable':
         return '启用互联';
       case 'interconnect_enable_footer':
@@ -652710,6 +653491,8 @@ extension on _StringsZhCn {
         return '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Fushi 互联」分类';
+      case 'interconnect_peer_certificate_unpinned':
+        return '这条地址没有记录对端证书，无法建立加密连接。点这一行的「重新配对」。';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
@@ -666845,6 +667628,13 @@ extension on _StringsZhHk {
         return ({required Object number}) => '第 ${number} 季';
       case 'collection_episode_link_unavailable':
         return '先刮出作品資料再指定';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '沒有缺集';
       case 'collection_episode_rename':
@@ -671199,6 +671989,12 @@ extension on _StringsZhHk {
         return ({required Object error}) => '初始化失敗：${error}';
       case 'initialization_failed':
         return '初始化失敗';
+      case 'interconnect_auto_sync_entry':
+        return '同步時機';
+      case 'interconnect_auto_sync_entry_off':
+        return '自動同步已關閉：上面這些內容只在點「立即同步」時才與對端合併。點此去開啟';
+      case 'interconnect_auto_sync_entry_on':
+        return '自動同步已開啟：開啟應用、切到背景時以及運行中定期與對端合併上面這些內容';
       case 'interconnect_backup_backend':
         return '用互聯做備份後端';
       case 'interconnect_backup_backend_active':
@@ -671217,8 +672013,14 @@ extension on _StringsZhHk {
         return '配對與裝置';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '已配對 ${n} 台';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '正在從配對裝置下載 ${count} 項';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return '啟用互聯';
       case 'interconnect_enable_footer':
@@ -671300,6 +672102,8 @@ extension on _StringsZhHk {
         return '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
       case 'interconnect_moved_note':
         return '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
+      case 'interconnect_peer_certificate_unpinned':
+        return 'This address has no recorded certificate for the device, so a secure connection can\'t be made. Tap Re-pair on this row.';
       case 'interconnect_peer_forget_confirm':
         return ({required Object count}) =>
             'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
