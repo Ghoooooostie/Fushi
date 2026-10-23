@@ -6253,9 +6253,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep scanning this folder for new manga';
   String get manga_import_hint =>
       'Pick a manga folder, a .cbz/.zip page archive, a .pdf, or a .mokuro file.';
-  String get manga_import_ios_mokuro_needs_folder =>
-      'On iOS a single .mokuro can\'t bring its page images along. Pick the whole volume folder (the .mokuro plus its image folder), or a .zip/.cbz of it.';
   String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   String get manga_import_pick_file => 'Pick manga file';
   String get manga_import_pick_folder => 'Pick manga folder';
   String manga_import_selection_batch_hint({required Object n}) =>
@@ -23262,10 +23262,10 @@ class _StringsAr extends _StringsEn {
   String get manga_import_hint =>
       'اختر مجلد مانغا، أرشيف صفحات .cbz/.zip، ملف .pdf، أو ملف .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'على iOS لا يمكن لملف .mokuro واحد أن يجلب صور صفحاته معه. اختر مجلد الكتاب بالكامل (ملف .mokuro مع مجلد صوره)، أو ملف .zip/.cbz منه.';
-  @override
   String get manga_import_missing_input => 'اختر ملف أو مجلد مانغا أولاً.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'اختيار ملف مانغا';
   @override
@@ -45331,11 +45331,11 @@ class _StringsDe extends _StringsEn {
   String get manga_import_hint =>
       'Wählen Sie einen Manga-Ordner, ein .cbz/.zip-Seitenarchiv, eine .pdf oder eine .mokuro-Datei.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Unter iOS kann eine einzelne .mokuro-Datei ihre Seitenbilder nicht mitbringen. Wähle den gesamten Bandordner (die .mokuro samt Bilderordner) oder eine .zip/.cbz davon.';
-  @override
   String get manga_import_missing_input =>
       'Wählen Sie zuerst eine Manga-Datei oder einen Ordner.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Manga-Datei auswählen';
   @override
@@ -67613,11 +67613,11 @@ class _StringsEs extends _StringsEn {
   String get manga_import_hint =>
       'Elija una carpeta de manga, un archivo .cbz/.zip de páginas, un .pdf o un archivo .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'En iOS, un único .mokuro no puede traer consigo las imágenes de las páginas. Elige la carpeta completa del volumen (el .mokuro más su carpeta de imágenes) o un .zip/.cbz de ella.';
-  @override
   String get manga_import_missing_input =>
       'Elija un archivo o carpeta de manga primero.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Elegir archivo de manga';
   @override
@@ -89973,11 +89973,11 @@ class _StringsFr extends _StringsEn {
   String get manga_import_hint =>
       'Choisissez un dossier manga, une archive .cbz/.zip de pages, un .pdf ou un fichier .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Sur iOS, un seul fichier .mokuro ne peut pas emporter les images des pages. Choisissez le dossier complet du volume (le .mokuro avec son dossier d\'images), ou un .zip/.cbz de celui-ci.';
-  @override
   String get manga_import_missing_input =>
       'Choisissez d\'abord un fichier ou dossier manga.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Choisir un fichier manga';
   @override
@@ -112203,11 +112203,11 @@ class _StringsId extends _StringsEn {
   String get manga_import_hint =>
       'Pilih folder manga, arsip halaman .cbz/.zip, .pdf, atau file .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Di iOS, satu file .mokuro tidak dapat membawa gambar halamannya. Pilih seluruh folder volume (.mokuro plus folder gambarnya), atau .zip/.cbz-nya.';
-  @override
   String get manga_import_missing_input =>
       'Pilih file atau folder manga terlebih dahulu.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Pilih file manga';
   @override
@@ -134332,11 +134332,11 @@ class _StringsIt extends _StringsEn {
   String get manga_import_hint =>
       'Scegli una cartella manga, un archivio .cbz/.zip, un .pdf o un file .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Su iOS un singolo .mokuro non può portare con sé le immagini delle pagine. Scegli l\'intera cartella del volume (il .mokuro più la sua cartella di immagini), oppure un .zip/.cbz di essa.';
-  @override
   String get manga_import_missing_input =>
       'Scegli prima un file o una cartella manga.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Scegli file manga';
   @override
@@ -156060,10 +156060,10 @@ class _StringsJa extends _StringsEn {
   String get manga_import_hint =>
       'マンガフォルダ、.cbz/.zipページアーカイブ、.pdf、または.mokuroファイルを選択してください。';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'iOS では、単体の .mokuro ファイルにページ画像を含められません。ボリュームのフォルダ全体（.mokuro と画像フォルダ）か、その .zip/.cbz を選択してください。';
-  @override
   String get manga_import_missing_input => 'まずマンガファイルまたはフォルダを選択してください。';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'マンガファイルを選択';
   @override
@@ -177251,10 +177251,10 @@ class _StringsKo extends _StringsEn {
   String get manga_import_hint =>
       '만화 폴더, .cbz/.zip 페이지 아카이브, .pdf 또는 .mokuro 파일을 선택하세요.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'iOS에서는 .mokuro 하나만으로 페이지 이미지를 함께 가져올 수 없습니다. 권 폴더 전체(.mokuro와 이미지 폴더) 또는 그 .zip/.cbz를 선택하세요.';
-  @override
   String get manga_import_missing_input => '먼저 만화 파일이나 폴더를 선택하세요.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => '만화 파일 선택';
   @override
@@ -198953,11 +198953,11 @@ class _StringsNl extends _StringsEn {
   String get manga_import_hint =>
       'Kies een mangamap, een .cbz/.zip-paginaarchief, een .pdf, of een .mokuro-bestand.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Op iOS kan een los .mokuro-bestand de paginabeelden niet meenemen. Kies de hele deelmap (het .mokuro-bestand plus de afbeeldingsmap), of een .zip/.cbz ervan.';
-  @override
   String get manga_import_missing_input =>
       'Kies eerst een mangabestand of -map.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Mangabestand kiezen';
   @override
@@ -221161,11 +221161,11 @@ class _StringsPtBr extends _StringsEn {
   String get manga_import_hint =>
       'Escolha uma pasta de mangá, um arquivo .cbz/.zip, um .pdf ou um arquivo .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'No iOS, um único arquivo .mokuro não consegue trazer as imagens das páginas. Escolha a pasta inteira do volume (o .mokuro mais a pasta de imagens) ou um .zip/.cbz dela.';
-  @override
   String get manga_import_missing_input =>
       'Escolha um arquivo ou pasta de mangá primeiro.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Escolher arquivo de mangá';
   @override
@@ -243353,11 +243353,11 @@ class _StringsRu extends _StringsEn {
   String get manga_import_hint =>
       'Выберите папку с мангой, архив страниц .cbz/.zip, .pdf или файл .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'На iOS один файл .mokuro не может принести с собой изображения страниц. Выберите папку тома целиком (.mokuro вместе с папкой изображений) или .zip/.cbz с ней.';
-  @override
   String get manga_import_missing_input =>
       'Сначала выберите файл или папку с мангой.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Выбрать файл манги';
   @override
@@ -265379,10 +265379,10 @@ class _StringsTh extends _StringsEn {
   String get manga_import_hint =>
       'เลือกโฟลเดอร์มังงะ, ไฟล์ .cbz/.zip, .pdf หรือไฟล์ .mokuro';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'บน iOS ไฟล์ .mokuro เดี่ยวๆ ไม่นำภาพหน้ามาด้วย เลือกโฟลเดอร์ทั้งเล่ม (.mokuro พร้อมโฟลเดอร์ภาพ) หรือ .zip/.cbz ของโฟลเดอร์นั้น';
-  @override
   String get manga_import_missing_input => 'เลือกไฟล์หรือโฟลเดอร์มังงะก่อน';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'เลือกไฟล์มังงะ';
   @override
@@ -287352,11 +287352,11 @@ class _StringsTr extends _StringsEn {
   String get manga_import_hint =>
       'Bir manga klasörü, .cbz/.zip sayfa arşivi, .pdf veya .mokuro dosyası seçin.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'iOS\'ta tek bir .mokuro sayfa görsellerini yanında getiremez. Tüm cilt klasörünü (.mokuro artı görsel klasörü) veya bunun bir .zip/.cbz dosyasını seçin.';
-  @override
   String get manga_import_missing_input =>
       'Önce bir manga dosyası veya klasörü seçin.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Manga dosyası seç';
   @override
@@ -309382,11 +309382,11 @@ class _StringsVi extends _StringsEn {
   String get manga_import_hint =>
       'Chọn thư mục truyện tranh, tệp lưu trữ trang .cbz/.zip, tệp .pdf hoặc tệp .mokuro.';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'Trên iOS, một tệp .mokuro đơn lẻ không mang theo được ảnh các trang. Hãy chọn cả thư mục của tập (tệp .mokuro cùng thư mục ảnh), hoặc tệp .zip/.cbz của nó.';
-  @override
   String get manga_import_missing_input =>
       'Hãy chọn tệp hoặc thư mục truyện tranh trước.';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => 'Chọn tệp truyện tranh';
   @override
@@ -330472,10 +330472,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_import_hint => '选择漫画文件夹、.cbz/.zip 页图压缩包、.pdf，或 .mokuro 文件。';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'iOS 上单选 .mokuro 带不上它的页图。请选整卷文件夹（含 .mokuro 和它的页图文件夹），或把整卷打包成 .zip/.cbz 再导入。';
-  @override
   String get manga_import_missing_input => '请先选择漫画文件或文件夹。';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      '这个 mokuro 文件没带上它的页图（文件选择器只交回了这一个文件的副本）。请改选整卷文件夹（.mokuro 或旧版 .html，连同页图文件夹和 _ocr 文件夹），或把整卷打包成 .zip/.cbz 再导入。';
   @override
   String get manga_import_pick_file => '选择漫画文件';
   @override
@@ -350756,10 +350756,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_import_hint => '選擇漫畫資料夾、.cbz/.zip 頁圖壓縮包、.pdf，或 .mokuro 檔案。';
   @override
-  String get manga_import_ios_mokuro_needs_folder =>
-      'iOS 上單選 .mokuro 帶不上它的頁圖。請選整卷資料夾（含 .mokuro 和它的頁圖資料夾），或把整卷打包成 .zip/.cbz 再匯入。';
-  @override
   String get manga_import_missing_input => '請先選擇漫畫檔案或資料夾。';
+  @override
+  String get manga_import_mokuro_needs_folder =>
+      'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
   @override
   String get manga_import_pick_file => '選擇漫畫檔案';
   @override
@@ -370413,10 +370413,10 @@ extension on _StringsEn {
         return 'Keep scanning this folder for new manga';
       case 'manga_import_hint':
         return 'Pick a manga folder, a .cbz/.zip page archive, a .pdf, or a .mokuro file.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'On iOS a single .mokuro can\'t bring its page images along. Pick the whole volume folder (the .mokuro plus its image folder), or a .zip/.cbz of it.';
       case 'manga_import_missing_input':
         return 'Pick a manga file or folder first.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Pick manga file';
       case 'manga_import_pick_folder':
@@ -389128,10 +389128,10 @@ extension on _StringsAr {
         return 'الاستمرار بفحص هذا المجلد بحثاً عن مانغا جديدة';
       case 'manga_import_hint':
         return 'اختر مجلد مانغا، أرشيف صفحات .cbz/.zip، ملف .pdf، أو ملف .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'على iOS لا يمكن لملف .mokuro واحد أن يجلب صور صفحاته معه. اختر مجلد الكتاب بالكامل (ملف .mokuro مع مجلد صوره)، أو ملف .zip/.cbz منه.';
       case 'manga_import_missing_input':
         return 'اختر ملف أو مجلد مانغا أولاً.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'اختيار ملف مانغا';
       case 'manga_import_pick_folder':
@@ -407885,10 +407885,10 @@ extension on _StringsDe {
         return 'Diesen Ordner weiterhin nach neuem Manga durchsuchen';
       case 'manga_import_hint':
         return 'Wählen Sie einen Manga-Ordner, ein .cbz/.zip-Seitenarchiv, eine .pdf oder eine .mokuro-Datei.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Unter iOS kann eine einzelne .mokuro-Datei ihre Seitenbilder nicht mitbringen. Wähle den gesamten Bandordner (die .mokuro samt Bilderordner) oder eine .zip/.cbz davon.';
       case 'manga_import_missing_input':
         return 'Wählen Sie zuerst eine Manga-Datei oder einen Ordner.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Manga-Datei auswählen';
       case 'manga_import_pick_folder':
@@ -426662,10 +426662,10 @@ extension on _StringsEs {
         return 'Seguir escaneando esta carpeta en busca de nuevo manga';
       case 'manga_import_hint':
         return 'Elija una carpeta de manga, un archivo .cbz/.zip de páginas, un .pdf o un archivo .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'En iOS, un único .mokuro no puede traer consigo las imágenes de las páginas. Elige la carpeta completa del volumen (el .mokuro más su carpeta de imágenes) o un .zip/.cbz de ella.';
       case 'manga_import_missing_input':
         return 'Elija un archivo o carpeta de manga primero.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Elegir archivo de manga';
       case 'manga_import_pick_folder':
@@ -445448,10 +445448,10 @@ extension on _StringsFr {
         return 'Scanner continuellement ce dossier pour de nouveaux manga';
       case 'manga_import_hint':
         return 'Choisissez un dossier manga, une archive .cbz/.zip de pages, un .pdf ou un fichier .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Sur iOS, un seul fichier .mokuro ne peut pas emporter les images des pages. Choisissez le dossier complet du volume (le .mokuro avec son dossier d\'images), ou un .zip/.cbz de celui-ci.';
       case 'manga_import_missing_input':
         return 'Choisissez d\'abord un fichier ou dossier manga.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Choisir un fichier manga';
       case 'manga_import_pick_folder':
@@ -464210,10 +464210,10 @@ extension on _StringsId {
         return 'Terus pindai folder ini untuk manga baru';
       case 'manga_import_hint':
         return 'Pilih folder manga, arsip halaman .cbz/.zip, .pdf, atau file .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Di iOS, satu file .mokuro tidak dapat membawa gambar halamannya. Pilih seluruh folder volume (.mokuro plus folder gambarnya), atau .zip/.cbz-nya.';
       case 'manga_import_missing_input':
         return 'Pilih file atau folder manga terlebih dahulu.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Pilih file manga';
       case 'manga_import_pick_folder':
@@ -482956,10 +482956,10 @@ extension on _StringsIt {
         return 'Continua a scansionare questa cartella per nuovi manga';
       case 'manga_import_hint':
         return 'Scegli una cartella manga, un archivio .cbz/.zip, un .pdf o un file .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Su iOS un singolo .mokuro non può portare con sé le immagini delle pagine. Scegli l\'intera cartella del volume (il .mokuro più la sua cartella di immagini), oppure un .zip/.cbz di essa.';
       case 'manga_import_missing_input':
         return 'Scegli prima un file o una cartella manga.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Scegli file manga';
       case 'manga_import_pick_folder':
@@ -501666,10 +501666,10 @@ extension on _StringsJa {
         return 'このフォルダを継続スキャンして新しいマンガを検出';
       case 'manga_import_hint':
         return 'マンガフォルダ、.cbz/.zipページアーカイブ、.pdf、または.mokuroファイルを選択してください。';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'iOS では、単体の .mokuro ファイルにページ画像を含められません。ボリュームのフォルダ全体（.mokuro と画像フォルダ）か、その .zip/.cbz を選択してください。';
       case 'manga_import_missing_input':
         return 'まずマンガファイルまたはフォルダを選択してください。';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'マンガファイルを選択';
       case 'manga_import_pick_folder':
@@ -520305,10 +520305,10 @@ extension on _StringsKo {
         return '이 폴더에서 새 만화를 계속 스캔';
       case 'manga_import_hint':
         return '만화 폴더, .cbz/.zip 페이지 아카이브, .pdf 또는 .mokuro 파일을 선택하세요.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'iOS에서는 .mokuro 하나만으로 페이지 이미지를 함께 가져올 수 없습니다. 권 폴더 전체(.mokuro와 이미지 폴더) 또는 그 .zip/.cbz를 선택하세요.';
       case 'manga_import_missing_input':
         return '먼저 만화 파일이나 폴더를 선택하세요.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return '만화 파일 선택';
       case 'manga_import_pick_folder':
@@ -539012,10 +539012,10 @@ extension on _StringsNl {
         return 'Blijf deze map scannen op nieuwe manga';
       case 'manga_import_hint':
         return 'Kies een mangamap, een .cbz/.zip-paginaarchief, een .pdf, of een .mokuro-bestand.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Op iOS kan een los .mokuro-bestand de paginabeelden niet meenemen. Kies de hele deelmap (het .mokuro-bestand plus de afbeeldingsmap), of een .zip/.cbz ervan.';
       case 'manga_import_missing_input':
         return 'Kies eerst een mangabestand of -map.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Mangabestand kiezen';
       case 'manga_import_pick_folder':
@@ -557774,10 +557774,10 @@ extension on _StringsPtBr {
         return 'Continuar varrendo esta pasta para novos mangás';
       case 'manga_import_hint':
         return 'Escolha uma pasta de mangá, um arquivo .cbz/.zip, um .pdf ou um arquivo .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'No iOS, um único arquivo .mokuro não consegue trazer as imagens das páginas. Escolha a pasta inteira do volume (o .mokuro mais a pasta de imagens) ou um .zip/.cbz dela.';
       case 'manga_import_missing_input':
         return 'Escolha um arquivo ou pasta de mangá primeiro.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Escolher arquivo de mangá';
       case 'manga_import_pick_folder':
@@ -576538,10 +576538,10 @@ extension on _StringsRu {
         return 'Продолжать сканировать эту папку на наличие новой манги';
       case 'manga_import_hint':
         return 'Выберите папку с мангой, архив страниц .cbz/.zip, .pdf или файл .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'На iOS один файл .mokuro не может принести с собой изображения страниц. Выберите папку тома целиком (.mokuro вместе с папкой изображений) или .zip/.cbz с ней.';
       case 'manga_import_missing_input':
         return 'Сначала выберите файл или папку с мангой.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Выбрать файл манги';
       case 'manga_import_pick_folder':
@@ -595274,10 +595274,10 @@ extension on _StringsTh {
         return 'สแกนโฟลเดอร์นี้ต่อเนื่องเพื่อหามังงะใหม่';
       case 'manga_import_hint':
         return 'เลือกโฟลเดอร์มังงะ, ไฟล์ .cbz/.zip, .pdf หรือไฟล์ .mokuro';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'บน iOS ไฟล์ .mokuro เดี่ยวๆ ไม่นำภาพหน้ามาด้วย เลือกโฟลเดอร์ทั้งเล่ม (.mokuro พร้อมโฟลเดอร์ภาพ) หรือ .zip/.cbz ของโฟลเดอร์นั้น';
       case 'manga_import_missing_input':
         return 'เลือกไฟล์หรือโฟลเดอร์มังงะก่อน';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'เลือกไฟล์มังงะ';
       case 'manga_import_pick_folder':
@@ -614012,10 +614012,10 @@ extension on _StringsTr {
         return 'Yeni manga için bu klasörü taramaya devam et';
       case 'manga_import_hint':
         return 'Bir manga klasörü, .cbz/.zip sayfa arşivi, .pdf veya .mokuro dosyası seçin.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'iOS\'ta tek bir .mokuro sayfa görsellerini yanında getiremez. Tüm cilt klasörünü (.mokuro artı görsel klasörü) veya bunun bir .zip/.cbz dosyasını seçin.';
       case 'manga_import_missing_input':
         return 'Önce bir manga dosyası veya klasörü seçin.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Manga dosyası seç';
       case 'manga_import_pick_folder':
@@ -632750,10 +632750,10 @@ extension on _StringsVi {
         return 'Tiếp tục quét thư mục này để tìm truyện tranh mới';
       case 'manga_import_hint':
         return 'Chọn thư mục truyện tranh, tệp lưu trữ trang .cbz/.zip, tệp .pdf hoặc tệp .mokuro.';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'Trên iOS, một tệp .mokuro đơn lẻ không mang theo được ảnh các trang. Hãy chọn cả thư mục của tập (tệp .mokuro cùng thư mục ảnh), hoặc tệp .zip/.cbz của nó.';
       case 'manga_import_missing_input':
         return 'Hãy chọn tệp hoặc thư mục truyện tranh trước.';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return 'Chọn tệp truyện tranh';
       case 'manga_import_pick_folder':
@@ -651368,10 +651368,10 @@ extension on _StringsZhCn {
         return '以后自动扫描此文件夹里的新漫画';
       case 'manga_import_hint':
         return '选择漫画文件夹、.cbz/.zip 页图压缩包、.pdf，或 .mokuro 文件。';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'iOS 上单选 .mokuro 带不上它的页图。请选整卷文件夹（含 .mokuro 和它的页图文件夹），或把整卷打包成 .zip/.cbz 再导入。';
       case 'manga_import_missing_input':
         return '请先选择漫画文件或文件夹。';
+      case 'manga_import_mokuro_needs_folder':
+        return '这个 mokuro 文件没带上它的页图（文件选择器只交回了这一个文件的副本）。请改选整卷文件夹（.mokuro 或旧版 .html，连同页图文件夹和 _ocr 文件夹），或把整卷打包成 .zip/.cbz 再导入。';
       case 'manga_import_pick_file':
         return '选择漫画文件';
       case 'manga_import_pick_folder':
@@ -669894,10 +669894,10 @@ extension on _StringsZhHk {
         return '以後自動掃描此資料夾裡的新漫畫';
       case 'manga_import_hint':
         return '選擇漫畫資料夾、.cbz/.zip 頁圖壓縮包、.pdf，或 .mokuro 檔案。';
-      case 'manga_import_ios_mokuro_needs_folder':
-        return 'iOS 上單選 .mokuro 帶不上它的頁圖。請選整卷資料夾（含 .mokuro 和它的頁圖資料夾），或把整卷打包成 .zip/.cbz 再匯入。';
       case 'manga_import_missing_input':
         return '請先選擇漫畫檔案或資料夾。';
+      case 'manga_import_mokuro_needs_folder':
+        return 'This mokuro file came without its page images (the picker only handed over a copy of that one file). Pick the whole volume folder instead (the .mokuro or old-style .html together with its image folder and _ocr folder), or a .zip/.cbz of it.';
       case 'manga_import_pick_file':
         return '選擇漫畫檔案';
       case 'manga_import_pick_folder':
