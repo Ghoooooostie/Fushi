@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 152983 (8999 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12009,6 +12009,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_sigmoid => 'Sigmoid upscaling';
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   String get video_setting_mpv_zoom => 'Zoom';
   String get video_setting_pause_ocr_scope =>
       'Recognize on-screen text when paused';
@@ -33177,6 +33180,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'تقليل التموجات عند تكبير الصورة بمنحنى سيغمويد يستهلك GPU. معطّل افتراضياً للأداء؛ فعّله لتكبير أوضح.';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => 'التكبير/التصغير';
   @override
@@ -55393,6 +55401,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-Kurven-Hochskalierung reduziert Klingeln, kostet aber GPU-Leistung. Standardmäßig aus für bessere Leistung; aktivieren Sie es für schärfere Hochskalierung.';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
@@ -77684,6 +77697,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'El escalado con curva sigmoide reduce el ringing pero consume GPU. Apagado por defecto por rendimiento; actívelo si quiere escalado más nítido.';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
@@ -100055,6 +100073,11 @@ class _StringsFr extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'La mise à l\'échelle par courbe sigmoïde réduit le ringing mais coûte du GPU. Désactivé par défaut pour la performance ; activez pour une mise à l\'échelle plus nette.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -122130,6 +122153,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Upscaling kurva sigmoid mengurangi ringing tetapi memakan GPU. Mati secara default untuk performa; aktifkan jika Anda menginginkan upscaling lebih tajam.';
+  @override
+  String get video_setting_mpv_volume_max => 'Batas volume';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Di atas 100% pemutar memperkuat audio secara perangkat lunak; nilai terlalu tinggi bisa membuat suara pecah';
   @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
@@ -144317,6 +144345,11 @@ class _StringsIt extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'L\'upscaling a curva sigmoide riduce il ringing ma costa GPU. Disattivato per le prestazioni; attiva se vuoi un upscaling più nitido.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -165594,6 +165627,11 @@ class _StringsJa extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'シグモイド曲線アップスケーリングはリンギングを低減しますがGPU負荷がかかります。パフォーマンスのためデフォルトはオフ。よりシャープなアップスケーリングが必要な場合はオンにしてください。';
   @override
+  String get video_setting_mpv_volume_max => '音量の上限';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      '100% を超える分はプレーヤーがソフトウェアで増幅します。上げすぎると音割れすることがあります';
+  @override
   String get video_setting_mpv_zoom => 'ズーム';
   @override
   String get video_setting_pause_ocr_scope => '一時停止時に画面の文字を認識';
@@ -186795,6 +186833,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       '시그모이드 곡선 업스케일링은 링잉을 줄이지만 GPU를 사용합니다. 성능을 위해 기본적으로 꺼져 있으며, 더 선명한 업스케일링을 원하면 켜세요.';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => '확대/축소';
   @override
@@ -208866,6 +208909,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid-curve opschaling vermindert ringing maar kost GPU. Standaard uit voor prestaties; zet aan als je scherpere opschaling wilt.';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
@@ -231079,6 +231127,11 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'Upscaling com curva sigmoide reduz o ringing mas custa GPU. Desligado por padrão para desempenho; ative se quiser upscaling mais nítido.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Zoom';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -253244,6 +253297,11 @@ class _StringsRu extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'Сигмоидное масштабирование уменьшает артефакты, но нагружает GPU. Отключено по умолчанию; включите, если хотите более чёткое масштабирование.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Масштаб';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -275122,6 +275180,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'การอัปสเกลแบบ Sigmoid ลดริงกิ้งแต่ใช้ GPU มากขึ้น ปิดโดยค่าเริ่มต้นเพื่อประสิทธิภาพ; เปิดหากต้องการการอัปสเกลที่คมชัดขึ้น';
+  @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
   @override
   String get video_setting_mpv_zoom => 'ซูม';
   @override
@@ -297151,6 +297214,11 @@ class _StringsTr extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'Sigmoid eğrili büyütme halkalanmayı azaltır ama GPU kullanır. Performans için varsayılan kapalı; daha keskin büyütme istiyorsanız açın.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Yakınlaştırma';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -319132,6 +319200,11 @@ class _StringsVi extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'Nâng cấp đường cong Sigmoid giảm hiện tượng ringing nhưng tốn GPU. Tắt mặc định để tối ưu hiệu năng; bật nếu bạn muốn nâng cấp sắc nét hơn.';
   @override
+  String get video_setting_mpv_volume_max => 'Volume limit';
+  @override
+  String get video_setting_mpv_volume_max_hint =>
+      'Above 100% the player boosts the audio in software; very high values can distort';
+  @override
   String get video_setting_mpv_zoom => 'Phóng to';
   @override
   String get video_setting_pause_ocr_scope =>
@@ -339370,6 +339443,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_sigmoid_hint =>
       'S 形曲线上采样可减少振铃，但会增加显卡负担。为性能默认关闭；想要更锐利的放大画质可开启。';
+  @override
+  String get video_setting_mpv_volume_max => '音量上限';
+  @override
+  String get video_setting_mpv_volume_max_hint => '超过 100% 由播放器软件放大音量；过高可能失真';
   @override
   String get video_setting_mpv_zoom => '缩放';
   @override
@@ -359919,6 +359996,10 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_mpv_sigmoid_hint =>
       'S 形曲線上採樣可減少振鈴，但會增加顯卡負擔。為性能預設關閉；想要更銳利的放大畫質可開啟。';
   @override
+  String get video_setting_mpv_volume_max => '音量上限';
+  @override
+  String get video_setting_mpv_volume_max_hint => '超過 100% 由播放器軟件放大音量；過高可能失真';
+  @override
   String get video_setting_mpv_zoom => '縮放';
   @override
   String get video_setting_pause_ocr_scope => '暫停時辨識畫面文字';
@@ -378776,6 +378857,10 @@ extension on _StringsEn {
         return 'Sigmoid upscaling';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve upscaling reduces ringing but costs GPU. Off by default for performance; turn on if you want sharper upscaling.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -397475,6 +397560,10 @@ extension on _StringsAr {
         return 'تكبير سيجمويدي';
       case 'video_setting_mpv_sigmoid_hint':
         return 'تقليل التموجات عند تكبير الصورة بمنحنى سيغمويد يستهلك GPU. معطّل افتراضياً للأداء؛ فعّله لتكبير أوضح.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'التكبير/التصغير';
       case 'video_setting_pause_ocr_scope':
@@ -416249,6 +416338,10 @@ extension on _StringsDe {
         return 'Sigmoid-Hochskalierung';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-Kurven-Hochskalierung reduziert Klingeln, kostet aber GPU-Leistung. Standardmäßig aus für bessere Leistung; aktivieren Sie es für schärfere Hochskalierung.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -435008,6 +435101,10 @@ extension on _StringsEs {
         return 'Escalado sigmoidal';
       case 'video_setting_mpv_sigmoid_hint':
         return 'El escalado con curva sigmoide reduce el ringing pero consume GPU. Apagado por defecto por rendimiento; actívelo si quiere escalado más nítido.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -453784,6 +453881,10 @@ extension on _StringsFr {
         return 'Suréchantillonnage sigmoïde';
       case 'video_setting_mpv_sigmoid_hint':
         return 'La mise à l\'échelle par courbe sigmoïde réduit le ringing mais coûte du GPU. Désactivé par défaut pour la performance ; activez pour une mise à l\'échelle plus nette.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -472505,6 +472606,10 @@ extension on _StringsId {
         return 'Upscaling sigmoid';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Upscaling kurva sigmoid mengurangi ringing tetapi memakan GPU. Mati secara default untuk performa; aktifkan jika Anda menginginkan upscaling lebih tajam.';
+      case 'video_setting_mpv_volume_max':
+        return 'Batas volume';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Di atas 100% pemutar memperkuat audio secara perangkat lunak; nilai terlalu tinggi bisa membuat suara pecah';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -491259,6 +491364,10 @@ extension on _StringsIt {
         return 'Upscaling sigmoide';
       case 'video_setting_mpv_sigmoid_hint':
         return 'L\'upscaling a curva sigmoide riduce il ringing ma costa GPU. Disattivato per le prestazioni; attiva se vuoi un upscaling più nitido.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -509895,6 +510004,10 @@ extension on _StringsJa {
         return 'シグモイドアップスケール';
       case 'video_setting_mpv_sigmoid_hint':
         return 'シグモイド曲線アップスケーリングはリンギングを低減しますがGPU負荷がかかります。パフォーマンスのためデフォルトはオフ。よりシャープなアップスケーリングが必要な場合はオンにしてください。';
+      case 'video_setting_mpv_volume_max':
+        return '音量の上限';
+      case 'video_setting_mpv_volume_max_hint':
+        return '100% を超える分はプレーヤーがソフトウェアで増幅します。上げすぎると音割れすることがあります';
       case 'video_setting_mpv_zoom':
         return 'ズーム';
       case 'video_setting_pause_ocr_scope':
@@ -528526,6 +528639,10 @@ extension on _StringsKo {
         return '시그모이드 업스케일링';
       case 'video_setting_mpv_sigmoid_hint':
         return '시그모이드 곡선 업스케일링은 링잉을 줄이지만 GPU를 사용합니다. 성능을 위해 기본적으로 꺼져 있으며, 더 선명한 업스케일링을 원하면 켜세요.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return '확대/축소';
       case 'video_setting_pause_ocr_scope':
@@ -547268,6 +547385,10 @@ extension on _StringsNl {
         return 'Sigmoïde-opschaling';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid-curve opschaling vermindert ringing maar kost GPU. Standaard uit voor prestaties; zet aan als je scherpere opschaling wilt.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -566012,6 +566133,10 @@ extension on _StringsPtBr {
         return 'Ampliação sigmoide';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Upscaling com curva sigmoide reduz o ringing mas custa GPU. Desligado por padrão para desempenho; ative se quiser upscaling mais nítido.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Zoom';
       case 'video_setting_pause_ocr_scope':
@@ -584761,6 +584886,10 @@ extension on _StringsRu {
         return 'Сигмоидное увеличение';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Сигмоидное масштабирование уменьшает артефакты, но нагружает GPU. Отключено по умолчанию; включите, если хотите более чёткое масштабирование.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Масштаб';
       case 'video_setting_pause_ocr_scope':
@@ -603466,6 +603595,10 @@ extension on _StringsTh {
         return 'ขยายภาพแบบ Sigmoid';
       case 'video_setting_mpv_sigmoid_hint':
         return 'การอัปสเกลแบบ Sigmoid ลดริงกิ้งแต่ใช้ GPU มากขึ้น ปิดโดยค่าเริ่มต้นเพื่อประสิทธิภาพ; เปิดหากต้องการการอัปสเกลที่คมชัดขึ้น';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'ซูม';
       case 'video_setting_pause_ocr_scope':
@@ -622200,6 +622333,10 @@ extension on _StringsTr {
         return 'Sigmoid büyütme';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Sigmoid eğrili büyütme halkalanmayı azaltır ama GPU kullanır. Performans için varsayılan kapalı; daha keskin büyütme istiyorsanız açın.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Yakınlaştırma';
       case 'video_setting_pause_ocr_scope':
@@ -640920,6 +641057,10 @@ extension on _StringsVi {
         return 'Upscale Sigmoid';
       case 'video_setting_mpv_sigmoid_hint':
         return 'Nâng cấp đường cong Sigmoid giảm hiện tượng ringing nhưng tốn GPU. Tắt mặc định để tối ưu hiệu năng; bật nếu bạn muốn nâng cấp sắc nét hơn.';
+      case 'video_setting_mpv_volume_max':
+        return 'Volume limit';
+      case 'video_setting_mpv_volume_max_hint':
+        return 'Above 100% the player boosts the audio in software; very high values can distort';
       case 'video_setting_mpv_zoom':
         return 'Phóng to';
       case 'video_setting_pause_ocr_scope':
@@ -659431,6 +659572,10 @@ extension on _StringsZhCn {
         return 'S形上采样';
       case 'video_setting_mpv_sigmoid_hint':
         return 'S 形曲线上采样可减少振铃，但会增加显卡负担。为性能默认关闭；想要更锐利的放大画质可开启。';
+      case 'video_setting_mpv_volume_max':
+        return '音量上限';
+      case 'video_setting_mpv_volume_max_hint':
+        return '超过 100% 由播放器软件放大音量；过高可能失真';
       case 'video_setting_mpv_zoom':
         return '缩放';
       case 'video_setting_pause_ocr_scope':
@@ -677983,6 +678128,10 @@ extension on _StringsZhHk {
         return 'S 形上採樣';
       case 'video_setting_mpv_sigmoid_hint':
         return 'S 形曲線上採樣可減少振鈴，但會增加顯卡負擔。為性能預設關閉；想要更銳利的放大畫質可開啟。';
+      case 'video_setting_mpv_volume_max':
+        return '音量上限';
+      case 'video_setting_mpv_volume_max_hint':
+        return '超過 100% 由播放器軟件放大音量；過高可能失真';
       case 'video_setting_mpv_zoom':
         return '縮放';
       case 'video_setting_pause_ocr_scope':
