@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153034 (9002 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2332,7 +2332,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  String get card_creation_notice_success => 'Show mining confirmations';
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
   String get card_creation_section_content => 'Card content';
+  String get card_creation_section_notices => 'Mining notifications';
   String get card_duplicate => 'Duplicate card — not exported.';
   String get card_export_failed => 'Failed to export card.';
   String card_export_failed_detail({required Object reason}) =>
@@ -16595,7 +16602,19 @@ class _StringsAr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'تراجع غلاف البطاقة إلى صورة ثابتة (المقطع المتحرك غير متاح): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'بطاقة مكررة — لم يتم تصديرها.';
   @override
@@ -38504,7 +38523,19 @@ class _StringsDe extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Karten-Cover auf Standbild zurückgefallen (animierter Clip nicht verfügbar): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Doppelte Karte — nicht exportiert.';
   @override
@@ -60760,7 +60791,19 @@ class _StringsEs extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La portada de la tarjeta recurrió a un fotograma estático (clip animado no disponible): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Tarjeta duplicada — no exportada.';
   @override
@@ -83078,7 +83121,19 @@ class _StringsFr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La couverture de carte est retombée sur une image fixe (clip animé indisponible) : ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Carte en double — non exportée.';
   @override
@@ -105409,7 +105464,19 @@ class _StringsId extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Sampul kartu menggunakan bingkai diam (klip animasi tidak tersedia): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Kartu duplikat — tidak diekspor.';
   @override
@@ -127471,7 +127538,19 @@ class _StringsIt extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'La copertina della carta è tornata a un fotogramma fisso (clip animata non disponibile): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Carta duplicata — non esportata.';
   @override
@@ -149534,7 +149613,19 @@ class _StringsJa extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'カードカバーが静止画にフォールバックしました（アニメーションクリップ利用不可）: ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => '重複カード — エクスポートされませんでした。';
   @override
@@ -170692,7 +170783,19 @@ class _StringsKo extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '카드 표지가 정지 프레임으로 대체됨 (애니메이션 클립 사용 불가): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => '중복 카드 — 내보내지 않았습니다.';
   @override
@@ -192060,7 +192163,19 @@ class _StringsNl extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Kaartomslag teruggevallen op een stilstaand beeld (geanimeerde clip niet beschikbaar): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Dubbele kaart — niet geëxporteerd.';
   @override
@@ -214225,7 +214340,19 @@ class _StringsPtBr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Capa do cartão voltou para imagem estática (clipe animado indisponível): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Cartão duplicado — não exportado.';
   @override
@@ -236430,7 +236557,19 @@ class _StringsRu extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Обложка карточки заменена статичным кадром (анимированный клип недоступен): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Дубликат карточки — не экспортирован.';
   @override
@@ -258544,7 +258683,19 @@ class _StringsTh extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'ปกบัตรใช้ภาพนิ่งแทน (คลิปเคลื่อนไหวไม่พร้อมใช้งาน): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'การ์ดซ้ำ — ไม่ได้ส่งออก';
   @override
@@ -280420,7 +280571,19 @@ class _StringsTr extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Kart kapağı durağan kareye düştü (animasyonlu klip kullanılamıyor): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Tekrar kart — dışa aktarılmadı.';
   @override
@@ -302457,7 +302620,19 @@ class _StringsVi extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       'Bìa thẻ đã chuyển về ảnh tĩnh (clip động không khả dụng): ${reason}';
   @override
+  String get card_creation_notice_duplicate => 'Show duplicate-card notices';
+  @override
+  String get card_creation_notice_duplicate_hint =>
+      'Show a notification when a card is skipped because it is already in Anki.';
+  @override
+  String get card_creation_notice_success => 'Show mining confirmations';
+  @override
+  String get card_creation_notice_success_hint =>
+      'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => 'Mining notifications';
   @override
   String get card_duplicate => 'Thẻ trùng lặp — không xuất.';
   @override
@@ -324106,7 +324281,18 @@ class _StringsZhCn extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '卡片封面已降级为静态帧（动图不可用）：${reason}';
   @override
+  String get card_creation_notice_duplicate => '重复制卡提示';
+  @override
+  String get card_creation_notice_duplicate_hint => '卡片已在 Anki 中、这次未导出时弹出提示。';
+  @override
+  String get card_creation_notice_success => '制卡成功提示';
+  @override
+  String get card_creation_notice_success_hint =>
+      '制卡成功、制卡中、已存入待发卡片时弹出提示。制卡失败与缺少音频的提示始终显示。';
+  @override
   String get card_creation_section_content => '卡片内容';
+  @override
+  String get card_creation_section_notices => '制卡提示';
   @override
   String get card_duplicate => '重复卡片，未导出。';
   @override
@@ -344296,7 +344482,18 @@ class _StringsZhHk extends _StringsEn {
   String card_cover_degraded_to_static({required Object reason}) =>
       '卡片封面已降級為靜態幀（動圖不可用）：${reason}';
   @override
+  String get card_creation_notice_duplicate => '重複製卡提示';
+  @override
+  String get card_creation_notice_duplicate_hint => '卡片已在 Anki 中、這次未匯出時彈出提示。';
+  @override
+  String get card_creation_notice_success => '製卡成功提示';
+  @override
+  String get card_creation_notice_success_hint =>
+      '製卡成功、製卡中、已存入待發卡片時彈出提示。製卡失敗與缺少音訊的提示始終顯示。';
+  @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get card_creation_section_notices => '製卡提示';
   @override
   String get card_duplicate => '重複卡片 — 未匯出。';
   @override
@@ -364443,8 +364640,18 @@ extension on _StringsEn {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Duplicate card — not exported.';
       case 'card_export_failed':
@@ -383149,8 +383356,18 @@ extension on _StringsAr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'تراجع غلاف البطاقة إلى صورة ثابتة (المقطع المتحرك غير متاح): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'بطاقة مكررة — لم يتم تصديرها.';
       case 'card_export_failed':
@@ -401870,8 +402087,18 @@ extension on _StringsDe {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Karten-Cover auf Standbild zurückgefallen (animierter Clip nicht verfügbar): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Doppelte Karte — nicht exportiert.';
       case 'card_export_failed':
@@ -420641,8 +420868,18 @@ extension on _StringsEs {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La portada de la tarjeta recurrió a un fotograma estático (clip animado no disponible): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Tarjeta duplicada — no exportada.';
       case 'card_export_failed':
@@ -439404,8 +439641,18 @@ extension on _StringsFr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La couverture de carte est retombée sur une image fixe (clip animé indisponible) : ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Carte en double — non exportée.';
       case 'card_export_failed':
@@ -458166,8 +458413,18 @@ extension on _StringsId {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Sampul kartu menggunakan bingkai diam (klip animasi tidak tersedia): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Kartu duplikat — tidak diekspor.';
       case 'card_export_failed':
@@ -476892,8 +477149,18 @@ extension on _StringsIt {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'La copertina della carta è tornata a un fotogramma fisso (clip animata non disponibile): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Carta duplicata — non esportata.';
       case 'card_export_failed':
@@ -495619,8 +495886,18 @@ extension on _StringsJa {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'カードカバーが静止画にフォールバックしました（アニメーションクリップ利用不可）: ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return '重複カード — エクスポートされませんでした。';
       case 'card_export_failed':
@@ -514240,8 +514517,18 @@ extension on _StringsKo {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             '카드 표지가 정지 프레임으로 대체됨 (애니메이션 클립 사용 불가): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return '중복 카드 — 내보내지 않았습니다.';
       case 'card_export_failed':
@@ -532904,8 +533191,18 @@ extension on _StringsNl {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Kaartomslag teruggevallen op een stilstaand beeld (geanimeerde clip niet beschikbaar): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Dubbele kaart — niet geëxporteerd.';
       case 'card_export_failed':
@@ -551657,8 +551954,18 @@ extension on _StringsPtBr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Capa do cartão voltou para imagem estática (clipe animado indisponível): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Cartão duplicado — não exportado.';
       case 'card_export_failed':
@@ -570403,8 +570710,18 @@ extension on _StringsRu {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Обложка карточки заменена статичным кадром (анимированный клип недоступен): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Дубликат карточки — не экспортирован.';
       case 'card_export_failed':
@@ -589135,8 +589452,18 @@ extension on _StringsTh {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'ปกบัตรใช้ภาพนิ่งแทน (คลิปเคลื่อนไหวไม่พร้อมใช้งาน): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'การ์ดซ้ำ — ไม่ได้ส่งออก';
       case 'card_export_failed':
@@ -607851,8 +608178,18 @@ extension on _StringsTr {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Kart kapağı durağan kareye düştü (animasyonlu klip kullanılamıyor): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Tekrar kart — dışa aktarılmadı.';
       case 'card_export_failed':
@@ -626580,8 +626917,18 @@ extension on _StringsVi {
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) =>
             'Bìa thẻ đã chuyển về ảnh tĩnh (clip động không khả dụng): ${reason}';
+      case 'card_creation_notice_duplicate':
+        return 'Show duplicate-card notices';
+      case 'card_creation_notice_duplicate_hint':
+        return 'Show a notification when a card is skipped because it is already in Anki.';
+      case 'card_creation_notice_success':
+        return 'Show mining confirmations';
+      case 'card_creation_notice_success_hint':
+        return 'Show a notification when a card is added, being created, or saved to pending cards. Failures and missing-audio warnings are always shown.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return 'Mining notifications';
       case 'card_duplicate':
         return 'Thẻ trùng lặp — không xuất.';
       case 'card_export_failed':
@@ -645245,8 +645592,18 @@ extension on _StringsZhCn {
         return '取消';
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) => '卡片封面已降级为静态帧（动图不可用）：${reason}';
+      case 'card_creation_notice_duplicate':
+        return '重复制卡提示';
+      case 'card_creation_notice_duplicate_hint':
+        return '卡片已在 Anki 中、这次未导出时弹出提示。';
+      case 'card_creation_notice_success':
+        return '制卡成功提示';
+      case 'card_creation_notice_success_hint':
+        return '制卡成功、制卡中、已存入待发卡片时弹出提示。制卡失败与缺少音频的提示始终显示。';
       case 'card_creation_section_content':
         return '卡片内容';
+      case 'card_creation_section_notices':
+        return '制卡提示';
       case 'card_duplicate':
         return '重复卡片，未导出。';
       case 'card_export_failed':
@@ -663738,8 +664095,18 @@ extension on _StringsZhHk {
         return '取消';
       case 'card_cover_degraded_to_static':
         return ({required Object reason}) => '卡片封面已降級為靜態幀（動圖不可用）：${reason}';
+      case 'card_creation_notice_duplicate':
+        return '重複製卡提示';
+      case 'card_creation_notice_duplicate_hint':
+        return '卡片已在 Anki 中、這次未匯出時彈出提示。';
+      case 'card_creation_notice_success':
+        return '製卡成功提示';
+      case 'card_creation_notice_success_hint':
+        return '製卡成功、製卡中、已存入待發卡片時彈出提示。製卡失敗與缺少音訊的提示始終顯示。';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'card_creation_section_notices':
+        return '製卡提示';
       case 'card_duplicate':
         return '重複卡片 — 未匯出。';
       case 'card_export_failed':
