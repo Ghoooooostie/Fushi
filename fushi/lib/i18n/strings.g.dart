@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152966 (8998 per locale)
+/// Strings: 153068 (9004 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2475,6 +2475,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String collection_episode_link_season({required Object number}) =>
       'Season ${number}';
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
   String get collection_episode_no_missing => 'No missing episodes';
   String get collection_episode_rename => 'Rename episodes from scrape';
   String collection_episode_rename_apply({required Object n}) =>
@@ -5449,8 +5455,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_devices_page => 'Pairing & devices';
   String interconnect_devices_paired_count({required Object n}) =>
       'Paired devices: ${n}';
+  String get interconnect_download_cancel => 'Cancel download';
   String interconnect_download_notification_title({required Object count}) =>
       'Downloading ${count} items from paired devices';
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   String get interconnect_enable => 'Enable interconnect';
   String get interconnect_enable_footer =>
       'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
@@ -16836,6 +16846,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'استخرج بيانات العمل أولًا';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'لا توجد حلقات مفقودة';
   @override
   String get collection_episode_rename => 'إعادة تسمية الحلقات من الجلب';
@@ -21923,8 +21942,15 @@ class _StringsAr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'الأجهزة المقترنة: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'جارٍ تنزيل ${count} عنصر من الأجهزة المقترنة';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'تفعيل الترابط';
   @override
@@ -38750,6 +38776,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape zuerst die Serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Keine fehlenden Episoden';
   @override
   String get collection_episode_rename => 'Episoden nach Abruf umbenennen';
@@ -43951,8 +43986,15 @@ class _StringsDe extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Gekoppelte Geräte: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '${count} Elemente von gekoppelten Geräten werden heruntergeladen';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Interconnect aktivieren';
   @override
@@ -61011,6 +61053,15 @@ class _StringsEs extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Extrae primero los datos de la serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Sin episodios faltantes';
   @override
   String get collection_episode_rename => 'Renombrar episodios desde metadatos';
@@ -66217,8 +66268,15 @@ class _StringsEs extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivos emparejados: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Descargando ${count} elementos de dispositivos emparejados';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Activar Interconnect';
   @override
@@ -83334,6 +83392,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrapez d\'abord la série';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Aucun épisode manquant';
   @override
   String get collection_episode_rename =>
@@ -88556,8 +88623,15 @@ class _StringsFr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Appareils appairés : ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Téléchargement de ${count} éléments depuis les appareils appairés';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Activer l\'interconnexion';
   @override
@@ -105660,6 +105734,15 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape acaranya dulu';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Tidak ada episode yang kurang';
   @override
   String get collection_episode_rename => 'Ganti nama episode dari scrape';
@@ -110798,8 +110881,15 @@ class _StringsId extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Perangkat terpasang: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Mengunduh ${count} item dari perangkat terpasang';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Aktifkan interconnect';
   @override
@@ -127730,6 +127820,15 @@ class _StringsIt extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Fai prima lo scraping della serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Nessun episodio mancante';
   @override
   String get collection_episode_rename => 'Rinomina episodi dallo scrape';
@@ -132907,8 +133006,15 @@ class _StringsIt extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivi abbinati: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Download di ${count} elementi dai dispositivi abbinati';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Abilita interconnect';
   @override
@@ -149779,6 +149885,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先に作品をスクレイピングしてください';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '欠けているエピソードはありません';
   @override
   String get collection_episode_rename => 'スクレイプからエピソード名を変更';
@@ -154687,8 +154802,15 @@ class _StringsJa extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'ペアリング済みデバイス：${n} 台';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'ペアリング済みデバイスから ${count} 件をダウンロード中';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'インターコネクトを有効にする';
   @override
@@ -170942,6 +171064,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '먼저 작품을 스크레이핑하세요';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '누락 에피소드 없음';
   @override
   String get collection_episode_rename => '스크래핑에서 에피소드 이름 변경';
@@ -175861,8 +175992,15 @@ class _StringsKo extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       '페어링된 기기: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '페어링된 기기에서 항목 ${count}개 다운로드 중';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => '인터커넥트 활성화';
   @override
@@ -192328,6 +192466,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape eerst de serie';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Geen ontbrekende afleveringen';
   @override
   String get collection_episode_rename =>
@@ -197488,8 +197635,15 @@ class _StringsNl extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Gekoppelde apparaten: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '${count} items downloaden van gekoppelde apparaten';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Interconnect inschakelen';
   @override
@@ -214495,6 +214649,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Raspe a série primeiro';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Nenhum episódio faltante';
   @override
   String get collection_episode_rename => 'Renomear episódios do scrape';
@@ -219680,8 +219843,15 @@ class _StringsPtBr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Dispositivos pareados: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Baixando ${count} itens de dispositivos pareados';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Ativar interconexão';
   @override
@@ -236703,6 +236873,15 @@ class _StringsRu extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Сначала соберите данные о сериале';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Нет недостающих эпизодов';
   @override
   String get collection_episode_rename => 'Переименовать эпизоды из метаданных';
@@ -241862,8 +242041,15 @@ class _StringsRu extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Сопряжённых устройств: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Загрузка элементов с сопряжённых устройств: ${count}';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Включить взаимосвязь';
   @override
@@ -258817,6 +259003,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'ดึงข้อมูลรายการก่อน';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'ไม่มีตอนที่ขาดหายไป';
   @override
   String get collection_episode_rename => 'เปลี่ยนชื่อตอนจากข้อมูลที่ดึงมา';
@@ -263897,8 +264092,15 @@ class _StringsTh extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'อุปกรณ์ที่จับคู่แล้ว: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'กำลังดาวน์โหลด ${count} รายการจากอุปกรณ์ที่จับคู่';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'เปิดใช้การเชื่อมต่ออุปกรณ์';
   @override
@@ -280695,6 +280897,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Önce diziyi kazıyın';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Eksik bölüm yok';
   @override
   String get collection_episode_rename =>
@@ -285845,8 +286056,15 @@ class _StringsTr extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Eşleştirilmiş cihazlar: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Eşleştirilmiş cihazlardan ${count} öğe indiriliyor';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Bağlantıyı etkinleştir';
   @override
@@ -302736,6 +302954,15 @@ class _StringsVi extends _StringsEn {
   String get collection_episode_link_unavailable =>
       'Hãy quét thông tin chương trình trước';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => 'Không có tập nào bị thiếu';
   @override
   String get collection_episode_rename => 'Đổi tên tập từ dữ liệu quét';
@@ -307865,8 +308092,15 @@ class _StringsVi extends _StringsEn {
   String interconnect_devices_paired_count({required Object n}) =>
       'Thiết bị đã ghép nối: ${n}';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       'Đang tải ${count} mục từ thiết bị đã ghép nối';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => 'Bật kết nối liên thiết bị';
   @override
@@ -324364,6 +324598,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先刮出作品资料再指定';
   @override
+  String get collection_episode_local_copy_delete => '删除本机副本';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) => '删除「${title}」下载到本机的副本？配对设备上的原片不受影响，之后仍可从配对设备播放或重新下载。';
+  @override
+  String get collection_episode_local_copy_deleted => '已删除本机副本';
+  @override
   String get collection_episode_no_missing => '没有缺集';
   @override
   String get collection_episode_rename => '按刮削重命名各集';
@@ -329059,8 +329301,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String interconnect_devices_paired_count({required Object n}) => '已配对 ${n} 台';
   @override
+  String get interconnect_download_cancel => '取消下载';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '正在从配对设备下载 ${count} 项';
+  @override
+  String get interconnect_download_tasks_hint => '暂停、继续或取消从配对设备下载到本机的任务';
+  @override
+  String get interconnect_download_tasks_title => '互联下载';
   @override
   String get interconnect_enable => '启用互联';
   @override
@@ -344559,6 +344807,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先刮出作品資料再指定';
   @override
+  String get collection_episode_local_copy_delete => 'Delete local copy';
+  @override
+  String collection_episode_local_copy_delete_confirm({
+    required Object title,
+  }) =>
+      'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+  @override
+  String get collection_episode_local_copy_deleted => 'Local copy deleted';
+  @override
   String get collection_episode_no_missing => '沒有缺集';
   @override
   String get collection_episode_rename => '按刮削重命名各集';
@@ -349309,8 +349566,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String interconnect_devices_paired_count({required Object n}) => '已配對 ${n} 台';
   @override
+  String get interconnect_download_cancel => 'Cancel download';
+  @override
   String interconnect_download_notification_title({required Object count}) =>
       '正在從配對裝置下載 ${count} 項';
+  @override
+  String get interconnect_download_tasks_hint =>
+      'Pause, resume or cancel downloads from paired devices';
+  @override
+  String get interconnect_download_tasks_title => 'Interconnect downloads';
   @override
   String get interconnect_enable => '啟用互聯';
   @override
@@ -364693,6 +364957,13 @@ extension on _StringsEn {
         return ({required Object number}) => 'Season ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'No missing episodes';
       case 'collection_episode_rename':
@@ -369084,9 +369355,15 @@ extension on _StringsEn {
         return 'Pairing & devices';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Paired devices: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Downloading ${count} items from paired devices';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Enable interconnect';
       case 'interconnect_enable_footer':
@@ -383402,6 +383679,13 @@ extension on _StringsAr {
         return ({required Object number}) => 'الموسم ${number}';
       case 'collection_episode_link_unavailable':
         return 'استخرج بيانات العمل أولًا';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'لا توجد حلقات مفقودة';
       case 'collection_episode_rename':
@@ -387790,9 +388074,15 @@ extension on _StringsAr {
         return 'الاقتران والأجهزة';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'الأجهزة المقترنة: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'جارٍ تنزيل ${count} عنصر من الأجهزة المقترنة';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'تفعيل الترابط';
       case 'interconnect_enable_footer':
@@ -402125,6 +402415,13 @@ extension on _StringsDe {
         return ({required Object number}) => 'Staffel ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape zuerst die Serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Keine fehlenden Episoden';
       case 'collection_episode_rename':
@@ -406530,9 +406827,15 @@ extension on _StringsDe {
         return 'Kopplung & Geräte';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Gekoppelte Geräte: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             '${count} Elemente von gekoppelten Geräten werden heruntergeladen';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Interconnect aktivieren';
       case 'interconnect_enable_footer':
@@ -420898,6 +421201,13 @@ extension on _StringsEs {
         return ({required Object number}) => 'Temporada ${number}';
       case 'collection_episode_link_unavailable':
         return 'Extrae primero los datos de la serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Sin episodios faltantes';
       case 'collection_episode_rename':
@@ -425297,9 +425607,15 @@ extension on _StringsEs {
         return 'Emparejamiento y dispositivos';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivos emparejados: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Descargando ${count} elementos de dispositivos emparejados';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Activar Interconnect';
       case 'interconnect_enable_footer':
@@ -439663,6 +439979,13 @@ extension on _StringsFr {
         return ({required Object number}) => 'Saison ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrapez d\'abord la série';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Aucun épisode manquant';
       case 'collection_episode_rename':
@@ -444072,9 +444395,15 @@ extension on _StringsFr {
         return 'Appairage et appareils';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Appareils appairés : ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Téléchargement de ${count} éléments depuis les appareils appairés';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Activer l\'interconnexion';
       case 'interconnect_enable_footer':
@@ -458427,6 +458756,13 @@ extension on _StringsId {
         return ({required Object number}) => 'Musim ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape acaranya dulu';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Tidak ada episode yang kurang';
       case 'collection_episode_rename':
@@ -462822,9 +463158,15 @@ extension on _StringsId {
         return 'Pemasangan & perangkat';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Perangkat terpasang: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Mengunduh ${count} item dari perangkat terpasang';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Aktifkan interconnect';
       case 'interconnect_enable_footer':
@@ -477155,6 +477497,13 @@ extension on _StringsIt {
         return ({required Object number}) => 'Stagione ${number}';
       case 'collection_episode_link_unavailable':
         return 'Fai prima lo scraping della serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Nessun episodio mancante';
       case 'collection_episode_rename':
@@ -481556,9 +481905,15 @@ extension on _StringsIt {
         return 'Abbinamento e dispositivi';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivi abbinati: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Download di ${count} elementi dai dispositivi abbinati';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Abilita interconnect';
       case 'interconnect_enable_footer':
@@ -495883,6 +496238,13 @@ extension on _StringsJa {
         return ({required Object number}) => '第 ${number} シーズン';
       case 'collection_episode_link_unavailable':
         return '先に作品をスクレイピングしてください';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '欠けているエピソードはありません';
       case 'collection_episode_rename':
@@ -500260,8 +500622,14 @@ extension on _StringsJa {
         return 'ペアリングとデバイス';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'ペアリング済みデバイス：${n} 台';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => 'ペアリング済みデバイスから ${count} 件をダウンロード中';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'インターコネクトを有効にする';
       case 'interconnect_enable_footer':
@@ -514506,6 +514874,13 @@ extension on _StringsKo {
         return ({required Object number}) => '시즌 ${number}';
       case 'collection_episode_link_unavailable':
         return '먼저 작품을 스크레이핑하세요';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '누락 에피소드 없음';
       case 'collection_episode_rename':
@@ -518887,8 +519262,14 @@ extension on _StringsKo {
         return '페어링 및 기기';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '페어링된 기기: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '페어링된 기기에서 항목 ${count}개 다운로드 중';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return '인터커넥트 활성화';
       case 'interconnect_enable_footer':
@@ -533173,6 +533554,13 @@ extension on _StringsNl {
         return ({required Object number}) => 'Seizoen ${number}';
       case 'collection_episode_link_unavailable':
         return 'Scrape eerst de serie';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Geen ontbrekende afleveringen';
       case 'collection_episode_rename':
@@ -537573,9 +537961,15 @@ extension on _StringsNl {
         return 'Koppelen en apparaten';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Gekoppelde apparaten: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             '${count} items downloaden van gekoppelde apparaten';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Interconnect inschakelen';
       case 'interconnect_enable_footer':
@@ -551928,6 +552322,13 @@ extension on _StringsPtBr {
         return ({required Object number}) => 'Temporada ${number}';
       case 'collection_episode_link_unavailable':
         return 'Raspe a série primeiro';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Nenhum episódio faltante';
       case 'collection_episode_rename':
@@ -556325,9 +556726,15 @@ extension on _StringsPtBr {
         return 'Pareamento e dispositivos';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Dispositivos pareados: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Baixando ${count} itens de dispositivos pareados';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Ativar interconexão';
       case 'interconnect_enable_footer':
@@ -570677,6 +571084,13 @@ extension on _StringsRu {
         return ({required Object number}) => 'Сезон ${number}';
       case 'collection_episode_link_unavailable':
         return 'Сначала соберите данные о сериале';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Нет недостающих эпизодов';
       case 'collection_episode_rename':
@@ -575077,9 +575491,15 @@ extension on _StringsRu {
         return 'Сопряжение и устройства';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Сопряжённых устройств: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Загрузка элементов с сопряжённых устройств: ${count}';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Включить взаимосвязь';
       case 'interconnect_enable_footer':
@@ -589409,6 +589829,13 @@ extension on _StringsTh {
         return ({required Object number}) => 'ซีซัน ${number}';
       case 'collection_episode_link_unavailable':
         return 'ดึงข้อมูลรายการก่อน';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'ไม่มีตอนที่ขาดหายไป';
       case 'collection_episode_rename':
@@ -593801,9 +594228,15 @@ extension on _StringsTh {
         return 'การจับคู่และอุปกรณ์';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'อุปกรณ์ที่จับคู่แล้ว: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'กำลังดาวน์โหลด ${count} รายการจากอุปกรณ์ที่จับคู่';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'เปิดใช้การเชื่อมต่ออุปกรณ์';
       case 'interconnect_enable_footer':
@@ -608130,6 +608563,13 @@ extension on _StringsTr {
         return ({required Object number}) => 'Sezon ${number}';
       case 'collection_episode_link_unavailable':
         return 'Önce diziyi kazıyın';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Eksik bölüm yok';
       case 'collection_episode_rename':
@@ -612525,9 +612965,15 @@ extension on _StringsTr {
         return 'Eşleştirme ve cihazlar';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Eşleştirilmiş cihazlar: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Eşleştirilmiş cihazlardan ${count} öğe indiriliyor';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Bağlantıyı etkinleştir';
       case 'interconnect_enable_footer':
@@ -626858,6 +627304,13 @@ extension on _StringsVi {
         return ({required Object number}) => 'Mùa ${number}';
       case 'collection_episode_link_unavailable':
         return 'Hãy quét thông tin chương trình trước';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return 'Không có tập nào bị thiếu';
       case 'collection_episode_rename':
@@ -631254,9 +631707,15 @@ extension on _StringsVi {
         return 'Ghép nối & thiết bị';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => 'Thiết bị đã ghép nối: ${n}';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) =>
             'Đang tải ${count} mục từ thiết bị đã ghép nối';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return 'Bật kết nối liên thiết bị';
       case 'interconnect_enable_footer':
@@ -645523,6 +645982,13 @@ extension on _StringsZhCn {
         return ({required Object number}) => '第 ${number} 季';
       case 'collection_episode_link_unavailable':
         return '先刮出作品资料再指定';
+      case 'collection_episode_local_copy_delete':
+        return '删除本机副本';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            '删除「${title}」下载到本机的副本？配对设备上的原片不受影响，之后仍可从配对设备播放或重新下载。';
+      case 'collection_episode_local_copy_deleted':
+        return '已删除本机副本';
       case 'collection_episode_no_missing':
         return '没有缺集';
       case 'collection_episode_rename':
@@ -649870,8 +650336,14 @@ extension on _StringsZhCn {
         return '配对与设备';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '已配对 ${n} 台';
+      case 'interconnect_download_cancel':
+        return '取消下载';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '正在从配对设备下载 ${count} 项';
+      case 'interconnect_download_tasks_hint':
+        return '暂停、继续或取消从配对设备下载到本机的任务';
+      case 'interconnect_download_tasks_title':
+        return '互联下载';
       case 'interconnect_enable':
         return '启用互联';
       case 'interconnect_enable_footer':
@@ -664019,6 +664491,13 @@ extension on _StringsZhHk {
         return ({required Object number}) => '第 ${number} 季';
       case 'collection_episode_link_unavailable':
         return '先刮出作品資料再指定';
+      case 'collection_episode_local_copy_delete':
+        return 'Delete local copy';
+      case 'collection_episode_local_copy_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the copy of “${title}” downloaded to this device? The original on the paired device is not affected; you can still stream or download it again.';
+      case 'collection_episode_local_copy_deleted':
+        return 'Local copy deleted';
       case 'collection_episode_no_missing':
         return '沒有缺集';
       case 'collection_episode_rename':
@@ -668383,8 +668862,14 @@ extension on _StringsZhHk {
         return '配對與裝置';
       case 'interconnect_devices_paired_count':
         return ({required Object n}) => '已配對 ${n} 台';
+      case 'interconnect_download_cancel':
+        return 'Cancel download';
       case 'interconnect_download_notification_title':
         return ({required Object count}) => '正在從配對裝置下載 ${count} 項';
+      case 'interconnect_download_tasks_hint':
+        return 'Pause, resume or cancel downloads from paired devices';
+      case 'interconnect_download_tasks_title':
+        return 'Interconnect downloads';
       case 'interconnect_enable':
         return '啟用互聯';
       case 'interconnect_enable_footer':
