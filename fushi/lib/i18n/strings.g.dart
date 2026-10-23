@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154360 (9080 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1970,6 +1970,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_param_caption_hint =>
       'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
   String get audiobook_tts_param_endpoint => 'Server URL';
+  String get audiobook_tts_param_engine => 'Speech engine';
+  String get audiobook_tts_param_engine_default => 'System default engine';
   String get audiobook_tts_param_invalid => 'This value is not valid';
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
@@ -1990,6 +1992,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_param_region => 'Region';
   String get audiobook_tts_param_text_lang => 'Text language';
   String get audiobook_tts_param_voice => 'Voice';
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   String get audiobook_tts_provider_azure => 'Microsoft Azure';
   String get audiobook_tts_provider_edge => 'Microsoft Edge';
@@ -10920,6 +10924,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
   String get undo => 'Undo';
   String get unit_kbps => 'kbps';
   String get unit_milliseconds => 'ms';
@@ -16104,6 +16110,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -16137,6 +16147,9 @@ class _StringsAr extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -31469,6 +31482,9 @@ class _StringsAr extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'تراجع';
   @override
   String get unit_kbps => 'كيلوبت/ث';
@@ -38204,6 +38220,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -38237,6 +38257,9 @@ class _StringsDe extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -53852,6 +53875,9 @@ class _StringsDe extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Rückgängig';
   @override
   String get unit_kbps => 'kbit/s';
@@ -60670,6 +60696,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -60703,6 +60733,9 @@ class _StringsEs extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -76344,6 +76377,9 @@ class _StringsEs extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Deshacer';
   @override
   String get unit_kbps => 'kbps';
@@ -83191,6 +83227,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -83224,6 +83264,9 @@ class _StringsFr extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -98912,6 +98955,9 @@ class _StringsFr extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Annuler';
   @override
   String get unit_kbps => 'kbit/s';
@@ -105741,6 +105787,10 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -105774,6 +105824,9 @@ class _StringsId extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -121226,6 +121279,9 @@ class _StringsId extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Urungkan';
   @override
   String get unit_kbps => 'kbps';
@@ -128003,6 +128059,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -128036,6 +128096,9 @@ class _StringsIt extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -143611,6 +143674,9 @@ class _StringsIt extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Annulla';
   @override
   String get unit_kbps => 'kbps';
@@ -150308,6 +150374,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -150341,6 +150411,9 @@ class _StringsJa extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -165199,6 +165272,9 @@ class _StringsJa extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => '元に戻す';
   @override
   String get unit_kbps => 'kbps';
@@ -171670,6 +171746,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -171703,6 +171783,9 @@ class _StringsKo extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -186599,6 +186682,9 @@ class _StringsKo extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => '되돌리기';
   @override
   String get unit_kbps => 'kbps';
@@ -193213,6 +193299,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -193246,6 +193336,9 @@ class _StringsNl extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -208786,6 +208879,9 @@ class _StringsNl extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Ongedaan maken';
   @override
   String get unit_kbps => 'kbps';
@@ -215583,6 +215679,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -215616,6 +215716,9 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -231189,6 +231292,9 @@ class _StringsPtBr extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Desfazer';
   @override
   String get unit_kbps => 'kbps';
@@ -237997,6 +238103,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -238030,6 +238140,9 @@ class _StringsRu extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -253569,6 +253682,9 @@ class _StringsRu extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Отменить';
   @override
   String get unit_kbps => 'кбит/с';
@@ -260329,6 +260445,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -260362,6 +260482,9 @@ class _StringsTh extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -275691,6 +275814,9 @@ class _StringsTh extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'เลิกทำ';
   @override
   String get unit_kbps => 'kbps';
@@ -282402,6 +282528,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -282435,6 +282565,9 @@ class _StringsTr extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -297906,6 +298039,9 @@ class _StringsTr extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Geri al';
   @override
   String get unit_kbps => 'kbps';
@@ -304648,6 +304784,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -304681,6 +304821,9 @@ class _StringsVi extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -320098,6 +320241,9 @@ class _StringsVi extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => 'Hoàn tác';
   @override
   String get unit_kbps => 'kbps';
@@ -326566,6 +326712,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => '服务地址';
   @override
+  String get audiobook_tts_param_engine => '语音引擎';
+  @override
+  String get audiobook_tts_param_engine_default => '系统默认引擎';
+  @override
   String get audiobook_tts_param_invalid => '填写的值无效';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -326598,6 +326748,8 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_tts_param_text_lang => '文本语言';
   @override
   String get audiobook_tts_param_voice => '声音';
+  @override
+  String get audiobook_tts_param_voice_auto => '自动（按文字语言挑选）';
   @override
   String get audiobook_tts_preparing => '正在准备朗读…';
   @override
@@ -340731,6 +340883,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get tts_system_synthesis_failed => '系统语音合成失败。';
   @override
+  String get tts_system_voice_unavailable =>
+      '所选的系统声音已不可用（可能已卸载，或换了设备），请在朗读声音设置里重新选择。';
+  @override
   String get undo => '撤销';
   @override
   String get unit_kbps => 'kbps';
@@ -346929,6 +347084,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
+  String get audiobook_tts_param_engine => 'Speech engine';
+  @override
+  String get audiobook_tts_param_engine_default => 'System default engine';
+  @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
@@ -346962,6 +347121,9 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_tts_param_text_lang => 'Text language';
   @override
   String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_voice_auto =>
+      'Automatic (by the text\'s language)';
   @override
   String get audiobook_tts_preparing => 'Preparing to read aloud…';
   @override
@@ -361427,6 +361589,9 @@ class _StringsZhHk extends _StringsEn {
   String get tts_system_synthesis_failed =>
       'The system voice failed to generate audio.';
   @override
+  String get tts_system_voice_unavailable =>
+      'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
+  @override
   String get undo => '復原';
   @override
   String get unit_kbps => 'kbps';
@@ -367311,6 +367476,10 @@ extension on _StringsEn {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -367340,6 +367509,8 @@ extension on _StringsEn {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -380647,6 +380818,8 @@ extension on _StringsEn {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Undo';
       case 'unit_kbps':
@@ -386185,6 +386358,10 @@ extension on _StringsAr {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -386214,6 +386391,8 @@ extension on _StringsAr {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -399514,6 +399693,8 @@ extension on _StringsAr {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'تراجع';
       case 'unit_kbps':
@@ -405073,6 +405254,10 @@ extension on _StringsDe {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -405102,6 +405287,8 @@ extension on _StringsDe {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -418449,6 +418636,8 @@ extension on _StringsDe {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Rückgängig';
       case 'unit_kbps':
@@ -424012,6 +424201,10 @@ extension on _StringsEs {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -424041,6 +424234,8 @@ extension on _StringsEs {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -437376,6 +437571,8 @@ extension on _StringsEs {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Deshacer';
       case 'unit_kbps':
@@ -442943,6 +443140,10 @@ extension on _StringsFr {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -442972,6 +443173,8 @@ extension on _StringsFr {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -456317,6 +456520,8 @@ extension on _StringsFr {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Annuler';
       case 'unit_kbps':
@@ -461874,6 +462079,10 @@ extension on _StringsId {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -461903,6 +462112,8 @@ extension on _StringsId {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -475216,6 +475427,8 @@ extension on _StringsId {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Urungkan';
       case 'unit_kbps':
@@ -480767,6 +480980,10 @@ extension on _StringsIt {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -480796,6 +481013,8 @@ extension on _StringsIt {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -494130,6 +494349,8 @@ extension on _StringsIt {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Annulla';
       case 'unit_kbps':
@@ -499668,6 +499889,10 @@ extension on _StringsJa {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -499697,6 +499922,8 @@ extension on _StringsJa {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -512957,6 +513184,8 @@ extension on _StringsJa {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return '元に戻す';
       case 'unit_kbps':
@@ -518455,6 +518684,10 @@ extension on _StringsKo {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -518484,6 +518717,8 @@ extension on _StringsKo {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -531751,6 +531986,8 @@ extension on _StringsKo {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return '되돌리기';
       case 'unit_kbps':
@@ -537283,6 +537520,10 @@ extension on _StringsNl {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -537312,6 +537553,8 @@ extension on _StringsNl {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -550646,6 +550889,8 @@ extension on _StringsNl {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Ongedaan maken';
       case 'unit_kbps':
@@ -556204,6 +556449,10 @@ extension on _StringsPtBr {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -556233,6 +556482,8 @@ extension on _StringsPtBr {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -569557,6 +569808,8 @@ extension on _StringsPtBr {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Desfazer';
       case 'unit_kbps':
@@ -575118,6 +575371,10 @@ extension on _StringsRu {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -575147,6 +575404,8 @@ extension on _StringsRu {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -588476,6 +588735,8 @@ extension on _StringsRu {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Отменить';
       case 'unit_kbps':
@@ -594019,6 +594280,10 @@ extension on _StringsTh {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -594048,6 +594313,8 @@ extension on _StringsTh {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -607354,6 +607621,8 @@ extension on _StringsTh {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'เลิกทำ';
       case 'unit_kbps':
@@ -612903,6 +613172,10 @@ extension on _StringsTr {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -612932,6 +613205,8 @@ extension on _StringsTr {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -626250,6 +626525,8 @@ extension on _StringsTr {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Geri al';
       case 'unit_kbps':
@@ -631800,6 +632077,10 @@ extension on _StringsVi {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -631829,6 +632110,8 @@ extension on _StringsVi {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -645142,6 +645425,8 @@ extension on _StringsVi {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return 'Hoàn tác';
       case 'unit_kbps':
@@ -650639,6 +650924,10 @@ extension on _StringsZhCn {
         return '可选。描述音色与语气，例如「落ち着いた低めの女性の声」。声音选 none 时就是凭描述设计一个新声音。';
       case 'audiobook_tts_param_endpoint':
         return '服务地址';
+      case 'audiobook_tts_param_engine':
+        return '语音引擎';
+      case 'audiobook_tts_param_engine_default':
+        return '系统默认引擎';
       case 'audiobook_tts_param_invalid':
         return '填写的值无效';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -650668,6 +650957,8 @@ extension on _StringsZhCn {
         return '文本语言';
       case 'audiobook_tts_param_voice':
         return '声音';
+      case 'audiobook_tts_param_voice_auto':
+        return '自动（按文字语言挑选）';
       case 'audiobook_tts_preparing':
         return '正在准备朗读…';
       case 'audiobook_tts_provider_azure':
@@ -663839,6 +664130,8 @@ extension on _StringsZhCn {
             '系统语音不支持${language}，可在设置里换一个 TTS 声音，或在系统里装支持该语言的语音引擎。';
       case 'tts_system_synthesis_failed':
         return '系统语音合成失败。';
+      case 'tts_system_voice_unavailable':
+        return '所选的系统声音已不可用（可能已卸载，或换了设备），请在朗读声音设置里重新选择。';
       case 'undo':
         return '撤销';
       case 'unit_kbps':
@@ -669298,6 +669591,10 @@ extension on _StringsZhHk {
         return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
+      case 'audiobook_tts_param_engine':
+        return 'Speech engine';
+      case 'audiobook_tts_param_engine_default':
+        return 'System default engine';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
@@ -669327,6 +669624,8 @@ extension on _StringsZhHk {
         return 'Text language';
       case 'audiobook_tts_param_voice':
         return 'Voice';
+      case 'audiobook_tts_param_voice_auto':
+        return 'Automatic (by the text\'s language)';
       case 'audiobook_tts_preparing':
         return 'Preparing to read aloud…';
       case 'audiobook_tts_provider_azure':
@@ -682558,6 +682857,8 @@ extension on _StringsZhHk {
             'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
       case 'tts_system_synthesis_failed':
         return 'The system voice failed to generate audio.';
+      case 'tts_system_voice_unavailable':
+        return 'The selected system voice is no longer available (uninstalled, or this is a different device). Choose another voice in the read-aloud voice settings.';
       case 'undo':
         return '復原';
       case 'unit_kbps':
