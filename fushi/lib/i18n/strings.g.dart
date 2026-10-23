@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154377 (9081 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9770,6 +9770,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  String get srs_review_layout_image_large => 'Enlarge';
+  String get srs_review_layout_image_original => 'Original';
+  String get srs_review_layout_image_size => 'Card image size';
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   String get srs_review_layout_replay_button_hint =>
       'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
@@ -29437,6 +29443,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -51796,6 +51813,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -74279,6 +74307,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -96851,6 +96890,17 @@ class _StringsFr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -119185,6 +119235,17 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -141562,6 +141623,17 @@ class _StringsIt extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -163230,6 +163302,17 @@ class _StringsJa extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -184625,6 +184708,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -206731,6 +206825,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -229139,6 +229244,17 @@ class _StringsPtBr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -251524,6 +251640,17 @@ class _StringsRu extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -273659,6 +273786,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
+  @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
   @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
@@ -295862,6 +296000,17 @@ class _StringsTr extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -318060,6 +318209,17 @@ class _StringsVi extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -338867,6 +339027,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy_hint => '键盘 2 / 4 仍可评「困难」「简单」';
   @override
+  String get srs_review_layout_image_fit_width => '适应宽度';
+  @override
+  String get srs_review_layout_image_large => '放大';
+  @override
+  String get srs_review_layout_image_original => '原样';
+  @override
+  String get srs_review_layout_image_size => '卡面图片大小';
+  @override
+  String get srs_review_layout_image_size_hint => '牌组样式把图片限得太小时放大；点图片可全屏查看';
+  @override
   String get srs_review_layout_replay_button => '底部重播键';
   @override
   String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
@@ -359501,6 +359671,17 @@ class _StringsZhHk extends _StringsEn {
   String get srs_review_hide_hard_easy_hint =>
       'Keys 2 and 4 still rate Hard and Easy';
   @override
+  String get srs_review_layout_image_fit_width => 'Fit width';
+  @override
+  String get srs_review_layout_image_large => 'Enlarge';
+  @override
+  String get srs_review_layout_image_original => 'Original';
+  @override
+  String get srs_review_layout_image_size => 'Card image size';
+  @override
+  String get srs_review_layout_image_size_hint =>
+      'Enlarge images that the deck styles keep small; tap an image to view it full screen';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -378847,6 +379028,16 @@ extension on _StringsEn {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -397717,6 +397908,16 @@ extension on _StringsAr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -416643,6 +416844,16 @@ extension on _StringsDe {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -435573,6 +435784,16 @@ extension on _StringsEs {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -454514,6 +454735,16 @@ extension on _StringsFr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -473415,6 +473646,16 @@ extension on _StringsId {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -492325,6 +492566,16 @@ extension on _StringsIt {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -511169,6 +511420,16 @@ extension on _StringsJa {
         return '「Hard」と「Easy」ボタンを隠す';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -529962,6 +530223,16 @@ extension on _StringsKo {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -548845,6 +549116,16 @@ extension on _StringsNl {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -567759,6 +568040,16 @@ extension on _StringsPtBr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -586677,6 +586968,16 @@ extension on _StringsRu {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -605555,6 +605856,16 @@ extension on _StringsTh {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -624451,6 +624762,16 @@ extension on _StringsTr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -643342,6 +643663,16 @@ extension on _StringsVi {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -662059,6 +662390,16 @@ extension on _StringsZhCn {
         return '隐藏「困难」和「简单」按钮';
       case 'srs_review_hide_hard_easy_hint':
         return '键盘 2 / 4 仍可评「困难」「简单」';
+      case 'srs_review_layout_image_fit_width':
+        return '适应宽度';
+      case 'srs_review_layout_image_large':
+        return '放大';
+      case 'srs_review_layout_image_original':
+        return '原样';
+      case 'srs_review_layout_image_size':
+        return '卡面图片大小';
+      case 'srs_review_layout_image_size_hint':
+        return '牌组样式把图片限得太小时放大；点图片可全屏查看';
       case 'srs_review_layout_replay_button':
         return '底部重播键';
       case 'srs_review_layout_replay_button_hint':
@@ -680773,6 +681114,16 @@ extension on _StringsZhHk {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_hide_hard_easy_hint':
         return 'Keys 2 and 4 still rate Hard and Easy';
+      case 'srs_review_layout_image_fit_width':
+        return 'Fit width';
+      case 'srs_review_layout_image_large':
+        return 'Enlarge';
+      case 'srs_review_layout_image_original':
+        return 'Original';
+      case 'srs_review_layout_image_size':
+        return 'Card image size';
+      case 'srs_review_layout_image_size_hint':
+        return 'Enlarge images that the deck styles keep small; tap an image to view it full screen';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
