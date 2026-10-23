@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153068 (9004 per locale)
+/// Strings: 153136 (9008 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11744,6 +11744,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_subtitles => 'Subtitles';
   String get video_remote_title => 'Video remote';
   String get video_remote_touchpad => 'Touchpad';
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   String get video_remote_touchpad_exit => 'Back to the remote';
   String get video_remote_touchpad_hint =>
       'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
@@ -32737,6 +32744,17 @@ class _StringsAr extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -54957,6 +54975,17 @@ class _StringsDe extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -77267,6 +77296,17 @@ class _StringsEs extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -99655,6 +99695,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -121762,6 +121813,17 @@ class _StringsId extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -143960,6 +144022,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -165285,6 +165358,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -186504,6 +186588,17 @@ class _StringsKo extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -208571,6 +208666,17 @@ class _StringsNl extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -230796,6 +230902,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -252981,6 +253098,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -274890,6 +275018,17 @@ class _StringsTh extends _StringsEn {
   String get video_remote_title => 'Video remote';
   @override
   String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
   @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
@@ -296929,6 +297068,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -318934,6 +319084,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -339230,6 +339391,15 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_title => '视频遥控器';
   @override
   String get video_remote_touchpad => '触控板';
+  @override
+  String get video_remote_touchpad_caret => '正在电脑上选词';
+  @override
+  String get video_remote_touchpad_caret_entry => '长按：在电脑上选词';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      '拖动：移动 · 点按：查词 / 确认 · 长按：卡片里长按 · 双指轻点：后退';
+  @override
+  String get video_remote_touchpad_caret_unavailable => '电脑屏幕上现在没有可选的字幕';
   @override
   String get video_remote_touchpad_exit => '返回遥控器';
   @override
@@ -359789,6 +359959,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_touchpad => 'Touchpad';
   @override
+  String get video_remote_touchpad_caret => 'Choosing a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_entry =>
+      'Hold: choose a word on the computer';
+  @override
+  String get video_remote_touchpad_caret_hint =>
+      'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+  @override
+  String get video_remote_touchpad_caret_unavailable =>
+      'No subtitle on the computer screen to choose from';
+  @override
   String get video_remote_touchpad_exit => 'Back to the remote';
   @override
   String get video_remote_touchpad_hint =>
@@ -378701,6 +378882,14 @@ extension on _StringsEn {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -397413,6 +397602,14 @@ extension on _StringsAr {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -416201,6 +416398,14 @@ extension on _StringsDe {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -434974,6 +435179,14 @@ extension on _StringsEs {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -453763,6 +453976,14 @@ extension on _StringsFr {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -472500,6 +472721,14 @@ extension on _StringsId {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -491267,6 +491496,14 @@ extension on _StringsIt {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -509919,6 +510156,14 @@ extension on _StringsJa {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -528565,6 +528810,14 @@ extension on _StringsKo {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -547317,6 +547570,14 @@ extension on _StringsNl {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -566076,6 +566337,14 @@ extension on _StringsPtBr {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -584839,6 +585108,14 @@ extension on _StringsRu {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -603559,6 +603836,14 @@ extension on _StringsTh {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -622305,6 +622590,14 @@ extension on _StringsTr {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -641040,6 +641333,14 @@ extension on _StringsVi {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
@@ -659570,6 +659871,14 @@ extension on _StringsZhCn {
         return '视频遥控器';
       case 'video_remote_touchpad':
         return '触控板';
+      case 'video_remote_touchpad_caret':
+        return '正在电脑上选词';
+      case 'video_remote_touchpad_caret_entry':
+        return '长按：在电脑上选词';
+      case 'video_remote_touchpad_caret_hint':
+        return '拖动：移动 · 点按：查词 / 确认 · 长按：卡片里长按 · 双指轻点：后退';
+      case 'video_remote_touchpad_caret_unavailable':
+        return '电脑屏幕上现在没有可选的字幕';
       case 'video_remote_touchpad_exit':
         return '返回遥控器';
       case 'video_remote_touchpad_hint':
@@ -678135,6 +678444,14 @@ extension on _StringsZhHk {
         return 'Video remote';
       case 'video_remote_touchpad':
         return 'Touchpad';
+      case 'video_remote_touchpad_caret':
+        return 'Choosing a word on the computer';
+      case 'video_remote_touchpad_caret_entry':
+        return 'Hold: choose a word on the computer';
+      case 'video_remote_touchpad_caret_hint':
+        return 'Drag: move · Tap: look up / confirm · Hold: long press in the card · Two-finger tap: back';
+      case 'video_remote_touchpad_caret_unavailable':
+        return 'No subtitle on the computer screen to choose from';
       case 'video_remote_touchpad_exit':
         return 'Back to the remote';
       case 'video_remote_touchpad_hint':
