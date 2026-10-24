@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157607 (9271 per locale)
+/// Strings: 157726 (9278 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7304,6 +7304,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_artist_unknown => 'Unknown artist';
   String get music_audio_device_auto => 'System default';
   String get music_audio_device_title => 'Output device';
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  String get music_crossfade_off => 'Off';
+  String get music_crossfade_title => 'Crossfade';
   String music_disc_label({required Object n}) => 'Disc ${n}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   String get music_exclusive_hint =>
@@ -25431,6 +25442,24 @@ class _StringsAr extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -48170,6 +48199,24 @@ class _StringsDe extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -71086,6 +71133,24 @@ class _StringsEs extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -94081,6 +94146,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -116912,6 +116995,24 @@ class _StringsId extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -139695,6 +139796,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -161959,6 +162078,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -183785,6 +183922,24 @@ class _StringsKo extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -206186,6 +206341,24 @@ class _StringsNl extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -229033,6 +229206,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -251852,6 +252043,24 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -274482,6 +274691,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -297098,6 +297325,24 @@ class _StringsTr extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
   @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
@@ -319751,6 +319996,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -341337,6 +341600,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_audio_device_title => '输出设备';
   @override
+  String get music_crossfade_continuous_hint =>
+      '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
+  @override
+  String get music_crossfade_continuous_title => '连续曲目也淡入';
+  @override
+  String get music_crossfade_disabled_direct => '硬件直出时已停用';
+  @override
+  String get music_crossfade_disabled_exclusive => '独占输出时已停用';
+  @override
+  String get music_crossfade_hint =>
+      '曲目之间按等功率曲线交叉淡入淡出；专辑连续曲目与 CUE 拆轨仍保持无缝。开启后不再 bit-perfect，独占输出时自动停用。';
+  @override
+  String get music_crossfade_off => '关';
+  @override
+  String get music_crossfade_title => '交叉淡入';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
@@ -362231,6 +362510,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -382391,6 +382688,20 @@ extension on _StringsEn {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -401653,6 +401964,20 @@ extension on _StringsAr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -420966,6 +421291,20 @@ extension on _StringsDe {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -440289,6 +440628,20 @@ extension on _StringsEs {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -459622,6 +459975,20 @@ extension on _StringsFr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -478924,6 +479291,20 @@ extension on _StringsId {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -498223,6 +498604,20 @@ extension on _StringsIt {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -517470,6 +517865,20 @@ extension on _StringsJa {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -536654,6 +537063,20 @@ extension on _StringsKo {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -555922,6 +556345,20 @@ extension on _StringsNl {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -575229,6 +575666,20 @@ extension on _StringsPtBr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -594540,6 +594991,20 @@ extension on _StringsRu {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -613816,6 +614281,20 @@ extension on _StringsTh {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -633105,6 +633584,20 @@ extension on _StringsTr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -652386,6 +652879,20 @@ extension on _StringsVi {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -671534,6 +672041,20 @@ extension on _StringsZhCn {
         return '系统默认';
       case 'music_audio_device_title':
         return '输出设备';
+      case 'music_crossfade_continuous_hint':
+        return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
+      case 'music_crossfade_continuous_title':
+        return '连续曲目也淡入';
+      case 'music_crossfade_disabled_direct':
+        return '硬件直出时已停用';
+      case 'music_crossfade_disabled_exclusive':
+        return '独占输出时已停用';
+      case 'music_crossfade_hint':
+        return '曲目之间按等功率曲线交叉淡入淡出；专辑连续曲目与 CUE 拆轨仍保持无缝。开启后不再 bit-perfect，独占输出时自动停用。';
+      case 'music_crossfade_off':
+        return '关';
+      case 'music_crossfade_title':
+        return '交叉淡入';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
       case 'music_dsd_rate_title':
@@ -690611,6 +691132,20 @@ extension on _StringsZhHk {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
