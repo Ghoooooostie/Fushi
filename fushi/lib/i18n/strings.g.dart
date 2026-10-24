@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 156043 (9179 per locale)
+/// Strings: 156434 (9202 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6835,6 +6835,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_link_editor_empty => 'No matching items';
   String get media_link_editor_relation => 'Relation';
   String get media_link_editor_search_hint => 'Search the library';
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  String get media_link_editor_theme_song_role => 'Role';
   String get media_link_editor_title => 'Link a related work';
   String get media_link_infer_action => 'Find related works';
   String get media_link_infer_ai_failed =>
@@ -6871,6 +6875,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String media_link_suggestion_source({required Object source}) =>
       'Suggested by ${source}';
   String get media_link_suggestions_title => 'Possibly related';
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   String get media_privacy_action => 'Privacy';
   String get media_privacy_cleared_toast => 'No longer private';
   String get media_privacy_hint =>
@@ -7325,6 +7331,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_settings_summary => 'Music folders and playback';
   String get music_shuffle_play => 'Shuffle';
   String get music_stop => 'Stop music';
+  String get music_theme_song_detect => 'Find in episodes';
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  String get music_theme_song_detecting => 'Recognizing…';
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  String get music_theme_song_role_ed => 'ED';
+  String get music_theme_song_role_insert => 'Insert song';
+  String get music_theme_song_role_op => 'OP';
+  String get music_theme_song_role_theme => 'Theme song';
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  String get music_track_appears_in => 'Appears in';
+  String get music_track_detail => 'Track details';
   String music_tracks_count({required Object count}) => '${count} tracks';
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -12359,6 +12383,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_tap_toggles_playback_hint =>
       'Turn off so tapping the video only reveals the controls';
   String get video_setting_theme => 'Theme';
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
@@ -13142,6 +13174,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_youtube_empty => 'This caption track has no text';
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (translated)';
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  String get video_theme_song_skip_ending => 'Skip credits';
+  String get video_theme_song_skip_intro => 'Skip intro';
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   String get video_torznab_add => 'Add indexer';
   String get video_torznab_api_key => 'API key';
@@ -24516,6 +24552,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -24582,6 +24625,9 @@ class _StringsAr extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -25351,6 +25397,36 @@ class _StringsAr extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -34029,6 +34105,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_theme => 'السمة';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'مفتاح TMDB API مخصص';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -35299,6 +35387,13 @@ class _StringsAr extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (مترجم)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -47028,6 +47123,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -47094,6 +47196,9 @@ class _StringsDe extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -47878,6 +47983,36 @@ class _StringsDe extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -56681,6 +56816,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_theme => 'Design';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Eigener TMDB-API-Schlüssel';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -57977,6 +58124,13 @@ class _StringsDe extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (übersetzt)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -69735,6 +69889,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -69801,6 +69962,9 @@ class _StringsEs extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -70582,6 +70746,36 @@ class _StringsEs extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -79407,6 +79601,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_theme => 'Tema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Clave API de TMDB personalizada';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -80711,6 +80917,13 @@ class _StringsEs extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traducido)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -92513,6 +92726,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -92579,6 +92799,9 @@ class _StringsFr extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -93364,6 +93587,36 @@ class _StringsFr extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -102213,6 +102466,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_theme => 'Thème';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Clé API TMDB personnalisée';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -103525,6 +103790,13 @@ class _StringsFr extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traduit)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -115142,6 +115414,13 @@ class _StringsId extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -115208,6 +115487,9 @@ class _StringsId extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -115983,6 +116265,36 @@ class _StringsId extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -124719,6 +125031,18 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_theme => 'Tema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Kunci API TMDB kustom';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -126005,6 +126329,13 @@ class _StringsId extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (diterjemahkan)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -137705,6 +138036,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -137771,6 +138109,9 @@ class _StringsIt extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -138554,6 +138895,36 @@ class _StringsIt extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -147342,6 +147713,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_theme => 'Tema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Chiave API TMDB personalizzata';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -148638,6 +149021,13 @@ class _StringsIt extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (tradotto)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -159801,6 +160191,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -159867,6 +160264,9 @@ class _StringsJa extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -160606,6 +161006,36 @@ class _StringsJa extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -169034,6 +169464,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_theme => 'テーマ';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'カスタムTMDB APIキー';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -170243,6 +170685,13 @@ class _StringsJa extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻訳）';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -181414,6 +181863,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -181480,6 +181936,9 @@ class _StringsKo extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -182221,6 +182680,36 @@ class _StringsKo extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -190670,6 +191159,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_theme => '테마';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => '사용자 지정 TMDB API 키';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -191904,6 +192405,13 @@ class _StringsKo extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (번역됨)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -203565,6 +204073,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -203631,6 +204146,9 @@ class _StringsNl extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -204410,6 +204928,36 @@ class _StringsNl extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -213192,6 +213740,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_theme => 'Thema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Aangepaste TMDB API-sleutel';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -214483,6 +215043,13 @@ class _StringsNl extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (vertaald)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -226197,6 +226764,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -226263,6 +226837,9 @@ class _StringsPtBr extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -227044,6 +227621,36 @@ class _StringsPtBr extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -235838,6 +236445,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_theme => 'Tema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Chave de API TMDB personalizada';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -237137,6 +237756,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (traduzida)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -248804,6 +249430,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -248870,6 +249503,9 @@ class _StringsRu extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -249651,6 +250287,36 @@ class _StringsRu extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -258433,6 +259099,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_theme => 'Тема';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Пользовательский ключ API TMDB';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -259736,6 +260414,13 @@ class _StringsRu extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (перевод)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -271231,6 +271916,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -271297,6 +271989,9 @@ class _StringsTh extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -272069,6 +272764,36 @@ class _StringsTh extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -280738,6 +281463,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_theme => 'ธีม';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'คีย์ API TMDB แบบกำหนดเอง';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -282014,6 +282751,13 @@ class _StringsTh extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (แปลแล้ว)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -293631,6 +294375,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -293697,6 +294448,9 @@ class _StringsTr extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -294474,6 +295228,36 @@ class _StringsTr extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -303209,6 +303993,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_theme => 'Tema';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Özel TMDB API anahtarı';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -304494,6 +305290,13 @@ class _StringsTr extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (çevrilmiş)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -316075,6 +316878,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -316141,6 +316951,9 @@ class _StringsVi extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -316914,6 +317727,36 @@ class _StringsVi extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -325620,6 +326463,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_theme => 'Giao diện';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => 'Khóa API TMDB tùy chỉnh';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -326902,6 +327757,13 @@ class _StringsVi extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang} (đã dịch)';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -337522,6 +338384,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_link_editor_search_hint => '搜索库内条目';
   @override
+  String get media_link_editor_theme_song_episodes => '适用集数';
+  @override
+  String get media_link_editor_theme_song_episodes_hint => '如 1-12，留空为全部';
+  @override
+  String get media_link_editor_theme_song_role => '角色';
+  @override
   String get media_link_editor_title => '关联作品';
   @override
   String get media_link_infer_action => '查找相关作品';
@@ -337584,6 +338452,8 @@ class _StringsZhCn extends _StringsEn {
       '来自 ${source} 的推断';
   @override
   String get media_link_suggestions_title => '可能相关';
+  @override
+  String get media_link_theme_song_needs_music_video => '主题曲关联需要一端是曲目、另一端是视频';
   @override
   String get media_privacy_action => '私密';
   @override
@@ -338286,6 +339156,36 @@ class _StringsZhCn extends _StringsEn {
   String get music_shuffle_play => '随机播放';
   @override
   String get music_stop => '停止音乐';
+  @override
+  String get music_theme_song_detect => '识别出现位置';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      '在 ${hits} 集中找到';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => '在 ${hits} 集中找到；${failed} 个文件读取失败';
+  @override
+  String get music_theme_song_detecting => '识别中…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      '从第 ${n} 集的这首歌开始播放';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => '插入曲';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => '主题曲';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      '第 ${episodes} 集';
+  @override
+  String get music_track_appears_in => '出现在';
+  @override
+  String get music_track_detail => '曲目详情';
   @override
   String music_tracks_count({required Object count}) => '${count} 首';
   @override
@@ -346241,6 +347141,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_theme => '主题';
   @override
+  String get video_setting_theme_song_auto_skip => '自动跳过片头片尾';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      '识别出的音乐库 OP / ED 一开始播放就跳到段尾';
+  @override
+  String get video_setting_theme_song_now_playing => '显示主题曲曲名';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'OP / ED 期间在角落显示曲名，点击在音乐库打开';
+  @override
   String get video_setting_tmdb_key => '自定义 TMDB API Key';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -347392,6 +348302,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻译）';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · 在音乐库打开';
+  @override
+  String get video_theme_song_skip_ending => '跳过片尾';
+  @override
+  String get video_theme_song_skip_intro => '跳过片头';
   @override
   String get video_time_remaining_toggle => '切换已播 / 剩余时间';
   @override
@@ -358205,6 +359122,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_link_editor_search_hint => 'Search the library';
   @override
+  String get media_link_editor_theme_song_episodes => 'Episodes';
+  @override
+  String get media_link_editor_theme_song_episodes_hint =>
+      'e.g. 1-12; leave blank for all';
+  @override
+  String get media_link_editor_theme_song_role => 'Role';
+  @override
   String get media_link_editor_title => 'Link a related work';
   @override
   String get media_link_infer_action => 'Find related works';
@@ -358271,6 +359195,9 @@ class _StringsZhHk extends _StringsEn {
       'Suggested by ${source}';
   @override
   String get media_link_suggestions_title => 'Possibly related';
+  @override
+  String get media_link_theme_song_needs_music_video =>
+      'A theme song link needs a track on one side and a video on the other';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -358983,6 +359910,36 @@ class _StringsZhHk extends _StringsEn {
   String get music_shuffle_play => 'Shuffle';
   @override
   String get music_stop => 'Stop music';
+  @override
+  String get music_theme_song_detect => 'Find in episodes';
+  @override
+  String music_theme_song_detect_done({required Object hits}) =>
+      'Found in ${hits} episodes';
+  @override
+  String music_theme_song_detect_partial({
+    required Object hits,
+    required Object failed,
+  }) => 'Found in ${hits} episodes; ${failed} files could not be read';
+  @override
+  String get music_theme_song_detecting => 'Recognizing…';
+  @override
+  String music_theme_song_open_episode({required Object n}) =>
+      'Play episode ${n} from this song';
+  @override
+  String get music_theme_song_role_ed => 'ED';
+  @override
+  String get music_theme_song_role_insert => 'Insert song';
+  @override
+  String get music_theme_song_role_op => 'OP';
+  @override
+  String get music_theme_song_role_theme => 'Theme song';
+  @override
+  String music_track_appears_episodes({required Object episodes}) =>
+      'Episodes ${episodes}';
+  @override
+  String get music_track_appears_in => 'Appears in';
+  @override
+  String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
@@ -367219,6 +368176,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_theme => '主題';
   @override
+  String get video_setting_theme_song_auto_skip =>
+      'Skip intros and credits automatically';
+  @override
+  String get video_setting_theme_song_auto_skip_hint =>
+      'When an OP or ED recognized from your music library starts, jump straight to its end';
+  @override
+  String get video_setting_theme_song_now_playing =>
+      'Show the theme song title';
+  @override
+  String get video_setting_theme_song_now_playing_hint =>
+      'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
+  @override
   String get video_setting_tmdb_key => '自定義 TMDB API Key';
   @override
   String get video_setting_tmdb_key_hint =>
@@ -368387,6 +369356,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_subtitle_youtube_translated({required Object lang}) =>
       '${lang}（翻譯）';
+  @override
+  String video_theme_song_now_playing({required Object title}) =>
+      '♪ ${title} · Open in music library';
+  @override
+  String get video_theme_song_skip_ending => 'Skip credits';
+  @override
+  String get video_theme_song_skip_intro => 'Skip intro';
   @override
   String get video_time_remaining_toggle => 'Show elapsed / remaining time';
   @override
@@ -378194,6 +379170,12 @@ extension on _StringsEn {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -378256,6 +379238,8 @@ extension on _StringsEn {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -378930,6 +379914,31 @@ extension on _StringsEn {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -386438,6 +387447,14 @@ extension on _StringsEn {
         return 'Turn off so tapping the video only reveals the controls';
       case 'video_setting_theme':
         return 'Theme';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
@@ -387486,6 +388503,13 @@ extension on _StringsEn {
         return 'This caption track has no text';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (translated)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -397269,6 +398293,12 @@ extension on _StringsAr {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -397331,6 +398361,8 @@ extension on _StringsAr {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -398005,6 +399037,31 @@ extension on _StringsAr {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -405511,6 +406568,14 @@ extension on _StringsAr {
         return 'أوقفه حتى يؤدي النقر على الفيديو فقط إلى إظهار أدوات التحكم';
       case 'video_setting_theme':
         return 'السمة';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'مفتاح TMDB API مخصص';
       case 'video_setting_tmdb_key_hint':
@@ -406560,6 +407625,13 @@ extension on _StringsAr {
         return 'مسار الترجمة هذا لا يحتوي على نص';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (مترجم)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -416391,6 +417463,12 @@ extension on _StringsDe {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -416453,6 +417531,8 @@ extension on _StringsDe {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -417131,6 +418211,31 @@ extension on _StringsDe {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -424659,6 +425764,14 @@ extension on _StringsDe {
         return 'Deaktivieren, damit Tippen auf das Video nur die Steuerung einblendet';
       case 'video_setting_theme':
         return 'Design';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Eigener TMDB-API-Schlüssel';
       case 'video_setting_tmdb_key_hint':
@@ -425710,6 +426823,13 @@ extension on _StringsDe {
         return 'Diese Untertitelspur enthält keinen Text';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (übersetzt)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -435527,6 +436647,12 @@ extension on _StringsEs {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -435589,6 +436715,8 @@ extension on _StringsEs {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -436267,6 +437395,31 @@ extension on _StringsEs {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -443792,6 +444945,14 @@ extension on _StringsEs {
         return 'Desactive para que tocar el vídeo solo revele los controles';
       case 'video_setting_theme':
         return 'Tema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Clave API de TMDB personalizada';
       case 'video_setting_tmdb_key_hint':
@@ -444842,6 +446003,13 @@ extension on _StringsEs {
         return 'Esta pista de subtítulos no tiene texto';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traducido)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -454673,6 +455841,12 @@ extension on _StringsFr {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -454735,6 +455909,8 @@ extension on _StringsFr {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -455413,6 +456589,31 @@ extension on _StringsFr {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -462942,6 +464143,14 @@ extension on _StringsFr {
         return 'Désactivez pour que l\'appui sur la vidéo ne fasse que révéler les contrôles';
       case 'video_setting_theme':
         return 'Thème';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Clé API TMDB personnalisée';
       case 'video_setting_tmdb_key_hint':
@@ -463992,6 +465201,13 @@ extension on _StringsFr {
         return 'Cette piste de sous-titres n\'a pas de texte';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traduit)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -473792,6 +475008,12 @@ extension on _StringsId {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -473854,6 +475076,8 @@ extension on _StringsId {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -474528,6 +475752,31 @@ extension on _StringsId {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -482037,6 +483286,14 @@ extension on _StringsId {
         return 'Matikan agar mengetuk video hanya menampilkan kontrol';
       case 'video_setting_theme':
         return 'Tema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Kunci API TMDB kustom';
       case 'video_setting_tmdb_key_hint':
@@ -483086,6 +484343,13 @@ extension on _StringsId {
         return 'Trek teks ini tidak memiliki teks';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (diterjemahkan)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -492900,6 +494164,12 @@ extension on _StringsIt {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -492962,6 +494232,8 @@ extension on _StringsIt {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -493640,6 +494912,31 @@ extension on _StringsIt {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -501165,6 +502462,14 @@ extension on _StringsIt {
         return 'Disattiva per far sì che toccando il video si mostrino solo i controlli';
       case 'video_setting_theme':
         return 'Tema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Chiave API TMDB personalizzata';
       case 'video_setting_tmdb_key_hint':
@@ -502216,6 +503521,13 @@ extension on _StringsIt {
         return 'Questa traccia di sottotitoli non ha testo';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (tradotto)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -511966,6 +513278,12 @@ extension on _StringsJa {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -512028,6 +513346,8 @@ extension on _StringsJa {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -512700,6 +514020,31 @@ extension on _StringsJa {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -520175,6 +521520,14 @@ extension on _StringsJa {
         return 'オフにすると、動画のタップでコントロールの表示のみ行います';
       case 'video_setting_theme':
         return 'テーマ';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'カスタムTMDB APIキー';
       case 'video_setting_tmdb_key_hint':
@@ -521214,6 +522567,13 @@ extension on _StringsJa {
         return 'このキャプショントラックにはテキストがありません';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻訳）';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -530964,6 +532324,12 @@ extension on _StringsKo {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -531026,6 +532392,8 @@ extension on _StringsKo {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -531697,6 +533065,31 @@ extension on _StringsKo {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -539180,6 +540573,14 @@ extension on _StringsKo {
         return '끄면 동영상 탭 시 컨트롤만 표시합니다';
       case 'video_setting_theme':
         return '테마';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return '사용자 지정 TMDB API 키';
       case 'video_setting_tmdb_key_hint':
@@ -540225,6 +541626,13 @@ extension on _StringsKo {
         return '이 자막 트랙에 텍스트가 없습니다';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (번역됨)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -550038,6 +551446,12 @@ extension on _StringsNl {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -550100,6 +551514,8 @@ extension on _StringsNl {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -550778,6 +552194,31 @@ extension on _StringsNl {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -558296,6 +559737,14 @@ extension on _StringsNl {
         return 'Schakel uit zodat tikken op de video alleen de bediening toont';
       case 'video_setting_theme':
         return 'Thema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Aangepaste TMDB API-sleutel';
       case 'video_setting_tmdb_key_hint':
@@ -559347,6 +560796,13 @@ extension on _StringsNl {
         return 'Deze ondertiteltrack bevat geen tekst';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (vertaald)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -569158,6 +570614,12 @@ extension on _StringsPtBr {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -569220,6 +570682,8 @@ extension on _StringsPtBr {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -569898,6 +571362,31 @@ extension on _StringsPtBr {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -577414,6 +578903,14 @@ extension on _StringsPtBr {
         return 'Desative para que tocar no vídeo apenas revele os controles';
       case 'video_setting_theme':
         return 'Tema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Chave de API TMDB personalizada';
       case 'video_setting_tmdb_key_hint':
@@ -578464,6 +579961,13 @@ extension on _StringsPtBr {
         return 'Esta faixa de legendas não tem texto';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (traduzida)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -588282,6 +589786,12 @@ extension on _StringsRu {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -588344,6 +589854,8 @@ extension on _StringsRu {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -589022,6 +590534,31 @@ extension on _StringsRu {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -596537,6 +598074,14 @@ extension on _StringsRu {
         return 'Отключите, чтобы нажатие на видео только показывало элементы управления';
       case 'video_setting_theme':
         return 'Тема';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Пользовательский ключ API TMDB';
       case 'video_setting_tmdb_key_hint':
@@ -597586,6 +599131,13 @@ extension on _StringsRu {
         return 'В этой дорожке субтитров нет текста';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (перевод)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -607375,6 +608927,12 @@ extension on _StringsTh {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -607437,6 +608995,8 @@ extension on _StringsTh {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -608111,6 +609671,31 @@ extension on _StringsTh {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -615616,6 +617201,14 @@ extension on _StringsTh {
         return 'ปิดเพื่อให้การแตะวิดีโอแค่แสดงตัวควบคุม';
       case 'video_setting_theme':
         return 'ธีม';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'คีย์ API TMDB แบบกำหนดเอง';
       case 'video_setting_tmdb_key_hint':
@@ -616664,6 +618257,13 @@ extension on _StringsTh {
         return 'แทร็กคำบรรยายนี้ไม่มีข้อความ';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (แปลแล้ว)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -626474,6 +628074,12 @@ extension on _StringsTr {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -626536,6 +628142,8 @@ extension on _StringsTr {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -627213,6 +628821,31 @@ extension on _StringsTr {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -634724,6 +636357,14 @@ extension on _StringsTr {
         return 'Videoya dokunmanın yalnızca kontrolleri göstermesi için kapatın';
       case 'video_setting_theme':
         return 'Tema';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Özel TMDB API anahtarı';
       case 'video_setting_tmdb_key_hint':
@@ -635773,6 +637414,13 @@ extension on _StringsTr {
         return 'Bu altyazı parçasında metin yok';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (çevrilmiş)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -645571,6 +647219,12 @@ extension on _StringsVi {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -645633,6 +647287,8 @@ extension on _StringsVi {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -646307,6 +647963,31 @@ extension on _StringsVi {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -653818,6 +655499,14 @@ extension on _StringsVi {
         return 'Tắt để chạm video chỉ hiển thị điều khiển';
       case 'video_setting_theme':
         return 'Giao diện';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return 'Khóa API TMDB tùy chỉnh';
       case 'video_setting_tmdb_key_hint':
@@ -654865,6 +656554,13 @@ extension on _StringsVi {
         return 'Bản phụ đề này không có nội dung';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang} (đã dịch)';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
@@ -664542,6 +666238,12 @@ extension on _StringsZhCn {
         return '关系';
       case 'media_link_editor_search_hint':
         return '搜索库内条目';
+      case 'media_link_editor_theme_song_episodes':
+        return '适用集数';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return '如 1-12，留空为全部';
+      case 'media_link_editor_theme_song_role':
+        return '角色';
       case 'media_link_editor_title':
         return '关联作品';
       case 'media_link_infer_action':
@@ -664604,6 +666306,8 @@ extension on _StringsZhCn {
         return ({required Object source}) => '来自 ${source} 的推断';
       case 'media_link_suggestions_title':
         return '可能相关';
+      case 'media_link_theme_song_needs_music_video':
+        return '主题曲关联需要一端是曲目、另一端是视频';
       case 'media_privacy_action':
         return '私密';
       case 'media_privacy_cleared_toast':
@@ -665268,6 +666972,31 @@ extension on _StringsZhCn {
         return '随机播放';
       case 'music_stop':
         return '停止音乐';
+      case 'music_theme_song_detect':
+        return '识别出现位置';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => '在 ${hits} 集中找到';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            '在 ${hits} 集中找到；${failed} 个文件读取失败';
+      case 'music_theme_song_detecting':
+        return '识别中…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => '从第 ${n} 集的这首歌开始播放';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return '插入曲';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return '主题曲';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => '第 ${episodes} 集';
+      case 'music_track_appears_in':
+        return '出现在';
+      case 'music_track_detail':
+        return '曲目详情';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} 首';
       case 'music_works_empty':
@@ -672699,6 +674428,14 @@ extension on _StringsZhCn {
         return '关闭后点击画面只唤醒控制条，不再切换播放/暂停';
       case 'video_setting_theme':
         return '主题';
+      case 'video_setting_theme_song_auto_skip':
+        return '自动跳过片头片尾';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return '识别出的音乐库 OP / ED 一开始播放就跳到段尾';
+      case 'video_setting_theme_song_now_playing':
+        return '显示主题曲曲名';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'OP / ED 期间在角落显示曲名，点击在音乐库打开';
       case 'video_setting_tmdb_key':
         return '自定义 TMDB API Key';
       case 'video_setting_tmdb_key_hint':
@@ -673726,6 +675463,12 @@ extension on _StringsZhCn {
         return '该字幕轨没有文字';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻译）';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) => '♪ ${title} · 在音乐库打开';
+      case 'video_theme_song_skip_ending':
+        return '跳过片尾';
+      case 'video_theme_song_skip_intro':
+        return '跳过片头';
       case 'video_time_remaining_toggle':
         return '切换已播 / 剩余时间';
       case 'video_torznab_add':
@@ -683429,6 +685172,12 @@ extension on _StringsZhHk {
         return 'Relation';
       case 'media_link_editor_search_hint':
         return 'Search the library';
+      case 'media_link_editor_theme_song_episodes':
+        return 'Episodes';
+      case 'media_link_editor_theme_song_episodes_hint':
+        return 'e.g. 1-12; leave blank for all';
+      case 'media_link_editor_theme_song_role':
+        return 'Role';
       case 'media_link_editor_title':
         return 'Link a related work';
       case 'media_link_infer_action':
@@ -683491,6 +685240,8 @@ extension on _StringsZhHk {
         return ({required Object source}) => 'Suggested by ${source}';
       case 'media_link_suggestions_title':
         return 'Possibly related';
+      case 'media_link_theme_song_needs_music_video':
+        return 'A theme song link needs a track on one side and a video on the other';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -684160,6 +685911,31 @@ extension on _StringsZhHk {
         return 'Shuffle';
       case 'music_stop':
         return 'Stop music';
+      case 'music_theme_song_detect':
+        return 'Find in episodes';
+      case 'music_theme_song_detect_done':
+        return ({required Object hits}) => 'Found in ${hits} episodes';
+      case 'music_theme_song_detect_partial':
+        return ({required Object hits, required Object failed}) =>
+            'Found in ${hits} episodes; ${failed} files could not be read';
+      case 'music_theme_song_detecting':
+        return 'Recognizing…';
+      case 'music_theme_song_open_episode':
+        return ({required Object n}) => 'Play episode ${n} from this song';
+      case 'music_theme_song_role_ed':
+        return 'ED';
+      case 'music_theme_song_role_insert':
+        return 'Insert song';
+      case 'music_theme_song_role_op':
+        return 'OP';
+      case 'music_theme_song_role_theme':
+        return 'Theme song';
+      case 'music_track_appears_episodes':
+        return ({required Object episodes}) => 'Episodes ${episodes}';
+      case 'music_track_appears_in':
+        return 'Appears in';
+      case 'music_track_detail':
+        return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_works_empty':
@@ -691625,6 +693401,14 @@ extension on _StringsZhHk {
         return '關閉後點擊畫面只喚醒控製條，不再切換播放/暫停';
       case 'video_setting_theme':
         return '主題';
+      case 'video_setting_theme_song_auto_skip':
+        return 'Skip intros and credits automatically';
+      case 'video_setting_theme_song_auto_skip_hint':
+        return 'When an OP or ED recognized from your music library starts, jump straight to its end';
+      case 'video_setting_theme_song_now_playing':
+        return 'Show the theme song title';
+      case 'video_setting_theme_song_now_playing_hint':
+        return 'During an OP or ED, show the song in a corner; tap it to open the track in the music library';
       case 'video_setting_tmdb_key':
         return '自定義 TMDB API Key';
       case 'video_setting_tmdb_key_hint':
@@ -692655,6 +694439,13 @@ extension on _StringsZhHk {
         return '該字幕軌沒有文字';
       case 'video_subtitle_youtube_translated':
         return ({required Object lang}) => '${lang}（翻譯）';
+      case 'video_theme_song_now_playing':
+        return ({required Object title}) =>
+            '♪ ${title} · Open in music library';
+      case 'video_theme_song_skip_ending':
+        return 'Skip credits';
+      case 'video_theme_song_skip_intro':
+        return 'Skip intro';
       case 'video_time_remaining_toggle':
         return 'Show elapsed / remaining time';
       case 'video_torznab_add':
