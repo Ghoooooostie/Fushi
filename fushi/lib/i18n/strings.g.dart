@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 155346 (9138 per locale)
+/// Strings: 155975 (9175 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2075,6 +2075,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_local_audio => 'Local audio databases';
   String get backup_category_local_audio_desc =>
       'Local pronunciation audio databases';
+  String get backup_category_music => 'Music';
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   String get backup_category_profiles => 'Profiles';
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_category_progress => 'Reading progress';
@@ -7289,6 +7292,39 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The Browse tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
+  String get music_artist_unknown => 'Unknown artist';
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  String get music_folder_add => 'Add music folder';
+  String get music_folder_duplicate => 'This folder is already a music source';
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  String get music_gapless_title => 'Gapless playback';
+  String get music_hi_res_badge => 'Hi-Res';
+  String get music_library_empty => 'No music yet';
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  String get music_library_rescan => 'Rescan library';
+  String get music_now_playing => 'Now playing';
+  String get music_open_library => 'Music library';
+  String get music_play_all => 'Play';
+  String get music_playlists_empty => 'No playlists yet';
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  String get music_replaygain_title => 'ReplayGain';
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  String get music_section_albums => 'Albums';
+  String get music_section_artists => 'Artists';
+  String get music_section_playlists => 'Playlists';
+  String get music_section_songs => 'Songs';
+  String get music_section_works => 'Works';
+  String get music_settings_summary => 'Music folders and playback';
+  String get music_shuffle_play => 'Shuffle';
+  String get music_stop => 'Stop music';
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
   String get name => 'Name';
   String get nav_browse => 'Browse';
   String get nav_browser_extension => 'Extension';
@@ -7296,6 +7332,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_game => 'Game';
   String get nav_home => 'Home';
   String get nav_lookup => 'Lookup';
+  String get nav_music => 'Music';
   String get nav_srs => 'Review';
   String get nav_video => 'Video';
   String get nav_web => 'Browser';
@@ -8753,6 +8790,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_manga_pan_right => 'Pan right';
   String get shortcut_action_manga_pan_up => 'Pan up';
   String get shortcut_action_manga_toggle_chrome => 'Toggle manga interface';
+  String get shortcut_action_music_next_track => 'Next track';
+  String get shortcut_action_music_previous_track => 'Previous track';
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   String get shortcut_action_popup_next_entry => 'Next word entry';
   String get shortcut_action_popup_play_audio => 'Play word audio';
@@ -8910,6 +8952,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Triggered by the system (text selection menu, share, floating ball); the OS does not allow apps to remap this shortcut.';
   String get shortcut_scope_home => 'Home';
   String get shortcut_scope_manga => 'Manga';
+  String get shortcut_scope_music => 'Music';
   String get shortcut_scope_reader => 'Reader';
   String get shortcut_scope_universal => 'Back / Exit';
   String get shortcut_scope_video => 'Video';
@@ -16366,6 +16409,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'قواعد بيانات صوت النطق المحلية';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'الملفات الشخصية';
   @override
@@ -25238,6 +25286,67 @@ class _StringsAr extends _StringsEn {
   @override
   String get move_up => 'تحريك لأعلى';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'الاسم';
   @override
   String get nav_browse => 'تصفح';
@@ -25251,6 +25360,8 @@ class _StringsAr extends _StringsEn {
   String get nav_home => 'الرئيسية';
   @override
   String get nav_lookup => 'بحث';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'المراجعة';
   @override
@@ -27778,6 +27889,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'تبديل واجهة المانغا';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'إنشاء بطاقة (استخراج)';
   @override
   String get shortcut_action_popup_next_entry => 'المدخل التالي';
@@ -28049,6 +28170,8 @@ class _StringsAr extends _StringsEn {
   String get shortcut_scope_home => 'الرئيسية';
   @override
   String get shortcut_scope_manga => 'مانغا';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'القارئ';
   @override
@@ -38610,6 +38733,11 @@ class _StringsDe extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Lokale Aussprache-Audiodatenbanken';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profile';
   @override
   String get backup_category_profiles_desc => 'Konfigurationsprofile';
@@ -47677,6 +47805,67 @@ class _StringsDe extends _StringsEn {
   @override
   String get move_up => 'Nach oben';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Name';
   @override
   String get nav_browse => 'Durchsuchen';
@@ -47690,6 +47879,8 @@ class _StringsDe extends _StringsEn {
   String get nav_home => 'Startseite';
   @override
   String get nav_lookup => 'Nachschlagen';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Wiederholen';
   @override
@@ -50269,6 +50460,16 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Manga-Oberfläche umschalten';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Karte erstellen (Mining)';
   @override
   String get shortcut_action_popup_next_entry => 'Nächster Worteintrag';
@@ -50547,6 +50748,8 @@ class _StringsDe extends _StringsEn {
   String get shortcut_scope_home => 'Start';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Leser';
   @override
@@ -61215,6 +61418,11 @@ class _StringsEs extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Bases de datos de audio de pronunciación local';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Perfiles';
   @override
   String get backup_category_profiles_desc => 'Perfiles de configuración';
@@ -70293,6 +70501,67 @@ class _StringsEs extends _StringsEn {
   @override
   String get move_up => 'Mover arriba';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Nombre';
   @override
   String get nav_browse => 'Explorar';
@@ -70306,6 +70575,8 @@ class _StringsEs extends _StringsEn {
   String get nav_home => 'Inicio';
   @override
   String get nav_lookup => 'Consultar';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Repaso';
   @override
@@ -72886,6 +73157,16 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Alternar interfaz de manga';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Crear tarjeta (mine)';
   @override
   String get shortcut_action_popup_next_entry => 'Siguiente entrada de palabra';
@@ -73168,6 +73449,8 @@ class _StringsEs extends _StringsEn {
   String get shortcut_scope_home => 'Inicio';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Lector';
   @override
@@ -83876,6 +84159,11 @@ class _StringsFr extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Bases de données audio de prononciation locale';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profils';
   @override
   String get backup_category_profiles_desc => 'Profils de configuration';
@@ -92987,6 +93275,67 @@ class _StringsFr extends _StringsEn {
   @override
   String get move_up => 'Monter';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Nom';
   @override
   String get nav_browse => 'Parcourir';
@@ -93000,6 +93349,8 @@ class _StringsFr extends _StringsEn {
   String get nav_home => 'Accueil';
   @override
   String get nav_lookup => 'Recherche';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Révision';
   @override
@@ -95596,6 +95947,16 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Basculer l\'interface manga';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Créer une carte';
   @override
   String get shortcut_action_popup_next_entry => 'Entrée de mot suivante';
@@ -95878,6 +96239,8 @@ class _StringsFr extends _StringsEn {
   String get shortcut_scope_home => 'Accueil';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Lecteur';
   @override
@@ -106562,6 +106925,11 @@ class _StringsId extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Database audio pengucapan lokal';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profil';
   @override
   String get backup_category_profiles_desc => 'Profil konfigurasi';
@@ -115518,6 +115886,67 @@ class _StringsId extends _StringsEn {
   @override
   String get move_up => 'Naikkan';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Nama';
   @override
   String get nav_browse => 'Jelajah';
@@ -115531,6 +115960,8 @@ class _StringsId extends _StringsEn {
   String get nav_home => 'Beranda';
   @override
   String get nav_lookup => 'Cari Kata';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Ulasan';
   @override
@@ -118080,6 +118511,16 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'Alihkan antarmuka manga';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Buat kartu (tambang)';
   @override
   String get shortcut_action_popup_next_entry => 'Entri kata berikutnya';
@@ -118353,6 +118794,8 @@ class _StringsId extends _StringsEn {
   String get shortcut_scope_home => 'Beranda';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Pembaca';
   @override
@@ -128966,6 +129409,11 @@ class _StringsIt extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Database audio di pronuncia locali';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profili';
   @override
   String get backup_category_profiles_desc => 'Profili di configurazione';
@@ -138001,6 +138449,67 @@ class _StringsIt extends _StringsEn {
   @override
   String get move_up => 'Sposta su';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Nome';
   @override
   String get nav_browse => 'Sfoglia';
@@ -138014,6 +138523,8 @@ class _StringsIt extends _StringsEn {
   String get nav_home => 'Home';
   @override
   String get nav_lookup => 'Ricerca';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Ripasso';
   @override
@@ -140586,6 +141097,16 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Attiva/disattiva interfaccia manga';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Crea carta (mining)';
   @override
   String get shortcut_action_popup_next_entry => 'Voce successiva';
@@ -140868,6 +141389,8 @@ class _StringsIt extends _StringsEn {
   String get shortcut_scope_home => 'Home';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Lettore';
   @override
@@ -151400,6 +151923,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => 'ローカル発音音声データベース';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'プロファイル';
   @override
   String get backup_category_profiles_desc => '設定プロファイル';
@@ -159965,6 +160493,67 @@ class _StringsJa extends _StringsEn {
   @override
   String get move_up => '上に移動';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => '名前';
   @override
   String get nav_browse => 'ブラウズ';
@@ -159978,6 +160567,8 @@ class _StringsJa extends _StringsEn {
   String get nav_home => 'ホーム';
   @override
   String get nav_lookup => '辞書';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => '復習';
   @override
@@ -162424,6 +163015,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'マンガUIの表示切り替え';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'カードを作成（マイニング）';
   @override
   String get shortcut_action_popup_next_entry => '次の単語エントリ';
@@ -162675,6 +163276,8 @@ class _StringsJa extends _StringsEn {
   String get shortcut_scope_home => 'ホーム';
   @override
   String get shortcut_scope_manga => 'マンガ';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'リーダー';
   @override
@@ -172901,6 +173504,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => '로컬 발음 오디오 데이터베이스';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => '프로필';
   @override
   String get backup_category_profiles_desc => '구성 프로필';
@@ -181492,6 +182100,67 @@ class _StringsKo extends _StringsEn {
   @override
   String get move_up => '위로 이동';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => '이름';
   @override
   String get nav_browse => '탐색';
@@ -181505,6 +182174,8 @@ class _StringsKo extends _StringsEn {
   String get nav_home => '홈';
   @override
   String get nav_lookup => '단어 찾기';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => '복습';
   @override
@@ -183958,6 +184629,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => '만화 인터페이스 전환';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => '카드 만들기 (마이닝)';
   @override
   String get shortcut_action_popup_next_entry => '다음 단어 항목';
@@ -184210,6 +184891,8 @@ class _StringsKo extends _StringsEn {
   String get shortcut_scope_home => '홈';
   @override
   String get shortcut_scope_manga => '만화';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => '리더';
   @override
@@ -194591,6 +195274,11 @@ class _StringsNl extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Lokale uitspraakaudiodatabases';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profielen';
   @override
   String get backup_category_profiles_desc => 'Configuratieprofielen';
@@ -203593,6 +204281,67 @@ class _StringsNl extends _StringsEn {
   @override
   String get move_up => 'Omhoog';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Naam';
   @override
   String get nav_browse => 'Bladeren';
@@ -203606,6 +204355,8 @@ class _StringsNl extends _StringsEn {
   String get nav_home => 'Start';
   @override
   String get nav_lookup => 'Opzoeken';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Herhalen';
   @override
@@ -206177,6 +206928,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'Manga-interface schakelen';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Kaart aanmaken (delven)';
   @override
   String get shortcut_action_popup_next_entry => 'Volgend woordlemma';
@@ -206455,6 +207216,8 @@ class _StringsNl extends _StringsEn {
   String get shortcut_scope_home => 'Start';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Lezer';
   @override
@@ -217101,6 +217864,11 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Bancos de áudio de pronúncia local';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Perfis';
   @override
   String get backup_category_profiles_desc => 'Perfis de configuração';
@@ -226139,6 +226907,67 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get move_up => 'Mover para cima';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Nome';
   @override
   String get nav_browse => 'Navegar';
@@ -226152,6 +226981,8 @@ class _StringsPtBr extends _StringsEn {
   String get nav_home => 'Início';
   @override
   String get nav_lookup => 'Consultar';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Revisão';
   @override
@@ -228723,6 +229554,16 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Alternar interface de mangá';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Criar cartão (minerar)';
   @override
   String get shortcut_action_popup_next_entry => 'Próxima entrada de palavra';
@@ -229000,6 +229841,8 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_scope_home => 'Início';
   @override
   String get shortcut_scope_manga => 'Mangá';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Leitor';
   @override
@@ -239652,6 +240495,11 @@ class _StringsRu extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Локальные базы аудио произношения';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Профили';
   @override
   String get backup_category_profiles_desc => 'Профили конфигурации';
@@ -248658,6 +249506,67 @@ class _StringsRu extends _StringsEn {
   @override
   String get move_up => 'Вверх';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Название';
   @override
   String get nav_browse => 'Обзор';
@@ -248671,6 +249580,8 @@ class _StringsRu extends _StringsEn {
   String get nav_home => 'Главная';
   @override
   String get nav_lookup => 'Поиск';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Повторение';
   @override
@@ -251246,6 +252157,16 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Переключить интерфейс манги';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Создать карточку';
   @override
   String get shortcut_action_popup_next_entry => 'Следующая словарная статья';
@@ -251525,6 +252446,8 @@ class _StringsRu extends _StringsEn {
   String get shortcut_scope_home => 'Главная';
   @override
   String get shortcut_scope_manga => 'Манга';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Читалка';
   @override
@@ -262121,6 +263044,11 @@ class _StringsTh extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'ฐานข้อมูลเสียงออกเสียงในเครื่อง';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'โปรไฟล์';
   @override
   String get backup_category_profiles_desc => 'โปรไฟล์การตั้งค่า';
@@ -270988,6 +271916,67 @@ class _StringsTh extends _StringsEn {
   @override
   String get move_up => 'เลื่อนขึ้น';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'ชื่อ';
   @override
   String get nav_browse => 'เรียกดู';
@@ -271001,6 +271990,8 @@ class _StringsTh extends _StringsEn {
   String get nav_home => 'หน้าหลัก';
   @override
   String get nav_lookup => 'ค้นคำ';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'ทบทวน';
   @override
@@ -273528,6 +274519,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'สลับอินเทอร์เฟซมังงะ';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'สร้างการ์ด (ขุด)';
   @override
   String get shortcut_action_popup_next_entry => 'รายการคำถัดไป';
@@ -273800,6 +274801,8 @@ class _StringsTh extends _StringsEn {
   String get shortcut_scope_home => 'หน้าหลัก';
   @override
   String get shortcut_scope_manga => 'มังงะ';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'โปรแกรมอ่าน';
   @override
@@ -284336,6 +285339,11 @@ class _StringsTr extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Yerel telaffuz ses veritabanları';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profiller';
   @override
   String get backup_category_profiles_desc => 'Yapılandırma profilleri';
@@ -293305,6 +294313,67 @@ class _StringsTr extends _StringsEn {
   @override
   String get move_up => 'Yukarı taşı';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Ad';
   @override
   String get nav_browse => 'Göz at';
@@ -293318,6 +294387,8 @@ class _StringsTr extends _StringsEn {
   String get nav_home => 'Ana sayfa';
   @override
   String get nav_lookup => 'Ara';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Tekrar';
   @override
@@ -295865,6 +296936,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => 'Manga arayüzünü aç/kapat';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Kart oluştur (kartla)';
   @override
   String get shortcut_action_popup_next_entry => 'Sonraki kelime girişi';
@@ -296141,6 +297222,8 @@ class _StringsTr extends _StringsEn {
   String get shortcut_scope_home => 'Ana Sayfa';
   @override
   String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Okuyucu';
   @override
@@ -306719,6 +307802,11 @@ class _StringsVi extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Cơ sở dữ liệu âm thanh phát âm cục bộ';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Hồ sơ';
   @override
   String get backup_category_profiles_desc => 'Hồ sơ cấu hình';
@@ -315657,6 +316745,67 @@ class _StringsVi extends _StringsEn {
   @override
   String get move_up => 'Di chuyển lên';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => 'Tên';
   @override
   String get nav_browse => 'Duyệt';
@@ -315670,6 +316819,8 @@ class _StringsVi extends _StringsEn {
   String get nav_home => 'Trang chủ';
   @override
   String get nav_lookup => 'Tra từ';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => 'Ôn tập';
   @override
@@ -318206,6 +319357,16 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_manga_toggle_chrome =>
       'Bật/tắt giao diện truyện tranh';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => 'Tạo thẻ (thu thập)';
   @override
   String get shortcut_action_popup_next_entry => 'Mục từ tiếp theo';
@@ -318478,6 +319639,8 @@ class _StringsVi extends _StringsEn {
   String get shortcut_scope_home => 'Trang chủ';
   @override
   String get shortcut_scope_manga => 'Truyện tranh';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => 'Trình đọc';
   @override
@@ -328759,6 +329922,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => '本地发音音频库';
   @override
+  String get backup_category_music => '音乐';
+  @override
+  String get backup_category_music_desc =>
+      '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+  @override
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_category_profiles_desc => '配置方案';
@@ -336945,6 +338113,62 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get move_up => '上移';
   @override
+  String get music_artist_unknown => '未知艺人';
+  @override
+  String music_disc_label({required Object n}) => '碟 ${n}';
+  @override
+  String get music_folder_add => '添加音乐文件夹';
+  @override
+  String get music_folder_duplicate => '这个文件夹已经是音乐来源了';
+  @override
+  String get music_gapless_hint => '预载下一首，专辑曲目之间不留空隙';
+  @override
+  String get music_gapless_title => '无缝播放';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => '曲库还是空的';
+  @override
+  String get music_library_empty_hint => '添加一个放着音乐文件的文件夹。';
+  @override
+  String get music_library_rescan => '重新扫描曲库';
+  @override
+  String get music_now_playing => '正在播放';
+  @override
+  String get music_open_library => '曲库';
+  @override
+  String get music_play_all => '播放';
+  @override
+  String get music_playlists_empty => '还没有歌单';
+  @override
+  String get music_replaygain_hint => '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
+  @override
+  String get music_replaygain_title => 'ReplayGain 响度均衡';
+  @override
+  String music_scan_done({required Object count}) => '曲库已更新：${count} 首';
+  @override
+  String music_scan_failed({required Object error}) => '扫描失败：${error}';
+  @override
+  String get music_section_albums => '专辑';
+  @override
+  String get music_section_artists => '艺人';
+  @override
+  String get music_section_playlists => '歌单';
+  @override
+  String get music_section_songs => '歌曲';
+  @override
+  String get music_section_works => '作品';
+  @override
+  String get music_settings_summary => '曲库来源与播放';
+  @override
+  String get music_shuffle_play => '随机播放';
+  @override
+  String get music_stop => '停止音乐';
+  @override
+  String music_tracks_count({required Object count}) => '${count} 首';
+  @override
+  String get music_works_empty => '关联作品后，这里按动画、游戏、影视作品聚合歌曲。';
+  @override
   String get name => '名称';
   @override
   String get nav_browse => '浏览';
@@ -336958,6 +338182,8 @@ class _StringsZhCn extends _StringsEn {
   String get nav_home => '首页';
   @override
   String get nav_lookup => '查词';
+  @override
+  String get nav_music => '音乐';
   @override
   String get nav_srs => '复习';
   @override
@@ -339283,6 +340509,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => '切换漫画界面';
   @override
+  String get shortcut_action_music_next_track => '下一首';
+  @override
+  String get shortcut_action_music_previous_track => '上一首';
+  @override
+  String get shortcut_action_music_seek_backward => '快退 5 秒';
+  @override
+  String get shortcut_action_music_seek_forward => '快进 5 秒';
+  @override
+  String get shortcut_action_music_toggle_play_pause => '播放 / 暂停';
+  @override
   String get shortcut_action_popup_mine_entry => '制卡（加号）';
   @override
   String get shortcut_action_popup_next_entry => '下一个词条';
@@ -339525,6 +340761,8 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_scope_home => '首页';
   @override
   String get shortcut_scope_manga => '漫画';
+  @override
+  String get shortcut_scope_music => '音乐';
   @override
   String get shortcut_scope_reader => '阅读器';
   @override
@@ -349260,6 +350498,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => '本地發音音頻庫';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_category_profiles_desc => '配置方案';
@@ -357555,6 +358798,67 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get move_up => '上移';
   @override
+  String get music_artist_unknown => 'Unknown artist';
+  @override
+  String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_folder_add => 'Add music folder';
+  @override
+  String get music_folder_duplicate => 'This folder is already a music source';
+  @override
+  String get music_gapless_hint =>
+      'Preload the next track so albums play without gaps';
+  @override
+  String get music_gapless_title => 'Gapless playback';
+  @override
+  String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_library_empty => 'No music yet';
+  @override
+  String get music_library_empty_hint =>
+      'Add a folder that holds your music files.';
+  @override
+  String get music_library_rescan => 'Rescan library';
+  @override
+  String get music_now_playing => 'Now playing';
+  @override
+  String get music_open_library => 'Music library';
+  @override
+  String get music_play_all => 'Play';
+  @override
+  String get music_playlists_empty => 'No playlists yet';
+  @override
+  String get music_replaygain_hint =>
+      'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_title => 'ReplayGain';
+  @override
+  String music_scan_done({required Object count}) =>
+      'Library updated: ${count} tracks';
+  @override
+  String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  @override
+  String get music_section_albums => 'Albums';
+  @override
+  String get music_section_artists => 'Artists';
+  @override
+  String get music_section_playlists => 'Playlists';
+  @override
+  String get music_section_songs => 'Songs';
+  @override
+  String get music_section_works => 'Works';
+  @override
+  String get music_settings_summary => 'Music folders and playback';
+  @override
+  String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_stop => 'Stop music';
+  @override
+  String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_works_empty =>
+      'Songs grouped by anime, game and film works appear here once works are linked.';
+  @override
   String get name => '名稱';
   @override
   String get nav_browse => '瀏覽';
@@ -357568,6 +358872,8 @@ class _StringsZhHk extends _StringsEn {
   String get nav_home => '首頁';
   @override
   String get nav_lookup => '查詞';
+  @override
+  String get nav_music => 'Music';
   @override
   String get nav_srs => '複習';
   @override
@@ -359938,6 +361244,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_manga_toggle_chrome => '切換漫畫介面';
   @override
+  String get shortcut_action_music_next_track => 'Next track';
+  @override
+  String get shortcut_action_music_previous_track => 'Previous track';
+  @override
+  String get shortcut_action_music_seek_backward => 'Back 5 seconds';
+  @override
+  String get shortcut_action_music_seek_forward => 'Forward 5 seconds';
+  @override
+  String get shortcut_action_music_toggle_play_pause => 'Play / pause';
+  @override
   String get shortcut_action_popup_mine_entry => '製卡（加號）';
   @override
   String get shortcut_action_popup_next_entry => '下一個詞條';
@@ -360186,6 +361502,8 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_scope_home => '首頁';
   @override
   String get shortcut_scope_manga => '漫畫';
+  @override
+  String get shortcut_scope_music => 'Music';
   @override
   String get shortcut_scope_reader => '閱讀器';
   @override
@@ -369766,6 +371084,10 @@ extension on _StringsEn {
         return 'Local audio databases';
       case 'backup_category_local_audio_desc':
         return 'Local pronunciation audio databases';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_category_profiles_desc':
@@ -377418,6 +378740,62 @@ extension on _StringsEn {
         return 'Move down';
       case 'move_up':
         return 'Move up';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Name';
       case 'nav_browse':
@@ -377432,6 +378810,8 @@ extension on _StringsEn {
         return 'Home';
       case 'nav_lookup':
         return 'Lookup';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Review';
       case 'nav_video':
@@ -379616,6 +380996,16 @@ extension on _StringsEn {
         return 'Pan up';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Toggle manga interface';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
       case 'shortcut_action_popup_next_entry':
@@ -379853,6 +381243,8 @@ extension on _StringsEn {
         return 'Home';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Reader';
       case 'shortcut_scope_universal':
@@ -388764,6 +390156,10 @@ extension on _StringsAr {
         return 'قواعد بيانات الصوت المحلية';
       case 'backup_category_local_audio_desc':
         return 'قواعد بيانات صوت النطق المحلية';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'الملفات الشخصية';
       case 'backup_category_profiles_desc':
@@ -396411,6 +397807,62 @@ extension on _StringsAr {
         return 'تحريك لأسفل';
       case 'move_up':
         return 'تحريك لأعلى';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'الاسم';
       case 'nav_browse':
@@ -396425,6 +397877,8 @@ extension on _StringsAr {
         return 'الرئيسية';
       case 'nav_lookup':
         return 'بحث';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'المراجعة';
       case 'nav_video':
@@ -398610,6 +400064,16 @@ extension on _StringsAr {
         return 'تمرير لأعلى';
       case 'shortcut_action_manga_toggle_chrome':
         return 'تبديل واجهة المانغا';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'إنشاء بطاقة (استخراج)';
       case 'shortcut_action_popup_next_entry':
@@ -398847,6 +400311,8 @@ extension on _StringsAr {
         return 'الرئيسية';
       case 'shortcut_scope_manga':
         return 'مانغا';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'القارئ';
       case 'shortcut_scope_universal':
@@ -407776,6 +409242,10 @@ extension on _StringsDe {
         return 'Lokale Audiodatenbanken';
       case 'backup_category_local_audio_desc':
         return 'Lokale Aussprache-Audiodatenbanken';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profile';
       case 'backup_category_profiles_desc':
@@ -415455,6 +416925,62 @@ extension on _StringsDe {
         return 'Nach unten';
       case 'move_up':
         return 'Nach oben';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Name';
       case 'nav_browse':
@@ -415469,6 +416995,8 @@ extension on _StringsDe {
         return 'Startseite';
       case 'nav_lookup':
         return 'Nachschlagen';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Wiederholen';
       case 'nav_video':
@@ -417660,6 +419188,16 @@ extension on _StringsDe {
         return 'Nach oben schwenken';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Manga-Oberfläche umschalten';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Karte erstellen (Mining)';
       case 'shortcut_action_popup_next_entry':
@@ -417897,6 +419435,8 @@ extension on _StringsDe {
         return 'Start';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Leser';
       case 'shortcut_scope_universal':
@@ -426839,6 +428379,10 @@ extension on _StringsEs {
         return 'Bases de datos de audio local';
       case 'backup_category_local_audio_desc':
         return 'Bases de datos de audio de pronunciación local';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfiles';
       case 'backup_category_profiles_desc':
@@ -434509,6 +436053,62 @@ extension on _StringsEs {
         return 'Mover abajo';
       case 'move_up':
         return 'Mover arriba';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Nombre';
       case 'nav_browse':
@@ -434523,6 +436123,8 @@ extension on _StringsEs {
         return 'Inicio';
       case 'nav_lookup':
         return 'Consultar';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Repaso';
       case 'nav_video':
@@ -436714,6 +438316,16 @@ extension on _StringsEs {
         return 'Mover arriba';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Alternar interfaz de manga';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Crear tarjeta (mine)';
       case 'shortcut_action_popup_next_entry':
@@ -436951,6 +438563,8 @@ extension on _StringsEs {
         return 'Inicio';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Lector';
       case 'shortcut_scope_universal':
@@ -445894,6 +447508,10 @@ extension on _StringsFr {
         return 'Bases audio locales';
       case 'backup_category_local_audio_desc':
         return 'Bases de données audio de prononciation locale';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profils';
       case 'backup_category_profiles_desc':
@@ -453573,6 +455191,62 @@ extension on _StringsFr {
         return 'Descendre';
       case 'move_up':
         return 'Monter';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Nom';
       case 'nav_browse':
@@ -453587,6 +455261,8 @@ extension on _StringsFr {
         return 'Accueil';
       case 'nav_lookup':
         return 'Recherche';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Révision';
       case 'nav_video':
@@ -455779,6 +457455,16 @@ extension on _StringsFr {
         return 'Défiler vers le haut';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Basculer l\'interface manga';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Créer une carte';
       case 'shortcut_action_popup_next_entry':
@@ -456016,6 +457702,8 @@ extension on _StringsFr {
         return 'Accueil';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Lecteur';
       case 'shortcut_scope_universal':
@@ -464949,6 +466637,10 @@ extension on _StringsId {
         return 'Database audio lokal';
       case 'backup_category_local_audio_desc':
         return 'Database audio pengucapan lokal';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profil';
       case 'backup_category_profiles_desc':
@@ -472606,6 +474298,62 @@ extension on _StringsId {
         return 'Turunkan';
       case 'move_up':
         return 'Naikkan';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Nama';
       case 'nav_browse':
@@ -472620,6 +474368,8 @@ extension on _StringsId {
         return 'Beranda';
       case 'nav_lookup':
         return 'Cari Kata';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Ulasan';
       case 'nav_video':
@@ -474804,6 +476554,16 @@ extension on _StringsId {
         return 'Geser ke atas';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Alihkan antarmuka manga';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Buat kartu (tambang)';
       case 'shortcut_action_popup_next_entry':
@@ -475041,6 +476801,8 @@ extension on _StringsId {
         return 'Beranda';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Pembaca';
       case 'shortcut_scope_universal':
@@ -483966,6 +485728,10 @@ extension on _StringsIt {
         return 'Database audio locali';
       case 'backup_category_local_audio_desc':
         return 'Database audio di pronuncia locali';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profili';
       case 'backup_category_profiles_desc':
@@ -491636,6 +493402,62 @@ extension on _StringsIt {
         return 'Sposta giù';
       case 'move_up':
         return 'Sposta su';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Nome';
       case 'nav_browse':
@@ -491650,6 +493472,8 @@ extension on _StringsIt {
         return 'Home';
       case 'nav_lookup':
         return 'Ricerca';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Ripasso';
       case 'nav_video':
@@ -493838,6 +495662,16 @@ extension on _StringsIt {
         return 'Scorri su';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Attiva/disattiva interfaccia manga';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Crea carta (mining)';
       case 'shortcut_action_popup_next_entry':
@@ -494075,6 +495909,8 @@ extension on _StringsIt {
         return 'Home';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Lettore';
       case 'shortcut_scope_universal':
@@ -502991,6 +504827,10 @@ extension on _StringsJa {
         return 'ローカル音声データベース';
       case 'backup_category_local_audio_desc':
         return 'ローカル発音音声データベース';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'プロファイル';
       case 'backup_category_profiles_desc':
@@ -510614,6 +512454,62 @@ extension on _StringsJa {
         return '下に移動';
       case 'move_up':
         return '上に移動';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return '名前';
       case 'nav_browse':
@@ -510628,6 +512524,8 @@ extension on _StringsJa {
         return 'ホーム';
       case 'nav_lookup':
         return '辞書';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return '復習';
       case 'nav_video':
@@ -512806,6 +514704,16 @@ extension on _StringsJa {
         return '上にパン';
       case 'shortcut_action_manga_toggle_chrome':
         return 'マンガUIの表示切り替え';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'カードを作成（マイニング）';
       case 'shortcut_action_popup_next_entry':
@@ -513043,6 +514951,8 @@ extension on _StringsJa {
         return 'ホーム';
       case 'shortcut_scope_manga':
         return 'マンガ';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'リーダー';
       case 'shortcut_scope_universal':
@@ -521902,6 +523812,10 @@ extension on _StringsKo {
         return '로컬 오디오 데이터베이스';
       case 'backup_category_local_audio_desc':
         return '로컬 발음 오디오 데이터베이스';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '프로필';
       case 'backup_category_profiles_desc':
@@ -529529,6 +531443,62 @@ extension on _StringsKo {
         return '아래로 이동';
       case 'move_up':
         return '위로 이동';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return '이름';
       case 'nav_browse':
@@ -529543,6 +531513,8 @@ extension on _StringsKo {
         return '홈';
       case 'nav_lookup':
         return '단어 찾기';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return '복습';
       case 'nav_video':
@@ -531723,6 +533695,16 @@ extension on _StringsKo {
         return '위로 이동';
       case 'shortcut_action_manga_toggle_chrome':
         return '만화 인터페이스 전환';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return '카드 만들기 (마이닝)';
       case 'shortcut_action_popup_next_entry':
@@ -531960,6 +533942,8 @@ extension on _StringsKo {
         return '홈';
       case 'shortcut_scope_manga':
         return '만화';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return '리더';
       case 'shortcut_scope_universal':
@@ -540854,6 +542838,10 @@ extension on _StringsNl {
         return 'Lokale audiodatabases';
       case 'backup_category_local_audio_desc':
         return 'Lokale uitspraakaudiodatabases';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profielen';
       case 'backup_category_profiles_desc':
@@ -548528,6 +550516,62 @@ extension on _StringsNl {
         return 'Omlaag';
       case 'move_up':
         return 'Omhoog';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Naam';
       case 'nav_browse':
@@ -548542,6 +550586,8 @@ extension on _StringsNl {
         return 'Start';
       case 'nav_lookup':
         return 'Opzoeken';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Herhalen';
       case 'nav_video':
@@ -550730,6 +552776,16 @@ extension on _StringsNl {
         return 'Omhoog pannen';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Manga-interface schakelen';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Kaart aanmaken (delven)';
       case 'shortcut_action_popup_next_entry':
@@ -550967,6 +553023,8 @@ extension on _StringsNl {
         return 'Start';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Lezer';
       case 'shortcut_scope_universal':
@@ -559899,6 +561957,10 @@ extension on _StringsPtBr {
         return 'Bancos de áudio local';
       case 'backup_category_local_audio_desc':
         return 'Bancos de áudio de pronúncia local';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfis';
       case 'backup_category_profiles_desc':
@@ -567566,6 +569628,62 @@ extension on _StringsPtBr {
         return 'Mover para baixo';
       case 'move_up':
         return 'Mover para cima';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Nome';
       case 'nav_browse':
@@ -567580,6 +569698,8 @@ extension on _StringsPtBr {
         return 'Início';
       case 'nav_lookup':
         return 'Consultar';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Revisão';
       case 'nav_video':
@@ -569768,6 +571888,16 @@ extension on _StringsPtBr {
         return 'Mover para cima';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Alternar interface de mangá';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Criar cartão (minerar)';
       case 'shortcut_action_popup_next_entry':
@@ -570005,6 +572135,8 @@ extension on _StringsPtBr {
         return 'Início';
       case 'shortcut_scope_manga':
         return 'Mangá';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Leitor';
       case 'shortcut_scope_universal':
@@ -578937,6 +581069,10 @@ extension on _StringsRu {
         return 'Локальные аудиобазы';
       case 'backup_category_local_audio_desc':
         return 'Локальные базы аудио произношения';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Профили';
       case 'backup_category_profiles_desc':
@@ -586608,6 +588744,62 @@ extension on _StringsRu {
         return 'Вниз';
       case 'move_up':
         return 'Вверх';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Название';
       case 'nav_browse':
@@ -586622,6 +588814,8 @@ extension on _StringsRu {
         return 'Главная';
       case 'nav_lookup':
         return 'Поиск';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Повторение';
       case 'nav_video':
@@ -588810,6 +591004,16 @@ extension on _StringsRu {
         return 'Сдвиг вверх';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Переключить интерфейс манги';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Создать карточку';
       case 'shortcut_action_popup_next_entry':
@@ -589047,6 +591251,8 @@ extension on _StringsRu {
         return 'Главная';
       case 'shortcut_scope_manga':
         return 'Манга';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Читалка';
       case 'shortcut_scope_universal':
@@ -597962,6 +600168,10 @@ extension on _StringsTh {
         return 'ฐานข้อมูลเสียงในเครื่อง';
       case 'backup_category_local_audio_desc':
         return 'ฐานข้อมูลเสียงออกเสียงในเครื่อง';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'โปรไฟล์';
       case 'backup_category_profiles_desc':
@@ -605615,6 +607825,62 @@ extension on _StringsTh {
         return 'เลื่อนลง';
       case 'move_up':
         return 'เลื่อนขึ้น';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'ชื่อ';
       case 'nav_browse':
@@ -605629,6 +607895,8 @@ extension on _StringsTh {
         return 'หน้าหลัก';
       case 'nav_lookup':
         return 'ค้นคำ';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'ทบทวน';
       case 'nav_video':
@@ -607812,6 +610080,16 @@ extension on _StringsTh {
         return 'เลื่อนขึ้น';
       case 'shortcut_action_manga_toggle_chrome':
         return 'สลับอินเทอร์เฟซมังงะ';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'สร้างการ์ด (ขุด)';
       case 'shortcut_action_popup_next_entry':
@@ -608049,6 +610327,8 @@ extension on _StringsTh {
         return 'หน้าหลัก';
       case 'shortcut_scope_manga':
         return 'มังงะ';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'โปรแกรมอ่าน';
       case 'shortcut_scope_universal':
@@ -616970,6 +619250,10 @@ extension on _StringsTr {
         return 'Yerel ses veritabanları';
       case 'backup_category_local_audio_desc':
         return 'Yerel telaffuz ses veritabanları';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiller';
       case 'backup_category_profiles_desc':
@@ -624635,6 +626919,62 @@ extension on _StringsTr {
         return 'Aşağı taşı';
       case 'move_up':
         return 'Yukarı taşı';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Ad';
       case 'nav_browse':
@@ -624649,6 +626989,8 @@ extension on _StringsTr {
         return 'Ana sayfa';
       case 'nav_lookup':
         return 'Ara';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Tekrar';
       case 'nav_video':
@@ -626832,6 +629174,16 @@ extension on _StringsTr {
         return 'Yukarı kaydır';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Manga arayüzünü aç/kapat';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Kart oluştur (kartla)';
       case 'shortcut_action_popup_next_entry':
@@ -627069,6 +629421,8 @@ extension on _StringsTr {
         return 'Ana Sayfa';
       case 'shortcut_scope_manga':
         return 'Manga';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Okuyucu';
       case 'shortcut_scope_universal':
@@ -635991,6 +638345,10 @@ extension on _StringsVi {
         return 'Cơ sở dữ liệu âm thanh cục bộ';
       case 'backup_category_local_audio_desc':
         return 'Cơ sở dữ liệu âm thanh phát âm cục bộ';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Hồ sơ';
       case 'backup_category_profiles_desc':
@@ -643647,6 +646005,62 @@ extension on _StringsVi {
         return 'Di chuyển xuống';
       case 'move_up':
         return 'Di chuyển lên';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return 'Tên';
       case 'nav_browse':
@@ -643661,6 +646075,8 @@ extension on _StringsVi {
         return 'Trang chủ';
       case 'nav_lookup':
         return 'Tra từ';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return 'Ôn tập';
       case 'nav_video':
@@ -645847,6 +648263,16 @@ extension on _StringsVi {
         return 'Kéo lên';
       case 'shortcut_action_manga_toggle_chrome':
         return 'Bật/tắt giao diện truyện tranh';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return 'Tạo thẻ (thu thập)';
       case 'shortcut_action_popup_next_entry':
@@ -646084,6 +648510,8 @@ extension on _StringsVi {
         return 'Trang chủ';
       case 'shortcut_scope_manga':
         return 'Truyện tranh';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return 'Trình đọc';
       case 'shortcut_scope_universal':
@@ -654954,6 +657382,10 @@ extension on _StringsZhCn {
         return '本地音频数据库';
       case 'backup_category_local_audio_desc':
         return '本地发音音频库';
+      case 'backup_category_music':
+        return '音乐';
+      case 'backup_category_music_desc':
+        return '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -662526,6 +664958,62 @@ extension on _StringsZhCn {
         return '下移';
       case 'move_up':
         return '上移';
+      case 'music_artist_unknown':
+        return '未知艺人';
+      case 'music_disc_label':
+        return ({required Object n}) => '碟 ${n}';
+      case 'music_folder_add':
+        return '添加音乐文件夹';
+      case 'music_folder_duplicate':
+        return '这个文件夹已经是音乐来源了';
+      case 'music_gapless_hint':
+        return '预载下一首，专辑曲目之间不留空隙';
+      case 'music_gapless_title':
+        return '无缝播放';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return '曲库还是空的';
+      case 'music_library_empty_hint':
+        return '添加一个放着音乐文件的文件夹。';
+      case 'music_library_rescan':
+        return '重新扫描曲库';
+      case 'music_now_playing':
+        return '正在播放';
+      case 'music_open_library':
+        return '曲库';
+      case 'music_play_all':
+        return '播放';
+      case 'music_playlists_empty':
+        return '还没有歌单';
+      case 'music_replaygain_hint':
+        return '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
+      case 'music_replaygain_title':
+        return 'ReplayGain 响度均衡';
+      case 'music_scan_done':
+        return ({required Object count}) => '曲库已更新：${count} 首';
+      case 'music_scan_failed':
+        return ({required Object error}) => '扫描失败：${error}';
+      case 'music_section_albums':
+        return '专辑';
+      case 'music_section_artists':
+        return '艺人';
+      case 'music_section_playlists':
+        return '歌单';
+      case 'music_section_songs':
+        return '歌曲';
+      case 'music_section_works':
+        return '作品';
+      case 'music_settings_summary':
+        return '曲库来源与播放';
+      case 'music_shuffle_play':
+        return '随机播放';
+      case 'music_stop':
+        return '停止音乐';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} 首';
+      case 'music_works_empty':
+        return '关联作品后，这里按动画、游戏、影视作品聚合歌曲。';
       case 'name':
         return '名称';
       case 'nav_browse':
@@ -662540,6 +665028,8 @@ extension on _StringsZhCn {
         return '首页';
       case 'nav_lookup':
         return '查词';
+      case 'nav_music':
+        return '音乐';
       case 'nav_srs':
         return '复习';
       case 'nav_video':
@@ -664714,6 +667204,16 @@ extension on _StringsZhCn {
         return '向上平移';
       case 'shortcut_action_manga_toggle_chrome':
         return '切换漫画界面';
+      case 'shortcut_action_music_next_track':
+        return '下一首';
+      case 'shortcut_action_music_previous_track':
+        return '上一首';
+      case 'shortcut_action_music_seek_backward':
+        return '快退 5 秒';
+      case 'shortcut_action_music_seek_forward':
+        return '快进 5 秒';
+      case 'shortcut_action_music_toggle_play_pause':
+        return '播放 / 暂停';
       case 'shortcut_action_popup_mine_entry':
         return '制卡（加号）';
       case 'shortcut_action_popup_next_entry':
@@ -664950,6 +667450,8 @@ extension on _StringsZhCn {
         return '首页';
       case 'shortcut_scope_manga':
         return '漫画';
+      case 'shortcut_scope_music':
+        return '音乐';
       case 'shortcut_scope_reader':
         return '阅读器';
       case 'shortcut_scope_universal':
@@ -673737,6 +676239,10 @@ extension on _StringsZhHk {
         return '本地音頻資料庫';
       case 'backup_category_local_audio_desc':
         return '本地發音音頻庫';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -681336,6 +683842,62 @@ extension on _StringsZhHk {
         return '下移';
       case 'move_up':
         return '上移';
+      case 'music_artist_unknown':
+        return 'Unknown artist';
+      case 'music_disc_label':
+        return ({required Object n}) => 'Disc ${n}';
+      case 'music_folder_add':
+        return 'Add music folder';
+      case 'music_folder_duplicate':
+        return 'This folder is already a music source';
+      case 'music_gapless_hint':
+        return 'Preload the next track so albums play without gaps';
+      case 'music_gapless_title':
+        return 'Gapless playback';
+      case 'music_hi_res_badge':
+        return 'Hi-Res';
+      case 'music_library_empty':
+        return 'No music yet';
+      case 'music_library_empty_hint':
+        return 'Add a folder that holds your music files.';
+      case 'music_library_rescan':
+        return 'Rescan library';
+      case 'music_now_playing':
+        return 'Now playing';
+      case 'music_open_library':
+        return 'Music library';
+      case 'music_play_all':
+        return 'Play';
+      case 'music_playlists_empty':
+        return 'No playlists yet';
+      case 'music_replaygain_hint':
+        return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_title':
+        return 'ReplayGain';
+      case 'music_scan_done':
+        return ({required Object count}) => 'Library updated: ${count} tracks';
+      case 'music_scan_failed':
+        return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_section_albums':
+        return 'Albums';
+      case 'music_section_artists':
+        return 'Artists';
+      case 'music_section_playlists':
+        return 'Playlists';
+      case 'music_section_songs':
+        return 'Songs';
+      case 'music_section_works':
+        return 'Works';
+      case 'music_settings_summary':
+        return 'Music folders and playback';
+      case 'music_shuffle_play':
+        return 'Shuffle';
+      case 'music_stop':
+        return 'Stop music';
+      case 'music_tracks_count':
+        return ({required Object count}) => '${count} tracks';
+      case 'music_works_empty':
+        return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
         return '名稱';
       case 'nav_browse':
@@ -681350,6 +683912,8 @@ extension on _StringsZhHk {
         return '首頁';
       case 'nav_lookup':
         return '查詞';
+      case 'nav_music':
+        return 'Music';
       case 'nav_srs':
         return '複習';
       case 'nav_video':
@@ -683528,6 +686092,16 @@ extension on _StringsZhHk {
         return '向上平移';
       case 'shortcut_action_manga_toggle_chrome':
         return '切換漫畫介面';
+      case 'shortcut_action_music_next_track':
+        return 'Next track';
+      case 'shortcut_action_music_previous_track':
+        return 'Previous track';
+      case 'shortcut_action_music_seek_backward':
+        return 'Back 5 seconds';
+      case 'shortcut_action_music_seek_forward':
+        return 'Forward 5 seconds';
+      case 'shortcut_action_music_toggle_play_pause':
+        return 'Play / pause';
       case 'shortcut_action_popup_mine_entry':
         return '製卡（加號）';
       case 'shortcut_action_popup_next_entry':
@@ -683764,6 +686338,8 @@ extension on _StringsZhHk {
         return '首頁';
       case 'shortcut_scope_manga':
         return '漫畫';
+      case 'shortcut_scope_music':
+        return 'Music';
       case 'shortcut_scope_reader':
         return '閱讀器';
       case 'shortcut_scope_universal':
