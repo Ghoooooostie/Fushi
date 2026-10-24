@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154955 (9115 per locale)
+/// Strings: 154972 (9116 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6838,6 +6838,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_link_infer_network_failed =>
       'Could not reach MAL, try again later';
   String get media_link_infer_none => 'No new suggestions';
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   String get media_link_kind_audiobook => 'Audiobook';
   String get media_link_kind_book => 'Book';
   String get media_link_kind_game => 'Game';
@@ -24439,6 +24441,9 @@ class _StringsAr extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -46807,6 +46812,9 @@ class _StringsDe extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -69370,6 +69378,9 @@ class _StringsEs extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -92005,6 +92016,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -114490,6 +114504,9 @@ class _StringsId extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -136909,6 +136926,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -158861,6 +158881,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -180329,6 +180352,9 @@ class _StringsKo extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -202336,6 +202362,9 @@ class _StringsNl extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -224825,6 +224854,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -247288,6 +247320,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -269571,6 +269606,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -291826,6 +291864,9 @@ class _StringsTr extends _StringsEn {
       'Could not reach MAL, try again later';
   @override
   String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
   @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
@@ -314127,6 +314168,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -335427,6 +335471,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_link_infer_none => '没有新的建议';
   @override
+  String get media_link_infer_wikidata_failed => '连不上 Wikidata，请稍后再试';
+  @override
   String get media_link_kind_audiobook => '有声书';
   @override
   String get media_link_kind_book => '书';
@@ -355981,6 +356027,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_link_infer_none => 'No new suggestions';
   @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
   String get media_link_kind_audiobook => 'Audiobook';
   @override
   String get media_link_kind_book => 'Book';
@@ -375824,6 +375873,8 @@ extension on _StringsEn {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -394771,6 +394822,8 @@ extension on _StringsAr {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -413765,6 +413818,8 @@ extension on _StringsDe {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -432773,6 +432828,8 @@ extension on _StringsEs {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -451791,6 +451848,8 @@ extension on _StringsFr {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -470782,6 +470841,8 @@ extension on _StringsId {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -489762,6 +489823,8 @@ extension on _StringsIt {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -508700,6 +508763,8 @@ extension on _StringsJa {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -527570,6 +527635,8 @@ extension on _StringsKo {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -546516,6 +546583,8 @@ extension on _StringsNl {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -565508,6 +565577,8 @@ extension on _StringsPtBr {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -584504,6 +584575,8 @@ extension on _StringsRu {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -603469,6 +603542,8 @@ extension on _StringsTh {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -622440,6 +622515,8 @@ extension on _StringsTr {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -641409,6 +641486,8 @@ extension on _StringsVi {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
@@ -660252,6 +660331,8 @@ extension on _StringsZhCn {
         return '连不上 MAL，请稍后再试';
       case 'media_link_infer_none':
         return '没有新的建议';
+      case 'media_link_infer_wikidata_failed':
+        return '连不上 Wikidata，请稍后再试';
       case 'media_link_kind_audiobook':
         return '有声书';
       case 'media_link_kind_book':
@@ -679011,6 +679092,8 @@ extension on _StringsZhHk {
         return 'Could not reach MAL, try again later';
       case 'media_link_infer_none':
         return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
       case 'media_link_kind_audiobook':
         return 'Audiobook';
       case 'media_link_kind_book':
