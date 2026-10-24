@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154343 (9079 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3972,6 +3972,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get floating_ball_action_open_app => 'Open Fushi';
   String get floating_ball_action_popup_lookup => 'App-external lookup';
   String get floating_ball_action_screen_ocr => 'Screen OCR';
+  String get floating_ball_action_switch_profile => 'Switch profile';
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   String get floating_ball_auto_restore_both => 'In and out of app';
   String get floating_ball_auto_restore_hint =>
@@ -4003,6 +4004,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
   String get floating_ball_overlay_permission_needed =>
       'Allow Fushi to display over other apps to keep the ball on screen';
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   String get floating_ball_scope_general => 'Other pages';
   String get floating_ball_scope_manga => 'Manga reader';
   String get floating_ball_scope_reader => 'Book reader';
@@ -19524,6 +19528,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR للشاشة';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -19577,6 +19583,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'اسمح لـ Fushi بالعرض فوق التطبيقات الأخرى لإبقاء الكرة على الشاشة';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'صفحات أخرى';
   @override
@@ -41688,6 +41699,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Bildschirm-OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -41744,6 +41757,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Erlaube Fushi, über anderen Apps angezeigt zu werden, damit die Kugel auf dem Bildschirm bleibt';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Andere Seiten';
   @override
@@ -64158,6 +64176,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR de pantalla';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -64212,6 +64232,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Permite que Fushi se muestre sobre otras apps para mantener la bola en pantalla';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Otras páginas';
   @override
@@ -86693,6 +86718,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR de l\'écran';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -86749,6 +86776,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Autorisez Fushi à s\'afficher par-dessus d\'autres applications pour garder la bulle à l\'écran';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Autres pages';
   @override
@@ -109183,6 +109215,8 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR layar';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -109236,6 +109270,11 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Izinkan Fushi tampil di atas aplikasi lain agar bola tetap di layar';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Halaman lain';
   @override
@@ -131473,6 +131512,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR dello schermo';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -131528,6 +131569,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Consenti a Fushi di mostrarsi sopra altre app per mantenere il pulsante sullo schermo';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Altre pagine';
   @override
@@ -153611,6 +153657,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '画面 OCR';
   @override
+  String get floating_ball_action_switch_profile => 'プロファイル切り替え';
+  @override
   String get floating_ball_auto_restore => 'フローティングボールの自動復元';
   @override
   String get floating_ball_auto_restore_both => 'アプリ内外';
@@ -153662,6 +153710,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'ボールを画面に表示し続けるため、Fushi に他のアプリの上に重ねて表示する権限を許可してください';
+  @override
+  String get floating_ball_profile_switch_failed => 'プロファイルを切り替えられませんでした';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'プロファイル「${name}」に切り替えました';
   @override
   String get floating_ball_scope_general => 'その他のページ';
   @override
@@ -174988,6 +175041,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '화면 OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -175039,6 +175094,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '볼을 화면에 유지하려면 Fushi가 다른 앱 위에 표시되도록 허용하세요';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => '기타 페이지';
   @override
@@ -196678,6 +196738,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Scherm-OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -196731,6 +196793,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Sta Fushi toe om over andere apps te tekenen om de knop op het scherm te houden';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Andere pagina\'s';
   @override
@@ -219056,6 +219123,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR da tela';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -219111,6 +219180,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Permita que o Fushi seja exibido sobre outros apps para manter a bola na tela';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Outras páginas';
   @override
@@ -241455,6 +241529,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR экрана';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -241508,6 +241584,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Разрешите Fushi отображаться поверх других приложений, чтобы кнопка оставалась на экране';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Остальные страницы';
   @override
@@ -263747,6 +263828,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR หน้าจอ';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -263799,6 +263882,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'อนุญาตให้ Fushi แสดงทับแอปอื่นเพื่อคงปุ่มไว้บนหน้าจอ';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'หน้าอื่น';
   @override
@@ -285856,6 +285944,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Ekran OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -285909,6 +285999,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Topu ekranda tutmak için Fushi\'nin diğer uygulamaların üzerinde görüntülenmesine izin verin';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Diğer sayfalar';
   @override
@@ -308093,6 +308188,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR màn hình';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -308146,6 +308243,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Hãy cho phép Fushi hiển thị trên các ứng dụng khác để giữ bóng trên màn hình';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Các trang khác';
   @override
@@ -329732,6 +329834,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '截屏识字';
   @override
+  String get floating_ball_action_switch_profile => '切换配置';
+  @override
   String get floating_ball_auto_restore => '自动恢复悬浮球';
   @override
   String get floating_ball_auto_restore_both => '应用内外';
@@ -329783,6 +329887,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '需要授予「显示在其他应用上层」权限，悬浮球才能系统常驻';
+  @override
+  String get floating_ball_profile_switch_failed => '切换配置失败';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      '已切换到配置「${name}」';
   @override
   String get floating_ball_scope_general => '其它页面';
   @override
@@ -350150,6 +350259,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '截屏識字';
   @override
+  String get floating_ball_action_switch_profile => '切換設定檔';
+  @override
   String get floating_ball_auto_restore => '自動恢復懸浮球';
   @override
   String get floating_ball_auto_restore_both => '應用內外';
@@ -350201,6 +350312,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '需要授予「顯示在其他應用上層」權限，懸浮球才能系統常駐';
+  @override
+  String get floating_ball_profile_switch_failed => '切換設定檔失敗';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      '已切換到設定檔「${name}」';
   @override
   String get floating_ball_scope_general => '其它頁面';
   @override
@@ -370287,6 +370403,8 @@ extension on _StringsEn {
         return 'App-external lookup';
       case 'floating_ball_action_screen_ocr':
         return 'Screen OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -370333,6 +370451,10 @@ extension on _StringsEn {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Allow Fushi to display over other apps to keep the ball on screen';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Other pages';
       case 'floating_ball_scope_manga':
@@ -389161,6 +389283,8 @@ extension on _StringsAr {
         return 'البحث خارج التطبيق';
       case 'floating_ball_action_screen_ocr':
         return 'OCR للشاشة';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -389207,6 +389331,10 @@ extension on _StringsAr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'اسمح لـ Fushi بالعرض فوق التطبيقات الأخرى لإبقاء الكرة على الشاشة';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'صفحات أخرى';
       case 'floating_ball_scope_manga':
@@ -408061,6 +408189,8 @@ extension on _StringsDe {
         return 'Nachschlagen außerhalb der App';
       case 'floating_ball_action_screen_ocr':
         return 'Bildschirm-OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -408107,6 +408237,10 @@ extension on _StringsDe {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Erlaube Fushi, über anderen Apps angezeigt zu werden, damit die Kugel auf dem Bildschirm bleibt';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Andere Seiten';
       case 'floating_ball_scope_manga':
@@ -426995,6 +427129,8 @@ extension on _StringsEs {
         return 'Consulta fuera de la app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR de pantalla';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -427041,6 +427177,10 @@ extension on _StringsEs {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Permite que Fushi se muestre sobre otras apps para mantener la bola en pantalla';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Otras páginas';
       case 'floating_ball_scope_manga':
@@ -445934,6 +446074,8 @@ extension on _StringsFr {
         return 'Recherche hors application';
       case 'floating_ball_action_screen_ocr':
         return 'OCR de l\'écran';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -445980,6 +446122,10 @@ extension on _StringsFr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Autorisez Fushi à s\'afficher par-dessus d\'autres applications pour garder la bulle à l\'écran';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Autres pages';
       case 'floating_ball_scope_manga':
@@ -464854,6 +465000,8 @@ extension on _StringsId {
         return 'Pencarian di luar aplikasi';
       case 'floating_ball_action_screen_ocr':
         return 'OCR layar';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -464900,6 +465048,10 @@ extension on _StringsId {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Izinkan Fushi tampil di atas aplikasi lain agar bola tetap di layar';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Halaman lain';
       case 'floating_ball_scope_manga':
@@ -483752,6 +483904,8 @@ extension on _StringsIt {
         return 'Ricerca fuori dall\'app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR dello schermo';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -483798,6 +483952,10 @@ extension on _StringsIt {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Consenti a Fushi di mostrarsi sopra altre app per mantenere il pulsante sullo schermo';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Altre pagine';
       case 'floating_ball_scope_manga':
@@ -502631,6 +502789,8 @@ extension on _StringsJa {
         return 'アプリ外で辞書検索';
       case 'floating_ball_action_screen_ocr':
         return '画面 OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'プロファイル切り替え';
       case 'floating_ball_auto_restore':
         return 'フローティングボールの自動復元';
       case 'floating_ball_auto_restore_both':
@@ -502677,6 +502837,10 @@ extension on _StringsJa {
         return '画面の文字認識を使うには「システム設定 → プライバシーとセキュリティ → 画面収録」で Fushi を許可してください';
       case 'floating_ball_overlay_permission_needed':
         return 'ボールを画面に表示し続けるため、Fushi に他のアプリの上に重ねて表示する権限を許可してください';
+      case 'floating_ball_profile_switch_failed':
+        return 'プロファイルを切り替えられませんでした';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'プロファイル「${name}」に切り替えました';
       case 'floating_ball_scope_general':
         return 'その他のページ';
       case 'floating_ball_scope_manga':
@@ -521424,6 +521588,8 @@ extension on _StringsKo {
         return '앱 외부 검색';
       case 'floating_ball_action_screen_ocr':
         return '화면 OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -521470,6 +521636,10 @@ extension on _StringsKo {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return '볼을 화면에 유지하려면 Fushi가 다른 앱 위에 표시되도록 허용하세요';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return '기타 페이지';
       case 'floating_ball_scope_manga':
@@ -540268,6 +540438,8 @@ extension on _StringsNl {
         return 'Opzoeken buiten de app';
       case 'floating_ball_action_screen_ocr':
         return 'Scherm-OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -540314,6 +540486,10 @@ extension on _StringsNl {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Sta Fushi toe om over andere apps te tekenen om de knop op het scherm te houden';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Andere pagina\'s';
       case 'floating_ball_scope_manga':
@@ -559186,6 +559362,8 @@ extension on _StringsPtBr {
         return 'Consulta fora do app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR da tela';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -559232,6 +559410,10 @@ extension on _StringsPtBr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Permita que o Fushi seja exibido sobre outros apps para manter a bola na tela';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Outras páginas';
       case 'floating_ball_scope_manga':
@@ -578104,6 +578286,8 @@ extension on _StringsRu {
         return 'Поиск вне приложения';
       case 'floating_ball_action_screen_ocr':
         return 'OCR экрана';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -578150,6 +578334,10 @@ extension on _StringsRu {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Разрешите Fushi отображаться поверх других приложений, чтобы кнопка оставалась на экране';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Остальные страницы';
       case 'floating_ball_scope_manga':
@@ -596996,6 +597184,8 @@ extension on _StringsTh {
         return 'ค้นหานอกแอป';
       case 'floating_ball_action_screen_ocr':
         return 'OCR หน้าจอ';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -597042,6 +597232,10 @@ extension on _StringsTh {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'อนุญาตให้ Fushi แสดงทับแอปอื่นเพื่อคงปุ่มไว้บนหน้าจอ';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'หน้าอื่น';
       case 'floating_ball_scope_manga':
@@ -615885,6 +616079,8 @@ extension on _StringsTr {
         return 'Uygulama dışı arama';
       case 'floating_ball_action_screen_ocr':
         return 'Ekran OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -615931,6 +616127,10 @@ extension on _StringsTr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Topu ekranda tutmak için Fushi\'nin diğer uygulamaların üzerinde görüntülenmesine izin verin';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Diğer sayfalar';
       case 'floating_ball_scope_manga':
@@ -634781,6 +634981,8 @@ extension on _StringsVi {
         return 'Tra từ ngoài ứng dụng';
       case 'floating_ball_action_screen_ocr':
         return 'OCR màn hình';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -634827,6 +635029,10 @@ extension on _StringsVi {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Hãy cho phép Fushi hiển thị trên các ứng dụng khác để giữ bóng trên màn hình';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Các trang khác';
       case 'floating_ball_scope_manga':
@@ -653571,6 +653777,8 @@ extension on _StringsZhCn {
         return '应用外查词';
       case 'floating_ball_action_screen_ocr':
         return '截屏识字';
+      case 'floating_ball_action_switch_profile':
+        return '切换配置';
       case 'floating_ball_auto_restore':
         return '自动恢复悬浮球';
       case 'floating_ball_auto_restore_both':
@@ -653617,6 +653825,10 @@ extension on _StringsZhCn {
         return '需要在「系统设置 → 隐私与安全性 → 屏幕录制」里允许 Fushi，才能截屏识字';
       case 'floating_ball_overlay_permission_needed':
         return '需要授予「显示在其他应用上层」权限，悬浮球才能系统常驻';
+      case 'floating_ball_profile_switch_failed':
+        return '切换配置失败';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => '已切换到配置「${name}」';
       case 'floating_ball_scope_general':
         return '其它页面';
       case 'floating_ball_scope_manga':
@@ -672246,6 +672458,8 @@ extension on _StringsZhHk {
         return '應用外查詞';
       case 'floating_ball_action_screen_ocr':
         return '截屏識字';
+      case 'floating_ball_action_switch_profile':
+        return '切換設定檔';
       case 'floating_ball_auto_restore':
         return '自動恢復懸浮球';
       case 'floating_ball_auto_restore_both':
@@ -672292,6 +672506,10 @@ extension on _StringsZhHk {
         return '需要在「系統設定 → 私隱與安全性 → 螢幕錄影」裏允許 Fushi，才能截圖識字';
       case 'floating_ball_overlay_permission_needed':
         return '需要授予「顯示在其他應用上層」權限，懸浮球才能系統常駐';
+      case 'floating_ball_profile_switch_failed':
+        return '切換設定檔失敗';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => '已切換到設定檔「${name}」';
       case 'floating_ball_scope_general':
         return '其它頁面';
       case 'floating_ball_scope_manga':
