@@ -6233,7 +6233,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Indexing… ${done} / ${total}';
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
   String lookup_library_sentences_status({
@@ -23767,7 +23767,7 @@ class _StringsAr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -46785,7 +46785,7 @@ class _StringsDe extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -70023,7 +70023,7 @@ class _StringsEs extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -93332,7 +93332,7 @@ class _StringsFr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -116523,7 +116523,7 @@ class _StringsId extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -139603,7 +139603,7 @@ class _StringsIt extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -162298,7 +162298,7 @@ class _StringsJa extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -184437,7 +184437,7 @@ class _StringsKo extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -207084,7 +207084,7 @@ class _StringsNl extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -230247,7 +230247,7 @@ class _StringsPtBr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -253394,7 +253394,7 @@ class _StringsRu extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -276376,7 +276376,7 @@ class _StringsTh extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -299301,7 +299301,7 @@ class _StringsTr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -322286,7 +322286,7 @@ class _StringsVi extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -344339,8 +344339,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lookup_library_sentences_rebuild => '重建例句索引';
   @override
-  String get lookup_library_sentences_rebuild_hint =>
-      '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+  String get lookup_library_sentences_rebuild_hint => '按库里的书、字幕、歌词和游戏台词重新建索引。';
   @override
   String get lookup_library_sentences_rebuild_started => '正在后台重建例句索引';
   @override
@@ -365520,7 +365519,7 @@ class _StringsZhHk extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -386106,7 +386105,7 @@ extension on _StringsEn {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -405652,7 +405651,7 @@ extension on _StringsAr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -425239,7 +425238,7 @@ extension on _StringsDe {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -444847,7 +444846,7 @@ extension on _StringsEs {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -464465,7 +464464,7 @@ extension on _StringsFr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -484058,7 +484057,7 @@ extension on _StringsId {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -503635,7 +503634,7 @@ extension on _StringsIt {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -523176,7 +523175,7 @@ extension on _StringsJa {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -542646,7 +542645,7 @@ extension on _StringsKo {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -562183,7 +562182,7 @@ extension on _StringsNl {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -581776,7 +581775,7 @@ extension on _StringsPtBr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -601371,7 +601370,7 @@ extension on _StringsRu {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -620939,7 +620938,7 @@ extension on _StringsTh {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -640507,7 +640506,7 @@ extension on _StringsTr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -660077,7 +660076,7 @@ extension on _StringsVi {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -679524,7 +679523,7 @@ extension on _StringsZhCn {
       case 'lookup_library_sentences_rebuild':
         return '重建例句索引';
       case 'lookup_library_sentences_rebuild_hint':
-        return '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+        return '按库里的书、字幕、歌词和游戏台词重新建索引。';
       case 'lookup_library_sentences_rebuild_started':
         return '正在后台重建例句索引';
       case 'lookup_library_sentences_status':
@@ -698876,7 +698875,7 @@ extension on _StringsZhHk {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
