@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154530 (9090 per locale)
+/// Strings: 154547 (9091 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11319,6 +11319,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   String get video_disc_choose_disc => 'Choose disc';
   String video_disc_continue_at({required Object time}) =>
       'Continue watching ${time}';
@@ -32151,6 +32153,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -54579,6 +54584,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -77114,6 +77122,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -99718,6 +99729,9 @@ class _StringsFr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -122062,6 +122076,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -144486,6 +144503,9 @@ class _StringsIt extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -166077,6 +166097,9 @@ class _StringsJa extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -187512,6 +187535,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -209766,6 +209792,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -232209,6 +232238,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -254619,6 +254651,9 @@ class _StringsRu extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -276770,6 +276805,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
   @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
@@ -299024,6 +299062,9 @@ class _StringsTr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -321251,6 +321292,9 @@ class _StringsVi extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -341862,6 +341906,8 @@ class _StringsZhCn extends _StringsEn {
       '当前菜单选中的角度无法直接提取。请切回主视角后制卡。';
   @override
   String get video_disc_audio_selection_pending => '请等待原盘确定音轨，或手动选择音轨后再制卡。';
+  @override
+  String get video_disc_chapters_menu_unavailable => '菜单阶段没有正片时间轴，进入正片后可用章节。';
   @override
   String get video_disc_choose_disc => '选盘';
   @override
@@ -362599,6 +362645,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
   String get video_disc_choose_disc => 'Choose disc';
   @override
   String video_disc_continue_at({required Object time}) =>
@@ -381786,6 +381835,8 @@ extension on _StringsEn {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -400681,6 +400732,8 @@ extension on _StringsAr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -419647,6 +419700,8 @@ extension on _StringsDe {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -438604,6 +438659,8 @@ extension on _StringsEs {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -457574,6 +457631,8 @@ extension on _StringsFr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -476495,6 +476554,8 @@ extension on _StringsId {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -495444,6 +495505,8 @@ extension on _StringsIt {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -514286,6 +514349,8 @@ extension on _StringsJa {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -533109,6 +533174,8 @@ extension on _StringsKo {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -552039,6 +552106,8 @@ extension on _StringsNl {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -570979,6 +571048,8 @@ extension on _StringsPtBr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -589927,6 +589998,8 @@ extension on _StringsRu {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -608830,6 +608903,8 @@ extension on _StringsTh {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -627757,6 +627832,8 @@ extension on _StringsTr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -646675,6 +646752,8 @@ extension on _StringsVi {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
@@ -665389,6 +665468,8 @@ extension on _StringsZhCn {
         return '当前菜单选中的角度无法直接提取。请切回主视角后制卡。';
       case 'video_disc_audio_selection_pending':
         return '请等待原盘确定音轨，或手动选择音轨后再制卡。';
+      case 'video_disc_chapters_menu_unavailable':
+        return '菜单阶段没有正片时间轴，进入正片后可用章节。';
       case 'video_disc_choose_disc':
         return '选盘';
       case 'video_disc_continue_at':
@@ -684136,6 +684217,8 @@ extension on _StringsZhHk {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
       case 'video_disc_choose_disc':
         return 'Choose disc';
       case 'video_disc_continue_at':
