@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157607 (9271 per locale)
+/// Strings: 158406 (9318 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -212,6 +212,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String activity_hours_ago({required Object n}) => '${n} h ago';
   String get activity_just_now => 'Just now';
   String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String get adaptation_progress_add => 'Add';
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  String get adaptation_progress_edit => 'Edit mapping';
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  String get adaptation_progress_episode_field => 'Episode';
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  String get adaptation_progress_remove => 'Remove';
+  String get adaptation_progress_title => 'Original progress';
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
@@ -5294,6 +5323,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_user_rating => 'My rating';
   String get game_user_tags_title => 'My tags';
   String get game_view_detail => 'View details';
+  String get game_voice_cast_title => 'Voice cast';
   String get game_waiting_for_text => 'Waiting for text';
   String game_waveform_range_label({
     required Object start,
@@ -7415,6 +7445,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Episodes ${episodes}';
   String get music_track_appears_in => 'Appears in';
   String get music_track_detail => 'Track details';
+  String get music_track_people_title => 'Credits';
   String music_tracks_count({required Object count}) => '${count} tracks';
   String get music_volume_title => 'Volume';
   String get music_works_empty =>
@@ -8003,6 +8034,38 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This PDF has no text layer (scanned image), so lookup is unavailable.';
   String get pdf_outline => 'Contents';
   String get pdf_outline_empty => 'This PDF has no contents.';
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  String get person_domain_game => 'Game';
+  String get person_domain_music => 'Music';
+  String get person_domain_video => 'Video';
+  String get person_empty => 'Nothing by this person in your library.';
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  String get person_identity_unmerge => 'Unmerge';
+  String get person_music_role_album_artist => 'Album artist';
+  String get person_music_role_arranger => 'Arranger';
+  String get person_music_role_artist => 'Artist';
+  String get person_music_role_character => 'Character';
+  String get person_music_role_composer => 'Composer';
+  String get person_music_role_featured => 'Featured';
+  String get person_music_role_lyricist => 'Lyricist';
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  String get person_page_title => 'Person';
+  String get person_section_anime_roles => 'Anime roles';
+  String get person_section_game_roles => 'Game roles';
+  String get person_section_identities => 'Merged identities';
+  String get person_section_songs => 'Songs and character songs';
+  String get person_section_suggestions => 'Possibly the same person';
+  String get person_section_video_staff => 'Other video credits';
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  String get person_suggestion_confirm => 'Same person';
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  String get person_suggestion_reject => 'Not the same';
   String get pick_image => 'Pick image';
   String get play => 'Play';
   String get play_from_cue => 'Play from sentence';
@@ -13493,6 +13556,52 @@ class _StringsAr extends _StringsEn {
   String get activity_just_now => 'الآن';
   @override
   String activity_minutes_ago({required Object n}) => 'منذ ${n} د';
+  @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
@@ -22014,6 +22123,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_view_detail => 'عرض التفاصيل';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'في انتظار النص';
   @override
   String game_waveform_range_label({
@@ -25636,6 +25747,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -26617,6 +26730,66 @@ class _StringsAr extends _StringsEn {
   String get pdf_outline => 'المحتويات';
   @override
   String get pdf_outline_empty => 'هذا الملف PDF لا يحتوي على محتويات.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'اختيار صورة';
   @override
@@ -35994,6 +36167,52 @@ class _StringsDe extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'vor ${n} Min.';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
   String get ai_assist_empty =>
@@ -44683,6 +44902,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_view_detail => 'Details anzeigen';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Warte auf Text';
   @override
   String game_waveform_range_label({
@@ -48375,6 +48596,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -49379,6 +49602,66 @@ class _StringsDe extends _StringsEn {
   String get pdf_outline => 'Inhaltsverzeichnis';
   @override
   String get pdf_outline_empty => 'Dieses PDF hat kein Inhaltsverzeichnis.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Bild auswählen';
   @override
@@ -58886,6 +59169,52 @@ class _StringsEs extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'hace ${n} min';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Añadir a colección';
   @override
   String get ai_assist_empty =>
@@ -67591,6 +67920,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_view_detail => 'Ver detalles';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Esperando texto';
   @override
   String game_waveform_range_label({
@@ -71291,6 +71622,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -72290,6 +72623,66 @@ class _StringsEs extends _StringsEn {
   String get pdf_outline => 'Contenidos';
   @override
   String get pdf_outline_empty => 'Este PDF no tiene tabla de contenidos.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Elegir imagen';
   @override
@@ -81835,6 +82228,52 @@ class _StringsFr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'il y a ${n} min';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
   String get ai_assist_empty =>
@@ -90572,6 +91011,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_view_detail => 'Voir les détails';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'En attente de texte';
   @override
   String game_waveform_range_label({
@@ -94285,6 +94726,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -95293,6 +95736,66 @@ class _StringsFr extends _StringsEn {
   String get pdf_outline => 'Sommaire';
   @override
   String get pdf_outline_empty => 'Ce PDF n\'a pas de sommaire.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Choisir une image';
   @override
@@ -104865,6 +105368,52 @@ class _StringsId extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} menit lalu';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
   String get ai_assist_empty =>
@@ -113461,6 +114010,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_view_detail => 'Lihat detail';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Menunggu teks';
   @override
   String game_waveform_range_label({
@@ -117116,6 +117667,8 @@ class _StringsId extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -118104,6 +118657,66 @@ class _StringsId extends _StringsEn {
   String get pdf_outline => 'Daftar isi';
   @override
   String get pdf_outline_empty => 'PDF ini tidak memiliki daftar isi.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Pilih Gambar';
   @override
@@ -127550,6 +128163,52 @@ class _StringsIt extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min fa';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
   String get ai_assist_empty =>
@@ -136210,6 +136869,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_view_detail => 'Visualizza dettagli';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'In attesa del testo';
   @override
   String game_waveform_range_label({
@@ -139899,6 +140560,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -140892,6 +141555,66 @@ class _StringsIt extends _StringsEn {
   String get pdf_outline => 'Indice';
   @override
   String get pdf_outline_empty => 'Questo PDF non ha un indice.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Scegli immagine';
   @override
@@ -150398,6 +151121,52 @@ class _StringsJa extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n}分前';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'コレクションに追加';
   @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
@@ -158650,6 +159419,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_view_detail => '詳細を表示';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'テキスト待機中';
   @override
   String game_waveform_range_label({
@@ -162163,6 +162934,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -163107,6 +163880,66 @@ class _StringsJa extends _StringsEn {
   String get pdf_outline => '目次';
   @override
   String get pdf_outline_empty => 'このPDFには目次がありません。';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '画像を選択';
   @override
@@ -172206,6 +173039,52 @@ class _StringsKo extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n}분 전';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => '컬렉션에 추가';
   @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
@@ -180464,6 +181343,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_view_detail => '상세 보기';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => '텍스트 대기 중';
   @override
   String game_waveform_range_label({
@@ -183990,6 +184871,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -184937,6 +185820,66 @@ class _StringsKo extends _StringsEn {
   String get pdf_outline => '목차';
   @override
   String get pdf_outline_empty => '이 PDF에는 목차가 없습니다.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '이미지 선택';
   @override
@@ -194079,6 +195022,52 @@ class _StringsNl extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min geleden';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
   String get ai_assist_empty =>
@@ -202719,6 +203708,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_view_detail => 'Details bekijken';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Wachten op tekst';
   @override
   String game_waveform_range_label({
@@ -206391,6 +207382,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -207388,6 +208381,66 @@ class _StringsNl extends _StringsEn {
   String get pdf_outline => 'Inhoud';
   @override
   String get pdf_outline_empty => 'Deze PDF heeft geen inhoudsopgave.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Kies afbeelding';
   @override
@@ -216878,6 +217931,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min atrás';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
   String get ai_assist_empty =>
@@ -225553,6 +226652,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_view_detail => 'Ver detalhes';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Aguardando texto';
   @override
   String game_waveform_range_label({
@@ -229237,6 +230338,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -230233,6 +231336,66 @@ class _StringsPtBr extends _StringsEn {
   String get pdf_outline => 'Sumário';
   @override
   String get pdf_outline_empty => 'Este PDF não tem sumário.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Escolher Imagem';
   @override
@@ -239743,6 +240906,52 @@ class _StringsRu extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} мин. назад';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
   String get ai_assist_empty =>
@@ -248380,6 +249589,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_view_detail => 'Подробности';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Ожидание текста';
   @override
   String game_waveform_range_label({
@@ -252056,6 +253267,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -253058,6 +254271,66 @@ class _StringsRu extends _StringsEn {
   String get pdf_outline => 'Содержание';
   @override
   String get pdf_outline_empty => 'В этом PDF нет содержания.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Выбрать изображение';
   @override
@@ -262554,6 +263827,52 @@ class _StringsTh extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} นาทีที่แล้ว';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
   String get ai_assist_empty =>
@@ -271061,6 +272380,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_view_detail => 'ดูรายละเอียด';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'รอข้อความ';
   @override
   String game_waveform_range_label({
@@ -274686,6 +276007,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -275665,6 +276988,66 @@ class _StringsTh extends _StringsEn {
   String get pdf_outline => 'สารบัญ';
   @override
   String get pdf_outline_empty => 'PDF นี้ไม่มีสารบัญ';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'เลือกรูปภาพ';
   @override
@@ -285042,6 +286425,52 @@ class _StringsTr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} dk önce';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
   String get ai_assist_empty =>
@@ -293650,6 +295079,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_view_detail => 'Ayrıntıları görüntüle';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Metin bekleniyor';
   @override
   String game_waveform_range_label({
@@ -297303,6 +298734,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -298293,6 +299726,66 @@ class _StringsTr extends _StringsEn {
   String get pdf_outline => 'İçindekiler';
   @override
   String get pdf_outline_empty => 'Bu PDF\'de içindekiler yok.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Resim seç';
   @override
@@ -307735,6 +309228,52 @@ class _StringsVi extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} phút trước';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
   String get ai_assist_empty =>
@@ -316316,6 +317855,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_view_detail => 'Xem chi tiết';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Đang chờ văn bản';
   @override
   String game_waveform_range_label({
@@ -319955,6 +321496,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -320937,6 +322480,66 @@ class _StringsVi extends _StringsEn {
   String get pdf_outline => 'Mục lục';
   @override
   String get pdf_outline_empty => 'PDF này không có mục lục.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Chọn ảnh';
   @override
@@ -330354,6 +331957,49 @@ class _StringsZhCn extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} 分钟前';
   @override
+  String get adaptation_progress_add => '添加';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => '第 ${episode} 集 ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => '编辑对应';
+  @override
+  String get adaptation_progress_empty => '还没有对应点。记下「第 N 集 ≈ 第 M 卷」后即可估算原作进度。';
+  @override
+  String get adaptation_progress_episode_field => '集数';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => '看到第 ${episode} 集 ≈ 原作${position}';
+  @override
+  String get adaptation_progress_infer_unavailable => '按字幕与原文自动推断：暂未支持。';
+  @override
+  String get adaptation_progress_invalid => '请输入从 1 开始的整数';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      '还没有覆盖第 ${episode} 集的对应点';
+  @override
+  String get adaptation_progress_not_started => '还没开始看';
+  @override
+  String get adaptation_progress_number_field => '卷 / 章号';
+  @override
+  String get adaptation_progress_remove => '删除';
+  @override
+  String get adaptation_progress_title => '原作进度对应';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      '第 ${number} 章';
+  @override
+  String get adaptation_progress_unit_chapter_label => '章';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      '第 ${number} 卷';
+  @override
+  String get adaptation_progress_unit_volume_label => '卷';
+  @override
   String get add_to_collection => '加入合集';
   @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
@@ -338166,6 +339812,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_view_detail => '查看详情';
   @override
+  String get game_voice_cast_title => '配音';
+  @override
   String get game_waiting_for_text => '等待文本';
   @override
   String game_waveform_range_label({
@@ -341531,6 +343179,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_track_detail => '曲目详情';
   @override
+  String get music_track_people_title => '署名';
+  @override
   String music_tracks_count({required Object count}) => '${count} 首';
   @override
   String get music_volume_title => '音量';
@@ -342421,6 +344071,64 @@ class _StringsZhCn extends _StringsEn {
   String get pdf_outline => '目录';
   @override
   String get pdf_outline_empty => '此 PDF 没有目录。';
+  @override
+  String get person_bridge_checking => '正在 Wikidata 上按外部 ID 查找同一人…';
+  @override
+  String get person_bridge_failed => '连不上 Wikidata，先显示本机已知的身份。';
+  @override
+  String get person_domain_game => '游戏';
+  @override
+  String get person_domain_music => '音乐';
+  @override
+  String get person_domain_video => '视频';
+  @override
+  String get person_empty => '库里还没有这个人的作品。';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      '你手动合并的：${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => '取消合并';
+  @override
+  String get person_music_role_album_artist => '专辑艺人';
+  @override
+  String get person_music_role_arranger => '编曲';
+  @override
+  String get person_music_role_artist => '艺人';
+  @override
+  String get person_music_role_character => '角色';
+  @override
+  String get person_music_role_composer => '作曲';
+  @override
+  String get person_music_role_featured => '客串';
+  @override
+  String get person_music_role_lyricist => '作词';
+  @override
+  String get person_music_role_vocal_cv => '演唱（CV）';
+  @override
+  String get person_page_title => '人物';
+  @override
+  String get person_section_anime_roles => '动画角色';
+  @override
+  String get person_section_game_roles => '游戏角色';
+  @override
+  String get person_section_identities => '已合并的身份';
+  @override
+  String get person_section_songs => '演唱与角色歌';
+  @override
+  String get person_section_suggestions => '可能是同一人';
+  @override
+  String get person_section_video_staff => '其他参与';
+  @override
+  String person_song_character({required Object name}) => '角色：${name}';
+  @override
+  String get person_songs_empty => '音乐库里还没有 TA 演唱的曲目。曲目带上演唱署名后，角色歌会出现在这里。';
+  @override
+  String get person_suggestion_confirm => '是同一人';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      '名字相同：${name} · 没有共享的外部 ID';
+  @override
+  String get person_suggestion_reject => '不是';
   @override
   String get pick_image => '选择图片';
   @override
@@ -351024,6 +352732,52 @@ class _StringsZhHk extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} 分鐘前';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => '加入合集';
   @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
@@ -359014,6 +360768,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_view_detail => '查看詳情';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => '等待文本';
   @override
   String game_waveform_range_label({
@@ -362435,6 +364191,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
   @override
   String get music_volume_title => 'Volume';
@@ -363342,6 +365100,66 @@ class _StringsZhHk extends _StringsEn {
   String get pdf_outline => '目錄';
   @override
   String get pdf_outline_empty => '此 PDF 沒有目錄。';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '選擇圖片';
   @override
@@ -372202,6 +374020,43 @@ extension on _StringsEn {
         return 'Just now';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min ago';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
       case 'ai_assist_empty':
@@ -379419,6 +381274,8 @@ extension on _StringsEn {
         return 'My tags';
       case 'game_view_detail':
         return 'View details';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Waiting for text';
       case 'game_waveform_range_label':
@@ -382579,6 +384436,8 @@ extension on _StringsEn {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -383386,6 +385245,63 @@ extension on _StringsEn {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Pick image';
       case 'play':
@@ -391469,6 +393385,43 @@ extension on _StringsAr {
         return 'الآن';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'منذ ${n} د';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
       case 'ai_assist_empty':
@@ -398685,6 +400638,8 @@ extension on _StringsAr {
         return 'وسومي';
       case 'game_view_detail':
         return 'عرض التفاصيل';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'في انتظار النص';
       case 'game_waveform_range_label':
@@ -401841,6 +403796,8 @@ extension on _StringsAr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -402649,6 +404606,63 @@ extension on _StringsAr {
         return 'المحتويات';
       case 'pdf_outline_empty':
         return 'هذا الملف PDF لا يحتوي على محتويات.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'اختيار صورة';
       case 'play':
@@ -410730,6 +412744,43 @@ extension on _StringsDe {
         return 'Gerade eben';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'vor ${n} Min.';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
       case 'ai_assist_empty':
@@ -417980,6 +420031,8 @@ extension on _StringsDe {
         return 'Meine Tags';
       case 'game_view_detail':
         return 'Details anzeigen';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Warte auf Text';
       case 'game_waveform_range_label':
@@ -421154,6 +423207,8 @@ extension on _StringsDe {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -421966,6 +424021,63 @@ extension on _StringsDe {
         return 'Inhaltsverzeichnis';
       case 'pdf_outline_empty':
         return 'Dieses PDF hat kein Inhaltsverzeichnis.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Bild auswählen';
       case 'play':
@@ -430067,6 +432179,43 @@ extension on _StringsEs {
         return 'Ahora mismo';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'hace ${n} min';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
       case 'ai_assist_empty':
@@ -437307,6 +439456,8 @@ extension on _StringsEs {
         return 'Mis etiquetas';
       case 'game_view_detail':
         return 'Ver detalles';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Esperando texto';
       case 'game_waveform_range_label':
@@ -440477,6 +442628,8 @@ extension on _StringsEs {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -441287,6 +443440,63 @@ extension on _StringsEs {
         return 'Contenidos';
       case 'pdf_outline_empty':
         return 'Este PDF no tiene tabla de contenidos.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Elegir imagen';
       case 'play':
@@ -449386,6 +451596,43 @@ extension on _StringsFr {
         return 'À l\'instant';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'il y a ${n} min';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
       case 'ai_assist_empty':
@@ -456640,6 +458887,8 @@ extension on _StringsFr {
         return 'Mes tags';
       case 'game_view_detail':
         return 'Voir les détails';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'En attente de texte';
       case 'game_waveform_range_label':
@@ -459810,6 +462059,8 @@ extension on _StringsFr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -460622,6 +462873,63 @@ extension on _StringsFr {
         return 'Sommaire';
       case 'pdf_outline_empty':
         return 'Ce PDF n\'a pas de sommaire.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Choisir une image';
       case 'play':
@@ -468723,6 +471031,43 @@ extension on _StringsId {
         return 'Baru saja';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} menit lalu';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
       case 'ai_assist_empty':
@@ -475951,6 +478296,8 @@ extension on _StringsId {
         return 'Tag saya';
       case 'game_view_detail':
         return 'Lihat detail';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Menunggu teks';
       case 'game_waveform_range_label':
@@ -479112,6 +481459,8 @@ extension on _StringsId {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -479919,6 +482268,63 @@ extension on _StringsId {
         return 'Daftar isi';
       case 'pdf_outline_empty':
         return 'PDF ini tidak memiliki daftar isi.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Pilih Gambar';
       case 'play':
@@ -488004,6 +490410,43 @@ extension on _StringsIt {
         return 'Adesso';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min fa';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
       case 'ai_assist_empty':
@@ -495243,6 +497686,8 @@ extension on _StringsIt {
         return 'I miei tag';
       case 'game_view_detail':
         return 'Visualizza dettagli';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'In attesa del testo';
       case 'game_waveform_range_label':
@@ -498411,6 +500856,8 @@ extension on _StringsIt {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -499220,6 +501667,63 @@ extension on _StringsIt {
         return 'Indice';
       case 'pdf_outline_empty':
         return 'Questo PDF non ha un indice.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Scegli immagine';
       case 'play':
@@ -507321,6 +509825,43 @@ extension on _StringsJa {
         return 'たった今';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n}分前';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
       case 'ai_assist_empty':
@@ -514514,6 +517055,8 @@ extension on _StringsJa {
         return 'マイタグ';
       case 'game_view_detail':
         return '詳細を表示';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'テキスト待機中';
       case 'game_waveform_range_label':
@@ -517658,6 +520201,8 @@ extension on _StringsJa {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -518461,6 +521006,63 @@ extension on _StringsJa {
         return '目次';
       case 'pdf_outline_empty':
         return 'このPDFには目次がありません。';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '画像を選択';
       case 'play':
@@ -526503,6 +529105,43 @@ extension on _StringsKo {
         return '방금 전';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n}분 전';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
       case 'ai_assist_empty':
@@ -533699,6 +536338,8 @@ extension on _StringsKo {
         return '내 태그';
       case 'game_view_detail':
         return '상세 보기';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return '텍스트 대기 중';
       case 'game_waveform_range_label':
@@ -536842,6 +539483,8 @@ extension on _StringsKo {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -537646,6 +540289,63 @@ extension on _StringsKo {
         return '목차';
       case 'pdf_outline_empty':
         return '이 PDF에는 목차가 없습니다.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '이미지 선택';
       case 'play':
@@ -545701,6 +548401,43 @@ extension on _StringsNl {
         return 'Zojuist';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min geleden';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
       case 'ai_assist_empty':
@@ -552937,6 +555674,8 @@ extension on _StringsNl {
         return 'Mijn tags';
       case 'game_view_detail':
         return 'Details bekijken';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Wachten op tekst';
       case 'game_waveform_range_label':
@@ -556110,6 +558849,8 @@ extension on _StringsNl {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -556919,6 +559660,63 @@ extension on _StringsNl {
         return 'Inhoud';
       case 'pdf_outline_empty':
         return 'Deze PDF heeft geen inhoudsopgave.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Kies afbeelding';
       case 'play':
@@ -565013,6 +567811,43 @@ extension on _StringsPtBr {
         return 'Agora mesmo';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min atrás';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
       case 'ai_assist_empty':
@@ -572248,6 +575083,8 @@ extension on _StringsPtBr {
         return 'Minhas tags';
       case 'game_view_detail':
         return 'Ver detalhes';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Aguardando texto';
       case 'game_waveform_range_label':
@@ -575417,6 +578254,8 @@ extension on _StringsPtBr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -576226,6 +579065,63 @@ extension on _StringsPtBr {
         return 'Sumário';
       case 'pdf_outline_empty':
         return 'Este PDF não tem sumário.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Escolher Imagem';
       case 'play':
@@ -584317,6 +587213,43 @@ extension on _StringsRu {
         return 'Только что';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} мин. назад';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
       case 'ai_assist_empty':
@@ -591559,6 +594492,8 @@ extension on _StringsRu {
         return 'Мои теги';
       case 'game_view_detail':
         return 'Подробности';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Ожидание текста';
       case 'game_waveform_range_label':
@@ -594728,6 +597663,8 @@ extension on _StringsRu {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -595537,6 +598474,63 @@ extension on _StringsRu {
         return 'Содержание';
       case 'pdf_outline_empty':
         return 'В этом PDF нет содержания.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Выбрать изображение';
       case 'play':
@@ -603626,6 +606620,43 @@ extension on _StringsTh {
         return 'เมื่อสักครู่';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} นาทีที่แล้ว';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
       case 'ai_assist_empty':
@@ -610844,6 +613875,8 @@ extension on _StringsTh {
         return 'แท็กของฉัน';
       case 'game_view_detail':
         return 'ดูรายละเอียด';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'รอข้อความ';
       case 'game_waveform_range_label':
@@ -614004,6 +617037,8 @@ extension on _StringsTh {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -614810,6 +617845,63 @@ extension on _StringsTh {
         return 'สารบัญ';
       case 'pdf_outline_empty':
         return 'PDF นี้ไม่มีสารบัญ';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'เลือกรูปภาพ';
       case 'play':
@@ -622891,6 +625983,43 @@ extension on _StringsTr {
         return 'Az önce';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} dk önce';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
       case 'ai_assist_empty':
@@ -630127,6 +633256,8 @@ extension on _StringsTr {
         return 'Etiketlerim';
       case 'game_view_detail':
         return 'Ayrıntıları görüntüle';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Metin bekleniyor';
       case 'game_waveform_range_label':
@@ -633293,6 +636424,8 @@ extension on _StringsTr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -634099,6 +637232,63 @@ extension on _StringsTr {
         return 'İçindekiler';
       case 'pdf_outline_empty':
         return 'Bu PDF\'de içindekiler yok.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Resim seç';
       case 'play':
@@ -642187,6 +645377,43 @@ extension on _StringsVi {
         return 'Vừa xong';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} phút trước';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
       case 'ai_assist_empty':
@@ -649415,6 +652642,8 @@ extension on _StringsVi {
         return 'Thẻ gắn của tôi';
       case 'game_view_detail':
         return 'Xem chi tiết';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Đang chờ văn bản';
       case 'game_waveform_range_label':
@@ -652574,6 +655803,8 @@ extension on _StringsVi {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -653381,6 +656612,63 @@ extension on _StringsVi {
         return 'Mục lục';
       case 'pdf_outline_empty':
         return 'PDF này không có mục lục.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Chọn ảnh';
       case 'play':
@@ -661466,6 +664754,42 @@ extension on _StringsZhCn {
         return '刚刚';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} 分钟前';
+      case 'adaptation_progress_add':
+        return '添加';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            '第 ${episode} 集 ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return '编辑对应';
+      case 'adaptation_progress_empty':
+        return '还没有对应点。记下「第 N 集 ≈ 第 M 卷」后即可估算原作进度。';
+      case 'adaptation_progress_episode_field':
+        return '集数';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            '看到第 ${episode} 集 ≈ 原作${position}';
+      case 'adaptation_progress_infer_unavailable':
+        return '按字幕与原文自动推断：暂未支持。';
+      case 'adaptation_progress_invalid':
+        return '请输入从 1 开始的整数';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) => '还没有覆盖第 ${episode} 集的对应点';
+      case 'adaptation_progress_not_started':
+        return '还没开始看';
+      case 'adaptation_progress_number_field':
+        return '卷 / 章号';
+      case 'adaptation_progress_remove':
+        return '删除';
+      case 'adaptation_progress_title':
+        return '原作进度对应';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => '第 ${number} 章';
+      case 'adaptation_progress_unit_chapter_label':
+        return '章';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => '第 ${number} 卷';
+      case 'adaptation_progress_unit_volume_label':
+        return '卷';
       case 'add_to_collection':
         return '加入合集';
       case 'ai_assist_empty':
@@ -668595,6 +671919,8 @@ extension on _StringsZhCn {
         return '我的标签';
       case 'game_view_detail':
         return '查看详情';
+      case 'game_voice_cast_title':
+        return '配音';
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
@@ -671721,6 +675047,8 @@ extension on _StringsZhCn {
         return '出现在';
       case 'music_track_detail':
         return '曲目详情';
+      case 'music_track_people_title':
+        return '署名';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} 首';
       case 'music_volume_title':
@@ -672522,6 +675850,62 @@ extension on _StringsZhCn {
         return '目录';
       case 'pdf_outline_empty':
         return '此 PDF 没有目录。';
+      case 'person_bridge_checking':
+        return '正在 Wikidata 上按外部 ID 查找同一人…';
+      case 'person_bridge_failed':
+        return '连不上 Wikidata，先显示本机已知的身份。';
+      case 'person_domain_game':
+        return '游戏';
+      case 'person_domain_music':
+        return '音乐';
+      case 'person_domain_video':
+        return '视频';
+      case 'person_empty':
+        return '库里还没有这个人的作品。';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) => '你手动合并的：${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return '取消合并';
+      case 'person_music_role_album_artist':
+        return '专辑艺人';
+      case 'person_music_role_arranger':
+        return '编曲';
+      case 'person_music_role_artist':
+        return '艺人';
+      case 'person_music_role_character':
+        return '角色';
+      case 'person_music_role_composer':
+        return '作曲';
+      case 'person_music_role_featured':
+        return '客串';
+      case 'person_music_role_lyricist':
+        return '作词';
+      case 'person_music_role_vocal_cv':
+        return '演唱（CV）';
+      case 'person_page_title':
+        return '人物';
+      case 'person_section_anime_roles':
+        return '动画角色';
+      case 'person_section_game_roles':
+        return '游戏角色';
+      case 'person_section_identities':
+        return '已合并的身份';
+      case 'person_section_songs':
+        return '演唱与角色歌';
+      case 'person_section_suggestions':
+        return '可能是同一人';
+      case 'person_section_video_staff':
+        return '其他参与';
+      case 'person_song_character':
+        return ({required Object name}) => '角色：${name}';
+      case 'person_songs_empty':
+        return '音乐库里还没有 TA 演唱的曲目。曲目带上演唱署名后，角色歌会出现在这里。';
+      case 'person_suggestion_confirm':
+        return '是同一人';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => '名字相同：${name} · 没有共享的外部 ID';
+      case 'person_suggestion_reject':
+        return '不是';
       case 'pick_image':
         return '选择图片';
       case 'play':
@@ -680505,6 +683889,43 @@ extension on _StringsZhHk {
         return '剛剛';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} 分鐘前';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return '加入合集';
       case 'ai_assist_empty':
@@ -687663,6 +691084,8 @@ extension on _StringsZhHk {
         return '我的標簽';
       case 'game_view_detail':
         return '查看詳情';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
@@ -690799,6 +694222,8 @@ extension on _StringsZhHk {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
       case 'music_volume_title':
@@ -691602,6 +695027,63 @@ extension on _StringsZhHk {
         return '目錄';
       case 'pdf_outline_empty':
         return '此 PDF 沒有目錄。';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '選擇圖片';
       case 'play':
