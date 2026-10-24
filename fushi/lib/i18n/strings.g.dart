@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 156978 (9234 per locale)
+/// Strings: 157233 (9249 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -13146,11 +13146,34 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_download_state_failed => 'Failed';
   String get web_browser_downloads_empty => 'No downloads yet';
   String get web_browser_downloads_title => 'Downloads';
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  String get web_browser_error_details_hide => 'Hide details';
+  String get web_browser_error_details_show => 'Show details';
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  String get web_browser_error_dns_title => 'Site not found';
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   String get web_browser_error_offline_body =>
       'Check your network connection, then try again.';
   String get web_browser_error_offline_title => 'You\'re offline';
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  String get web_browser_error_timeout_title => 'The connection timed out';
   String get web_browser_error_title => 'This page can\'t be reached';
   String get web_browser_find_close => 'Close find bar';
   String get web_browser_find_hint => 'Find in page';
@@ -13296,6 +13319,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_title => 'Browser';
   String get web_browser_toolbar_expand => 'Show toolbar';
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -13319,10 +13346,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_import_hint =>
       'This is a web page (not a direct stream). It will open in the built-in web player.';
   String get web_video_login_import => 'Import login from browser';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   String get web_video_login_import_waiting =>
@@ -35373,6 +35396,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -35380,6 +35425,22 @@ class _StringsAr extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -35648,6 +35709,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -35709,13 +35777,6 @@ class _StringsAr extends _StringsEn {
   String web_video_mine_queue_running({
     required Object done,
     required Object total,
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   }) => 'جارٍ إنشاء البطاقات ${done}/${total}…';
   @override
   String get web_video_mine_queue_stop => 'إيقاف إنشاء البطاقات';
@@ -58178,6 +58239,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -58185,6 +58268,22 @@ class _StringsDe extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -58453,6 +58552,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -58551,13 +58657,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -81038,6 +81137,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -81045,6 +81166,22 @@ class _StringsEs extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -81313,6 +81450,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -81449,13 +81593,6 @@ class _StringsEs extends _StringsEn {
   @override
   String yomitan_port_kill_confirm_title({required Object port}) =>
       '¿Finalizar el proceso usando el puerto ${port}?';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'No se pudo finalizar ${process}. Finalícelo manualmente, luego reintente.';
@@ -103980,6 +104117,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -103987,6 +104146,22 @@ class _StringsFr extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -104255,6 +104430,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -104430,13 +104612,6 @@ class _StringsId extends _StringsEn {
     ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
 
   /// Metadata for the translations of <id>.
   @override
@@ -126581,6 +126756,28 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -126588,6 +126785,22 @@ class _StringsId extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -126856,6 +127069,13 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -127069,13 +127289,6 @@ class _StringsIt extends _StringsEn {
   String get ai_assist_generate => 'Genera';
   @override
   String get ai_assist_no_provider =>
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
       'Scegli prima un provider di IA per questa funzione in Impostazioni e IA';
   @override
   String get ai_assist_section => 'Chiedi all\'IA';
@@ -149339,6 +149552,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -149346,6 +149581,22 @@ class _StringsIt extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -149614,6 +149865,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
   @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   String get web_hub_browse => 'Web';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -149865,13 +150123,6 @@ class _StringsJa extends _StringsEn {
   String get ai_feature_audiobook_cast => 'Audiobook casting';
   @override
   String get ai_feature_audiobook_cast_summary =>
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
       'Mark which character speaks each line so different voices can read them';
   @override
   String get ai_feature_cloud_transcription => 'Cloud transcription';
@@ -171065,6 +171316,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -171072,6 +171345,22 @@ class _StringsJa extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -171339,6 +171628,13 @@ class _StringsJa extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -171629,13 +171925,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_library_organize_summary =>
       'Let AI put books, videos and games that belong together into collections';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
@@ -192851,6 +193140,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -192858,6 +193169,22 @@ class _StringsKo extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -193125,6 +193452,13 @@ class _StringsKo extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -193452,13 +193786,6 @@ class _StringsNl extends _StringsEn {
       'Als het scrapen meerdere kandidaten of niets vindt, kiest AI het bijpassende werk of stelt titels voor om op te zoeken';
   @override
   String get ai_feature_video_search => 'Hulp bij videozoeken';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get ai_feature_video_search_subtitle_summary =>
       'AI rangschikt ondertitelresultaten opnieuw wanneer ondertitels automatisch op de achtergrond worden aangevuld';
@@ -215559,6 +215886,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -215566,6 +215915,22 @@ class _StringsNl extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -215833,6 +216198,13 @@ class _StringsNl extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -216198,13 +216570,6 @@ class _StringsPtBr extends _StringsEn {
   String get ai_media_acquire_others => 'Outros resultados';
   @override
   String get ai_media_acquire_parsing => 'Entendendo seu pedido…';
-  @override
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get ai_media_acquire_picking =>
       'A IA está escolhendo as melhores correspondências…';
@@ -238338,6 +238703,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -238345,6 +238732,22 @@ class _StringsPtBr extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -238612,6 +239015,13 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -239016,13 +239426,6 @@ class _StringsRu extends _StringsEn {
   String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
   @override
   String ai_provider_api_key_ok({required Object tail}) =>
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
       'Ends in ${tail} · OK';
   @override
   String get ai_provider_api_key_remove => 'Remove this key';
@@ -261063,6 +261466,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -261070,6 +261495,22 @@ class _StringsRu extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -261337,6 +261778,13 @@ class _StringsRu extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -261779,13 +262227,6 @@ class _StringsTh extends _StringsEn {
       'กำหนดตายตัวโดยค่าที่ตั้งไว้ล่วงหน้าในตัว';
   @override
   String get ai_provider_rate_limit => 'Requests per minute';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
@@ -283464,6 +283905,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -283471,6 +283934,22 @@ class _StringsTh extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -283738,6 +284217,13 @@ class _StringsTh extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -284218,13 +284704,6 @@ class _StringsTr extends _StringsEn {
   String get ai_video_acquire_action_scope_movies => 'Tüm filmler';
   @override
   String get ai_video_acquire_action_scope_series => 'Tüm TV dizileri';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   @override
   String get ai_video_acquire_action_scope_work => 'Yalnızca bu eser';
   @override
@@ -306069,6 +306548,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -306076,6 +306577,22 @@ class _StringsTr extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -306343,6 +306860,13 @@ class _StringsTr extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -306861,13 +307385,6 @@ class _StringsVi extends _StringsEn {
       'Không có bản ${wanted}. Lấy một trong những bản này thay thế?';
   @override
   String get ai_video_acquire_ask_resource => 'Dùng phiên bản này?';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   @override
   String get ai_video_acquire_ask_season => 'Mùa nào?';
   @override
@@ -328602,6 +329119,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -328609,6 +329148,22 @@ class _StringsVi extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -328876,6 +329431,13 @@ class _StringsVi extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -329432,13 +329994,6 @@ class _StringsZhCn extends _StringsEn {
   String ai_video_acquire_franchise_ready({
     required Object total,
     required Object ready,
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
   }) => '${total} 部里有 ${ready} 部找到了资源。取消勾选不要的再提交；还在播的剧集会自动订阅。';
   @override
   String ai_video_acquire_franchise_searching({required Object title}) =>
@@ -349219,12 +349774,43 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_downloads_title => '下载';
   @override
+  String get web_browser_error_certificate_body => '该网站的安全证书无效、已过期或与网址不符。';
+  @override
+  String get web_browser_error_certificate_title => '连接不安全';
+  @override
+  String get web_browser_error_connection_body =>
+      '网站拒绝了连接或无法访问，可能暂时停止服务，请稍后重试。';
+  @override
+  String get web_browser_error_connection_title => '无法连接到该网站';
+  @override
+  String get web_browser_error_details_hide => '隐藏详细信息';
+  @override
+  String get web_browser_error_details_show => '显示详细信息';
+  @override
+  String get web_browser_error_dns_body => '请检查网址是否输错；若无误，可能是该网站的域名暂时无法解析。';
+  @override
+  String get web_browser_error_dns_title => '找不到该网站';
+  @override
+  String get web_browser_error_generic_body => '网站可能暂时无法访问，或拒绝了连接，请稍后重试。';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       '网站返回了 HTTP ${code}，页面为空。';
   @override
   String get web_browser_error_offline_body => '请检查网络连接后重试。';
   @override
   String get web_browser_error_offline_title => '没有网络连接';
+  @override
+  String get web_browser_error_redirect_body => '网站在反复跳转，清除该网站的 Cookie 可能会有帮助。';
+  @override
+  String get web_browser_error_redirect_title => '重定向次数过多';
+  @override
+  String get web_browser_error_response_body => '网站有响应，但返回的数据无法读取，请稍后重试。';
+  @override
+  String get web_browser_error_response_title => '网站返回了无效的响应';
+  @override
+  String get web_browser_error_timeout_body => '网站响应时间过长，请稍后重试。';
+  @override
+  String get web_browser_error_timeout_title => '连接超时';
   @override
   String get web_browser_error_title => '无法打开此网页';
   @override
@@ -349476,6 +350062,12 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_toolbar_expand => '展开工具栏';
   @override
   String get web_browser_youtube_subtitles => 'YouTube 字幕查词';
+  @override
+  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
+  @override
+  String get web_browser_youtube_subtitles_track_live => '实时采集';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
   @override
@@ -350063,12 +350655,6 @@ class _StringsZhHk extends _StringsEn {
   String get ai_video_acquire_option_next => '換一個';
   @override
   String get ai_video_acquire_option_none => '都不是';
-  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
-  @override
-  String get web_browser_youtube_subtitles_track_live => '实时采集';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => '选中加载';
-  @override
   @override
   String ai_video_acquire_option_submit_all({required Object count}) =>
       '提交勾選的（${count} 部）';
@@ -370325,6 +370911,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_downloads_title => 'Downloads';
   @override
+  String get web_browser_error_certificate_body =>
+      'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+  @override
+  String get web_browser_error_certificate_title => 'Connection isn\'t secure';
+  @override
+  String get web_browser_error_connection_body =>
+      'The site refused the connection or can\'t be reached. It may be down; try again later.';
+  @override
+  String get web_browser_error_connection_title => 'Can\'t connect to the site';
+  @override
+  String get web_browser_error_details_hide => 'Hide details';
+  @override
+  String get web_browser_error_details_show => 'Show details';
+  @override
+  String get web_browser_error_dns_body =>
+      'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+  @override
+  String get web_browser_error_dns_title => 'Site not found';
+  @override
+  String get web_browser_error_generic_body =>
+      'The site may be down or may have refused the connection. Try again later.';
+  @override
   String web_browser_error_http_body({required Object code}) =>
       'The site returned HTTP ${code} with an empty page.';
   @override
@@ -370332,6 +370940,22 @@ class _StringsZhHk extends _StringsEn {
       'Check your network connection, then try again.';
   @override
   String get web_browser_error_offline_title => 'You\'re offline';
+  @override
+  String get web_browser_error_redirect_body =>
+      'The site keeps redirecting. Clearing this site\'s cookies may help.';
+  @override
+  String get web_browser_error_redirect_title => 'Too many redirects';
+  @override
+  String get web_browser_error_response_body =>
+      'The site responded, but its data couldn\'t be read. Try again later.';
+  @override
+  String get web_browser_error_response_title =>
+      'The site sent an invalid response';
+  @override
+  String get web_browser_error_timeout_body =>
+      'The site took too long to respond. Try again later.';
+  @override
+  String get web_browser_error_timeout_title => 'The connection timed out';
   @override
   String get web_browser_error_title => 'This page can\'t be reached';
   @override
@@ -370599,6 +371223,13 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_toolbar_expand => 'Show toolbar';
   @override
   String get web_browser_youtube_subtitles => 'Clickable YouTube subtitles';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
   @override
@@ -371224,13 +371855,6 @@ extension on _StringsEn {
         return 'Skip extras';
       case 'ai_video_download_skip_extras_hint':
         return 'PV, CM, NCOP/NCED, menus and similar. Applies to every download into a video source: extras inside a torrent are not downloaded, and extras-only releases are never picked.';
-  String get web_browser_youtube_subtitles_track_empty =>
-      'No subtitle track on this video yet';
-  @override
-  String get web_browser_youtube_subtitles_track_live => 'Live capture';
-  @override
-  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
-  @override
       case 'ai_video_download_source':
         return 'Preferred source';
       case 'ai_video_download_source_any':
@@ -389551,6 +390175,24 @@ extension on _StringsEn {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -389558,6 +390200,18 @@ extension on _StringsEn {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -389803,6 +390457,12 @@ extension on _StringsEn {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -390457,12 +391117,6 @@ extension on _StringsAr {
         return 'الاسم';
       case 'ai_web_knowledge_custom_name_hint':
         return 'اتركه فارغًا لاستخدام اسم المضيف';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'ai_web_knowledge_custom_remove':
         return 'إزالة الموقع';
       case 'ai_web_knowledge_custom_title':
@@ -408739,6 +409393,24 @@ extension on _StringsAr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -408746,6 +409418,18 @@ extension on _StringsAr {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -408991,6 +409675,12 @@ extension on _StringsAr {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -409675,12 +410365,6 @@ extension on _StringsDe {
         return 'Englisch übersetzt';
       case 'anime_download_category_non_english':
         return 'Nicht-Englisch';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anime_download_category_raw':
         return 'Roh';
       case 'anime_download_delete':
@@ -428003,6 +428687,24 @@ extension on _StringsDe {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -428010,6 +428712,18 @@ extension on _StringsDe {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -428255,6 +428969,12 @@ extension on _StringsDe {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -428969,12 +429689,6 @@ extension on _StringsEs {
         return 'Sin resultados';
       case 'anime_download_no_results_detail':
         return ({required Object query, required Object filters}) =>
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
             'El servicio respondió exitosamente pero devolvió 0 elementos. Consulta: ${query}; filtros: ${filters}. Intente otro título o relaje los filtros.';
       case 'anime_download_no_subs':
         return 'Sin subtítulos';
@@ -447249,6 +447963,24 @@ extension on _StringsEs {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -447256,6 +447988,18 @@ extension on _StringsEs {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -447501,6 +448245,12 @@ extension on _StringsEs {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -448245,12 +448995,6 @@ extension on _StringsFr {
             'Échec, rien n\'a changé : ${reason}';
       case 'anime_download_relocate_hint':
         return 'Fushi renomme/déplace via le moteur de téléchargement, le partage n\'est pas interrompu. Un renommage dans l\'Explorateur ne peut jamais être récupéré.';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anime_download_relocate_library_failed':
         return ({required Object reason}) =>
             'Fichiers déplacés, mais la bibliothèque pointe encore vers l\'ancien chemin : ${reason}';
@@ -466513,6 +467257,24 @@ extension on _StringsFr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -466520,6 +467282,18 @@ extension on _StringsFr {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -466765,6 +467539,12 @@ extension on _StringsFr {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -467539,12 +468319,6 @@ extension on _StringsId {
       case 'anime_download_sort_seeders':
         return 'Seeder';
       case 'anime_download_sort_size':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'Ukuran';
       case 'anime_download_store_unavailable':
         return 'Penyimpanan rencana unduhan tidak tersedia';
@@ -485721,6 +486495,24 @@ extension on _StringsId {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -485728,6 +486520,18 @@ extension on _StringsId {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -485973,6 +486777,12 @@ extension on _StringsId {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -486777,12 +487587,6 @@ extension on _StringsIt {
       case 'anime_download_title':
         return 'Download anime';
       case 'anime_download_trusted':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'Affidabile';
       case 'anime_download_trusted_only':
         return 'Solo affidabili';
@@ -504965,6 +505769,24 @@ extension on _StringsIt {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -504972,6 +505794,18 @@ extension on _StringsIt {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -505217,6 +506051,12 @@ extension on _StringsIt {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -506051,12 +506891,6 @@ extension on _StringsJa {
       case 'anki_compact_glossaries_hint':
         return '釈義をコンパクトな形式で表示';
       case 'anki_connect_addon_anki_not_running':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return '実行中のAnkiが見つかりません。まずAnkiデスクトップを起動してから再度お試しください。';
       case 'anki_connect_addon_download_failed':
         return ({required Object error}) =>
@@ -524077,6 +524911,24 @@ extension on _StringsJa {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -524084,6 +524936,18 @@ extension on _StringsJa {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -524329,6 +525193,12 @@ extension on _StringsJa {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -525193,12 +526063,6 @@ extension on _StringsKo {
       case 'anki_connect_port_auto_fix_done':
         return ({required Object port}) =>
             'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anki_connect_port_auto_fix_hint':
         return '비어 있는 포트를 골라 Fushi와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
       case 'anki_connect_port_auto_fix_manual':
@@ -543202,6 +544066,24 @@ extension on _StringsKo {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -543209,6 +544091,18 @@ extension on _StringsKo {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -543454,6 +544348,12 @@ extension on _StringsKo {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -544348,12 +545248,6 @@ extension on _StringsNl {
       case 'anki_create_lapis_hint':
         return 'Voegt het Lapis-notitietype en een Lapis-deck toe aan Anki en selecteert ze daarna.';
       case 'anki_create_lapis_not_found':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Fushi de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
       case 'anki_create_lapis_success':
         return 'Lapis-notitietype en -deck aangemaakt.';
@@ -562438,6 +563332,24 @@ extension on _StringsNl {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -562445,6 +563357,18 @@ extension on _StringsNl {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -562690,6 +563614,12 @@ extension on _StringsNl {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -563614,12 +564544,6 @@ extension on _StringsPtBr {
       case 'anki_dedup_failed':
         return ({required Object error}) => 'Deduplicação falhou: ${error}';
       case 'anki_dedup_plan_busy_note':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'O Anki pode ficar sem resposta enquanto isso executa; evite usar o Anki até terminar.';
       case 'anki_dedup_plan_delete':
         return 'Excluir estes arquivos';
@@ -581669,6 +582593,24 @@ extension on _StringsPtBr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -581676,6 +582618,18 @@ extension on _StringsPtBr {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -581921,6 +582875,12 @@ extension on _StringsPtBr {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -582875,12 +583835,6 @@ extension on _StringsRu {
         return ({required Object count}) =>
             'Сканирование папки медиа… (найдено ${count} файлов)';
       case 'anki_dedup_progress_title':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'Удаление дубликатов медиа';
       case 'anki_dedup_report_body':
         return ({
@@ -600905,6 +601859,24 @@ extension on _StringsRu {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -600912,6 +601884,18 @@ extension on _StringsRu {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -601157,6 +602141,12 @@ extension on _StringsRu {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -602141,12 +603131,6 @@ extension on _StringsTh {
         return 'Launch Anki when Fushi starts';
       case 'anki_desktop_auto_launch_hint':
         return 'If AnkiConnect on this computer isn\'t responding when Fushi starts, open Anki desktop automatically.';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anki_desktop_executable':
         return 'Anki program';
       case 'anki_desktop_executable_detect':
@@ -620097,6 +621081,24 @@ extension on _StringsTh {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -620104,6 +621106,18 @@ extension on _StringsTh {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -620349,6 +621363,12 @@ extension on _StringsTh {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -621363,12 +622383,6 @@ extension on _StringsTr {
         return 'Tüm koleksiyon';
       case 'anki_duplicate_scope_deck':
         return 'Seçili deste (ve alt desteleri)';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anki_duplicate_scope_deck_root':
         return 'Kök deste (tüm alt desteler)';
       case 'anki_duplicate_scope_hint':
@@ -639320,6 +640334,24 @@ extension on _StringsTr {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -639327,6 +640359,18 @@ extension on _StringsTr {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -639572,6 +640616,12 @@ extension on _StringsTr {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -640616,12 +641666,6 @@ extension on _StringsVi {
       case 'anki_error_first_field_empty':
         return 'Trường đầu tiên của loại ghi chú đã chọn đang trống, và Anki không nhận ghi chú như vậy. Hãy ánh xạ một trường vào đó trong Cài đặt Anki.';
       case 'anki_error_http':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
         return 'Không thể xuất sang Anki: đã xảy ra lỗi HTTP khi liên hệ với AnkiConnect.';
       case 'anki_error_paired_device_unreachable':
         return 'Không thể tạo thẻ vì không kết nối được thiết bị đã ghép nối nào. Hãy đảm bảo Fushi đang chạy trên thiết bị đã ghép nối, hoặc tắt Gửi thẻ đến thiết bị đã ghép nối trong Cài đặt Anki để tạo thẻ cục bộ.';
@@ -658526,6 +659570,24 @@ extension on _StringsVi {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -658533,6 +659595,18 @@ extension on _StringsVi {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -658778,6 +659852,12 @@ extension on _StringsVi {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -659852,12 +660932,6 @@ extension on _StringsZhCn {
         return '模板已恢复。';
       case 'anki_lapis_restore_empty':
         return '还没有备份。';
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
       case 'anki_lapis_restore_factory':
         return '恢复出厂 Lapis';
       case 'anki_lapis_restore_factory_confirm':
@@ -677500,12 +678574,42 @@ extension on _StringsZhCn {
         return '还没有下载记录';
       case 'web_browser_downloads_title':
         return '下载';
+      case 'web_browser_error_certificate_body':
+        return '该网站的安全证书无效、已过期或与网址不符。';
+      case 'web_browser_error_certificate_title':
+        return '连接不安全';
+      case 'web_browser_error_connection_body':
+        return '网站拒绝了连接或无法访问，可能暂时停止服务，请稍后重试。';
+      case 'web_browser_error_connection_title':
+        return '无法连接到该网站';
+      case 'web_browser_error_details_hide':
+        return '隐藏详细信息';
+      case 'web_browser_error_details_show':
+        return '显示详细信息';
+      case 'web_browser_error_dns_body':
+        return '请检查网址是否输错；若无误，可能是该网站的域名暂时无法解析。';
+      case 'web_browser_error_dns_title':
+        return '找不到该网站';
+      case 'web_browser_error_generic_body':
+        return '网站可能暂时无法访问，或拒绝了连接，请稍后重试。';
       case 'web_browser_error_http_body':
         return ({required Object code}) => '网站返回了 HTTP ${code}，页面为空。';
       case 'web_browser_error_offline_body':
         return '请检查网络连接后重试。';
       case 'web_browser_error_offline_title':
         return '没有网络连接';
+      case 'web_browser_error_redirect_body':
+        return '网站在反复跳转，清除该网站的 Cookie 可能会有帮助。';
+      case 'web_browser_error_redirect_title':
+        return '重定向次数过多';
+      case 'web_browser_error_response_body':
+        return '网站有响应，但返回的数据无法读取，请稍后重试。';
+      case 'web_browser_error_response_title':
+        return '网站返回了无效的响应';
+      case 'web_browser_error_timeout_body':
+        return '网站响应时间过长，请稍后重试。';
+      case 'web_browser_error_timeout_title':
+        return '连接超时';
       case 'web_browser_error_title':
         return '无法打开此网页';
       case 'web_browser_find_close':
@@ -677751,6 +678855,12 @@ extension on _StringsZhCn {
         return '展开工具栏';
       case 'web_browser_youtube_subtitles':
         return 'YouTube 字幕查词';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return '这个视频还没有字幕轨';
+      case 'web_browser_youtube_subtitles_track_live':
+        return '实时采集';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return '选中加载';
       case 'web_hub_browse':
         return '网页';
       case 'web_hub_video_sites':
@@ -678855,12 +679965,6 @@ extension on _StringsZhHk {
       case 'anki_lapis_visual_block_anchor':
         return '在卡片上的位置';
       case 'anki_lapis_visual_block_anchor_above_definition':
-      case 'web_browser_youtube_subtitles_track_empty':
-        return '这个视频还没有字幕轨';
-      case 'web_browser_youtube_subtitles_track_live':
-        return '实时采集';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return '选中加载';
         return '例句下方';
       case 'anki_lapis_visual_block_anchor_above_sentence':
         return '單詞區下方';
@@ -696542,6 +697646,24 @@ extension on _StringsZhHk {
         return 'No downloads yet';
       case 'web_browser_downloads_title':
         return 'Downloads';
+      case 'web_browser_error_certificate_body':
+        return 'The site\'s security certificate is invalid, expired, or doesn\'t match this address.';
+      case 'web_browser_error_certificate_title':
+        return 'Connection isn\'t secure';
+      case 'web_browser_error_connection_body':
+        return 'The site refused the connection or can\'t be reached. It may be down; try again later.';
+      case 'web_browser_error_connection_title':
+        return 'Can\'t connect to the site';
+      case 'web_browser_error_details_hide':
+        return 'Hide details';
+      case 'web_browser_error_details_show':
+        return 'Show details';
+      case 'web_browser_error_dns_body':
+        return 'Check the address for typos. If it\'s correct, the site\'s domain may not be resolving right now.';
+      case 'web_browser_error_dns_title':
+        return 'Site not found';
+      case 'web_browser_error_generic_body':
+        return 'The site may be down or may have refused the connection. Try again later.';
       case 'web_browser_error_http_body':
         return ({required Object code}) =>
             'The site returned HTTP ${code} with an empty page.';
@@ -696549,6 +697671,18 @@ extension on _StringsZhHk {
         return 'Check your network connection, then try again.';
       case 'web_browser_error_offline_title':
         return 'You\'re offline';
+      case 'web_browser_error_redirect_body':
+        return 'The site keeps redirecting. Clearing this site\'s cookies may help.';
+      case 'web_browser_error_redirect_title':
+        return 'Too many redirects';
+      case 'web_browser_error_response_body':
+        return 'The site responded, but its data couldn\'t be read. Try again later.';
+      case 'web_browser_error_response_title':
+        return 'The site sent an invalid response';
+      case 'web_browser_error_timeout_body':
+        return 'The site took too long to respond. Try again later.';
+      case 'web_browser_error_timeout_title':
+        return 'The connection timed out';
       case 'web_browser_error_title':
         return 'This page can\'t be reached';
       case 'web_browser_find_close':
@@ -696794,6 +697928,12 @@ extension on _StringsZhHk {
         return 'Show toolbar';
       case 'web_browser_youtube_subtitles':
         return 'Clickable YouTube subtitles';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
       case 'web_hub_video_sites':
@@ -696921,9 +698061,3 @@ extension on _StringsZhHk {
     }
   }
 }
-      case 'web_browser_youtube_subtitles_track_empty':
-        return 'No subtitle track on this video yet';
-      case 'web_browser_youtube_subtitles_track_live':
-        return 'Live capture';
-      case 'web_browser_youtube_subtitles_track_pending':
-        return 'Select to load';
