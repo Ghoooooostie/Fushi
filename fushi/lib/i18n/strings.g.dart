@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160157 (9421 per locale)
+/// Strings: 160395 (9435 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7372,6 +7372,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_desktop_lyrics_hint =>
       'Show the current lyric line in a floating always-on-top window while music plays';
   String get music_desktop_lyrics_title => 'Desktop lyrics';
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  String get music_difficulty_no_terms => 'No dictionary words';
+  String get music_difficulty_pending => 'Not analyzed yet';
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  String get music_difficulty_stop => 'Stop';
   String music_disc_label({required Object n}) => 'Disc ${n}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   String get music_exclusive_hint =>
@@ -7536,6 +7553,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String music_sleep_minutes({required Object n}) => '${n} min';
   String get music_sleep_off => 'Off';
   String get music_sleep_title => 'Sleep timer';
+  String get music_sort_easiest => 'Easiest first';
+  String get music_sort_hardest => 'Hardest first';
+  String get music_sort_label => 'Sort songs';
+  String get music_sort_library => 'Library order';
   String get music_speed_title => 'Speed (pitch preserved)';
   String get music_stop => 'Stop music';
   String get music_tag_field_album => 'Album';
@@ -25747,6 +25768,33 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -26042,6 +26090,14 @@ class _StringsAr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -48843,6 +48899,33 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -49138,6 +49221,14 @@ class _StringsDe extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -72116,6 +72207,33 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -72411,6 +72529,14 @@ class _StringsEs extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -95467,6 +95593,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -95762,6 +95915,14 @@ class _StringsFr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -118655,6 +118816,33 @@ class _StringsId extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -118950,6 +119138,14 @@ class _StringsId extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -141795,6 +141991,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -142090,6 +142313,14 @@ class _StringsIt extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -164416,6 +164647,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      '難易度 = 歌詞の辞書語のうち復習キューに入っている語の割合。歌詞のない曲は最後になります';
+  @override
+  String music_difficulty_known({required Object percent}) => '既知 ${percent}%';
+  @override
+  String get music_difficulty_needs_dictionary => '難易度順にするには辞書が必要です';
+  @override
+  String get music_difficulty_needs_srs => '既知語の判定には復習モジュールをオンにしてください';
+  @override
+  String get music_difficulty_no_lyrics => '歌詞なし';
+  @override
+  String get music_difficulty_no_terms => '辞書語なし';
+  @override
+  String get music_difficulty_pending => '未分析';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => '歌詞を分析中 ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => '難易度を再計算';
+  @override
+  String get music_difficulty_stop => '停止';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -164711,6 +164966,14 @@ class _StringsJa extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'やさしい順';
+  @override
+  String get music_sort_hardest => 'むずかしい順';
+  @override
+  String get music_sort_label => '曲の並び順';
+  @override
+  String get music_sort_library => 'ライブラリ順';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -186600,6 +186863,33 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -186895,6 +187185,14 @@ class _StringsKo extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -209358,6 +209656,33 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -209653,6 +209978,14 @@ class _StringsNl extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -232561,6 +232894,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -232856,6 +233216,14 @@ class _StringsPtBr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -255737,6 +256105,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -256032,6 +256427,14 @@ class _StringsRu extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -278724,6 +279127,33 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -279019,6 +279449,14 @@ class _StringsTh extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -301698,6 +302136,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -301993,6 +302458,14 @@ class _StringsTr extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -324707,6 +325180,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint =>
+      'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+  @override
+  String music_difficulty_known({required Object percent}) =>
+      '${percent}% known';
+  @override
+  String get music_difficulty_needs_dictionary =>
+      'Install a dictionary to rank songs by difficulty';
+  @override
+  String get music_difficulty_needs_srs =>
+      'Turn on the Review module to judge which words you know';
+  @override
+  String get music_difficulty_no_lyrics => 'No lyrics';
+  @override
+  String get music_difficulty_no_terms => 'No dictionary words';
+  @override
+  String get music_difficulty_pending => 'Not analyzed yet';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing lyrics ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => 'Recompute difficulty';
+  @override
+  String get music_difficulty_stop => 'Stop';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -325002,6 +325502,14 @@ class _StringsVi extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => 'Easiest first';
+  @override
+  String get music_sort_hardest => 'Hardest first';
+  @override
+  String get music_sort_label => 'Sort songs';
+  @override
+  String get music_sort_library => 'Library order';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -346643,6 +347151,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => '桌面歌词';
   @override
+  String get music_difficulty_hint => '难度 = 歌词里已进入复习队列的词所占比例；没有歌词的歌排在最后';
+  @override
+  String music_difficulty_known({required Object percent}) => '已知 ${percent}%';
+  @override
+  String get music_difficulty_needs_dictionary => '装好词典后才能按难度排序';
+  @override
+  String get music_difficulty_needs_srs => '开启复习模块后才能判断已知词';
+  @override
+  String get music_difficulty_no_lyrics => '无歌词';
+  @override
+  String get music_difficulty_no_terms => '无词典词';
+  @override
+  String get music_difficulty_pending => '尚未分析';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => '正在分析歌词 ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => '重新计算难度';
+  @override
+  String get music_difficulty_stop => '停止';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
@@ -346922,6 +347453,14 @@ class _StringsZhCn extends _StringsEn {
   String get music_sleep_off => '关闭';
   @override
   String get music_sleep_title => '睡眠定时';
+  @override
+  String get music_sort_easiest => '由易到难';
+  @override
+  String get music_sort_hardest => '由难到易';
+  @override
+  String get music_sort_label => '歌曲排序';
+  @override
+  String get music_sort_library => '曲库顺序';
   @override
   String get music_speed_title => '速度（不变调）';
   @override
@@ -367882,6 +368421,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_difficulty_hint => '難度 = 歌詞裡已進入複習佇列的詞所佔比例；沒有歌詞的歌排在最後';
+  @override
+  String music_difficulty_known({required Object percent}) => '已知 ${percent}%';
+  @override
+  String get music_difficulty_needs_dictionary => '裝好詞典後才能按難度排序';
+  @override
+  String get music_difficulty_needs_srs => '開啟複習模組後才能判斷已知詞';
+  @override
+  String get music_difficulty_no_lyrics => '無歌詞';
+  @override
+  String get music_difficulty_no_terms => '無詞典詞';
+  @override
+  String get music_difficulty_pending => '尚未分析';
+  @override
+  String music_difficulty_progress({
+    required Object done,
+    required Object total,
+  }) => '正在分析歌詞 ${done} / ${total}';
+  @override
+  String get music_difficulty_recompute => '重新計算難度';
+  @override
+  String get music_difficulty_stop => '停止';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -368177,6 +368739,14 @@ class _StringsZhHk extends _StringsEn {
   String get music_sleep_off => 'Off';
   @override
   String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_sort_easiest => '由易到難';
+  @override
+  String get music_sort_hardest => '由難到易';
+  @override
+  String get music_sort_label => '歌曲排序';
+  @override
+  String get music_sort_library => '曲庫順序';
   @override
   String get music_speed_title => 'Speed (pitch preserved)';
   @override
@@ -388376,6 +388946,27 @@ extension on _StringsEn {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -388647,6 +389238,14 @@ extension on _StringsEn {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -407950,6 +408549,27 @@ extension on _StringsAr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -408221,6 +408841,14 @@ extension on _StringsAr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -427575,6 +428203,27 @@ extension on _StringsDe {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -427846,6 +428495,14 @@ extension on _StringsDe {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -447210,6 +447867,27 @@ extension on _StringsEs {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -447481,6 +448159,14 @@ extension on _StringsEs {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -466855,6 +467541,27 @@ extension on _StringsFr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -467126,6 +467833,14 @@ extension on _StringsFr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -486469,6 +487184,27 @@ extension on _StringsId {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -486740,6 +487476,14 @@ extension on _StringsId {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -506080,6 +506824,27 @@ extension on _StringsIt {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -506351,6 +507116,14 @@ extension on _StringsIt {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -525639,6 +526412,27 @@ extension on _StringsJa {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return '難易度 = 歌詞の辞書語のうち復習キューに入っている語の割合。歌詞のない曲は最後になります';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '既知 ${percent}%';
+      case 'music_difficulty_needs_dictionary':
+        return '難易度順にするには辞書が必要です';
+      case 'music_difficulty_needs_srs':
+        return '既知語の判定には復習モジュールをオンにしてください';
+      case 'music_difficulty_no_lyrics':
+        return '歌詞なし';
+      case 'music_difficulty_no_terms':
+        return '辞書語なし';
+      case 'music_difficulty_pending':
+        return '未分析';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            '歌詞を分析中 ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return '難易度を再計算';
+      case 'music_difficulty_stop':
+        return '停止';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -525910,6 +526704,14 @@ extension on _StringsJa {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'やさしい順';
+      case 'music_sort_hardest':
+        return 'むずかしい順';
+      case 'music_sort_label':
+        return '曲の並び順';
+      case 'music_sort_library':
+        return 'ライブラリ順';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -545135,6 +545937,27 @@ extension on _StringsKo {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -545406,6 +546229,14 @@ extension on _StringsKo {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -564715,6 +565546,27 @@ extension on _StringsNl {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -564986,6 +565838,14 @@ extension on _StringsNl {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -584334,6 +585194,27 @@ extension on _StringsPtBr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -584605,6 +585486,14 @@ extension on _StringsPtBr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -603957,6 +604846,27 @@ extension on _StringsRu {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -604228,6 +605138,14 @@ extension on _StringsRu {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -623545,6 +624463,27 @@ extension on _StringsTh {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -623816,6 +624755,14 @@ extension on _StringsTh {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -643146,6 +644093,27 @@ extension on _StringsTr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -643417,6 +644385,14 @@ extension on _StringsTr {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -662739,6 +663715,27 @@ extension on _StringsVi {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return 'Difficulty = share of the dictionary words in the lyrics that are already in your review queue. Songs without lyrics go last.';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '${percent}% known';
+      case 'music_difficulty_needs_dictionary':
+        return 'Install a dictionary to rank songs by difficulty';
+      case 'music_difficulty_needs_srs':
+        return 'Turn on the Review module to judge which words you know';
+      case 'music_difficulty_no_lyrics':
+        return 'No lyrics';
+      case 'music_difficulty_no_terms':
+        return 'No dictionary words';
+      case 'music_difficulty_pending':
+        return 'Not analyzed yet';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            'Analyzing lyrics ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return 'Recompute difficulty';
+      case 'music_difficulty_stop':
+        return 'Stop';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -663010,6 +664007,14 @@ extension on _StringsVi {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return 'Easiest first';
+      case 'music_sort_hardest':
+        return 'Hardest first';
+      case 'music_sort_label':
+        return 'Sort songs';
+      case 'music_sort_library':
+        return 'Library order';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
@@ -682198,6 +683203,27 @@ extension on _StringsZhCn {
         return '播放音乐时在置顶悬浮窗里显示当前歌词';
       case 'music_desktop_lyrics_title':
         return '桌面歌词';
+      case 'music_difficulty_hint':
+        return '难度 = 歌词里已进入复习队列的词所占比例；没有歌词的歌排在最后';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '已知 ${percent}%';
+      case 'music_difficulty_needs_dictionary':
+        return '装好词典后才能按难度排序';
+      case 'music_difficulty_needs_srs':
+        return '开启复习模块后才能判断已知词';
+      case 'music_difficulty_no_lyrics':
+        return '无歌词';
+      case 'music_difficulty_no_terms':
+        return '无词典词';
+      case 'music_difficulty_pending':
+        return '尚未分析';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            '正在分析歌词 ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return '重新计算难度';
+      case 'music_difficulty_stop':
+        return '停止';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
       case 'music_dsd_rate_title':
@@ -682468,6 +683494,14 @@ extension on _StringsZhCn {
         return '关闭';
       case 'music_sleep_title':
         return '睡眠定时';
+      case 'music_sort_easiest':
+        return '由易到难';
+      case 'music_sort_hardest':
+        return '由难到易';
+      case 'music_sort_label':
+        return '歌曲排序';
+      case 'music_sort_library':
+        return '曲库顺序';
       case 'music_speed_title':
         return '速度（不变调）';
       case 'music_stop':
@@ -701586,6 +702620,27 @@ extension on _StringsZhHk {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_difficulty_hint':
+        return '難度 = 歌詞裡已進入複習佇列的詞所佔比例；沒有歌詞的歌排在最後';
+      case 'music_difficulty_known':
+        return ({required Object percent}) => '已知 ${percent}%';
+      case 'music_difficulty_needs_dictionary':
+        return '裝好詞典後才能按難度排序';
+      case 'music_difficulty_needs_srs':
+        return '開啟複習模組後才能判斷已知詞';
+      case 'music_difficulty_no_lyrics':
+        return '無歌詞';
+      case 'music_difficulty_no_terms':
+        return '無詞典詞';
+      case 'music_difficulty_pending':
+        return '尚未分析';
+      case 'music_difficulty_progress':
+        return ({required Object done, required Object total}) =>
+            '正在分析歌詞 ${done} / ${total}';
+      case 'music_difficulty_recompute':
+        return '重新計算難度';
+      case 'music_difficulty_stop':
+        return '停止';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -701857,6 +702912,14 @@ extension on _StringsZhHk {
         return 'Off';
       case 'music_sleep_title':
         return 'Sleep timer';
+      case 'music_sort_easiest':
+        return '由易到難';
+      case 'music_sort_hardest':
+        return '由難到易';
+      case 'music_sort_label':
+        return '歌曲排序';
+      case 'music_sort_library':
+        return '曲庫順序';
       case 'music_speed_title':
         return 'Speed (pitch preserved)';
       case 'music_stop':
