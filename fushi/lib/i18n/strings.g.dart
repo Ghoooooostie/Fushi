@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 155975 (9175 per locale)
+/// Strings: 156043 (9179 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2400,6 +2400,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_mining_pending => 'Adding card…';
   String card_overwritten({required Object deck}) =>
       'Card overwritten in 『${deck}』.';
+  String get card_source_open => 'Go to source';
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   String get card_source_review_after => 'Updated';
   String get card_source_review_before => 'Original';
   String get card_source_review_changes => 'Choose fields to update';
@@ -10057,6 +10060,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_stats_source_game => 'Game';
   String get srs_stats_source_manga => 'Manga';
   String get srs_stats_source_manual => 'Added by hand';
+  String get srs_stats_source_music => 'Music';
   String get srs_stats_source_none => 'No source';
   String get srs_stats_source_online_novel => 'Online novel';
   String get srs_stats_source_online_video => 'Online video';
@@ -16950,6 +16954,12 @@ class _StringsAr extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'تمت الكتابة فوق البطاقة في『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'المحدّث';
   @override
@@ -30065,6 +30075,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -39285,6 +39297,12 @@ class _StringsDe extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Karte in 『${deck}』 überschrieben.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Aktualisiert';
   @override
@@ -52643,6 +52661,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -61967,6 +61987,12 @@ class _StringsEs extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Tarjeta sobrescrita en 『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Actualizado';
   @override
@@ -75345,6 +75371,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -84711,6 +84739,12 @@ class _StringsFr extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Carte remplacée dans « ${deck} ».';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Mis à jour';
   @override
@@ -98135,6 +98169,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -107467,6 +107503,12 @@ class _StringsId extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Kartu ditimpa di 『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Diperbarui';
   @override
@@ -120689,6 +120731,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -129956,6 +130000,12 @@ class _StringsIt extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Carta sovrascritta in『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Aggiornato';
   @override
@@ -143284,6 +143334,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -152443,6 +152495,12 @@ class _StringsJa extends _StringsEn {
   String get card_mining_pending => 'カードを追加中…';
   @override
   String card_overwritten({required Object deck}) => '『${deck}』のカードを上書きしました。';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => '更新後';
   @override
@@ -165171,6 +165229,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -174025,6 +174085,12 @@ class _StringsKo extends _StringsEn {
   String get card_mining_pending => '카드 추가 중…';
   @override
   String card_overwritten({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => '업데이트됨';
   @override
@@ -186786,6 +186852,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -195821,6 +195889,12 @@ class _StringsNl extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Kaart overschreven in 『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Bijgewerkt';
   @override
@@ -209111,6 +209185,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -218412,6 +218488,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Cartão sobrescrito em 『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Atualizado';
   @override
@@ -231737,6 +231819,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -241043,6 +241127,12 @@ class _StringsRu extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Карточка перезаписана в «${deck}».';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Обновлено';
   @override
@@ -254341,6 +254431,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -263583,6 +263675,12 @@ class _StringsTh extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'เขียนทับการ์ดใน『${deck}』แล้ว';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'อัปเดตแล้ว';
   @override
@@ -276696,6 +276794,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -285885,6 +285985,12 @@ class _StringsTr extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Kart 『${deck}』 destesinde üzerine yazıldı.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Güncellenmiş';
   @override
@@ -299117,6 +299223,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -308347,6 +308455,12 @@ class _StringsVi extends _StringsEn {
   @override
   String card_overwritten({required Object deck}) =>
       'Đã ghi đè thẻ trong 『${deck}』.';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => 'Đã cập nhật';
   @override
@@ -321534,6 +321648,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -330413,6 +330529,12 @@ class _StringsZhCn extends _StringsEn {
   String get card_mining_pending => '制卡中…';
   @override
   String card_overwritten({required Object deck}) => '卡片已覆盖到『${deck}』。';
+  @override
+  String get card_source_open => '回到出处';
+  @override
+  String card_source_origin_episode({required Object n}) => '第 ${n} 集';
+  @override
+  String card_source_origin_page({required Object n}) => '第 ${n} 页';
   @override
   String get card_source_review_after => '修改后';
   @override
@@ -342525,6 +342647,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_source_manual => '手动添加';
   @override
+  String get srs_stats_source_music => '音乐';
+  @override
   String get srs_stats_source_none => '无出处';
   @override
   String get srs_stats_source_online_novel => '在线小说';
@@ -350997,6 +351121,12 @@ class _StringsZhHk extends _StringsEn {
   String get card_mining_pending => '製卡中…';
   @override
   String card_overwritten({required Object deck}) => '卡片已覆寫至『${deck}』。';
+  @override
+  String get card_source_open => 'Go to source';
+  @override
+  String card_source_origin_episode({required Object n}) => 'Ep. ${n}';
+  @override
+  String card_source_origin_page({required Object n}) => 'p. ${n}';
   @override
   String get card_source_review_after => '修改後';
   @override
@@ -363397,6 +363527,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_stats_source_manual => 'Added by hand';
   @override
+  String get srs_stats_source_music => 'Music';
+  @override
   String get srs_stats_source_none => 'No source';
   @override
   String get srs_stats_source_online_novel => 'Online novel';
@@ -371548,6 +371680,12 @@ extension on _StringsEn {
         return 'Adding card…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Card overwritten in 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Updated';
       case 'card_source_review_before':
@@ -382906,6 +383044,8 @@ extension on _StringsEn {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -390621,6 +390761,12 @@ extension on _StringsAr {
       case 'card_overwritten':
         return ({required Object deck}) =>
             'تمت الكتابة فوق البطاقة في『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'المحدّث';
       case 'card_source_review_before':
@@ -401974,6 +402120,8 @@ extension on _StringsAr {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -409708,6 +409856,12 @@ extension on _StringsDe {
         return 'Karte wird hinzugefügt…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Karte in 『${deck}』 überschrieben.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Aktualisiert';
       case 'card_source_review_before':
@@ -421098,6 +421252,8 @@ extension on _StringsDe {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -428845,6 +429001,12 @@ extension on _StringsEs {
         return 'Añadiendo tarjeta…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Tarjeta sobrescrita en 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Actualizado';
       case 'card_source_review_before':
@@ -440226,6 +440388,8 @@ extension on _StringsEs {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -447974,6 +448138,12 @@ extension on _StringsFr {
         return 'Ajout de la carte…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carte remplacée dans « ${deck} ».';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Mis à jour';
       case 'card_source_review_before':
@@ -459365,6 +459535,8 @@ extension on _StringsFr {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -467102,6 +467274,12 @@ extension on _StringsId {
         return 'Menambah kartu…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kartu ditimpa di 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Diperbarui';
       case 'card_source_review_before':
@@ -478464,6 +478642,8 @@ extension on _StringsId {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -486194,6 +486374,12 @@ extension on _StringsIt {
         return 'Aggiunta carta…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Carta sovrascritta in『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Aggiornato';
       case 'card_source_review_before':
@@ -497572,6 +497758,8 @@ extension on _StringsIt {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -505286,6 +505474,12 @@ extension on _StringsJa {
         return 'カードを追加中…';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』のカードを上書きしました。';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return '更新後';
       case 'card_source_review_before':
@@ -516614,6 +516808,8 @@ extension on _StringsJa {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -524273,6 +524469,12 @@ extension on _StringsKo {
         return '카드 추가 중…';
       case 'card_overwritten':
         return ({required Object deck}) => '『${deck}』에 카드를 덮어썼습니다.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return '업데이트됨';
       case 'card_source_review_before':
@@ -535605,6 +535807,8 @@ extension on _StringsKo {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -543304,6 +543508,12 @@ extension on _StringsNl {
         return 'Kaart toevoegen…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Kaart overschreven in 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Bijgewerkt';
       case 'card_source_review_before':
@@ -554686,6 +554896,8 @@ extension on _StringsNl {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -562423,6 +562635,12 @@ extension on _StringsPtBr {
         return 'Adicionando cartão…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Cartão sobrescrito em 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Atualizado';
       case 'card_source_review_before':
@@ -573798,6 +574016,8 @@ extension on _StringsPtBr {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -581536,6 +581756,12 @@ extension on _StringsRu {
         return 'Добавление карточки…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Карточка перезаписана в «${deck}».';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Обновлено';
       case 'card_source_review_before':
@@ -592914,6 +593140,8 @@ extension on _StringsRu {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -600632,6 +600860,12 @@ extension on _StringsTh {
         return 'กำลังเพิ่มบัตร...';
       case 'card_overwritten':
         return ({required Object deck}) => 'เขียนทับการ์ดใน『${deck}』แล้ว';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'อัปเดตแล้ว';
       case 'card_source_review_before':
@@ -611990,6 +612224,8 @@ extension on _StringsTh {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -619717,6 +619953,12 @@ extension on _StringsTr {
       case 'card_overwritten':
         return ({required Object deck}) =>
             'Kart 『${deck}』 destesinde üzerine yazıldı.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Güncellenmiş';
       case 'card_source_review_before':
@@ -631084,6 +631326,8 @@ extension on _StringsTr {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -638809,6 +639053,12 @@ extension on _StringsVi {
         return 'Đang thêm thẻ…';
       case 'card_overwritten':
         return ({required Object deck}) => 'Đã ghi đè thẻ trong 『${deck}』.';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return 'Đã cập nhật';
       case 'card_source_review_before':
@@ -650173,6 +650423,8 @@ extension on _StringsVi {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
@@ -657837,6 +658089,12 @@ extension on _StringsZhCn {
         return '制卡中…';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆盖到『${deck}』。';
+      case 'card_source_open':
+        return '回到出处';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => '第 ${n} 集';
+      case 'card_source_origin_page':
+        return ({required Object n}) => '第 ${n} 页';
       case 'card_source_review_after':
         return '修改后';
       case 'card_source_review_before':
@@ -669086,6 +669344,8 @@ extension on _StringsZhCn {
         return '漫画';
       case 'srs_stats_source_manual':
         return '手动添加';
+      case 'srs_stats_source_music':
+        return '音乐';
       case 'srs_stats_source_none':
         return '无出处';
       case 'srs_stats_source_online_novel':
@@ -676694,6 +676954,12 @@ extension on _StringsZhHk {
         return '製卡中…';
       case 'card_overwritten':
         return ({required Object deck}) => '卡片已覆寫至『${deck}』。';
+      case 'card_source_open':
+        return 'Go to source';
+      case 'card_source_origin_episode':
+        return ({required Object n}) => 'Ep. ${n}';
+      case 'card_source_origin_page':
+        return ({required Object n}) => 'p. ${n}';
       case 'card_source_review_after':
         return '修改後';
       case 'card_source_review_before':
@@ -688000,6 +688266,8 @@ extension on _StringsZhHk {
         return 'Manga';
       case 'srs_stats_source_manual':
         return 'Added by hand';
+      case 'srs_stats_source_music':
+        return 'Music';
       case 'srs_stats_source_none':
         return 'No source';
       case 'srs_stats_source_online_novel':
