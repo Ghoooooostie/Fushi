@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 161279 (9487 per locale)
+/// Strings: 161619 (9507 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1234,7 +1234,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_default_section => 'Default tags';
   String get anki_tag_include_category => 'Add source category tag';
   String get anki_tag_include_category_hint =>
-      'Books get "book", videos get "video", games get "game"';
+      'Books get "book", videos get "video", games get "game", music gets "music"';
   String get anki_tag_include_fushi => 'Add "fushi" tag';
   String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
@@ -2106,7 +2106,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Local pronunciation audio databases';
   String get backup_category_music => 'Music';
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   String get backup_category_profiles => 'Profiles';
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_category_progress => 'Reading progress';
@@ -6233,7 +6233,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Indexing… ${done} / ${total}';
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
   String lookup_library_sentences_status({
@@ -7384,6 +7384,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
   String get music_crossfade_off => 'Off';
   String get music_crossfade_title => 'Crossfade';
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
   String get music_disc_add => 'Add disc';
   String music_disc_added({required Object count}) =>
       'Added ${count} disc(s) to the library';
@@ -7448,19 +7451,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Preload the next track so albums play without gaps';
   String get music_gapless_title => 'Gapless playback';
   String get music_hi_res_badge => 'Hi-Res';
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  String get music_karaoke_open => 'Open karaoke view';
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  String get music_karaoke_overlay_off => 'Off';
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  String get music_karaoke_title => 'Karaoke subtitles';
   String get music_library_empty => 'No music yet';
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
   String get music_library_rescan => 'Rescan library';
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  String get music_listening_study_title => 'Count listening as study time';
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   String get music_loudness_scan_now => 'Measure loudness now';
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   String get music_lyrics_choose_source => 'Choose lyrics source';
   String get music_lyrics_empty => 'No lyrics for this track';
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   String get music_lyrics_exported => 'Lyrics exported';
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   String get music_lyrics_no_candidates => 'No lyrics found';
   String get music_lyrics_offset_earlier => 'Lyrics earlier';
   String get music_lyrics_offset_later => 'Lyrics later';
@@ -7582,6 +7606,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
   String get music_servers_title => 'Server libraries';
   String get music_setting_acoustid_key => 'AcoustID API key';
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   String get music_setting_identify_library => 'Identify library';
@@ -15456,7 +15482,7 @@ class _StringsAr extends _StringsEn {
   String get anki_tag_include_category => 'إضافة وسم فئة المصدر';
   @override
   String get anki_tag_include_category_hint =>
-      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
   @override
   String get anki_tag_include_fushi => 'إضافة وسم "fushi"';
   @override
@@ -16880,7 +16906,7 @@ class _StringsAr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'الملفات الشخصية';
   @override
@@ -23878,7 +23904,7 @@ class _StringsAr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -25858,6 +25884,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -25965,6 +25996,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -25972,12 +26025,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -25988,6 +26052,11 @@ class _StringsAr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -26206,6 +26275,9 @@ class _StringsAr extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -38499,7 +38571,7 @@ class _StringsDe extends _StringsEn {
   String get anki_tag_include_category => 'Tag für Quellkategorie hinzufügen';
   @override
   String get anki_tag_include_category_hint =>
-      'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+      'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
   @override
   String get anki_tag_include_fushi => 'Tag „fushi“ hinzufügen';
   @override
@@ -39936,7 +40008,7 @@ class _StringsDe extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profile';
   @override
@@ -47085,7 +47157,7 @@ class _StringsDe extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -49110,6 +49182,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -49217,6 +49294,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -49224,12 +49323,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -49240,6 +49350,11 @@ class _StringsDe extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -49458,6 +49573,9 @@ class _StringsDe extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -61912,7 +62030,7 @@ class _StringsEs extends _StringsEn {
       'Añadir etiqueta de categoría de origen';
   @override
   String get anki_tag_include_category_hint =>
-      'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+      'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
   @override
   String get anki_tag_include_fushi => 'Añadir la etiqueta «fushi»';
   @override
@@ -63354,7 +63472,7 @@ class _StringsEs extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfiles';
   @override
@@ -70512,7 +70630,7 @@ class _StringsEs extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -72539,6 +72657,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -72646,6 +72769,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -72653,12 +72798,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -72669,6 +72825,11 @@ class _StringsEs extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -72887,6 +73048,9 @@ class _StringsEs extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -85379,7 +85543,7 @@ class _StringsFr extends _StringsEn {
       'Ajouter une étiquette de catégorie source';
   @override
   String get anki_tag_include_category_hint =>
-      'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+      'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
   @override
   String get anki_tag_include_fushi => 'Ajouter l\'étiquette « fushi »';
   @override
@@ -86828,7 +86992,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profils';
   @override
@@ -94010,7 +94174,7 @@ class _StringsFr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -96046,6 +96210,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -96153,6 +96322,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -96160,12 +96351,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -96176,6 +96378,11 @@ class _StringsFr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -96394,6 +96601,9 @@ class _StringsFr extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -108896,7 +109106,7 @@ class _StringsId extends _StringsEn {
   String get anki_tag_include_category => 'Tambahkan tag kategori sumber';
   @override
   String get anki_tag_include_category_hint =>
-      'Buku diberi "book", video diberi "video", gim diberi "game"';
+      'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
   @override
   String get anki_tag_include_fushi => 'Tambahkan tag "fushi"';
   @override
@@ -110327,7 +110537,7 @@ class _StringsId extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profil';
   @override
@@ -117390,7 +117600,7 @@ class _StringsId extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -119390,6 +119600,11 @@ class _StringsId extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -119497,6 +119712,28 @@ class _StringsId extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -119504,12 +119741,23 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -119520,6 +119768,11 @@ class _StringsId extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -119738,6 +119991,9 @@ class _StringsId extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -132104,7 +132360,7 @@ class _StringsIt extends _StringsEn {
       'Aggiungi etichetta categoria di origine';
   @override
   String get anki_tag_include_category_hint =>
-      'I libri ricevono "book", i video "video", i giochi "game"';
+      'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
   @override
   String get anki_tag_include_fushi => 'Aggiungi etichetta "fushi"';
   @override
@@ -133544,7 +133800,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profili';
   @override
@@ -140659,7 +140915,7 @@ class _StringsIt extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -142686,6 +142942,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -142793,6 +143054,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -142800,12 +143083,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -142816,6 +143110,11 @@ class _StringsIt extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -143034,6 +143333,9 @@ class _StringsIt extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -155383,7 +155685,7 @@ class _StringsJa extends _StringsEn {
   String get anki_tag_include_category => 'ソース分類タグを追加';
   @override
   String get anki_tag_include_category_hint =>
-      '書籍には「book」、動画には「video」、ゲームには「game」';
+      '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
   @override
   String get anki_tag_include_fushi => '「fushi」タグを追加';
   @override
@@ -156791,7 +157093,7 @@ class _StringsJa extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'プロファイル';
   @override
@@ -163543,7 +163845,7 @@ class _StringsJa extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -165463,6 +165765,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -165570,6 +165877,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -165577,12 +165906,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -165593,6 +165933,11 @@ class _StringsJa extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -165811,6 +166156,9 @@ class _StringsJa extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -177699,7 +178047,7 @@ class _StringsKo extends _StringsEn {
   String get anki_tag_include_category => '소스 분류 태그 추가';
   @override
   String get anki_tag_include_category_hint =>
-      '책은 "book", 비디오는 "video", 게임은 "game"';
+      '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" 태그 추가';
   @override
@@ -179105,7 +179453,7 @@ class _StringsKo extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '프로필';
   @override
@@ -185871,7 +186219,7 @@ class _StringsKo extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -187803,6 +188151,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -187910,6 +188263,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -187917,12 +188292,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -187933,6 +188319,11 @@ class _StringsKo extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -188151,6 +188542,9 @@ class _StringsKo extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -200171,7 +200565,7 @@ class _StringsNl extends _StringsEn {
   String get anki_tag_include_category => 'Tag voor broncategorie toevoegen';
   @override
   String get anki_tag_include_category_hint =>
-      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
   @override
   String get anki_tag_include_fushi => 'Tag "fushi" toevoegen';
   @override
@@ -201608,7 +202002,7 @@ class _StringsNl extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profielen';
   @override
@@ -208707,7 +209101,7 @@ class _StringsNl extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -210717,6 +211111,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -210824,6 +211223,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -210831,12 +211252,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -210847,6 +211279,11 @@ class _StringsNl extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -211065,6 +211502,9 @@ class _StringsNl extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -223493,7 +223933,7 @@ class _StringsPtBr extends _StringsEn {
       'Adicionar tag de categoria de origem';
   @override
   String get anki_tag_include_category_hint =>
-      'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+      'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
   @override
   String get anki_tag_include_fushi => 'Adicionar tag "fushi"';
   @override
@@ -224931,7 +225371,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfis';
   @override
@@ -232059,7 +232499,7 @@ class _StringsPtBr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -234076,6 +234516,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -234183,6 +234628,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -234190,12 +234657,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -234206,6 +234684,11 @@ class _StringsPtBr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -234424,6 +234907,9 @@ class _StringsPtBr extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -246860,7 +247346,7 @@ class _StringsRu extends _StringsEn {
   String get anki_tag_include_category => 'Добавлять тег категории источника';
   @override
   String get anki_tag_include_category_hint =>
-      'Книги получают «book», видео — «video», игры — «game»';
+      'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
   @override
   String get anki_tag_include_fushi => 'Добавлять тег «fushi»';
   @override
@@ -248295,7 +248781,7 @@ class _StringsRu extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Профили';
   @override
@@ -255395,7 +255881,7 @@ class _StringsRu extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -257408,6 +257894,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -257515,6 +258006,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -257522,12 +258035,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -257538,6 +258062,11 @@ class _StringsRu extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -257756,6 +258285,9 @@ class _StringsRu extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -270151,7 +270683,7 @@ class _StringsTh extends _StringsEn {
   String get anki_tag_include_category => 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
   @override
   String get anki_tag_include_category_hint =>
-      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
   @override
   String get anki_tag_include_fushi => 'เพิ่มแท็ก "fushi"';
   @override
@@ -271577,7 +272109,7 @@ class _StringsTh extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'โปรไฟล์';
   @override
@@ -278566,7 +279098,7 @@ class _StringsTh extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -280551,6 +281083,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -280658,6 +281195,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -280665,12 +281224,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -280681,6 +281251,11 @@ class _StringsTh extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -280899,6 +281474,9 @@ class _StringsTh extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -293174,7 +293752,7 @@ class _StringsTr extends _StringsEn {
   String get anki_tag_include_category => 'Kaynak kategorisi etiketi ekle';
   @override
   String get anki_tag_include_category_hint =>
-      'Kitaplara "book", videolara "video", oyunlara "game"';
+      'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" etiketi ekle';
   @override
@@ -294605,7 +295183,7 @@ class _StringsTr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profiller';
   @override
@@ -301680,7 +302258,7 @@ class _StringsTr extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -303681,6 +304259,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -303788,6 +304371,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -303795,12 +304400,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -303811,6 +304427,11 @@ class _StringsTr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -304029,6 +304650,9 @@ class _StringsTr extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -316371,7 +316995,7 @@ class _StringsVi extends _StringsEn {
   String get anki_tag_include_category => 'Thêm thẻ phân loại nguồn';
   @override
   String get anki_tag_include_category_hint =>
-      'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+      'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
   @override
   String get anki_tag_include_fushi => 'Thêm thẻ "fushi"';
   @override
@@ -317801,7 +318425,7 @@ class _StringsVi extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Hồ sơ';
   @override
@@ -324854,7 +325478,7 @@ class _StringsVi extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -326846,6 +327470,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -326953,6 +327582,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -326960,12 +327611,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -326976,6 +327638,11 @@ class _StringsVi extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -327194,6 +327861,9 @@ class _StringsVi extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -339363,7 +340033,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tag_include_category => '添加来源分类标签';
   @override
-  String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」、游戏标「game」';
+  String get anki_tag_include_category_hint =>
+      '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
   @override
   String get anki_tag_include_fushi => '添加「fushi」标签';
   @override
@@ -340651,7 +341322,7 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_music => '音乐';
   @override
   String get backup_category_music_desc =>
-      '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+      '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -347096,8 +347767,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lookup_library_sentences_rebuild => '重建例句索引';
   @override
-  String get lookup_library_sentences_rebuild_hint =>
-      '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+  String get lookup_library_sentences_rebuild_hint => '按库里的书、字幕、歌词和游戏台词重新建索引。';
   @override
   String get lookup_library_sentences_rebuild_started => '正在后台重建例句索引';
   @override
@@ -348937,6 +349607,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_crossfade_title => '交叉淡入';
   @override
+  String get music_desktop_lyrics_hint => '播放音乐时在置顶悬浮窗里显示当前歌词';
+  @override
+  String get music_desktop_lyrics_title => '桌面歌词';
+  @override
   String get music_disc_add => '添加光盘';
   @override
   String music_disc_added({required Object count}) => '已加入 ${count} 张光盘';
@@ -349034,17 +349708,48 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => '自动';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS 卡拉 OK 字幕';
+  @override
+  String get music_karaoke_effects_hint => '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+  @override
+  String get music_karaoke_open => '打开卡拉 OK 字幕页';
+  @override
+  String get music_karaoke_open_failed => '卡拉 OK 字幕页打不开';
+  @override
+  String get music_karaoke_overlay_off => '关闭';
+  @override
+  String get music_karaoke_overlay_original => '原样渲染';
+  @override
+  String get music_karaoke_overlay_structured => '逐字歌词';
+  @override
+  String get music_karaoke_title => '卡拉 OK 字幕';
+  @override
   String get music_library_empty => '曲库还是空的';
   @override
   String get music_library_empty_hint => '添加一个放着音乐文件的文件夹。';
   @override
   String get music_library_rescan => '重新扫描曲库';
   @override
+  String get music_listening_study_hint => '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
+  @override
+  String get music_listening_study_title => '听歌计入学习';
+  @override
   String get music_loudness_scan_hint => '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
   @override
   String get music_loudness_scan_now => '立即测量响度';
   @override
   String get music_loudness_scan_title => '为无 ReplayGain 标签的曲目测量响度';
+  @override
+  String get music_lyrics_ab_loop_extend => '循环再加一行';
+  @override
+  String get music_lyrics_ab_loop_line => '循环当前行';
+  @override
+  String get music_lyrics_ab_loop_off => '停止循环';
   @override
   String get music_lyrics_choose_source => '选择歌词来源';
   @override
@@ -349055,6 +349760,10 @@ class _StringsZhCn extends _StringsEn {
   String get music_lyrics_exported => '歌词已导出';
   @override
   String get music_lyrics_lookup_pause_title => '查词时暂停';
+  @override
+  String get music_lyrics_media_session_hint => '在媒体通知与锁屏的副标题里显示当前歌词行';
+  @override
+  String get music_lyrics_media_session_title => '锁屏显示歌词';
   @override
   String get music_lyrics_no_candidates => '没有找到歌词';
   @override
@@ -349263,6 +349972,9 @@ class _StringsZhCn extends _StringsEn {
   String get music_servers_title => '服务器曲库';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      '已内置，可填自己的 key 覆盖。只上传声纹与时长。';
   @override
   String get music_setting_acoustid_key_hint =>
       'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
@@ -360533,7 +361245,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tag_include_category => '加入來源分類標籤';
   @override
-  String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」、遊戲標「game」';
+  String get anki_tag_include_category_hint =>
+      '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
   @override
   String get anki_tag_include_fushi => '加入「fushi」標籤';
   @override
@@ -361920,7 +362633,7 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -368452,7 +369165,7 @@ class _StringsZhHk extends _StringsEn {
   String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
   @override
   String get lookup_library_sentences_rebuild_hint =>
-      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      'Re-index your books, subtitles, lyrics and game text from the library.';
   @override
   String get lookup_library_sentences_rebuild_started =>
       'Rebuilding the sentence index in the background';
@@ -370322,6 +371035,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String get music_disc_add => 'Add disc';
   @override
   String music_disc_added({required Object count}) =>
@@ -370429,6 +371147,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -370436,12 +371176,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
   @override
@@ -370452,6 +371203,11 @@ class _StringsZhHk extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -370670,6 +371426,9 @@ class _StringsZhHk extends _StringsEn {
   String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -382068,7 +382827,7 @@ extension on _StringsEn {
       case 'anki_tag_include_category':
         return 'Add source category tag';
       case 'anki_tag_include_category_hint':
-        return 'Books get "book", videos get "video", games get "game"';
+        return 'Books get "book", videos get "video", games get "game", music gets "music"';
       case 'anki_tag_include_fushi':
         return 'Add "fushi" tag';
       case 'anki_tag_include_fushi_hint':
@@ -383230,7 +383989,7 @@ extension on _StringsEn {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_category_profiles_desc':
@@ -389227,7 +389986,7 @@ extension on _StringsEn {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -390972,6 +391731,10 @@ extension on _StringsEn {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -391066,18 +391829,48 @@ extension on _StringsEn {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -391088,6 +391881,10 @@ extension on _StringsEn {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -391285,6 +392082,8 @@ extension on _StringsEn {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -401788,7 +402587,7 @@ extension on _StringsAr {
       case 'anki_tag_include_category':
         return 'إضافة وسم فئة المصدر';
       case 'anki_tag_include_category_hint':
-        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
       case 'anki_tag_include_fushi':
         return 'إضافة وسم "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -402949,7 +403748,7 @@ extension on _StringsAr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'الملفات الشخصية';
       case 'backup_category_profiles_desc':
@@ -408941,7 +409740,7 @@ extension on _StringsAr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -410686,6 +411485,10 @@ extension on _StringsAr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -410780,18 +411583,48 @@ extension on _StringsAr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -410802,6 +411635,10 @@ extension on _StringsAr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -410999,6 +411836,8 @@ extension on _StringsAr {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -421514,7 +422353,7 @@ extension on _StringsDe {
       case 'anki_tag_include_category':
         return 'Tag für Quellkategorie hinzufügen';
       case 'anki_tag_include_category_hint':
-        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
       case 'anki_tag_include_fushi':
         return 'Tag „fushi“ hinzufügen';
       case 'anki_tag_include_fushi_hint':
@@ -422682,7 +423521,7 @@ extension on _StringsDe {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profile';
       case 'backup_category_profiles_desc':
@@ -428696,7 +429535,7 @@ extension on _StringsDe {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -430451,6 +431290,10 @@ extension on _StringsDe {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -430545,18 +431388,48 @@ extension on _StringsDe {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -430567,6 +431440,10 @@ extension on _StringsDe {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -430764,6 +431641,8 @@ extension on _StringsDe {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -441296,7 +442175,7 @@ extension on _StringsEs {
       case 'anki_tag_include_category':
         return 'Añadir etiqueta de categoría de origen';
       case 'anki_tag_include_category_hint':
-        return 'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+        return 'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
       case 'anki_tag_include_fushi':
         return 'Añadir la etiqueta «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -442466,7 +443345,7 @@ extension on _StringsEs {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfiles';
       case 'backup_category_profiles_desc':
@@ -448472,7 +449351,7 @@ extension on _StringsEs {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -450226,6 +451105,10 @@ extension on _StringsEs {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -450320,18 +451203,48 @@ extension on _StringsEs {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -450342,6 +451255,10 @@ extension on _StringsEs {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -450539,6 +451456,8 @@ extension on _StringsEs {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -461072,7 +461991,7 @@ extension on _StringsFr {
       case 'anki_tag_include_category':
         return 'Ajouter une étiquette de catégorie source';
       case 'anki_tag_include_category_hint':
-        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
       case 'anki_tag_include_fushi':
         return 'Ajouter l\'étiquette « fushi »';
       case 'anki_tag_include_fushi_hint':
@@ -462242,7 +463161,7 @@ extension on _StringsFr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profils';
       case 'backup_category_profiles_desc':
@@ -468258,7 +469177,7 @@ extension on _StringsFr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -470011,6 +470930,10 @@ extension on _StringsFr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -470105,18 +471028,48 @@ extension on _StringsFr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -470127,6 +471080,10 @@ extension on _StringsFr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -470324,6 +471281,8 @@ extension on _StringsFr {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -480854,7 +481813,7 @@ extension on _StringsId {
       case 'anki_tag_include_category':
         return 'Tambahkan tag kategori sumber';
       case 'anki_tag_include_category_hint':
-        return 'Buku diberi "book", video diberi "video", gim diberi "game"';
+        return 'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
       case 'anki_tag_include_fushi':
         return 'Tambahkan tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -482018,7 +482977,7 @@ extension on _StringsId {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profil';
       case 'backup_category_profiles_desc':
@@ -488019,7 +488978,7 @@ extension on _StringsId {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -489765,6 +490724,10 @@ extension on _StringsId {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -489859,18 +490822,48 @@ extension on _StringsId {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -489881,6 +490874,10 @@ extension on _StringsId {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -490078,6 +491075,8 @@ extension on _StringsId {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -500590,7 +501589,7 @@ extension on _StringsIt {
       case 'anki_tag_include_category':
         return 'Aggiungi etichetta categoria di origine';
       case 'anki_tag_include_category_hint':
-        return 'I libri ricevono "book", i video "video", i giochi "game"';
+        return 'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
       case 'anki_tag_include_fushi':
         return 'Aggiungi etichetta "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -501756,7 +502755,7 @@ extension on _StringsIt {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profili';
       case 'backup_category_profiles_desc':
@@ -507764,7 +508763,7 @@ extension on _StringsIt {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -509516,6 +510515,10 @@ extension on _StringsIt {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -509610,18 +510613,48 @@ extension on _StringsIt {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -509632,6 +510665,10 @@ extension on _StringsIt {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -509829,6 +510866,8 @@ extension on _StringsIt {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -520344,7 +521383,7 @@ extension on _StringsJa {
       case 'anki_tag_include_category':
         return 'ソース分類タグを追加';
       case 'anki_tag_include_category_hint':
-        return '書籍には「book」、動画には「video」、ゲームには「game」';
+        return '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
       case 'anki_tag_include_fushi':
         return '「fushi」タグを追加';
       case 'anki_tag_include_fushi_hint':
@@ -521502,7 +522541,7 @@ extension on _StringsJa {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'プロファイル';
       case 'backup_category_profiles_desc':
@@ -527473,7 +528512,7 @@ extension on _StringsJa {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -529215,6 +530254,10 @@ extension on _StringsJa {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -529309,18 +530352,48 @@ extension on _StringsJa {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -529331,6 +530404,10 @@ extension on _StringsJa {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -529528,6 +530605,8 @@ extension on _StringsJa {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -539977,7 +541056,7 @@ extension on _StringsKo {
       case 'anki_tag_include_category':
         return '소스 분류 태그 추가';
       case 'anki_tag_include_category_hint':
-        return '책은 "book", 비디오는 "video", 게임은 "game"';
+        return '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" 태그 추가';
       case 'anki_tag_include_fushi_hint':
@@ -541134,7 +542213,7 @@ extension on _StringsKo {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '프로필';
       case 'backup_category_profiles_desc':
@@ -547111,7 +548190,7 @@ extension on _StringsKo {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -548851,6 +549930,10 @@ extension on _StringsKo {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -548945,18 +550028,48 @@ extension on _StringsKo {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -548967,6 +550080,10 @@ extension on _StringsKo {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -549164,6 +550281,8 @@ extension on _StringsKo {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -559644,7 +560763,7 @@ extension on _StringsNl {
       case 'anki_tag_include_category':
         return 'Tag voor broncategorie toevoegen';
       case 'anki_tag_include_category_hint':
-        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
       case 'anki_tag_include_fushi':
         return 'Tag "fushi" toevoegen';
       case 'anki_tag_include_fushi_hint':
@@ -560807,7 +561926,7 @@ extension on _StringsNl {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profielen';
       case 'backup_category_profiles_desc':
@@ -566816,7 +567935,7 @@ extension on _StringsNl {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -568571,6 +569690,10 @@ extension on _StringsNl {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -568665,18 +569788,48 @@ extension on _StringsNl {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -568687,6 +569840,10 @@ extension on _StringsNl {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -568884,6 +570041,8 @@ extension on _StringsNl {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -579407,7 +580566,7 @@ extension on _StringsPtBr {
       case 'anki_tag_include_category':
         return 'Adicionar tag de categoria de origem';
       case 'anki_tag_include_category_hint':
-        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
       case 'anki_tag_include_fushi':
         return 'Adicionar tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -580573,7 +581732,7 @@ extension on _StringsPtBr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfis';
       case 'backup_category_profiles_desc':
@@ -586577,7 +587736,7 @@ extension on _StringsPtBr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -588330,6 +589489,10 @@ extension on _StringsPtBr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -588424,18 +589587,48 @@ extension on _StringsPtBr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -588446,6 +589639,10 @@ extension on _StringsPtBr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -588643,6 +589840,8 @@ extension on _StringsPtBr {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -599164,7 +600363,7 @@ extension on _StringsRu {
       case 'anki_tag_include_category':
         return 'Добавлять тег категории источника';
       case 'anki_tag_include_category_hint':
-        return 'Книги получают «book», видео — «video», игры — «game»';
+        return 'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
       case 'anki_tag_include_fushi':
         return 'Добавлять тег «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -600332,7 +601531,7 @@ extension on _StringsRu {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Профили';
       case 'backup_category_profiles_desc':
@@ -606340,7 +607539,7 @@ extension on _StringsRu {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -608093,6 +609292,10 @@ extension on _StringsRu {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -608187,18 +609390,48 @@ extension on _StringsRu {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -608209,6 +609442,10 @@ extension on _StringsRu {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -608406,6 +609643,8 @@ extension on _StringsRu {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -618916,7 +620155,7 @@ extension on _StringsTh {
       case 'anki_tag_include_category':
         return 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
       case 'anki_tag_include_category_hint':
-        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
       case 'anki_tag_include_fushi':
         return 'เพิ่มแท็ก "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -620078,7 +621317,7 @@ extension on _StringsTh {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'โปรไฟล์';
       case 'backup_category_profiles_desc':
@@ -626076,7 +627315,7 @@ extension on _StringsTh {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -627821,6 +629060,10 @@ extension on _StringsTh {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -627915,18 +629158,48 @@ extension on _StringsTh {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -627937,6 +629210,10 @@ extension on _StringsTh {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -628134,6 +629411,8 @@ extension on _StringsTh {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -638641,7 +639920,7 @@ extension on _StringsTr {
       case 'anki_tag_include_category':
         return 'Kaynak kategorisi etiketi ekle';
       case 'anki_tag_include_category_hint':
-        return 'Kitaplara "book", videolara "video", oyunlara "game"';
+        return 'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" etiketi ekle';
       case 'anki_tag_include_fushi_hint':
@@ -639807,7 +641086,7 @@ extension on _StringsTr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiller';
       case 'backup_category_profiles_desc':
@@ -645812,7 +647091,7 @@ extension on _StringsTr {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -647562,6 +648841,10 @@ extension on _StringsTr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -647656,18 +648939,48 @@ extension on _StringsTr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -647678,6 +648991,10 @@ extension on _StringsTr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -647875,6 +649192,8 @@ extension on _StringsTr {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -658385,7 +659704,7 @@ extension on _StringsVi {
       case 'anki_tag_include_category':
         return 'Thêm thẻ phân loại nguồn';
       case 'anki_tag_include_category_hint':
-        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
       case 'anki_tag_include_fushi':
         return 'Thêm thẻ "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -659549,7 +660868,7 @@ extension on _StringsVi {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Hồ sơ';
       case 'backup_category_profiles_desc':
@@ -665550,7 +666869,7 @@ extension on _StringsVi {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -667295,6 +668614,10 @@ extension on _StringsVi {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -667389,18 +668712,48 @@ extension on _StringsVi {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -667411,6 +668764,10 @@ extension on _StringsVi {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -667608,6 +668965,8 @@ extension on _StringsVi {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -678085,7 +679444,7 @@ extension on _StringsZhCn {
       case 'anki_tag_include_category':
         return '添加来源分类标签';
       case 'anki_tag_include_category_hint':
-        return '书籍标「book」、视频标「video」、游戏标「game」';
+        return '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
       case 'anki_tag_include_fushi':
         return '添加「fushi」标签';
       case 'anki_tag_include_fushi_hint':
@@ -679232,7 +680591,7 @@ extension on _StringsZhCn {
       case 'backup_category_music':
         return '音乐';
       case 'backup_category_music_desc':
-        return '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+        return '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -685165,7 +686524,7 @@ extension on _StringsZhCn {
       case 'lookup_library_sentences_rebuild':
         return '重建例句索引';
       case 'lookup_library_sentences_rebuild_hint':
-        return '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+        return '按库里的书、字幕、歌词和游戏台词重新建索引。';
       case 'lookup_library_sentences_rebuild_started':
         return '正在后台重建例句索引';
       case 'lookup_library_sentences_status':
@@ -686892,6 +688251,10 @@ extension on _StringsZhCn {
         return '关';
       case 'music_crossfade_title':
         return '交叉淡入';
+      case 'music_desktop_lyrics_hint':
+        return '播放音乐时在置顶悬浮窗里显示当前歌词';
+      case 'music_desktop_lyrics_title':
+        return '桌面歌词';
       case 'music_disc_add':
         return '添加光盘';
       case 'music_disc_added':
@@ -686983,18 +688346,48 @@ extension on _StringsZhCn {
         return '无缝播放';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return '自动';
+      case 'music_karaoke_ass_render_hint':
+        return '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS 卡拉 OK 字幕';
+      case 'music_karaoke_effects_hint':
+        return '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+      case 'music_karaoke_open':
+        return '打开卡拉 OK 字幕页';
+      case 'music_karaoke_open_failed':
+        return '卡拉 OK 字幕页打不开';
+      case 'music_karaoke_overlay_off':
+        return '关闭';
+      case 'music_karaoke_overlay_original':
+        return '原样渲染';
+      case 'music_karaoke_overlay_structured':
+        return '逐字歌词';
+      case 'music_karaoke_title':
+        return '卡拉 OK 字幕';
       case 'music_library_empty':
         return '曲库还是空的';
       case 'music_library_empty_hint':
         return '添加一个放着音乐文件的文件夹。';
       case 'music_library_rescan':
         return '重新扫描曲库';
+      case 'music_listening_study_hint':
+        return '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
+      case 'music_listening_study_title':
+        return '听歌计入学习';
       case 'music_loudness_scan_hint':
         return '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
       case 'music_loudness_scan_now':
         return '立即测量响度';
       case 'music_loudness_scan_title':
         return '为无 ReplayGain 标签的曲目测量响度';
+      case 'music_lyrics_ab_loop_extend':
+        return '循环再加一行';
+      case 'music_lyrics_ab_loop_line':
+        return '循环当前行';
+      case 'music_lyrics_ab_loop_off':
+        return '停止循环';
       case 'music_lyrics_choose_source':
         return '选择歌词来源';
       case 'music_lyrics_empty':
@@ -687005,6 +688398,10 @@ extension on _StringsZhCn {
         return '歌词已导出';
       case 'music_lyrics_lookup_pause_title':
         return '查词时暂停';
+      case 'music_lyrics_media_session_hint':
+        return '在媒体通知与锁屏的副标题里显示当前歌词行';
+      case 'music_lyrics_media_session_title':
+        return '锁屏显示歌词';
       case 'music_lyrics_no_candidates':
         return '没有找到歌词';
       case 'music_lyrics_offset_earlier':
@@ -687201,6 +688598,8 @@ extension on _StringsZhCn {
         return '服务器曲库';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return '已内置，可填自己的 key 覆盖。只上传声纹与时长。';
       case 'music_setting_acoustid_key_hint':
         return 'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
       case 'music_setting_identify_library':
@@ -697571,7 +698970,7 @@ extension on _StringsZhHk {
       case 'anki_tag_include_category':
         return '加入來源分類標籤';
       case 'anki_tag_include_category_hint':
-        return '書籍標「book」、影片標「video」、遊戲標「game」';
+        return '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
       case 'anki_tag_include_fushi':
         return '加入「fushi」標籤';
       case 'anki_tag_include_fushi_hint':
@@ -698727,7 +700126,7 @@ extension on _StringsZhHk {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -704679,7 +706078,7 @@ extension on _StringsZhHk {
       case 'lookup_library_sentences_rebuild':
         return 'Rebuild sentence index';
       case 'lookup_library_sentences_rebuild_hint':
-        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+        return 'Re-index your books, subtitles, lyrics and game text from the library.';
       case 'lookup_library_sentences_rebuild_started':
         return 'Rebuilding the sentence index in the background';
       case 'lookup_library_sentences_status':
@@ -706416,6 +707815,10 @@ extension on _StringsZhHk {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_add':
         return 'Add disc';
       case 'music_disc_added':
@@ -706510,18 +707913,48 @@ extension on _StringsZhHk {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
       case 'music_lyrics_empty':
@@ -706532,6 +707965,10 @@ extension on _StringsZhHk {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -706729,6 +708166,8 @@ extension on _StringsZhHk {
         return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
