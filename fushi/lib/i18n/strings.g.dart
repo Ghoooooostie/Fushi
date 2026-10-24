@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154734 (9102 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -275,6 +275,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_srs_note_field => 'Review note fields';
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   String get ai_feature_srs_template => 'Review card template';
   String get ai_feature_srs_template_summary =>
       'Let AI lay out review cards from a description and explain fields';
@@ -8979,10 +8982,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Rename Lapis decks to Fushi Card';
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  String get srs_anki_migrate_setup_section_after => 'After migration';
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   String get srs_anki_migrate_setup_title => 'Migration settings';
   String get srs_anki_migrate_start => 'Migrate';
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -9244,6 +9252,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Move them to the parent deck (or the default deck)';
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  String get srs_deck_delete_purge => 'Delete permanently';
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   String get srs_deck_delete_with_cards => 'Delete cards too';
   String get srs_deck_delete_with_cards_hint =>
       'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
@@ -9641,16 +9652,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Deleted on one device while edited on another.';
   String get srs_note_deleted => 'This note was deleted.';
   String get srs_note_edit => 'Edit note';
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  String get srs_note_field_ai_again => 'Try again';
+  String get srs_note_field_ai_append => 'Append';
+  String get srs_note_field_ai_custom => 'Custom';
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  String get srs_note_field_ai_define => 'Definition';
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  String get srs_note_field_ai_translate => 'Translate';
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  String get srs_note_field_edit_text => 'Edit text';
+  String get srs_note_field_edit_text_done => 'Done';
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
   String get srs_note_format_bold => 'Bold (Ctrl+B)';
   String get srs_note_format_color => 'Text color';
   String get srs_note_format_color_default => 'Default color';
+  String get srs_note_format_highlight => 'Highlight';
+  String get srs_note_format_highlight_none => 'No highlight';
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   String get srs_note_format_underline => 'Underline (Ctrl+U)';
   String get srs_note_furigana_edit_text => 'Edit text';
@@ -10015,6 +10045,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t sync review data: ${reason}';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   String get srs_sync_store_unavailable =>
@@ -10076,11 +10108,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_prop_align => 'Alignment';
   String get srs_visual_prop_bold => 'Bold';
   String get srs_visual_prop_boxed => 'Tinted box';
+  String get srs_visual_prop_color => 'Text colour';
   String get srs_visual_prop_field => 'Field';
   String get srs_visual_prop_filter => 'Display as';
   String get srs_visual_prop_hide_empty => 'Hide when empty';
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  String get srs_visual_prop_italic => 'Italic';
   String get srs_visual_prop_label => 'Caption';
   String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
   String get srs_visual_prop_size => 'Size';
@@ -13354,6 +13388,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -28080,6 +28119,8 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -28087,6 +28128,12 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -28557,6 +28604,11 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -29215,13 +29267,44 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -29231,6 +29314,10 @@ class _StringsAr extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -29863,6 +29950,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -29968,6 +30058,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -29976,6 +30068,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -35418,6 +35512,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -50439,6 +50538,8 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -50446,6 +50547,12 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -50916,6 +51023,11 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -51574,13 +51686,44 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -51590,6 +51733,10 @@ class _StringsDe extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -52222,6 +52369,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -52327,6 +52477,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -52335,6 +52487,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -57872,6 +58026,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -72922,6 +73081,8 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -72929,6 +73090,12 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -73399,6 +73566,11 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -74057,13 +74229,44 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -74073,6 +74276,10 @@ class _StringsEs extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -74705,6 +74912,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -74810,6 +75020,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -74818,6 +75030,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -80380,6 +80594,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -95493,6 +95712,8 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -95500,6 +95721,12 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -95970,6 +96197,11 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -96628,13 +96860,44 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -96644,6 +96907,10 @@ class _StringsFr extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -97276,6 +97543,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -97381,6 +97651,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -97389,6 +97661,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -102971,6 +103245,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -117828,6 +118107,8 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -117835,6 +118116,12 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -118305,6 +118592,11 @@ class _StringsId extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -118963,13 +119255,44 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -118979,6 +119302,10 @@ class _StringsId extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -119611,6 +119938,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -119716,6 +120046,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -119724,6 +120056,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -125219,6 +125553,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -140204,6 +140543,8 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -140211,6 +140552,12 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -140681,6 +141028,11 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -141339,13 +141691,44 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -141355,6 +141738,10 @@ class _StringsIt extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -141987,6 +142374,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -142092,6 +142482,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -142100,6 +142492,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -147619,6 +148013,11 @@ class _StringsJa extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -161872,6 +162271,8 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -161879,6 +162280,12 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -162349,6 +162756,11 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -163007,13 +163419,44 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -163023,6 +163466,10 @@ class _StringsJa extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -163655,6 +164102,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -163760,6 +164210,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -163768,6 +164220,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -168989,6 +169443,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -183268,6 +183727,8 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -183275,6 +183736,12 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -183745,6 +184212,11 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -184403,13 +184875,44 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -184419,6 +184922,10 @@ class _StringsKo extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -185051,6 +185558,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -185156,6 +185666,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -185164,6 +185676,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -190430,6 +190944,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -205374,6 +205893,8 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -205381,6 +205902,12 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -205851,6 +206378,11 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -206509,13 +207041,44 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -206525,6 +207088,10 @@ class _StringsNl extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -207157,6 +207724,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -207262,6 +207832,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -207270,6 +207842,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -212791,6 +213365,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -227781,6 +228360,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -227788,6 +228369,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -228258,6 +228845,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -228916,13 +229508,44 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -228932,6 +229555,10 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -229564,6 +230191,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -229669,6 +230299,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -229677,6 +230309,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -235215,6 +235849,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -250166,6 +250805,8 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -250173,6 +250814,12 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -250643,6 +251290,11 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -251301,13 +251953,44 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -251317,6 +252000,10 @@ class _StringsRu extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -251949,6 +252636,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -252054,6 +252744,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -252062,6 +252754,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -257585,6 +258279,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -272302,6 +273001,8 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -272309,6 +273010,12 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -272779,6 +273486,11 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -273437,13 +274149,44 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -273453,6 +274196,10 @@ class _StringsTh extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -274085,6 +274832,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -274190,6 +274940,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -274198,6 +274950,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -279637,6 +280391,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -294504,6 +295263,8 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -294511,6 +295272,12 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -294981,6 +295748,11 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -295639,13 +296411,44 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -295655,6 +296458,10 @@ class _StringsTr extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -296287,6 +297094,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -296392,6 +297202,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -296400,6 +297212,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -301890,6 +302704,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -316702,6 +317521,8 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -316709,6 +317530,12 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -317179,6 +318006,11 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -317837,13 +318669,44 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -317853,6 +318716,10 @@ class _StringsVi extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -318485,6 +319352,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -318590,6 +319460,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -318598,6 +319470,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -324055,6 +324929,11 @@ class _StringsZhCn extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
+  @override
+  String get ai_feature_srs_note_field => '复习笔记字段';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      '让 AI 为笔记字段写释义、翻译或改写（只进草稿，保存才生效）';
   @override
   String get ai_feature_srs_template => '复习卡片模板';
   @override
@@ -337605,6 +338484,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
   @override
+  String get srs_anki_migrate_setup_section_after => '迁移之后';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => '排程算法';
   @override
   String get srs_anki_migrate_setup_section_notices => '开始前请知悉';
@@ -337612,6 +338493,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => '学习进度';
   @override
   String get srs_anki_migrate_setup_section_templates => '卡片模板';
+  @override
+  String get srs_anki_migrate_setup_switch_target => '以后的卡片改进 Fushi 复习';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      '迁移完成后，制卡改为写进 Fushi 复习、不再发往 Anki，并关闭互联的「制卡到互联主机」；卡片经复习同步到其它设备。';
   @override
   String get srs_anki_migrate_setup_title => '迁移设置';
   @override
@@ -338061,6 +338947,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+  @override
+  String get srs_deck_delete_purge => '永久删除';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      '连同卡片与不再使用的媒体立即删除并释放空间（复习记录保留给统计），无法恢复';
   @override
   String get srs_deck_delete_with_cards => '连卡片一起删除';
   @override
@@ -338662,11 +339553,39 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_edit => '编辑笔记';
   @override
+  String get srs_note_field_ai => 'AI 改写 / 补全';
+  @override
+  String get srs_note_field_ai_again => '重新生成';
+  @override
+  String get srs_note_field_ai_append => '追加到末尾';
+  @override
+  String get srs_note_field_ai_custom => '自定义';
+  @override
+  String get srs_note_field_ai_custom_hint => '告诉 AI 要写什么';
+  @override
+  String get srs_note_field_ai_define => '写释义';
+  @override
+  String get srs_note_field_ai_instruction_hint => '补充要求（可选）';
+  @override
+  String get srs_note_field_ai_rewrite => '改写';
+  @override
+  String srs_note_field_ai_title({required Object field}) => 'AI 帮写「${field}」';
+  @override
+  String get srs_note_field_ai_translate => '翻译';
+  @override
   String get srs_note_field_conflict => '两台设备同时改了这个字段，选择要保留的值：';
+  @override
+  String get srs_note_field_edit_text => '编辑文字';
+  @override
+  String get srs_note_field_edit_text_done => '完成';
+  @override
+  String get srs_note_field_edit_text_empty => '这个字段里没有可改的文字';
   @override
   String get srs_note_field_source_hide => '回到可视化编辑（Ctrl+Shift+X）';
   @override
   String get srs_note_field_source_show => 'HTML 源码（Ctrl+Shift+X）';
+  @override
+  String get srs_note_field_structured_edit_hint => '词典排版内容：在下方逐段改文字；要改结构再切到源码';
   @override
   String get srs_note_field_structured_hint => '词典排版内容：改 HTML 源码来修改';
   @override
@@ -338675,6 +339594,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_format_color => '文字颜色';
   @override
   String get srs_note_format_color_default => '默认颜色';
+  @override
+  String get srs_note_format_highlight => '高亮';
+  @override
+  String get srs_note_format_highlight_none => '无高亮';
   @override
   String get srs_note_format_italic => '斜体（Ctrl+I）';
   @override
@@ -339262,6 +340185,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now => '立即同步';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+  @override
   String get srs_sync_setup_body =>
       '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
   @override
@@ -339355,6 +340281,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => '加底框';
   @override
+  String get srs_visual_prop_color => '文字颜色';
+  @override
   String get srs_visual_prop_field => '字段';
   @override
   String get srs_visual_prop_filter => '显示方式';
@@ -339362,6 +340290,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_visual_prop_hide_empty => '为空时隐藏';
   @override
   String get srs_visual_prop_hide_empty_hint => '字段为空时整块（连同小标题）都不出现。';
+  @override
+  String get srs_visual_prop_italic => '斜体';
   @override
   String get srs_visual_prop_label => '小标题';
   @override
@@ -344317,6 +345247,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -358143,6 +359078,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
       'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   @override
+  String get srs_anki_migrate_setup_section_after => 'After migration';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -358150,6 +359087,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
   @override
   String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_switch_target =>
+      'Send new cards to Fushi Review';
+  @override
+  String get srs_anki_migrate_setup_switch_target_desc =>
+      'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
   @override
   String get srs_anki_migrate_setup_title => 'Migration settings';
   @override
@@ -358620,6 +359563,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_deck_delete_prompt({required Object name}) =>
       'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_purge => 'Delete permanently';
+  @override
+  String get srs_deck_delete_purge_hint =>
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -359278,13 +360226,44 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_edit => 'Edit note';
   @override
+  String get srs_note_field_ai => 'AI rewrite / fill in';
+  @override
+  String get srs_note_field_ai_again => 'Try again';
+  @override
+  String get srs_note_field_ai_append => 'Append';
+  @override
+  String get srs_note_field_ai_custom => 'Custom';
+  @override
+  String get srs_note_field_ai_custom_hint => 'Tell the AI what to write';
+  @override
+  String get srs_note_field_ai_define => 'Definition';
+  @override
+  String get srs_note_field_ai_instruction_hint =>
+      'Extra instructions (optional)';
+  @override
+  String get srs_note_field_ai_rewrite => 'Rewrite';
+  @override
+  String srs_note_field_ai_title({required Object field}) =>
+      'AI for "${field}"';
+  @override
+  String get srs_note_field_ai_translate => 'Translate';
+  @override
   String get srs_note_field_conflict =>
       'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_field_edit_text => 'Edit text';
+  @override
+  String get srs_note_field_edit_text_done => 'Done';
+  @override
+  String get srs_note_field_edit_text_empty => 'No editable text in this field';
   @override
   String get srs_note_field_source_hide =>
       'Back to visual editing (Ctrl+Shift+X)';
   @override
   String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_edit_hint =>
+      'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
   @override
   String get srs_note_field_structured_hint =>
       'Formatted dictionary content. Edit the HTML source to change it';
@@ -359294,6 +360273,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_format_color => 'Text color';
   @override
   String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_format_highlight => 'Highlight';
+  @override
+  String get srs_note_format_highlight_none => 'No highlight';
   @override
   String get srs_note_format_italic => 'Italic (Ctrl+I)';
   @override
@@ -359926,6 +360909,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_profile_not_linked({required Object name}) =>
+      'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
@@ -360030,6 +361016,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_visual_prop_boxed => 'Tinted box';
   @override
+  String get srs_visual_prop_color => 'Text colour';
+  @override
   String get srs_visual_prop_field => 'Field';
   @override
   String get srs_visual_prop_filter => 'Display as';
@@ -360038,6 +361026,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_visual_prop_hide_empty_hint =>
       'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_italic => 'Italic';
   @override
   String get srs_visual_prop_label => 'Caption';
   @override
@@ -365050,6 +366040,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -377646,6 +378640,8 @@ extension on _StringsEn {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -377654,6 +378650,10 @@ extension on _StringsEn {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -378089,6 +379089,10 @@ extension on _StringsEn {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -378652,12 +379656,40 @@ extension on _StringsEn {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -378666,6 +379698,10 @@ extension on _StringsEn {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -379223,6 +380259,9 @@ extension on _StringsEn {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -379312,6 +380351,8 @@ extension on _StringsEn {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -379320,6 +380361,8 @@ extension on _StringsEn {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -383924,6 +384967,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -396516,6 +397563,8 @@ extension on _StringsAr {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -396524,6 +397573,10 @@ extension on _StringsAr {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -396959,6 +398012,10 @@ extension on _StringsAr {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -397522,12 +398579,40 @@ extension on _StringsAr {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -397536,6 +398621,10 @@ extension on _StringsAr {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -398093,6 +399182,9 @@ extension on _StringsAr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -398182,6 +399274,8 @@ extension on _StringsAr {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -398190,6 +399284,8 @@ extension on _StringsAr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -402793,6 +403889,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -415442,6 +416542,8 @@ extension on _StringsDe {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -415450,6 +416552,10 @@ extension on _StringsDe {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -415885,6 +416991,10 @@ extension on _StringsDe {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -416448,12 +417558,40 @@ extension on _StringsDe {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -416462,6 +417600,10 @@ extension on _StringsDe {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -417019,6 +418161,9 @@ extension on _StringsDe {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -417108,6 +418253,8 @@ extension on _StringsDe {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -417116,6 +418263,8 @@ extension on _StringsDe {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -421737,6 +422886,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -434372,6 +435525,8 @@ extension on _StringsEs {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -434380,6 +435535,10 @@ extension on _StringsEs {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -434815,6 +435974,10 @@ extension on _StringsEs {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -435378,12 +436541,40 @@ extension on _StringsEs {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -435392,6 +436583,10 @@ extension on _StringsEs {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -435949,6 +437144,9 @@ extension on _StringsEs {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -436038,6 +437236,8 @@ extension on _StringsEs {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -436046,6 +437246,8 @@ extension on _StringsEs {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -440664,6 +441866,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -453313,6 +454519,8 @@ extension on _StringsFr {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -453321,6 +454529,10 @@ extension on _StringsFr {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -453756,6 +454968,10 @@ extension on _StringsFr {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -454319,12 +455535,40 @@ extension on _StringsFr {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -454333,6 +455577,10 @@ extension on _StringsFr {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -454890,6 +456138,9 @@ extension on _StringsFr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -454979,6 +456230,8 @@ extension on _StringsFr {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -454987,6 +456240,8 @@ extension on _StringsFr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -459606,6 +460861,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -472214,6 +473473,8 @@ extension on _StringsId {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -472222,6 +473483,10 @@ extension on _StringsId {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -472657,6 +473922,10 @@ extension on _StringsId {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -473220,12 +474489,40 @@ extension on _StringsId {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -473234,6 +474531,10 @@ extension on _StringsId {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -473791,6 +475092,9 @@ extension on _StringsId {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -473880,6 +475184,8 @@ extension on _StringsId {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -473888,6 +475194,8 @@ extension on _StringsId {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -478495,6 +479803,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -491124,6 +492436,8 @@ extension on _StringsIt {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -491132,6 +492446,10 @@ extension on _StringsIt {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -491567,6 +492885,10 @@ extension on _StringsIt {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -492130,12 +493452,40 @@ extension on _StringsIt {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -492144,6 +493494,10 @@ extension on _StringsIt {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -492701,6 +494055,9 @@ extension on _StringsIt {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -492790,6 +494147,8 @@ extension on _StringsIt {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -492798,6 +494157,8 @@ extension on _StringsIt {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -497417,6 +498778,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -509968,6 +511333,8 @@ extension on _StringsJa {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -509976,6 +511343,10 @@ extension on _StringsJa {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -510411,6 +511782,10 @@ extension on _StringsJa {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -510974,12 +512349,40 @@ extension on _StringsJa {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -510988,6 +512391,10 @@ extension on _StringsJa {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -511545,6 +512952,9 @@ extension on _StringsJa {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -511634,6 +513044,8 @@ extension on _StringsJa {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -511642,6 +513054,8 @@ extension on _StringsJa {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -516206,6 +517620,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -528761,6 +530179,8 @@ extension on _StringsKo {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -528769,6 +530189,10 @@ extension on _StringsKo {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -529204,6 +530628,10 @@ extension on _StringsKo {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -529767,12 +531195,40 @@ extension on _StringsKo {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -529781,6 +531237,10 @@ extension on _StringsKo {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -530338,6 +531798,9 @@ extension on _StringsKo {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -530427,6 +531890,8 @@ extension on _StringsKo {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -530435,6 +531900,8 @@ extension on _StringsKo {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -535012,6 +536479,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -547644,6 +549115,8 @@ extension on _StringsNl {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -547652,6 +549125,10 @@ extension on _StringsNl {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -548087,6 +549564,10 @@ extension on _StringsNl {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -548650,12 +550131,40 @@ extension on _StringsNl {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -548664,6 +550173,10 @@ extension on _StringsNl {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -549221,6 +550734,9 @@ extension on _StringsNl {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -549310,6 +550826,8 @@ extension on _StringsNl {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -549318,6 +550836,8 @@ extension on _StringsNl {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -553932,6 +555452,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -566558,6 +568082,8 @@ extension on _StringsPtBr {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -566566,6 +568092,10 @@ extension on _StringsPtBr {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -567001,6 +568531,10 @@ extension on _StringsPtBr {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -567564,12 +569098,40 @@ extension on _StringsPtBr {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -567578,6 +569140,10 @@ extension on _StringsPtBr {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -568135,6 +569701,9 @@ extension on _StringsPtBr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -568224,6 +569793,8 @@ extension on _StringsPtBr {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -568232,6 +569803,8 @@ extension on _StringsPtBr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -572841,6 +574414,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -585476,6 +587053,8 @@ extension on _StringsRu {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -585484,6 +587063,10 @@ extension on _StringsRu {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -585919,6 +587502,10 @@ extension on _StringsRu {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -586482,12 +588069,40 @@ extension on _StringsRu {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -586496,6 +588111,10 @@ extension on _StringsRu {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -587053,6 +588672,9 @@ extension on _StringsRu {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -587142,6 +588764,8 @@ extension on _StringsRu {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -587150,6 +588774,8 @@ extension on _StringsRu {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -591758,6 +593384,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -604354,6 +605984,8 @@ extension on _StringsTh {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -604362,6 +605994,10 @@ extension on _StringsTh {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -604797,6 +606433,10 @@ extension on _StringsTh {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -605360,12 +607000,40 @@ extension on _StringsTh {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -605374,6 +607042,10 @@ extension on _StringsTh {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -605931,6 +607603,9 @@ extension on _StringsTh {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -606020,6 +607695,8 @@ extension on _StringsTh {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -606028,6 +607705,8 @@ extension on _StringsTh {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -610630,6 +612309,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -623250,6 +624933,8 @@ extension on _StringsTr {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -623258,6 +624943,10 @@ extension on _StringsTr {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -623693,6 +625382,10 @@ extension on _StringsTr {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -624256,12 +625949,40 @@ extension on _StringsTr {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -624270,6 +625991,10 @@ extension on _StringsTr {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -624827,6 +626552,9 @@ extension on _StringsTr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -624916,6 +626644,8 @@ extension on _StringsTr {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -624924,6 +626654,8 @@ extension on _StringsTr {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -629532,6 +631264,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -642141,6 +643877,8 @@ extension on _StringsVi {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -642149,6 +643887,10 @@ extension on _StringsVi {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -642584,6 +644326,10 @@ extension on _StringsVi {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -643147,12 +644893,40 @@ extension on _StringsVi {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -643161,6 +644935,10 @@ extension on _StringsVi {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -643718,6 +645496,9 @@ extension on _StringsVi {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -643807,6 +645588,8 @@ extension on _StringsVi {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -643815,6 +645598,8 @@ extension on _StringsVi {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
@@ -648418,6 +650203,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_srs_note_field':
+        return '复习笔记字段';
+      case 'ai_feature_srs_note_field_summary':
+        return '让 AI 为笔记字段写释义、翻译或改写（只进草稿，保存才生效）';
       case 'ai_feature_srs_template':
         return '复习卡片模板';
       case 'ai_feature_srs_template_summary':
@@ -660883,6 +662672,8 @@ extension on _StringsZhCn {
         return '牌组名里的 Lapis 改成 Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
+      case 'srs_anki_migrate_setup_section_after':
+        return '迁移之后';
       case 'srs_anki_migrate_setup_section_algorithm':
         return '排程算法';
       case 'srs_anki_migrate_setup_section_notices':
@@ -660891,6 +662682,10 @@ extension on _StringsZhCn {
         return '学习进度';
       case 'srs_anki_migrate_setup_section_templates':
         return '卡片模板';
+      case 'srs_anki_migrate_setup_switch_target':
+        return '以后的卡片改进 Fushi 复习';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return '迁移完成后，制卡改为写进 Fushi 复习、不再发往 Anki，并关闭互联的「制卡到互联主机」；卡片经复习同步到其它设备。';
       case 'srs_anki_migrate_setup_title':
         return '迁移设置';
       case 'srs_anki_migrate_start':
@@ -661318,6 +663113,10 @@ extension on _StringsZhCn {
         return '移到上级牌组（没有上级则移到默认牌组）';
       case 'srs_deck_delete_prompt':
         return ({required Object name}) => '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+      case 'srs_deck_delete_purge':
+        return '永久删除';
+      case 'srs_deck_delete_purge_hint':
+        return '连同卡片与不再使用的媒体立即删除并释放空间（复习记录保留给统计），无法恢复';
       case 'srs_deck_delete_with_cards':
         return '连卡片一起删除';
       case 'srs_deck_delete_with_cards_hint':
@@ -661864,12 +663663,40 @@ extension on _StringsZhCn {
         return '这条笔记已被删除。';
       case 'srs_note_edit':
         return '编辑笔记';
+      case 'srs_note_field_ai':
+        return 'AI 改写 / 补全';
+      case 'srs_note_field_ai_again':
+        return '重新生成';
+      case 'srs_note_field_ai_append':
+        return '追加到末尾';
+      case 'srs_note_field_ai_custom':
+        return '自定义';
+      case 'srs_note_field_ai_custom_hint':
+        return '告诉 AI 要写什么';
+      case 'srs_note_field_ai_define':
+        return '写释义';
+      case 'srs_note_field_ai_instruction_hint':
+        return '补充要求（可选）';
+      case 'srs_note_field_ai_rewrite':
+        return '改写';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI 帮写「${field}」';
+      case 'srs_note_field_ai_translate':
+        return '翻译';
       case 'srs_note_field_conflict':
         return '两台设备同时改了这个字段，选择要保留的值：';
+      case 'srs_note_field_edit_text':
+        return '编辑文字';
+      case 'srs_note_field_edit_text_done':
+        return '完成';
+      case 'srs_note_field_edit_text_empty':
+        return '这个字段里没有可改的文字';
       case 'srs_note_field_source_hide':
         return '回到可视化编辑（Ctrl+Shift+X）';
       case 'srs_note_field_source_show':
         return 'HTML 源码（Ctrl+Shift+X）';
+      case 'srs_note_field_structured_edit_hint':
+        return '词典排版内容：在下方逐段改文字；要改结构再切到源码';
       case 'srs_note_field_structured_hint':
         return '词典排版内容：改 HTML 源码来修改';
       case 'srs_note_format_bold':
@@ -661878,6 +663705,10 @@ extension on _StringsZhCn {
         return '文字颜色';
       case 'srs_note_format_color_default':
         return '默认颜色';
+      case 'srs_note_format_highlight':
+        return '高亮';
+      case 'srs_note_format_highlight_none':
+        return '无高亮';
       case 'srs_note_format_italic':
         return '斜体（Ctrl+I）';
       case 'srs_note_format_underline':
@@ -662432,6 +664263,9 @@ extension on _StringsZhCn {
         return '还没有配置同步服务';
       case 'srs_sync_now':
         return '立即同步';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
       case 'srs_sync_setup_body':
         return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
       case 'srs_sync_store_unavailable':
@@ -662520,6 +664354,8 @@ extension on _StringsZhCn {
         return '粗体';
       case 'srs_visual_prop_boxed':
         return '加底框';
+      case 'srs_visual_prop_color':
+        return '文字颜色';
       case 'srs_visual_prop_field':
         return '字段';
       case 'srs_visual_prop_filter':
@@ -662528,6 +664364,8 @@ extension on _StringsZhCn {
         return '为空时隐藏';
       case 'srs_visual_prop_hide_empty_hint':
         return '字段为空时整块（连同小标题）都不出现。';
+      case 'srs_visual_prop_italic':
+        return '斜体';
       case 'srs_visual_prop_label':
         return '小标题';
       case 'srs_visual_prop_label_hint':
@@ -667066,6 +668904,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -679573,6 +681415,8 @@ extension on _StringsZhHk {
         return 'Rename Lapis decks to Fushi Card';
       case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
         return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+      case 'srs_anki_migrate_setup_section_after':
+        return 'After migration';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -679581,6 +681425,10 @@ extension on _StringsZhHk {
         return 'Study progress';
       case 'srs_anki_migrate_setup_section_templates':
         return 'Card templates';
+      case 'srs_anki_migrate_setup_switch_target':
+        return 'Send new cards to Fushi Review';
+      case 'srs_anki_migrate_setup_switch_target_desc':
+        return 'After migrating, mined cards go to Fushi Review instead of Anki, and "Mine to Fushi Interconnect server" is turned off. Cards reach your other devices through review sync.';
       case 'srs_anki_migrate_setup_title':
         return 'Migration settings';
       case 'srs_anki_migrate_start':
@@ -680016,6 +681864,10 @@ extension on _StringsZhHk {
       case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_purge':
+        return 'Delete permanently';
+      case 'srs_deck_delete_purge_hint':
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -680578,12 +682430,40 @@ extension on _StringsZhHk {
         return 'This note was deleted.';
       case 'srs_note_edit':
         return 'Edit note';
+      case 'srs_note_field_ai':
+        return 'AI rewrite / fill in';
+      case 'srs_note_field_ai_again':
+        return 'Try again';
+      case 'srs_note_field_ai_append':
+        return 'Append';
+      case 'srs_note_field_ai_custom':
+        return 'Custom';
+      case 'srs_note_field_ai_custom_hint':
+        return 'Tell the AI what to write';
+      case 'srs_note_field_ai_define':
+        return 'Definition';
+      case 'srs_note_field_ai_instruction_hint':
+        return 'Extra instructions (optional)';
+      case 'srs_note_field_ai_rewrite':
+        return 'Rewrite';
+      case 'srs_note_field_ai_title':
+        return ({required Object field}) => 'AI for "${field}"';
+      case 'srs_note_field_ai_translate':
+        return 'Translate';
       case 'srs_note_field_conflict':
         return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_field_edit_text':
+        return 'Edit text';
+      case 'srs_note_field_edit_text_done':
+        return 'Done';
+      case 'srs_note_field_edit_text_empty':
+        return 'No editable text in this field';
       case 'srs_note_field_source_hide':
         return 'Back to visual editing (Ctrl+Shift+X)';
       case 'srs_note_field_source_show':
         return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_edit_hint':
+        return 'Dictionary layout: edit the text piece by piece below; switch to source to change the structure';
       case 'srs_note_field_structured_hint':
         return 'Formatted dictionary content. Edit the HTML source to change it';
       case 'srs_note_format_bold':
@@ -680592,6 +682472,10 @@ extension on _StringsZhHk {
         return 'Text color';
       case 'srs_note_format_color_default':
         return 'Default color';
+      case 'srs_note_format_highlight':
+        return 'Highlight';
+      case 'srs_note_format_highlight_none':
+        return 'No highlight';
       case 'srs_note_format_italic':
         return 'Italic (Ctrl+I)';
       case 'srs_note_format_underline':
@@ -681149,6 +683033,9 @@ extension on _StringsZhHk {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_profile_not_linked':
+        return ({required Object name}) =>
+            'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -681238,6 +683125,8 @@ extension on _StringsZhHk {
         return 'Bold';
       case 'srs_visual_prop_boxed':
         return 'Tinted box';
+      case 'srs_visual_prop_color':
+        return 'Text colour';
       case 'srs_visual_prop_field':
         return 'Field';
       case 'srs_visual_prop_filter':
@@ -681246,6 +683135,8 @@ extension on _StringsZhHk {
         return 'Hide when empty';
       case 'srs_visual_prop_hide_empty_hint':
         return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_italic':
+        return 'Italic';
       case 'srs_visual_prop_label':
         return 'Caption';
       case 'srs_visual_prop_label_hint':
