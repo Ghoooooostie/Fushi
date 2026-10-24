@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154666 (9098 per locale)
+/// Strings: 155346 (9138 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -271,6 +271,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_manga_ocr => 'OCR correction (vision)';
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  String get ai_feature_media_links => 'Related works';
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   String get ai_feature_overrides_none =>
@@ -6819,6 +6822,49 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String get media_link_add => 'Link work';
+  String get media_link_direction_target_original => 'Target is the original';
+  String get media_link_direction_this_original => 'This is the original';
+  String get media_link_editor_direction => 'Direction';
+  String get media_link_editor_empty => 'No matching items';
+  String get media_link_editor_relation => 'Relation';
+  String get media_link_editor_search_hint => 'Search the library';
+  String get media_link_editor_title => 'Link a related work';
+  String get media_link_infer_action => 'Find related works';
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  String get media_link_infer_none => 'No new suggestions';
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  String get media_link_kind_audiobook => 'Audiobook';
+  String get media_link_kind_book => 'Book';
+  String get media_link_kind_game => 'Game';
+  String get media_link_kind_music_album => 'Album';
+  String get media_link_kind_music_track => 'Track';
+  String get media_link_kind_video_collection => 'Series';
+  String get media_link_kind_video_episode => 'Video';
+  String get media_link_not_in_library => 'Not in library';
+  String get media_link_relation_adaptation => 'Adaptation';
+  String get media_link_relation_cast => 'Cast';
+  String get media_link_relation_same_work => 'Same work';
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  String get media_link_relation_theme_song => 'Theme song';
+  String get media_link_remove => 'Remove link';
+  String get media_link_removed => 'Link removed';
+  String get media_link_role_adapted => 'Adapted';
+  String get media_link_role_original => 'Original';
+  String get media_link_saved => 'Linked';
+  String get media_link_search_missing => 'Not in library · Search';
+  String get media_link_section_title => 'Same work';
+  String get media_link_suggestion_confirm => 'Confirm';
+  String get media_link_suggestion_reject => 'Not related';
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  String get media_link_suggestions_title => 'Possibly related';
   String get media_privacy_action => 'Privacy';
   String get media_privacy_cleared_toast => 'No longer private';
   String get media_privacy_hint =>
@@ -13379,6 +13425,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -24392,6 +24443,87 @@ class _StringsAr extends _StringsEn {
   String get media_import_segment_sources => 'المصادر';
   @override
   String get media_import_segment_stores => 'المستودعات';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -35496,6 +35628,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -46730,6 +46867,87 @@ class _StringsDe extends _StringsEn {
   String get media_import_segment_sources => 'Quellen';
   @override
   String get media_import_segment_stores => 'Repositorys';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -58004,6 +58222,11 @@ class _StringsEs extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -69263,6 +69486,87 @@ class _StringsEs extends _StringsEn {
   String get media_import_segment_sources => 'Fuentes';
   @override
   String get media_import_segment_stores => 'Repositorios';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -80564,6 +80868,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -91867,6 +92176,87 @@ class _StringsFr extends _StringsEn {
   String get media_import_segment_sources => 'Sources';
   @override
   String get media_import_segment_stores => 'Dépôts';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -103209,6 +103599,11 @@ class _StringsId extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -114322,6 +114717,87 @@ class _StringsId extends _StringsEn {
   String get media_import_segment_sources => 'Sumber';
   @override
   String get media_import_segment_stores => 'Repositori';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -125509,6 +125985,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -136711,6 +137192,87 @@ class _StringsIt extends _StringsEn {
   String get media_import_segment_sources => 'Fonti';
   @override
   String get media_import_segment_stores => 'Repository';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -147965,6 +148527,11 @@ class _StringsJa extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       '漫画の文字枠の中の文字を画像対応モデルで読み直します。「漫画 OCR」設定でモードを選ぶまでは無効です。切り出した文字枠がこのプロバイダーに送信され、その料金が発生します。';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
@@ -158633,6 +159200,87 @@ class _StringsJa extends _StringsEn {
   String get media_import_segment_sources => 'ソース';
   @override
   String get media_import_segment_stores => 'リポジトリ';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -169386,6 +170034,11 @@ class _StringsKo extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -180072,6 +180725,87 @@ class _StringsKo extends _StringsEn {
   String get media_import_segment_sources => '소스';
   @override
   String get media_import_segment_stores => '저장소';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -190879,6 +191613,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -202049,6 +202788,87 @@ class _StringsNl extends _StringsEn {
   String get media_import_segment_sources => 'Bronnen';
   @override
   String get media_import_segment_stores => 'Repository\'s';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -213294,6 +214114,11 @@ class _StringsPtBr extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -224507,6 +225332,87 @@ class _StringsPtBr extends _StringsEn {
   String get media_import_segment_sources => 'Fontes';
   @override
   String get media_import_segment_stores => 'Repositórios';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -235771,6 +236677,11 @@ class _StringsRu extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -246940,6 +247851,87 @@ class _StringsRu extends _StringsEn {
   String get media_import_segment_sources => 'Источники';
   @override
   String get media_import_segment_stores => 'Репозитории';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -258194,6 +259186,11 @@ class _StringsTh extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -269193,6 +270190,87 @@ class _StringsTh extends _StringsEn {
   String get media_import_segment_sources => 'แหล่งที่มา';
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -280298,6 +281376,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
@@ -291419,6 +292502,87 @@ class _StringsTr extends _StringsEn {
   String get media_import_segment_sources => 'Kaynaklar';
   @override
   String get media_import_segment_stores => 'Depolar';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -302605,6 +303769,11 @@ class _StringsVi extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
+  @override
   String ai_feature_overrides_count({required Object n}) =>
       '${n} set individually';
   @override
@@ -313689,6 +314858,87 @@ class _StringsVi extends _StringsEn {
   String get media_import_segment_sources => 'Nguồn';
   @override
   String get media_import_segment_stores => 'Kho';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -324825,6 +326075,10 @@ class _StringsZhCn extends _StringsEn {
   String get ai_feature_manga_ocr_summary =>
       '用视觉大模型重读漫画文字框里的字。在「漫画 OCR」设置里选了档位才会开启；裁出的文字框会上传给该提供商并由其计费。';
   @override
+  String get ai_feature_media_links => '作品关联';
+  @override
+  String get ai_feature_media_links_summary => '让 AI 判断不同模块的条目是否同一作品';
+  @override
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
@@ -334963,6 +336217,83 @@ class _StringsZhCn extends _StringsEn {
   String get media_import_segment_sources => '在线源';
   @override
   String get media_import_segment_stores => '仓库';
+  @override
+  String get media_link_add => '关联作品';
+  @override
+  String get media_link_direction_target_original => '目标是原作';
+  @override
+  String get media_link_direction_this_original => '本条是原作';
+  @override
+  String get media_link_editor_direction => '方向';
+  @override
+  String get media_link_editor_empty => '没有匹配的条目';
+  @override
+  String get media_link_editor_relation => '关系';
+  @override
+  String get media_link_editor_search_hint => '搜索库内条目';
+  @override
+  String get media_link_editor_title => '关联作品';
+  @override
+  String get media_link_infer_action => '查找相关作品';
+  @override
+  String get media_link_infer_ai_failed => 'AI 判断失败，只给出规则推断的建议';
+  @override
+  String media_link_infer_found({required Object count}) => '新增 ${count} 条建议';
+  @override
+  String get media_link_infer_network_failed => '连不上 MAL，请稍后再试';
+  @override
+  String get media_link_infer_none => '没有新的建议';
+  @override
+  String get media_link_infer_wikidata_failed => '连不上 Wikidata，请稍后再试';
+  @override
+  String get media_link_kind_audiobook => '有声书';
+  @override
+  String get media_link_kind_book => '书';
+  @override
+  String get media_link_kind_game => '游戏';
+  @override
+  String get media_link_kind_music_album => '专辑';
+  @override
+  String get media_link_kind_music_track => '曲目';
+  @override
+  String get media_link_kind_video_collection => '视频合集';
+  @override
+  String get media_link_kind_video_episode => '视频';
+  @override
+  String get media_link_not_in_library => '未入库';
+  @override
+  String get media_link_relation_adaptation => '改编';
+  @override
+  String get media_link_relation_cast => '声优';
+  @override
+  String get media_link_relation_same_work => '同一作品';
+  @override
+  String get media_link_relation_soundtrack => '原声';
+  @override
+  String get media_link_relation_theme_song => '主题曲';
+  @override
+  String get media_link_remove => '移除关联';
+  @override
+  String get media_link_removed => '已移除关联';
+  @override
+  String get media_link_role_adapted => '改编作';
+  @override
+  String get media_link_role_original => '原作';
+  @override
+  String get media_link_saved => '已关联';
+  @override
+  String get media_link_search_missing => '未入库 · 去搜';
+  @override
+  String get media_link_section_title => '同一作品';
+  @override
+  String get media_link_suggestion_confirm => '确认';
+  @override
+  String get media_link_suggestion_reject => '不相关';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      '来自 ${source} 的推断';
+  @override
+  String get media_link_suggestions_title => '可能相关';
   @override
   String get media_privacy_action => '私密';
   @override
@@ -345133,6 +346464,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_manga_ocr_summary =>
       '用視覺大模型重讀漫畫文字框裡的字。在「漫畫 OCR」設定裡選了模式才會開啟；裁出的文字框會上傳給該供應商並由其計費。';
+  @override
+  String get ai_feature_media_links => 'Related works';
+  @override
+  String get ai_feature_media_links_summary =>
+      'Let AI judge whether items from different modules are the same work';
   @override
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
@@ -355481,6 +356817,87 @@ class _StringsZhHk extends _StringsEn {
   String get media_import_segment_sources => '線上源';
   @override
   String get media_import_segment_stores => '倉庫';
+  @override
+  String get media_link_add => 'Link work';
+  @override
+  String get media_link_direction_target_original => 'Target is the original';
+  @override
+  String get media_link_direction_this_original => 'This is the original';
+  @override
+  String get media_link_editor_direction => 'Direction';
+  @override
+  String get media_link_editor_empty => 'No matching items';
+  @override
+  String get media_link_editor_relation => 'Relation';
+  @override
+  String get media_link_editor_search_hint => 'Search the library';
+  @override
+  String get media_link_editor_title => 'Link a related work';
+  @override
+  String get media_link_infer_action => 'Find related works';
+  @override
+  String get media_link_infer_ai_failed =>
+      'AI check failed, showing rule-based suggestions only';
+  @override
+  String media_link_infer_found({required Object count}) =>
+      '${count} new suggestions';
+  @override
+  String get media_link_infer_network_failed =>
+      'Could not reach MAL, try again later';
+  @override
+  String get media_link_infer_none => 'No new suggestions';
+  @override
+  String get media_link_infer_wikidata_failed =>
+      'Could not reach Wikidata, try again later';
+  @override
+  String get media_link_kind_audiobook => 'Audiobook';
+  @override
+  String get media_link_kind_book => 'Book';
+  @override
+  String get media_link_kind_game => 'Game';
+  @override
+  String get media_link_kind_music_album => 'Album';
+  @override
+  String get media_link_kind_music_track => 'Track';
+  @override
+  String get media_link_kind_video_collection => 'Series';
+  @override
+  String get media_link_kind_video_episode => 'Video';
+  @override
+  String get media_link_not_in_library => 'Not in library';
+  @override
+  String get media_link_relation_adaptation => 'Adaptation';
+  @override
+  String get media_link_relation_cast => 'Cast';
+  @override
+  String get media_link_relation_same_work => 'Same work';
+  @override
+  String get media_link_relation_soundtrack => 'Soundtrack';
+  @override
+  String get media_link_relation_theme_song => 'Theme song';
+  @override
+  String get media_link_remove => 'Remove link';
+  @override
+  String get media_link_removed => 'Link removed';
+  @override
+  String get media_link_role_adapted => 'Adapted';
+  @override
+  String get media_link_role_original => 'Original';
+  @override
+  String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
+  String get media_link_section_title => 'Same work';
+  @override
+  String get media_link_suggestion_confirm => 'Confirm';
+  @override
+  String get media_link_suggestion_reject => 'Not related';
+  @override
+  String media_link_suggestion_source({required Object source}) =>
+      'Suggested by ${source}';
+  @override
+  String get media_link_suggestions_title => 'Possibly related';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -365919,6 +367336,10 @@ extension on _StringsEn {
         return 'OCR correction (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -375299,6 +376720,82 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -384837,6 +386334,10 @@ extension on _StringsAr {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -394212,6 +395713,82 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -403750,6 +405327,10 @@ extension on _StringsDe {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -413172,6 +414753,82 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -422738,6 +424395,10 @@ extension on _StringsEs {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -432146,6 +433807,82 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -441709,6 +443446,10 @@ extension on _StringsFr {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -451130,6 +452871,82 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -460695,6 +462512,10 @@ extension on _StringsId {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -470087,6 +471908,82 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -479628,6 +481525,10 @@ extension on _StringsIt {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -489033,6 +490934,82 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -498594,6 +500571,10 @@ extension on _StringsJa {
         return '漫画 OCR（画像認識）';
       case 'ai_feature_manga_ocr_summary':
         return '漫画の文字枠の中の文字を画像対応モデルで読み直します。「漫画 OCR」設定でモードを選ぶまでは無効です。切り出した文字枠がこのプロバイダーに送信され、その料金が発生します。';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
@@ -507937,6 +509918,82 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -517427,6 +519484,10 @@ extension on _StringsKo {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -526773,6 +528834,82 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -536277,6 +538414,10 @@ extension on _StringsNl {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -545685,6 +547826,82 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -555241,6 +557458,10 @@ extension on _StringsPtBr {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -564643,6 +566864,82 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -574194,6 +576491,10 @@ extension on _StringsRu {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -583605,6 +585906,82 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -593155,6 +595532,10 @@ extension on _StringsTh {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -602536,6 +604917,82 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -612071,6 +614528,10 @@ extension on _StringsTr {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -621473,6 +623934,82 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -631017,6 +633554,10 @@ extension on _StringsVi {
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
@@ -640408,6 +642949,82 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -649947,6 +652564,10 @@ extension on _StringsZhCn {
         return 'OCR 纠错（视觉识别）';
       case 'ai_feature_manga_ocr_summary':
         return '用视觉大模型重读漫画文字框里的字。在「漫画 OCR」设置里选了档位才会开启；裁出的文字框会上传给该提供商并由其计费。';
+      case 'ai_feature_media_links':
+        return '作品关联';
+      case 'ai_feature_media_links_summary':
+        return '让 AI 判断不同模块的条目是否同一作品';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
@@ -659217,6 +661838,82 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_link_add':
+        return '关联作品';
+      case 'media_link_direction_target_original':
+        return '目标是原作';
+      case 'media_link_direction_this_original':
+        return '本条是原作';
+      case 'media_link_editor_direction':
+        return '方向';
+      case 'media_link_editor_empty':
+        return '没有匹配的条目';
+      case 'media_link_editor_relation':
+        return '关系';
+      case 'media_link_editor_search_hint':
+        return '搜索库内条目';
+      case 'media_link_editor_title':
+        return '关联作品';
+      case 'media_link_infer_action':
+        return '查找相关作品';
+      case 'media_link_infer_ai_failed':
+        return 'AI 判断失败，只给出规则推断的建议';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '新增 ${count} 条建议';
+      case 'media_link_infer_network_failed':
+        return '连不上 MAL，请稍后再试';
+      case 'media_link_infer_none':
+        return '没有新的建议';
+      case 'media_link_infer_wikidata_failed':
+        return '连不上 Wikidata，请稍后再试';
+      case 'media_link_kind_audiobook':
+        return '有声书';
+      case 'media_link_kind_book':
+        return '书';
+      case 'media_link_kind_game':
+        return '游戏';
+      case 'media_link_kind_music_album':
+        return '专辑';
+      case 'media_link_kind_music_track':
+        return '曲目';
+      case 'media_link_kind_video_collection':
+        return '视频合集';
+      case 'media_link_kind_video_episode':
+        return '视频';
+      case 'media_link_not_in_library':
+        return '未入库';
+      case 'media_link_relation_adaptation':
+        return '改编';
+      case 'media_link_relation_cast':
+        return '声优';
+      case 'media_link_relation_same_work':
+        return '同一作品';
+      case 'media_link_relation_soundtrack':
+        return '原声';
+      case 'media_link_relation_theme_song':
+        return '主题曲';
+      case 'media_link_remove':
+        return '移除关联';
+      case 'media_link_removed':
+        return '已移除关联';
+      case 'media_link_role_adapted':
+        return '改编作';
+      case 'media_link_role_original':
+        return '原作';
+      case 'media_link_saved':
+        return '已关联';
+      case 'media_link_search_missing':
+        return '未入库 · 去搜';
+      case 'media_link_section_title':
+        return '同一作品';
+      case 'media_link_suggestion_confirm':
+        return '确认';
+      case 'media_link_suggestion_reject':
+        return '不相关';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => '来自 ${source} 的推断';
+      case 'media_link_suggestions_title':
+        return '可能相关';
       case 'media_privacy_action':
         return '私密';
       case 'media_privacy_cleared_toast':
@@ -668639,6 +671336,10 @@ extension on _StringsZhHk {
         return 'OCR 糾錯（視覺識別）';
       case 'ai_feature_manga_ocr_summary':
         return '用視覺大模型重讀漫畫文字框裡的字。在「漫畫 OCR」設定裡選了模式才會開啟；裁出的文字框會上傳給該供應商並由其計費。';
+      case 'ai_feature_media_links':
+        return 'Related works';
+      case 'ai_feature_media_links_summary':
+        return 'Let AI judge whether items from different modules are the same work';
       case 'ai_feature_overrides_count':
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
@@ -677942,6 +680643,82 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_link_add':
+        return 'Link work';
+      case 'media_link_direction_target_original':
+        return 'Target is the original';
+      case 'media_link_direction_this_original':
+        return 'This is the original';
+      case 'media_link_editor_direction':
+        return 'Direction';
+      case 'media_link_editor_empty':
+        return 'No matching items';
+      case 'media_link_editor_relation':
+        return 'Relation';
+      case 'media_link_editor_search_hint':
+        return 'Search the library';
+      case 'media_link_editor_title':
+        return 'Link a related work';
+      case 'media_link_infer_action':
+        return 'Find related works';
+      case 'media_link_infer_ai_failed':
+        return 'AI check failed, showing rule-based suggestions only';
+      case 'media_link_infer_found':
+        return ({required Object count}) => '${count} new suggestions';
+      case 'media_link_infer_network_failed':
+        return 'Could not reach MAL, try again later';
+      case 'media_link_infer_none':
+        return 'No new suggestions';
+      case 'media_link_infer_wikidata_failed':
+        return 'Could not reach Wikidata, try again later';
+      case 'media_link_kind_audiobook':
+        return 'Audiobook';
+      case 'media_link_kind_book':
+        return 'Book';
+      case 'media_link_kind_game':
+        return 'Game';
+      case 'media_link_kind_music_album':
+        return 'Album';
+      case 'media_link_kind_music_track':
+        return 'Track';
+      case 'media_link_kind_video_collection':
+        return 'Series';
+      case 'media_link_kind_video_episode':
+        return 'Video';
+      case 'media_link_not_in_library':
+        return 'Not in library';
+      case 'media_link_relation_adaptation':
+        return 'Adaptation';
+      case 'media_link_relation_cast':
+        return 'Cast';
+      case 'media_link_relation_same_work':
+        return 'Same work';
+      case 'media_link_relation_soundtrack':
+        return 'Soundtrack';
+      case 'media_link_relation_theme_song':
+        return 'Theme song';
+      case 'media_link_remove':
+        return 'Remove link';
+      case 'media_link_removed':
+        return 'Link removed';
+      case 'media_link_role_adapted':
+        return 'Adapted';
+      case 'media_link_role_original':
+        return 'Original';
+      case 'media_link_saved':
+        return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
+      case 'media_link_section_title':
+        return 'Same work';
+      case 'media_link_suggestion_confirm':
+        return 'Confirm';
+      case 'media_link_suggestion_reject':
+        return 'Not related';
+      case 'media_link_suggestion_source':
+        return ({required Object source}) => 'Suggested by ${source}';
+      case 'media_link_suggestions_title':
+        return 'Possibly related';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
