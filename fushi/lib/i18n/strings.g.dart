@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154666 (9098 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11319,15 +11319,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  String get video_disc_choose_disc => 'Choose disc';
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  String get video_disc_exit => 'Exit disc';
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   String get video_disc_navigation_failed =>
       'The disc could not complete this menu action.';
   String get video_disc_open_menu => 'Open disc menu';
+  String get video_disc_play => 'Play disc';
+  String get video_disc_play_main_title => 'Play main title';
   String get video_disc_popup_menu => 'Popup menu';
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -11436,6 +11451,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_filter_series_standalone_empty_hint =>
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   String get video_filter_source => 'Source';
+  String get video_filter_spec => 'Format';
+  String get video_filter_spec_4k => '4K';
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  String get video_filter_spec_dvd => 'DVD';
+  String get video_filter_spec_hdr => 'HDR';
+  String get video_filter_spec_plain_file => 'Regular file';
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   String get video_filter_watch_status => 'Watch status';
   String get video_filter_watch_status_completed => 'Completed';
   String get video_filter_watch_status_unwatched => 'Unwatched';
@@ -12024,6 +12046,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_danmaku_speed => 'Speed';
   String get video_setting_danmaku_speed_hint =>
       'Higher is faster; scrolling danmaku cross the screen sooner.';
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   String get video_setting_double_tap => 'Double-tap seek';
   String get video_setting_double_tap_hint =>
       'Double-tap the left or right of the video to seek';
@@ -32130,11 +32161,32 @@ class _StringsAr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -32143,6 +32195,10 @@ class _StringsAr extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -32329,6 +32385,20 @@ class _StringsAr extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'حالة المشاهدة';
   @override
@@ -33310,6 +33380,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'كلما زادت القيمة زادت السرعة؛ تعبر الدانماكو المتحركة الشاشة أسرع.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'النقر المزدوج للانتقال';
   @override
@@ -54522,11 +54606,32 @@ class _StringsDe extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -54535,6 +54640,10 @@ class _StringsDe extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -54725,6 +54834,20 @@ class _StringsDe extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Wiedergabestatus';
   @override
@@ -55727,6 +55850,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Höher ist schneller; Lauf-Danmaku überqueren den Bildschirm schneller.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Doppeltipp-Spulen';
   @override
@@ -77021,11 +77158,32 @@ class _StringsEs extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -77034,6 +77192,10 @@ class _StringsEs extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -77225,6 +77387,20 @@ class _StringsEs extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Estado de visualización';
   @override
@@ -78226,6 +78402,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Mayor es más rápido; el danmaku desplazable cruza la pantalla antes.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Doble toque para saltar';
   @override
@@ -99588,11 +99778,32 @@ class _StringsFr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -99601,6 +99812,10 @@ class _StringsFr extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -99794,6 +100009,20 @@ class _StringsFr extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Statut de visionnage';
   @override
@@ -100803,6 +101032,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Plus élevé est plus rapide ; les danmaku défilants traversent l\'écran plus vite.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Avancer/reculer par double-toucher';
   @override
@@ -121897,11 +122140,32 @@ class _StringsId extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -121910,6 +122174,10 @@ class _StringsId extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -122098,6 +122366,20 @@ class _StringsId extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Status tontonan';
   @override
@@ -123091,6 +123373,20 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Lebih tinggi lebih cepat; danmaku bergulir melintasi layar lebih cepat.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Ketuk dua kali untuk melompat';
   @override
@@ -144284,11 +144580,32 @@ class _StringsIt extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -144297,6 +144614,10 @@ class _StringsIt extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -144487,6 +144808,20 @@ class _StringsIt extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Stato di visione';
   @override
@@ -145478,6 +145813,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Più alto è più veloce; i danmaku scorrevoli attraversano lo schermo prima.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Doppio tocco per spostarti';
   @override
@@ -165839,11 +166188,32 @@ class _StringsJa extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -165852,6 +166222,10 @@ class _StringsJa extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -166033,6 +166407,20 @@ class _StringsJa extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => '視聴状態';
   @override
@@ -166973,6 +167361,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       '値が大きいほど速く、スクロール弾幕が早く画面を横切ります。';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'ダブルタップでシーク';
   @override
@@ -187239,11 +187641,32 @@ class _StringsKo extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -187252,6 +187675,10 @@ class _StringsKo extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -187431,6 +187858,20 @@ class _StringsKo extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => '시청 상태';
   @override
@@ -188380,6 +188821,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       '높을수록 빠르며, 스크롤 댄마쿠가 화면을 더 빠르게 지나갑니다.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => '더블 탭 이동';
   @override
@@ -209457,11 +209912,32 @@ class _StringsNl extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -209470,6 +209946,10 @@ class _StringsNl extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -209658,6 +210138,20 @@ class _StringsNl extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Kijkstatus';
   @override
@@ -210652,6 +211146,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Hoger is sneller; scrollende danmaku kruist het scherm eerder.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Spoelen met dubbeltik';
   @override
@@ -231863,11 +232371,32 @@ class _StringsPtBr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -231876,6 +232405,10 @@ class _StringsPtBr extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -232067,6 +232600,20 @@ class _StringsPtBr extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Status de visualização';
   @override
@@ -233068,6 +233615,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Mais alto é mais rápido; o danmaku rolante cruza a tela mais rápido.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Toque duplo para avançar/retroceder';
   @override
@@ -254237,11 +254798,32 @@ class _StringsRu extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -254250,6 +254832,10 @@ class _StringsRu extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -254441,6 +255027,20 @@ class _StringsRu extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Статус просмотра';
   @override
@@ -255440,6 +256040,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Чем выше, тем быстрее; бегущие данмаку пересекают экран быстрее.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Перемотка двойным касанием';
   @override
@@ -276353,11 +276967,32 @@ class _StringsTh extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -276366,6 +277001,10 @@ class _StringsTh extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -276552,6 +277191,20 @@ class _StringsTh extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'สถานะการรับชม';
   @override
@@ -277529,6 +278182,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'ค่ายิ่งสูงยิ่งเร็ว; ดันมากุเลื่อนข้ามหน้าจอเร็วขึ้น';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'แตะสองครั้งเพื่อเลื่อนเวลา';
   @override
@@ -298570,11 +299237,32 @@ class _StringsTr extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -298583,6 +299271,10 @@ class _StringsTr extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -298772,6 +299464,20 @@ class _StringsTr extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'İzleme durumu';
   @override
@@ -299762,6 +300468,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Yüksek değer daha hızlı; kayan danmaku ekranı daha çabuk geçer.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Çift dokunarak sarma';
   @override
@@ -320761,11 +321481,32 @@ class _StringsVi extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -320774,6 +321515,10 @@ class _StringsVi extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -320963,6 +321708,20 @@ class _StringsVi extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Trạng thái xem';
   @override
@@ -321952,6 +322711,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_danmaku_speed_hint =>
       'Cao hơn nghĩa là nhanh hơn; danmaku cuộn qua màn hình sớm hơn.';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => 'Nhấp đúp để tua';
   @override
@@ -341337,16 +342110,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_disc_audio_selection_pending => '请等待原盘确定音轨，或手动选择音轨后再制卡。';
   @override
+  String get video_disc_chapters_menu_unavailable => '菜单阶段没有正片时间轴，进入正片后可用章节。';
+  @override
+  String get video_disc_choose_disc => '选盘';
+  @override
+  String video_disc_continue_at({required Object time}) => '继续观看 ${time}';
+  @override
+  String get video_disc_exit => '退出原盘';
+  @override
   String get video_disc_extraction_unavailable =>
       '此标题可经原盘解码播放，但加密源无法用于字幕提取或制卡。';
   @override
+  String get video_disc_hold_to_exit => '按住退出原盘';
+  @override
   String get video_disc_menu_open_failed => '无法打开这张原盘的菜单，仍可直接播放其中的标题。';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      '此盘菜单为 BD-J，当前安装包未包含 BD-J 组件。';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj => '此盘菜单为 BD-J，本平台不支持。';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      '这张盘在其他设备上，无法在本机打开菜单。下载到本机后即可使用菜单。';
   @override
   String get video_disc_menu_unsupported => '当前播放器不支持蓝光菜单，请更新随包播放器或直接播放标题。';
   @override
   String get video_disc_navigation_failed => '原盘未能执行这个菜单操作。';
   @override
   String get video_disc_open_menu => '进入原盘菜单';
+  @override
+  String get video_disc_play => '播放原盘';
+  @override
+  String get video_disc_play_main_title => '直接播放正片';
   @override
   String get video_disc_popup_menu => '弹出菜单';
   @override
@@ -341514,6 +342309,20 @@ class _StringsZhCn extends _StringsEn {
       '没有散片。合集里的视频在「系列」页，或把「系列」筛选切到「全部」。';
   @override
   String get video_filter_source => '来源';
+  @override
+  String get video_filter_spec => '规格';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'BD 原盘';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => '普通文件';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD BD';
   @override
   String get video_filter_watch_status => '看完状态';
   @override
@@ -342390,6 +343199,17 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_danmaku_speed => '速度';
   @override
   String get video_setting_danmaku_speed_hint => '越大越快，滚动弹幕更快划过屏幕。';
+  @override
+  String get video_setting_disc_auto_fullscreen => '播放原盘时自动全屏';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      '仅桌面端。退出原盘后恢复进入前的窗口尺寸、位置与最大化状态。';
+  @override
+  String get video_setting_disc_launch_animation => '原盘启动动画';
+  @override
+  String get video_setting_disc_open_menu_by_default => '原盘默认进入菜单';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint => '关闭后主按钮直接播放正片。';
   @override
   String get video_setting_double_tap => '双击快进';
   @override
@@ -362042,11 +362862,32 @@ class _StringsZhHk extends _StringsEn {
   String get video_disc_audio_selection_pending =>
       'Wait for the disc to select an audio track, or choose one before creating cards.';
   @override
+  String get video_disc_chapters_menu_unavailable =>
+      'Chapters are available once the main title is playing; the disc menu has no timeline.';
+  @override
+  String get video_disc_choose_disc => 'Choose disc';
+  @override
+  String video_disc_continue_at({required Object time}) =>
+      'Continue watching ${time}';
+  @override
+  String get video_disc_exit => 'Exit disc';
+  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
+  String get video_disc_hold_to_exit => 'Hold to exit the disc';
+  @override
   String get video_disc_menu_open_failed =>
       'This disc\'s menu could not be opened. You can still play its titles directly.';
+  @override
+  String get video_disc_menu_unavailable_missing_bdj =>
+      'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+  @override
+  String get video_disc_menu_unavailable_mobile_bdj =>
+      'This disc\'s menu is BD-J, which this platform does not support.';
+  @override
+  String get video_disc_menu_unavailable_remote =>
+      'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
@@ -362055,6 +362896,10 @@ class _StringsZhHk extends _StringsEn {
       'The disc could not complete this menu action.';
   @override
   String get video_disc_open_menu => 'Open disc menu';
+  @override
+  String get video_disc_play => 'Play disc';
+  @override
+  String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
   @override
@@ -362224,6 +363069,20 @@ class _StringsZhHk extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => '規格';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'BD 原盤';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => '普通檔案';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD BD';
   @override
   String get video_filter_watch_status => '看完狀態';
   @override
@@ -363140,6 +363999,20 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_danmaku_speed => '速度';
   @override
   String get video_setting_danmaku_speed_hint => '越大越快，滾動彈幕更快劃過螢幕。';
+  @override
+  String get video_setting_disc_auto_fullscreen =>
+      'Full screen for disc playback';
+  @override
+  String get video_setting_disc_auto_fullscreen_hint =>
+      'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+  @override
+  String get video_setting_disc_launch_animation => 'Disc launch animation';
+  @override
+  String get video_setting_disc_open_menu_by_default =>
+      'Open disc menu by default';
+  @override
+  String get video_setting_disc_open_menu_by_default_hint =>
+      'When off, the play button starts the main title directly.';
   @override
   String get video_setting_double_tap => '雙按快進';
   @override
@@ -381193,16 +382066,36 @@ extension on _StringsEn {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -381362,6 +382255,20 @@ extension on _StringsEn {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Watch status';
       case 'video_filter_watch_status_completed':
@@ -382180,6 +383087,16 @@ extension on _StringsEn {
         return 'Speed';
       case 'video_setting_danmaku_speed_hint':
         return 'Higher is faster; scrolling danmaku cross the screen sooner.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Double-tap seek';
       case 'video_setting_double_tap_hint':
@@ -400060,16 +400977,36 @@ extension on _StringsAr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -400229,6 +401166,20 @@ extension on _StringsAr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'حالة المشاهدة';
       case 'video_filter_watch_status_completed':
@@ -401047,6 +401998,16 @@ extension on _StringsAr {
         return 'السرعة';
       case 'video_setting_danmaku_speed_hint':
         return 'كلما زادت القيمة زادت السرعة؛ تعبر الدانماكو المتحركة الشاشة أسرع.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'النقر المزدوج للانتقال';
       case 'video_setting_double_tap_hint':
@@ -418998,16 +419959,36 @@ extension on _StringsDe {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -419167,6 +420148,20 @@ extension on _StringsDe {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Wiedergabestatus';
       case 'video_filter_watch_status_completed':
@@ -419989,6 +420984,16 @@ extension on _StringsDe {
         return 'Geschwindigkeit';
       case 'video_setting_danmaku_speed_hint':
         return 'Höher ist schneller; Lauf-Danmaku überqueren den Bildschirm schneller.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Doppeltipp-Spulen';
       case 'video_setting_double_tap_hint':
@@ -437927,16 +438932,36 @@ extension on _StringsEs {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -438096,6 +439121,20 @@ extension on _StringsEs {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Estado de visualización';
       case 'video_filter_watch_status_completed':
@@ -438916,6 +439955,16 @@ extension on _StringsEs {
         return 'Velocidad';
       case 'video_setting_danmaku_speed_hint':
         return 'Mayor es más rápido; el danmaku desplazable cruza la pantalla antes.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Doble toque para saltar';
       case 'video_setting_double_tap_hint':
@@ -456869,16 +457918,36 @@ extension on _StringsFr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -457038,6 +458107,20 @@ extension on _StringsFr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Statut de visionnage';
       case 'video_filter_watch_status_completed':
@@ -457860,6 +458943,16 @@ extension on _StringsFr {
         return 'Vitesse';
       case 'video_setting_danmaku_speed_hint':
         return 'Plus élevé est plus rapide ; les danmaku défilants traversent l\'écran plus vite.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Avancer/reculer par double-toucher';
       case 'video_setting_double_tap_hint':
@@ -475762,16 +476855,36 @@ extension on _StringsId {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -475931,6 +477044,20 @@ extension on _StringsId {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Status tontonan';
       case 'video_filter_watch_status_completed':
@@ -476749,6 +477876,16 @@ extension on _StringsId {
         return 'Kecepatan';
       case 'video_setting_danmaku_speed_hint':
         return 'Lebih tinggi lebih cepat; danmaku bergulir melintasi layar lebih cepat.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Ketuk dua kali untuk melompat';
       case 'video_setting_double_tap_hint':
@@ -494683,16 +495820,36 @@ extension on _StringsIt {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -494852,6 +496009,20 @@ extension on _StringsIt {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Stato di visione';
       case 'video_filter_watch_status_completed':
@@ -495671,6 +496842,16 @@ extension on _StringsIt {
         return 'Velocità';
       case 'video_setting_danmaku_speed_hint':
         return 'Più alto è più veloce; i danmaku scorrevoli attraversano lo schermo prima.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Doppio tocco per spostarti';
       case 'video_setting_double_tap_hint':
@@ -513497,16 +514678,36 @@ extension on _StringsJa {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -513666,6 +514867,20 @@ extension on _StringsJa {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return '視聴状態';
       case 'video_filter_watch_status_completed':
@@ -514475,6 +515690,16 @@ extension on _StringsJa {
         return '速度';
       case 'video_setting_danmaku_speed_hint':
         return '値が大きいほど速く、スクロール弾幕が早く画面を横切ります。';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'ダブルタップでシーク';
       case 'video_setting_double_tap_hint':
@@ -532292,16 +533517,36 @@ extension on _StringsKo {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -532461,6 +533706,20 @@ extension on _StringsKo {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return '시청 상태';
       case 'video_filter_watch_status_completed':
@@ -533274,6 +534533,16 @@ extension on _StringsKo {
         return '속도';
       case 'video_setting_danmaku_speed_hint':
         return '높을수록 빠르며, 스크롤 댄마쿠가 화면을 더 빠르게 지나갑니다.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return '더블 탭 이동';
       case 'video_setting_double_tap_hint':
@@ -551194,16 +552463,36 @@ extension on _StringsNl {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -551363,6 +552652,20 @@ extension on _StringsNl {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Kijkstatus';
       case 'video_filter_watch_status_completed':
@@ -552184,6 +553487,16 @@ extension on _StringsNl {
         return 'Snelheid';
       case 'video_setting_danmaku_speed_hint':
         return 'Hoger is sneller; scrollende danmaku kruist het scherm eerder.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Spoelen met dubbeltik';
       case 'video_setting_double_tap_hint':
@@ -570106,16 +571419,36 @@ extension on _StringsPtBr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -570275,6 +571608,20 @@ extension on _StringsPtBr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Status de visualização';
       case 'video_filter_watch_status_completed':
@@ -571096,6 +572443,16 @@ extension on _StringsPtBr {
         return 'Velocidade';
       case 'video_setting_danmaku_speed_hint':
         return 'Mais alto é mais rápido; o danmaku rolante cruza a tela mais rápido.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Toque duplo para avançar/retroceder';
       case 'video_setting_double_tap_hint':
@@ -589026,16 +590383,36 @@ extension on _StringsRu {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -589195,6 +590572,20 @@ extension on _StringsRu {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Статус просмотра';
       case 'video_filter_watch_status_completed':
@@ -590013,6 +591404,16 @@ extension on _StringsRu {
         return 'Скорость';
       case 'video_setting_danmaku_speed_hint':
         return 'Чем выше, тем быстрее; бегущие данмаку пересекают экран быстрее.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Перемотка двойным касанием';
       case 'video_setting_double_tap_hint':
@@ -607901,16 +609302,36 @@ extension on _StringsTh {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -608070,6 +609491,20 @@ extension on _StringsTh {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'สถานะการรับชม';
       case 'video_filter_watch_status_completed':
@@ -608886,6 +610321,16 @@ extension on _StringsTh {
         return 'ความเร็ว';
       case 'video_setting_danmaku_speed_hint':
         return 'ค่ายิ่งสูงยิ่งเร็ว; ดันมากุเลื่อนข้ามหน้าจอเร็วขึ้น';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'แตะสองครั้งเพื่อเลื่อนเวลา';
       case 'video_setting_double_tap_hint':
@@ -626800,16 +628245,36 @@ extension on _StringsTr {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -626969,6 +628434,20 @@ extension on _StringsTr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'İzleme durumu';
       case 'video_filter_watch_status_completed':
@@ -627788,6 +629267,16 @@ extension on _StringsTr {
         return 'Hız';
       case 'video_setting_danmaku_speed_hint':
         return 'Yüksek değer daha hızlı; kayan danmaku ekranı daha çabuk geçer.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Çift dokunarak sarma';
       case 'video_setting_double_tap_hint':
@@ -645690,16 +647179,36 @@ extension on _StringsVi {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -645859,6 +647368,20 @@ extension on _StringsVi {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Trạng thái xem';
       case 'video_filter_watch_status_completed':
@@ -646676,6 +648199,16 @@ extension on _StringsVi {
         return 'Tốc độ';
       case 'video_setting_danmaku_speed_hint':
         return 'Cao hơn nghĩa là nhanh hơn; danmaku cuộn qua màn hình sớm hơn.';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return 'Nhấp đúp để tua';
       case 'video_setting_double_tap_hint':
@@ -664376,16 +665909,36 @@ extension on _StringsZhCn {
         return '当前菜单选中的角度无法直接提取。请切回主视角后制卡。';
       case 'video_disc_audio_selection_pending':
         return '请等待原盘确定音轨，或手动选择音轨后再制卡。';
+      case 'video_disc_chapters_menu_unavailable':
+        return '菜单阶段没有正片时间轴，进入正片后可用章节。';
+      case 'video_disc_choose_disc':
+        return '选盘';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => '继续观看 ${time}';
+      case 'video_disc_exit':
+        return '退出原盘';
       case 'video_disc_extraction_unavailable':
         return '此标题可经原盘解码播放，但加密源无法用于字幕提取或制卡。';
+      case 'video_disc_hold_to_exit':
+        return '按住退出原盘';
       case 'video_disc_menu_open_failed':
         return '无法打开这张原盘的菜单，仍可直接播放其中的标题。';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return '此盘菜单为 BD-J，当前安装包未包含 BD-J 组件。';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return '此盘菜单为 BD-J，本平台不支持。';
+      case 'video_disc_menu_unavailable_remote':
+        return '这张盘在其他设备上，无法在本机打开菜单。下载到本机后即可使用菜单。';
       case 'video_disc_menu_unsupported':
         return '当前播放器不支持蓝光菜单，请更新随包播放器或直接播放标题。';
       case 'video_disc_navigation_failed':
         return '原盘未能执行这个菜单操作。';
       case 'video_disc_open_menu':
         return '进入原盘菜单';
+      case 'video_disc_play':
+        return '播放原盘';
+      case 'video_disc_play_main_title':
+        return '直接播放正片';
       case 'video_disc_popup_menu':
         return '弹出菜单';
       case 'video_disc_runtime_description':
@@ -664545,6 +666098,20 @@ extension on _StringsZhCn {
         return '没有散片。合集里的视频在「系列」页，或把「系列」筛选切到「全部」。';
       case 'video_filter_source':
         return '来源';
+      case 'video_filter_spec':
+        return '规格';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'BD 原盘';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return '普通文件';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD BD';
       case 'video_filter_watch_status':
         return '看完状态';
       case 'video_filter_watch_status_completed':
@@ -665351,6 +666918,16 @@ extension on _StringsZhCn {
         return '速度';
       case 'video_setting_danmaku_speed_hint':
         return '越大越快，滚动弹幕更快划过屏幕。';
+      case 'video_setting_disc_auto_fullscreen':
+        return '播放原盘时自动全屏';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return '仅桌面端。退出原盘后恢复进入前的窗口尺寸、位置与最大化状态。';
+      case 'video_setting_disc_launch_animation':
+        return '原盘启动动画';
+      case 'video_setting_disc_open_menu_by_default':
+        return '原盘默认进入菜单';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return '关闭后主按钮直接播放正片。';
       case 'video_setting_double_tap':
         return '双击快进';
       case 'video_setting_double_tap_hint':
@@ -683095,16 +684672,36 @@ extension on _StringsZhHk {
         return 'This menu-selected angle cannot be extracted. Switch to the main angle before creating cards.';
       case 'video_disc_audio_selection_pending':
         return 'Wait for the disc to select an audio track, or choose one before creating cards.';
+      case 'video_disc_chapters_menu_unavailable':
+        return 'Chapters are available once the main title is playing; the disc menu has no timeline.';
+      case 'video_disc_choose_disc':
+        return 'Choose disc';
+      case 'video_disc_continue_at':
+        return ({required Object time}) => 'Continue watching ${time}';
+      case 'video_disc_exit':
+        return 'Exit disc';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
+      case 'video_disc_hold_to_exit':
+        return 'Hold to exit the disc';
       case 'video_disc_menu_open_failed':
         return 'This disc\'s menu could not be opened. You can still play its titles directly.';
+      case 'video_disc_menu_unavailable_missing_bdj':
+        return 'This disc\'s menu is BD-J, and this build does not include the BD-J components.';
+      case 'video_disc_menu_unavailable_mobile_bdj':
+        return 'This disc\'s menu is BD-J, which this platform does not support.';
+      case 'video_disc_menu_unavailable_remote':
+        return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_play':
+        return 'Play disc';
+      case 'video_disc_play_main_title':
+        return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
       case 'video_disc_runtime_description':
@@ -683264,6 +684861,20 @@ extension on _StringsZhHk {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return '規格';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'BD 原盤';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return '普通檔案';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD BD';
       case 'video_filter_watch_status':
         return '看完狀態';
       case 'video_filter_watch_status_completed':
@@ -684071,6 +685682,16 @@ extension on _StringsZhHk {
         return '速度';
       case 'video_setting_danmaku_speed_hint':
         return '越大越快，滾動彈幕更快劃過螢幕。';
+      case 'video_setting_disc_auto_fullscreen':
+        return 'Full screen for disc playback';
+      case 'video_setting_disc_auto_fullscreen_hint':
+        return 'Desktop only. Leaving the disc restores the previous window size, position and maximized state.';
+      case 'video_setting_disc_launch_animation':
+        return 'Disc launch animation';
+      case 'video_setting_disc_open_menu_by_default':
+        return 'Open disc menu by default';
+      case 'video_setting_disc_open_menu_by_default_hint':
+        return 'When off, the play button starts the main title directly.';
       case 'video_setting_double_tap':
         return '雙按快進';
       case 'video_setting_double_tap_hint':
