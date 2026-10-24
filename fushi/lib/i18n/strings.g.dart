@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159579 (9387 per locale)
+/// Strings: 159681 (9393 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4404,6 +4404,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_card_sentence_audio_missing =>
       'The card was created without sentence audio; no other line\'s audio was substituted.';
   String get game_clear_events => 'Clear events';
+  String game_collection_work_count({required Object n}) => '${n} games';
   String get game_cover_not_found =>
       'No usable cover found in the game folder or executable';
   String get game_cover_searching => 'Looking for a cover...';
@@ -8735,6 +8736,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_view_changelog => 'View changelog';
   String get share => 'Share';
   String get share_theme => 'Share theme';
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  String get shelf_card_meta_download_failed => 'Download failed';
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   String get shelf_collection_series_label => 'Series';
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   String get shelf_filter_read_status => 'Reading status';
@@ -20688,6 +20697,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_clear_events => 'مسح الأحداث';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'لم يُعثر على غلاف قابل للاستخدام في مجلد اللعبة أو ملفها التنفيذي';
   @override
@@ -28074,6 +28085,19 @@ class _StringsAr extends _StringsEn {
   String get share => 'مشاركة';
   @override
   String get share_theme => 'مشاركة المظهر';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -43602,6 +43626,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_clear_events => 'Ereignisse löschen';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Kein verwendbares Cover im Spielordner oder in der ausführbaren Datei gefunden';
   @override
@@ -51155,6 +51181,19 @@ class _StringsDe extends _StringsEn {
   String get share => 'Teilen';
   @override
   String get share_theme => 'Theme teilen';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -66806,6 +66845,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_clear_events => 'Limpiar eventos';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'No se encontró portada utilizable en la carpeta o ejecutable del juego';
   @override
@@ -74365,6 +74406,19 @@ class _StringsEs extends _StringsEn {
   String get share => 'Compartir';
   @override
   String get share_theme => 'Compartir tema';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -90072,6 +90126,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_clear_events => 'Effacer les événements';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Aucune couverture utilisable trouvée dans le dossier ou l\'exécutable du jeu';
   @override
@@ -97668,6 +97724,19 @@ class _StringsFr extends _StringsEn {
   String get share => 'Partager';
   @override
   String get share_theme => 'Partager le thème';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -113281,6 +113350,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_clear_events => 'Bersihkan peristiwa';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Tidak ditemukan sampul yang bisa digunakan di folder game atau eksekutabel';
   @override
@@ -120750,6 +120821,19 @@ class _StringsId extends _StringsEn {
   String get share => 'Bagikan';
   @override
   String get share_theme => 'Bagikan Tema';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -136307,6 +136391,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_clear_events => 'Cancella eventi';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Nessuna copertina utilizzabile trovata nella cartella o nell\'eseguibile del gioco';
   @override
@@ -143844,6 +143930,19 @@ class _StringsIt extends _StringsEn {
   String get share => 'Condividi';
   @override
   String get share_theme => 'Condividi tema';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -159140,6 +159239,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_clear_events => 'イベントをクリア';
   @override
+  String game_collection_work_count({required Object n}) => '${n} 作品';
+  @override
   String get game_cover_not_found => 'ゲームフォルダや実行ファイルから使用可能なカバーが見つかりませんでした';
   @override
   String get game_cover_searching => 'カバーを検索中...';
@@ -166280,6 +166381,19 @@ class _StringsJa extends _StringsEn {
   String get share => '共有';
   @override
   String get share_theme => 'テーマを共有';
+  @override
+  String get shelf_card_meta_alignment_failed => '同期に失敗';
+  @override
+  String get shelf_card_meta_alignment_partial => '一部のみ同期';
+  @override
+  String get shelf_card_meta_download_failed => 'ダウンロード失敗';
+  @override
+  String get shelf_card_meta_not_downloaded => '未ダウンロード';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '全 ${n} 巻 · ${index} 巻目を読書中';
   @override
   String get shelf_collection_series_label => 'シリーズ';
   @override
@@ -181251,6 +181365,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_clear_events => '이벤트 지우기';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found => '게임 폴더나 실행 파일에서 사용 가능한 표지를 찾을 수 없습니다';
   @override
   String get game_cover_searching => '표지 검색 중...';
@@ -188407,6 +188523,19 @@ class _StringsKo extends _StringsEn {
   String get share => '공유';
   @override
   String get share_theme => '테마 공유';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -203701,6 +203830,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_clear_events => 'Gebeurtenissen wissen';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Geen bruikbare omslag gevonden in de spelmap of het uitvoerbestand';
   @override
@@ -211212,6 +211343,19 @@ class _StringsNl extends _StringsEn {
   String get share => 'Delen';
   @override
   String get share_theme => 'Thema delen';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -226819,6 +226963,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_clear_events => 'Limpar eventos';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Nenhuma capa utilizável encontrada na pasta ou executável do jogo';
   @override
@@ -234351,6 +234497,19 @@ class _StringsPtBr extends _StringsEn {
   String get share => 'Compartilhar';
   @override
   String get share_theme => 'Compartilhar tema';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -249945,6 +250104,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_clear_events => 'Очистить события';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Подходящая обложка не найдена в папке игры или исполняемом файле';
   @override
@@ -257466,6 +257627,19 @@ class _StringsRu extends _StringsEn {
   String get share => 'Поделиться';
   @override
   String get share_theme => 'Поделиться темой';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -272955,6 +273129,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_clear_events => 'ล้างเหตุการณ์';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'ไม่พบปกที่ใช้ได้ในโฟลเดอร์เกมหรือไฟล์โปรแกรม';
   @override
@@ -280348,6 +280524,19 @@ class _StringsTh extends _StringsEn {
   String get share => 'แชร์';
   @override
   String get share_theme => 'แชร์ธีม';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -295807,6 +295996,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_clear_events => 'Olayları temizle';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Oyun klasöründe veya çalıştırılabilir dosyada kullanılabilir kapak bulunamadı';
   @override
@@ -303277,6 +303468,19 @@ class _StringsTr extends _StringsEn {
   String get share => 'Paylaş';
   @override
   String get share_theme => 'Temayı paylaş';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -318776,6 +318980,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_clear_events => 'Xóa sự kiện';
   @override
+  String game_collection_work_count({required Object n}) => '${n} games';
+  @override
   String get game_cover_not_found =>
       'Không tìm thấy ảnh bìa trong thư mục hoặc tệp thực thi trò chơi';
   @override
@@ -326209,6 +326415,19 @@ class _StringsVi extends _StringsEn {
   String get share => 'Chia sẻ';
   @override
   String get share_theme => 'Chia sẻ giao diện';
+  @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   @override
   String get shelf_collection_series_label => 'Series';
   @override
@@ -341071,6 +341290,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_clear_events => '清空事件';
   @override
+  String game_collection_work_count({required Object n}) => '${n} 作';
+  @override
   String get game_cover_not_found => '游戏目录和程序图标里都没找到可用封面';
   @override
   String get game_cover_searching => '正在查找封面...';
@@ -347881,6 +348102,19 @@ class _StringsZhCn extends _StringsEn {
   String get share => '分享';
   @override
   String get share_theme => '分享主题';
+  @override
+  String get shelf_card_meta_alignment_failed => '对齐失败';
+  @override
+  String get shelf_card_meta_alignment_partial => '部分对齐';
+  @override
+  String get shelf_card_meta_download_failed => '下载失败';
+  @override
+  String get shelf_card_meta_not_downloaded => '未下载';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} 卷 · 读到第 ${index} 卷';
   @override
   String get shelf_collection_series_label => '系列';
   @override
@@ -362177,6 +362411,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_clear_events => '清空事件';
   @override
+  String game_collection_work_count({required Object n}) => '${n} 作';
+  @override
   String get game_cover_not_found => '遊戲目錄和程式圖標裡都沒找到可用封面';
   @override
   String get game_cover_searching => '正在查找封面...';
@@ -369084,6 +369320,19 @@ class _StringsZhHk extends _StringsEn {
   String get share => '分享';
   @override
   String get share_theme => '分享主題';
+  @override
+  String get shelf_card_meta_alignment_failed => '對齊失敗';
+  @override
+  String get shelf_card_meta_alignment_partial => '部分對齊';
+  @override
+  String get shelf_card_meta_download_failed => '下載失敗';
+  @override
+  String get shelf_card_meta_not_downloaded => '未下載';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} 卷 · 讀到第 ${index} 卷';
   @override
   String get shelf_collection_series_label => '系列';
   @override
@@ -382989,6 +383238,8 @@ extension on _StringsEn {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_clear_events':
         return 'Clear events';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'No usable cover found in the game folder or executable';
       case 'game_cover_searching':
@@ -389347,6 +389598,17 @@ extension on _StringsEn {
         return 'Share';
       case 'share_theme':
         return 'Share theme';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -402505,6 +402767,8 @@ extension on _StringsAr {
         return 'تم إنشاء البطاقة بدون صوت الجملة؛ لم يتم استبدال صوت سطر آخر.';
       case 'game_clear_events':
         return 'مسح الأحداث';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'لم يُعثر على غلاف قابل للاستخدام في مجلد اللعبة أو ملفها التنفيذي';
       case 'game_cover_searching':
@@ -408859,6 +409123,17 @@ extension on _StringsAr {
         return 'مشاركة';
       case 'share_theme':
         return 'مشاركة المظهر';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -422047,6 +422322,8 @@ extension on _StringsDe {
         return 'Die Karte wurde ohne Satzaudio erstellt; Audio einer anderen Zeile wurde nicht ersetzt.';
       case 'game_clear_events':
         return 'Ereignisse löschen';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Kein verwendbares Cover im Spielordner oder in der ausführbaren Datei gefunden';
       case 'game_cover_searching':
@@ -428427,6 +428704,17 @@ extension on _StringsDe {
         return 'Teilen';
       case 'share_theme':
         return 'Theme teilen';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -441623,6 +441911,8 @@ extension on _StringsEs {
         return 'La tarjeta fue creada sin audio de oración; no se sustituyó audio de otra línea.';
       case 'game_clear_events':
         return 'Limpiar eventos';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'No se encontró portada utilizable en la carpeta o ejecutable del juego';
       case 'game_cover_searching':
@@ -447999,6 +448289,17 @@ extension on _StringsEs {
         return 'Compartir';
       case 'share_theme':
         return 'Compartir tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -461204,6 +461505,8 @@ extension on _StringsFr {
         return 'La carte a été créée sans audio de phrase ; aucun audio d\'une autre ligne n\'a été substitué.';
       case 'game_clear_events':
         return 'Effacer les événements';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Aucune couverture utilisable trouvée dans le dossier ou l\'exécutable du jeu';
       case 'game_cover_searching':
@@ -467582,6 +467885,17 @@ extension on _StringsFr {
         return 'Partager';
       case 'share_theme':
         return 'Partager le thème';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -480766,6 +481080,8 @@ extension on _StringsId {
         return 'Kartu dibuat tanpa audio kalimat; tidak ada audio baris lain yang disubstitusi.';
       case 'game_clear_events':
         return 'Bersihkan peristiwa';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Tidak ditemukan sampul yang bisa digunakan di folder game atau eksekutabel';
       case 'game_cover_searching':
@@ -487125,6 +487441,17 @@ extension on _StringsId {
         return 'Bagikan';
       case 'share_theme':
         return 'Bagikan Tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -500306,6 +500633,8 @@ extension on _StringsIt {
         return 'La carta è stata creata senza audio della frase; l\'audio di nessun\'altra riga è stato sostituito.';
       case 'game_clear_events':
         return 'Cancella eventi';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Nessuna copertina utilizzabile trovata nella cartella o nell\'eseguibile del gioco';
       case 'game_cover_searching':
@@ -506677,6 +507006,17 @@ extension on _StringsIt {
         return 'Condividi';
       case 'share_theme':
         return 'Condividi tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -519827,6 +520167,8 @@ extension on _StringsJa {
         return '文音声なしでカードが作成されました。他の行の音声は代用されていません。';
       case 'game_clear_events':
         return 'イベントをクリア';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作品';
       case 'game_cover_not_found':
         return 'ゲームフォルダや実行ファイルから使用可能なカバーが見つかりませんでした';
       case 'game_cover_searching':
@@ -526163,6 +526505,17 @@ extension on _StringsJa {
         return '共有';
       case 'share_theme':
         return 'テーマを共有';
+      case 'shelf_card_meta_alignment_failed':
+        return '同期に失敗';
+      case 'shelf_card_meta_alignment_partial':
+        return '一部のみ同期';
+      case 'shelf_card_meta_download_failed':
+        return 'ダウンロード失敗';
+      case 'shelf_card_meta_not_downloaded':
+        return '未ダウンロード';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '全 ${n} 巻 · ${index} 巻目を読書中';
       case 'shelf_collection_series_label':
         return 'シリーズ';
       case 'shelf_collection_volume_count':
@@ -539262,6 +539615,8 @@ extension on _StringsKo {
         return '문장 오디오 없이 카드가 생성되었습니다. 다른 대사의 오디오로 대체되지 않았습니다.';
       case 'game_clear_events':
         return '이벤트 지우기';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return '게임 폴더나 실행 파일에서 사용 가능한 표지를 찾을 수 없습니다';
       case 'game_cover_searching':
@@ -545598,6 +545953,17 @@ extension on _StringsKo {
         return '공유';
       case 'share_theme':
         return '테마 공유';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -558748,6 +559114,8 @@ extension on _StringsNl {
         return 'De kaart is aangemaakt zonder zinsaudio; audio van een andere regel is niet gebruikt.';
       case 'game_clear_events':
         return 'Gebeurtenissen wissen';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Geen bruikbare omslag gevonden in de spelmap of het uitvoerbestand';
       case 'game_cover_searching':
@@ -565123,6 +565491,17 @@ extension on _StringsNl {
         return 'Delen';
       case 'share_theme':
         return 'Thema delen';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -578308,6 +578687,8 @@ extension on _StringsPtBr {
         return 'O cartão foi criado sem áudio da frase; nenhum áudio de outra linha foi substituído.';
       case 'game_clear_events':
         return 'Limpar eventos';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Nenhuma capa utilizável encontrada na pasta ou executável do jogo';
       case 'game_cover_searching':
@@ -584679,6 +585060,17 @@ extension on _StringsPtBr {
         return 'Compartilhar';
       case 'share_theme':
         return 'Compartilhar tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -597868,6 +598260,8 @@ extension on _StringsRu {
         return 'Карточка создана без аудио предложения; аудио другой строки не подставлено.';
       case 'game_clear_events':
         return 'Очистить события';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Подходящая обложка не найдена в папке игры или исполняемом файле';
       case 'game_cover_searching':
@@ -604239,6 +604633,17 @@ extension on _StringsRu {
         return 'Поделиться';
       case 'share_theme':
         return 'Поделиться темой';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -617402,6 +617807,8 @@ extension on _StringsTh {
         return 'การ์ดถูกสร้างโดยไม่มีเสียงประโยค; ไม่มีการใช้เสียงจากบรรทัดอื่นแทน';
       case 'game_clear_events':
         return 'ล้างเหตุการณ์';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'ไม่พบปกที่ใช้ได้ในโฟลเดอร์เกมหรือไฟล์โปรแกรม';
       case 'game_cover_searching':
@@ -623759,6 +624166,17 @@ extension on _StringsTh {
         return 'แชร์';
       case 'share_theme':
         return 'แชร์ธีม';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -636933,6 +637351,8 @@ extension on _StringsTr {
         return 'Kart cümle sesi olmadan oluşturuldu; başka bir satırın sesi kullanılmadı.';
       case 'game_clear_events':
         return 'Olayları temizle';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Oyun klasöründe veya çalıştırılabilir dosyada kullanılabilir kapak bulunamadı';
       case 'game_cover_searching':
@@ -643297,6 +643717,17 @@ extension on _StringsTr {
         return 'Paylaş';
       case 'share_theme':
         return 'Temayı paylaş';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -656471,6 +656902,8 @@ extension on _StringsVi {
         return 'Thẻ được tạo mà không có âm thanh câu; không có âm thanh dòng khác được thay thế.';
       case 'game_clear_events':
         return 'Xóa sự kiện';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Không tìm thấy ảnh bìa trong thư mục hoặc tệp thực thi trò chơi';
       case 'game_cover_searching':
@@ -662830,6 +663263,17 @@ extension on _StringsVi {
         return 'Chia sẻ';
       case 'share_theme':
         return 'Chia sẻ giao diện';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -675901,6 +676345,8 @@ extension on _StringsZhCn {
         return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
       case 'game_clear_events':
         return '清空事件';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作';
       case 'game_cover_not_found':
         return '游戏目录和程序图标里都没找到可用封面';
       case 'game_cover_searching':
@@ -682215,6 +682661,17 @@ extension on _StringsZhCn {
         return '分享';
       case 'share_theme':
         return '分享主题';
+      case 'shelf_card_meta_alignment_failed':
+        return '对齐失败';
+      case 'shelf_card_meta_alignment_partial':
+        return '部分对齐';
+      case 'shelf_card_meta_download_failed':
+        return '下载失败';
+      case 'shelf_card_meta_not_downloaded':
+        return '未下载';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} 卷 · 读到第 ${index} 卷';
       case 'shelf_collection_series_label':
         return '系列';
       case 'shelf_collection_volume_count':
@@ -695217,6 +695674,8 @@ extension on _StringsZhHk {
         return '卡片已創建，但沒有句子音頻；未借用其他台詞的音頻。';
       case 'game_clear_events':
         return '清空事件';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作';
       case 'game_cover_not_found':
         return '遊戲目錄和程式圖標裡都沒找到可用封面';
       case 'game_cover_searching':
@@ -701544,6 +702003,17 @@ extension on _StringsZhHk {
         return '分享';
       case 'share_theme':
         return '分享主題';
+      case 'shelf_card_meta_alignment_failed':
+        return '對齊失敗';
+      case 'shelf_card_meta_alignment_partial':
+        return '部分對齊';
+      case 'shelf_card_meta_download_failed':
+        return '下載失敗';
+      case 'shelf_card_meta_not_downloaded':
+        return '未下載';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} 卷 · 讀到第 ${index} 卷';
       case 'shelf_collection_series_label':
         return '系列';
       case 'shelf_collection_volume_count':
