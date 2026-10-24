@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 156927 (9231 per locale)
+/// Strings: 156978 (9234 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -13319,6 +13319,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_import_hint =>
       'This is a web page (not a direct stream). It will open in the built-in web player.';
   String get web_video_login_import => 'Import login from browser';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   String get web_video_login_import_waiting =>
@@ -35705,6 +35709,13 @@ class _StringsAr extends _StringsEn {
   String web_video_mine_queue_running({
     required Object done,
     required Object total,
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   }) => 'جارٍ إنشاء البطاقات ${done}/${total}…';
   @override
   String get web_video_mine_queue_stop => 'إيقاف إنشاء البطاقات';
@@ -58540,6 +58551,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -81431,6 +81449,13 @@ class _StringsEs extends _StringsEn {
   @override
   String yomitan_port_kill_confirm_title({required Object port}) =>
       '¿Finalizar el proceso usando el puerto ${port}?';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String yomitan_port_kill_failed({required Object process}) =>
       'No se pudo finalizar ${process}. Finalícelo manualmente, luego reintente.';
@@ -104405,6 +104430,13 @@ class _StringsId extends _StringsEn {
     ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
 
   /// Metadata for the translations of <id>.
   @override
@@ -127037,6 +127069,13 @@ class _StringsIt extends _StringsEn {
   String get ai_assist_generate => 'Genera';
   @override
   String get ai_assist_no_provider =>
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
       'Scegli prima un provider di IA per questa funzione in Impostazioni e IA';
   @override
   String get ai_assist_section => 'Chiedi all\'IA';
@@ -149826,6 +149865,13 @@ class _StringsJa extends _StringsEn {
   String get ai_feature_audiobook_cast => 'Audiobook casting';
   @override
   String get ai_feature_audiobook_cast_summary =>
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
       'Mark which character speaks each line so different voices can read them';
   @override
   String get ai_feature_cloud_transcription => 'Cloud transcription';
@@ -171583,6 +171629,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_library_organize_summary =>
       'Let AI put books, videos and games that belong together into collections';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
@@ -193399,6 +193452,13 @@ class _StringsNl extends _StringsEn {
       'Als het scrapen meerdere kandidaten of niets vindt, kiest AI het bijpassende werk of stelt titels voor om op te zoeken';
   @override
   String get ai_feature_video_search => 'Hulp bij videozoeken';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get ai_feature_video_search_subtitle_summary =>
       'AI rangschikt ondertitelresultaten opnieuw wanneer ondertitels automatisch op de achtergrond worden aangevuld';
@@ -216138,6 +216198,13 @@ class _StringsPtBr extends _StringsEn {
   String get ai_media_acquire_others => 'Outros resultados';
   @override
   String get ai_media_acquire_parsing => 'Entendendo seu pedido…';
+  @override
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get ai_media_acquire_picking =>
       'A IA está escolhendo as melhores correspondências…';
@@ -238949,6 +239016,13 @@ class _StringsRu extends _StringsEn {
   String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
   @override
   String ai_provider_api_key_ok({required Object tail}) =>
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
       'Ends in ${tail} · OK';
   @override
   String get ai_provider_api_key_remove => 'Remove this key';
@@ -261705,6 +261779,13 @@ class _StringsTh extends _StringsEn {
       'กำหนดตายตัวโดยค่าที่ตั้งไว้ล่วงหน้าในตัว';
   @override
   String get ai_provider_rate_limit => 'Requests per minute';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
@@ -284137,6 +284218,13 @@ class _StringsTr extends _StringsEn {
   String get ai_video_acquire_action_scope_movies => 'Tüm filmler';
   @override
   String get ai_video_acquire_action_scope_series => 'Tüm TV dizileri';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   @override
   String get ai_video_acquire_action_scope_work => 'Yalnızca bu eser';
   @override
@@ -306773,6 +306861,13 @@ class _StringsVi extends _StringsEn {
       'Không có bản ${wanted}. Lấy một trong những bản này thay thế?';
   @override
   String get ai_video_acquire_ask_resource => 'Dùng phiên bản này?';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   @override
   String get ai_video_acquire_ask_season => 'Mùa nào?';
   @override
@@ -329337,6 +329432,13 @@ class _StringsZhCn extends _StringsEn {
   String ai_video_acquire_franchise_ready({
     required Object total,
     required Object ready,
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
   }) => '${total} 部里有 ${ready} 部找到了资源。取消勾选不要的再提交；还在播的剧集会自动订阅。';
   @override
   String ai_video_acquire_franchise_searching({required Object title}) =>
@@ -349961,6 +350063,12 @@ class _StringsZhHk extends _StringsEn {
   String get ai_video_acquire_option_next => '換一個';
   @override
   String get ai_video_acquire_option_none => '都不是';
+  String get web_browser_youtube_subtitles_track_empty => '这个视频还没有字幕轨';
+  @override
+  String get web_browser_youtube_subtitles_track_live => '实时采集';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => '选中加载';
+  @override
   @override
   String ai_video_acquire_option_submit_all({required Object count}) =>
       '提交勾選的（${count} 部）';
@@ -371116,6 +371224,13 @@ extension on _StringsEn {
         return 'Skip extras';
       case 'ai_video_download_skip_extras_hint':
         return 'PV, CM, NCOP/NCED, menus and similar. Applies to every download into a video source: extras inside a torrent are not downloaded, and extras-only releases are never picked.';
+  String get web_browser_youtube_subtitles_track_empty =>
+      'No subtitle track on this video yet';
+  @override
+  String get web_browser_youtube_subtitles_track_live => 'Live capture';
+  @override
+  String get web_browser_youtube_subtitles_track_pending => 'Select to load';
+  @override
       case 'ai_video_download_source':
         return 'Preferred source';
       case 'ai_video_download_source_any':
@@ -390342,6 +390457,12 @@ extension on _StringsAr {
         return 'الاسم';
       case 'ai_web_knowledge_custom_name_hint':
         return 'اتركه فارغًا لاستخدام اسم المضيف';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'ai_web_knowledge_custom_remove':
         return 'إزالة الموقع';
       case 'ai_web_knowledge_custom_title':
@@ -409554,6 +409675,12 @@ extension on _StringsDe {
         return 'Englisch übersetzt';
       case 'anime_download_category_non_english':
         return 'Nicht-Englisch';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anime_download_category_raw':
         return 'Roh';
       case 'anime_download_delete':
@@ -428842,6 +428969,12 @@ extension on _StringsEs {
         return 'Sin resultados';
       case 'anime_download_no_results_detail':
         return ({required Object query, required Object filters}) =>
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
             'El servicio respondió exitosamente pero devolvió 0 elementos. Consulta: ${query}; filtros: ${filters}. Intente otro título o relaje los filtros.';
       case 'anime_download_no_subs':
         return 'Sin subtítulos';
@@ -448112,6 +448245,12 @@ extension on _StringsFr {
             'Échec, rien n\'a changé : ${reason}';
       case 'anime_download_relocate_hint':
         return 'Fushi renomme/déplace via le moteur de téléchargement, le partage n\'est pas interrompu. Un renommage dans l\'Explorateur ne peut jamais être récupéré.';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anime_download_relocate_library_failed':
         return ({required Object reason}) =>
             'Fichiers déplacés, mais la bibliothèque pointe encore vers l\'ancien chemin : ${reason}';
@@ -467400,6 +467539,12 @@ extension on _StringsId {
       case 'anime_download_sort_seeders':
         return 'Seeder';
       case 'anime_download_sort_size':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'Ukuran';
       case 'anime_download_store_unavailable':
         return 'Penyimpanan rencana unduhan tidak tersedia';
@@ -486632,6 +486777,12 @@ extension on _StringsIt {
       case 'anime_download_title':
         return 'Download anime';
       case 'anime_download_trusted':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'Affidabile';
       case 'anime_download_trusted_only':
         return 'Solo affidabili';
@@ -505900,6 +506051,12 @@ extension on _StringsJa {
       case 'anki_compact_glossaries_hint':
         return '釈義をコンパクトな形式で表示';
       case 'anki_connect_addon_anki_not_running':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return '実行中のAnkiが見つかりません。まずAnkiデスクトップを起動してから再度お試しください。';
       case 'anki_connect_addon_download_failed':
         return ({required Object error}) =>
@@ -525036,6 +525193,12 @@ extension on _StringsKo {
       case 'anki_connect_port_auto_fix_done':
         return ({required Object port}) =>
             'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anki_connect_port_auto_fix_hint':
         return '비어 있는 포트를 골라 Fushi와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
       case 'anki_connect_port_auto_fix_manual':
@@ -544185,6 +544348,12 @@ extension on _StringsNl {
       case 'anki_create_lapis_hint':
         return 'Voegt het Lapis-notitietype en een Lapis-deck toe aan Anki en selecteert ze daarna.';
       case 'anki_create_lapis_not_found':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Fushi de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
       case 'anki_create_lapis_success':
         return 'Lapis-notitietype en -deck aangemaakt.';
@@ -563445,6 +563614,12 @@ extension on _StringsPtBr {
       case 'anki_dedup_failed':
         return ({required Object error}) => 'Deduplicação falhou: ${error}';
       case 'anki_dedup_plan_busy_note':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'O Anki pode ficar sem resposta enquanto isso executa; evite usar o Anki até terminar.';
       case 'anki_dedup_plan_delete':
         return 'Excluir estes arquivos';
@@ -582700,6 +582875,12 @@ extension on _StringsRu {
         return ({required Object count}) =>
             'Сканирование папки медиа… (найдено ${count} файлов)';
       case 'anki_dedup_progress_title':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'Удаление дубликатов медиа';
       case 'anki_dedup_report_body':
         return ({
@@ -601960,6 +602141,12 @@ extension on _StringsTh {
         return 'Launch Anki when Fushi starts';
       case 'anki_desktop_auto_launch_hint':
         return 'If AnkiConnect on this computer isn\'t responding when Fushi starts, open Anki desktop automatically.';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anki_desktop_executable':
         return 'Anki program';
       case 'anki_desktop_executable_detect':
@@ -621176,6 +621363,12 @@ extension on _StringsTr {
         return 'Tüm koleksiyon';
       case 'anki_duplicate_scope_deck':
         return 'Seçili deste (ve alt desteleri)';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anki_duplicate_scope_deck_root':
         return 'Kök deste (tüm alt desteler)';
       case 'anki_duplicate_scope_hint':
@@ -640423,6 +640616,12 @@ extension on _StringsVi {
       case 'anki_error_first_field_empty':
         return 'Trường đầu tiên của loại ghi chú đã chọn đang trống, và Anki không nhận ghi chú như vậy. Hãy ánh xạ một trường vào đó trong Cài đặt Anki.';
       case 'anki_error_http':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
         return 'Không thể xuất sang Anki: đã xảy ra lỗi HTTP khi liên hệ với AnkiConnect.';
       case 'anki_error_paired_device_unreachable':
         return 'Không thể tạo thẻ vì không kết nối được thiết bị đã ghép nối nào. Hãy đảm bảo Fushi đang chạy trên thiết bị đã ghép nối, hoặc tắt Gửi thẻ đến thiết bị đã ghép nối trong Cài đặt Anki để tạo thẻ cục bộ.';
@@ -659653,6 +659852,12 @@ extension on _StringsZhCn {
         return '模板已恢复。';
       case 'anki_lapis_restore_empty':
         return '还没有备份。';
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
       case 'anki_lapis_restore_factory':
         return '恢复出厂 Lapis';
       case 'anki_lapis_restore_factory_confirm':
@@ -678650,6 +678855,12 @@ extension on _StringsZhHk {
       case 'anki_lapis_visual_block_anchor':
         return '在卡片上的位置';
       case 'anki_lapis_visual_block_anchor_above_definition':
+      case 'web_browser_youtube_subtitles_track_empty':
+        return '这个视频还没有字幕轨';
+      case 'web_browser_youtube_subtitles_track_live':
+        return '实时采集';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return '选中加载';
         return '例句下方';
       case 'anki_lapis_visual_block_anchor_above_sentence':
         return '單詞區下方';
@@ -696710,3 +696921,9 @@ extension on _StringsZhHk {
     }
   }
 }
+      case 'web_browser_youtube_subtitles_track_empty':
+        return 'No subtitle track on this video yet';
+      case 'web_browser_youtube_subtitles_track_live':
+        return 'Live capture';
+      case 'web_browser_youtube_subtitles_track_pending':
+        return 'Select to load';
