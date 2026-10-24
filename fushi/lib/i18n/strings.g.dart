@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157165 (9245 per locale)
+/// Strings: 157437 (9261 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7323,6 +7323,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   String get music_loudness_scan_now => 'Measure loudness now';
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  String get music_lyrics_empty => 'No lyrics for this track';
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  String get music_lyrics_exported => 'Lyrics exported';
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  String get music_lyrics_offset_later => 'Lyrics later';
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  String get music_lyrics_reset_source => 'Use automatic source';
+  String get music_lyrics_search_online => 'Search online lyrics';
+  String get music_lyrics_show_cover => 'Show cover';
+  String get music_lyrics_title => 'Lyrics';
   String get music_now_playing => 'Now playing';
   String get music_open_library => 'Music library';
   String get music_output_fallback_device =>
@@ -25431,6 +25448,39 @@ class _StringsAr extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -48110,6 +48160,39 @@ class _StringsDe extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -70966,6 +71049,39 @@ class _StringsEs extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -93901,6 +94017,39 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -116672,6 +116821,39 @@ class _StringsId extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -139395,6 +139577,39 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -161599,6 +161814,39 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -183365,6 +183613,39 @@ class _StringsKo extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -205706,6 +205987,39 @@ class _StringsNl extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -228493,6 +228807,39 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -251252,6 +251599,39 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -273822,6 +274202,39 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -296378,6 +296791,39 @@ class _StringsTr extends _StringsEn {
   String get music_loudness_scan_now => 'Measure loudness now';
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
   @override
   String get music_now_playing => 'Now playing';
   @override
@@ -318971,6 +319417,39 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -340493,6 +340972,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_loudness_scan_title => '为无 ReplayGain 标签的曲目测量响度';
   @override
+  String get music_lyrics_choose_source => '选择歌词来源';
+  @override
+  String get music_lyrics_empty => '这首歌没有歌词';
+  @override
+  String get music_lyrics_export_ttml => '导出 TTML 到音频文件旁';
+  @override
+  String get music_lyrics_exported => '歌词已导出';
+  @override
+  String get music_lyrics_lookup_pause_title => '查词时暂停';
+  @override
+  String get music_lyrics_no_candidates => '没有找到歌词';
+  @override
+  String get music_lyrics_offset_earlier => '歌词提前';
+  @override
+  String get music_lyrics_offset_later => '歌词延后';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => '偏移 ${ms} 毫秒';
+  @override
+  String get music_lyrics_online_failed => '在线歌词查询失败';
+  @override
+  String get music_lyrics_online_hint => '本地没有歌词时，按标题、艺人、专辑与时长在 LRCLIB 精确匹配';
+  @override
+  String get music_lyrics_online_title => '在线歌词（LRCLIB）';
+  @override
+  String get music_lyrics_reset_source => '恢复自动来源';
+  @override
+  String get music_lyrics_search_online => '搜索在线歌词';
+  @override
+  String get music_lyrics_show_cover => '显示封面';
+  @override
+  String get music_lyrics_title => '歌词';
+  @override
   String get music_now_playing => '正在播放';
   @override
   String get music_open_library => '曲库';
@@ -361335,6 +361846,39 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String get music_lyrics_empty => 'No lyrics for this track';
+  @override
+  String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
+  @override
+  String get music_lyrics_exported => 'Lyrics exported';
+  @override
+  String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_no_candidates => 'No lyrics found';
+  @override
+  String get music_lyrics_offset_earlier => 'Lyrics earlier';
+  @override
+  String get music_lyrics_offset_later => 'Lyrics later';
+  @override
+  String music_lyrics_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_lyrics_online_failed => 'Online lyrics lookup failed';
+  @override
+  String get music_lyrics_online_hint =>
+      'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+  @override
+  String get music_lyrics_online_title => 'Online lyrics (LRCLIB)';
+  @override
+  String get music_lyrics_reset_source => 'Use automatic source';
+  @override
+  String get music_lyrics_search_online => 'Search online lyrics';
+  @override
+  String get music_lyrics_show_cover => 'Show cover';
+  @override
+  String get music_lyrics_title => 'Lyrics';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -381431,6 +381975,38 @@ extension on _StringsEn {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -400641,6 +401217,38 @@ extension on _StringsAr {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -419902,6 +420510,38 @@ extension on _StringsDe {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -439173,6 +439813,38 @@ extension on _StringsEs {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -458454,6 +459126,38 @@ extension on _StringsFr {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -477704,6 +478408,38 @@ extension on _StringsId {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -496951,6 +497687,38 @@ extension on _StringsIt {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -516146,6 +516914,38 @@ extension on _StringsJa {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -535278,6 +536078,38 @@ extension on _StringsKo {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -554494,6 +555326,38 @@ extension on _StringsNl {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -573749,6 +574613,38 @@ extension on _StringsPtBr {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -593008,6 +593904,38 @@ extension on _StringsRu {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -612232,6 +613160,38 @@ extension on _StringsTh {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -631469,6 +632429,38 @@ extension on _StringsTr {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -650698,6 +651690,38 @@ extension on _StringsVi {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -669794,6 +670818,38 @@ extension on _StringsZhCn {
         return '立即测量响度';
       case 'music_loudness_scan_title':
         return '为无 ReplayGain 标签的曲目测量响度';
+      case 'music_lyrics_choose_source':
+        return '选择歌词来源';
+      case 'music_lyrics_empty':
+        return '这首歌没有歌词';
+      case 'music_lyrics_export_ttml':
+        return '导出 TTML 到音频文件旁';
+      case 'music_lyrics_exported':
+        return '歌词已导出';
+      case 'music_lyrics_lookup_pause_title':
+        return '查词时暂停';
+      case 'music_lyrics_no_candidates':
+        return '没有找到歌词';
+      case 'music_lyrics_offset_earlier':
+        return '歌词提前';
+      case 'music_lyrics_offset_later':
+        return '歌词延后';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => '偏移 ${ms} 毫秒';
+      case 'music_lyrics_online_failed':
+        return '在线歌词查询失败';
+      case 'music_lyrics_online_hint':
+        return '本地没有歌词时，按标题、艺人、专辑与时长在 LRCLIB 精确匹配';
+      case 'music_lyrics_online_title':
+        return '在线歌词（LRCLIB）';
+      case 'music_lyrics_reset_source':
+        return '恢复自动来源';
+      case 'music_lyrics_search_online':
+        return '搜索在线歌词';
+      case 'music_lyrics_show_cover':
+        return '显示封面';
+      case 'music_lyrics_title':
+        return '歌词';
       case 'music_now_playing':
         return '正在播放';
       case 'music_open_library':
@@ -688819,6 +689875,38 @@ extension on _StringsZhHk {
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_choose_source':
+        return 'Choose lyrics source';
+      case 'music_lyrics_empty':
+        return 'No lyrics for this track';
+      case 'music_lyrics_export_ttml':
+        return 'Export TTML next to the audio file';
+      case 'music_lyrics_exported':
+        return 'Lyrics exported';
+      case 'music_lyrics_lookup_pause_title':
+        return 'Pause while looking up words';
+      case 'music_lyrics_no_candidates':
+        return 'No lyrics found';
+      case 'music_lyrics_offset_earlier':
+        return 'Lyrics earlier';
+      case 'music_lyrics_offset_later':
+        return 'Lyrics later';
+      case 'music_lyrics_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_lyrics_online_failed':
+        return 'Online lyrics lookup failed';
+      case 'music_lyrics_online_hint':
+        return 'When no local lyrics exist, match title, artist, album and duration on LRCLIB';
+      case 'music_lyrics_online_title':
+        return 'Online lyrics (LRCLIB)';
+      case 'music_lyrics_reset_source':
+        return 'Use automatic source';
+      case 'music_lyrics_search_online':
+        return 'Search online lyrics';
+      case 'music_lyrics_show_cover':
+        return 'Show cover';
+      case 'music_lyrics_title':
+        return 'Lyrics';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
