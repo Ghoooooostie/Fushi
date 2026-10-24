@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154887 (9111 per locale)
+/// Strings: 154921 (9113 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2072,6 +2072,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_local_audio => 'Local audio databases';
   String get backup_category_local_audio_desc =>
       'Local pronunciation audio databases';
+  String get backup_category_music => 'Music';
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   String get backup_category_profiles => 'Profiles';
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_category_progress => 'Reading progress';
@@ -16324,6 +16327,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'قواعد بيانات صوت النطق المحلية';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'الملفات الشخصية';
   @override
@@ -38503,6 +38511,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Lokale Aussprache-Audiodatenbanken';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profile';
   @override
@@ -61044,6 +61057,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Bases de datos de audio de pronunciación local';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfiles';
   @override
@@ -83641,6 +83659,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Bases de données audio de prononciation locale';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profils';
   @override
@@ -106264,6 +106287,11 @@ class _StringsId extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Database audio pengucapan lokal';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Profil';
   @override
   String get backup_category_profiles_desc => 'Profil konfigurasi';
@@ -128603,6 +128631,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Database audio di pronuncia locali';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profili';
   @override
@@ -150974,6 +151007,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => 'ローカル発音音声データベース';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'プロファイル';
   @override
   String get backup_category_profiles_desc => '設定プロファイル';
@@ -172410,6 +172448,11 @@ class _StringsKo extends _StringsEn {
   String get backup_category_local_audio => '로컬 오디오 데이터베이스';
   @override
   String get backup_category_local_audio_desc => '로컬 발음 오디오 데이터베이스';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '프로필';
   @override
@@ -194036,6 +194079,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Lokale uitspraakaudiodatabases';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profielen';
   @override
@@ -216482,6 +216530,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Bancos de áudio de pronúncia local';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfis';
   @override
@@ -238970,6 +239023,11 @@ class _StringsRu extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Локальные базы аудио произношения';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Профили';
   @override
   String get backup_category_profiles_desc => 'Профили конфигурации';
@@ -261375,6 +261433,11 @@ class _StringsTh extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'ฐานข้อมูลเสียงออกเสียงในเครื่อง';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'โปรไฟล์';
   @override
   String get backup_category_profiles_desc => 'โปรไฟล์การตั้งค่า';
@@ -283525,6 +283588,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_local_audio_desc =>
       'Yerel telaffuz ses veritabanları';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profiller';
   @override
@@ -305845,6 +305913,11 @@ class _StringsVi extends _StringsEn {
   String get backup_category_local_audio_desc =>
       'Cơ sở dữ liệu âm thanh phát âm cục bộ';
   @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+  @override
   String get backup_category_profiles => 'Hồ sơ';
   @override
   String get backup_category_profiles_desc => 'Hồ sơ cấu hình';
@@ -327822,6 +327895,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_local_audio_desc => '本地发音音频库';
   @override
+  String get backup_category_music => '音乐';
+  @override
+  String get backup_category_music_desc =>
+      '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+  @override
   String get backup_category_profiles => '配置方案';
   @override
   String get backup_category_profiles_desc => '配置方案';
@@ -348263,6 +348341,11 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_local_audio => '本地音頻資料庫';
   @override
   String get backup_category_local_audio_desc => '本地發音音頻庫';
+  @override
+  String get backup_category_music => 'Music';
+  @override
+  String get backup_category_music_desc =>
+      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -368707,6 +368790,10 @@ extension on _StringsEn {
         return 'Local audio databases';
       case 'backup_category_local_audio_desc':
         return 'Local pronunciation audio databases';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_category_profiles_desc':
@@ -387651,6 +387738,10 @@ extension on _StringsAr {
         return 'قواعد بيانات الصوت المحلية';
       case 'backup_category_local_audio_desc':
         return 'قواعد بيانات صوت النطق المحلية';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'الملفات الشخصية';
       case 'backup_category_profiles_desc':
@@ -406609,6 +406700,10 @@ extension on _StringsDe {
         return 'Lokale Audiodatenbanken';
       case 'backup_category_local_audio_desc':
         return 'Lokale Aussprache-Audiodatenbanken';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profile';
       case 'backup_category_profiles_desc':
@@ -425618,6 +425713,10 @@ extension on _StringsEs {
         return 'Bases de datos de audio local';
       case 'backup_category_local_audio_desc':
         return 'Bases de datos de audio de pronunciación local';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfiles';
       case 'backup_category_profiles_desc':
@@ -444619,6 +444718,10 @@ extension on _StringsFr {
         return 'Bases audio locales';
       case 'backup_category_local_audio_desc':
         return 'Bases de données audio de prononciation locale';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profils';
       case 'backup_category_profiles_desc':
@@ -463620,6 +463723,10 @@ extension on _StringsId {
         return 'Database audio lokal';
       case 'backup_category_local_audio_desc':
         return 'Database audio pengucapan lokal';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profil';
       case 'backup_category_profiles_desc':
@@ -482583,6 +482690,10 @@ extension on _StringsIt {
         return 'Database audio locali';
       case 'backup_category_local_audio_desc':
         return 'Database audio di pronuncia locali';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profili';
       case 'backup_category_profiles_desc':
@@ -501554,6 +501665,10 @@ extension on _StringsJa {
         return 'ローカル音声データベース';
       case 'backup_category_local_audio_desc':
         return 'ローカル発音音声データベース';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'プロファイル';
       case 'backup_category_profiles_desc':
@@ -520411,6 +520526,10 @@ extension on _StringsKo {
         return '로컬 오디오 데이터베이스';
       case 'backup_category_local_audio_desc':
         return '로컬 발음 오디오 데이터베이스';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '프로필';
       case 'backup_category_profiles_desc':
@@ -539309,6 +539428,10 @@ extension on _StringsNl {
         return 'Lokale audiodatabases';
       case 'backup_category_local_audio_desc':
         return 'Lokale uitspraakaudiodatabases';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profielen';
       case 'backup_category_profiles_desc':
@@ -558300,6 +558423,10 @@ extension on _StringsPtBr {
         return 'Bancos de áudio local';
       case 'backup_category_local_audio_desc':
         return 'Bancos de áudio de pronúncia local';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfis';
       case 'backup_category_profiles_desc':
@@ -577284,6 +577411,10 @@ extension on _StringsRu {
         return 'Локальные аудиобазы';
       case 'backup_category_local_audio_desc':
         return 'Локальные базы аудио произношения';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Профили';
       case 'backup_category_profiles_desc':
@@ -596255,6 +596386,10 @@ extension on _StringsTh {
         return 'ฐานข้อมูลเสียงในเครื่อง';
       case 'backup_category_local_audio_desc':
         return 'ฐานข้อมูลเสียงออกเสียงในเครื่อง';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'โปรไฟล์';
       case 'backup_category_profiles_desc':
@@ -615209,6 +615344,10 @@ extension on _StringsTr {
         return 'Yerel ses veritabanları';
       case 'backup_category_local_audio_desc':
         return 'Yerel telaffuz ses veritabanları';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiller';
       case 'backup_category_profiles_desc':
@@ -634176,6 +634315,10 @@ extension on _StringsVi {
         return 'Cơ sở dữ liệu âm thanh cục bộ';
       case 'backup_category_local_audio_desc':
         return 'Cơ sở dữ liệu âm thanh phát âm cục bộ';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Hồ sơ';
       case 'backup_category_profiles_desc':
@@ -653085,6 +653228,10 @@ extension on _StringsZhCn {
         return '本地音频数据库';
       case 'backup_category_local_audio_desc':
         return '本地发音音频库';
+      case 'backup_category_music':
+        return '音乐';
+      case 'backup_category_music_desc':
+        return '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -671814,6 +671961,10 @@ extension on _StringsZhHk {
         return '本地音頻資料庫';
       case 'backup_category_local_audio_desc':
         return '本地發音音頻庫';
+      case 'backup_category_music':
+        return 'Music';
+      case 'backup_category_music_desc':
+        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
