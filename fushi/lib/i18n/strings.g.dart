@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160157 (9421 per locale)
+/// Strings: 160055 (9415 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8821,7 +8821,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get remote_video_unavailable =>
       'Fushi Interconnect server unavailable';
   String get rename_collection => 'Rename collection';
-  String get render_restart_required => 'Takes effect after restarting the app';
   String get repeat_cue => 'Repeat sentence';
   String get reset => 'Reset';
   String get resource_version_batch => 'Batch';
@@ -12289,15 +12288,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_waiting => 'Waiting for a video on the computer';
   String get video_rename => 'Rename';
   String get video_rename_hint => 'Title';
-  String get video_render_skia_fix_confirm_action => 'Restart';
-  String get video_render_skia_fix_confirm_body =>
-      'This disables the Impeller renderer and restarts the app to apply.';
-  String get video_render_skia_fix_confirm_title =>
-      'Switch to Skia and restart?';
-  String get video_render_skia_fix_hint =>
-      'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
-  String get video_render_skia_fix_title =>
-      'Screen black? Switch renderer (Skia)';
   String get video_resource_failure_network => 'network error';
   String get video_resource_failure_other => 'request failed';
   String get video_resource_failure_rate_limited => 'rate limited';
@@ -28255,8 +28245,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get rename_collection => 'إعادة تسمية المجموعة';
   @override
-  String get render_restart_required => 'يسري المفعول بعد إعادة تشغيل التطبيق';
-  @override
   String get repeat_cue => 'إعادة الجملة';
   @override
   String get reset => 'إعادة تعيين';
@@ -34253,19 +34241,6 @@ class _StringsAr extends _StringsEn {
   String get video_rename => 'إعادة تسمية';
   @override
   String get video_rename_hint => 'العنوان';
-  @override
-  String get video_render_skia_fix_confirm_action => 'إعادة التشغيل';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'يؤدي هذا إلى تعطيل محرك Impeller وإعادة تشغيل التطبيق للتطبيق.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'التبديل إلى Skia وإعادة التشغيل؟';
-  @override
-  String get video_render_skia_fix_hint =>
-      'استخدمه إذا كان الصوت يعمل لكن الفيديو يبقى أسود. يعطل Impeller؛ يتطلب إعادة التشغيل.';
-  @override
-  String get video_render_skia_fix_title => 'شاشة سوداء؟ بدّل المُصيّر (Skia)';
   @override
   String get video_resource_failure_network => 'خطأ في الشبكة';
   @override
@@ -51392,8 +51367,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get rename_collection => 'Sammlung umbenennen';
   @override
-  String get render_restart_required => 'Wird nach Neustart der App wirksam';
-  @override
   String get repeat_cue => 'Satz wiederholen';
   @override
   String get reset => 'Zurücksetzen';
@@ -57457,20 +57430,6 @@ class _StringsDe extends _StringsEn {
   String get video_rename => 'Umbenennen';
   @override
   String get video_rename_hint => 'Titel';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Neustart';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Dies deaktiviert den Impeller-Renderer und startet die App neu, um die Änderung anzuwenden.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Zu Skia wechseln und neu starten?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Verwenden Sie dies, wenn der Ton abgespielt wird, aber das Video schwarz bleibt. Deaktiviert Impeller; Neustart zur Anwendung.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Schwarzer Bildschirm? Renderer wechseln (Skia)';
   @override
   String get video_resource_failure_network => 'Netzwerkfehler';
   @override
@@ -74660,8 +74619,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get rename_collection => 'Renombrar colección';
   @override
-  String get render_restart_required => 'Se aplica después de reiniciar la app';
-  @override
   String get repeat_cue => 'Repetir oración';
   @override
   String get reset => 'Restablecer';
@@ -80751,20 +80708,6 @@ class _StringsEs extends _StringsEn {
   String get video_rename => 'Cambiar nombre';
   @override
   String get video_rename_hint => 'Título';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Reiniciar';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Esto desactiva el renderizador Impeller y reinicia la app para aplicar.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      '¿Cambiar a Skia y reiniciar?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Use si el audio se reproduce pero el vídeo permanece negro. Desactiva Impeller; reinicia para aplicar.';
-  @override
-  String get video_render_skia_fix_title =>
-      '¿Pantalla negra? Cambiar renderizador (Skia)';
   @override
   String get video_resource_failure_network => 'error de red';
   @override
@@ -98027,9 +97970,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get rename_collection => 'Renommer la collection';
   @override
-  String get render_restart_required =>
-      'Prend effet après le redémarrage de l\'application';
-  @override
   String get repeat_cue => 'Répéter la phrase';
   @override
   String get reset => 'Réinitialiser';
@@ -104122,20 +104062,6 @@ class _StringsFr extends _StringsEn {
   String get video_rename => 'Renommer';
   @override
   String get video_rename_hint => 'Titre';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Redémarrer';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Cela désactive le moteur de rendu Impeller et redémarre l\'application.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Passer à Skia et redémarrer ?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Utilisez si l\'audio joue mais la vidéo reste noire. Désactive Impeller ; redémarre pour appliquer.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Écran noir ? Changer de moteur de rendu (Skia)';
   @override
   String get video_resource_failure_network => 'erreur réseau';
   @override
@@ -121182,9 +121108,6 @@ class _StringsId extends _StringsEn {
   @override
   String get rename_collection => 'Ganti nama koleksi';
   @override
-  String get render_restart_required =>
-      'Berlaku setelah memulai ulang aplikasi';
-  @override
   String get repeat_cue => 'Ulangi kalimat';
   @override
   String get reset => 'Atur Ulang';
@@ -127214,20 +127137,6 @@ class _StringsId extends _StringsEn {
   String get video_rename => 'Ganti nama';
   @override
   String get video_rename_hint => 'Judul';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Mulai ulang';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Ini menonaktifkan renderer Impeller dan memulai ulang aplikasi untuk menerapkannya.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Beralih ke Skia dan mulai ulang?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Gunakan jika audio berputar tetapi video tetap hitam. Menonaktifkan Impeller; memulai ulang untuk menerapkan.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Layar hitam? Ganti renderer (Skia)';
   @override
   String get video_resource_failure_network => 'galat jaringan';
   @override
@@ -144333,8 +144242,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get rename_collection => 'Rinomina raccolta';
   @override
-  String get render_restart_required => 'Effettivo dopo il riavvio dell\'app';
-  @override
   String get repeat_cue => 'Ripeti frase';
   @override
   String get reset => 'Reimposta';
@@ -150395,20 +150302,6 @@ class _StringsIt extends _StringsEn {
   String get video_rename => 'Rinomina';
   @override
   String get video_rename_hint => 'Titolo';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Riavvia';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Questo disabilita il renderer Impeller e riavvia l\'app.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Passare a Skia e riavviare?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Usa se l\'audio si sente ma il video resta nero. Disabilita Impeller; riavvia per applicare.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Schermo nero? Cambia renderer (Skia)';
   @override
   String get video_resource_failure_network => 'errore di rete';
   @override
@@ -166860,8 +166753,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get rename_collection => 'コレクション名を変更';
   @override
-  String get render_restart_required => 'アプリの再起動後に反映されます';
-  @override
   String get repeat_cue => 'この文をリピート';
   @override
   String get reset => 'リセット';
@@ -172702,18 +172593,6 @@ class _StringsJa extends _StringsEn {
   String get video_rename => '名前を変更';
   @override
   String get video_rename_hint => 'タイトル';
-  @override
-  String get video_render_skia_fix_confirm_action => '再起動';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Impellerレンダラーを無効にし、アプリを再起動して適用します。';
-  @override
-  String get video_render_skia_fix_confirm_title => 'Skiaに切り替えて再起動しますか？';
-  @override
-  String get video_render_skia_fix_hint =>
-      '音声は再生されるが動画が黒いままの場合に使用してください。Impellerを無効にし、再起動して適用します。';
-  @override
-  String get video_render_skia_fix_title => '画面が黒い？レンダラーを切替（Skia）';
   @override
   String get video_resource_failure_network => 'ネットワークエラー';
   @override
@@ -189050,8 +188929,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get rename_collection => '컬렉션 이름 변경';
   @override
-  String get render_restart_required => '앱을 다시 시작하면 적용됩니다';
-  @override
   String get repeat_cue => '문장 반복';
   @override
   String get reset => '초기화';
@@ -194906,18 +194783,6 @@ class _StringsKo extends _StringsEn {
   String get video_rename => '이름 바꾸기';
   @override
   String get video_rename_hint => '제목';
-  @override
-  String get video_render_skia_fix_confirm_action => '다시 시작';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Impeller 렌더러를 비활성화하고 적용을 위해 앱을 다시 시작합니다.';
-  @override
-  String get video_render_skia_fix_confirm_title => 'Skia로 전환하고 다시 시작하시겠습니까?';
-  @override
-  String get video_render_skia_fix_hint =>
-      '오디오는 재생되지만 동영상이 검은 화면인 경우 사용하세요. Impeller를 비활성화하며 다시 시작하여 적용됩니다.';
-  @override
-  String get video_render_skia_fix_title => '화면이 검은색인가요? 렌더러를 전환하세요 (Skia)';
   @override
   String get video_resource_failure_network => '네트워크 오류';
   @override
@@ -211900,9 +211765,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get rename_collection => 'Collectie hernoemen';
   @override
-  String get render_restart_required =>
-      'Wordt van kracht na het herstarten van de app';
-  @override
   String get repeat_cue => 'Zin herhalen';
   @override
   String get reset => 'Herstellen';
@@ -217957,20 +217819,6 @@ class _StringsNl extends _StringsEn {
   String get video_rename => 'Naam wijzigen';
   @override
   String get video_rename_hint => 'Titel';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Herstarten';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Dit schakelt de Impeller-renderer uit en herstart de app.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Overschakelen naar Skia en herstarten?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Gebruik dit als audio speelt maar het videobeeld zwart blijft. Schakelt Impeller uit; herstart om toe te passen.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Scherm zwart? Renderer wisselen (Skia)';
   @override
   String get video_resource_failure_network => 'netwerkfout';
   @override
@@ -235101,8 +234949,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get rename_collection => 'Renomear coleção';
   @override
-  String get render_restart_required => 'Entra em vigor após reiniciar o app';
-  @override
   String get repeat_cue => 'Repetir frase';
   @override
   String get reset => 'Redefinir';
@@ -241165,20 +241011,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_rename => 'Renomear';
   @override
   String get video_rename_hint => 'Título';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Reiniciar';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Isso desativa o renderizador Impeller e reinicia o app para aplicar.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Mudar para Skia e reiniciar?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Use se o áudio toca mas o vídeo fica preto. Desativa o Impeller; reinicia para aplicar.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Tela preta? Mudar renderizador (Skia)';
   @override
   String get video_resource_failure_network => 'erro de rede';
   @override
@@ -258280,9 +258112,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get rename_collection => 'Переименовать коллекцию';
   @override
-  String get render_restart_required =>
-      'Вступит в силу после перезапуска приложения';
-  @override
   String get repeat_cue => 'Повторить предложение';
   @override
   String get reset => 'Сбросить';
@@ -264334,20 +264163,6 @@ class _StringsRu extends _StringsEn {
   String get video_rename => 'Переименовать';
   @override
   String get video_rename_hint => 'Название';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Перезапустить';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Это отключает рендерер Impeller и перезапускает приложение для применения.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Переключить на Skia и перезапустить?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Используйте, если звук воспроизводится, но видео остаётся чёрным. Отключает Impeller; требуется перезапуск.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Экран чёрный? Сменить рендерер (Skia)';
   @override
   String get video_resource_failure_network => 'ошибка сети';
   @override
@@ -281233,8 +281048,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get rename_collection => 'เปลี่ยนชื่อคอลเลกชัน';
   @override
-  String get render_restart_required => 'จะมีผลหลังรีสตาร์ทแอป';
-  @override
   String get repeat_cue => 'เล่นซ้ำประโยค';
   @override
   String get reset => 'รีเซ็ต';
@@ -287228,20 +287041,6 @@ class _StringsTh extends _StringsEn {
   String get video_rename => 'เปลี่ยนชื่อ';
   @override
   String get video_rename_hint => 'ชื่อเรื่อง';
-  @override
-  String get video_render_skia_fix_confirm_action => 'รีสตาร์ท';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'การดำเนินการนี้จะปิด Impeller renderer และรีสตาร์ทแอปเพื่อใช้งาน';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'เปลี่ยนเป็น Skia แล้วรีสตาร์ทหรือไม่?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'ใช้หากเสียงเล่นแต่หน้าจอวิดีโอเป็นสีดำ ปิด Impeller; รีสตาร์ทเพื่อใช้งาน';
-  @override
-  String get video_render_skia_fix_title =>
-      'หน้าจอดำ? เปลี่ยนตัวเรนเดอร์ (Skia)';
   @override
   String get video_resource_failure_network => 'ข้อผิดพลาดเครือข่าย';
   @override
@@ -304223,9 +304022,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get rename_collection => 'Koleksiyonu yeniden adlandır';
   @override
-  String get render_restart_required =>
-      'Uygulamayı yeniden başlattıktan sonra geçerli olur';
-  @override
   String get repeat_cue => 'Cümleyi tekrarla';
   @override
   String get reset => 'Sıfırla';
@@ -310250,20 +310046,6 @@ class _StringsTr extends _StringsEn {
   String get video_rename => 'Yeniden adlandır';
   @override
   String get video_rename_hint => 'Başlık';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Yeniden başlat';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Bu işlem Impeller oluşturucuyu devre dışı bırakır ve uygulamak için uygulamayı yeniden başlatır.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Skia\'ya geçip yeniden başlatılsın mı?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Ses çalıyor ama video siyah kalıyorsa kullanın. Impeller\'ı devre dışı bırakır; uygulamak için yeniden başlatır.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Ekran siyah mı? Oluşturucuyu değiştir (Skia)';
   @override
   String get video_resource_failure_network => 'ağ hatası';
   @override
@@ -327222,9 +327004,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get rename_collection => 'Đổi tên bộ sưu tập';
   @override
-  String get render_restart_required =>
-      'Có hiệu lực sau khi khởi động lại ứng dụng';
-  @override
   String get repeat_cue => 'Lặp lại câu';
   @override
   String get reset => 'Đặt lại';
@@ -333239,20 +333018,6 @@ class _StringsVi extends _StringsEn {
   String get video_rename => 'Đổi tên';
   @override
   String get video_rename_hint => 'Tiêu đề';
-  @override
-  String get video_render_skia_fix_confirm_action => 'Khởi động lại';
-  @override
-  String get video_render_skia_fix_confirm_body =>
-      'Thao tác này tắt trình kết xuất Impeller và khởi động lại ứng dụng để áp dụng.';
-  @override
-  String get video_render_skia_fix_confirm_title =>
-      'Chuyển sang Skia và khởi động lại?';
-  @override
-  String get video_render_skia_fix_hint =>
-      'Dùng khi có âm thanh nhưng video bị đen. Tắt Impeller; khởi động lại để áp dụng.';
-  @override
-  String get video_render_skia_fix_title =>
-      'Màn hình đen? Chuyển trình kết xuất (Skia)';
   @override
   String get video_resource_failure_network => 'lỗi mạng';
   @override
@@ -348957,8 +348722,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get rename_collection => '重命名合集';
   @override
-  String get render_restart_required => '重启 App 后生效';
-  @override
   String get repeat_cue => '重复本句';
   @override
   String get reset => '重置';
@@ -354459,16 +354222,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_rename => '重命名';
   @override
   String get video_rename_hint => '标题';
-  @override
-  String get video_render_skia_fix_confirm_action => '重启';
-  @override
-  String get video_render_skia_fix_confirm_body => '将关闭 Impeller 渲染器并重启应用使其生效。';
-  @override
-  String get video_render_skia_fix_confirm_title => '切换到 Skia 并重启？';
-  @override
-  String get video_render_skia_fix_hint => '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
-  @override
-  String get video_render_skia_fix_title => '画面全黑？切换渲染器（Skia）';
   @override
   String get video_resource_failure_network => '网络错误';
   @override
@@ -370255,8 +370008,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get rename_collection => '重命名合集';
   @override
-  String get render_restart_required => '重啟 App 後生效';
-  @override
   String get repeat_cue => '重複本句';
   @override
   String get reset => '重設';
@@ -375992,16 +375743,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_rename => '重新命名';
   @override
   String get video_rename_hint => '標題';
-  @override
-  String get video_render_skia_fix_confirm_action => '重啟';
-  @override
-  String get video_render_skia_fix_confirm_body => '將關閉 Impeller 渲染器並重啟應用使其生效。';
-  @override
-  String get video_render_skia_fix_confirm_title => '切換到 Skia 並重啟？';
-  @override
-  String get video_render_skia_fix_hint => '有聲音但畫面全黑時用。關閉 Impeller，重啟後生效。';
-  @override
-  String get video_render_skia_fix_title => '畫面全黑？切換渲染器（Skia）';
   @override
   String get video_resource_failure_network => '網絡錯誤';
   @override
@@ -390541,8 +390282,6 @@ extension on _StringsEn {
         return 'Fushi Interconnect server unavailable';
       case 'rename_collection':
         return 'Rename collection';
-      case 'render_restart_required':
-        return 'Takes effect after restarting the app';
       case 'repeat_cue':
         return 'Repeat sentence';
       case 'reset':
@@ -395771,16 +395510,6 @@ extension on _StringsEn {
         return 'Rename';
       case 'video_rename_hint':
         return 'Title';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Restart';
-      case 'video_render_skia_fix_confirm_body':
-        return 'This disables the Impeller renderer and restarts the app to apply.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Switch to Skia and restart?';
-      case 'video_render_skia_fix_hint':
-        return 'Use if audio plays but the video stays black. Disables Impeller; restarts to apply.';
-      case 'video_render_skia_fix_title':
-        return 'Screen black? Switch renderer (Skia)';
       case 'video_resource_failure_network':
         return 'network error';
       case 'video_resource_failure_other':
@@ -410116,8 +409845,6 @@ extension on _StringsAr {
         return 'الجهاز المقترن غير متاح';
       case 'rename_collection':
         return 'إعادة تسمية المجموعة';
-      case 'render_restart_required':
-        return 'يسري المفعول بعد إعادة تشغيل التطبيق';
       case 'repeat_cue':
         return 'إعادة الجملة';
       case 'reset':
@@ -415342,16 +415069,6 @@ extension on _StringsAr {
         return 'إعادة تسمية';
       case 'video_rename_hint':
         return 'العنوان';
-      case 'video_render_skia_fix_confirm_action':
-        return 'إعادة التشغيل';
-      case 'video_render_skia_fix_confirm_body':
-        return 'يؤدي هذا إلى تعطيل محرك Impeller وإعادة تشغيل التطبيق للتطبيق.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'التبديل إلى Skia وإعادة التشغيل؟';
-      case 'video_render_skia_fix_hint':
-        return 'استخدمه إذا كان الصوت يعمل لكن الفيديو يبقى أسود. يعطل Impeller؛ يتطلب إعادة التشغيل.';
-      case 'video_render_skia_fix_title':
-        return 'شاشة سوداء؟ بدّل المُصيّر (Skia)';
       case 'video_resource_failure_network':
         return 'خطأ في الشبكة';
       case 'video_resource_failure_other':
@@ -429747,8 +429464,6 @@ extension on _StringsDe {
         return 'Gekoppeltes Gerät nicht verfügbar';
       case 'rename_collection':
         return 'Sammlung umbenennen';
-      case 'render_restart_required':
-        return 'Wird nach Neustart der App wirksam';
       case 'repeat_cue':
         return 'Satz wiederholen';
       case 'reset':
@@ -434989,16 +434704,6 @@ extension on _StringsDe {
         return 'Umbenennen';
       case 'video_rename_hint':
         return 'Titel';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Neustart';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Dies deaktiviert den Impeller-Renderer und startet die App neu, um die Änderung anzuwenden.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Zu Skia wechseln und neu starten?';
-      case 'video_render_skia_fix_hint':
-        return 'Verwenden Sie dies, wenn der Ton abgespielt wird, aber das Video schwarz bleibt. Deaktiviert Impeller; Neustart zur Anwendung.';
-      case 'video_render_skia_fix_title':
-        return 'Schwarzer Bildschirm? Renderer wechseln (Skia)';
       case 'video_resource_failure_network':
         return 'Netzwerkfehler';
       case 'video_resource_failure_other':
@@ -449382,8 +449087,6 @@ extension on _StringsEs {
         return 'Dispositivo emparejado no disponible';
       case 'rename_collection':
         return 'Renombrar colección';
-      case 'render_restart_required':
-        return 'Se aplica después de reiniciar la app';
       case 'repeat_cue':
         return 'Repetir oración';
       case 'reset':
@@ -454621,16 +454324,6 @@ extension on _StringsEs {
         return 'Cambiar nombre';
       case 'video_rename_hint':
         return 'Título';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Reiniciar';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Esto desactiva el renderizador Impeller y reinicia la app para aplicar.';
-      case 'video_render_skia_fix_confirm_title':
-        return '¿Cambiar a Skia y reiniciar?';
-      case 'video_render_skia_fix_hint':
-        return 'Use si el audio se reproduce pero el vídeo permanece negro. Desactiva Impeller; reinicia para aplicar.';
-      case 'video_render_skia_fix_title':
-        return '¿Pantalla negra? Cambiar renderizador (Skia)';
       case 'video_resource_failure_network':
         return 'error de red';
       case 'video_resource_failure_other':
@@ -469028,8 +468721,6 @@ extension on _StringsFr {
         return 'Appareil appairé indisponible';
       case 'rename_collection':
         return 'Renommer la collection';
-      case 'render_restart_required':
-        return 'Prend effet après le redémarrage de l\'application';
       case 'repeat_cue':
         return 'Répéter la phrase';
       case 'reset':
@@ -474269,16 +473960,6 @@ extension on _StringsFr {
         return 'Renommer';
       case 'video_rename_hint':
         return 'Titre';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Redémarrer';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Cela désactive le moteur de rendu Impeller et redémarre l\'application.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Passer à Skia et redémarrer ?';
-      case 'video_render_skia_fix_hint':
-        return 'Utilisez si l\'audio joue mais la vidéo reste noire. Désactive Impeller ; redémarre pour appliquer.';
-      case 'video_render_skia_fix_title':
-        return 'Écran noir ? Changer de moteur de rendu (Skia)';
       case 'video_resource_failure_network':
         return 'erreur réseau';
       case 'video_resource_failure_other':
@@ -488634,8 +488315,6 @@ extension on _StringsId {
         return 'Perangkat berpasangan tidak tersedia';
       case 'rename_collection':
         return 'Ganti nama koleksi';
-      case 'render_restart_required':
-        return 'Berlaku setelah memulai ulang aplikasi';
       case 'repeat_cue':
         return 'Ulangi kalimat';
       case 'reset':
@@ -493865,16 +493544,6 @@ extension on _StringsId {
         return 'Ganti nama';
       case 'video_rename_hint':
         return 'Judul';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Mulai ulang';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Ini menonaktifkan renderer Impeller dan memulai ulang aplikasi untuk menerapkannya.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Beralih ke Skia dan mulai ulang?';
-      case 'video_render_skia_fix_hint':
-        return 'Gunakan jika audio berputar tetapi video tetap hitam. Menonaktifkan Impeller; memulai ulang untuk menerapkan.';
-      case 'video_render_skia_fix_title':
-        return 'Layar hitam? Ganti renderer (Skia)';
       case 'video_resource_failure_network':
         return 'galat jaringan';
       case 'video_resource_failure_other':
@@ -508249,8 +507918,6 @@ extension on _StringsIt {
         return 'Dispositivo abbinato non disponibile';
       case 'rename_collection':
         return 'Rinomina raccolta';
-      case 'render_restart_required':
-        return 'Effettivo dopo il riavvio dell\'app';
       case 'repeat_cue':
         return 'Ripeti frase';
       case 'reset':
@@ -513491,16 +513158,6 @@ extension on _StringsIt {
         return 'Rinomina';
       case 'video_rename_hint':
         return 'Titolo';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Riavvia';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Questo disabilita il renderer Impeller e riavvia l\'app.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Passare a Skia e riavviare?';
-      case 'video_render_skia_fix_hint':
-        return 'Usa se l\'audio si sente ma il video resta nero. Disabilita Impeller; riavvia per applicare.';
-      case 'video_render_skia_fix_title':
-        return 'Schermo nero? Cambia renderer (Skia)';
       case 'video_resource_failure_network':
         return 'errore di rete';
       case 'video_resource_failure_other':
@@ -527799,8 +527456,6 @@ extension on _StringsJa {
         return 'ペアリング済みデバイスが利用できません';
       case 'rename_collection':
         return 'コレクション名を変更';
-      case 'render_restart_required':
-        return 'アプリの再起動後に反映されます';
       case 'repeat_cue':
         return 'この文をリピート';
       case 'reset':
@@ -533002,16 +532657,6 @@ extension on _StringsJa {
         return '名前を変更';
       case 'video_rename_hint':
         return 'タイトル';
-      case 'video_render_skia_fix_confirm_action':
-        return '再起動';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Impellerレンダラーを無効にし、アプリを再起動して適用します。';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Skiaに切り替えて再起動しますか？';
-      case 'video_render_skia_fix_hint':
-        return '音声は再生されるが動画が黒いままの場合に使用してください。Impellerを無効にし、再起動して適用します。';
-      case 'video_render_skia_fix_title':
-        return '画面が黒い？レンダラーを切替（Skia）';
       case 'video_resource_failure_network':
         return 'ネットワークエラー';
       case 'video_resource_failure_other':
@@ -547296,8 +546941,6 @@ extension on _StringsKo {
         return '페어링된 기기를 사용할 수 없음';
       case 'rename_collection':
         return '컬렉션 이름 변경';
-      case 'render_restart_required':
-        return '앱을 다시 시작하면 적용됩니다';
       case 'repeat_cue':
         return '문장 반복';
       case 'reset':
@@ -552507,16 +552150,6 @@ extension on _StringsKo {
         return '이름 바꾸기';
       case 'video_rename_hint':
         return '제목';
-      case 'video_render_skia_fix_confirm_action':
-        return '다시 시작';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Impeller 렌더러를 비활성화하고 적용을 위해 앱을 다시 시작합니다.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Skia로 전환하고 다시 시작하시겠습니까?';
-      case 'video_render_skia_fix_hint':
-        return '오디오는 재생되지만 동영상이 검은 화면인 경우 사용하세요. Impeller를 비활성화하며 다시 시작하여 적용됩니다.';
-      case 'video_render_skia_fix_title':
-        return '화면이 검은색인가요? 렌더러를 전환하세요 (Skia)';
       case 'video_resource_failure_network':
         return '네트워크 오류';
       case 'video_resource_failure_other':
@@ -566884,8 +566517,6 @@ extension on _StringsNl {
         return 'Gekoppeld apparaat niet beschikbaar';
       case 'rename_collection':
         return 'Collectie hernoemen';
-      case 'render_restart_required':
-        return 'Wordt van kracht na het herstarten van de app';
       case 'repeat_cue':
         return 'Zin herhalen';
       case 'reset':
@@ -572118,16 +571749,6 @@ extension on _StringsNl {
         return 'Naam wijzigen';
       case 'video_rename_hint':
         return 'Titel';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Herstarten';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Dit schakelt de Impeller-renderer uit en herstart de app.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Overschakelen naar Skia en herstarten?';
-      case 'video_render_skia_fix_hint':
-        return 'Gebruik dit als audio speelt maar het videobeeld zwart blijft. Schakelt Impeller uit; herstart om toe te passen.';
-      case 'video_render_skia_fix_title':
-        return 'Scherm zwart? Renderer wisselen (Skia)';
       case 'video_resource_failure_network':
         return 'netwerkfout';
       case 'video_resource_failure_other':
@@ -586503,8 +586124,6 @@ extension on _StringsPtBr {
         return 'Dispositivo pareado indisponível';
       case 'rename_collection':
         return 'Renomear coleção';
-      case 'render_restart_required':
-        return 'Entra em vigor após reiniciar o app';
       case 'repeat_cue':
         return 'Repetir frase';
       case 'reset':
@@ -591736,16 +591355,6 @@ extension on _StringsPtBr {
         return 'Renomear';
       case 'video_rename_hint':
         return 'Título';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Reiniciar';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Isso desativa o renderizador Impeller e reinicia o app para aplicar.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Mudar para Skia e reiniciar?';
-      case 'video_render_skia_fix_hint':
-        return 'Use se o áudio toca mas o vídeo fica preto. Desativa o Impeller; reinicia para aplicar.';
-      case 'video_render_skia_fix_title':
-        return 'Tela preta? Mudar renderizador (Skia)';
       case 'video_resource_failure_network':
         return 'erro de rede';
       case 'video_resource_failure_other':
@@ -606126,8 +605735,6 @@ extension on _StringsRu {
         return 'Сопряжённое устройство недоступно';
       case 'rename_collection':
         return 'Переименовать коллекцию';
-      case 'render_restart_required':
-        return 'Вступит в силу после перезапуска приложения';
       case 'repeat_cue':
         return 'Повторить предложение';
       case 'reset':
@@ -611358,16 +610965,6 @@ extension on _StringsRu {
         return 'Переименовать';
       case 'video_rename_hint':
         return 'Название';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Перезапустить';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Это отключает рендерер Impeller и перезапускает приложение для применения.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Переключить на Skia и перезапустить?';
-      case 'video_render_skia_fix_hint':
-        return 'Используйте, если звук воспроизводится, но видео остаётся чёрным. Отключает Impeller; требуется перезапуск.';
-      case 'video_render_skia_fix_title':
-        return 'Экран чёрный? Сменить рендерер (Skia)';
       case 'video_resource_failure_network':
         return 'ошибка сети';
       case 'video_resource_failure_other':
@@ -625709,8 +625306,6 @@ extension on _StringsTh {
         return 'อุปกรณ์ที่จับคู่ใช้งานไม่ได้';
       case 'rename_collection':
         return 'เปลี่ยนชื่อคอลเลกชัน';
-      case 'render_restart_required':
-        return 'จะมีผลหลังรีสตาร์ทแอป';
       case 'repeat_cue':
         return 'เล่นซ้ำประโยค';
       case 'reset':
@@ -630937,16 +630532,6 @@ extension on _StringsTh {
         return 'เปลี่ยนชื่อ';
       case 'video_rename_hint':
         return 'ชื่อเรื่อง';
-      case 'video_render_skia_fix_confirm_action':
-        return 'รีสตาร์ท';
-      case 'video_render_skia_fix_confirm_body':
-        return 'การดำเนินการนี้จะปิด Impeller renderer และรีสตาร์ทแอปเพื่อใช้งาน';
-      case 'video_render_skia_fix_confirm_title':
-        return 'เปลี่ยนเป็น Skia แล้วรีสตาร์ทหรือไม่?';
-      case 'video_render_skia_fix_hint':
-        return 'ใช้หากเสียงเล่นแต่หน้าจอวิดีโอเป็นสีดำ ปิด Impeller; รีสตาร์ทเพื่อใช้งาน';
-      case 'video_render_skia_fix_title':
-        return 'หน้าจอดำ? เปลี่ยนตัวเรนเดอร์ (Skia)';
       case 'video_resource_failure_network':
         return 'ข้อผิดพลาดเครือข่าย';
       case 'video_resource_failure_other':
@@ -645310,8 +644895,6 @@ extension on _StringsTr {
         return 'Eşleştirilmiş cihaz kullanılamıyor';
       case 'rename_collection':
         return 'Koleksiyonu yeniden adlandır';
-      case 'render_restart_required':
-        return 'Uygulamayı yeniden başlattıktan sonra geçerli olur';
       case 'repeat_cue':
         return 'Cümleyi tekrarla';
       case 'reset':
@@ -650542,16 +650125,6 @@ extension on _StringsTr {
         return 'Yeniden adlandır';
       case 'video_rename_hint':
         return 'Başlık';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Yeniden başlat';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Bu işlem Impeller oluşturucuyu devre dışı bırakır ve uygulamak için uygulamayı yeniden başlatır.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Skia\'ya geçip yeniden başlatılsın mı?';
-      case 'video_render_skia_fix_hint':
-        return 'Ses çalıyor ama video siyah kalıyorsa kullanın. Impeller\'ı devre dışı bırakır; uygulamak için yeniden başlatır.';
-      case 'video_render_skia_fix_title':
-        return 'Ekran siyah mı? Oluşturucuyu değiştir (Skia)';
       case 'video_resource_failure_network':
         return 'ağ hatası';
       case 'video_resource_failure_other':
@@ -664906,8 +664479,6 @@ extension on _StringsVi {
         return 'Thiết bị ghép nối không khả dụng';
       case 'rename_collection':
         return 'Đổi tên bộ sưu tập';
-      case 'render_restart_required':
-        return 'Có hiệu lực sau khi khởi động lại ứng dụng';
       case 'repeat_cue':
         return 'Lặp lại câu';
       case 'reset':
@@ -670136,16 +669707,6 @@ extension on _StringsVi {
         return 'Đổi tên';
       case 'video_rename_hint':
         return 'Tiêu đề';
-      case 'video_render_skia_fix_confirm_action':
-        return 'Khởi động lại';
-      case 'video_render_skia_fix_confirm_body':
-        return 'Thao tác này tắt trình kết xuất Impeller và khởi động lại ứng dụng để áp dụng.';
-      case 'video_render_skia_fix_confirm_title':
-        return 'Chuyển sang Skia và khởi động lại?';
-      case 'video_render_skia_fix_hint':
-        return 'Dùng khi có âm thanh nhưng video bị đen. Tắt Impeller; khởi động lại để áp dụng.';
-      case 'video_render_skia_fix_title':
-        return 'Màn hình đen? Chuyển trình kết xuất (Skia)';
       case 'video_resource_failure_network':
         return 'lỗi mạng';
       case 'video_resource_failure_other':
@@ -684351,8 +683912,6 @@ extension on _StringsZhCn {
         return 'Fushi 互联服务端不可用';
       case 'rename_collection':
         return '重命名合集';
-      case 'render_restart_required':
-        return '重启 App 后生效';
       case 'repeat_cue':
         return '重复本句';
       case 'reset':
@@ -689518,16 +689077,6 @@ extension on _StringsZhCn {
         return '重命名';
       case 'video_rename_hint':
         return '标题';
-      case 'video_render_skia_fix_confirm_action':
-        return '重启';
-      case 'video_render_skia_fix_confirm_body':
-        return '将关闭 Impeller 渲染器并重启应用使其生效。';
-      case 'video_render_skia_fix_confirm_title':
-        return '切换到 Skia 并重启？';
-      case 'video_render_skia_fix_hint':
-        return '有声音但画面全黑时用。关闭 Impeller，重启后生效。';
-      case 'video_render_skia_fix_title':
-        return '画面全黑？切换渲染器（Skia）';
       case 'video_resource_failure_network':
         return '网络错误';
       case 'video_resource_failure_other':
@@ -703745,8 +703294,6 @@ extension on _StringsZhHk {
         return 'Fushi 互聯服務端不可用';
       case 'rename_collection':
         return '重命名合集';
-      case 'render_restart_required':
-        return '重啟 App 後生效';
       case 'repeat_cue':
         return '重複本句';
       case 'reset':
@@ -708941,16 +708488,6 @@ extension on _StringsZhHk {
         return '重新命名';
       case 'video_rename_hint':
         return '標題';
-      case 'video_render_skia_fix_confirm_action':
-        return '重啟';
-      case 'video_render_skia_fix_confirm_body':
-        return '將關閉 Impeller 渲染器並重啟應用使其生效。';
-      case 'video_render_skia_fix_confirm_title':
-        return '切換到 Skia 並重啟？';
-      case 'video_render_skia_fix_hint':
-        return '有聲音但畫面全黑時用。關閉 Impeller，重啟後生效。';
-      case 'video_render_skia_fix_title':
-        return '畫面全黑？切換渲染器（Skia）';
       case 'video_resource_failure_network':
         return '網絡錯誤';
       case 'video_resource_failure_other':
