@@ -2077,7 +2077,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Local pronunciation audio databases';
   String get backup_category_music => 'Music';
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   String get backup_category_profiles => 'Profiles';
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_category_progress => 'Reading progress';
@@ -16537,7 +16537,7 @@ class _StringsAr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'الملفات الشخصية';
   @override
@@ -39080,7 +39080,7 @@ class _StringsDe extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profile';
   @override
@@ -61985,7 +61985,7 @@ class _StringsEs extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfiles';
   @override
@@ -84946,7 +84946,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profils';
   @override
@@ -107932,7 +107932,7 @@ class _StringsId extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profil';
   @override
@@ -130636,7 +130636,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profili';
   @override
@@ -153370,7 +153370,7 @@ class _StringsJa extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'プロファイル';
   @override
@@ -175171,7 +175171,7 @@ class _StringsKo extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '프로필';
   @override
@@ -197161,7 +197161,7 @@ class _StringsNl extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profielen';
   @override
@@ -219971,7 +219971,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfis';
   @override
@@ -242822,7 +242822,7 @@ class _StringsRu extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Профили';
   @override
@@ -265591,7 +265591,7 @@ class _StringsTh extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'โปรไฟล์';
   @override
@@ -288106,7 +288106,7 @@ class _StringsTr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profiller';
   @override
@@ -310789,7 +310789,7 @@ class _StringsVi extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Hồ sơ';
   @override
@@ -333129,7 +333129,7 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_music => '音乐';
   @override
   String get backup_category_music_desc =>
-      '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+      '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -353912,7 +353912,7 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -374718,7 +374718,7 @@ extension on _StringsEn {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_category_profiles_desc':
@@ -393985,7 +393985,7 @@ extension on _StringsAr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'الملفات الشخصية';
       case 'backup_category_profiles_desc':
@@ -413266,7 +413266,7 @@ extension on _StringsDe {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profile';
       case 'backup_category_profiles_desc':
@@ -432598,7 +432598,7 @@ extension on _StringsEs {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfiles';
       case 'backup_category_profiles_desc':
@@ -451922,7 +451922,7 @@ extension on _StringsFr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profils';
       case 'backup_category_profiles_desc':
@@ -471246,7 +471246,7 @@ extension on _StringsId {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profil';
       case 'backup_category_profiles_desc':
@@ -490532,7 +490532,7 @@ extension on _StringsIt {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profili';
       case 'backup_category_profiles_desc':
@@ -509826,7 +509826,7 @@ extension on _StringsJa {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'プロファイル';
       case 'backup_category_profiles_desc':
@@ -529006,7 +529006,7 @@ extension on _StringsKo {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '프로필';
       case 'backup_category_profiles_desc':
@@ -548227,7 +548227,7 @@ extension on _StringsNl {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profielen';
       case 'backup_category_profiles_desc':
@@ -567541,7 +567541,7 @@ extension on _StringsPtBr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfis';
       case 'backup_category_profiles_desc':
@@ -586848,7 +586848,7 @@ extension on _StringsRu {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Профили';
       case 'backup_category_profiles_desc':
@@ -606142,7 +606142,7 @@ extension on _StringsTh {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'โปรไฟล์';
       case 'backup_category_profiles_desc':
@@ -625419,7 +625419,7 @@ extension on _StringsTr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiller';
       case 'backup_category_profiles_desc':
@@ -644709,7 +644709,7 @@ extension on _StringsVi {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Hồ sơ';
       case 'backup_category_profiles_desc':
@@ -663941,7 +663941,7 @@ extension on _StringsZhCn {
       case 'backup_category_music':
         return '音乐';
       case 'backup_category_music_desc':
-        return '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+        return '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -682991,7 +682991,7 @@ extension on _StringsZhHk {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
