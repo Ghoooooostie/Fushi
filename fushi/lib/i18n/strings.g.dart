@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154938 (9114 per locale)
+/// Strings: 154955 (9115 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6856,6 +6856,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_link_role_adapted => 'Adapted';
   String get media_link_role_original => 'Original';
   String get media_link_saved => 'Linked';
+  String get media_link_search_missing => 'Not in library · Search';
   String get media_link_section_title => 'Same work';
   String get media_link_suggestion_confirm => 'Confirm';
   String get media_link_suggestion_reject => 'Not related';
@@ -24474,6 +24475,8 @@ class _StringsAr extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -46840,6 +46843,8 @@ class _StringsDe extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -69401,6 +69406,8 @@ class _StringsEs extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -92034,6 +92041,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -114517,6 +114526,8 @@ class _StringsId extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -136934,6 +136945,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -158884,6 +158897,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -180350,6 +180365,8 @@ class _StringsKo extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -202355,6 +202372,8 @@ class _StringsNl extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -224842,6 +224861,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -247303,6 +247324,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -269584,6 +269607,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -291837,6 +291862,8 @@ class _StringsTr extends _StringsEn {
   String get media_link_role_original => 'Original';
   @override
   String get media_link_saved => 'Linked';
+  @override
+  String get media_link_search_missing => 'Not in library · Search';
   @override
   String get media_link_section_title => 'Same work';
   @override
@@ -314136,6 +314163,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -335434,6 +335463,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_link_saved => '已关联';
   @override
+  String get media_link_search_missing => '未入库 · 去搜';
+  @override
   String get media_link_section_title => '同一作品';
   @override
   String get media_link_suggestion_confirm => '确认';
@@ -355986,6 +356017,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_link_saved => 'Linked';
   @override
+  String get media_link_search_missing => 'Not in library · Search';
+  @override
   String get media_link_section_title => 'Same work';
   @override
   String get media_link_suggestion_confirm => 'Confirm';
@@ -375827,6 +375860,8 @@ extension on _StringsEn {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -394772,6 +394807,8 @@ extension on _StringsAr {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -413764,6 +413801,8 @@ extension on _StringsDe {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -432770,6 +432809,8 @@ extension on _StringsEs {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -451786,6 +451827,8 @@ extension on _StringsFr {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -470775,6 +470818,8 @@ extension on _StringsId {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -489753,6 +489798,8 @@ extension on _StringsIt {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -508689,6 +508736,8 @@ extension on _StringsJa {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -527557,6 +527606,8 @@ extension on _StringsKo {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -546501,6 +546552,8 @@ extension on _StringsNl {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -565491,6 +565544,8 @@ extension on _StringsPtBr {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -584485,6 +584540,8 @@ extension on _StringsRu {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -603448,6 +603505,8 @@ extension on _StringsTh {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -622417,6 +622476,8 @@ extension on _StringsTr {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -641384,6 +641445,8 @@ extension on _StringsVi {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
@@ -660225,6 +660288,8 @@ extension on _StringsZhCn {
         return '原作';
       case 'media_link_saved':
         return '已关联';
+      case 'media_link_search_missing':
+        return '未入库 · 去搜';
       case 'media_link_section_title':
         return '同一作品';
       case 'media_link_suggestion_confirm':
@@ -678982,6 +679047,8 @@ extension on _StringsZhHk {
         return 'Original';
       case 'media_link_saved':
         return 'Linked';
+      case 'media_link_search_missing':
+        return 'Not in library · Search';
       case 'media_link_section_title':
         return 'Same work';
       case 'media_link_suggestion_confirm':
