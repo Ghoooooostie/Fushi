@@ -1234,7 +1234,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_default_section => 'Default tags';
   String get anki_tag_include_category => 'Add source category tag';
   String get anki_tag_include_category_hint =>
-      'Books get "book", videos get "video", games get "game"';
+      'Books get "book", videos get "video", games get "game", music gets "music"';
   String get anki_tag_include_fushi => 'Add "fushi" tag';
   String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
@@ -15366,7 +15366,7 @@ class _StringsAr extends _StringsEn {
   String get anki_tag_include_category => 'إضافة وسم فئة المصدر';
   @override
   String get anki_tag_include_category_hint =>
-      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
   @override
   String get anki_tag_include_fushi => 'إضافة وسم "fushi"';
   @override
@@ -38253,7 +38253,7 @@ class _StringsDe extends _StringsEn {
   String get anki_tag_include_category => 'Tag für Quellkategorie hinzufügen';
   @override
   String get anki_tag_include_category_hint =>
-      'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+      'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
   @override
   String get anki_tag_include_fushi => 'Tag „fushi“ hinzufügen';
   @override
@@ -61510,7 +61510,7 @@ class _StringsEs extends _StringsEn {
       'Añadir etiqueta de categoría de origen';
   @override
   String get anki_tag_include_category_hint =>
-      'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+      'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
   @override
   String get anki_tag_include_fushi => 'Añadir la etiqueta «fushi»';
   @override
@@ -84821,7 +84821,7 @@ class _StringsFr extends _StringsEn {
       'Ajouter une étiquette de catégorie source';
   @override
   String get anki_tag_include_category_hint =>
-      'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+      'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
   @override
   String get anki_tag_include_fushi => 'Ajouter l\'étiquette « fushi »';
   @override
@@ -108182,7 +108182,7 @@ class _StringsId extends _StringsEn {
   String get anki_tag_include_category => 'Tambahkan tag kategori sumber';
   @override
   String get anki_tag_include_category_hint =>
-      'Buku diberi "book", video diberi "video", gim diberi "game"';
+      'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
   @override
   String get anki_tag_include_fushi => 'Tambahkan tag "fushi"';
   @override
@@ -131234,7 +131234,7 @@ class _StringsIt extends _StringsEn {
       'Aggiungi etichetta categoria di origine';
   @override
   String get anki_tag_include_category_hint =>
-      'I libri ricevono "book", i video "video", i giochi "game"';
+      'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
   @override
   String get anki_tag_include_fushi => 'Aggiungi etichetta "fushi"';
   @override
@@ -154357,7 +154357,7 @@ class _StringsJa extends _StringsEn {
   String get anki_tag_include_category => 'ソース分類タグを追加';
   @override
   String get anki_tag_include_category_hint =>
-      '書籍には「book」、動画には「video」、ゲームには「game」';
+      '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
   @override
   String get anki_tag_include_fushi => '「fushi」タグを追加';
   @override
@@ -176517,7 +176517,7 @@ class _StringsKo extends _StringsEn {
   String get anki_tag_include_category => '소스 분류 태그 추가';
   @override
   String get anki_tag_include_category_hint =>
-      '책은 "book", 비디오는 "video", 게임은 "game"';
+      '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" 태그 추가';
   @override
@@ -198833,7 +198833,7 @@ class _StringsNl extends _StringsEn {
   String get anki_tag_include_category => 'Tag voor broncategorie toevoegen';
   @override
   String get anki_tag_include_category_hint =>
-      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
   @override
   String get anki_tag_include_fushi => 'Tag "fushi" toevoegen';
   @override
@@ -221999,7 +221999,7 @@ class _StringsPtBr extends _StringsEn {
       'Adicionar tag de categoria de origem';
   @override
   String get anki_tag_include_category_hint =>
-      'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+      'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
   @override
   String get anki_tag_include_fushi => 'Adicionar tag "fushi"';
   @override
@@ -245210,7 +245210,7 @@ class _StringsRu extends _StringsEn {
   String get anki_tag_include_category => 'Добавлять тег категории источника';
   @override
   String get anki_tag_include_category_hint =>
-      'Книги получают «book», видео — «video», игры — «game»';
+      'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
   @override
   String get anki_tag_include_fushi => 'Добавлять тег «fushi»';
   @override
@@ -268345,7 +268345,7 @@ class _StringsTh extends _StringsEn {
   String get anki_tag_include_category => 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
   @override
   String get anki_tag_include_category_hint =>
-      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
   @override
   String get anki_tag_include_fushi => 'เพิ่มแท็ก "fushi"';
   @override
@@ -291212,7 +291212,7 @@ class _StringsTr extends _StringsEn {
   String get anki_tag_include_category => 'Kaynak kategorisi etiketi ekle';
   @override
   String get anki_tag_include_category_hint =>
-      'Kitaplara "book", videolara "video", oyunlara "game"';
+      'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" etiketi ekle';
   @override
@@ -314253,7 +314253,7 @@ class _StringsVi extends _StringsEn {
   String get anki_tag_include_category => 'Thêm thẻ phân loại nguồn';
   @override
   String get anki_tag_include_category_hint =>
-      'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+      'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
   @override
   String get anki_tag_include_fushi => 'Thêm thẻ "fushi"';
   @override
@@ -337089,7 +337089,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tag_include_category => '添加来源分类标签';
   @override
-  String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」、游戏标「game」';
+  String get anki_tag_include_category_hint =>
+      '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
   @override
   String get anki_tag_include_fushi => '添加「fushi」标签';
   @override
@@ -358112,7 +358113,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tag_include_category => '加入來源分類標籤';
   @override
-  String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」、遊戲標「game」';
+  String get anki_tag_include_category_hint =>
+      '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
   @override
   String get anki_tag_include_fushi => '加入「fushi」標籤';
   @override
@@ -379491,7 +379493,7 @@ extension on _StringsEn {
       case 'anki_tag_include_category':
         return 'Add source category tag';
       case 'anki_tag_include_category_hint':
-        return 'Books get "book", videos get "video", games get "game"';
+        return 'Books get "book", videos get "video", games get "game", music gets "music"';
       case 'anki_tag_include_fushi':
         return 'Add "fushi" tag';
       case 'anki_tag_include_fushi_hint':
@@ -399071,7 +399073,7 @@ extension on _StringsAr {
       case 'anki_tag_include_category':
         return 'إضافة وسم فئة المصدر';
       case 'anki_tag_include_category_hint':
-        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
       case 'anki_tag_include_fushi':
         return 'إضافة وسم "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -418657,7 +418659,7 @@ extension on _StringsDe {
       case 'anki_tag_include_category':
         return 'Tag für Quellkategorie hinzufügen';
       case 'anki_tag_include_category_hint':
-        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
       case 'anki_tag_include_fushi':
         return 'Tag „fushi“ hinzufügen';
       case 'anki_tag_include_fushi_hint':
@@ -438299,7 +438301,7 @@ extension on _StringsEs {
       case 'anki_tag_include_category':
         return 'Añadir etiqueta de categoría de origen';
       case 'anki_tag_include_category_hint':
-        return 'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+        return 'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
       case 'anki_tag_include_fushi':
         return 'Añadir la etiqueta «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -457935,7 +457937,7 @@ extension on _StringsFr {
       case 'anki_tag_include_category':
         return 'Ajouter une étiquette de catégorie source';
       case 'anki_tag_include_category_hint':
-        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
       case 'anki_tag_include_fushi':
         return 'Ajouter l\'étiquette « fushi »';
       case 'anki_tag_include_fushi_hint':
@@ -477577,7 +477579,7 @@ extension on _StringsId {
       case 'anki_tag_include_category':
         return 'Tambahkan tag kategori sumber';
       case 'anki_tag_include_category_hint':
-        return 'Buku diberi "book", video diberi "video", gim diberi "game"';
+        return 'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
       case 'anki_tag_include_fushi':
         return 'Tambahkan tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -497173,7 +497175,7 @@ extension on _StringsIt {
       case 'anki_tag_include_category':
         return 'Aggiungi etichetta categoria di origine';
       case 'anki_tag_include_category_hint':
-        return 'I libri ricevono "book", i video "video", i giochi "game"';
+        return 'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
       case 'anki_tag_include_fushi':
         return 'Aggiungi etichetta "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -516787,7 +516789,7 @@ extension on _StringsJa {
       case 'anki_tag_include_category':
         return 'ソース分類タグを追加';
       case 'anki_tag_include_category_hint':
-        return '書籍には「book」、動画には「video」、ゲームには「game」';
+        return '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
       case 'anki_tag_include_fushi':
         return '「fushi」タグを追加';
       case 'anki_tag_include_fushi_hint':
@@ -536280,7 +536282,7 @@ extension on _StringsKo {
       case 'anki_tag_include_category':
         return '소스 분류 태그 추가';
       case 'anki_tag_include_category_hint':
-        return '책은 "book", 비디오는 "video", 게임은 "game"';
+        return '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" 태그 추가';
       case 'anki_tag_include_fushi_hint':
@@ -555807,7 +555809,7 @@ extension on _StringsNl {
       case 'anki_tag_include_category':
         return 'Tag voor broncategorie toevoegen';
       case 'anki_tag_include_category_hint':
-        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
       case 'anki_tag_include_fushi':
         return 'Tag "fushi" toevoegen';
       case 'anki_tag_include_fushi_hint':
@@ -575430,7 +575432,7 @@ extension on _StringsPtBr {
       case 'anki_tag_include_category':
         return 'Adicionar tag de categoria de origem';
       case 'anki_tag_include_category_hint':
-        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
       case 'anki_tag_include_fushi':
         return 'Adicionar tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -595047,7 +595049,7 @@ extension on _StringsRu {
       case 'anki_tag_include_category':
         return 'Добавлять тег категории источника';
       case 'anki_tag_include_category_hint':
-        return 'Книги получают «book», видео — «video», игры — «game»';
+        return 'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
       case 'anki_tag_include_fushi':
         return 'Добавлять тег «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -614659,7 +614661,7 @@ extension on _StringsTh {
       case 'anki_tag_include_category':
         return 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
       case 'anki_tag_include_category_hint':
-        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
       case 'anki_tag_include_fushi':
         return 'เพิ่มแท็ก "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -634244,7 +634246,7 @@ extension on _StringsTr {
       case 'anki_tag_include_category':
         return 'Kaynak kategorisi etiketi ekle';
       case 'anki_tag_include_category_hint':
-        return 'Kitaplara "book", videolara "video", oyunlara "game"';
+        return 'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" etiketi ekle';
       case 'anki_tag_include_fushi_hint':
@@ -653848,7 +653850,7 @@ extension on _StringsVi {
       case 'anki_tag_include_category':
         return 'Thêm thẻ phân loại nguồn';
       case 'anki_tag_include_category_hint':
-        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
       case 'anki_tag_include_fushi':
         return 'Thêm thẻ "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -673408,7 +673410,7 @@ extension on _StringsZhCn {
       case 'anki_tag_include_category':
         return '添加来源分类标签';
       case 'anki_tag_include_category_hint':
-        return '书籍标「book」、视频标「video」、游戏标「game」';
+        return '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
       case 'anki_tag_include_fushi':
         return '添加「fushi」标签';
       case 'anki_tag_include_fushi_hint':
@@ -692760,7 +692762,7 @@ extension on _StringsZhHk {
       case 'anki_tag_include_category':
         return '加入來源分類標籤';
       case 'anki_tag_include_category_hint':
-        return '書籍標「book」、影片標「video」、遊戲標「game」';
+        return '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
       case 'anki_tag_include_fushi':
         return '加入「fushi」標籤';
       case 'anki_tag_include_fushi_hint':
