@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 161143 (9479 per locale)
+/// Strings: 161279 (9487 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7431,6 +7431,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String music_disc_unreadable({required Object path}) =>
       'Not a readable DVD or Blu-ray: ${path}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  String get music_eq_bands => 'Bands';
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  String get music_eq_enabled_title => 'Enable equalizer';
+  String get music_eq_off => 'Off';
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  String get music_eq_reset => 'Reset to flat';
+  String get music_eq_title => 'Equalizer';
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
@@ -7605,6 +7613,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_signal_stage_channel_remix => 'Channel remix';
   String get music_signal_stage_crossfade => 'Crossfade';
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  String get music_signal_stage_equalizer => 'Equalizer';
   String get music_signal_stage_filters => 'Audio filters';
   String get music_signal_stage_format_conversion => 'Sample format conversion';
   String get music_signal_stage_no_output => 'Audio output not open';
@@ -25925,6 +25934,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -26238,6 +26262,8 @@ class _StringsAr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -49160,6 +49186,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -49473,6 +49514,8 @@ class _StringsDe extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -72572,6 +72615,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -72885,6 +72943,8 @@ class _StringsEs extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -96062,6 +96122,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -96375,6 +96450,8 @@ class _StringsFr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -119389,6 +119466,21 @@ class _StringsId extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -119702,6 +119794,8 @@ class _StringsId extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -142668,6 +142762,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -142981,6 +143090,8 @@ class _StringsIt extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -165428,6 +165539,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -165741,6 +165867,8 @@ class _StringsJa extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -187751,6 +187879,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -188064,6 +188207,8 @@ class _StringsKo extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -210648,6 +210793,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -210961,6 +211121,8 @@ class _StringsNl extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -233990,6 +234152,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -234303,6 +234480,8 @@ class _StringsPtBr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -257305,6 +257484,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -257618,6 +257812,8 @@ class _StringsRu extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -280431,6 +280627,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -280744,6 +280955,8 @@ class _StringsTh extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -303544,6 +303757,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -303857,6 +304085,8 @@ class _StringsTr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -326692,6 +326922,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -327005,6 +327250,8 @@ class _StringsVi extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -348758,6 +349005,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
   @override
+  String get music_eq_bands => '频段';
+  @override
+  String get music_eq_enabled_hint =>
+      '10 段图示均衡，自动预留余量防削波。改变信号时输出即非 bit-perfect；关闭或全部 0 dB 时不挂任何滤镜。';
+  @override
+  String get music_eq_enabled_title => '启用均衡器';
+  @override
+  String get music_eq_off => '已关闭';
+  @override
+  String get music_eq_on => '已开启——播放不再是 bit-perfect';
+  @override
+  String get music_eq_reset => '复位为平直';
+  @override
+  String get music_eq_title => '均衡器';
+  @override
   String get music_exclusive_hint => '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
   @override
   String get music_exclusive_title => '独占（bit-perfect）输出';
@@ -349054,6 +349316,8 @@ class _StringsZhCn extends _StringsEn {
   String get music_signal_stage_crossfade => '交叉淡入';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD→PCM 转换';
+  @override
+  String get music_signal_stage_equalizer => '均衡器';
   @override
   String get music_signal_stage_filters => '音频滤镜';
   @override
@@ -370134,6 +370398,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
+  @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   @override
@@ -370447,6 +370726,8 @@ class _StringsZhHk extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -390757,6 +391038,20 @@ extension on _StringsEn {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -391041,6 +391336,8 @@ extension on _StringsEn {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -410455,6 +410752,20 @@ extension on _StringsAr {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -410739,6 +411050,8 @@ extension on _StringsAr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -430204,6 +430517,20 @@ extension on _StringsDe {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -430488,6 +430815,8 @@ extension on _StringsDe {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -449963,6 +450292,20 @@ extension on _StringsEs {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -450247,6 +450590,8 @@ extension on _StringsEs {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -469732,6 +470077,20 @@ extension on _StringsFr {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -470016,6 +470375,8 @@ extension on _StringsFr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -489470,6 +489831,20 @@ extension on _StringsId {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -489754,6 +490129,8 @@ extension on _StringsId {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -509205,6 +509582,20 @@ extension on _StringsIt {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -509489,6 +509880,8 @@ extension on _StringsIt {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -528888,6 +529281,20 @@ extension on _StringsJa {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -529172,6 +529579,8 @@ extension on _StringsJa {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -548508,6 +548917,20 @@ extension on _StringsKo {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -548792,6 +549215,8 @@ extension on _StringsKo {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -568212,6 +568637,20 @@ extension on _StringsNl {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -568496,6 +568935,8 @@ extension on _StringsNl {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -587955,6 +588396,20 @@ extension on _StringsPtBr {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -588239,6 +588694,8 @@ extension on _StringsPtBr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -607702,6 +608159,20 @@ extension on _StringsRu {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -607986,6 +608457,8 @@ extension on _StringsRu {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -627414,6 +627887,20 @@ extension on _StringsTh {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -627698,6 +628185,8 @@ extension on _StringsTh {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -647139,6 +647628,20 @@ extension on _StringsTr {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -647423,6 +647926,8 @@ extension on _StringsTr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -666856,6 +667361,20 @@ extension on _StringsVi {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -667140,6 +667659,8 @@ extension on _StringsVi {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -686434,6 +686955,20 @@ extension on _StringsZhCn {
         return ({required Object path}) => '读不出这张 DVD / 蓝光：${path}';
       case 'music_dsd_rate_title':
         return 'DSD 转 PCM 采样率';
+      case 'music_eq_bands':
+        return '频段';
+      case 'music_eq_enabled_hint':
+        return '10 段图示均衡，自动预留余量防削波。改变信号时输出即非 bit-perfect；关闭或全部 0 dB 时不挂任何滤镜。';
+      case 'music_eq_enabled_title':
+        return '启用均衡器';
+      case 'music_eq_off':
+        return '已关闭';
+      case 'music_eq_on':
+        return '已开启——播放不再是 bit-perfect';
+      case 'music_eq_reset':
+        return '复位为平直';
+      case 'music_eq_title':
+        return '均衡器';
       case 'music_exclusive_hint':
         return '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
       case 'music_exclusive_title':
@@ -686716,6 +687251,8 @@ extension on _StringsZhCn {
         return '交叉淡入';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD→PCM 转换';
+      case 'music_signal_stage_equalizer':
+        return '均衡器';
       case 'music_signal_stage_filters':
         return '音频滤镜';
       case 'music_signal_stage_format_conversion':
@@ -705945,6 +706482,20 @@ extension on _StringsZhHk {
             'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -706229,6 +706780,8 @@ extension on _StringsZhHk {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
