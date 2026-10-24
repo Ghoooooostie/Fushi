@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160412 (9436 per locale)
+/// Strings: 160599 (9447 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7358,6 +7358,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_artist_unknown => 'Unknown artist';
   String get music_audio_device_auto => 'System default';
   String get music_audio_device_title => 'Output device';
+  String get music_cd_album_name => 'Audio CD';
+  String get music_cd_choose_drive => 'Choose a drive';
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  String get music_cd_no_drive => 'No optical drive found';
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  String get music_cd_read => 'Read audio CD';
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  String get music_cd_reading => 'Reading disc…';
+  String get music_cd_reread => 'Read disc again';
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
@@ -25747,6 +25762,32 @@ class _StringsAr extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -48882,6 +48923,32 @@ class _StringsDe extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -72194,6 +72261,32 @@ class _StringsEs extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -95585,6 +95678,32 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -118812,6 +118931,32 @@ class _StringsId extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -141991,6 +142136,32 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -164651,6 +164822,32 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -186873,6 +187070,32 @@ class _StringsKo extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -209670,6 +209893,32 @@ class _StringsNl extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -232913,6 +233162,32 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -256128,6 +256403,32 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -279154,6 +279455,32 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -302166,6 +302493,32 @@ class _StringsTr extends _StringsEn {
   String get music_audio_device_auto => 'System default';
   @override
   String get music_audio_device_title => 'Output device';
+  @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
@@ -325215,6 +325568,32 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -347193,6 +347572,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_audio_device_title => '输出设备';
   @override
+  String get music_cd_album_name => '音频 CD';
+  @override
+  String get music_cd_choose_drive => '选择光驱';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      '已加入「${title}」（${count} 首）';
+  @override
+  String get music_cd_lookup_none => 'MusicBrainz 没有收录这张盘，曲目名取自 CD-TEXT 或轨号';
+  @override
+  String get music_cd_no_drive => '没有找到光驱';
+  @override
+  String music_cd_not_audio({required Object device}) => '${device} 里的盘没有音频轨';
+  @override
+  String get music_cd_read => '读取音频 CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      '读不出 ${device} 里的盘（没有盘，或不是音频 CD）';
+  @override
+  String get music_cd_reading => '正在读盘…';
+  @override
+  String get music_cd_reread => '重新读盘';
+  @override
+  String music_cd_track_name({required Object n}) => '第 ${n} 轨';
+  @override
   String get music_crossfade_continuous_hint =>
       '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
   @override
@@ -368463,6 +368866,32 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -389001,6 +389430,31 @@ extension on _StringsEn {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -408609,6 +409063,31 @@ extension on _StringsAr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -428268,6 +428747,31 @@ extension on _StringsDe {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -447937,6 +448441,31 @@ extension on _StringsEs {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -467616,6 +468145,31 @@ extension on _StringsFr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -487264,6 +487818,31 @@ extension on _StringsId {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -506909,6 +507488,31 @@ extension on _StringsIt {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -526502,6 +527106,31 @@ extension on _StringsJa {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -546032,6 +546661,31 @@ extension on _StringsKo {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -565646,6 +566300,31 @@ extension on _StringsNl {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -585299,6 +585978,31 @@ extension on _StringsPtBr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -604956,6 +605660,31 @@ extension on _StringsRu {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -624578,6 +625307,31 @@ extension on _StringsTh {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -644213,6 +644967,31 @@ extension on _StringsTr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -663840,6 +664619,31 @@ extension on _StringsVi {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -683333,6 +684137,29 @@ extension on _StringsZhCn {
         return '系统默认';
       case 'music_audio_device_title':
         return '输出设备';
+      case 'music_cd_album_name':
+        return '音频 CD';
+      case 'music_cd_choose_drive':
+        return '选择光驱';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            '已加入「${title}」（${count} 首）';
+      case 'music_cd_lookup_none':
+        return 'MusicBrainz 没有收录这张盘，曲目名取自 CD-TEXT 或轨号';
+      case 'music_cd_no_drive':
+        return '没有找到光驱';
+      case 'music_cd_not_audio':
+        return ({required Object device}) => '${device} 里的盘没有音频轨';
+      case 'music_cd_read':
+        return '读取音频 CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) => '读不出 ${device} 里的盘（没有盘，或不是音频 CD）';
+      case 'music_cd_reading':
+        return '正在读盘…';
+      case 'music_cd_reread':
+        return '重新读盘';
+      case 'music_cd_track_name':
+        return ({required Object n}) => '第 ${n} 轨';
       case 'music_crossfade_continuous_hint':
         return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
       case 'music_crossfade_continuous_title':
@@ -702752,6 +703579,31 @@ extension on _StringsZhHk {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
