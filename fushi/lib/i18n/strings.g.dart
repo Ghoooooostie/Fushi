@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157607 (9271 per locale)
+/// Strings: 159953 (9409 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -212,6 +212,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String activity_hours_ago({required Object n}) => '${n} h ago';
   String get activity_just_now => 'Just now';
   String activity_minutes_ago({required Object n}) => '${n} min ago';
+  String get adaptation_progress_add => 'Add';
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  String get adaptation_progress_edit => 'Edit mapping';
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  String get adaptation_progress_episode_field => 'Episode';
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  String get adaptation_progress_remove => 'Remove';
+  String get adaptation_progress_title => 'Original progress';
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
@@ -5294,6 +5323,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_user_rating => 'My rating';
   String get game_user_tags_title => 'My tags';
   String get game_view_detail => 'View details';
+  String get game_voice_cast_title => 'Voice cast';
   String get game_waiting_for_text => 'Waiting for text';
   String game_waveform_range_label({
     required Object start,
@@ -6188,6 +6218,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lookup_idle_hint =>
       'Type above, paste from the clipboard, or pick a recent word.';
   String get lookup_idle_title => 'Look up a word';
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  String get lookup_library_sentences_group_books => 'Books';
+  String get lookup_library_sentences_group_games => 'Games';
+  String get lookup_library_sentences_group_music => 'Music';
+  String get lookup_library_sentences_group_videos => 'Videos';
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   String get lookup_popup_close_after_mining_hint =>
@@ -7304,6 +7358,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_artist_unknown => 'Unknown artist';
   String get music_audio_device_auto => 'System default';
   String get music_audio_device_title => 'Output device';
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  String get music_crossfade_off => 'Off';
+  String get music_crossfade_title => 'Crossfade';
   String music_disc_label({required Object n}) => 'Disc ${n}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   String get music_exclusive_hint =>
@@ -7340,6 +7405,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_lyrics_search_online => 'Search online lyrics';
   String get music_lyrics_show_cover => 'Show cover';
   String get music_lyrics_title => 'Lyrics';
+  String get music_mv_audio_library => 'Library audio';
+  String get music_mv_audio_mv => 'MV audio';
+  String get music_mv_bind => 'Bind';
+  String get music_mv_candidates_title => 'MV candidates';
+  String get music_mv_find_local => 'Find local MV';
+  String get music_mv_from_anime => 'Anime OP / ED';
+  String get music_mv_none_found => 'No matching MV found';
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  String get music_mv_offset_later => 'Video 100 ms later';
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  String get music_mv_open_failed => 'Could not open the MV';
+  String get music_mv_play => 'Play MV';
+  String get music_mv_search_online => 'Search online';
+  String get music_mv_searching => 'Searching…';
+  String get music_mv_section => 'Music video';
+  String get music_mv_unbind => 'Remove';
   String get music_now_playing => 'Now playing';
   String get music_open_library => 'Music library';
   String get music_output_fallback_device =>
@@ -7355,11 +7436,50 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String music_scan_done({required Object count}) =>
       'Library updated: ${count} tracks';
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  String get music_scrape_choose_match => 'Choose a match';
+  String get music_scrape_done => 'Identified';
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  String get music_scrape_identify => 'Identify';
+  String get music_scrape_identifying => 'Identifying…';
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  String get music_scrape_method_manual => 'manual choice';
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  String get music_scrape_method_tag_search => 'tag match';
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  String get music_scrape_reidentify => 'Identify again';
+  String get music_scrape_section => 'Identification';
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  String get music_scrape_status_none => 'Not identified yet';
+  String get music_scrape_status_unmatched => 'No confident match';
   String get music_section_albums => 'Albums';
   String get music_section_artists => 'Artists';
   String get music_section_playlists => 'Playlists';
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  String get music_setting_identify_library => 'Identify library';
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   String get music_settings_summary => 'Music folders and playback';
   String get music_shuffle_play => 'Shuffle';
   String get music_signal_path_active => 'Active';
@@ -7397,6 +7517,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_sleep_title => 'Sleep timer';
   String get music_speed_title => 'Speed (pitch preserved)';
   String get music_stop => 'Stop music';
+  String get music_tag_field_album => 'Album';
+  String get music_tag_field_album_artist => 'Album artist';
+  String get music_tag_field_artist => 'Artist';
+  String get music_tag_field_catalog_no => 'Catalog number';
+  String get music_tag_field_date => 'Date';
+  String get music_tag_field_disc_no => 'Disc number';
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  String get music_tag_field_title => 'Title';
+  String get music_tag_field_track_no => 'Track number';
+  String get music_tag_value_empty => '(empty)';
+  String get music_tag_writeback => 'Write tags to file';
+  String get music_tag_writeback_apply => 'Write';
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  String get music_tag_writeback_done => 'Tags written';
+  String get music_tag_writeback_failed => 'Could not write tags';
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
   String get music_theme_song_detect => 'Find in episodes';
   String music_theme_song_detect_done({required Object hits}) =>
       'Found in ${hits} episodes';
@@ -7415,7 +7561,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Episodes ${episodes}';
   String get music_track_appears_in => 'Appears in';
   String get music_track_detail => 'Track details';
+  String get music_track_people_title => 'Credits';
   String music_tracks_count({required Object count}) => '${count} tracks';
+  String get music_versions_cover => 'Cover';
+  String get music_versions_in_library => 'In library';
+  String get music_versions_live => 'Live';
+  String get music_versions_original => 'Original';
+  String get music_versions_section => 'Original & other versions';
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   String get music_volume_title => 'Volume';
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -8003,6 +8157,38 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This PDF has no text layer (scanned image), so lookup is unavailable.';
   String get pdf_outline => 'Contents';
   String get pdf_outline_empty => 'This PDF has no contents.';
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  String get person_domain_game => 'Game';
+  String get person_domain_music => 'Music';
+  String get person_domain_video => 'Video';
+  String get person_empty => 'Nothing by this person in your library.';
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  String get person_identity_unmerge => 'Unmerge';
+  String get person_music_role_album_artist => 'Album artist';
+  String get person_music_role_arranger => 'Arranger';
+  String get person_music_role_artist => 'Artist';
+  String get person_music_role_character => 'Character';
+  String get person_music_role_composer => 'Composer';
+  String get person_music_role_featured => 'Featured';
+  String get person_music_role_lyricist => 'Lyricist';
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  String get person_page_title => 'Person';
+  String get person_section_anime_roles => 'Anime roles';
+  String get person_section_game_roles => 'Game roles';
+  String get person_section_identities => 'Merged identities';
+  String get person_section_songs => 'Songs and character songs';
+  String get person_section_suggestions => 'Possibly the same person';
+  String get person_section_video_staff => 'Other video credits';
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  String get person_suggestion_confirm => 'Same person';
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  String get person_suggestion_reject => 'Not the same';
   String get pick_image => 'Pick image';
   String get play => 'Play';
   String get play_from_cue => 'Play from sentence';
@@ -13493,6 +13679,52 @@ class _StringsAr extends _StringsEn {
   String get activity_just_now => 'الآن';
   @override
   String activity_minutes_ago({required Object n}) => 'منذ ${n} د';
+  @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
@@ -22014,6 +22246,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_view_detail => 'عرض التفاصيل';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'في انتظار النص';
   @override
   String game_waveform_range_label({
@@ -23508,6 +23742,43 @@ class _StringsAr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -25432,6 +25703,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -25499,6 +25788,38 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -25525,6 +25846,57 @@ class _StringsAr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -25534,6 +25906,21 @@ class _StringsAr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -25606,6 +25993,54 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -25636,7 +26071,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -26617,6 +27067,66 @@ class _StringsAr extends _StringsEn {
   String get pdf_outline => 'المحتويات';
   @override
   String get pdf_outline_empty => 'هذا الملف PDF لا يحتوي على محتويات.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'اختيار صورة';
   @override
@@ -35994,6 +36504,52 @@ class _StringsDe extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'vor ${n} Min.';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
   String get ai_assist_empty =>
@@ -44683,6 +45239,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_view_detail => 'Details anzeigen';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Warte auf Text';
   @override
   String game_waveform_range_label({
@@ -46202,6 +46760,43 @@ class _StringsDe extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -48171,6 +48766,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -48238,6 +48851,38 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -48264,6 +48909,57 @@ class _StringsDe extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -48273,6 +48969,21 @@ class _StringsDe extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -48345,6 +49056,54 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -48375,7 +49134,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -49379,6 +50153,66 @@ class _StringsDe extends _StringsEn {
   String get pdf_outline => 'Inhaltsverzeichnis';
   @override
   String get pdf_outline_empty => 'Dieses PDF hat kein Inhaltsverzeichnis.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Bild auswählen';
   @override
@@ -58886,6 +59720,52 @@ class _StringsEs extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'hace ${n} min';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Añadir a colección';
   @override
   String get ai_assist_empty =>
@@ -67591,6 +68471,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_view_detail => 'Ver detalles';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Esperando texto';
   @override
   String game_waveform_range_label({
@@ -69116,6 +69998,43 @@ class _StringsEs extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -71087,6 +72006,24 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -71154,6 +72091,38 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -71180,6 +72149,57 @@ class _StringsEs extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -71189,6 +72209,21 @@ class _StringsEs extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -71261,6 +72296,54 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -71291,7 +72374,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -72290,6 +73388,66 @@ class _StringsEs extends _StringsEn {
   String get pdf_outline => 'Contenidos';
   @override
   String get pdf_outline_empty => 'Este PDF no tiene tabla de contenidos.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Elegir imagen';
   @override
@@ -81835,6 +82993,52 @@ class _StringsFr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => 'il y a ${n} min';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
   String get ai_assist_empty =>
@@ -90572,6 +91776,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_view_detail => 'Voir les détails';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'En attente de texte';
   @override
   String game_waveform_range_label({
@@ -92101,6 +93307,43 @@ class _StringsFr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -94081,6 +95324,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -94148,6 +95409,38 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -94174,6 +95467,57 @@ class _StringsFr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -94183,6 +95527,21 @@ class _StringsFr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -94255,6 +95614,54 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -94285,7 +95692,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -95293,6 +96715,66 @@ class _StringsFr extends _StringsEn {
   String get pdf_outline => 'Sommaire';
   @override
   String get pdf_outline_empty => 'Ce PDF n\'a pas de sommaire.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Choisir une image';
   @override
@@ -104865,6 +106347,52 @@ class _StringsId extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} menit lalu';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
   String get ai_assist_empty =>
@@ -113461,6 +114989,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_view_detail => 'Lihat detail';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Menunggu teks';
   @override
   String game_waveform_range_label({
@@ -114968,6 +116498,43 @@ class _StringsId extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -116912,6 +118479,24 @@ class _StringsId extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -116979,6 +118564,38 @@ class _StringsId extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -117005,6 +118622,57 @@ class _StringsId extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -117014,6 +118682,21 @@ class _StringsId extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -117086,6 +118769,54 @@ class _StringsId extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -117116,7 +118847,22 @@ class _StringsId extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -118104,6 +119850,66 @@ class _StringsId extends _StringsEn {
   String get pdf_outline => 'Daftar isi';
   @override
   String get pdf_outline_empty => 'PDF ini tidak memiliki daftar isi.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Pilih Gambar';
   @override
@@ -127550,6 +129356,52 @@ class _StringsIt extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min fa';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
   String get ai_assist_empty =>
@@ -136210,6 +138062,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_view_detail => 'Visualizza dettagli';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'In attesa del testo';
   @override
   String game_waveform_range_label({
@@ -137724,6 +139578,43 @@ class _StringsIt extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -139695,6 +141586,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -139762,6 +141671,38 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -139788,6 +141729,57 @@ class _StringsIt extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -139797,6 +141789,21 @@ class _StringsIt extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -139869,6 +141876,54 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -139899,7 +141954,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -140892,6 +142962,66 @@ class _StringsIt extends _StringsEn {
   String get pdf_outline => 'Indice';
   @override
   String get pdf_outline_empty => 'Questo PDF non ha un indice.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Scegli immagine';
   @override
@@ -150398,6 +152528,52 @@ class _StringsJa extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n}分前';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'コレクションに追加';
   @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
@@ -158650,6 +160826,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_view_detail => '詳細を表示';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'テキスト待機中';
   @override
   String game_waveform_range_label({
@@ -160095,6 +162273,43 @@ class _StringsJa extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -161959,6 +164174,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -162026,6 +164259,38 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -162052,6 +164317,57 @@ class _StringsJa extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -162061,6 +164377,21 @@ class _StringsJa extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -162133,6 +164464,54 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -162163,7 +164542,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -163107,6 +165501,66 @@ class _StringsJa extends _StringsEn {
   String get pdf_outline => '目次';
   @override
   String get pdf_outline_empty => 'このPDFには目次がありません。';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '画像を選択';
   @override
@@ -172206,6 +174660,52 @@ class _StringsKo extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n}분 전';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => '컬렉션에 추가';
   @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
@@ -180464,6 +182964,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_view_detail => '상세 보기';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => '텍스트 대기 중';
   @override
   String game_waveform_range_label({
@@ -181910,6 +184412,43 @@ class _StringsKo extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -183786,6 +186325,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -183853,6 +186410,38 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -183879,6 +186468,57 @@ class _StringsKo extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -183888,6 +186528,21 @@ class _StringsKo extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -183960,6 +186615,54 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -183990,7 +186693,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -184937,6 +187655,66 @@ class _StringsKo extends _StringsEn {
   String get pdf_outline => '목차';
   @override
   String get pdf_outline_empty => '이 PDF에는 목차가 없습니다.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '이미지 선택';
   @override
@@ -194079,6 +196857,52 @@ class _StringsNl extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min geleden';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
   String get ai_assist_empty =>
@@ -202719,6 +205543,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_view_detail => 'Details bekijken';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Wachten op tekst';
   @override
   String game_waveform_range_label({
@@ -204233,6 +207059,43 @@ class _StringsNl extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -206187,6 +209050,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -206254,6 +209135,38 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -206280,6 +209193,57 @@ class _StringsNl extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -206289,6 +209253,21 @@ class _StringsNl extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -206361,6 +209340,54 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -206391,7 +209418,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -207388,6 +210430,66 @@ class _StringsNl extends _StringsEn {
   String get pdf_outline => 'Inhoud';
   @override
   String get pdf_outline_empty => 'Deze PDF heeft geen inhoudsopgave.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Kies afbeelding';
   @override
@@ -216878,6 +219980,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} min atrás';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
   String get ai_assist_empty =>
@@ -225553,6 +228701,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_view_detail => 'Ver detalhes';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Aguardando texto';
   @override
   String game_waveform_range_label({
@@ -227072,6 +230222,43 @@ class _StringsPtBr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -229033,6 +232220,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -229100,6 +232305,38 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -229126,6 +232363,57 @@ class _StringsPtBr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -229135,6 +232423,21 @@ class _StringsPtBr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -229207,6 +232510,54 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -229237,7 +232588,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -230233,6 +233599,66 @@ class _StringsPtBr extends _StringsEn {
   String get pdf_outline => 'Sumário';
   @override
   String get pdf_outline_empty => 'Este PDF não tem sumário.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Escolher Imagem';
   @override
@@ -239743,6 +243169,52 @@ class _StringsRu extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} мин. назад';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
   String get ai_assist_empty =>
@@ -248380,6 +251852,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_view_detail => 'Подробности';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Ожидание текста';
   @override
   String game_waveform_range_label({
@@ -249895,6 +253369,43 @@ class _StringsRu extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -251852,6 +255363,24 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -251919,6 +255448,38 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -251945,6 +255506,57 @@ class _StringsRu extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -251954,6 +255566,21 @@ class _StringsRu extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -252026,6 +255653,54 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -252056,7 +255731,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -253058,6 +256748,66 @@ class _StringsRu extends _StringsEn {
   String get pdf_outline => 'Содержание';
   @override
   String get pdf_outline_empty => 'В этом PDF нет содержания.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Выбрать изображение';
   @override
@@ -262554,6 +266304,52 @@ class _StringsTh extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} นาทีที่แล้ว';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
   String get ai_assist_empty =>
@@ -271061,6 +274857,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_view_detail => 'ดูรายละเอียด';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'รอข้อความ';
   @override
   String game_waveform_range_label({
@@ -272553,6 +276351,43 @@ class _StringsTh extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -274482,6 +278317,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -274549,6 +278402,38 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -274575,6 +278460,57 @@ class _StringsTh extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -274584,6 +278520,21 @@ class _StringsTh extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -274656,6 +278607,54 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -274686,7 +278685,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -275665,6 +279679,66 @@ class _StringsTh extends _StringsEn {
   String get pdf_outline => 'สารบัญ';
   @override
   String get pdf_outline_empty => 'PDF นี้ไม่มีสารบัญ';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'เลือกรูปภาพ';
   @override
@@ -285042,6 +289116,52 @@ class _StringsTr extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} dk önce';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
   String get ai_assist_empty =>
@@ -293650,6 +297770,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_view_detail => 'Ayrıntıları görüntüle';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Metin bekleniyor';
   @override
   String game_waveform_range_label({
@@ -295154,6 +299276,43 @@ class _StringsTr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -297099,6 +301258,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -297166,6 +301343,38 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -297192,6 +301401,57 @@ class _StringsTr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -297201,6 +301461,21 @@ class _StringsTr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -297273,6 +301548,54 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -297303,7 +301626,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -298293,6 +302631,66 @@ class _StringsTr extends _StringsEn {
   String get pdf_outline => 'İçindekiler';
   @override
   String get pdf_outline_empty => 'Bu PDF\'de içindekiler yok.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Resim seç';
   @override
@@ -307735,6 +312133,52 @@ class _StringsVi extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} phút trước';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
   String get ai_assist_empty =>
@@ -316316,6 +320760,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_view_detail => 'Xem chi tiết';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => 'Đang chờ văn bản';
   @override
   String game_waveform_range_label({
@@ -317815,6 +322261,43 @@ class _StringsVi extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -319751,6 +324234,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -319818,6 +324319,38 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -319844,6 +324377,57 @@ class _StringsVi extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -319853,6 +324437,21 @@ class _StringsVi extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -319925,6 +324524,54 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -319955,7 +324602,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -320937,6 +325599,66 @@ class _StringsVi extends _StringsEn {
   String get pdf_outline => 'Mục lục';
   @override
   String get pdf_outline_empty => 'PDF này không có mục lục.';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => 'Chọn ảnh';
   @override
@@ -330354,6 +335076,49 @@ class _StringsZhCn extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} 分钟前';
   @override
+  String get adaptation_progress_add => '添加';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => '第 ${episode} 集 ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => '编辑对应';
+  @override
+  String get adaptation_progress_empty => '还没有对应点。记下「第 N 集 ≈ 第 M 卷」后即可估算原作进度。';
+  @override
+  String get adaptation_progress_episode_field => '集数';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => '看到第 ${episode} 集 ≈ 原作${position}';
+  @override
+  String get adaptation_progress_infer_unavailable => '按字幕与原文自动推断：暂未支持。';
+  @override
+  String get adaptation_progress_invalid => '请输入从 1 开始的整数';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      '还没有覆盖第 ${episode} 集的对应点';
+  @override
+  String get adaptation_progress_not_started => '还没开始看';
+  @override
+  String get adaptation_progress_number_field => '卷 / 章号';
+  @override
+  String get adaptation_progress_remove => '删除';
+  @override
+  String get adaptation_progress_title => '原作进度对应';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      '第 ${number} 章';
+  @override
+  String get adaptation_progress_unit_chapter_label => '章';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      '第 ${number} 卷';
+  @override
+  String get adaptation_progress_unit_volume_label => '卷';
+  @override
   String get add_to_collection => '加入合集';
   @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
@@ -338166,6 +342931,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_view_detail => '查看详情';
   @override
+  String get game_voice_cast_title => '配音';
+  @override
   String get game_waiting_for_text => '等待文本';
   @override
   String game_waveform_range_label({
@@ -339548,6 +344315,42 @@ class _StringsZhCn extends _StringsEn {
   String get lookup_idle_hint => '在上方输入、粘贴剪贴板，或从最近查过的词里挑一个。';
   @override
   String get lookup_idle_title => '查一个词';
+  @override
+  String get lookup_library_sentences_enabled => '我库里的例句';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      '在查词弹窗里显示这个词在你的书、字幕、歌词和游戏文本里出现过的句子。索引只保存在本机。';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      '第 ${number} 集';
+  @override
+  String get lookup_library_sentences_group_books => '书';
+  @override
+  String get lookup_library_sentences_group_games => '游戏';
+  @override
+  String get lookup_library_sentences_group_music => '音乐';
+  @override
+  String get lookup_library_sentences_group_videos => '视频';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => '正在建索引… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => '重建例句索引';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+  @override
+  String get lookup_library_sentences_rebuild_started => '正在后台重建例句索引';
+  @override
+  String lookup_library_sentences_status({
+    required Object documents,
+    required Object sentences,
+  }) => '已索引 ${documents} 份来源、${sentences} 句';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      '我库里的例句 · ${count}';
   @override
   String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
   @override
@@ -341337,6 +346140,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_audio_device_title => '输出设备';
   @override
+  String get music_crossfade_continuous_hint =>
+      '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
+  @override
+  String get music_crossfade_continuous_title => '连续曲目也淡入';
+  @override
+  String get music_crossfade_disabled_direct => '硬件直出时已停用';
+  @override
+  String get music_crossfade_disabled_exclusive => '独占输出时已停用';
+  @override
+  String get music_crossfade_hint =>
+      '曲目之间按等功率曲线交叉淡入淡出；专辑连续曲目与 CUE 拆轨仍保持无缝。开启后不再 bit-perfect，独占输出时自动停用。';
+  @override
+  String get music_crossfade_off => '关';
+  @override
+  String get music_crossfade_title => '交叉淡入';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
@@ -341399,6 +346218,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_lyrics_title => '歌词';
   @override
+  String get music_mv_audio_library => '曲库音轨';
+  @override
+  String get music_mv_audio_mv => 'MV 原声';
+  @override
+  String get music_mv_bind => '绑定';
+  @override
+  String get music_mv_candidates_title => 'MV 候选';
+  @override
+  String get music_mv_find_local => '查找本地 MV';
+  @override
+  String get music_mv_from_anime => '动画 OP / ED';
+  @override
+  String get music_mv_none_found => '没有找到匹配的 MV';
+  @override
+  String get music_mv_offset_earlier => '画面提前 100 毫秒';
+  @override
+  String get music_mv_offset_later => '画面推后 100 毫秒';
+  @override
+  String music_mv_offset_value({required Object ms}) => '偏移 ${ms} 毫秒';
+  @override
+  String get music_mv_open_failed => '无法打开 MV';
+  @override
+  String get music_mv_play => '播放 MV';
+  @override
+  String get music_mv_search_online => '在线搜索';
+  @override
+  String get music_mv_searching => '正在搜索…';
+  @override
+  String get music_mv_section => 'MV';
+  @override
+  String get music_mv_unbind => '解除绑定';
+  @override
   String get music_now_playing => '正在播放';
   @override
   String get music_open_library => '曲库';
@@ -341421,6 +346272,56 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => '扫描失败：${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID 声纹识别未启用：没有应用 API key（设置 › 音乐）';
+  @override
+  String get music_scrape_choose_match => '手动选择匹配';
+  @override
+  String get music_scrape_done => '识别成功';
+  @override
+  String get music_scrape_failed => '无法连接资料源';
+  @override
+  String get music_scrape_identify => '识别';
+  @override
+  String get music_scrape_identifying => '正在识别…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => '已识别 ${matched} / ${total} 首';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => '正在识别 ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID 声纹';
+  @override
+  String get music_scrape_method_manual => '手动选择';
+  @override
+  String get music_scrape_method_mbid_tag => 'MBID 标签';
+  @override
+  String get music_scrape_method_tag_search => '标签匹配';
+  @override
+  String get music_scrape_no_candidates => 'MusicBrainz 没有给出候选';
+  @override
+  String get music_scrape_not_matched => '没有足够确定的匹配，请手动选择';
+  @override
+  String get music_scrape_open_musicbrainz => '在 MusicBrainz 打开';
+  @override
+  String get music_scrape_reidentify => '重新识别';
+  @override
+  String get music_scrape_section => '识别';
+  @override
+  String get music_scrape_status_error => '资料源连不上';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      '已识别（${method}）';
+  @override
+  String get music_scrape_status_none => '尚未识别';
+  @override
+  String get music_scrape_status_unmatched => '没有足够确定的匹配';
+  @override
   String get music_section_albums => '专辑';
   @override
   String get music_section_artists => '艺人';
@@ -341430,6 +346331,19 @@ class _StringsZhCn extends _StringsEn {
   String get music_section_songs => '歌曲';
   @override
   String get music_section_works => '作品';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
+  @override
+  String get music_setting_identify_library => '识别整个曲库';
+  @override
+  String get music_setting_identify_library_hint => 'MusicBrainz，每秒至多 1 次请求';
+  @override
+  String get music_setting_vgmdb => 'VGMdb 补充';
+  @override
+  String get music_setting_vgmdb_hint => '社区镜像、无官方 API；只按目录编号低频查询';
   @override
   String get music_settings_summary => '曲库来源与播放';
   @override
@@ -341501,6 +346415,50 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_stop => '停止音乐';
   @override
+  String get music_tag_field_album => '专辑';
+  @override
+  String get music_tag_field_album_artist => '专辑艺人';
+  @override
+  String get music_tag_field_artist => '艺人';
+  @override
+  String get music_tag_field_catalog_no => '目录编号';
+  @override
+  String get music_tag_field_date => '日期';
+  @override
+  String get music_tag_field_disc_no => '碟号';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz 艺人 ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz 录音 ID';
+  @override
+  String get music_tag_field_mb_release_group_id => 'MusicBrainz 发行组 ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz 发行 ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz 作品 ID';
+  @override
+  String get music_tag_field_title => '标题';
+  @override
+  String get music_tag_field_track_no => '曲序';
+  @override
+  String get music_tag_value_empty => '（空）';
+  @override
+  String get music_tag_writeback => '写回文件标签';
+  @override
+  String get music_tag_writeback_apply => '写入';
+  @override
+  String get music_tag_writeback_cue => 'CUE 分轨共用一个文件，不能按曲写回标签';
+  @override
+  String get music_tag_writeback_done => '已写入标签';
+  @override
+  String get music_tag_writeback_failed => '写入标签失败';
+  @override
+  String get music_tag_writeback_hint => '未勾选的字段保持原值，以后不再提议。';
+  @override
+  String get music_tag_writeback_no_changes => '文件标签已经一致';
+  @override
+  String get music_tag_writeback_unreadable => '读不了这个文件的标签';
+  @override
   String get music_theme_song_detect => '识别出现位置';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -341531,7 +346489,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_track_detail => '曲目详情';
   @override
+  String get music_track_people_title => '署名';
+  @override
   String music_tracks_count({required Object count}) => '${count} 首';
+  @override
+  String get music_versions_cover => '翻唱';
+  @override
+  String get music_versions_in_library => '库中有';
+  @override
+  String get music_versions_live => '现场';
+  @override
+  String get music_versions_original => '原曲';
+  @override
+  String get music_versions_section => '原曲与其它版本';
+  @override
+  String get music_versions_this_is_original => '这首就是原曲';
   @override
   String get music_volume_title => '音量';
   @override
@@ -342421,6 +347393,64 @@ class _StringsZhCn extends _StringsEn {
   String get pdf_outline => '目录';
   @override
   String get pdf_outline_empty => '此 PDF 没有目录。';
+  @override
+  String get person_bridge_checking => '正在 Wikidata 上按外部 ID 查找同一人…';
+  @override
+  String get person_bridge_failed => '连不上 Wikidata，先显示本机已知的身份。';
+  @override
+  String get person_domain_game => '游戏';
+  @override
+  String get person_domain_music => '音乐';
+  @override
+  String get person_domain_video => '视频';
+  @override
+  String get person_empty => '库里还没有这个人的作品。';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      '你手动合并的：${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => '取消合并';
+  @override
+  String get person_music_role_album_artist => '专辑艺人';
+  @override
+  String get person_music_role_arranger => '编曲';
+  @override
+  String get person_music_role_artist => '艺人';
+  @override
+  String get person_music_role_character => '角色';
+  @override
+  String get person_music_role_composer => '作曲';
+  @override
+  String get person_music_role_featured => '客串';
+  @override
+  String get person_music_role_lyricist => '作词';
+  @override
+  String get person_music_role_vocal_cv => '演唱（CV）';
+  @override
+  String get person_page_title => '人物';
+  @override
+  String get person_section_anime_roles => '动画角色';
+  @override
+  String get person_section_game_roles => '游戏角色';
+  @override
+  String get person_section_identities => '已合并的身份';
+  @override
+  String get person_section_songs => '演唱与角色歌';
+  @override
+  String get person_section_suggestions => '可能是同一人';
+  @override
+  String get person_section_video_staff => '其他参与';
+  @override
+  String person_song_character({required Object name}) => '角色：${name}';
+  @override
+  String get person_songs_empty => '音乐库里还没有 TA 演唱的曲目。曲目带上演唱署名后，角色歌会出现在这里。';
+  @override
+  String get person_suggestion_confirm => '是同一人';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      '名字相同：${name} · 没有共享的外部 ID';
+  @override
+  String get person_suggestion_reject => '不是';
   @override
   String get pick_image => '选择图片';
   @override
@@ -351024,6 +356054,52 @@ class _StringsZhHk extends _StringsEn {
   @override
   String activity_minutes_ago({required Object n}) => '${n} 分鐘前';
   @override
+  String get adaptation_progress_add => 'Add';
+  @override
+  String adaptation_progress_anchor({
+    required Object episode,
+    required Object position,
+  }) => 'Ep. ${episode} ≈ ${position}';
+  @override
+  String get adaptation_progress_edit => 'Edit mapping';
+  @override
+  String get adaptation_progress_empty =>
+      'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+  @override
+  String get adaptation_progress_episode_field => 'Episode';
+  @override
+  String adaptation_progress_estimate({
+    required Object episode,
+    required Object position,
+  }) => 'Watched up to episode ${episode} ≈ ${position} of the original';
+  @override
+  String get adaptation_progress_infer_unavailable =>
+      'Automatic inference from subtitles and the original text is not available yet.';
+  @override
+  String get adaptation_progress_invalid =>
+      'Enter whole numbers starting from 1';
+  @override
+  String adaptation_progress_no_anchor({required Object episode}) =>
+      'No mapping covers episode ${episode} yet';
+  @override
+  String get adaptation_progress_not_started => 'Not started watching yet';
+  @override
+  String get adaptation_progress_number_field => 'Volume / chapter number';
+  @override
+  String get adaptation_progress_remove => 'Remove';
+  @override
+  String get adaptation_progress_title => 'Original progress';
+  @override
+  String adaptation_progress_unit_chapter({required Object number}) =>
+      'ch. ${number}';
+  @override
+  String get adaptation_progress_unit_chapter_label => 'Chapter';
+  @override
+  String adaptation_progress_unit_volume({required Object number}) =>
+      'vol. ${number}';
+  @override
+  String get adaptation_progress_unit_volume_label => 'Volume';
+  @override
   String get add_to_collection => '加入合集';
   @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
@@ -359014,6 +364090,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_view_detail => '查看詳情';
   @override
+  String get game_voice_cast_title => 'Voice cast';
+  @override
   String get game_waiting_for_text => '等待文本';
   @override
   String game_waveform_range_label({
@@ -360417,6 +365495,43 @@ class _StringsZhHk extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -362231,6 +367346,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_crossfade_continuous_hint =>
+      'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+  @override
+  String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
+  @override
+  String get music_crossfade_disabled_direct =>
+      'Off with direct hardware output';
+  @override
+  String get music_crossfade_disabled_exclusive =>
+      'Off while exclusive output is on';
+  @override
+  String get music_crossfade_hint =>
+      'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+  @override
+  String get music_crossfade_off => 'Off';
+  @override
+  String get music_crossfade_title => 'Crossfade';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -362298,6 +367431,38 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -362324,6 +367489,57 @@ class _StringsZhHk extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -362333,6 +367549,21 @@ class _StringsZhHk extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -362405,6 +367636,54 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -362435,7 +367714,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_track_detail => 'Track details';
   @override
+  String get music_track_people_title => 'Credits';
+  @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -363342,6 +368636,66 @@ class _StringsZhHk extends _StringsEn {
   String get pdf_outline => '目錄';
   @override
   String get pdf_outline_empty => '此 PDF 沒有目錄。';
+  @override
+  String get person_bridge_checking => 'Looking up this person on Wikidata…';
+  @override
+  String get person_bridge_failed =>
+      'Could not reach Wikidata; showing what is known locally.';
+  @override
+  String get person_domain_game => 'Game';
+  @override
+  String get person_domain_music => 'Music';
+  @override
+  String get person_domain_video => 'Video';
+  @override
+  String get person_empty => 'Nothing by this person in your library.';
+  @override
+  String person_identity_manual_pair({required Object a, required Object b}) =>
+      'Merged by you: ${a} ↔ ${b}';
+  @override
+  String get person_identity_unmerge => 'Unmerge';
+  @override
+  String get person_music_role_album_artist => 'Album artist';
+  @override
+  String get person_music_role_arranger => 'Arranger';
+  @override
+  String get person_music_role_artist => 'Artist';
+  @override
+  String get person_music_role_character => 'Character';
+  @override
+  String get person_music_role_composer => 'Composer';
+  @override
+  String get person_music_role_featured => 'Featured';
+  @override
+  String get person_music_role_lyricist => 'Lyricist';
+  @override
+  String get person_music_role_vocal_cv => 'Vocals (CV)';
+  @override
+  String get person_page_title => 'Person';
+  @override
+  String get person_section_anime_roles => 'Anime roles';
+  @override
+  String get person_section_game_roles => 'Game roles';
+  @override
+  String get person_section_identities => 'Merged identities';
+  @override
+  String get person_section_songs => 'Songs and character songs';
+  @override
+  String get person_section_suggestions => 'Possibly the same person';
+  @override
+  String get person_section_video_staff => 'Other video credits';
+  @override
+  String person_song_character({required Object name}) => 'Character: ${name}';
+  @override
+  String get person_songs_empty =>
+      'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+  @override
+  String get person_suggestion_confirm => 'Same person';
+  @override
+  String person_suggestion_reason({required Object name}) =>
+      'Same name: ${name} · no shared ID';
+  @override
+  String get person_suggestion_reject => 'Not the same';
   @override
   String get pick_image => '選擇圖片';
   @override
@@ -372202,6 +377556,43 @@ extension on _StringsEn {
         return 'Just now';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min ago';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
       case 'ai_assist_empty':
@@ -379419,6 +384810,8 @@ extension on _StringsEn {
         return 'My tags';
       case 'game_view_detail':
         return 'View details';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Waiting for text';
       case 'game_waveform_range_label':
@@ -380693,6 +386086,34 @@ extension on _StringsEn {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -382391,6 +387812,20 @@ extension on _StringsEn {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -382453,6 +387888,38 @@ extension on _StringsEn {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -382475,6 +387942,50 @@ extension on _StringsEn {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -382485,6 +387996,18 @@ extension on _StringsEn {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -382554,6 +388077,50 @@ extension on _StringsEn {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -382579,8 +388146,22 @@ extension on _StringsEn {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -383386,6 +388967,63 @@ extension on _StringsEn {
         return 'Contents';
       case 'pdf_outline_empty':
         return 'This PDF has no contents.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Pick image';
       case 'play':
@@ -391469,6 +397107,43 @@ extension on _StringsAr {
         return 'الآن';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'منذ ${n} د';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
       case 'ai_assist_empty':
@@ -398685,6 +404360,8 @@ extension on _StringsAr {
         return 'وسومي';
       case 'game_view_detail':
         return 'عرض التفاصيل';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'في انتظار النص';
       case 'game_waveform_range_label':
@@ -399955,6 +405632,34 @@ extension on _StringsAr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -401653,6 +407358,20 @@ extension on _StringsAr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -401715,6 +407434,38 @@ extension on _StringsAr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -401737,6 +407488,50 @@ extension on _StringsAr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -401747,6 +407542,18 @@ extension on _StringsAr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -401816,6 +407623,50 @@ extension on _StringsAr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -401841,8 +407692,22 @@ extension on _StringsAr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -402649,6 +408514,63 @@ extension on _StringsAr {
         return 'المحتويات';
       case 'pdf_outline_empty':
         return 'هذا الملف PDF لا يحتوي على محتويات.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'اختيار صورة';
       case 'play':
@@ -410730,6 +416652,43 @@ extension on _StringsDe {
         return 'Gerade eben';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'vor ${n} Min.';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
       case 'ai_assist_empty':
@@ -417980,6 +423939,8 @@ extension on _StringsDe {
         return 'Meine Tags';
       case 'game_view_detail':
         return 'Details anzeigen';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Warte auf Text';
       case 'game_waveform_range_label':
@@ -419258,6 +425219,34 @@ extension on _StringsDe {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -420966,6 +426955,20 @@ extension on _StringsDe {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -421028,6 +427031,38 @@ extension on _StringsDe {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -421050,6 +427085,50 @@ extension on _StringsDe {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -421060,6 +427139,18 @@ extension on _StringsDe {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -421129,6 +427220,50 @@ extension on _StringsDe {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -421154,8 +427289,22 @@ extension on _StringsDe {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -421966,6 +428115,63 @@ extension on _StringsDe {
         return 'Inhaltsverzeichnis';
       case 'pdf_outline_empty':
         return 'Dieses PDF hat kein Inhaltsverzeichnis.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Bild auswählen';
       case 'play':
@@ -430067,6 +436273,43 @@ extension on _StringsEs {
         return 'Ahora mismo';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'hace ${n} min';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
       case 'ai_assist_empty':
@@ -437307,6 +443550,8 @@ extension on _StringsEs {
         return 'Mis etiquetas';
       case 'game_view_detail':
         return 'Ver detalles';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Esperando texto';
       case 'game_waveform_range_label':
@@ -438582,6 +444827,34 @@ extension on _StringsEs {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -440289,6 +446562,20 @@ extension on _StringsEs {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -440351,6 +446638,38 @@ extension on _StringsEs {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -440373,6 +446692,50 @@ extension on _StringsEs {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -440383,6 +446746,18 @@ extension on _StringsEs {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -440452,6 +446827,50 @@ extension on _StringsEs {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -440477,8 +446896,22 @@ extension on _StringsEs {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -441287,6 +447720,63 @@ extension on _StringsEs {
         return 'Contenidos';
       case 'pdf_outline_empty':
         return 'Este PDF no tiene tabla de contenidos.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Elegir imagen';
       case 'play':
@@ -449386,6 +455876,43 @@ extension on _StringsFr {
         return 'À l\'instant';
       case 'activity_minutes_ago':
         return ({required Object n}) => 'il y a ${n} min';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
       case 'ai_assist_empty':
@@ -456640,6 +463167,8 @@ extension on _StringsFr {
         return 'Mes tags';
       case 'game_view_detail':
         return 'Voir les détails';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'En attente de texte';
       case 'game_waveform_range_label':
@@ -457916,6 +464445,34 @@ extension on _StringsFr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -459622,6 +466179,20 @@ extension on _StringsFr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -459684,6 +466255,38 @@ extension on _StringsFr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -459706,6 +466309,50 @@ extension on _StringsFr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -459716,6 +466363,18 @@ extension on _StringsFr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -459785,6 +466444,50 @@ extension on _StringsFr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -459810,8 +466513,22 @@ extension on _StringsFr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -460622,6 +467339,63 @@ extension on _StringsFr {
         return 'Sommaire';
       case 'pdf_outline_empty':
         return 'Ce PDF n\'a pas de sommaire.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Choisir une image';
       case 'play':
@@ -468723,6 +475497,43 @@ extension on _StringsId {
         return 'Baru saja';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} menit lalu';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
       case 'ai_assist_empty':
@@ -475951,6 +482762,8 @@ extension on _StringsId {
         return 'Tag saya';
       case 'game_view_detail':
         return 'Lihat detail';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Menunggu teks';
       case 'game_waveform_range_label':
@@ -477225,6 +484038,34 @@ extension on _StringsId {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -478924,6 +485765,20 @@ extension on _StringsId {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -478986,6 +485841,38 @@ extension on _StringsId {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -479008,6 +485895,50 @@ extension on _StringsId {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -479018,6 +485949,18 @@ extension on _StringsId {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -479087,6 +486030,50 @@ extension on _StringsId {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -479112,8 +486099,22 @@ extension on _StringsId {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -479919,6 +486920,63 @@ extension on _StringsId {
         return 'Daftar isi';
       case 'pdf_outline_empty':
         return 'PDF ini tidak memiliki daftar isi.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Pilih Gambar';
       case 'play':
@@ -488004,6 +495062,43 @@ extension on _StringsIt {
         return 'Adesso';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min fa';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
       case 'ai_assist_empty':
@@ -495243,6 +502338,8 @@ extension on _StringsIt {
         return 'I miei tag';
       case 'game_view_detail':
         return 'Visualizza dettagli';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'In attesa del testo';
       case 'game_waveform_range_label':
@@ -496518,6 +503615,34 @@ extension on _StringsIt {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -498223,6 +505348,20 @@ extension on _StringsIt {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -498285,6 +505424,38 @@ extension on _StringsIt {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -498307,6 +505478,50 @@ extension on _StringsIt {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -498317,6 +505532,18 @@ extension on _StringsIt {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -498386,6 +505613,50 @@ extension on _StringsIt {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -498411,8 +505682,22 @@ extension on _StringsIt {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -499220,6 +506505,63 @@ extension on _StringsIt {
         return 'Indice';
       case 'pdf_outline_empty':
         return 'Questo PDF non ha un indice.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Scegli immagine';
       case 'play':
@@ -507321,6 +514663,43 @@ extension on _StringsJa {
         return 'たった今';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n}分前';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
       case 'ai_assist_empty':
@@ -514514,6 +521893,8 @@ extension on _StringsJa {
         return 'マイタグ';
       case 'game_view_detail':
         return '詳細を表示';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'テキスト待機中';
       case 'game_waveform_range_label':
@@ -515775,6 +523156,34 @@ extension on _StringsJa {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -517470,6 +524879,20 @@ extension on _StringsJa {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -517532,6 +524955,38 @@ extension on _StringsJa {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -517554,6 +525009,50 @@ extension on _StringsJa {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -517564,6 +525063,18 @@ extension on _StringsJa {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -517633,6 +525144,50 @@ extension on _StringsJa {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -517658,8 +525213,22 @@ extension on _StringsJa {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -518461,6 +526030,63 @@ extension on _StringsJa {
         return '目次';
       case 'pdf_outline_empty':
         return 'このPDFには目次がありません。';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '画像を選択';
       case 'play':
@@ -526503,6 +534129,43 @@ extension on _StringsKo {
         return '방금 전';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n}분 전';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
       case 'ai_assist_empty':
@@ -533699,6 +541362,8 @@ extension on _StringsKo {
         return '내 태그';
       case 'game_view_detail':
         return '상세 보기';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return '텍스트 대기 중';
       case 'game_waveform_range_label':
@@ -534961,6 +542626,34 @@ extension on _StringsKo {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -536654,6 +544347,20 @@ extension on _StringsKo {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -536716,6 +544423,38 @@ extension on _StringsKo {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -536738,6 +544477,50 @@ extension on _StringsKo {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -536748,6 +544531,18 @@ extension on _StringsKo {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -536817,6 +544612,50 @@ extension on _StringsKo {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -536842,8 +544681,22 @@ extension on _StringsKo {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -537646,6 +545499,63 @@ extension on _StringsKo {
         return '목차';
       case 'pdf_outline_empty':
         return '이 PDF에는 목차가 없습니다.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '이미지 선택';
       case 'play':
@@ -545701,6 +553611,43 @@ extension on _StringsNl {
         return 'Zojuist';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min geleden';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
       case 'ai_assist_empty':
@@ -552937,6 +560884,8 @@ extension on _StringsNl {
         return 'Mijn tags';
       case 'game_view_detail':
         return 'Details bekijken';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Wachten op tekst';
       case 'game_waveform_range_label':
@@ -554214,6 +562163,34 @@ extension on _StringsNl {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -555922,6 +563899,20 @@ extension on _StringsNl {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -555984,6 +563975,38 @@ extension on _StringsNl {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -556006,6 +564029,50 @@ extension on _StringsNl {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -556016,6 +564083,18 @@ extension on _StringsNl {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -556085,6 +564164,50 @@ extension on _StringsNl {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -556110,8 +564233,22 @@ extension on _StringsNl {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -556919,6 +565056,63 @@ extension on _StringsNl {
         return 'Inhoud';
       case 'pdf_outline_empty':
         return 'Deze PDF heeft geen inhoudsopgave.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Kies afbeelding';
       case 'play':
@@ -565013,6 +573207,43 @@ extension on _StringsPtBr {
         return 'Agora mesmo';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} min atrás';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
       case 'ai_assist_empty':
@@ -572248,6 +580479,8 @@ extension on _StringsPtBr {
         return 'Minhas tags';
       case 'game_view_detail':
         return 'Ver detalhes';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Aguardando texto';
       case 'game_waveform_range_label':
@@ -573523,6 +581756,34 @@ extension on _StringsPtBr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -575229,6 +583490,20 @@ extension on _StringsPtBr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -575291,6 +583566,38 @@ extension on _StringsPtBr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -575313,6 +583620,50 @@ extension on _StringsPtBr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -575323,6 +583674,18 @@ extension on _StringsPtBr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -575392,6 +583755,50 @@ extension on _StringsPtBr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -575417,8 +583824,22 @@ extension on _StringsPtBr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -576226,6 +584647,63 @@ extension on _StringsPtBr {
         return 'Sumário';
       case 'pdf_outline_empty':
         return 'Este PDF não tem sumário.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Escolher Imagem';
       case 'play':
@@ -584317,6 +592795,43 @@ extension on _StringsRu {
         return 'Только что';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} мин. назад';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
       case 'ai_assist_empty':
@@ -591559,6 +600074,8 @@ extension on _StringsRu {
         return 'Мои теги';
       case 'game_view_detail':
         return 'Подробности';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Ожидание текста';
       case 'game_waveform_range_label':
@@ -592834,6 +601351,34 @@ extension on _StringsRu {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -594540,6 +603085,20 @@ extension on _StringsRu {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -594602,6 +603161,38 @@ extension on _StringsRu {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -594624,6 +603215,50 @@ extension on _StringsRu {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -594634,6 +603269,18 @@ extension on _StringsRu {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -594703,6 +603350,50 @@ extension on _StringsRu {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -594728,8 +603419,22 @@ extension on _StringsRu {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -595537,6 +604242,63 @@ extension on _StringsRu {
         return 'Содержание';
       case 'pdf_outline_empty':
         return 'В этом PDF нет содержания.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Выбрать изображение';
       case 'play':
@@ -603626,6 +612388,43 @@ extension on _StringsTh {
         return 'เมื่อสักครู่';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} นาทีที่แล้ว';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
       case 'ai_assist_empty':
@@ -610844,6 +619643,8 @@ extension on _StringsTh {
         return 'แท็กของฉัน';
       case 'game_view_detail':
         return 'ดูรายละเอียด';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'รอข้อความ';
       case 'game_waveform_range_label':
@@ -612118,6 +620919,34 @@ extension on _StringsTh {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -613816,6 +622645,20 @@ extension on _StringsTh {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -613878,6 +622721,38 @@ extension on _StringsTh {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -613900,6 +622775,50 @@ extension on _StringsTh {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -613910,6 +622829,18 @@ extension on _StringsTh {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -613979,6 +622910,50 @@ extension on _StringsTh {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -614004,8 +622979,22 @@ extension on _StringsTh {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -614810,6 +623799,63 @@ extension on _StringsTh {
         return 'สารบัญ';
       case 'pdf_outline_empty':
         return 'PDF นี้ไม่มีสารบัญ';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'เลือกรูปภาพ';
       case 'play':
@@ -622891,6 +631937,43 @@ extension on _StringsTr {
         return 'Az önce';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} dk önce';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
       case 'ai_assist_empty':
@@ -630127,6 +639210,8 @@ extension on _StringsTr {
         return 'Etiketlerim';
       case 'game_view_detail':
         return 'Ayrıntıları görüntüle';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Metin bekleniyor';
       case 'game_waveform_range_label':
@@ -631402,6 +640487,34 @@ extension on _StringsTr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -633105,6 +642218,20 @@ extension on _StringsTr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -633167,6 +642294,38 @@ extension on _StringsTr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -633189,6 +642348,50 @@ extension on _StringsTr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -633199,6 +642402,18 @@ extension on _StringsTr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -633268,6 +642483,50 @@ extension on _StringsTr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -633293,8 +642552,22 @@ extension on _StringsTr {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -634099,6 +643372,63 @@ extension on _StringsTr {
         return 'İçindekiler';
       case 'pdf_outline_empty':
         return 'Bu PDF\'de içindekiler yok.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Resim seç';
       case 'play':
@@ -642187,6 +651517,43 @@ extension on _StringsVi {
         return 'Vừa xong';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} phút trước';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
       case 'ai_assist_empty':
@@ -649415,6 +658782,8 @@ extension on _StringsVi {
         return 'Thẻ gắn của tôi';
       case 'game_view_detail':
         return 'Xem chi tiết';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return 'Đang chờ văn bản';
       case 'game_waveform_range_label':
@@ -650688,6 +660057,34 @@ extension on _StringsVi {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -652386,6 +661783,20 @@ extension on _StringsVi {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -652448,6 +661859,38 @@ extension on _StringsVi {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -652470,6 +661913,50 @@ extension on _StringsVi {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -652480,6 +661967,18 @@ extension on _StringsVi {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -652549,6 +662048,50 @@ extension on _StringsVi {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -652574,8 +662117,22 @@ extension on _StringsVi {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -653381,6 +662938,63 @@ extension on _StringsVi {
         return 'Mục lục';
       case 'pdf_outline_empty':
         return 'PDF này không có mục lục.';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return 'Chọn ảnh';
       case 'play':
@@ -661466,6 +671080,42 @@ extension on _StringsZhCn {
         return '刚刚';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} 分钟前';
+      case 'adaptation_progress_add':
+        return '添加';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            '第 ${episode} 集 ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return '编辑对应';
+      case 'adaptation_progress_empty':
+        return '还没有对应点。记下「第 N 集 ≈ 第 M 卷」后即可估算原作进度。';
+      case 'adaptation_progress_episode_field':
+        return '集数';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            '看到第 ${episode} 集 ≈ 原作${position}';
+      case 'adaptation_progress_infer_unavailable':
+        return '按字幕与原文自动推断：暂未支持。';
+      case 'adaptation_progress_invalid':
+        return '请输入从 1 开始的整数';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) => '还没有覆盖第 ${episode} 集的对应点';
+      case 'adaptation_progress_not_started':
+        return '还没开始看';
+      case 'adaptation_progress_number_field':
+        return '卷 / 章号';
+      case 'adaptation_progress_remove':
+        return '删除';
+      case 'adaptation_progress_title':
+        return '原作进度对应';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => '第 ${number} 章';
+      case 'adaptation_progress_unit_chapter_label':
+        return '章';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => '第 ${number} 卷';
+      case 'adaptation_progress_unit_volume_label':
+        return '卷';
       case 'add_to_collection':
         return '加入合集';
       case 'ai_assist_empty':
@@ -668595,6 +678245,8 @@ extension on _StringsZhCn {
         return '我的标签';
       case 'game_view_detail':
         return '查看详情';
+      case 'game_voice_cast_title':
+        return '配音';
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
@@ -669852,6 +679504,34 @@ extension on _StringsZhCn {
         return '在上方输入、粘贴剪贴板，或从最近查过的词里挑一个。';
       case 'lookup_idle_title':
         return '查一个词';
+      case 'lookup_library_sentences_enabled':
+        return '我库里的例句';
+      case 'lookup_library_sentences_enabled_hint':
+        return '在查词弹窗里显示这个词在你的书、字幕、歌词和游戏文本里出现过的句子。索引只保存在本机。';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => '第 ${number} 集';
+      case 'lookup_library_sentences_group_books':
+        return '书';
+      case 'lookup_library_sentences_group_games':
+        return '游戏';
+      case 'lookup_library_sentences_group_music':
+        return '音乐';
+      case 'lookup_library_sentences_group_videos':
+        return '视频';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            '正在建索引… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return '重建例句索引';
+      case 'lookup_library_sentences_rebuild_hint':
+        return '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+      case 'lookup_library_sentences_rebuild_started':
+        return '正在后台重建例句索引';
+      case 'lookup_library_sentences_status':
+        return ({required Object documents, required Object sentences}) =>
+            '已索引 ${documents} 份来源、${sentences} 句';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => '我库里的例句 · ${count}';
       case 'lookup_popup_close_after_mining':
         return '制卡后关闭查词弹窗';
       case 'lookup_popup_close_after_mining_hint':
@@ -671534,6 +681214,20 @@ extension on _StringsZhCn {
         return '系统默认';
       case 'music_audio_device_title':
         return '输出设备';
+      case 'music_crossfade_continuous_hint':
+        return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
+      case 'music_crossfade_continuous_title':
+        return '连续曲目也淡入';
+      case 'music_crossfade_disabled_direct':
+        return '硬件直出时已停用';
+      case 'music_crossfade_disabled_exclusive':
+        return '独占输出时已停用';
+      case 'music_crossfade_hint':
+        return '曲目之间按等功率曲线交叉淡入淡出；专辑连续曲目与 CUE 拆轨仍保持无缝。开启后不再 bit-perfect，独占输出时自动停用。';
+      case 'music_crossfade_off':
+        return '关';
+      case 'music_crossfade_title':
+        return '交叉淡入';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
       case 'music_dsd_rate_title':
@@ -671596,6 +681290,38 @@ extension on _StringsZhCn {
         return '显示封面';
       case 'music_lyrics_title':
         return '歌词';
+      case 'music_mv_audio_library':
+        return '曲库音轨';
+      case 'music_mv_audio_mv':
+        return 'MV 原声';
+      case 'music_mv_bind':
+        return '绑定';
+      case 'music_mv_candidates_title':
+        return 'MV 候选';
+      case 'music_mv_find_local':
+        return '查找本地 MV';
+      case 'music_mv_from_anime':
+        return '动画 OP / ED';
+      case 'music_mv_none_found':
+        return '没有找到匹配的 MV';
+      case 'music_mv_offset_earlier':
+        return '画面提前 100 毫秒';
+      case 'music_mv_offset_later':
+        return '画面推后 100 毫秒';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => '偏移 ${ms} 毫秒';
+      case 'music_mv_open_failed':
+        return '无法打开 MV';
+      case 'music_mv_play':
+        return '播放 MV';
+      case 'music_mv_search_online':
+        return '在线搜索';
+      case 'music_mv_searching':
+        return '正在搜索…';
+      case 'music_mv_section':
+        return 'MV';
+      case 'music_mv_unbind':
+        return '解除绑定';
       case 'music_now_playing':
         return '正在播放';
       case 'music_open_library':
@@ -671618,6 +681344,50 @@ extension on _StringsZhCn {
         return ({required Object count}) => '曲库已更新：${count} 首';
       case 'music_scan_failed':
         return ({required Object error}) => '扫描失败：${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID 声纹识别未启用：没有应用 API key（设置 › 音乐）';
+      case 'music_scrape_choose_match':
+        return '手动选择匹配';
+      case 'music_scrape_done':
+        return '识别成功';
+      case 'music_scrape_failed':
+        return '无法连接资料源';
+      case 'music_scrape_identify':
+        return '识别';
+      case 'music_scrape_identifying':
+        return '正在识别…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            '已识别 ${matched} / ${total} 首';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            '正在识别 ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID 声纹';
+      case 'music_scrape_method_manual':
+        return '手动选择';
+      case 'music_scrape_method_mbid_tag':
+        return 'MBID 标签';
+      case 'music_scrape_method_tag_search':
+        return '标签匹配';
+      case 'music_scrape_no_candidates':
+        return 'MusicBrainz 没有给出候选';
+      case 'music_scrape_not_matched':
+        return '没有足够确定的匹配，请手动选择';
+      case 'music_scrape_open_musicbrainz':
+        return '在 MusicBrainz 打开';
+      case 'music_scrape_reidentify':
+        return '重新识别';
+      case 'music_scrape_section':
+        return '识别';
+      case 'music_scrape_status_error':
+        return '资料源连不上';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => '已识别（${method}）';
+      case 'music_scrape_status_none':
+        return '尚未识别';
+      case 'music_scrape_status_unmatched':
+        return '没有足够确定的匹配';
       case 'music_section_albums':
         return '专辑';
       case 'music_section_artists':
@@ -671628,6 +681398,18 @@ extension on _StringsZhCn {
         return '歌曲';
       case 'music_section_works':
         return '作品';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
+      case 'music_setting_identify_library':
+        return '识别整个曲库';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz，每秒至多 1 次请求';
+      case 'music_setting_vgmdb':
+        return 'VGMdb 补充';
+      case 'music_setting_vgmdb_hint':
+        return '社区镜像、无官方 API；只按目录编号低频查询';
       case 'music_settings_summary':
         return '曲库来源与播放';
       case 'music_shuffle_play':
@@ -671696,6 +681478,50 @@ extension on _StringsZhCn {
         return '速度（不变调）';
       case 'music_stop':
         return '停止音乐';
+      case 'music_tag_field_album':
+        return '专辑';
+      case 'music_tag_field_album_artist':
+        return '专辑艺人';
+      case 'music_tag_field_artist':
+        return '艺人';
+      case 'music_tag_field_catalog_no':
+        return '目录编号';
+      case 'music_tag_field_date':
+        return '日期';
+      case 'music_tag_field_disc_no':
+        return '碟号';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz 艺人 ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz 录音 ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz 发行组 ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz 发行 ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz 作品 ID';
+      case 'music_tag_field_title':
+        return '标题';
+      case 'music_tag_field_track_no':
+        return '曲序';
+      case 'music_tag_value_empty':
+        return '（空）';
+      case 'music_tag_writeback':
+        return '写回文件标签';
+      case 'music_tag_writeback_apply':
+        return '写入';
+      case 'music_tag_writeback_cue':
+        return 'CUE 分轨共用一个文件，不能按曲写回标签';
+      case 'music_tag_writeback_done':
+        return '已写入标签';
+      case 'music_tag_writeback_failed':
+        return '写入标签失败';
+      case 'music_tag_writeback_hint':
+        return '未勾选的字段保持原值，以后不再提议。';
+      case 'music_tag_writeback_no_changes':
+        return '文件标签已经一致';
+      case 'music_tag_writeback_unreadable':
+        return '读不了这个文件的标签';
       case 'music_theme_song_detect':
         return '识别出现位置';
       case 'music_theme_song_detect_done':
@@ -671721,8 +681547,22 @@ extension on _StringsZhCn {
         return '出现在';
       case 'music_track_detail':
         return '曲目详情';
+      case 'music_track_people_title':
+        return '署名';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} 首';
+      case 'music_versions_cover':
+        return '翻唱';
+      case 'music_versions_in_library':
+        return '库中有';
+      case 'music_versions_live':
+        return '现场';
+      case 'music_versions_original':
+        return '原曲';
+      case 'music_versions_section':
+        return '原曲与其它版本';
+      case 'music_versions_this_is_original':
+        return '这首就是原曲';
       case 'music_volume_title':
         return '音量';
       case 'music_works_empty':
@@ -672522,6 +682362,62 @@ extension on _StringsZhCn {
         return '目录';
       case 'pdf_outline_empty':
         return '此 PDF 没有目录。';
+      case 'person_bridge_checking':
+        return '正在 Wikidata 上按外部 ID 查找同一人…';
+      case 'person_bridge_failed':
+        return '连不上 Wikidata，先显示本机已知的身份。';
+      case 'person_domain_game':
+        return '游戏';
+      case 'person_domain_music':
+        return '音乐';
+      case 'person_domain_video':
+        return '视频';
+      case 'person_empty':
+        return '库里还没有这个人的作品。';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) => '你手动合并的：${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return '取消合并';
+      case 'person_music_role_album_artist':
+        return '专辑艺人';
+      case 'person_music_role_arranger':
+        return '编曲';
+      case 'person_music_role_artist':
+        return '艺人';
+      case 'person_music_role_character':
+        return '角色';
+      case 'person_music_role_composer':
+        return '作曲';
+      case 'person_music_role_featured':
+        return '客串';
+      case 'person_music_role_lyricist':
+        return '作词';
+      case 'person_music_role_vocal_cv':
+        return '演唱（CV）';
+      case 'person_page_title':
+        return '人物';
+      case 'person_section_anime_roles':
+        return '动画角色';
+      case 'person_section_game_roles':
+        return '游戏角色';
+      case 'person_section_identities':
+        return '已合并的身份';
+      case 'person_section_songs':
+        return '演唱与角色歌';
+      case 'person_section_suggestions':
+        return '可能是同一人';
+      case 'person_section_video_staff':
+        return '其他参与';
+      case 'person_song_character':
+        return ({required Object name}) => '角色：${name}';
+      case 'person_songs_empty':
+        return '音乐库里还没有 TA 演唱的曲目。曲目带上演唱署名后，角色歌会出现在这里。';
+      case 'person_suggestion_confirm':
+        return '是同一人';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => '名字相同：${name} · 没有共享的外部 ID';
+      case 'person_suggestion_reject':
+        return '不是';
       case 'pick_image':
         return '选择图片';
       case 'play':
@@ -680505,6 +690401,43 @@ extension on _StringsZhHk {
         return '剛剛';
       case 'activity_minutes_ago':
         return ({required Object n}) => '${n} 分鐘前';
+      case 'adaptation_progress_add':
+        return 'Add';
+      case 'adaptation_progress_anchor':
+        return ({required Object episode, required Object position}) =>
+            'Ep. ${episode} ≈ ${position}';
+      case 'adaptation_progress_edit':
+        return 'Edit mapping';
+      case 'adaptation_progress_empty':
+        return 'No mappings yet. Note “episode N ≈ volume M” to estimate where the original is.';
+      case 'adaptation_progress_episode_field':
+        return 'Episode';
+      case 'adaptation_progress_estimate':
+        return ({required Object episode, required Object position}) =>
+            'Watched up to episode ${episode} ≈ ${position} of the original';
+      case 'adaptation_progress_infer_unavailable':
+        return 'Automatic inference from subtitles and the original text is not available yet.';
+      case 'adaptation_progress_invalid':
+        return 'Enter whole numbers starting from 1';
+      case 'adaptation_progress_no_anchor':
+        return ({required Object episode}) =>
+            'No mapping covers episode ${episode} yet';
+      case 'adaptation_progress_not_started':
+        return 'Not started watching yet';
+      case 'adaptation_progress_number_field':
+        return 'Volume / chapter number';
+      case 'adaptation_progress_remove':
+        return 'Remove';
+      case 'adaptation_progress_title':
+        return 'Original progress';
+      case 'adaptation_progress_unit_chapter':
+        return ({required Object number}) => 'ch. ${number}';
+      case 'adaptation_progress_unit_chapter_label':
+        return 'Chapter';
+      case 'adaptation_progress_unit_volume':
+        return ({required Object number}) => 'vol. ${number}';
+      case 'adaptation_progress_unit_volume_label':
+        return 'Volume';
       case 'add_to_collection':
         return '加入合集';
       case 'ai_assist_empty':
@@ -687663,6 +697596,8 @@ extension on _StringsZhHk {
         return '我的標簽';
       case 'game_view_detail':
         return '查看詳情';
+      case 'game_voice_cast_title':
+        return 'Voice cast';
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
@@ -688921,6 +698856,34 @@ extension on _StringsZhHk {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -690611,6 +700574,20 @@ extension on _StringsZhHk {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_crossfade_continuous_hint':
+        return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
+      case 'music_crossfade_continuous_title':
+        return 'Crossfade gapless tracks too';
+      case 'music_crossfade_disabled_direct':
+        return 'Off with direct hardware output';
+      case 'music_crossfade_disabled_exclusive':
+        return 'Off while exclusive output is on';
+      case 'music_crossfade_hint':
+        return 'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
+      case 'music_crossfade_off':
+        return 'Off';
+      case 'music_crossfade_title':
+        return 'Crossfade';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -690673,6 +700650,38 @@ extension on _StringsZhHk {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -690695,6 +700704,50 @@ extension on _StringsZhHk {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -690705,6 +700758,18 @@ extension on _StringsZhHk {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -690774,6 +700839,50 @@ extension on _StringsZhHk {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -690799,8 +700908,22 @@ extension on _StringsZhHk {
         return 'Appears in';
       case 'music_track_detail':
         return 'Track details';
+      case 'music_track_people_title':
+        return 'Credits';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -691602,6 +701725,63 @@ extension on _StringsZhHk {
         return '目錄';
       case 'pdf_outline_empty':
         return '此 PDF 沒有目錄。';
+      case 'person_bridge_checking':
+        return 'Looking up this person on Wikidata…';
+      case 'person_bridge_failed':
+        return 'Could not reach Wikidata; showing what is known locally.';
+      case 'person_domain_game':
+        return 'Game';
+      case 'person_domain_music':
+        return 'Music';
+      case 'person_domain_video':
+        return 'Video';
+      case 'person_empty':
+        return 'Nothing by this person in your library.';
+      case 'person_identity_manual_pair':
+        return ({required Object a, required Object b}) =>
+            'Merged by you: ${a} ↔ ${b}';
+      case 'person_identity_unmerge':
+        return 'Unmerge';
+      case 'person_music_role_album_artist':
+        return 'Album artist';
+      case 'person_music_role_arranger':
+        return 'Arranger';
+      case 'person_music_role_artist':
+        return 'Artist';
+      case 'person_music_role_character':
+        return 'Character';
+      case 'person_music_role_composer':
+        return 'Composer';
+      case 'person_music_role_featured':
+        return 'Featured';
+      case 'person_music_role_lyricist':
+        return 'Lyricist';
+      case 'person_music_role_vocal_cv':
+        return 'Vocals (CV)';
+      case 'person_page_title':
+        return 'Person';
+      case 'person_section_anime_roles':
+        return 'Anime roles';
+      case 'person_section_game_roles':
+        return 'Game roles';
+      case 'person_section_identities':
+        return 'Merged identities';
+      case 'person_section_songs':
+        return 'Songs and character songs';
+      case 'person_section_suggestions':
+        return 'Possibly the same person';
+      case 'person_section_video_staff':
+        return 'Other video credits';
+      case 'person_song_character':
+        return ({required Object name}) => 'Character: ${name}';
+      case 'person_songs_empty':
+        return 'No tracks sung by this person in your music library yet. Character songs show up here once tracks carry vocalist credits.';
+      case 'person_suggestion_confirm':
+        return 'Same person';
+      case 'person_suggestion_reason':
+        return ({required Object name}) => 'Same name: ${name} · no shared ID';
+      case 'person_suggestion_reject':
+        return 'Not the same';
       case 'pick_image':
         return '選擇圖片';
       case 'play':
