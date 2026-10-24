@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159953 (9409 per locale)
+/// Strings: 159970 (9410 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7472,6 +7472,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
   String get music_setting_acoustid_key => 'AcoustID API key';
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   String get music_setting_identify_library => 'Identify library';
@@ -25908,6 +25910,9 @@ class _StringsAr extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -48971,6 +48976,9 @@ class _StringsDe extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -72211,6 +72219,9 @@ class _StringsEs extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -95530,6 +95541,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -118685,6 +118699,9 @@ class _StringsId extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -141792,6 +141809,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -164380,6 +164400,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -186530,6 +186553,9 @@ class _StringsKo extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -209255,6 +209281,9 @@ class _StringsNl extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -232426,6 +232455,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -255569,6 +255601,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -278523,6 +278558,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -301463,6 +301501,9 @@ class _StringsTr extends _StringsEn {
   String get music_section_works => 'Works';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
   @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -324440,6 +324481,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -346334,6 +346378,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      '已内置，可填自己的 key 覆盖。只上传声纹与时长。';
+  @override
   String get music_setting_acoustid_key_hint =>
       'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
   @override
@@ -367552,6 +367599,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
+  String get music_setting_acoustid_key_builtin_hint =>
+      'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
+  @override
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
   @override
@@ -387998,6 +388048,8 @@ extension on _StringsEn {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -407544,6 +407596,8 @@ extension on _StringsAr {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -427141,6 +427195,8 @@ extension on _StringsDe {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -446748,6 +446804,8 @@ extension on _StringsEs {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -466365,6 +466423,8 @@ extension on _StringsFr {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -485951,6 +486011,8 @@ extension on _StringsId {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -505534,6 +505596,8 @@ extension on _StringsIt {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -525065,6 +525129,8 @@ extension on _StringsJa {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -544533,6 +544599,8 @@ extension on _StringsKo {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -564085,6 +564153,8 @@ extension on _StringsNl {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -583676,6 +583746,8 @@ extension on _StringsPtBr {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -603271,6 +603343,8 @@ extension on _StringsRu {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -622831,6 +622905,8 @@ extension on _StringsTh {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -642404,6 +642480,8 @@ extension on _StringsTr {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -661969,6 +662047,8 @@ extension on _StringsVi {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
@@ -681400,6 +681480,8 @@ extension on _StringsZhCn {
         return '作品';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return '已内置，可填自己的 key 覆盖。只上传声纹与时长。';
       case 'music_setting_acoustid_key_hint':
         return 'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
       case 'music_setting_identify_library':
@@ -700760,6 +700842,8 @@ extension on _StringsZhHk {
         return 'Works';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
+      case 'music_setting_acoustid_key_builtin_hint':
+        return 'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
       case 'music_setting_acoustid_key_hint':
         return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
       case 'music_setting_identify_library':
