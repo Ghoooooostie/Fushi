@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160599 (9447 per locale)
+/// Strings: 161143 (9479 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7531,6 +7531,48 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_section_playlists => 'Playlists';
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  String music_server_added({required Object name}) => 'Added ${name}';
+  String music_server_album_count({required Object count}) => '${count} albums';
+  String get music_server_allow_http => 'Allow plain HTTP';
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  String get music_server_bitrate_original => 'Original';
+  String get music_server_bitrate_title => 'Server streaming quality';
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  String get music_server_field_api_key => 'API key (optional)';
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  String get music_server_field_name => 'Name (optional)';
+  String get music_server_field_password => 'Password';
+  String get music_server_field_url => 'Server address';
+  String get music_server_field_user => 'Username';
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  String get music_server_load_failed => 'Could not load from the server';
+  String get music_server_no_albums => 'No albums on this server';
+  String get music_server_remove => 'Remove server';
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  String get music_server_retry => 'Retry';
+  String get music_server_search => 'Search server';
+  String get music_server_search_empty => 'No results';
+  String get music_server_search_hint => 'Albums, artists, songs';
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  String get music_server_test_and_save => 'Test and save';
+  String get music_servers_empty => 'No music servers yet';
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  String get music_servers_manage => 'Servers';
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  String get music_servers_title => 'Server libraries';
   String get music_setting_acoustid_key => 'AcoustID API key';
   String get music_setting_acoustid_key_hint =>
       'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
@@ -26064,6 +26106,80 @@ class _StringsAr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -49225,6 +49341,80 @@ class _StringsDe extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -72563,6 +72753,80 @@ class _StringsEs extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -95980,6 +96244,80 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -119233,6 +119571,80 @@ class _StringsId extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -142438,6 +142850,80 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -165124,6 +165610,80 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -187372,6 +187932,80 @@ class _StringsKo extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -210195,6 +210829,80 @@ class _StringsNl extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -233464,6 +234172,80 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -256705,6 +257487,80 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -279757,6 +280613,80 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -302795,6 +303725,80 @@ class _StringsTr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
   @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
@@ -325870,6 +326874,80 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -347852,6 +348930,76 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_section_works => '作品';
   @override
+  String get music_server_add_subsonic => '添加 OpenSubsonic 服务器';
+  @override
+  String music_server_added({required Object name}) => '已添加 ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} 张专辑';
+  @override
+  String get music_server_allow_http => '允许明文 HTTP';
+  @override
+  String get music_server_allow_http_hint => '只用于自己局域网里的服务器；凭据会以明文传输';
+  @override
+  String get music_server_bitrate_hint =>
+      '原始 = 按服务器上的文件原样播放（无损仍是无损）；设上限则请服务器转码';
+  @override
+  String get music_server_bitrate_original => '原始';
+  @override
+  String get music_server_bitrate_title => '服务器播放音质';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      '连接失败：${error}';
+  @override
+  String get music_server_field_api_key => 'API key（可选）';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key；服务器支持时可代替用户名和密码';
+  @override
+  String get music_server_field_name => '名称（可选）';
+  @override
+  String get music_server_field_password => '密码';
+  @override
+  String get music_server_field_url => '服务器地址';
+  @override
+  String get music_server_field_user => '用户名';
+  @override
+  String music_server_invalid({required Object error}) => '服务器设置有误：${error}';
+  @override
+  String get music_server_jellyfin_subtitle => 'Jellyfin / Emby · 显示在曲库里';
+  @override
+  String get music_server_load_failed => '从服务器读取失败';
+  @override
+  String get music_server_no_albums => '这台服务器上没有专辑';
+  @override
+  String get music_server_remove => '移除服务器';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      '移除 ${name}？本机保存的凭据会一并删除。';
+  @override
+  String get music_server_retry => '重试';
+  @override
+  String get music_server_search => '搜索服务器';
+  @override
+  String get music_server_search_empty => '没有结果';
+  @override
+  String get music_server_search_hint => '专辑、艺人、歌曲';
+  @override
+  String get music_server_subsonic_subtitle => 'OpenSubsonic · 显示在曲库里';
+  @override
+  String get music_server_test_and_save => '测试并保存';
+  @override
+  String get music_servers_empty => '还没有音乐服务器';
+  @override
+  String get music_servers_empty_hint =>
+      '在 设置 › 服务 登录 Jellyfin / Emby，或在 设置 › 音乐 添加 OpenSubsonic 服务器。';
+  @override
+  String get music_servers_manage => '服务器';
+  @override
+  String get music_servers_settings_hint =>
+      '视频里已登录的 Jellyfin / Emby 服务器会列在这里；OpenSubsonic（Navidrome 等）在下面添加。打开开关即把该服务器的专辑显示在曲库里。';
+  @override
+  String get music_servers_title => '服务器曲库';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -369168,6 +370316,80 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_hint =>
@@ -389701,6 +390923,71 @@ extension on _StringsEn {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -409334,6 +410621,71 @@ extension on _StringsAr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -429018,6 +430370,71 @@ extension on _StringsDe {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -448712,6 +450129,71 @@ extension on _StringsEs {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -468416,6 +469898,71 @@ extension on _StringsFr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -488089,6 +489636,71 @@ extension on _StringsId {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -507759,6 +509371,71 @@ extension on _StringsIt {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -527377,6 +529054,71 @@ extension on _StringsJa {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -546932,6 +548674,71 @@ extension on _StringsKo {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -566571,6 +568378,71 @@ extension on _StringsNl {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -586249,6 +588121,71 @@ extension on _StringsPtBr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -605931,6 +607868,71 @@ extension on _StringsRu {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -625578,6 +627580,71 @@ extension on _StringsTh {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -645238,6 +647305,71 @@ extension on _StringsTr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -664890,6 +667022,71 @@ extension on _StringsVi {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -684403,6 +686600,70 @@ extension on _StringsZhCn {
         return '歌曲';
       case 'music_section_works':
         return '作品';
+      case 'music_server_add_subsonic':
+        return '添加 OpenSubsonic 服务器';
+      case 'music_server_added':
+        return ({required Object name}) => '已添加 ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} 张专辑';
+      case 'music_server_allow_http':
+        return '允许明文 HTTP';
+      case 'music_server_allow_http_hint':
+        return '只用于自己局域网里的服务器；凭据会以明文传输';
+      case 'music_server_bitrate_hint':
+        return '原始 = 按服务器上的文件原样播放（无损仍是无损）；设上限则请服务器转码';
+      case 'music_server_bitrate_original':
+        return '原始';
+      case 'music_server_bitrate_title':
+        return '服务器播放音质';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => '连接失败：${error}';
+      case 'music_server_field_api_key':
+        return 'API key（可选）';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key；服务器支持时可代替用户名和密码';
+      case 'music_server_field_name':
+        return '名称（可选）';
+      case 'music_server_field_password':
+        return '密码';
+      case 'music_server_field_url':
+        return '服务器地址';
+      case 'music_server_field_user':
+        return '用户名';
+      case 'music_server_invalid':
+        return ({required Object error}) => '服务器设置有误：${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · 显示在曲库里';
+      case 'music_server_load_failed':
+        return '从服务器读取失败';
+      case 'music_server_no_albums':
+        return '这台服务器上没有专辑';
+      case 'music_server_remove':
+        return '移除服务器';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) => '移除 ${name}？本机保存的凭据会一并删除。';
+      case 'music_server_retry':
+        return '重试';
+      case 'music_server_search':
+        return '搜索服务器';
+      case 'music_server_search_empty':
+        return '没有结果';
+      case 'music_server_search_hint':
+        return '专辑、艺人、歌曲';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · 显示在曲库里';
+      case 'music_server_test_and_save':
+        return '测试并保存';
+      case 'music_servers_empty':
+        return '还没有音乐服务器';
+      case 'music_servers_empty_hint':
+        return '在 设置 › 服务 登录 Jellyfin / Emby，或在 设置 › 音乐 添加 OpenSubsonic 服务器。';
+      case 'music_servers_manage':
+        return '服务器';
+      case 'music_servers_settings_hint':
+        return '视频里已登录的 Jellyfin / Emby 服务器会列在这里；OpenSubsonic（Navidrome 等）在下面添加。打开开关即把该服务器的专辑显示在曲库里。';
+      case 'music_servers_title':
+        return '服务器曲库';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
@@ -703850,6 +706111,71 @@ extension on _StringsZhHk {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_hint':
