@@ -362442,19 +362442,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
-  String get video_filter_spec => 'Format';
+  String get video_filter_spec => '規格';
   @override
   String get video_filter_spec_4k => '4K';
   @override
-  String get video_filter_spec_bluray => 'Blu-ray disc';
+  String get video_filter_spec_bluray => 'BD 原盤';
   @override
   String get video_filter_spec_dvd => 'DVD';
   @override
   String get video_filter_spec_hdr => 'HDR';
   @override
-  String get video_filter_spec_plain_file => 'Regular file';
+  String get video_filter_spec_plain_file => '普通檔案';
   @override
-  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  String get video_filter_spec_uhd_bluray => 'UHD BD';
   @override
   String get video_filter_watch_status => '看完狀態';
   @override
@@ -683720,19 +683720,19 @@ extension on _StringsZhHk {
       case 'video_filter_source':
         return 'Source';
       case 'video_filter_spec':
-        return 'Format';
+        return '規格';
       case 'video_filter_spec_4k':
         return '4K';
       case 'video_filter_spec_bluray':
-        return 'Blu-ray disc';
+        return 'BD 原盤';
       case 'video_filter_spec_dvd':
         return 'DVD';
       case 'video_filter_spec_hdr':
         return 'HDR';
       case 'video_filter_spec_plain_file':
-        return 'Regular file';
+        return '普通檔案';
       case 'video_filter_spec_uhd_bluray':
-        return 'UHD Blu-ray';
+        return 'UHD BD';
       case 'video_filter_watch_status':
         return '看完狀態';
       case 'video_filter_watch_status_completed':
