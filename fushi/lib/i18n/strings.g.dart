@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160157 (9421 per locale)
+/// Strings: 160327 (9431 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7383,6 +7383,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Preload the next track so albums play without gaps';
   String get music_gapless_title => 'Gapless playback';
   String get music_hi_res_badge => 'Hi-Res';
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  String get music_karaoke_open => 'Open karaoke view';
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  String get music_karaoke_overlay_off => 'Off';
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  String get music_karaoke_title => 'Karaoke subtitles';
   String get music_library_empty => 'No music yet';
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
@@ -25766,6 +25778,28 @@ class _StringsAr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -48862,6 +48896,28 @@ class _StringsDe extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -72135,6 +72191,28 @@ class _StringsEs extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -95487,6 +95565,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -118675,6 +118775,28 @@ class _StringsId extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -141815,6 +141937,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -164436,6 +164580,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -186619,6 +186785,28 @@ class _StringsKo extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -209377,6 +209565,28 @@ class _StringsNl extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -232581,6 +232791,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -255757,6 +255989,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -278744,6 +278998,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -301717,6 +301993,28 @@ class _StringsTr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -324727,6 +325025,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -346660,6 +346980,27 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => '自动';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS 卡拉 OK 字幕';
+  @override
+  String get music_karaoke_effects_hint => '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+  @override
+  String get music_karaoke_open => '打开卡拉 OK 字幕页';
+  @override
+  String get music_karaoke_open_failed => '卡拉 OK 字幕页打不开';
+  @override
+  String get music_karaoke_overlay_off => '关闭';
+  @override
+  String get music_karaoke_overlay_original => '原样渲染';
+  @override
+  String get music_karaoke_overlay_structured => '逐字歌词';
+  @override
+  String get music_karaoke_title => '卡拉 OK 字幕';
+  @override
   String get music_library_empty => '曲库还是空的';
   @override
   String get music_library_empty_hint => '添加一个放着音乐文件的文件夹。';
@@ -367900,6 +368241,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_hi_res_badge => 'Hi-Res';
   @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
+  @override
   String get music_library_empty => 'No music yet';
   @override
   String get music_library_empty_hint =>
@@ -388392,6 +388755,26 @@ extension on _StringsEn {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -407966,6 +408349,26 @@ extension on _StringsAr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -427591,6 +427994,26 @@ extension on _StringsDe {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -447226,6 +447649,26 @@ extension on _StringsEs {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -466871,6 +467314,26 @@ extension on _StringsFr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -486485,6 +486948,26 @@ extension on _StringsId {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -506096,6 +506579,26 @@ extension on _StringsIt {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -525655,6 +526158,26 @@ extension on _StringsJa {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -545151,6 +545674,26 @@ extension on _StringsKo {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -564731,6 +565274,26 @@ extension on _StringsNl {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -584350,6 +584913,26 @@ extension on _StringsPtBr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -603973,6 +604556,26 @@ extension on _StringsRu {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -623561,6 +624164,26 @@ extension on _StringsTh {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -643162,6 +643785,26 @@ extension on _StringsTr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -662755,6 +663398,26 @@ extension on _StringsVi {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -682214,6 +682877,26 @@ extension on _StringsZhCn {
         return '无缝播放';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return '自动';
+      case 'music_karaoke_ass_render_hint':
+        return '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS 卡拉 OK 字幕';
+      case 'music_karaoke_effects_hint':
+        return '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+      case 'music_karaoke_open':
+        return '打开卡拉 OK 字幕页';
+      case 'music_karaoke_open_failed':
+        return '卡拉 OK 字幕页打不开';
+      case 'music_karaoke_overlay_off':
+        return '关闭';
+      case 'music_karaoke_overlay_original':
+        return '原样渲染';
+      case 'music_karaoke_overlay_structured':
+        return '逐字歌词';
+      case 'music_karaoke_title':
+        return '卡拉 OK 字幕';
       case 'music_library_empty':
         return '曲库还是空的';
       case 'music_library_empty_hint':
@@ -701602,6 +702285,26 @@ extension on _StringsZhHk {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
