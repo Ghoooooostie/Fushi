@@ -4595,14 +4595,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
   String get game_japanese_locale_off => 'Off';
   String get game_japanese_locale_on => 'Always on';
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   String get game_kpi_total_games => 'Games';
   String get game_kpi_week => 'This week';
   String get game_latest_line => 'Latest line';
@@ -21023,18 +21024,19 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'مُفعّل دائماً';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'ألعاب';
   @override
@@ -43956,18 +43958,19 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Immer aktiv';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Spiele';
   @override
@@ -67171,18 +67174,19 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Siempre activo';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Juegos';
   @override
@@ -90450,18 +90454,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Toujours activé';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Jeux';
   @override
@@ -113668,18 +113673,19 @@ class _StringsId extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Selalu aktif';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Game';
   @override
@@ -136708,18 +136714,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Sempre attivo';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Giochi';
   @override
@@ -159540,18 +159547,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_japanese_locale_on => '常にオン';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'ゲーム数';
   @override
@@ -181664,18 +181672,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_japanese_locale_on => '항상 켜기';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => '게임';
   @override
@@ -204141,18 +204150,19 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Altijd aan';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Spellen';
   @override
@@ -227272,18 +227282,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Sempre ligado';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Jogos';
   @override
@@ -250410,18 +250421,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Всегда вкл.';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Игры';
   @override
@@ -273432,18 +273444,19 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'เปิดเสมอ';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'เกม';
   @override
@@ -296298,18 +296311,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Her zaman açık';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Oyunlar';
   @override
@@ -319280,18 +319294,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_japanese_locale_on => 'Luôn bật';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => 'Trò chơi';
   @override
@@ -341556,17 +341571,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_japanese_locale_on => '始终开启';
   @override
-  String get game_knife_text_service_enable_action => '开启';
+  String get game_knife_text_service_enable_action => '写入 knife.ini 开启';
   @override
   String get game_knife_text_service_off_body =>
-      '这个游戏的台词输出没有开启。开启后重启一次游戏即可，以后一直有效。';
+      '这个游戏的台词只能经 knife 自带的台词输出获取，而 knife.ini 里没有开启。Fushi 可以替你写入开关，重启一次游戏后就一直有效。从游戏库启动时会自动开启。';
   @override
-  String get game_knife_text_service_off_title => '台词输出未开启';
+  String get game_knife_text_service_off_title => 'knife 的台词输出未开启';
   @override
   String get game_knife_text_service_write_failed =>
       '无法写入 knife.ini，请手动在其中加入一行 text-websocket = 127.0.0.1:6677。';
   @override
-  String get game_knife_text_service_written => '已开启，重启游戏后即可获取台词。';
+  String get game_knife_text_service_written => '已写入 knife.ini，重启游戏后即可获取台词。';
   @override
   String get game_kpi_total_games => '游戏总数';
   @override
@@ -362674,18 +362689,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_japanese_locale_on => '始終開啟';
   @override
-  String get game_knife_text_service_enable_action => 'Turn on';
+  String get game_knife_text_service_enable_action => 'Turn on in knife.ini';
   @override
   String get game_knife_text_service_off_body =>
-      'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+      'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
   @override
-  String get game_knife_text_service_off_title => 'Dialogue output is off';
+  String get game_knife_text_service_off_title =>
+      'knife\'s dialogue output is off';
   @override
   String get game_knife_text_service_write_failed =>
       'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
   @override
   String get game_knife_text_service_written =>
-      'Turned on. Restart the game to get dialogue.';
+      'Turned on in knife.ini. Restart the game to get dialogue.';
   @override
   String get game_kpi_total_games => '遊戲總數';
   @override
@@ -383475,15 +383491,15 @@ extension on _StringsEn {
       case 'game_japanese_locale_on':
         return 'Always on';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Games';
       case 'game_kpi_week':
@@ -403000,15 +403016,15 @@ extension on _StringsAr {
       case 'game_japanese_locale_on':
         return 'مُفعّل دائماً';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'ألعاب';
       case 'game_kpi_week':
@@ -422553,15 +422569,15 @@ extension on _StringsDe {
       case 'game_japanese_locale_on':
         return 'Immer aktiv';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Spiele';
       case 'game_kpi_week':
@@ -442139,15 +442155,15 @@ extension on _StringsEs {
       case 'game_japanese_locale_on':
         return 'Siempre activo';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Juegos';
       case 'game_kpi_week':
@@ -461730,15 +461746,15 @@ extension on _StringsFr {
       case 'game_japanese_locale_on':
         return 'Toujours activé';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Jeux';
       case 'game_kpi_week':
@@ -481302,15 +481318,15 @@ extension on _StringsId {
       case 'game_japanese_locale_on':
         return 'Selalu aktif';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Game';
       case 'game_kpi_week':
@@ -500852,15 +500868,15 @@ extension on _StringsIt {
       case 'game_japanese_locale_on':
         return 'Sempre attivo';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Giochi';
       case 'game_kpi_week':
@@ -520383,15 +520399,15 @@ extension on _StringsJa {
       case 'game_japanese_locale_on':
         return '常にオン';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'ゲーム数';
       case 'game_kpi_week':
@@ -539827,15 +539843,15 @@ extension on _StringsKo {
       case 'game_japanese_locale_on':
         return '항상 켜기';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return '게임';
       case 'game_kpi_week':
@@ -559324,15 +559340,15 @@ extension on _StringsNl {
       case 'game_japanese_locale_on':
         return 'Altijd aan';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Spellen';
       case 'game_kpi_week':
@@ -578894,15 +578910,15 @@ extension on _StringsPtBr {
       case 'game_japanese_locale_on':
         return 'Sempre ligado';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Jogos';
       case 'game_kpi_week':
@@ -598464,15 +598480,15 @@ extension on _StringsRu {
       case 'game_japanese_locale_on':
         return 'Всегда вкл.';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Игры';
       case 'game_kpi_week':
@@ -618008,15 +618024,15 @@ extension on _StringsTh {
       case 'game_japanese_locale_on':
         return 'เปิดเสมอ';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'เกม';
       case 'game_kpi_week':
@@ -637549,15 +637565,15 @@ extension on _StringsTr {
       case 'game_japanese_locale_on':
         return 'Her zaman açık';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Oyunlar';
       case 'game_kpi_week':
@@ -657097,15 +657113,15 @@ extension on _StringsVi {
       case 'game_japanese_locale_on':
         return 'Luôn bật';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return 'Trò chơi';
       case 'game_kpi_week':
@@ -676536,15 +676552,15 @@ extension on _StringsZhCn {
       case 'game_japanese_locale_on':
         return '始终开启';
       case 'game_knife_text_service_enable_action':
-        return '开启';
+        return '写入 knife.ini 开启';
       case 'game_knife_text_service_off_body':
-        return '这个游戏的台词输出没有开启。开启后重启一次游戏即可，以后一直有效。';
+        return '这个游戏的台词只能经 knife 自带的台词输出获取，而 knife.ini 里没有开启。Fushi 可以替你写入开关，重启一次游戏后就一直有效。从游戏库启动时会自动开启。';
       case 'game_knife_text_service_off_title':
-        return '台词输出未开启';
+        return 'knife 的台词输出未开启';
       case 'game_knife_text_service_write_failed':
         return '无法写入 knife.ini，请手动在其中加入一行 text-websocket = 127.0.0.1:6677。';
       case 'game_knife_text_service_written':
-        return '已开启，重启游戏后即可获取台词。';
+        return '已写入 knife.ini，重启游戏后即可获取台词。';
       case 'game_kpi_total_games':
         return '游戏总数';
       case 'game_kpi_week':
@@ -695862,15 +695878,15 @@ extension on _StringsZhHk {
       case 'game_japanese_locale_on':
         return '始終開啟';
       case 'game_knife_text_service_enable_action':
-        return 'Turn on';
+        return 'Turn on in knife.ini';
       case 'game_knife_text_service_off_body':
-        return 'This game\'s dialogue output is off. Turn it on, then restart the game once.';
+        return 'This game only provides dialogue through knife\'s built-in text output, which knife.ini leaves off. Fushi can turn it on for you; restart the game once and it stays on. Launching from the game library turns it on automatically.';
       case 'game_knife_text_service_off_title':
-        return 'Dialogue output is off';
+        return 'knife\'s dialogue output is off';
       case 'game_knife_text_service_write_failed':
         return 'Could not write knife.ini. Add the line text-websocket = 127.0.0.1:6677 to it yourself.';
       case 'game_knife_text_service_written':
-        return 'Turned on. Restart the game to get dialogue.';
+        return 'Turned on in knife.ini. Restart the game to get dialogue.';
       case 'game_kpi_total_games':
         return '遊戲總數';
       case 'game_kpi_week':
