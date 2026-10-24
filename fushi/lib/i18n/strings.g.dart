@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157607 (9271 per locale)
+/// Strings: 158814 (9342 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7340,6 +7340,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_lyrics_search_online => 'Search online lyrics';
   String get music_lyrics_show_cover => 'Show cover';
   String get music_lyrics_title => 'Lyrics';
+  String get music_mv_audio_library => 'Library audio';
+  String get music_mv_audio_mv => 'MV audio';
+  String get music_mv_bind => 'Bind';
+  String get music_mv_candidates_title => 'MV candidates';
+  String get music_mv_find_local => 'Find local MV';
+  String get music_mv_from_anime => 'Anime OP / ED';
+  String get music_mv_none_found => 'No matching MV found';
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  String get music_mv_offset_later => 'Video 100 ms later';
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  String get music_mv_open_failed => 'Could not open the MV';
+  String get music_mv_play => 'Play MV';
+  String get music_mv_search_online => 'Search online';
+  String get music_mv_searching => 'Searching…';
+  String get music_mv_section => 'Music video';
+  String get music_mv_unbind => 'Remove';
   String get music_now_playing => 'Now playing';
   String get music_open_library => 'Music library';
   String get music_output_fallback_device =>
@@ -7355,11 +7371,50 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String music_scan_done({required Object count}) =>
       'Library updated: ${count} tracks';
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  String get music_scrape_choose_match => 'Choose a match';
+  String get music_scrape_done => 'Identified';
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  String get music_scrape_identify => 'Identify';
+  String get music_scrape_identifying => 'Identifying…';
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  String get music_scrape_method_manual => 'manual choice';
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  String get music_scrape_method_tag_search => 'tag match';
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  String get music_scrape_reidentify => 'Identify again';
+  String get music_scrape_section => 'Identification';
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  String get music_scrape_status_none => 'Not identified yet';
+  String get music_scrape_status_unmatched => 'No confident match';
   String get music_section_albums => 'Albums';
   String get music_section_artists => 'Artists';
   String get music_section_playlists => 'Playlists';
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  String get music_setting_identify_library => 'Identify library';
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   String get music_settings_summary => 'Music folders and playback';
   String get music_shuffle_play => 'Shuffle';
   String get music_signal_path_active => 'Active';
@@ -7397,6 +7452,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_sleep_title => 'Sleep timer';
   String get music_speed_title => 'Speed (pitch preserved)';
   String get music_stop => 'Stop music';
+  String get music_tag_field_album => 'Album';
+  String get music_tag_field_album_artist => 'Album artist';
+  String get music_tag_field_artist => 'Artist';
+  String get music_tag_field_catalog_no => 'Catalog number';
+  String get music_tag_field_date => 'Date';
+  String get music_tag_field_disc_no => 'Disc number';
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  String get music_tag_field_title => 'Title';
+  String get music_tag_field_track_no => 'Track number';
+  String get music_tag_value_empty => '(empty)';
+  String get music_tag_writeback => 'Write tags to file';
+  String get music_tag_writeback_apply => 'Write';
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  String get music_tag_writeback_done => 'Tags written';
+  String get music_tag_writeback_failed => 'Could not write tags';
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
   String get music_theme_song_detect => 'Find in episodes';
   String music_theme_song_detect_done({required Object hits}) =>
       'Found in ${hits} episodes';
@@ -7416,6 +7497,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_track_appears_in => 'Appears in';
   String get music_track_detail => 'Track details';
   String music_tracks_count({required Object count}) => '${count} tracks';
+  String get music_versions_cover => 'Cover';
+  String get music_versions_in_library => 'In library';
+  String get music_versions_live => 'Live';
+  String get music_versions_original => 'Original';
+  String get music_versions_section => 'Original & other versions';
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   String get music_volume_title => 'Volume';
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -25499,6 +25587,38 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -25525,6 +25645,57 @@ class _StringsAr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -25534,6 +25705,21 @@ class _StringsAr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -25606,6 +25792,54 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -25637,6 +25871,19 @@ class _StringsAr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -48238,6 +48485,38 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -48264,6 +48543,57 @@ class _StringsDe extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -48273,6 +48603,21 @@ class _StringsDe extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -48345,6 +48690,54 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -48376,6 +48769,19 @@ class _StringsDe extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -71154,6 +71560,38 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -71180,6 +71618,57 @@ class _StringsEs extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -71189,6 +71678,21 @@ class _StringsEs extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -71261,6 +71765,54 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -71292,6 +71844,19 @@ class _StringsEs extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -94148,6 +94713,38 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -94174,6 +94771,57 @@ class _StringsFr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -94183,6 +94831,21 @@ class _StringsFr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -94255,6 +94918,54 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -94286,6 +94997,19 @@ class _StringsFr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -116979,6 +117703,38 @@ class _StringsId extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -117005,6 +117761,57 @@ class _StringsId extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -117014,6 +117821,21 @@ class _StringsId extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -117086,6 +117908,54 @@ class _StringsId extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -117117,6 +117987,19 @@ class _StringsId extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -139762,6 +140645,38 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -139788,6 +140703,57 @@ class _StringsIt extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -139797,6 +140763,21 @@ class _StringsIt extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -139869,6 +140850,54 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -139900,6 +140929,19 @@ class _StringsIt extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -162026,6 +163068,38 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -162052,6 +163126,57 @@ class _StringsJa extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -162061,6 +163186,21 @@ class _StringsJa extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -162133,6 +163273,54 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -162164,6 +163352,19 @@ class _StringsJa extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -183853,6 +185054,38 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -183879,6 +185112,57 @@ class _StringsKo extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -183888,6 +185172,21 @@ class _StringsKo extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -183960,6 +185259,54 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -183991,6 +185338,19 @@ class _StringsKo extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -206254,6 +207614,38 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -206280,6 +207672,57 @@ class _StringsNl extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -206289,6 +207732,21 @@ class _StringsNl extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -206361,6 +207819,54 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -206392,6 +207898,19 @@ class _StringsNl extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -229100,6 +230619,38 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -229126,6 +230677,57 @@ class _StringsPtBr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -229135,6 +230737,21 @@ class _StringsPtBr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -229207,6 +230824,54 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -229238,6 +230903,19 @@ class _StringsPtBr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -251919,6 +253597,38 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -251945,6 +253655,57 @@ class _StringsRu extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -251954,6 +253715,21 @@ class _StringsRu extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -252026,6 +253802,54 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -252057,6 +253881,19 @@ class _StringsRu extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -274549,6 +276386,38 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -274575,6 +276444,57 @@ class _StringsTh extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -274584,6 +276504,21 @@ class _StringsTh extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -274656,6 +276591,54 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -274687,6 +276670,19 @@ class _StringsTh extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -297166,6 +299162,38 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -297192,6 +299220,57 @@ class _StringsTr extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -297201,6 +299280,21 @@ class _StringsTr extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -297273,6 +299367,54 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -297304,6 +299446,19 @@ class _StringsTr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -319818,6 +321973,38 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -319844,6 +322031,57 @@ class _StringsVi extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -319853,6 +322091,21 @@ class _StringsVi extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -319925,6 +322178,54 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -319956,6 +322257,19 @@ class _StringsVi extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -341399,6 +343713,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_lyrics_title => '歌词';
   @override
+  String get music_mv_audio_library => '曲库音轨';
+  @override
+  String get music_mv_audio_mv => 'MV 原声';
+  @override
+  String get music_mv_bind => '绑定';
+  @override
+  String get music_mv_candidates_title => 'MV 候选';
+  @override
+  String get music_mv_find_local => '查找本地 MV';
+  @override
+  String get music_mv_from_anime => '动画 OP / ED';
+  @override
+  String get music_mv_none_found => '没有找到匹配的 MV';
+  @override
+  String get music_mv_offset_earlier => '画面提前 100 毫秒';
+  @override
+  String get music_mv_offset_later => '画面推后 100 毫秒';
+  @override
+  String music_mv_offset_value({required Object ms}) => '偏移 ${ms} 毫秒';
+  @override
+  String get music_mv_open_failed => '无法打开 MV';
+  @override
+  String get music_mv_play => '播放 MV';
+  @override
+  String get music_mv_search_online => '在线搜索';
+  @override
+  String get music_mv_searching => '正在搜索…';
+  @override
+  String get music_mv_section => 'MV';
+  @override
+  String get music_mv_unbind => '解除绑定';
+  @override
   String get music_now_playing => '正在播放';
   @override
   String get music_open_library => '曲库';
@@ -341421,6 +343767,56 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => '扫描失败：${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID 声纹识别未启用：没有应用 API key（设置 › 音乐）';
+  @override
+  String get music_scrape_choose_match => '手动选择匹配';
+  @override
+  String get music_scrape_done => '识别成功';
+  @override
+  String get music_scrape_failed => '无法连接资料源';
+  @override
+  String get music_scrape_identify => '识别';
+  @override
+  String get music_scrape_identifying => '正在识别…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => '已识别 ${matched} / ${total} 首';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => '正在识别 ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID 声纹';
+  @override
+  String get music_scrape_method_manual => '手动选择';
+  @override
+  String get music_scrape_method_mbid_tag => 'MBID 标签';
+  @override
+  String get music_scrape_method_tag_search => '标签匹配';
+  @override
+  String get music_scrape_no_candidates => 'MusicBrainz 没有给出候选';
+  @override
+  String get music_scrape_not_matched => '没有足够确定的匹配，请手动选择';
+  @override
+  String get music_scrape_open_musicbrainz => '在 MusicBrainz 打开';
+  @override
+  String get music_scrape_reidentify => '重新识别';
+  @override
+  String get music_scrape_section => '识别';
+  @override
+  String get music_scrape_status_error => '资料源连不上';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      '已识别（${method}）';
+  @override
+  String get music_scrape_status_none => '尚未识别';
+  @override
+  String get music_scrape_status_unmatched => '没有足够确定的匹配';
+  @override
   String get music_section_albums => '专辑';
   @override
   String get music_section_artists => '艺人';
@@ -341430,6 +343826,19 @@ class _StringsZhCn extends _StringsEn {
   String get music_section_songs => '歌曲';
   @override
   String get music_section_works => '作品';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
+  @override
+  String get music_setting_identify_library => '识别整个曲库';
+  @override
+  String get music_setting_identify_library_hint => 'MusicBrainz，每秒至多 1 次请求';
+  @override
+  String get music_setting_vgmdb => 'VGMdb 补充';
+  @override
+  String get music_setting_vgmdb_hint => '社区镜像、无官方 API；只按目录编号低频查询';
   @override
   String get music_settings_summary => '曲库来源与播放';
   @override
@@ -341501,6 +343910,50 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_stop => '停止音乐';
   @override
+  String get music_tag_field_album => '专辑';
+  @override
+  String get music_tag_field_album_artist => '专辑艺人';
+  @override
+  String get music_tag_field_artist => '艺人';
+  @override
+  String get music_tag_field_catalog_no => '目录编号';
+  @override
+  String get music_tag_field_date => '日期';
+  @override
+  String get music_tag_field_disc_no => '碟号';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz 艺人 ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz 录音 ID';
+  @override
+  String get music_tag_field_mb_release_group_id => 'MusicBrainz 发行组 ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz 发行 ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz 作品 ID';
+  @override
+  String get music_tag_field_title => '标题';
+  @override
+  String get music_tag_field_track_no => '曲序';
+  @override
+  String get music_tag_value_empty => '（空）';
+  @override
+  String get music_tag_writeback => '写回文件标签';
+  @override
+  String get music_tag_writeback_apply => '写入';
+  @override
+  String get music_tag_writeback_cue => 'CUE 分轨共用一个文件，不能按曲写回标签';
+  @override
+  String get music_tag_writeback_done => '已写入标签';
+  @override
+  String get music_tag_writeback_failed => '写入标签失败';
+  @override
+  String get music_tag_writeback_hint => '未勾选的字段保持原值，以后不再提议。';
+  @override
+  String get music_tag_writeback_no_changes => '文件标签已经一致';
+  @override
+  String get music_tag_writeback_unreadable => '读不了这个文件的标签';
+  @override
   String get music_theme_song_detect => '识别出现位置';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -341532,6 +343985,18 @@ class _StringsZhCn extends _StringsEn {
   String get music_track_detail => '曲目详情';
   @override
   String music_tracks_count({required Object count}) => '${count} 首';
+  @override
+  String get music_versions_cover => '翻唱';
+  @override
+  String get music_versions_in_library => '库中有';
+  @override
+  String get music_versions_live => '现场';
+  @override
+  String get music_versions_original => '原曲';
+  @override
+  String get music_versions_section => '原曲与其它版本';
+  @override
+  String get music_versions_this_is_original => '这首就是原曲';
   @override
   String get music_volume_title => '音量';
   @override
@@ -362298,6 +364763,38 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_lyrics_title => 'Lyrics';
   @override
+  String get music_mv_audio_library => 'Library audio';
+  @override
+  String get music_mv_audio_mv => 'MV audio';
+  @override
+  String get music_mv_bind => 'Bind';
+  @override
+  String get music_mv_candidates_title => 'MV candidates';
+  @override
+  String get music_mv_find_local => 'Find local MV';
+  @override
+  String get music_mv_from_anime => 'Anime OP / ED';
+  @override
+  String get music_mv_none_found => 'No matching MV found';
+  @override
+  String get music_mv_offset_earlier => 'Video 100 ms earlier';
+  @override
+  String get music_mv_offset_later => 'Video 100 ms later';
+  @override
+  String music_mv_offset_value({required Object ms}) => 'Offset ${ms} ms';
+  @override
+  String get music_mv_open_failed => 'Could not open the MV';
+  @override
+  String get music_mv_play => 'Play MV';
+  @override
+  String get music_mv_search_online => 'Search online';
+  @override
+  String get music_mv_searching => 'Searching…';
+  @override
+  String get music_mv_section => 'Music video';
+  @override
+  String get music_mv_unbind => 'Remove';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
@@ -362324,6 +364821,57 @@ class _StringsZhHk extends _StringsEn {
   @override
   String music_scan_failed({required Object error}) => 'Scan failed: ${error}';
   @override
+  String get music_scrape_acoustid_off =>
+      'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+  @override
+  String get music_scrape_choose_match => 'Choose a match';
+  @override
+  String get music_scrape_done => 'Identified';
+  @override
+  String get music_scrape_failed => 'Could not reach metadata sources';
+  @override
+  String get music_scrape_identify => 'Identify';
+  @override
+  String get music_scrape_identifying => 'Identifying…';
+  @override
+  String music_scrape_library_done({
+    required Object matched,
+    required Object total,
+  }) => 'Identified ${matched} of ${total} tracks';
+  @override
+  String music_scrape_library_running({
+    required Object done,
+    required Object total,
+  }) => 'Identifying ${done} / ${total}';
+  @override
+  String get music_scrape_method_acoustid => 'AcoustID fingerprint';
+  @override
+  String get music_scrape_method_manual => 'manual choice';
+  @override
+  String get music_scrape_method_mbid_tag => 'MusicBrainz ID tag';
+  @override
+  String get music_scrape_method_tag_search => 'tag match';
+  @override
+  String get music_scrape_no_candidates => 'No candidates from MusicBrainz';
+  @override
+  String get music_scrape_not_matched =>
+      'No confident match — choose one manually';
+  @override
+  String get music_scrape_open_musicbrainz => 'Open in MusicBrainz';
+  @override
+  String get music_scrape_reidentify => 'Identify again';
+  @override
+  String get music_scrape_section => 'Identification';
+  @override
+  String get music_scrape_status_error => 'Metadata sources were unreachable';
+  @override
+  String music_scrape_status_matched({required Object method}) =>
+      'Identified via ${method}';
+  @override
+  String get music_scrape_status_none => 'Not identified yet';
+  @override
+  String get music_scrape_status_unmatched => 'No confident match';
+  @override
   String get music_section_albums => 'Albums';
   @override
   String get music_section_artists => 'Artists';
@@ -362333,6 +364881,21 @@ class _StringsZhHk extends _StringsEn {
   String get music_section_songs => 'Songs';
   @override
   String get music_section_works => 'Works';
+  @override
+  String get music_setting_acoustid_key => 'AcoustID API key';
+  @override
+  String get music_setting_acoustid_key_hint =>
+      'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+  @override
+  String get music_setting_identify_library => 'Identify library';
+  @override
+  String get music_setting_identify_library_hint =>
+      'MusicBrainz, at most one request per second';
+  @override
+  String get music_setting_vgmdb => 'VGMdb lookup';
+  @override
+  String get music_setting_vgmdb_hint =>
+      'Community mirror without an official API; queried slowly, by catalog number only';
   @override
   String get music_settings_summary => 'Music folders and playback';
   @override
@@ -362405,6 +364968,54 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_stop => 'Stop music';
   @override
+  String get music_tag_field_album => 'Album';
+  @override
+  String get music_tag_field_album_artist => 'Album artist';
+  @override
+  String get music_tag_field_artist => 'Artist';
+  @override
+  String get music_tag_field_catalog_no => 'Catalog number';
+  @override
+  String get music_tag_field_date => 'Date';
+  @override
+  String get music_tag_field_disc_no => 'Disc number';
+  @override
+  String get music_tag_field_mb_artist_id => 'MusicBrainz artist ID';
+  @override
+  String get music_tag_field_mb_recording_id => 'MusicBrainz recording ID';
+  @override
+  String get music_tag_field_mb_release_group_id =>
+      'MusicBrainz release group ID';
+  @override
+  String get music_tag_field_mb_release_id => 'MusicBrainz release ID';
+  @override
+  String get music_tag_field_mb_work_id => 'MusicBrainz work ID';
+  @override
+  String get music_tag_field_title => 'Title';
+  @override
+  String get music_tag_field_track_no => 'Track number';
+  @override
+  String get music_tag_value_empty => '(empty)';
+  @override
+  String get music_tag_writeback => 'Write tags to file';
+  @override
+  String get music_tag_writeback_apply => 'Write';
+  @override
+  String get music_tag_writeback_cue =>
+      'CUE tracks share one file, so tags can\'t be written per track';
+  @override
+  String get music_tag_writeback_done => 'Tags written';
+  @override
+  String get music_tag_writeback_failed => 'Could not write tags';
+  @override
+  String get music_tag_writeback_hint =>
+      'Unchecked fields keep their current value and won\'t be suggested again.';
+  @override
+  String get music_tag_writeback_no_changes => 'File tags already match';
+  @override
+  String get music_tag_writeback_unreadable =>
+      'Could not read this file\'s tags';
+  @override
   String get music_theme_song_detect => 'Find in episodes';
   @override
   String music_theme_song_detect_done({required Object hits}) =>
@@ -362436,6 +365047,19 @@ class _StringsZhHk extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_versions_cover => 'Cover';
+  @override
+  String get music_versions_in_library => 'In library';
+  @override
+  String get music_versions_live => 'Live';
+  @override
+  String get music_versions_original => 'Original';
+  @override
+  String get music_versions_section => 'Original & other versions';
+  @override
+  String get music_versions_this_is_original =>
+      'This is the original recording';
   @override
   String get music_volume_title => 'Volume';
   @override
@@ -382453,6 +385077,38 @@ extension on _StringsEn {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -382475,6 +385131,50 @@ extension on _StringsEn {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -382485,6 +385185,18 @@ extension on _StringsEn {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -382554,6 +385266,50 @@ extension on _StringsEn {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -382581,6 +385337,18 @@ extension on _StringsEn {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -401715,6 +404483,38 @@ extension on _StringsAr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -401737,6 +404537,50 @@ extension on _StringsAr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -401747,6 +404591,18 @@ extension on _StringsAr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -401816,6 +404672,50 @@ extension on _StringsAr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -401843,6 +404743,18 @@ extension on _StringsAr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -421028,6 +423940,38 @@ extension on _StringsDe {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -421050,6 +423994,50 @@ extension on _StringsDe {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -421060,6 +424048,18 @@ extension on _StringsDe {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -421129,6 +424129,50 @@ extension on _StringsDe {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -421156,6 +424200,18 @@ extension on _StringsDe {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -440351,6 +443407,38 @@ extension on _StringsEs {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -440373,6 +443461,50 @@ extension on _StringsEs {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -440383,6 +443515,18 @@ extension on _StringsEs {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -440452,6 +443596,50 @@ extension on _StringsEs {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -440479,6 +443667,18 @@ extension on _StringsEs {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -459684,6 +462884,38 @@ extension on _StringsFr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -459706,6 +462938,50 @@ extension on _StringsFr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -459716,6 +462992,18 @@ extension on _StringsFr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -459785,6 +463073,50 @@ extension on _StringsFr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -459812,6 +463144,18 @@ extension on _StringsFr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -478986,6 +482330,38 @@ extension on _StringsId {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -479008,6 +482384,50 @@ extension on _StringsId {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -479018,6 +482438,18 @@ extension on _StringsId {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -479087,6 +482519,50 @@ extension on _StringsId {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -479114,6 +482590,18 @@ extension on _StringsId {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -498285,6 +501773,38 @@ extension on _StringsIt {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -498307,6 +501827,50 @@ extension on _StringsIt {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -498317,6 +501881,18 @@ extension on _StringsIt {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -498386,6 +501962,50 @@ extension on _StringsIt {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -498413,6 +502033,18 @@ extension on _StringsIt {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -517532,6 +521164,38 @@ extension on _StringsJa {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -517554,6 +521218,50 @@ extension on _StringsJa {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -517564,6 +521272,18 @@ extension on _StringsJa {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -517633,6 +521353,50 @@ extension on _StringsJa {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -517660,6 +521424,18 @@ extension on _StringsJa {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -536716,6 +540492,38 @@ extension on _StringsKo {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -536738,6 +540546,50 @@ extension on _StringsKo {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -536748,6 +540600,18 @@ extension on _StringsKo {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -536817,6 +540681,50 @@ extension on _StringsKo {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -536844,6 +540752,18 @@ extension on _StringsKo {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -555984,6 +559904,38 @@ extension on _StringsNl {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -556006,6 +559958,50 @@ extension on _StringsNl {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -556016,6 +560012,18 @@ extension on _StringsNl {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -556085,6 +560093,50 @@ extension on _StringsNl {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -556112,6 +560164,18 @@ extension on _StringsNl {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -575291,6 +579355,38 @@ extension on _StringsPtBr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -575313,6 +579409,50 @@ extension on _StringsPtBr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -575323,6 +579463,18 @@ extension on _StringsPtBr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -575392,6 +579544,50 @@ extension on _StringsPtBr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -575419,6 +579615,18 @@ extension on _StringsPtBr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -594602,6 +598810,38 @@ extension on _StringsRu {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -594624,6 +598864,50 @@ extension on _StringsRu {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -594634,6 +598918,18 @@ extension on _StringsRu {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -594703,6 +598999,50 @@ extension on _StringsRu {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -594730,6 +599070,18 @@ extension on _StringsRu {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -613878,6 +618230,38 @@ extension on _StringsTh {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -613900,6 +618284,50 @@ extension on _StringsTh {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -613910,6 +618338,18 @@ extension on _StringsTh {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -613979,6 +618419,50 @@ extension on _StringsTh {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -614006,6 +618490,18 @@ extension on _StringsTh {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -633167,6 +637663,38 @@ extension on _StringsTr {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -633189,6 +637717,50 @@ extension on _StringsTr {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -633199,6 +637771,18 @@ extension on _StringsTr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -633268,6 +637852,50 @@ extension on _StringsTr {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -633295,6 +637923,18 @@ extension on _StringsTr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -652448,6 +657088,38 @@ extension on _StringsVi {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -652470,6 +657142,50 @@ extension on _StringsVi {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -652480,6 +657196,18 @@ extension on _StringsVi {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -652549,6 +657277,50 @@ extension on _StringsVi {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -652576,6 +657348,18 @@ extension on _StringsVi {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
@@ -671596,6 +676380,38 @@ extension on _StringsZhCn {
         return '显示封面';
       case 'music_lyrics_title':
         return '歌词';
+      case 'music_mv_audio_library':
+        return '曲库音轨';
+      case 'music_mv_audio_mv':
+        return 'MV 原声';
+      case 'music_mv_bind':
+        return '绑定';
+      case 'music_mv_candidates_title':
+        return 'MV 候选';
+      case 'music_mv_find_local':
+        return '查找本地 MV';
+      case 'music_mv_from_anime':
+        return '动画 OP / ED';
+      case 'music_mv_none_found':
+        return '没有找到匹配的 MV';
+      case 'music_mv_offset_earlier':
+        return '画面提前 100 毫秒';
+      case 'music_mv_offset_later':
+        return '画面推后 100 毫秒';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => '偏移 ${ms} 毫秒';
+      case 'music_mv_open_failed':
+        return '无法打开 MV';
+      case 'music_mv_play':
+        return '播放 MV';
+      case 'music_mv_search_online':
+        return '在线搜索';
+      case 'music_mv_searching':
+        return '正在搜索…';
+      case 'music_mv_section':
+        return 'MV';
+      case 'music_mv_unbind':
+        return '解除绑定';
       case 'music_now_playing':
         return '正在播放';
       case 'music_open_library':
@@ -671618,6 +676434,50 @@ extension on _StringsZhCn {
         return ({required Object count}) => '曲库已更新：${count} 首';
       case 'music_scan_failed':
         return ({required Object error}) => '扫描失败：${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID 声纹识别未启用：没有应用 API key（设置 › 音乐）';
+      case 'music_scrape_choose_match':
+        return '手动选择匹配';
+      case 'music_scrape_done':
+        return '识别成功';
+      case 'music_scrape_failed':
+        return '无法连接资料源';
+      case 'music_scrape_identify':
+        return '识别';
+      case 'music_scrape_identifying':
+        return '正在识别…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            '已识别 ${matched} / ${total} 首';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            '正在识别 ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID 声纹';
+      case 'music_scrape_method_manual':
+        return '手动选择';
+      case 'music_scrape_method_mbid_tag':
+        return 'MBID 标签';
+      case 'music_scrape_method_tag_search':
+        return '标签匹配';
+      case 'music_scrape_no_candidates':
+        return 'MusicBrainz 没有给出候选';
+      case 'music_scrape_not_matched':
+        return '没有足够确定的匹配，请手动选择';
+      case 'music_scrape_open_musicbrainz':
+        return '在 MusicBrainz 打开';
+      case 'music_scrape_reidentify':
+        return '重新识别';
+      case 'music_scrape_section':
+        return '识别';
+      case 'music_scrape_status_error':
+        return '资料源连不上';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => '已识别（${method}）';
+      case 'music_scrape_status_none':
+        return '尚未识别';
+      case 'music_scrape_status_unmatched':
+        return '没有足够确定的匹配';
       case 'music_section_albums':
         return '专辑';
       case 'music_section_artists':
@@ -671628,6 +676488,18 @@ extension on _StringsZhCn {
         return '歌曲';
       case 'music_section_works':
         return '作品';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'acoustid.org 的应用 key。不填则不做声纹识别；只上传声纹与时长。';
+      case 'music_setting_identify_library':
+        return '识别整个曲库';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz，每秒至多 1 次请求';
+      case 'music_setting_vgmdb':
+        return 'VGMdb 补充';
+      case 'music_setting_vgmdb_hint':
+        return '社区镜像、无官方 API；只按目录编号低频查询';
       case 'music_settings_summary':
         return '曲库来源与播放';
       case 'music_shuffle_play':
@@ -671696,6 +676568,50 @@ extension on _StringsZhCn {
         return '速度（不变调）';
       case 'music_stop':
         return '停止音乐';
+      case 'music_tag_field_album':
+        return '专辑';
+      case 'music_tag_field_album_artist':
+        return '专辑艺人';
+      case 'music_tag_field_artist':
+        return '艺人';
+      case 'music_tag_field_catalog_no':
+        return '目录编号';
+      case 'music_tag_field_date':
+        return '日期';
+      case 'music_tag_field_disc_no':
+        return '碟号';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz 艺人 ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz 录音 ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz 发行组 ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz 发行 ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz 作品 ID';
+      case 'music_tag_field_title':
+        return '标题';
+      case 'music_tag_field_track_no':
+        return '曲序';
+      case 'music_tag_value_empty':
+        return '（空）';
+      case 'music_tag_writeback':
+        return '写回文件标签';
+      case 'music_tag_writeback_apply':
+        return '写入';
+      case 'music_tag_writeback_cue':
+        return 'CUE 分轨共用一个文件，不能按曲写回标签';
+      case 'music_tag_writeback_done':
+        return '已写入标签';
+      case 'music_tag_writeback_failed':
+        return '写入标签失败';
+      case 'music_tag_writeback_hint':
+        return '未勾选的字段保持原值，以后不再提议。';
+      case 'music_tag_writeback_no_changes':
+        return '文件标签已经一致';
+      case 'music_tag_writeback_unreadable':
+        return '读不了这个文件的标签';
       case 'music_theme_song_detect':
         return '识别出现位置';
       case 'music_theme_song_detect_done':
@@ -671723,6 +676639,18 @@ extension on _StringsZhCn {
         return '曲目详情';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} 首';
+      case 'music_versions_cover':
+        return '翻唱';
+      case 'music_versions_in_library':
+        return '库中有';
+      case 'music_versions_live':
+        return '现场';
+      case 'music_versions_original':
+        return '原曲';
+      case 'music_versions_section':
+        return '原曲与其它版本';
+      case 'music_versions_this_is_original':
+        return '这首就是原曲';
       case 'music_volume_title':
         return '音量';
       case 'music_works_empty':
@@ -690673,6 +695601,38 @@ extension on _StringsZhHk {
         return 'Show cover';
       case 'music_lyrics_title':
         return 'Lyrics';
+      case 'music_mv_audio_library':
+        return 'Library audio';
+      case 'music_mv_audio_mv':
+        return 'MV audio';
+      case 'music_mv_bind':
+        return 'Bind';
+      case 'music_mv_candidates_title':
+        return 'MV candidates';
+      case 'music_mv_find_local':
+        return 'Find local MV';
+      case 'music_mv_from_anime':
+        return 'Anime OP / ED';
+      case 'music_mv_none_found':
+        return 'No matching MV found';
+      case 'music_mv_offset_earlier':
+        return 'Video 100 ms earlier';
+      case 'music_mv_offset_later':
+        return 'Video 100 ms later';
+      case 'music_mv_offset_value':
+        return ({required Object ms}) => 'Offset ${ms} ms';
+      case 'music_mv_open_failed':
+        return 'Could not open the MV';
+      case 'music_mv_play':
+        return 'Play MV';
+      case 'music_mv_search_online':
+        return 'Search online';
+      case 'music_mv_searching':
+        return 'Searching…';
+      case 'music_mv_section':
+        return 'Music video';
+      case 'music_mv_unbind':
+        return 'Remove';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
@@ -690695,6 +695655,50 @@ extension on _StringsZhHk {
         return ({required Object count}) => 'Library updated: ${count} tracks';
       case 'music_scan_failed':
         return ({required Object error}) => 'Scan failed: ${error}';
+      case 'music_scrape_acoustid_off':
+        return 'AcoustID fingerprinting is off: no application API key (Settings › Music)';
+      case 'music_scrape_choose_match':
+        return 'Choose a match';
+      case 'music_scrape_done':
+        return 'Identified';
+      case 'music_scrape_failed':
+        return 'Could not reach metadata sources';
+      case 'music_scrape_identify':
+        return 'Identify';
+      case 'music_scrape_identifying':
+        return 'Identifying…';
+      case 'music_scrape_library_done':
+        return ({required Object matched, required Object total}) =>
+            'Identified ${matched} of ${total} tracks';
+      case 'music_scrape_library_running':
+        return ({required Object done, required Object total}) =>
+            'Identifying ${done} / ${total}';
+      case 'music_scrape_method_acoustid':
+        return 'AcoustID fingerprint';
+      case 'music_scrape_method_manual':
+        return 'manual choice';
+      case 'music_scrape_method_mbid_tag':
+        return 'MusicBrainz ID tag';
+      case 'music_scrape_method_tag_search':
+        return 'tag match';
+      case 'music_scrape_no_candidates':
+        return 'No candidates from MusicBrainz';
+      case 'music_scrape_not_matched':
+        return 'No confident match — choose one manually';
+      case 'music_scrape_open_musicbrainz':
+        return 'Open in MusicBrainz';
+      case 'music_scrape_reidentify':
+        return 'Identify again';
+      case 'music_scrape_section':
+        return 'Identification';
+      case 'music_scrape_status_error':
+        return 'Metadata sources were unreachable';
+      case 'music_scrape_status_matched':
+        return ({required Object method}) => 'Identified via ${method}';
+      case 'music_scrape_status_none':
+        return 'Not identified yet';
+      case 'music_scrape_status_unmatched':
+        return 'No confident match';
       case 'music_section_albums':
         return 'Albums';
       case 'music_section_artists':
@@ -690705,6 +695709,18 @@ extension on _StringsZhHk {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_setting_acoustid_key':
+        return 'AcoustID API key';
+      case 'music_setting_acoustid_key_hint':
+        return 'Application key from acoustid.org. Without it, fingerprint identification is off; only the fingerprint and duration are sent.';
+      case 'music_setting_identify_library':
+        return 'Identify library';
+      case 'music_setting_identify_library_hint':
+        return 'MusicBrainz, at most one request per second';
+      case 'music_setting_vgmdb':
+        return 'VGMdb lookup';
+      case 'music_setting_vgmdb_hint':
+        return 'Community mirror without an official API; queried slowly, by catalog number only';
       case 'music_settings_summary':
         return 'Music folders and playback';
       case 'music_shuffle_play':
@@ -690774,6 +695790,50 @@ extension on _StringsZhHk {
         return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
+      case 'music_tag_field_album':
+        return 'Album';
+      case 'music_tag_field_album_artist':
+        return 'Album artist';
+      case 'music_tag_field_artist':
+        return 'Artist';
+      case 'music_tag_field_catalog_no':
+        return 'Catalog number';
+      case 'music_tag_field_date':
+        return 'Date';
+      case 'music_tag_field_disc_no':
+        return 'Disc number';
+      case 'music_tag_field_mb_artist_id':
+        return 'MusicBrainz artist ID';
+      case 'music_tag_field_mb_recording_id':
+        return 'MusicBrainz recording ID';
+      case 'music_tag_field_mb_release_group_id':
+        return 'MusicBrainz release group ID';
+      case 'music_tag_field_mb_release_id':
+        return 'MusicBrainz release ID';
+      case 'music_tag_field_mb_work_id':
+        return 'MusicBrainz work ID';
+      case 'music_tag_field_title':
+        return 'Title';
+      case 'music_tag_field_track_no':
+        return 'Track number';
+      case 'music_tag_value_empty':
+        return '(empty)';
+      case 'music_tag_writeback':
+        return 'Write tags to file';
+      case 'music_tag_writeback_apply':
+        return 'Write';
+      case 'music_tag_writeback_cue':
+        return 'CUE tracks share one file, so tags can\'t be written per track';
+      case 'music_tag_writeback_done':
+        return 'Tags written';
+      case 'music_tag_writeback_failed':
+        return 'Could not write tags';
+      case 'music_tag_writeback_hint':
+        return 'Unchecked fields keep their current value and won\'t be suggested again.';
+      case 'music_tag_writeback_no_changes':
+        return 'File tags already match';
+      case 'music_tag_writeback_unreadable':
+        return 'Could not read this file\'s tags';
       case 'music_theme_song_detect':
         return 'Find in episodes';
       case 'music_theme_song_detect_done':
@@ -690801,6 +695861,18 @@ extension on _StringsZhHk {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_versions_cover':
+        return 'Cover';
+      case 'music_versions_in_library':
+        return 'In library';
+      case 'music_versions_live':
+        return 'Live';
+      case 'music_versions_original':
+        return 'Original';
+      case 'music_versions_section':
+        return 'Original & other versions';
+      case 'music_versions_this_is_original':
+        return 'This is the original recording';
       case 'music_volume_title':
         return 'Volume';
       case 'music_works_empty':
