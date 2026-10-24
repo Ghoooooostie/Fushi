@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159579 (9387 per locale)
+/// Strings: 159698 (9394 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8264,9 +8264,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_highlight_title => 'Highlight style';
   String get reader_highlight_vertical => 'Vertical';
   String get reader_horizontal => 'Horizontal';
+  String get reader_image_actions_title => 'Image';
   String reader_image_copy_failed({required Object error}) =>
       'Failed to copy image: ${error}';
   String get reader_image_file_unavailable => 'Image file is unavailable.';
+  String get reader_image_save => 'Save image';
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  String get reader_image_share => 'Share image';
   String reader_image_share_failed({required Object error}) =>
       'Failed to share image: ${error}';
   String get reader_line_height => 'Line height';
@@ -27238,10 +27248,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_horizontal => 'أفقي';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'فشل نسخ الصورة: ${error}';
   @override
   String get reader_image_file_unavailable => 'ملف الصورة غير متاح.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'فشل مشاركة الصورة: ${error}';
@@ -50304,10 +50331,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Bild konnte nicht kopiert werden: ${error}';
   @override
   String get reader_image_file_unavailable => 'Bilddatei ist nicht verfügbar.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Bild konnte nicht geteilt werden: ${error}';
@@ -73508,11 +73552,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Error al copiar la imagen: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'El archivo de imagen no está disponible.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Error al compartir la imagen: ${error}';
@@ -96805,11 +96866,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Échec de la copie de l\'image : ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Le fichier image est indisponible.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Échec du partage de l\'image : ${error}';
@@ -119904,10 +119982,27 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Gagal menyalin gambar: ${error}';
   @override
   String get reader_image_file_unavailable => 'File gambar tidak tersedia.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Gagal membagikan gambar: ${error}';
@@ -142986,11 +143081,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_horizontal => 'Orizzontale';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Copia dell\'immagine non riuscita: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Il file immagine non è disponibile.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Condivisione dell\'immagine non riuscita: ${error}';
@@ -165466,10 +165578,27 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_horizontal => '横書き';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       '画像のコピーに失敗しました：${error}';
   @override
   String get reader_image_file_unavailable => '画像ファイルが利用できません。';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '画像の共有に失敗しました：${error}';
@@ -187593,10 +187722,27 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_horizontal => '가로';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       '이미지 복사 실패: ${error}';
   @override
   String get reader_image_file_unavailable => '이미지 파일을 사용할 수 없습니다.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '이미지 공유 실패: ${error}';
@@ -210360,11 +210506,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontaal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Afbeelding kopiëren mislukt: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Afbeeldingsbestand is niet beschikbaar.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Afbeelding delen mislukt: ${error}';
@@ -233498,11 +233661,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Falha ao copiar a imagem: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'O arquivo de imagem está indisponível.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Falha ao compartilhar a imagem: ${error}';
@@ -256616,10 +256796,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_horizontal => 'Горизонтальное';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Не удалось скопировать изображение: ${error}';
   @override
   String get reader_image_file_unavailable => 'Файл изображения недоступен.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Не удалось поделиться изображением: ${error}';
@@ -279509,10 +279706,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_horizontal => 'แนวนอน';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'คัดลอกรูปภาพไม่สำเร็จ: ${error}';
   @override
   String get reader_image_file_unavailable => 'ไฟล์รูปภาพใช้งานไม่ได้';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'แชร์รูปภาพไม่สำเร็จ: ${error}';
@@ -302433,10 +302647,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_horizontal => 'Yatay';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Görsel kopyalanamadı: ${error}';
   @override
   String get reader_image_file_unavailable => 'Görsel dosyası kullanılamıyor.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Görsel paylaşılamadı: ${error}';
@@ -325368,10 +325599,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_horizontal => 'Ngang';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Sao chép hình ảnh thất bại: ${error}';
   @override
   String get reader_image_file_unavailable => 'Tệp hình ảnh không khả dụng.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Chia sẻ hình ảnh thất bại: ${error}';
@@ -347100,9 +347348,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_horizontal => '横排';
   @override
+  String get reader_image_actions_title => '图片';
+  @override
   String reader_image_copy_failed({required Object error}) => '复制图片失败：${error}';
   @override
   String get reader_image_file_unavailable => '图片文件不可用。';
+  @override
+  String get reader_image_save => '保存图片';
+  @override
+  String get reader_image_save_denied => '没有相册权限，请在系统设置里允许后再保存图片。';
+  @override
+  String reader_image_save_done_file({required Object path}) => '已保存到 ${path}';
+  @override
+  String get reader_image_save_done_gallery => '已保存到相册';
+  @override
+  String reader_image_save_failed({required Object error}) => '保存图片失败：${error}';
+  @override
+  String get reader_image_share => '分享图片';
   @override
   String reader_image_share_failed({required Object error}) =>
       '分享图片失败：${error}';
@@ -368293,9 +368555,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_horizontal => '橫排';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) => '複製圖片失敗：${error}';
   @override
   String get reader_image_file_unavailable => '圖片檔案不可用。';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '分享圖片失敗：${error}';
@@ -388595,10 +388874,24 @@ extension on _StringsEn {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Failed to copy image: ${error}';
       case 'reader_image_file_unavailable':
         return 'Image file is unavailable.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Failed to share image: ${error}';
       case 'reader_line_height':
@@ -408107,10 +408400,24 @@ extension on _StringsAr {
         return 'عمودي';
       case 'reader_horizontal':
         return 'أفقي';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'فشل نسخ الصورة: ${error}';
       case 'reader_image_file_unavailable':
         return 'ملف الصورة غير متاح.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'فشل مشاركة الصورة: ${error}';
       case 'reader_line_height':
@@ -427673,11 +427980,25 @@ extension on _StringsDe {
         return 'Vertikal';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Bild konnte nicht kopiert werden: ${error}';
       case 'reader_image_file_unavailable':
         return 'Bilddatei ist nicht verfügbar.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Bild konnte nicht geteilt werden: ${error}';
@@ -447245,11 +447566,25 @@ extension on _StringsEs {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Error al copiar la imagen: ${error}';
       case 'reader_image_file_unavailable':
         return 'El archivo de imagen no está disponible.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Error al compartir la imagen: ${error}';
@@ -466828,11 +467163,25 @@ extension on _StringsFr {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Échec de la copie de l\'image : ${error}';
       case 'reader_image_file_unavailable':
         return 'Le fichier image est indisponible.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Échec du partage de l\'image : ${error}';
@@ -486373,10 +486722,24 @@ extension on _StringsId {
         return 'Vertikal';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Gagal menyalin gambar: ${error}';
       case 'reader_image_file_unavailable':
         return 'File gambar tidak tersedia.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Gagal membagikan gambar: ${error}';
       case 'reader_line_height':
@@ -505923,11 +506286,25 @@ extension on _StringsIt {
         return 'Verticale';
       case 'reader_horizontal':
         return 'Orizzontale';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Copia dell\'immagine non riuscita: ${error}';
       case 'reader_image_file_unavailable':
         return 'Il file immagine non è disponibile.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Condivisione dell\'immagine non riuscita: ${error}';
@@ -525412,10 +525789,24 @@ extension on _StringsJa {
         return '縦書き';
       case 'reader_horizontal':
         return '横書き';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '画像のコピーに失敗しました：${error}';
       case 'reader_image_file_unavailable':
         return '画像ファイルが利用できません。';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '画像の共有に失敗しました：${error}';
       case 'reader_line_height':
@@ -544846,10 +545237,24 @@ extension on _StringsKo {
         return '세로쓰기';
       case 'reader_horizontal':
         return '가로';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '이미지 복사 실패: ${error}';
       case 'reader_image_file_unavailable':
         return '이미지 파일을 사용할 수 없습니다.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '이미지 공유 실패: ${error}';
       case 'reader_line_height':
@@ -564369,11 +564774,25 @@ extension on _StringsNl {
         return 'Verticaal';
       case 'reader_horizontal':
         return 'Horizontaal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Afbeelding kopiëren mislukt: ${error}';
       case 'reader_image_file_unavailable':
         return 'Afbeeldingsbestand is niet beschikbaar.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Afbeelding delen mislukt: ${error}';
@@ -583925,11 +584344,25 @@ extension on _StringsPtBr {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Falha ao copiar a imagem: ${error}';
       case 'reader_image_file_unavailable':
         return 'O arquivo de imagem está indisponível.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Falha ao compartilhar a imagem: ${error}';
@@ -603485,11 +603918,25 @@ extension on _StringsRu {
         return 'Вертикально';
       case 'reader_horizontal':
         return 'Горизонтальное';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Не удалось скопировать изображение: ${error}';
       case 'reader_image_file_unavailable':
         return 'Файл изображения недоступен.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Не удалось поделиться изображением: ${error}';
@@ -623007,10 +623454,24 @@ extension on _StringsTh {
         return 'แนวตั้ง';
       case 'reader_horizontal':
         return 'แนวนอน';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'คัดลอกรูปภาพไม่สำเร็จ: ${error}';
       case 'reader_image_file_unavailable':
         return 'ไฟล์รูปภาพใช้งานไม่ได้';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'แชร์รูปภาพไม่สำเร็จ: ${error}';
       case 'reader_line_height':
@@ -642545,10 +643006,24 @@ extension on _StringsTr {
         return 'Dikey';
       case 'reader_horizontal':
         return 'Yatay';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Görsel kopyalanamadı: ${error}';
       case 'reader_image_file_unavailable':
         return 'Görsel dosyası kullanılamıyor.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Görsel paylaşılamadı: ${error}';
       case 'reader_line_height':
@@ -662076,11 +662551,25 @@ extension on _StringsVi {
         return 'Dọc';
       case 'reader_horizontal':
         return 'Ngang';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Sao chép hình ảnh thất bại: ${error}';
       case 'reader_image_file_unavailable':
         return 'Tệp hình ảnh không khả dụng.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Chia sẻ hình ảnh thất bại: ${error}';
@@ -681465,10 +681954,24 @@ extension on _StringsZhCn {
         return '竖排';
       case 'reader_horizontal':
         return '横排';
+      case 'reader_image_actions_title':
+        return '图片';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '复制图片失败：${error}';
       case 'reader_image_file_unavailable':
         return '图片文件不可用。';
+      case 'reader_image_save':
+        return '保存图片';
+      case 'reader_image_save_denied':
+        return '没有相册权限，请在系统设置里允许后再保存图片。';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => '已保存到 ${path}';
+      case 'reader_image_save_done_gallery':
+        return '已保存到相册';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => '保存图片失败：${error}';
+      case 'reader_image_share':
+        return '分享图片';
       case 'reader_image_share_failed':
         return ({required Object error}) => '分享图片失败：${error}';
       case 'reader_line_height':
@@ -700793,10 +701296,24 @@ extension on _StringsZhHk {
         return '直排';
       case 'reader_horizontal':
         return '橫排';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '複製圖片失敗：${error}';
       case 'reader_image_file_unavailable':
         return '圖片檔案不可用。';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '分享圖片失敗：${error}';
       case 'reader_line_height':
