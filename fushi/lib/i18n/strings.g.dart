@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157607 (9271 per locale)
+/// Strings: 157828 (9284 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6188,6 +6188,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lookup_idle_hint =>
       'Type above, paste from the clipboard, or pick a recent word.';
   String get lookup_idle_title => 'Look up a word';
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  String get lookup_library_sentences_group_books => 'Books';
+  String get lookup_library_sentences_group_games => 'Games';
+  String get lookup_library_sentences_group_music => 'Music';
+  String get lookup_library_sentences_group_videos => 'Videos';
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   String get lookup_popup_close_after_mining_hint =>
@@ -23508,6 +23532,43 @@ class _StringsAr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -46202,6 +46263,43 @@ class _StringsDe extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -69116,6 +69214,43 @@ class _StringsEs extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -92102,6 +92237,43 @@ class _StringsFr extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -114969,6 +115141,43 @@ class _StringsId extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -137725,6 +137934,43 @@ class _StringsIt extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -160096,6 +160342,43 @@ class _StringsJa extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -181910,6 +182193,43 @@ class _StringsKo extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -204233,6 +204553,43 @@ class _StringsNl extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -227073,6 +227430,43 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -249896,6 +250290,43 @@ class _StringsRu extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -272554,6 +272985,43 @@ class _StringsTh extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -295154,6 +295622,43 @@ class _StringsTr extends _StringsEn {
       'Type above, paste from the clipboard, or pick a recent word.';
   @override
   String get lookup_idle_title => 'Look up a word';
+  @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -317816,6 +318321,43 @@ class _StringsVi extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -339549,6 +340091,42 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lookup_idle_title => '查一个词';
   @override
+  String get lookup_library_sentences_enabled => '我库里的例句';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      '在查词弹窗里显示这个词在你的书、字幕、歌词和游戏文本里出现过的句子。索引只保存在本机。';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      '第 ${number} 集';
+  @override
+  String get lookup_library_sentences_group_books => '书';
+  @override
+  String get lookup_library_sentences_group_games => '游戏';
+  @override
+  String get lookup_library_sentences_group_music => '音乐';
+  @override
+  String get lookup_library_sentences_group_videos => '视频';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => '正在建索引… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => '重建例句索引';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+  @override
+  String get lookup_library_sentences_rebuild_started => '正在后台重建例句索引';
+  @override
+  String lookup_library_sentences_status({
+    required Object documents,
+    required Object sentences,
+  }) => '已索引 ${documents} 份来源、${sentences} 句';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      '我库里的例句 · ${count}';
+  @override
   String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
   @override
   String get lookup_popup_close_after_mining_hint =>
@@ -360418,6 +360996,43 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lookup_idle_title => 'Look up a word';
   @override
+  String get lookup_library_sentences_enabled => 'Sentences from your library';
+  @override
+  String get lookup_library_sentences_enabled_hint =>
+      'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+  @override
+  String lookup_library_sentences_episode({required Object number}) =>
+      'Ep. ${number}';
+  @override
+  String get lookup_library_sentences_group_books => 'Books';
+  @override
+  String get lookup_library_sentences_group_games => 'Games';
+  @override
+  String get lookup_library_sentences_group_music => 'Music';
+  @override
+  String get lookup_library_sentences_group_videos => 'Videos';
+  @override
+  String lookup_library_sentences_indexing({
+    required Object done,
+    required Object total,
+  }) => 'Indexing… ${done} / ${total}';
+  @override
+  String get lookup_library_sentences_rebuild => 'Rebuild sentence index';
+  @override
+  String get lookup_library_sentences_rebuild_hint =>
+      'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+  @override
+  String get lookup_library_sentences_rebuild_started =>
+      'Rebuilding the sentence index in the background';
+  @override
+  String lookup_library_sentences_status({
+    required Object sentences,
+    required Object documents,
+  }) => '${sentences} sentences from ${documents} sources';
+  @override
+  String lookup_library_sentences_title({required Object count}) =>
+      'From your library · ${count}';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -380693,6 +381308,34 @@ extension on _StringsEn {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -399955,6 +400598,34 @@ extension on _StringsAr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -419258,6 +419929,34 @@ extension on _StringsDe {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -438582,6 +439281,34 @@ extension on _StringsEs {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -457916,6 +458643,34 @@ extension on _StringsFr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -477225,6 +477980,34 @@ extension on _StringsId {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -496518,6 +497301,34 @@ extension on _StringsIt {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -515775,6 +516586,34 @@ extension on _StringsJa {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -534961,6 +535800,34 @@ extension on _StringsKo {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -554214,6 +555081,34 @@ extension on _StringsNl {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -573523,6 +574418,34 @@ extension on _StringsPtBr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -592834,6 +593757,34 @@ extension on _StringsRu {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -612118,6 +613069,34 @@ extension on _StringsTh {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -631402,6 +632381,34 @@ extension on _StringsTr {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -650688,6 +651695,34 @@ extension on _StringsVi {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -669852,6 +670887,34 @@ extension on _StringsZhCn {
         return '在上方输入、粘贴剪贴板，或从最近查过的词里挑一个。';
       case 'lookup_idle_title':
         return '查一个词';
+      case 'lookup_library_sentences_enabled':
+        return '我库里的例句';
+      case 'lookup_library_sentences_enabled_hint':
+        return '在查词弹窗里显示这个词在你的书、字幕、歌词和游戏文本里出现过的句子。索引只保存在本机。';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => '第 ${number} 集';
+      case 'lookup_library_sentences_group_books':
+        return '书';
+      case 'lookup_library_sentences_group_games':
+        return '游戏';
+      case 'lookup_library_sentences_group_music':
+        return '音乐';
+      case 'lookup_library_sentences_group_videos':
+        return '视频';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            '正在建索引… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return '重建例句索引';
+      case 'lookup_library_sentences_rebuild_hint':
+        return '按库里的书、字幕和歌词重新建索引；游戏台词保留并按当前词典重新分词。';
+      case 'lookup_library_sentences_rebuild_started':
+        return '正在后台重建例句索引';
+      case 'lookup_library_sentences_status':
+        return ({required Object documents, required Object sentences}) =>
+            '已索引 ${documents} 份来源、${sentences} 句';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => '我库里的例句 · ${count}';
       case 'lookup_popup_close_after_mining':
         return '制卡后关闭查词弹窗';
       case 'lookup_popup_close_after_mining_hint':
@@ -688921,6 +689984,34 @@ extension on _StringsZhHk {
         return 'Type above, paste from the clipboard, or pick a recent word.';
       case 'lookup_idle_title':
         return 'Look up a word';
+      case 'lookup_library_sentences_enabled':
+        return 'Sentences from your library';
+      case 'lookup_library_sentences_enabled_hint':
+        return 'Show sentences containing the word from your books, subtitles, lyrics and game text in the lookup popup. The index stays on this device.';
+      case 'lookup_library_sentences_episode':
+        return ({required Object number}) => 'Ep. ${number}';
+      case 'lookup_library_sentences_group_books':
+        return 'Books';
+      case 'lookup_library_sentences_group_games':
+        return 'Games';
+      case 'lookup_library_sentences_group_music':
+        return 'Music';
+      case 'lookup_library_sentences_group_videos':
+        return 'Videos';
+      case 'lookup_library_sentences_indexing':
+        return ({required Object done, required Object total}) =>
+            'Indexing… ${done} / ${total}';
+      case 'lookup_library_sentences_rebuild':
+        return 'Rebuild sentence index';
+      case 'lookup_library_sentences_rebuild_hint':
+        return 'Re-index books, subtitles and lyrics from the library. Game text is kept and re-tokenized.';
+      case 'lookup_library_sentences_rebuild_started':
+        return 'Rebuilding the sentence index in the background';
+      case 'lookup_library_sentences_status':
+        return ({required Object sentences, required Object documents}) =>
+            '${sentences} sentences from ${documents} sources';
+      case 'lookup_library_sentences_title':
+        return ({required Object count}) => 'From your library · ${count}';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
