@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 161619 (9507 per locale)
+/// Strings: 161670 (9510 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7367,6 +7367,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_cd_no_drive => 'No optical drive found';
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
   String get music_cd_read => 'Read audio CD';
   String music_cd_read_failed({required Object device}) =>
       'Could not read the disc in ${device} (no disc, or not an audio CD)';
@@ -7520,6 +7524,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_output_fallback_exclusive =>
       'Exclusive output is unavailable, switched to shared mode';
   String get music_play_all => 'Play';
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   String get music_playlists_empty => 'No playlists yet';
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -25855,6 +25861,12 @@ class _StringsAr extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -26124,6 +26136,9 @@ class _StringsAr extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -49153,6 +49168,12 @@ class _StringsDe extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -49422,6 +49443,9 @@ class _StringsDe extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -72628,6 +72652,12 @@ class _StringsEs extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -72897,6 +72927,9 @@ class _StringsEs extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -96181,6 +96214,12 @@ class _StringsFr extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -96450,6 +96489,9 @@ class _StringsFr extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -119571,6 +119613,12 @@ class _StringsId extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -119840,6 +119888,9 @@ class _StringsId extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -142913,6 +142964,12 @@ class _StringsIt extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -143182,6 +143239,9 @@ class _StringsIt extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -165736,6 +165796,12 @@ class _StringsJa extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -166005,6 +166071,9 @@ class _StringsJa extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -188122,6 +188191,12 @@ class _StringsKo extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -188391,6 +188466,9 @@ class _StringsKo extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -211082,6 +211160,12 @@ class _StringsNl extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -211351,6 +211435,9 @@ class _StringsNl extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -234487,6 +234574,12 @@ class _StringsPtBr extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -234756,6 +234849,9 @@ class _StringsPtBr extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -257865,6 +257961,12 @@ class _StringsRu extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -258134,6 +258236,9 @@ class _StringsRu extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -281054,6 +281159,12 @@ class _StringsTh extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -281323,6 +281434,9 @@ class _StringsTh extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -304230,6 +304344,12 @@ class _StringsTr extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -304499,6 +304619,9 @@ class _StringsTr extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -327441,6 +327564,12 @@ class _StringsVi extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -327710,6 +327839,9 @@ class _StringsVi extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -349580,6 +349712,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String music_cd_not_audio({required Object device}) => '${device} 里的盘没有音频轨';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      '${device} 里没有可读的音频 CD';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      '${device} 里不是这张专辑对应的 CD';
+  @override
   String get music_cd_read => '读取音频 CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -349828,6 +349966,8 @@ class _StringsZhCn extends _StringsEn {
   String get music_output_fallback_exclusive => '独占输出不可用，已退回共享模式';
   @override
   String get music_play_all => '播放';
+  @override
+  String music_play_failed({required Object error}) => '播放失败：${error}';
   @override
   String get music_playlists_empty => '还没有歌单';
   @override
@@ -371006,6 +371146,12 @@ class _StringsZhHk extends _StringsEn {
   String music_cd_not_audio({required Object device}) =>
       'The disc in ${device} has no audio tracks';
   @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
   String get music_cd_read => 'Read audio CD';
   @override
   String music_cd_read_failed({required Object device}) =>
@@ -371275,6 +371421,9 @@ class _StringsZhHk extends _StringsEn {
       'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
+  @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   @override
   String get music_playlists_empty => 'No playlists yet';
   @override
@@ -391706,6 +391855,11 @@ extension on _StringsEn {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -391949,6 +392103,8 @@ extension on _StringsEn {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -411460,6 +411616,11 @@ extension on _StringsAr {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -411703,6 +411864,8 @@ extension on _StringsAr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -431265,6 +431428,11 @@ extension on _StringsDe {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -431508,6 +431676,8 @@ extension on _StringsDe {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -451080,6 +451250,11 @@ extension on _StringsEs {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -451323,6 +451498,8 @@ extension on _StringsEs {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -470905,6 +471082,11 @@ extension on _StringsFr {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -471148,6 +471330,8 @@ extension on _StringsFr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -490699,6 +490883,11 @@ extension on _StringsId {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -490942,6 +491131,8 @@ extension on _StringsId {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -510490,6 +510681,11 @@ extension on _StringsIt {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -510733,6 +510929,8 @@ extension on _StringsIt {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -530229,6 +530427,11 @@ extension on _StringsJa {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -530472,6 +530675,8 @@ extension on _StringsJa {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -549905,6 +550110,11 @@ extension on _StringsKo {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -550148,6 +550358,8 @@ extension on _StringsKo {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -569665,6 +569877,11 @@ extension on _StringsNl {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -569908,6 +570125,8 @@ extension on _StringsNl {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -589464,6 +589683,11 @@ extension on _StringsPtBr {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -589707,6 +589931,8 @@ extension on _StringsPtBr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -609267,6 +609493,11 @@ extension on _StringsRu {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -609510,6 +609741,8 @@ extension on _StringsRu {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -629035,6 +629268,11 @@ extension on _StringsTh {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -629278,6 +629516,8 @@ extension on _StringsTh {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -648816,6 +649056,11 @@ extension on _StringsTr {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -649059,6 +649304,8 @@ extension on _StringsTr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -668589,6 +668836,11 @@ extension on _StringsVi {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -668832,6 +669084,8 @@ extension on _StringsVi {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -688227,6 +688481,10 @@ extension on _StringsZhCn {
         return '没有找到光驱';
       case 'music_cd_not_audio':
         return ({required Object device}) => '${device} 里的盘没有音频轨';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => '${device} 里没有可读的音频 CD';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) => '${device} 里不是这张专辑对应的 CD';
       case 'music_cd_read':
         return '读取音频 CD';
       case 'music_cd_read_failed':
@@ -688466,6 +688724,8 @@ extension on _StringsZhCn {
         return '独占输出不可用，已退回共享模式';
       case 'music_play_all':
         return '播放';
+      case 'music_play_failed':
+        return ({required Object error}) => '播放失败：${error}';
       case 'music_playlists_empty':
         return '还没有歌单';
       case 'music_replaygain_hint':
@@ -707790,6 +708050,11 @@ extension on _StringsZhHk {
       case 'music_cd_not_audio':
         return ({required Object device}) =>
             'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
       case 'music_cd_read':
         return 'Read audio CD';
       case 'music_cd_read_failed':
@@ -708033,6 +708298,8 @@ extension on _StringsZhHk {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
