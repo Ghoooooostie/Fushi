@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159970 (9410 per locale)
+/// Strings: 160157 (9421 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2106,7 +2106,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Local pronunciation audio databases';
   String get backup_category_music => 'Music';
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   String get backup_category_profiles => 'Profiles';
   String get backup_category_profiles_desc => 'Configuration profiles';
   String get backup_category_progress => 'Reading progress';
@@ -7369,6 +7369,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
   String get music_crossfade_off => 'Off';
   String get music_crossfade_title => 'Crossfade';
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
   String music_disc_label({required Object n}) => 'Disc ${n}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   String get music_exclusive_hint =>
@@ -7384,15 +7387,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
   String get music_library_rescan => 'Rescan library';
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  String get music_listening_study_title => 'Count listening as study time';
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   String get music_loudness_scan_now => 'Measure loudness now';
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  String get music_lyrics_ab_loop_off => 'Stop looping';
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   String get music_lyrics_empty => 'No lyrics for this track';
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   String get music_lyrics_exported => 'Lyrics exported';
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   String get music_lyrics_no_candidates => 'No lyrics found';
   String get music_lyrics_offset_earlier => 'Lyrics earlier';
   String get music_lyrics_offset_later => 'Lyrics later';
@@ -16771,7 +16790,7 @@ class _StringsAr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'الملفات الشخصية';
   @override
@@ -25723,6 +25742,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -25750,6 +25774,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -25757,7 +25786,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -25766,6 +25810,11 @@ class _StringsAr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -39641,7 +39690,7 @@ class _StringsDe extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profile';
   @override
@@ -48789,6 +48838,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -48816,6 +48870,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -48823,7 +48882,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -48832,6 +48906,11 @@ class _StringsDe extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -62873,7 +62952,7 @@ class _StringsEs extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfiles';
   @override
@@ -72032,6 +72111,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -72059,6 +72143,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -72066,7 +72155,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -72075,6 +72179,11 @@ class _StringsEs extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -86161,7 +86270,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profils';
   @override
@@ -95353,6 +95462,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -95380,6 +95494,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -95387,7 +95506,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -95396,6 +95530,11 @@ class _StringsFr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -109474,7 +109613,7 @@ class _StringsId extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profil';
   @override
@@ -118511,6 +118650,11 @@ class _StringsId extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -118538,6 +118682,11 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -118545,7 +118694,22 @@ class _StringsId extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -118554,6 +118718,11 @@ class _StringsId extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -132505,7 +132674,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profili';
   @override
@@ -141621,6 +141790,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -141648,6 +141822,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -141655,7 +141834,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -141664,6 +141858,11 @@ class _StringsIt extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -155566,7 +155765,7 @@ class _StringsJa extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'プロファイル';
   @override
@@ -164212,6 +164411,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -164239,6 +164443,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -164246,7 +164455,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -164255,6 +164479,11 @@ class _StringsJa extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -177694,7 +177923,7 @@ class _StringsKo extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '프로필';
   @override
@@ -186366,6 +186595,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -186393,6 +186627,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -186400,7 +186639,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -186409,6 +186663,11 @@ class _StringsKo extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -200011,7 +200270,7 @@ class _StringsNl extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profielen';
   @override
@@ -209094,6 +209353,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -209121,6 +209385,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -209128,7 +209397,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -209137,6 +209421,11 @@ class _StringsNl extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -223148,7 +223437,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Perfis';
   @override
@@ -232267,6 +232556,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -232294,6 +232588,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -232301,7 +232600,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -232310,6 +232624,11 @@ class _StringsPtBr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -246326,7 +246645,7 @@ class _StringsRu extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Профили';
   @override
@@ -255413,6 +255732,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -255440,6 +255764,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -255447,7 +255776,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -255456,6 +255800,11 @@ class _StringsRu extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -269422,7 +269771,7 @@ class _StringsTh extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'โปรไฟล์';
   @override
@@ -278370,6 +278719,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -278397,6 +278751,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -278404,7 +278763,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -278413,6 +278787,11 @@ class _StringsTh extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -292264,7 +292643,7 @@ class _StringsTr extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Profiller';
   @override
@@ -301314,6 +301693,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -301341,6 +301725,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -301348,7 +301737,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -301357,6 +301761,11 @@ class _StringsTr extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -315274,7 +315683,7 @@ class _StringsVi extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => 'Hồ sơ';
   @override
@@ -324293,6 +324702,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -324320,6 +324734,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -324327,7 +324746,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -324336,6 +324770,11 @@ class _StringsVi extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -337938,7 +338377,7 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_music => '音乐';
   @override
   String get backup_category_music_desc =>
-      '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+      '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -346200,6 +346639,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_crossfade_title => '交叉淡入';
   @override
+  String get music_desktop_lyrics_hint => '播放音乐时在置顶悬浮窗里显示当前歌词';
+  @override
+  String get music_desktop_lyrics_title => '桌面歌词';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
@@ -346224,13 +346667,31 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_library_rescan => '重新扫描曲库';
   @override
+  String get music_listening_study_hint => '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
+  @override
+  String get music_listening_study_title => '听歌计入学习';
+  @override
   String get music_loudness_scan_hint => '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
   @override
   String get music_loudness_scan_now => '立即测量响度';
   @override
   String get music_loudness_scan_title => '为无 ReplayGain 标签的曲目测量响度';
   @override
+  String get music_lyrics_ab_loop_extend => '循环再加一行';
+  @override
+  String get music_lyrics_ab_loop_line => '循环当前行';
+  @override
+  String get music_lyrics_ab_loop_off => '停止循环';
+  @override
   String get music_lyrics_choose_source => '选择歌词来源';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => '已知词 ${known} / ${total}（${percent}%）';
+  @override
+  String get music_lyrics_coverage_hint => '这首歌里已在复习库中的词';
   @override
   String get music_lyrics_empty => '这首歌没有歌词';
   @override
@@ -346239,6 +346700,10 @@ class _StringsZhCn extends _StringsEn {
   String get music_lyrics_exported => '歌词已导出';
   @override
   String get music_lyrics_lookup_pause_title => '查词时暂停';
+  @override
+  String get music_lyrics_media_session_hint => '在媒体通知与锁屏的副标题里显示当前歌词行';
+  @override
+  String get music_lyrics_media_session_title => '锁屏显示歌词';
   @override
   String get music_lyrics_no_candidates => '没有找到歌词';
   @override
@@ -359035,7 +359500,7 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_music => 'Music';
   @override
   String get backup_category_music_desc =>
-      'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+      'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
   @override
   String get backup_category_profiles => '配置方案';
   @override
@@ -367411,6 +367876,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_desktop_lyrics_hint =>
+      'Show the current lyric line in a floating always-on-top window while music plays';
+  @override
+  String get music_desktop_lyrics_title => 'Desktop lyrics';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
@@ -367438,6 +367908,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_listening_study_hint =>
+      'When off, only listening after a lookup, card or loop on the lyrics page counts';
+  @override
+  String get music_listening_study_title => 'Count listening as study time';
+  @override
   String get music_loudness_scan_hint =>
       'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
   @override
@@ -367445,7 +367920,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   @override
+  String get music_lyrics_ab_loop_extend => 'Add the next line to the loop';
+  @override
+  String get music_lyrics_ab_loop_line => 'Loop this line';
+  @override
+  String get music_lyrics_ab_loop_off => 'Stop looping';
+  @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
+  @override
+  String music_lyrics_coverage({
+    required Object known,
+    required Object total,
+    required Object percent,
+  }) => 'Known words ${known} / ${total} (${percent}%)';
+  @override
+  String get music_lyrics_coverage_hint =>
+      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -367454,6 +367944,11 @@ class _StringsZhHk extends _StringsEn {
   String get music_lyrics_exported => 'Lyrics exported';
   @override
   String get music_lyrics_lookup_pause_title => 'Pause while looking up words';
+  @override
+  String get music_lyrics_media_session_hint =>
+      'Show the current line as the subtitle of the media notification and lock screen';
+  @override
+  String get music_lyrics_media_session_title => 'Lyrics on the lock screen';
   @override
   String get music_lyrics_no_candidates => 'No lyrics found';
   @override
@@ -380159,7 +380654,7 @@ extension on _StringsEn {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiles';
       case 'backup_category_profiles_desc':
@@ -387876,6 +388371,10 @@ extension on _StringsEn {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -387900,14 +388399,32 @@ extension on _StringsEn {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -387916,6 +388433,10 @@ extension on _StringsEn {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -399712,7 +400233,7 @@ extension on _StringsAr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'الملفات الشخصية';
       case 'backup_category_profiles_desc':
@@ -407424,6 +407945,10 @@ extension on _StringsAr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -407448,14 +407973,32 @@ extension on _StringsAr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -407464,6 +408007,10 @@ extension on _StringsAr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -419279,7 +419826,7 @@ extension on _StringsDe {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profile';
       case 'backup_category_profiles_desc':
@@ -427023,6 +427570,10 @@ extension on _StringsDe {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -427047,14 +427598,32 @@ extension on _StringsDe {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -427063,6 +427632,10 @@ extension on _StringsDe {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -438897,7 +439470,7 @@ extension on _StringsEs {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfiles';
       case 'backup_category_profiles_desc':
@@ -446632,6 +447205,10 @@ extension on _StringsEs {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -446656,14 +447233,32 @@ extension on _StringsEs {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -446672,6 +447267,10 @@ extension on _StringsEs {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -458507,7 +459106,7 @@ extension on _StringsFr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profils';
       case 'backup_category_profiles_desc':
@@ -466251,6 +466850,10 @@ extension on _StringsFr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -466275,14 +466878,32 @@ extension on _StringsFr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -466291,6 +466912,10 @@ extension on _StringsFr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -478117,7 +478742,7 @@ extension on _StringsId {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profil';
       case 'backup_category_profiles_desc':
@@ -485839,6 +486464,10 @@ extension on _StringsId {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -485863,14 +486492,32 @@ extension on _StringsId {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -485879,6 +486526,10 @@ extension on _StringsId {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -497689,7 +498340,7 @@ extension on _StringsIt {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profili';
       case 'backup_category_profiles_desc':
@@ -505424,6 +506075,10 @@ extension on _StringsIt {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -505448,14 +506103,32 @@ extension on _StringsIt {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -505464,6 +506137,10 @@ extension on _StringsIt {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -517269,7 +517946,7 @@ extension on _StringsJa {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'プロファイル';
       case 'backup_category_profiles_desc':
@@ -524957,6 +525634,10 @@ extension on _StringsJa {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -524981,14 +525662,32 @@ extension on _StringsJa {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -524997,6 +525696,10 @@ extension on _StringsJa {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -536735,7 +537438,7 @@ extension on _StringsKo {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '프로필';
       case 'backup_category_profiles_desc':
@@ -544427,6 +545130,10 @@ extension on _StringsKo {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -544451,14 +545158,32 @@ extension on _StringsKo {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -544467,6 +545192,10 @@ extension on _StringsKo {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -556242,7 +556971,7 @@ extension on _StringsNl {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profielen';
       case 'backup_category_profiles_desc':
@@ -563981,6 +564710,10 @@ extension on _StringsNl {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -564005,14 +564738,32 @@ extension on _StringsNl {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -564021,6 +564772,10 @@ extension on _StringsNl {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -575842,7 +576597,7 @@ extension on _StringsPtBr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Perfis';
       case 'backup_category_profiles_desc':
@@ -583574,6 +584329,10 @@ extension on _StringsPtBr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -583598,14 +584357,32 @@ extension on _StringsPtBr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -583614,6 +584391,10 @@ extension on _StringsPtBr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -595435,7 +596216,7 @@ extension on _StringsRu {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Профили';
       case 'backup_category_profiles_desc':
@@ -603171,6 +603952,10 @@ extension on _StringsRu {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -603195,14 +603980,32 @@ extension on _StringsRu {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -603211,6 +604014,10 @@ extension on _StringsRu {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -615015,7 +615822,7 @@ extension on _StringsTh {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'โปรไฟล์';
       case 'backup_category_profiles_desc':
@@ -622733,6 +623540,10 @@ extension on _StringsTh {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -622757,14 +623568,32 @@ extension on _StringsTh {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -622773,6 +623602,10 @@ extension on _StringsTh {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -634578,7 +635411,7 @@ extension on _StringsTr {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Profiller';
       case 'backup_category_profiles_desc':
@@ -642308,6 +643141,10 @@ extension on _StringsTr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -642332,14 +643169,32 @@ extension on _StringsTr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -642348,6 +643203,10 @@ extension on _StringsTr {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -654154,7 +655013,7 @@ extension on _StringsVi {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return 'Hồ sơ';
       case 'backup_category_profiles_desc':
@@ -661875,6 +662734,10 @@ extension on _StringsVi {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -661899,14 +662762,32 @@ extension on _StringsVi {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -661915,6 +662796,10 @@ extension on _StringsVi {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
@@ -673671,7 +674556,7 @@ extension on _StringsZhCn {
       case 'backup_category_music':
         return '音乐';
       case 'backup_category_music_desc':
-        return '歌单、歌词编辑、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
+        return '歌单、手动指定的歌词来源、MV 绑定与播放记录（不含扫描出的曲库目录与封面缓存）';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -681308,6 +682193,10 @@ extension on _StringsZhCn {
         return '关';
       case 'music_crossfade_title':
         return '交叉淡入';
+      case 'music_desktop_lyrics_hint':
+        return '播放音乐时在置顶悬浮窗里显示当前歌词';
+      case 'music_desktop_lyrics_title':
+        return '桌面歌词';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
       case 'music_dsd_rate_title':
@@ -681332,14 +682221,32 @@ extension on _StringsZhCn {
         return '添加一个放着音乐文件的文件夹。';
       case 'music_library_rescan':
         return '重新扫描曲库';
+      case 'music_listening_study_hint':
+        return '关闭时只计歌词页上查词、制卡或循环之后的收听时间';
+      case 'music_listening_study_title':
+        return '听歌计入学习';
       case 'music_loudness_scan_hint':
         return '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
       case 'music_loudness_scan_now':
         return '立即测量响度';
       case 'music_loudness_scan_title':
         return '为无 ReplayGain 标签的曲目测量响度';
+      case 'music_lyrics_ab_loop_extend':
+        return '循环再加一行';
+      case 'music_lyrics_ab_loop_line':
+        return '循环当前行';
+      case 'music_lyrics_ab_loop_off':
+        return '停止循环';
       case 'music_lyrics_choose_source':
         return '选择歌词来源';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => '已知词 ${known} / ${total}（${percent}%）';
+      case 'music_lyrics_coverage_hint':
+        return '这首歌里已在复习库中的词';
       case 'music_lyrics_empty':
         return '这首歌没有歌词';
       case 'music_lyrics_export_ttml':
@@ -681348,6 +682255,10 @@ extension on _StringsZhCn {
         return '歌词已导出';
       case 'music_lyrics_lookup_pause_title':
         return '查词时暂停';
+      case 'music_lyrics_media_session_hint':
+        return '在媒体通知与锁屏的副标题里显示当前歌词行';
+      case 'music_lyrics_media_session_title':
+        return '锁屏显示歌词';
       case 'music_lyrics_no_candidates':
         return '没有找到歌词';
       case 'music_lyrics_offset_earlier':
@@ -693006,7 +693917,7 @@ extension on _StringsZhHk {
       case 'backup_category_music':
         return 'Music';
       case 'backup_category_music_desc':
-        return 'Playlists, lyrics edits, music-video links and play history (not the scanned library or covers)';
+        return 'Playlists, chosen lyrics sources, music-video links and play history (not the scanned library or covers)';
       case 'backup_category_profiles':
         return '配置方案';
       case 'backup_category_profiles_desc':
@@ -700670,6 +701581,10 @@ extension on _StringsZhHk {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_desktop_lyrics_hint':
+        return 'Show the current lyric line in a floating always-on-top window while music plays';
+      case 'music_desktop_lyrics_title':
+        return 'Desktop lyrics';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
       case 'music_dsd_rate_title':
@@ -700694,14 +701609,32 @@ extension on _StringsZhHk {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_listening_study_hint':
+        return 'When off, only listening after a lookup, card or loop on the lyrics page counts';
+      case 'music_listening_study_title':
+        return 'Count listening as study time';
       case 'music_loudness_scan_hint':
         return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
       case 'music_loudness_scan_now':
         return 'Measure loudness now';
       case 'music_loudness_scan_title':
         return 'Measure loudness of untagged tracks';
+      case 'music_lyrics_ab_loop_extend':
+        return 'Add the next line to the loop';
+      case 'music_lyrics_ab_loop_line':
+        return 'Loop this line';
+      case 'music_lyrics_ab_loop_off':
+        return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
+      case 'music_lyrics_coverage':
+        return ({
+          required Object known,
+          required Object total,
+          required Object percent,
+        }) => 'Known words ${known} / ${total} (${percent}%)';
+      case 'music_lyrics_coverage_hint':
+        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -700710,6 +701643,10 @@ extension on _StringsZhHk {
         return 'Lyrics exported';
       case 'music_lyrics_lookup_pause_title':
         return 'Pause while looking up words';
+      case 'music_lyrics_media_session_hint':
+        return 'Show the current line as the subtitle of the media notification and lock screen';
+      case 'music_lyrics_media_session_title':
+        return 'Lyrics on the lock screen';
       case 'music_lyrics_no_candidates':
         return 'No lyrics found';
       case 'music_lyrics_offset_earlier':
