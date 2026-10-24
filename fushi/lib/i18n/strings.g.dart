@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 157437 (9261 per locale)
+/// Strings: 157607 (9271 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11520,14 +11520,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This disc\'s menu is BD-J, which this platform does not support.';
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   String get video_disc_navigation_failed =>
       'The disc could not complete this menu action.';
   String get video_disc_open_menu => 'Open disc menu';
+  String get video_disc_open_on_host => 'Open on PC';
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
   String get video_disc_play => 'Play disc';
   String get video_disc_play_main_title => 'Play main title';
   String get video_disc_popup_menu => 'Popup menu';
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  String get video_disc_remote_buffering_download => 'Download';
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
   String get video_disc_runtime_install => 'Install disc menu components';
@@ -32724,6 +32741,15 @@ class _StringsAr extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -32732,11 +32758,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -55528,6 +55572,15 @@ class _StringsDe extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -55536,11 +55589,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -78439,6 +78510,15 @@ class _StringsEs extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -78447,11 +78527,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -101418,6 +101516,15 @@ class _StringsFr extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -101426,11 +101533,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -124139,6 +124264,15 @@ class _StringsId extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -124147,11 +124281,29 @@ class _StringsId extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -146938,6 +147090,15 @@ class _StringsIt extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -146946,11 +147107,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -168905,6 +169084,15 @@ class _StringsJa extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -168913,11 +169101,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -190717,6 +190923,15 @@ class _StringsKo extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -190725,11 +190940,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -213347,6 +213580,15 @@ class _StringsNl extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -213355,11 +213597,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -236165,6 +236425,15 @@ class _StringsPtBr extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -236173,11 +236442,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -258951,6 +259238,15 @@ class _StringsRu extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -258959,11 +259255,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -281479,6 +281793,15 @@ class _StringsTh extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -281487,11 +281810,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -304108,6 +304449,15 @@ class _StringsTr extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -304116,11 +304466,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -326711,6 +327079,15 @@ class _StringsVi extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -326719,11 +327096,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -347677,17 +348072,41 @@ class _StringsZhCn extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       '这张盘在其他设备上，无法在本机打开菜单。下载到本机后即可使用菜单。';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      '这张 DVD 在对端是 VIDEO_TS 文件夹形态，远端菜单只支持 ISO 镜像。下载到本机后即可使用菜单。';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      '配对设备上的 Fushi 版本较旧，不支持远端原盘菜单。请更新对端，或把整张盘下载到本机。';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      '本机播放组件暂不支持经网络读取原盘。下载到本机后即可使用菜单。';
+  @override
   String get video_disc_menu_unsupported => '当前播放器不支持蓝光菜单，请更新随包播放器或直接播放标题。';
   @override
   String get video_disc_navigation_failed => '原盘未能执行这个菜单操作。';
   @override
   String get video_disc_open_menu => '进入原盘菜单';
   @override
+  String get video_disc_open_on_host => '在 PC 上打开';
+  @override
+  String get video_disc_open_on_host_failed => '无法在电脑上打开这张盘';
+  @override
+  String get video_disc_open_on_host_sent => '已在电脑上打开原盘菜单';
+  @override
   String get video_disc_play => '播放原盘';
   @override
   String get video_disc_play_main_title => '直接播放正片';
   @override
   String get video_disc_popup_menu => '弹出菜单';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => '不再提示';
+  @override
+  String get video_disc_remote_buffering_download => '下载到本机';
+  @override
+  String get video_disc_remote_buffering_hint => '这张盘经网络播放反复缓冲，下载到本机可以流畅播放。';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      '配对设备上的 Fushi 版本较旧，不支持下载整张盘';
   @override
   String get video_disc_runtime_description =>
       '这张盘使用 Java 菜单，需要为 Fushi 下载约 40 MB 组件。组件仅供 Fushi 使用，不修改系统 Java。';
@@ -368790,6 +369209,15 @@ class _StringsZhHk extends _StringsEn {
   String get video_disc_menu_unavailable_remote =>
       'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
   @override
+  String get video_disc_menu_unavailable_remote_dvd_folder =>
+      'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+  @override
+  String get video_disc_menu_unavailable_remote_host_old =>
+      'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+  @override
+  String get video_disc_menu_unavailable_remote_runtime =>
+      'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
+  @override
   String get video_disc_menu_unsupported =>
       'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
   @override
@@ -368798,11 +369226,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_disc_open_menu => 'Open disc menu';
   @override
+  String get video_disc_open_on_host => 'Open on PC';
+  @override
+  String get video_disc_open_on_host_failed =>
+      'Couldn\'t open the disc on the computer';
+  @override
+  String get video_disc_open_on_host_sent =>
+      'Opened the disc menu on the computer';
+  @override
   String get video_disc_play => 'Play disc';
   @override
   String get video_disc_play_main_title => 'Play main title';
   @override
   String get video_disc_popup_menu => 'Popup menu';
+  @override
+  String get video_disc_remote_buffering_dont_show_again => 'Don\'t show again';
+  @override
+  String get video_disc_remote_buffering_download => 'Download';
+  @override
+  String get video_disc_remote_buffering_hint =>
+      'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+  @override
+  String get video_disc_remote_download_unsupported =>
+      'The paired device runs an older Fushi that can\'t share whole discs';
   @override
   String get video_disc_runtime_description =>
       'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
@@ -388320,18 +388766,38 @@ extension on _StringsEn {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -407560,18 +408026,38 @@ extension on _StringsAr {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -426871,18 +427357,38 @@ extension on _StringsDe {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -446173,18 +446679,38 @@ extension on _StringsEs {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -465488,18 +466014,38 @@ extension on _StringsFr {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -484754,18 +485300,38 @@ extension on _StringsId {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -504048,18 +504614,38 @@ extension on _StringsIt {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -523235,18 +523821,38 @@ extension on _StringsJa {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -542403,18 +543009,38 @@ extension on _StringsKo {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -561678,18 +562304,38 @@ extension on _StringsNl {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -580963,18 +581609,38 @@ extension on _StringsPtBr {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -600256,18 +600922,38 @@ extension on _StringsRu {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -619504,18 +620190,38 @@ extension on _StringsTh {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -638776,18 +639482,38 @@ extension on _StringsTr {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -658039,18 +658765,38 @@ extension on _StringsVi {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
@@ -677097,18 +677843,38 @@ extension on _StringsZhCn {
         return '此盘菜单为 BD-J，本平台不支持。';
       case 'video_disc_menu_unavailable_remote':
         return '这张盘在其他设备上，无法在本机打开菜单。下载到本机后即可使用菜单。';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return '这张 DVD 在对端是 VIDEO_TS 文件夹形态，远端菜单只支持 ISO 镜像。下载到本机后即可使用菜单。';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return '配对设备上的 Fushi 版本较旧，不支持远端原盘菜单。请更新对端，或把整张盘下载到本机。';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return '本机播放组件暂不支持经网络读取原盘。下载到本机后即可使用菜单。';
       case 'video_disc_menu_unsupported':
         return '当前播放器不支持蓝光菜单，请更新随包播放器或直接播放标题。';
       case 'video_disc_navigation_failed':
         return '原盘未能执行这个菜单操作。';
       case 'video_disc_open_menu':
         return '进入原盘菜单';
+      case 'video_disc_open_on_host':
+        return '在 PC 上打开';
+      case 'video_disc_open_on_host_failed':
+        return '无法在电脑上打开这张盘';
+      case 'video_disc_open_on_host_sent':
+        return '已在电脑上打开原盘菜单';
       case 'video_disc_play':
         return '播放原盘';
       case 'video_disc_play_main_title':
         return '直接播放正片';
       case 'video_disc_popup_menu':
         return '弹出菜单';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return '不再提示';
+      case 'video_disc_remote_buffering_download':
+        return '下载到本机';
+      case 'video_disc_remote_buffering_hint':
+        return '这张盘经网络播放反复缓冲，下载到本机可以流畅播放。';
+      case 'video_disc_remote_download_unsupported':
+        return '配对设备上的 Fushi 版本较旧，不支持下载整张盘';
       case 'video_disc_runtime_description':
         return '这张盘使用 Java 菜单，需要为 Fushi 下载约 40 MB 组件。组件仅供 Fushi 使用，不修改系统 Java。';
       case 'video_disc_runtime_install':
@@ -696188,18 +696954,38 @@ extension on _StringsZhHk {
         return 'This disc\'s menu is BD-J, which this platform does not support.';
       case 'video_disc_menu_unavailable_remote':
         return 'This disc is on another device, so its menu cannot open here. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_dvd_folder':
+        return 'This DVD is a VIDEO_TS folder on the other device; menus stream only from ISO images. Download it to this device to use the menu.';
+      case 'video_disc_menu_unavailable_remote_host_old':
+        return 'The paired device runs an older Fushi that can\'t share disc menus. Update it, or download the disc to this device.';
+      case 'video_disc_menu_unavailable_remote_runtime':
+        return 'This device\'s player can\'t read discs over the network yet. Download the disc to this device to use its menu.';
       case 'video_disc_menu_unsupported':
         return 'This player does not support Blu-ray menus. Update the bundled player or open a title directly.';
       case 'video_disc_navigation_failed':
         return 'The disc could not complete this menu action.';
       case 'video_disc_open_menu':
         return 'Open disc menu';
+      case 'video_disc_open_on_host':
+        return 'Open on PC';
+      case 'video_disc_open_on_host_failed':
+        return 'Couldn\'t open the disc on the computer';
+      case 'video_disc_open_on_host_sent':
+        return 'Opened the disc menu on the computer';
       case 'video_disc_play':
         return 'Play disc';
       case 'video_disc_play_main_title':
         return 'Play main title';
       case 'video_disc_popup_menu':
         return 'Popup menu';
+      case 'video_disc_remote_buffering_dont_show_again':
+        return 'Don\'t show again';
+      case 'video_disc_remote_buffering_download':
+        return 'Download';
+      case 'video_disc_remote_buffering_hint':
+        return 'This disc keeps buffering over the network. Download it to this device for smooth playback.';
+      case 'video_disc_remote_download_unsupported':
+        return 'The paired device runs an older Fushi that can\'t share whole discs';
       case 'video_disc_runtime_description':
         return 'This disc uses a Java menu. Download about 40 MB of components for Fushi. The installation is private to Fushi and does not change your system Java.';
       case 'video_disc_runtime_install':
