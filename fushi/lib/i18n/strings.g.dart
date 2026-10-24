@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 156434 (9202 per locale)
+/// Strings: 157165 (9245 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7302,7 +7302,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get music_artist_unknown => 'Unknown artist';
+  String get music_audio_device_auto => 'System default';
+  String get music_audio_device_title => 'Output device';
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   String get music_folder_add => 'Add music folder';
   String get music_folder_duplicate => 'This folder is already a music source';
   String get music_gapless_hint =>
@@ -7313,12 +7319,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
   String get music_library_rescan => 'Rescan library';
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  String get music_loudness_scan_now => 'Measure loudness now';
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
   String get music_now_playing => 'Now playing';
   String get music_open_library => 'Music library';
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   String get music_play_all => 'Play';
   String get music_playlists_empty => 'No playlists yet';
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   String get music_replaygain_title => 'ReplayGain';
   String music_scan_done({required Object count}) =>
       'Library updated: ${count} tracks';
@@ -7330,6 +7345,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_section_works => 'Works';
   String get music_settings_summary => 'Music folders and playback';
   String get music_shuffle_play => 'Shuffle';
+  String get music_signal_path_active => 'Active';
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  String get music_signal_path_decoder => 'Decoder';
+  String get music_signal_path_dsp => 'DSP';
+  String get music_signal_path_high_quality => 'High quality';
+  String get music_signal_path_idle => 'Nothing is playing';
+  String get music_signal_path_inactive => 'Off';
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  String get music_signal_path_output => 'Output';
+  String get music_signal_path_source => 'Source';
+  String get music_signal_path_title => 'Signal path';
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  String get music_signal_stage_crossfade => 'Crossfade';
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  String get music_signal_stage_filters => 'Audio filters';
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  String get music_signal_stage_no_output => 'Audio output not open';
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  String get music_signal_stage_resampler => 'Resampling';
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  String get music_signal_stage_system_mixer => 'System mixer';
+  String get music_signal_stage_volume => 'Software volume';
+  String get music_sleep_after_track => 'After this track';
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  String get music_sleep_off => 'Off';
+  String get music_sleep_title => 'Sleep timer';
+  String get music_speed_title => 'Speed (pitch preserved)';
   String get music_stop => 'Stop music';
   String get music_theme_song_detect => 'Find in episodes';
   String music_theme_song_detect_done({required Object hits}) =>
@@ -7350,6 +7399,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_track_appears_in => 'Appears in';
   String get music_track_detail => 'Track details';
   String music_tracks_count({required Object count}) => '${count} tracks';
+  String get music_volume_title => 'Volume';
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
   String get name => 'Name';
@@ -25344,7 +25394,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -25364,9 +25425,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -25374,6 +25448,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -25395,6 +25471,71 @@ class _StringsAr extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -25429,6 +25570,8 @@ class _StringsAr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -47930,7 +48073,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -47950,9 +48104,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -47960,6 +48127,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -47981,6 +48150,71 @@ class _StringsDe extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -48015,6 +48249,8 @@ class _StringsDe extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -70693,7 +70929,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -70713,9 +70960,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -70723,6 +70983,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -70744,6 +71006,71 @@ class _StringsEs extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -70778,6 +71105,8 @@ class _StringsEs extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -93534,7 +93863,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -93554,9 +93894,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -93564,6 +93917,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -93585,6 +93940,71 @@ class _StringsFr extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -93619,6 +94039,8 @@ class _StringsFr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -116212,7 +116634,18 @@ class _StringsId extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -116232,9 +116665,22 @@ class _StringsId extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -116242,6 +116688,8 @@ class _StringsId extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -116263,6 +116711,71 @@ class _StringsId extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -116297,6 +116810,8 @@ class _StringsId extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -138842,7 +139357,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -138862,9 +139388,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -138872,6 +139411,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -138893,6 +139434,71 @@ class _StringsIt extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -138927,6 +139533,8 @@ class _StringsIt extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -160953,7 +161561,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -160973,9 +161592,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -160983,6 +161615,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -161004,6 +161638,71 @@ class _StringsJa extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -161038,6 +161737,8 @@ class _StringsJa extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -182627,7 +183328,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -182647,9 +183359,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -182657,6 +183382,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -182678,6 +183405,71 @@ class _StringsKo extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -182712,6 +183504,8 @@ class _StringsKo extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -204875,7 +205669,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -204895,9 +205700,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -204905,6 +205723,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -204926,6 +205746,71 @@ class _StringsNl extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -204960,6 +205845,8 @@ class _StringsNl extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -227568,7 +228455,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -227588,9 +228486,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -227598,6 +228509,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -227619,6 +228532,71 @@ class _StringsPtBr extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -227653,6 +228631,8 @@ class _StringsPtBr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -250234,7 +251214,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -250254,9 +251245,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -250264,6 +251268,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -250285,6 +251291,71 @@ class _StringsRu extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -250319,6 +251390,8 @@ class _StringsRu extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -272711,7 +273784,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -272731,9 +273815,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -272741,6 +273838,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -272762,6 +273861,71 @@ class _StringsTh extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -272796,6 +273960,8 @@ class _StringsTh extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -295175,7 +296341,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -295195,9 +296372,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -295205,6 +296395,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -295226,6 +296418,71 @@ class _StringsTr extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -295260,6 +296517,8 @@ class _StringsTr extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -317674,7 +318933,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -317694,9 +318964,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -317704,6 +318987,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -317725,6 +319010,71 @@ class _StringsVi extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -317759,6 +319109,8 @@ class _StringsVi extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -339107,7 +340459,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_artist_unknown => '未知艺人';
   @override
+  String get music_audio_device_auto => '系统默认';
+  @override
+  String get music_audio_device_title => '输出设备';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
+  @override
+  String get music_exclusive_hint => '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
+  @override
+  String get music_exclusive_title => '独占（bit-perfect）输出';
   @override
   String get music_folder_add => '添加音乐文件夹';
   @override
@@ -339125,15 +340487,27 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_library_rescan => '重新扫描曲库';
   @override
+  String get music_loudness_scan_hint => '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
+  @override
+  String get music_loudness_scan_now => '立即测量响度';
+  @override
+  String get music_loudness_scan_title => '为无 ReplayGain 标签的曲目测量响度';
+  @override
   String get music_now_playing => '正在播放';
   @override
   String get music_open_library => '曲库';
+  @override
+  String get music_output_fallback_device => '所选输出设备不可用，已改用系统默认设备';
+  @override
+  String get music_output_fallback_exclusive => '独占输出不可用，已退回共享模式';
   @override
   String get music_play_all => '播放';
   @override
   String get music_playlists_empty => '还没有歌单';
   @override
   String get music_replaygain_hint => '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain 预放大';
   @override
   String get music_replaygain_title => 'ReplayGain 响度均衡';
   @override
@@ -339154,6 +340528,70 @@ class _StringsZhCn extends _StringsEn {
   String get music_settings_summary => '曲库来源与播放';
   @override
   String get music_shuffle_play => '随机播放';
+  @override
+  String get music_signal_path_active => '生效';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      '样本被以下环节修改：${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect 输出：请用 DAC 的硬件音量调节';
+  @override
+  String get music_signal_path_decoder => '解码';
+  @override
+  String get music_signal_path_dsp => 'DSP 链';
+  @override
+  String get music_signal_path_high_quality => '高品质';
+  @override
+  String get music_signal_path_idle => '当前没有在播放';
+  @override
+  String get music_signal_path_inactive => '未生效';
+  @override
+  String get music_signal_path_ios_mixer => 'iOS 没有独占模式，输出经系统混音';
+  @override
+  String get music_signal_path_mode_exclusive => '独占';
+  @override
+  String get music_signal_path_mode_shared => '共享（系统混音）';
+  @override
+  String get music_signal_path_output => '输出';
+  @override
+  String get music_signal_path_source => '源';
+  @override
+  String get music_signal_path_title => '信号路径';
+  @override
+  String get music_signal_stage_channel_remix => '声道重混';
+  @override
+  String get music_signal_stage_crossfade => '交叉淡入';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD→PCM 转换';
+  @override
+  String get music_signal_stage_filters => '音频滤镜';
+  @override
+  String get music_signal_stage_format_conversion => '采样格式转换';
+  @override
+  String get music_signal_stage_no_output => '音频输出未打开';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain 增益';
+  @override
+  String get music_signal_stage_resampler => '重采样';
+  @override
+  String get music_signal_stage_speed => '变速（scaletempo2）';
+  @override
+  String get music_signal_stage_system_mixer => '系统混音';
+  @override
+  String get music_signal_stage_volume => '软件音量';
+  @override
+  String get music_sleep_after_track => '播完本曲';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} 分钟';
+  @override
+  String get music_sleep_off => '关闭';
+  @override
+  String get music_sleep_title => '睡眠定时';
+  @override
+  String get music_speed_title => '速度（不变调）';
   @override
   String get music_stop => '停止音乐';
   @override
@@ -339188,6 +340626,8 @@ class _StringsZhCn extends _StringsEn {
   String get music_track_detail => '曲目详情';
   @override
   String music_tracks_count({required Object count}) => '${count} 首';
+  @override
+  String get music_volume_title => '音量';
   @override
   String get music_works_empty => '关联作品后，这里按动画、游戏、影视作品聚合歌曲。';
   @override
@@ -359857,7 +361297,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_artist_unknown => 'Unknown artist';
   @override
+  String get music_audio_device_auto => 'System default';
+  @override
+  String get music_audio_device_title => 'Output device';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_exclusive_hint =>
+      'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+  @override
+  String get music_exclusive_title => 'Exclusive (bit-perfect) output';
   @override
   String get music_folder_add => 'Add music folder';
   @override
@@ -359877,9 +361328,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_library_rescan => 'Rescan library';
   @override
+  String get music_loudness_scan_hint =>
+      'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+  @override
+  String get music_loudness_scan_now => 'Measure loudness now';
+  @override
+  String get music_loudness_scan_title => 'Measure loudness of untagged tracks';
+  @override
   String get music_now_playing => 'Now playing';
   @override
   String get music_open_library => 'Music library';
+  @override
+  String get music_output_fallback_device =>
+      'The selected output device is unavailable, using the system default';
+  @override
+  String get music_output_fallback_exclusive =>
+      'Exclusive output is unavailable, switched to shared mode';
   @override
   String get music_play_all => 'Play';
   @override
@@ -359887,6 +361351,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
+  @override
+  String get music_replaygain_preamp_title => 'ReplayGain pre-amp';
   @override
   String get music_replaygain_title => 'ReplayGain';
   @override
@@ -359908,6 +361374,71 @@ class _StringsZhHk extends _StringsEn {
   String get music_settings_summary => 'Music folders and playback';
   @override
   String get music_shuffle_play => 'Shuffle';
+  @override
+  String get music_signal_path_active => 'Active';
+  @override
+  String music_signal_path_altered_by({required Object stages}) =>
+      'Samples are changed by: ${stages}';
+  @override
+  String get music_signal_path_bit_perfect => 'Bit-perfect';
+  @override
+  String get music_signal_path_dac_volume_hint =>
+      'Bit-perfect output: adjust the volume on your DAC';
+  @override
+  String get music_signal_path_decoder => 'Decoder';
+  @override
+  String get music_signal_path_dsp => 'DSP';
+  @override
+  String get music_signal_path_high_quality => 'High quality';
+  @override
+  String get music_signal_path_idle => 'Nothing is playing';
+  @override
+  String get music_signal_path_inactive => 'Off';
+  @override
+  String get music_signal_path_ios_mixer =>
+      'iOS has no exclusive mode; output goes through the system mixer';
+  @override
+  String get music_signal_path_mode_exclusive => 'Exclusive';
+  @override
+  String get music_signal_path_mode_shared => 'Shared (system mixer)';
+  @override
+  String get music_signal_path_output => 'Output';
+  @override
+  String get music_signal_path_source => 'Source';
+  @override
+  String get music_signal_path_title => 'Signal path';
+  @override
+  String get music_signal_stage_channel_remix => 'Channel remix';
+  @override
+  String get music_signal_stage_crossfade => 'Crossfade';
+  @override
+  String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_filters => 'Audio filters';
+  @override
+  String get music_signal_stage_format_conversion => 'Sample format conversion';
+  @override
+  String get music_signal_stage_no_output => 'Audio output not open';
+  @override
+  String get music_signal_stage_replay_gain => 'ReplayGain';
+  @override
+  String get music_signal_stage_resampler => 'Resampling';
+  @override
+  String get music_signal_stage_speed => 'Speed change (scaletempo2)';
+  @override
+  String get music_signal_stage_system_mixer => 'System mixer';
+  @override
+  String get music_signal_stage_volume => 'Software volume';
+  @override
+  String get music_sleep_after_track => 'After this track';
+  @override
+  String music_sleep_minutes({required Object n}) => '${n} min';
+  @override
+  String get music_sleep_off => 'Off';
+  @override
+  String get music_sleep_title => 'Sleep timer';
+  @override
+  String get music_speed_title => 'Speed (pitch preserved)';
   @override
   String get music_stop => 'Stop music';
   @override
@@ -359942,6 +361473,8 @@ class _StringsZhHk extends _StringsEn {
   String get music_track_detail => 'Track details';
   @override
   String music_tracks_count({required Object count}) => '${count} tracks';
+  @override
+  String get music_volume_title => 'Volume';
   @override
   String get music_works_empty =>
       'Songs grouped by anime, game and film works appear here once works are linked.';
@@ -379864,8 +381397,18 @@ extension on _StringsEn {
         return 'Move up';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -379882,16 +381425,28 @@ extension on _StringsEn {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -379912,6 +381467,69 @@ extension on _StringsEn {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -379941,6 +381559,8 @@ extension on _StringsEn {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -398987,8 +400607,18 @@ extension on _StringsAr {
         return 'تحريك لأعلى';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -399005,16 +400635,28 @@ extension on _StringsAr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -399035,6 +400677,69 @@ extension on _StringsAr {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -399064,6 +400769,8 @@ extension on _StringsAr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -418161,8 +419868,18 @@ extension on _StringsDe {
         return 'Nach oben';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -418179,16 +419896,28 @@ extension on _StringsDe {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -418209,6 +419938,69 @@ extension on _StringsDe {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -418238,6 +420030,8 @@ extension on _StringsDe {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -437345,8 +439139,18 @@ extension on _StringsEs {
         return 'Mover arriba';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -437363,16 +439167,28 @@ extension on _StringsEs {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -437393,6 +439209,69 @@ extension on _StringsEs {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -437422,6 +439301,8 @@ extension on _StringsEs {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -456539,8 +458420,18 @@ extension on _StringsFr {
         return 'Monter';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -456557,16 +458448,28 @@ extension on _StringsFr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -456587,6 +458490,69 @@ extension on _StringsFr {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -456616,6 +458582,8 @@ extension on _StringsFr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -475702,8 +477670,18 @@ extension on _StringsId {
         return 'Naikkan';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -475720,16 +477698,28 @@ extension on _StringsId {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -475750,6 +477740,69 @@ extension on _StringsId {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -475779,6 +477832,8 @@ extension on _StringsId {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -494862,8 +496917,18 @@ extension on _StringsIt {
         return 'Sposta su';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -494880,16 +496945,28 @@ extension on _StringsIt {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -494910,6 +496987,69 @@ extension on _StringsIt {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -494939,6 +497079,8 @@ extension on _StringsIt {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -513970,8 +516112,18 @@ extension on _StringsJa {
         return '上に移動';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -513988,16 +516140,28 @@ extension on _StringsJa {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -514018,6 +516182,69 @@ extension on _StringsJa {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -514047,6 +516274,8 @@ extension on _StringsJa {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -533015,8 +535244,18 @@ extension on _StringsKo {
         return '위로 이동';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -533033,16 +535272,28 @@ extension on _StringsKo {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -533063,6 +535314,69 @@ extension on _StringsKo {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -533092,6 +535406,8 @@ extension on _StringsKo {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -552144,8 +554460,18 @@ extension on _StringsNl {
         return 'Omhoog';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -552162,16 +554488,28 @@ extension on _StringsNl {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -552192,6 +554530,69 @@ extension on _StringsNl {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -552221,6 +554622,8 @@ extension on _StringsNl {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -571312,8 +573715,18 @@ extension on _StringsPtBr {
         return 'Mover para cima';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -571330,16 +573743,28 @@ extension on _StringsPtBr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -571360,6 +573785,69 @@ extension on _StringsPtBr {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -571389,6 +573877,8 @@ extension on _StringsPtBr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -590484,8 +592974,18 @@ extension on _StringsRu {
         return 'Вверх';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -590502,16 +593002,28 @@ extension on _StringsRu {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -590532,6 +593044,69 @@ extension on _StringsRu {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -590561,6 +593136,8 @@ extension on _StringsRu {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -609621,8 +612198,18 @@ extension on _StringsTh {
         return 'เลื่อนขึ้น';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -609639,16 +612226,28 @@ extension on _StringsTh {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -609669,6 +612268,69 @@ extension on _StringsTh {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -609698,6 +612360,8 @@ extension on _StringsTh {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -628771,8 +631435,18 @@ extension on _StringsTr {
         return 'Yukarı taşı';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -628789,16 +631463,28 @@ extension on _StringsTr {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -628819,6 +631505,69 @@ extension on _StringsTr {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -628848,6 +631597,8 @@ extension on _StringsTr {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -647913,8 +650664,18 @@ extension on _StringsVi {
         return 'Di chuyển lên';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -647931,16 +650692,28 @@ extension on _StringsVi {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -647961,6 +650734,69 @@ extension on _StringsVi {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -647990,6 +650826,8 @@ extension on _StringsVi {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
@@ -666922,8 +669760,18 @@ extension on _StringsZhCn {
         return '上移';
       case 'music_artist_unknown':
         return '未知艺人';
+      case 'music_audio_device_auto':
+        return '系统默认';
+      case 'music_audio_device_title':
+        return '输出设备';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD 转 PCM 采样率';
+      case 'music_exclusive_hint':
+        return '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
+      case 'music_exclusive_title':
+        return '独占（bit-perfect）输出';
       case 'music_folder_add':
         return '添加音乐文件夹';
       case 'music_folder_duplicate':
@@ -666940,16 +669788,28 @@ extension on _StringsZhCn {
         return '添加一个放着音乐文件的文件夹。';
       case 'music_library_rescan':
         return '重新扫描曲库';
+      case 'music_loudness_scan_hint':
+        return '后台做 EBU R128 测量，结果只存进曲库，不改动你的文件。';
+      case 'music_loudness_scan_now':
+        return '立即测量响度';
+      case 'music_loudness_scan_title':
+        return '为无 ReplayGain 标签的曲目测量响度';
       case 'music_now_playing':
         return '正在播放';
       case 'music_open_library':
         return '曲库';
+      case 'music_output_fallback_device':
+        return '所选输出设备不可用，已改用系统默认设备';
+      case 'music_output_fallback_exclusive':
+        return '独占输出不可用，已退回共享模式';
       case 'music_play_all':
         return '播放';
       case 'music_playlists_empty':
         return '还没有歌单';
       case 'music_replaygain_hint':
         return '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain 预放大';
       case 'music_replaygain_title':
         return 'ReplayGain 响度均衡';
       case 'music_scan_done':
@@ -666970,6 +669830,68 @@ extension on _StringsZhCn {
         return '曲库来源与播放';
       case 'music_shuffle_play':
         return '随机播放';
+      case 'music_signal_path_active':
+        return '生效';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) => '样本被以下环节修改：${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect 输出：请用 DAC 的硬件音量调节';
+      case 'music_signal_path_decoder':
+        return '解码';
+      case 'music_signal_path_dsp':
+        return 'DSP 链';
+      case 'music_signal_path_high_quality':
+        return '高品质';
+      case 'music_signal_path_idle':
+        return '当前没有在播放';
+      case 'music_signal_path_inactive':
+        return '未生效';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS 没有独占模式，输出经系统混音';
+      case 'music_signal_path_mode_exclusive':
+        return '独占';
+      case 'music_signal_path_mode_shared':
+        return '共享（系统混音）';
+      case 'music_signal_path_output':
+        return '输出';
+      case 'music_signal_path_source':
+        return '源';
+      case 'music_signal_path_title':
+        return '信号路径';
+      case 'music_signal_stage_channel_remix':
+        return '声道重混';
+      case 'music_signal_stage_crossfade':
+        return '交叉淡入';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD→PCM 转换';
+      case 'music_signal_stage_filters':
+        return '音频滤镜';
+      case 'music_signal_stage_format_conversion':
+        return '采样格式转换';
+      case 'music_signal_stage_no_output':
+        return '音频输出未打开';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain 增益';
+      case 'music_signal_stage_resampler':
+        return '重采样';
+      case 'music_signal_stage_speed':
+        return '变速（scaletempo2）';
+      case 'music_signal_stage_system_mixer':
+        return '系统混音';
+      case 'music_signal_stage_volume':
+        return '软件音量';
+      case 'music_sleep_after_track':
+        return '播完本曲';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} 分钟';
+      case 'music_sleep_off':
+        return '关闭';
+      case 'music_sleep_title':
+        return '睡眠定时';
+      case 'music_speed_title':
+        return '速度（不变调）';
       case 'music_stop':
         return '停止音乐';
       case 'music_theme_song_detect':
@@ -666999,6 +669921,8 @@ extension on _StringsZhCn {
         return '曲目详情';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} 首';
+      case 'music_volume_title':
+        return '音量';
       case 'music_works_empty':
         return '关联作品后，这里按动画、游戏、影视作品聚合歌曲。';
       case 'name':
@@ -685861,8 +688785,18 @@ extension on _StringsZhHk {
         return '上移';
       case 'music_artist_unknown':
         return 'Unknown artist';
+      case 'music_audio_device_auto':
+        return 'System default';
+      case 'music_audio_device_title':
+        return 'Output device';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_dsd_rate_title':
+        return 'DSD to PCM sample rate';
+      case 'music_exclusive_hint':
+        return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
+      case 'music_exclusive_title':
+        return 'Exclusive (bit-perfect) output';
       case 'music_folder_add':
         return 'Add music folder';
       case 'music_folder_duplicate':
@@ -685879,16 +688813,28 @@ extension on _StringsZhHk {
         return 'Add a folder that holds your music files.';
       case 'music_library_rescan':
         return 'Rescan library';
+      case 'music_loudness_scan_hint':
+        return 'EBU R128 scan in the background. Results are stored in the library; your files are not modified.';
+      case 'music_loudness_scan_now':
+        return 'Measure loudness now';
+      case 'music_loudness_scan_title':
+        return 'Measure loudness of untagged tracks';
       case 'music_now_playing':
         return 'Now playing';
       case 'music_open_library':
         return 'Music library';
+      case 'music_output_fallback_device':
+        return 'The selected output device is unavailable, using the system default';
+      case 'music_output_fallback_exclusive':
+        return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
         return 'Album gain when playing an album in order, track gain otherwise';
+      case 'music_replaygain_preamp_title':
+        return 'ReplayGain pre-amp';
       case 'music_replaygain_title':
         return 'ReplayGain';
       case 'music_scan_done':
@@ -685909,6 +688855,69 @@ extension on _StringsZhHk {
         return 'Music folders and playback';
       case 'music_shuffle_play':
         return 'Shuffle';
+      case 'music_signal_path_active':
+        return 'Active';
+      case 'music_signal_path_altered_by':
+        return ({required Object stages}) =>
+            'Samples are changed by: ${stages}';
+      case 'music_signal_path_bit_perfect':
+        return 'Bit-perfect';
+      case 'music_signal_path_dac_volume_hint':
+        return 'Bit-perfect output: adjust the volume on your DAC';
+      case 'music_signal_path_decoder':
+        return 'Decoder';
+      case 'music_signal_path_dsp':
+        return 'DSP';
+      case 'music_signal_path_high_quality':
+        return 'High quality';
+      case 'music_signal_path_idle':
+        return 'Nothing is playing';
+      case 'music_signal_path_inactive':
+        return 'Off';
+      case 'music_signal_path_ios_mixer':
+        return 'iOS has no exclusive mode; output goes through the system mixer';
+      case 'music_signal_path_mode_exclusive':
+        return 'Exclusive';
+      case 'music_signal_path_mode_shared':
+        return 'Shared (system mixer)';
+      case 'music_signal_path_output':
+        return 'Output';
+      case 'music_signal_path_source':
+        return 'Source';
+      case 'music_signal_path_title':
+        return 'Signal path';
+      case 'music_signal_stage_channel_remix':
+        return 'Channel remix';
+      case 'music_signal_stage_crossfade':
+        return 'Crossfade';
+      case 'music_signal_stage_dsd_to_pcm':
+        return 'DSD → PCM conversion';
+      case 'music_signal_stage_filters':
+        return 'Audio filters';
+      case 'music_signal_stage_format_conversion':
+        return 'Sample format conversion';
+      case 'music_signal_stage_no_output':
+        return 'Audio output not open';
+      case 'music_signal_stage_replay_gain':
+        return 'ReplayGain';
+      case 'music_signal_stage_resampler':
+        return 'Resampling';
+      case 'music_signal_stage_speed':
+        return 'Speed change (scaletempo2)';
+      case 'music_signal_stage_system_mixer':
+        return 'System mixer';
+      case 'music_signal_stage_volume':
+        return 'Software volume';
+      case 'music_sleep_after_track':
+        return 'After this track';
+      case 'music_sleep_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'music_sleep_off':
+        return 'Off';
+      case 'music_sleep_title':
+        return 'Sleep timer';
+      case 'music_speed_title':
+        return 'Speed (pitch preserved)';
       case 'music_stop':
         return 'Stop music';
       case 'music_theme_song_detect':
@@ -685938,6 +688947,8 @@ extension on _StringsZhHk {
         return 'Track details';
       case 'music_tracks_count':
         return ({required Object count}) => '${count} tracks';
+      case 'music_volume_title':
+        return 'Volume';
       case 'music_works_empty':
         return 'Songs grouped by anime, game and film works appear here once works are linked.';
       case 'name':
