@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159545 (9385 per locale)
+/// Strings: 159579 (9387 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10915,6 +10915,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_username => 'Username';
   String get sync_video_files => 'Upload video files';
   String get sync_video_files_warning => 'Video files can be very large.';
+  String get sync_web_history => 'Sync browsing history';
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   String get sync_webdav_missing_fields => 'Missing fields';
   String sync_webdav_test_failed({required Object message}) =>
       'Connection failed: ${message}';
@@ -31872,6 +31875,11 @@ class _StringsAr extends _StringsEn {
   String get sync_video_files => 'رفع ملفات الفيديو';
   @override
   String get sync_video_files_warning => 'ملفات الفيديو قد تكون كبيرة جداً.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'حقول ناقصة';
   @override
@@ -54976,6 +54984,11 @@ class _StringsDe extends _StringsEn {
   String get sync_video_files => 'Videodateien hochladen';
   @override
   String get sync_video_files_warning => 'Videodateien können sehr groß sein.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'Fehlende Felder';
   @override
@@ -78194,6 +78207,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_video_files_warning =>
       'Los archivos de vídeo pueden ser muy grandes.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'Faltan campos';
   @override
@@ -101489,6 +101507,11 @@ class _StringsFr extends _StringsEn {
   String get sync_video_files_warning =>
       'Les fichiers vidéo peuvent être très volumineux.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Champs manquants';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -124534,6 +124557,11 @@ class _StringsId extends _StringsEn {
   String get sync_video_files => 'Unggah file video';
   @override
   String get sync_video_files_warning => 'File video bisa sangat besar.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'Ada kolom yang belum diisi';
   @override
@@ -147645,6 +147673,11 @@ class _StringsIt extends _StringsEn {
   String get sync_video_files_warning =>
       'I file video possono essere molto grandi.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Campi mancanti';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -169973,6 +170006,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_video_files_warning => '動画ファイルは非常に大きくなる場合があります。';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => '未入力の項目があります';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -192096,6 +192134,11 @@ class _StringsKo extends _StringsEn {
   String get sync_video_files => '동영상 파일 업로드';
   @override
   String get sync_video_files_warning => '동영상 파일은 매우 클 수 있습니다.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => '입력하지 않은 항목이 있습니다';
   @override
@@ -214995,6 +215038,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_video_files_warning =>
       'Videobestanden kunnen zeer groot zijn.';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'Ontbrekende velden';
   @override
@@ -238127,6 +238175,11 @@ class _StringsPtBr extends _StringsEn {
   String get sync_video_files_warning =>
       'Arquivos de vídeo podem ser muito grandes.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Campos faltando';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -261237,6 +261290,11 @@ class _StringsRu extends _StringsEn {
   String get sync_video_files_warning =>
       'Видеофайлы могут быть очень большими.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Не заполнены поля';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -284089,6 +284147,11 @@ class _StringsTh extends _StringsEn {
   String get sync_video_files => 'อัปโหลดไฟล์วิดีโอ';
   @override
   String get sync_video_files_warning => 'ไฟล์วิดีโอมีขนาดใหญ่มาก';
+  @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
   @override
   String get sync_webdav_missing_fields => 'ข้อมูลไม่ครบ';
   @override
@@ -307027,6 +307090,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_video_files_warning => 'Video dosyaları çok büyük olabilir.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Eksik alanlar';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -329948,6 +330016,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_video_files_warning => 'Tệp video có thể rất lớn.';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => 'Thiếu thông tin';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -351318,6 +351391,11 @@ class _StringsZhCn extends _StringsEn {
   String get sync_video_files => '上传视频文件';
   @override
   String get sync_video_files_warning => '视频文件可能非常大。';
+  @override
+  String get sync_web_history => '同步浏览历史';
+  @override
+  String get sync_web_history_hint =>
+      '默认关闭。开启后，内置浏览器的浏览历史随云备份与已配对设备同步；书签随收藏同步。';
   @override
   String get sync_webdav_missing_fields => '缺少字段';
   @override
@@ -372692,6 +372770,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_video_files_warning => '影片檔案可能非常大。';
   @override
+  String get sync_web_history => 'Sync browsing history';
+  @override
+  String get sync_web_history_hint =>
+      'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
+  @override
   String get sync_webdav_missing_fields => '缺少欄位';
   @override
   String sync_webdav_test_failed({required Object message}) =>
@@ -392619,6 +392702,10 @@ extension on _StringsEn {
         return 'Upload video files';
       case 'sync_video_files_warning':
         return 'Video files can be very large.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Missing fields';
       case 'sync_webdav_test_failed':
@@ -412122,6 +412209,10 @@ extension on _StringsAr {
         return 'رفع ملفات الفيديو';
       case 'sync_video_files_warning':
         return 'ملفات الفيديو قد تكون كبيرة جداً.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'حقول ناقصة';
       case 'sync_webdav_test_failed':
@@ -431693,6 +431784,10 @@ extension on _StringsDe {
         return 'Videodateien hochladen';
       case 'sync_video_files_warning':
         return 'Videodateien können sehr groß sein.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Fehlende Felder';
       case 'sync_webdav_test_failed':
@@ -451260,6 +451355,10 @@ extension on _StringsEs {
         return 'Subir archivos de vídeo';
       case 'sync_video_files_warning':
         return 'Los archivos de vídeo pueden ser muy grandes.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Faltan campos';
       case 'sync_webdav_test_failed':
@@ -470838,6 +470937,10 @@ extension on _StringsFr {
         return 'Envoyer les fichiers vidéo';
       case 'sync_video_files_warning':
         return 'Les fichiers vidéo peuvent être très volumineux.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Champs manquants';
       case 'sync_webdav_test_failed':
@@ -490377,6 +490480,10 @@ extension on _StringsId {
         return 'Unggah file video';
       case 'sync_video_files_warning':
         return 'File video bisa sangat besar.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Ada kolom yang belum diisi';
       case 'sync_webdav_test_failed':
@@ -509926,6 +510033,10 @@ extension on _StringsIt {
         return 'Carica file video';
       case 'sync_video_files_warning':
         return 'I file video possono essere molto grandi.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Campi mancanti';
       case 'sync_webdav_test_failed':
@@ -529397,6 +529508,10 @@ extension on _StringsJa {
         return '動画ファイルをアップロード';
       case 'sync_video_files_warning':
         return '動画ファイルは非常に大きくなる場合があります。';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return '未入力の項目があります';
       case 'sync_webdav_test_failed':
@@ -548829,6 +548944,10 @@ extension on _StringsKo {
         return '동영상 파일 업로드';
       case 'sync_video_files_warning':
         return '동영상 파일은 매우 클 수 있습니다.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return '입력하지 않은 항목이 있습니다';
       case 'sync_webdav_test_failed':
@@ -568359,6 +568478,10 @@ extension on _StringsNl {
         return 'Videobestanden uploaden';
       case 'sync_video_files_warning':
         return 'Videobestanden kunnen zeer groot zijn.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Ontbrekende velden';
       case 'sync_webdav_test_failed':
@@ -587910,6 +588033,10 @@ extension on _StringsPtBr {
         return 'Upload de arquivos de vídeo';
       case 'sync_video_files_warning':
         return 'Arquivos de vídeo podem ser muito grandes.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Campos faltando';
       case 'sync_webdav_test_failed':
@@ -607467,6 +607594,10 @@ extension on _StringsRu {
         return 'Загрузка видеофайлов';
       case 'sync_video_files_warning':
         return 'Видеофайлы могут быть очень большими.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Не заполнены поля';
       case 'sync_webdav_test_failed':
@@ -626981,6 +627112,10 @@ extension on _StringsTh {
         return 'อัปโหลดไฟล์วิดีโอ';
       case 'sync_video_files_warning':
         return 'ไฟล์วิดีโอมีขนาดใหญ่มาก';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'ข้อมูลไม่ครบ';
       case 'sync_webdav_test_failed':
@@ -646515,6 +646650,10 @@ extension on _StringsTr {
         return 'Video dosyalarını yükle';
       case 'sync_video_files_warning':
         return 'Video dosyaları çok büyük olabilir.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Eksik alanlar';
       case 'sync_webdav_test_failed':
@@ -666045,6 +666184,10 @@ extension on _StringsVi {
         return 'Tải lên tệp video';
       case 'sync_video_files_warning':
         return 'Tệp video có thể rất lớn.';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return 'Thiếu thông tin';
       case 'sync_webdav_test_failed':
@@ -685383,6 +685526,10 @@ extension on _StringsZhCn {
         return '上传视频文件';
       case 'sync_video_files_warning':
         return '视频文件可能非常大。';
+      case 'sync_web_history':
+        return '同步浏览历史';
+      case 'sync_web_history_hint':
+        return '默认关闭。开启后，内置浏览器的浏览历史随云备份与已配对设备同步；书签随收藏同步。';
       case 'sync_webdav_missing_fields':
         return '缺少字段';
       case 'sync_webdav_test_failed':
@@ -704737,6 +704884,10 @@ extension on _StringsZhHk {
         return '上傳影片檔案';
       case 'sync_video_files_warning':
         return '影片檔案可能非常大。';
+      case 'sync_web_history':
+        return 'Sync browsing history';
+      case 'sync_web_history_hint':
+        return 'Off by default. When on, the in-app browser\'s history syncs with cloud backup and paired devices. Bookmarks follow favorites.';
       case 'sync_webdav_missing_fields':
         return '缺少欄位';
       case 'sync_webdav_test_failed':
