@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159953 (9409 per locale)
+/// Strings: 160412 (9436 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7369,7 +7369,52 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fade between tracks on an equal-power curve. Gapless album tracks and CUE splits stay gapless. Not bit-perfect; turned off automatically with exclusive output.';
   String get music_crossfade_off => 'Off';
   String get music_crossfade_title => 'Crossfade';
+  String get music_disc_add => 'Add disc';
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  String get music_disc_choose_titles => 'Choose titles to import';
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  String get music_disc_lookup_pick => 'Choose a release';
+  String get music_disc_lookup_query => 'Release title';
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  String get music_disc_not_imported => 'Chapters not imported';
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  String get music_disc_remove => 'Remove from library';
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  String get music_disc_title_main => 'Main feature';
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -25721,7 +25766,79 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -48784,7 +48901,79 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -72024,7 +72213,79 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -95342,7 +95603,79 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -118497,7 +118830,79 @@ class _StringsId extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -141604,7 +142009,79 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -164192,7 +164669,79 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -186343,7 +186892,79 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -209068,7 +209689,79 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -232238,7 +232931,79 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -255381,7 +256146,79 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -278335,7 +279172,79 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -301276,7 +302185,79 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -324252,7 +325233,79 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -346156,7 +347209,71 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_crossfade_title => '交叉淡入';
   @override
+  String get music_disc_add => '添加光盘';
+  @override
+  String music_disc_added({required Object count}) => '已加入 ${count} 张光盘';
+  @override
+  String get music_disc_bluray_image_unsupported => '蓝光镜像（.iso）暂不支持章节导入，请使用盘目录';
+  @override
+  String music_disc_chapter_name({required Object n}) => '第 ${n} 章';
+  @override
+  String get music_disc_choose_titles => '选择要导入的标题';
+  @override
+  String get music_disc_choose_titles_hint => '所选标题的每个章节都会成为一首曲目。';
+  @override
+  String get music_disc_import_chapters => '章节导入为曲目';
+  @override
+  String music_disc_imported({required Object count}) => '已导入 ${count} 首曲目';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
+  @override
+  String get music_disc_lookup => '在 MusicBrainz 查曲目表';
+  @override
+  String get music_disc_lookup_applied => '已按 MusicBrainz 更新曲目名';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz 查询失败：${error}';
+  @override
+  String get music_disc_lookup_hint => '按标题搜索 DVD / 蓝光发行，按曲数与时长对号。';
+  @override
+  String get music_disc_lookup_none => '没有找到曲目表对得上的发行';
+  @override
+  String get music_disc_lookup_pick => '选择发行';
+  @override
+  String get music_disc_lookup_query => '发行标题';
+  @override
+  String get music_disc_lookup_searching => '正在查询 MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) =>
+      '平均误差 ${seconds} 秒';
+  @override
+  String get music_disc_no_chapters => '所选标题读不出章节';
+  @override
+  String get music_disc_none_found => '这个文件夹里没有认得出的 DVD / 蓝光';
+  @override
+  String get music_disc_not_imported => '章节未导入';
+  @override
+  String get music_disc_reimport_chapters => '重新导入章节';
+  @override
+  String get music_disc_remove => '从曲库移除';
+  @override
+  String get music_disc_remove_confirm => '从曲库移除这张盘？盘上的文件不会改动。';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => '标题 ${title} · 第 ${n} 章';
+  @override
+  String get music_disc_title_main => '正片';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => '标题 ${title} · ${duration} · ${count} 个章节';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      '读不出这张 DVD / 蓝光：${path}';
   @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
   @override
@@ -367364,7 +368481,79 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_crossfade_title => 'Crossfade';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
   @override
@@ -387826,8 +389015,70 @@ extension on _StringsEn {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -407372,8 +408623,70 @@ extension on _StringsAr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -426969,8 +428282,70 @@ extension on _StringsDe {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -446576,8 +447951,70 @@ extension on _StringsEs {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -466193,8 +467630,70 @@ extension on _StringsFr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -485779,8 +487278,70 @@ extension on _StringsId {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -505362,8 +506923,70 @@ extension on _StringsIt {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -524893,8 +526516,70 @@ extension on _StringsJa {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -544361,8 +546046,70 @@ extension on _StringsKo {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -563913,8 +565660,70 @@ extension on _StringsNl {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -583504,8 +585313,70 @@ extension on _StringsPtBr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -603099,8 +604970,70 @@ extension on _StringsRu {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -622659,8 +624592,70 @@ extension on _StringsTh {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -642232,8 +644227,70 @@ extension on _StringsTr {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -661797,8 +663854,70 @@ extension on _StringsVi {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
@@ -681228,8 +683347,67 @@ extension on _StringsZhCn {
         return '关';
       case 'music_crossfade_title':
         return '交叉淡入';
+      case 'music_disc_add':
+        return '添加光盘';
+      case 'music_disc_added':
+        return ({required Object count}) => '已加入 ${count} 张光盘';
+      case 'music_disc_bluray_image_unsupported':
+        return '蓝光镜像（.iso）暂不支持章节导入，请使用盘目录';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => '第 ${n} 章';
+      case 'music_disc_choose_titles':
+        return '选择要导入的标题';
+      case 'music_disc_choose_titles_hint':
+        return '所选标题的每个章节都会成为一首曲目。';
+      case 'music_disc_import_chapters':
+        return '章节导入为曲目';
+      case 'music_disc_imported':
+        return ({required Object count}) => '已导入 ${count} 首曲目';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
+      case 'music_disc_lookup':
+        return '在 MusicBrainz 查曲目表';
+      case 'music_disc_lookup_applied':
+        return '已按 MusicBrainz 更新曲目名';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) => 'MusicBrainz 查询失败：${error}';
+      case 'music_disc_lookup_hint':
+        return '按标题搜索 DVD / 蓝光发行，按曲数与时长对号。';
+      case 'music_disc_lookup_none':
+        return '没有找到曲目表对得上的发行';
+      case 'music_disc_lookup_pick':
+        return '选择发行';
+      case 'music_disc_lookup_query':
+        return '发行标题';
+      case 'music_disc_lookup_searching':
+        return '正在查询 MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '平均误差 ${seconds} 秒';
+      case 'music_disc_no_chapters':
+        return '所选标题读不出章节';
+      case 'music_disc_none_found':
+        return '这个文件夹里没有认得出的 DVD / 蓝光';
+      case 'music_disc_not_imported':
+        return '章节未导入';
+      case 'music_disc_reimport_chapters':
+        return '重新导入章节';
+      case 'music_disc_remove':
+        return '从曲库移除';
+      case 'music_disc_remove_confirm':
+        return '从曲库移除这张盘？盘上的文件不会改动。';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            '标题 ${title} · 第 ${n} 章';
+      case 'music_disc_title_main':
+        return '正片';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => '标题 ${title} · ${duration} · ${count} 个章节';
+      case 'music_disc_unreadable':
+        return ({required Object path}) => '读不出这张 DVD / 蓝光：${path}';
       case 'music_dsd_rate_title':
         return 'DSD 转 PCM 采样率';
       case 'music_exclusive_hint':
@@ -700588,8 +702766,70 @@ extension on _StringsZhHk {
         return 'Off';
       case 'music_crossfade_title':
         return 'Crossfade';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
       case 'music_exclusive_hint':
