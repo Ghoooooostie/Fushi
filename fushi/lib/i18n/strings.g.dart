@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160361 (9433 per locale)
+/// Strings: 160497 (9441 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9743,6 +9743,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_furigana_hint => 'Tap a word to change its reading';
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  String get srs_note_history => 'Edit history';
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  String get srs_note_history_deleted => 'Deleted';
+  String get srs_note_history_empty => 'No edits yet';
+  String get srs_note_history_purged => 'Content permanently erased';
+  String get srs_note_history_restored => 'Restored';
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   String get srs_note_image_paste => 'Paste image';
   String get srs_note_image_paste_empty => 'No image on the clipboard';
   String get srs_note_image_pick => 'Choose image';
@@ -29880,6 +29890,24 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -53081,6 +53109,24 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -76406,6 +76452,24 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -99820,6 +99884,24 @@ class _StringsFr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -122996,6 +123078,24 @@ class _StringsId extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -146215,6 +146315,24 @@ class _StringsIt extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -168722,6 +168840,24 @@ class _StringsJa extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -190959,6 +191095,24 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -213907,6 +214061,24 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -237157,6 +237329,24 @@ class _StringsPtBr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -260384,6 +260574,24 @@ class _StringsRu extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -283361,6 +283569,24 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   @override
   String get srs_note_image_paste => 'Paste image';
   @override
@@ -306406,6 +306632,24 @@ class _StringsTr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -329446,6 +329690,24 @@ class _StringsVi extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -351094,6 +351356,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) => '「${base}」的读音';
   @override
+  String get srs_note_history => '修改历史';
+  @override
+  String srs_note_history_card({required Object n}) => '卡片 ${n}';
+  @override
+  String get srs_note_history_deleted => '删除';
+  @override
+  String get srs_note_history_empty => '还没有修改记录';
+  @override
+  String get srs_note_history_purged => '内容已彻底清除';
+  @override
+  String get srs_note_history_restored => '恢复';
+  @override
+  String srs_note_history_tag_added({required Object tag}) => '添加标签 ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) => '移除标签 ${tag}';
+  @override
   String get srs_note_image_paste => '粘贴图片';
   @override
   String get srs_note_image_paste_empty => '剪贴板里没有图片';
@@ -372494,6 +372772,24 @@ class _StringsZhHk extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -392686,6 +392982,22 @@ extension on _StringsEn {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -412287,6 +412599,22 @@ extension on _StringsAr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -431944,6 +432272,22 @@ extension on _StringsDe {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -451605,6 +451949,22 @@ extension on _StringsEs {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -471277,6 +471637,22 @@ extension on _StringsFr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -490909,6 +491285,22 @@ extension on _StringsId {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -510550,6 +510942,22 @@ extension on _StringsIt {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -530125,6 +530533,22 @@ extension on _StringsJa {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -549649,6 +550073,22 @@ extension on _StringsKo {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -569263,6 +569703,22 @@ extension on _StringsNl {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -588908,6 +589364,22 @@ extension on _StringsPtBr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -608557,6 +609029,22 @@ extension on _StringsRu {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -628166,6 +628654,22 @@ extension on _StringsTh {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -647793,6 +648297,22 @@ extension on _StringsTr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -667415,6 +667935,22 @@ extension on _StringsVi {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -686861,6 +687397,22 @@ extension on _StringsZhCn {
         return '点词改读音';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => '「${base}」的读音';
+      case 'srs_note_history':
+        return '修改历史';
+      case 'srs_note_history_card':
+        return ({required Object n}) => '卡片 ${n}';
+      case 'srs_note_history_deleted':
+        return '删除';
+      case 'srs_note_history_empty':
+        return '还没有修改记录';
+      case 'srs_note_history_purged':
+        return '内容已彻底清除';
+      case 'srs_note_history_restored':
+        return '恢复';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => '添加标签 ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => '移除标签 ${tag}';
       case 'srs_note_image_paste':
         return '粘贴图片';
       case 'srs_note_image_paste_empty':
@@ -706303,6 +706855,22 @@ extension on _StringsZhHk {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
