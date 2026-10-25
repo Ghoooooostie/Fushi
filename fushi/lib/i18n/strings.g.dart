@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159698 (9394 per locale)
+/// Strings: 159715 (9395 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8988,6 +8988,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get show_expression_tags => 'Show expression tags';
   String get show_floating_lyric => 'Floating lyric overlay';
   String get show_media_notification => 'Show media notification';
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   String get show_options => 'Show options';
   String get show_top_progress_bar => 'Reading progress indicator';
   String get skip_action => 'Skip action';
@@ -28539,6 +28541,9 @@ class _StringsAr extends _StringsEn {
   String get show_floating_lyric => 'ترجمة عائمة';
   @override
   String get show_media_notification => 'عرض إشعار الوسائط';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'عرض الخيارات';
   @override
@@ -51647,6 +51652,9 @@ class _StringsDe extends _StringsEn {
   String get show_floating_lyric => 'Schwebende Textzeile';
   @override
   String get show_media_notification => 'Medienbenachrichtigung anzeigen';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Optionen anzeigen';
   @override
@@ -74878,6 +74886,9 @@ class _StringsEs extends _StringsEn {
   String get show_floating_lyric => 'Letra flotante superpuesta';
   @override
   String get show_media_notification => 'Mostrar notificación multimedia';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Mostrar opciones';
   @override
@@ -98199,6 +98210,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get show_media_notification => 'Notification multimédia';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Afficher les options';
   @override
   String get show_top_progress_bar => 'Indicateur de progression';
@@ -121283,6 +121297,9 @@ class _StringsId extends _StringsEn {
   String get show_floating_lyric => 'Overlay subtitle mengambang';
   @override
   String get show_media_notification => 'Tampilkan notifikasi media';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Tampilkan Opsi';
   @override
@@ -144409,6 +144426,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get show_media_notification => 'Mostra notifica multimediale';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Mostra opzioni';
   @override
   String get show_top_progress_bar => 'Indicatore di avanzamento';
@@ -166823,6 +166843,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get show_media_notification => 'メディア通知を表示';
   @override
+  String get show_media_notification_hint =>
+      'オフにしても、再生中はタイトルと再生/一時停止ボタンだけの最小限の通知が残り、バックグラウンド再生がシステムに止められないようにします。';
+  @override
   String get show_options => 'オプション表示';
   @override
   String get show_top_progress_bar => '上部の読書進捗バー';
@@ -188967,6 +188990,9 @@ class _StringsKo extends _StringsEn {
   String get show_floating_lyric => '플로팅 자막';
   @override
   String get show_media_notification => '미디어 알림 표시';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => '옵션 표시';
   @override
@@ -211822,6 +211848,9 @@ class _StringsNl extends _StringsEn {
   String get show_floating_lyric => 'Zwevende ondertitel';
   @override
   String get show_media_notification => 'Mediamelding tonen';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Opties tonen';
   @override
@@ -234978,6 +235007,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get show_media_notification => 'Mostrar notificação de mídia';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Mostrar Opções';
   @override
   String get show_top_progress_bar => 'Indicador de progresso';
@@ -258113,6 +258145,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get show_media_notification => 'Показать уведомление о медиа';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Показать параметры';
   @override
   String get show_top_progress_bar => 'Индикатор прогресса чтения';
@@ -280997,6 +281032,9 @@ class _StringsTh extends _StringsEn {
   String get show_floating_lyric => 'ซับไตเติลลอย';
   @override
   String get show_media_notification => 'แสดงการแจ้งเตือนสื่อ';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'แสดงตัวเลือก';
   @override
@@ -303949,6 +303987,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get show_media_notification => 'Medya bildirimini göster';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Seçenekleri göster';
   @override
   String get show_top_progress_bar => 'Okuma ilerleme göstergesi';
@@ -326896,6 +326937,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get show_media_notification => 'Hiện thông báo media';
   @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
+  @override
   String get show_options => 'Hiện tùy chọn';
   @override
   String get show_top_progress_bar => 'Chỉ báo tiến độ đọc';
@@ -348544,6 +348588,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get show_media_notification => '显示媒体通知';
   @override
+  String get show_media_notification_hint =>
+      '关闭后，播放时仍保留一条只有书名和播放/暂停键的最简通知，防止后台播放被系统停掉。';
+  @override
   String get show_options => '显示选项';
   @override
   String get show_top_progress_bar => '顶部阅读进度';
@@ -369773,6 +369820,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get show_media_notification => '顯示媒體通知';
   @override
+  String get show_media_notification_hint =>
+      '關閉後，播放時仍保留一則只有書名和播放/暫停鍵的最簡通知，防止背景播放被系統停掉。';
+  @override
   String get show_options => '顯示選項';
   @override
   String get show_top_progress_bar => '頂部閱讀進度';
@@ -390032,6 +390082,8 @@ extension on _StringsEn {
         return 'Floating lyric overlay';
       case 'show_media_notification':
         return 'Show media notification';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Show options';
       case 'show_top_progress_bar':
@@ -409558,6 +409610,8 @@ extension on _StringsAr {
         return 'ترجمة عائمة';
       case 'show_media_notification':
         return 'عرض إشعار الوسائط';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'عرض الخيارات';
       case 'show_top_progress_bar':
@@ -429140,6 +429194,8 @@ extension on _StringsDe {
         return 'Schwebende Textzeile';
       case 'show_media_notification':
         return 'Medienbenachrichtigung anzeigen';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Optionen anzeigen';
       case 'show_top_progress_bar':
@@ -448726,6 +448782,8 @@ extension on _StringsEs {
         return 'Letra flotante superpuesta';
       case 'show_media_notification':
         return 'Mostrar notificación multimedia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostrar opciones';
       case 'show_top_progress_bar':
@@ -468323,6 +468381,8 @@ extension on _StringsFr {
         return 'Sous-titre flottant';
       case 'show_media_notification':
         return 'Notification multimédia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Afficher les options';
       case 'show_top_progress_bar':
@@ -487880,6 +487940,8 @@ extension on _StringsId {
         return 'Overlay subtitle mengambang';
       case 'show_media_notification':
         return 'Tampilkan notifikasi media';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Tampilkan Opsi';
       case 'show_top_progress_bar':
@@ -507446,6 +507508,8 @@ extension on _StringsIt {
         return 'Testo flottante sovrapposto';
       case 'show_media_notification':
         return 'Mostra notifica multimediale';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostra opzioni';
       case 'show_top_progress_bar':
@@ -526946,6 +527010,8 @@ extension on _StringsJa {
         return 'フローティング字幕';
       case 'show_media_notification':
         return 'メディア通知を表示';
+      case 'show_media_notification_hint':
+        return 'オフにしても、再生中はタイトルと再生/一時停止ボタンだけの最小限の通知が残り、バックグラウンド再生がシステムに止められないようにします。';
       case 'show_options':
         return 'オプション表示';
       case 'show_top_progress_bar':
@@ -546395,6 +546461,8 @@ extension on _StringsKo {
         return '플로팅 자막';
       case 'show_media_notification':
         return '미디어 알림 표시';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return '옵션 표시';
       case 'show_top_progress_bar':
@@ -565934,6 +566002,8 @@ extension on _StringsNl {
         return 'Zwevende ondertitel';
       case 'show_media_notification':
         return 'Mediamelding tonen';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Opties tonen';
       case 'show_top_progress_bar':
@@ -585504,6 +585574,8 @@ extension on _StringsPtBr {
         return 'Legenda flutuante sobreposta';
       case 'show_media_notification':
         return 'Mostrar notificação de mídia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostrar Opções';
       case 'show_top_progress_bar':
@@ -605078,6 +605150,8 @@ extension on _StringsRu {
         return 'Плавающие субтитры';
       case 'show_media_notification':
         return 'Показать уведомление о медиа';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Показать параметры';
       case 'show_top_progress_bar':
@@ -624612,6 +624686,8 @@ extension on _StringsTh {
         return 'ซับไตเติลลอย';
       case 'show_media_notification':
         return 'แสดงการแจ้งเตือนสื่อ';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'แสดงตัวเลือก';
       case 'show_top_progress_bar':
@@ -644164,6 +644240,8 @@ extension on _StringsTr {
         return 'Kayan altyazı katmanı';
       case 'show_media_notification':
         return 'Medya bildirimini göster';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Seçenekleri göster';
       case 'show_top_progress_bar':
@@ -663711,6 +663789,8 @@ extension on _StringsVi {
         return 'Phụ đề nổi';
       case 'show_media_notification':
         return 'Hiện thông báo media';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Hiện tùy chọn';
       case 'show_top_progress_bar':
@@ -683109,6 +683189,8 @@ extension on _StringsZhCn {
         return '悬浮字幕';
       case 'show_media_notification':
         return '显示媒体通知';
+      case 'show_media_notification_hint':
+        return '关闭后，播放时仍保留一条只有书名和播放/暂停键的最简通知，防止后台播放被系统停掉。';
       case 'show_options':
         return '显示选项';
       case 'show_top_progress_bar':
@@ -702452,6 +702534,8 @@ extension on _StringsZhHk {
         return '懸浮字幕';
       case 'show_media_notification':
         return '顯示媒體通知';
+      case 'show_media_notification_hint':
+        return '關閉後，播放時仍保留一則只有書名和播放/暫停鍵的最簡通知，防止背景播放被系統停掉。';
       case 'show_options':
         return '顯示選項';
       case 'show_top_progress_bar':
