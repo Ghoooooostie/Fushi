@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160242 (9426 per locale)
+/// Strings: 160344 (9432 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11501,6 +11501,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_episode_list => 'Episode list';
   String get video_control_favorite_sentence => 'Favorite current sentence';
   String get video_control_fullscreen => 'Fullscreen';
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
   String get video_control_next_cue => 'Next subtitle';
   String get video_control_ocr_frame => 'Recognize on-screen text';
   String get video_control_palette_hint =>
@@ -11508,6 +11511,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_palette_title => 'All buttons';
   String get video_control_play_pause => 'Play/Pause';
   String get video_control_previous_cue => 'Previous subtitle';
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
   String get video_control_reject_required =>
       'Required controls must stay on the player.';
   String get video_control_reject_unavailable =>
@@ -11515,6 +11520,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_reject_volume_bottom =>
       'Volume can only sit on the bottom bar.';
   String get video_control_remove_from_slot => 'Move out';
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   String get video_control_reset_layout => 'Reset player button layout';
   String get video_control_screenshot => 'Screenshot';
   String get video_control_seek_backward => 'Back 10s';
@@ -12328,6 +12335,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_immersive_mode => 'Immersive mode';
   String get video_setting_immersive_mode_hint =>
       'Controls what remains available after pressing the side lock button';
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   String get video_setting_jimaku_default_language =>
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
@@ -32919,6 +32930,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'ملء الشاشة';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'الترجمة التالية';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -32932,6 +32948,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'الترجمة السابقة';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
   @override
@@ -32941,6 +32960,9 @@ class _StringsAr extends _StringsEn {
       'لا يمكن وضع الصوت إلا في الشريط السفلي.';
   @override
   String get video_control_remove_from_slot => 'نقل للخارج';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'إعادة تعيين تخطيط أزرار المشغّل';
   @override
@@ -34309,6 +34331,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'لغة الترجمة الافتراضية';
   @override
@@ -56142,6 +56170,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Vollbild';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Nächster Untertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -56155,6 +56188,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Voriger Untertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
   @override
@@ -56165,6 +56201,9 @@ class _StringsDe extends _StringsEn {
       'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
   @override
   String get video_control_remove_from_slot => 'Entfernen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Player-Tastenlayout zurücksetzen';
   @override
@@ -57560,6 +57599,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standard-Untertitelsprache';
@@ -79470,6 +79515,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Pantalla completa';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtítulo siguiente';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -79483,6 +79533,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtítulo anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Los controles obligatorios deben permanecer en el reproductor.';
   @override
@@ -79493,6 +79546,9 @@ class _StringsEs extends _StringsEn {
       'El volumen solo puede ir en la barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Quitar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restablecer la disposición de los botones del reproductor';
@@ -80890,6 +80946,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma de subtítulos predeterminado';
@@ -102870,6 +102932,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Plein écran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sous-titre suivant';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -102883,6 +102950,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sous-titre précédent';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Les contrôles obligatoires doivent rester sur le lecteur.';
   @override
@@ -102893,6 +102963,9 @@ class _StringsFr extends _StringsEn {
       'Le volume ne peut être placé que sur la barre du bas.';
   @override
   String get video_control_remove_from_slot => 'Retirer';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Rétablir la disposition des boutons du lecteur';
@@ -104299,6 +104372,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Langue de sous-titres par défaut';
@@ -126011,6 +126090,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Layar penuh';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtitle berikutnya';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -126024,6 +126108,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtitle sebelumnya';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Kontrol wajib harus tetap di pemutar.';
   @override
@@ -126034,6 +126121,9 @@ class _StringsId extends _StringsEn {
       'Volume hanya bisa berada di bilah bawah.';
   @override
   String get video_control_remove_from_slot => 'Pindahkan keluar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Setel ulang tata letak tombol pemutar';
@@ -127419,6 +127509,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Bahasa subtitle default';
   @override
@@ -149230,6 +149326,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Schermo intero';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sottotitolo successivo';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -149243,6 +149344,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sottotitolo precedente';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'I controlli obbligatori devono restare sul lettore.';
   @override
@@ -149253,6 +149357,9 @@ class _StringsIt extends _StringsEn {
       'Il volume può stare solo sulla barra inferiore.';
   @override
   String get video_control_remove_from_slot => 'Rimuovi';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Ripristina il layout dei pulsanti del lettore';
@@ -150639,6 +150746,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Lingua sottotitoli predefinita';
@@ -171622,6 +171735,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_fullscreen => '全画面';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '次の字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -171635,6 +171753,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_previous_cue => '前の字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必須の操作ボタンはプレーヤー上に残す必要があります。';
   @override
   String get video_control_reject_unavailable => 'この操作ボタンはそこに配置できません。';
@@ -171642,6 +171763,9 @@ class _StringsJa extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量は下部バーにのみ配置できます。';
   @override
   String get video_control_remove_from_slot => '外す';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'プレーヤーのボタン配置を初期化';
   @override
@@ -172958,6 +173082,12 @@ class _StringsJa extends _StringsEn {
   String get video_setting_immersive_mode => 'イマーシブモード';
   @override
   String get video_setting_immersive_mode_hint => 'サイドのロックボタンを押した後も使える操作を制御します';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'デフォルト字幕言語';
   @override
@@ -193853,6 +193983,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_fullscreen => '전체 화면';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '다음 자막';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -193866,6 +194001,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_previous_cue => '이전 자막';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '필수 조작은 플레이어에 남아 있어야 합니다.';
   @override
   String get video_control_reject_unavailable => '이 조작은 여기에 둘 수 없습니다.';
@@ -193873,6 +194011,9 @@ class _StringsKo extends _StringsEn {
   String get video_control_reject_volume_bottom => '음량은 하단 바에만 둘 수 있습니다.';
   @override
   String get video_control_remove_from_slot => '빼내기';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '플레이어 버튼 배치 초기화';
   @override
@@ -195199,6 +195340,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '기본 자막 언어';
   @override
@@ -216896,6 +217043,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Volledig scherm';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Volgende ondertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -216909,6 +217061,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Vorige ondertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Vereiste bedieningselementen moeten op de speler blijven.';
   @override
@@ -216919,6 +217074,9 @@ class _StringsNl extends _StringsEn {
       'Het volume kan alleen op de onderbalk staan.';
   @override
   String get video_control_remove_from_slot => 'Verwijderen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Spelerknopindeling herstellen';
   @override
@@ -218304,6 +218462,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standaard ondertiteltaal';
@@ -240133,6 +240297,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tela cheia';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Próxima legenda';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -240146,6 +240315,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Legenda anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Os controles obrigatórios devem permanecer no player.';
   @override
@@ -240156,6 +240328,9 @@ class _StringsPtBr extends _StringsEn {
       'O volume só pode ficar na barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Remover';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restaurar layout dos botões do player';
@@ -241552,6 +241727,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma padrão de legenda';
@@ -263340,6 +263521,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Полный экран';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Следующий субтитр';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -263353,6 +263539,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Предыдущий субтитр';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Обязательные элементы управления должны оставаться на плеере.';
   @override
@@ -263363,6 +263552,9 @@ class _StringsRu extends _StringsEn {
       'Громкость можно разместить только на нижней панели.';
   @override
   String get video_control_remove_from_slot => 'Убрать';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Сбросить расположение кнопок плеера';
@@ -264756,6 +264948,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Язык субтитров по умолчанию';
@@ -286289,6 +286487,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_fullscreen => 'เต็มจอ';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'คำบรรยายถัดไป';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -286302,6 +286505,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_previous_cue => 'คำบรรยายก่อนหน้า';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
   @override
@@ -286312,6 +286518,9 @@ class _StringsTh extends _StringsEn {
       'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
   @override
   String get video_control_remove_from_slot => 'นำออก';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
@@ -287676,6 +287885,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'ภาษาคำบรรยายเริ่มต้น';
   @override
@@ -309338,6 +309553,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tam ekran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sonraki altyazı';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -309351,6 +309571,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Önceki altyazı';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Zorunlu denetimler oynatıcıda kalmalıdır.';
   @override
@@ -309361,6 +309584,9 @@ class _StringsTr extends _StringsEn {
       'Ses yalnızca alt çubukta bulunabilir.';
   @override
   String get video_control_remove_from_slot => 'Dışarı taşı';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Oynatıcı düğme düzenini sıfırla';
   @override
@@ -310742,6 +310968,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Varsayılan altyazı dili';
   @override
@@ -332361,6 +332593,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Toàn màn hình';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Câu phụ đề sau';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -332374,6 +332611,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Câu phụ đề trước';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Các nút điều khiển bắt buộc phải ở lại trình phát.';
   @override
@@ -332384,6 +332624,9 @@ class _StringsVi extends _StringsEn {
       'Âm lượng chỉ có thể đặt ở thanh dưới.';
   @override
   String get video_control_remove_from_slot => 'Gỡ ra';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Khôi phục bố cục nút trình phát mặc định';
@@ -333763,6 +334006,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Ngôn ngữ phụ đề mặc định';
@@ -353747,6 +353996,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_fullscreen => '全屏';
   @override
+  String get video_control_immersive_layout_hint =>
+      '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+  @override
+  String get video_control_immersive_layout_title => '沉浸模式按钮';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => '识别画面文字';
@@ -353759,6 +354013,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock => '锁按钮是退出沉浸模式的唯一入口，必须保留。';
+  @override
   String get video_control_reject_required => '必选控制必须保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在这里。';
@@ -353766,6 +354022,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底栏。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout => '恢复默认沉浸模式按钮';
   @override
   String get video_control_reset_layout => '恢复默认播放器按钮布局';
   @override
@@ -354990,6 +355248,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下侧边锁后仍允许哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal => '沉浸时点画面显示字幕';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
   @override
   String get video_setting_jimaku_default_language => '默认字幕语言';
   @override
@@ -375245,6 +375508,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_fullscreen => '全螢幕';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -375257,6 +375525,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必選控制必須保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在這裡。';
@@ -375264,6 +375535,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底欄。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '還原預設播放器按鈕版面';
   @override
@@ -376540,6 +376814,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下側邊鎖後仍可使用哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '預設字幕語言';
   @override
@@ -395168,6 +395448,10 @@ extension on _StringsEn {
         return 'Favorite current sentence';
       case 'video_control_fullscreen':
         return 'Fullscreen';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Next subtitle';
       case 'video_control_ocr_frame':
@@ -395180,6 +395464,8 @@ extension on _StringsEn {
         return 'Play/Pause';
       case 'video_control_previous_cue':
         return 'Previous subtitle';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Required controls must stay on the player.';
       case 'video_control_reject_unavailable':
@@ -395188,6 +395474,8 @@ extension on _StringsEn {
         return 'Volume can only sit on the bottom bar.';
       case 'video_control_remove_from_slot':
         return 'Move out';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Reset player button layout';
       case 'video_control_screenshot':
@@ -396334,6 +396622,10 @@ extension on _StringsEn {
         return 'Immersive mode';
       case 'video_setting_immersive_mode_hint':
         return 'Controls what remains available after pressing the side lock button';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
@@ -414756,6 +415048,10 @@ extension on _StringsAr {
         return 'تفضيل الجملة الحالية';
       case 'video_control_fullscreen':
         return 'ملء الشاشة';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'الترجمة التالية';
       case 'video_control_ocr_frame':
@@ -414768,6 +415064,8 @@ extension on _StringsAr {
         return 'تشغيل/إيقاف مؤقت';
       case 'video_control_previous_cue':
         return 'الترجمة السابقة';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
       case 'video_control_reject_unavailable':
@@ -414776,6 +415074,8 @@ extension on _StringsAr {
         return 'لا يمكن وضع الصوت إلا في الشريط السفلي.';
       case 'video_control_remove_from_slot':
         return 'نقل للخارج';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'إعادة تعيين تخطيط أزرار المشغّل';
       case 'video_control_screenshot':
@@ -415922,6 +416222,10 @@ extension on _StringsAr {
         return 'وضع الانغماس';
       case 'video_setting_immersive_mode_hint':
         return 'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
@@ -434415,6 +434719,10 @@ extension on _StringsDe {
         return 'Aktuellen Satz favorisieren';
       case 'video_control_fullscreen':
         return 'Vollbild';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Nächster Untertitel';
       case 'video_control_ocr_frame':
@@ -434427,6 +434735,8 @@ extension on _StringsDe {
         return 'Wiedergabe/Pause';
       case 'video_control_previous_cue':
         return 'Voriger Untertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
       case 'video_control_reject_unavailable':
@@ -434435,6 +434745,8 @@ extension on _StringsDe {
         return 'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
       case 'video_control_remove_from_slot':
         return 'Entfernen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Player-Tastenlayout zurücksetzen';
       case 'video_control_screenshot':
@@ -435585,6 +435897,10 @@ extension on _StringsDe {
         return 'Immersiver Modus';
       case 'video_setting_immersive_mode_hint':
         return 'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
@@ -454065,6 +454381,10 @@ extension on _StringsEs {
         return 'Añadir la frase actual a favoritos';
       case 'video_control_fullscreen':
         return 'Pantalla completa';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtítulo siguiente';
       case 'video_control_ocr_frame':
@@ -454077,6 +454397,8 @@ extension on _StringsEs {
         return 'Reproducir/Pausar';
       case 'video_control_previous_cue':
         return 'Subtítulo anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Los controles obligatorios deben permanecer en el reproductor.';
       case 'video_control_reject_unavailable':
@@ -454085,6 +454407,8 @@ extension on _StringsEs {
         return 'El volumen solo puede ir en la barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Quitar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restablecer la disposición de los botones del reproductor';
       case 'video_control_screenshot':
@@ -455233,6 +455557,10 @@ extension on _StringsEs {
         return 'Modo inmersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
@@ -473728,6 +474056,10 @@ extension on _StringsFr {
         return 'Mettre la phrase actuelle en favori';
       case 'video_control_fullscreen':
         return 'Plein écran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sous-titre suivant';
       case 'video_control_ocr_frame':
@@ -473740,6 +474072,8 @@ extension on _StringsFr {
         return 'Lecture/Pause';
       case 'video_control_previous_cue':
         return 'Sous-titre précédent';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Les contrôles obligatoires doivent rester sur le lecteur.';
       case 'video_control_reject_unavailable':
@@ -473748,6 +474082,8 @@ extension on _StringsFr {
         return 'Le volume ne peut être placé que sur la barre du bas.';
       case 'video_control_remove_from_slot':
         return 'Retirer';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Rétablir la disposition des boutons du lecteur';
       case 'video_control_screenshot':
@@ -474898,6 +475234,10 @@ extension on _StringsFr {
         return 'Mode immersif';
       case 'video_setting_immersive_mode_hint':
         return 'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
@@ -493342,6 +493682,10 @@ extension on _StringsId {
         return 'Favoritkan kalimat saat ini';
       case 'video_control_fullscreen':
         return 'Layar penuh';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtitle berikutnya';
       case 'video_control_ocr_frame':
@@ -493354,6 +493698,8 @@ extension on _StringsId {
         return 'Putar/Jeda';
       case 'video_control_previous_cue':
         return 'Subtitle sebelumnya';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Kontrol wajib harus tetap di pemutar.';
       case 'video_control_reject_unavailable':
@@ -493362,6 +493708,8 @@ extension on _StringsId {
         return 'Volume hanya bisa berada di bilah bawah.';
       case 'video_control_remove_from_slot':
         return 'Pindahkan keluar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Setel ulang tata letak tombol pemutar';
       case 'video_control_screenshot':
@@ -494508,6 +494856,10 @@ extension on _StringsId {
         return 'Mode imersif';
       case 'video_setting_immersive_mode_hint':
         return 'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
@@ -512984,6 +513336,10 @@ extension on _StringsIt {
         return 'Aggiungi la frase corrente ai preferiti';
       case 'video_control_fullscreen':
         return 'Schermo intero';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sottotitolo successivo';
       case 'video_control_ocr_frame':
@@ -512996,6 +513352,8 @@ extension on _StringsIt {
         return 'Riproduci/Pausa';
       case 'video_control_previous_cue':
         return 'Sottotitolo precedente';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'I controlli obbligatori devono restare sul lettore.';
       case 'video_control_reject_unavailable':
@@ -513004,6 +513362,8 @@ extension on _StringsIt {
         return 'Il volume può stare solo sulla barra inferiore.';
       case 'video_control_remove_from_slot':
         return 'Rimuovi';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Ripristina il layout dei pulsanti del lettore';
       case 'video_control_screenshot':
@@ -514151,6 +514511,10 @@ extension on _StringsIt {
         return 'Modalità immersiva';
       case 'video_setting_immersive_mode_hint':
         return 'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
@@ -532520,6 +532884,10 @@ extension on _StringsJa {
         return '現在の文をお気に入りに登録';
       case 'video_control_fullscreen':
         return '全画面';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '次の字幕';
       case 'video_control_ocr_frame':
@@ -532532,6 +532900,8 @@ extension on _StringsJa {
         return '再生／一時停止';
       case 'video_control_previous_cue':
         return '前の字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必須の操作ボタンはプレーヤー上に残す必要があります。';
       case 'video_control_reject_unavailable':
@@ -532540,6 +532910,8 @@ extension on _StringsJa {
         return '音量は下部バーにのみ配置できます。';
       case 'video_control_remove_from_slot':
         return '外す';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'プレーヤーのボタン配置を初期化';
       case 'video_control_screenshot':
@@ -533676,6 +534048,10 @@ extension on _StringsJa {
         return 'イマーシブモード';
       case 'video_setting_immersive_mode_hint':
         return 'サイドのロックボタンを押した後も使える操作を制御します';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
@@ -552036,6 +552412,10 @@ extension on _StringsKo {
         return '현재 문장 즐겨찾기';
       case 'video_control_fullscreen':
         return '전체 화면';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '다음 자막';
       case 'video_control_ocr_frame':
@@ -552048,6 +552428,8 @@ extension on _StringsKo {
         return '재생/일시정지';
       case 'video_control_previous_cue':
         return '이전 자막';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '필수 조작은 플레이어에 남아 있어야 합니다.';
       case 'video_control_reject_unavailable':
@@ -552056,6 +552438,8 @@ extension on _StringsKo {
         return '음량은 하단 바에만 둘 수 있습니다.';
       case 'video_control_remove_from_slot':
         return '빼내기';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '플레이어 버튼 배치 초기화';
       case 'video_control_screenshot':
@@ -553196,6 +553580,10 @@ extension on _StringsKo {
         return '몰입 모드';
       case 'video_setting_immersive_mode_hint':
         return '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
@@ -571658,6 +572046,10 @@ extension on _StringsNl {
         return 'Huidige zin toevoegen aan favorieten';
       case 'video_control_fullscreen':
         return 'Volledig scherm';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Volgende ondertitel';
       case 'video_control_ocr_frame':
@@ -571670,6 +572062,8 @@ extension on _StringsNl {
         return 'Afspelen/Pauzeren';
       case 'video_control_previous_cue':
         return 'Vorige ondertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Vereiste bedieningselementen moeten op de speler blijven.';
       case 'video_control_reject_unavailable':
@@ -571678,6 +572072,8 @@ extension on _StringsNl {
         return 'Het volume kan alleen op de onderbalk staan.';
       case 'video_control_remove_from_slot':
         return 'Verwijderen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Spelerknopindeling herstellen';
       case 'video_control_screenshot':
@@ -572827,6 +573223,10 @@ extension on _StringsNl {
         return 'Immersieve modus';
       case 'video_setting_immersive_mode_hint':
         return 'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
@@ -591291,6 +591691,10 @@ extension on _StringsPtBr {
         return 'Favoritar frase atual';
       case 'video_control_fullscreen':
         return 'Tela cheia';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Próxima legenda';
       case 'video_control_ocr_frame':
@@ -591303,6 +591707,8 @@ extension on _StringsPtBr {
         return 'Reproduzir/Pausar';
       case 'video_control_previous_cue':
         return 'Legenda anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Os controles obrigatórios devem permanecer no player.';
       case 'video_control_reject_unavailable':
@@ -591311,6 +591717,8 @@ extension on _StringsPtBr {
         return 'O volume só pode ficar na barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Remover';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restaurar layout dos botões do player';
       case 'video_control_screenshot':
@@ -592460,6 +592868,10 @@ extension on _StringsPtBr {
         return 'Modo imersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
@@ -610932,6 +611344,10 @@ extension on _StringsRu {
         return 'В избранное текущее предложение';
       case 'video_control_fullscreen':
         return 'Полный экран';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Следующий субтитр';
       case 'video_control_ocr_frame':
@@ -610944,6 +611360,8 @@ extension on _StringsRu {
         return 'Воспроизведение/Пауза';
       case 'video_control_previous_cue':
         return 'Предыдущий субтитр';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Обязательные элементы управления должны оставаться на плеере.';
       case 'video_control_reject_unavailable':
@@ -610952,6 +611370,8 @@ extension on _StringsRu {
         return 'Громкость можно разместить только на нижней панели.';
       case 'video_control_remove_from_slot':
         return 'Убрать';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Сбросить расположение кнопок плеера';
       case 'video_control_screenshot':
@@ -612098,6 +612518,10 @@ extension on _StringsRu {
         return 'Иммерсивный режим';
       case 'video_setting_immersive_mode_hint':
         return 'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
@@ -630528,6 +630952,10 @@ extension on _StringsTh {
         return 'เพิ่มประโยคปัจจุบันในรายการโปรด';
       case 'video_control_fullscreen':
         return 'เต็มจอ';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'คำบรรยายถัดไป';
       case 'video_control_ocr_frame':
@@ -630540,6 +630968,8 @@ extension on _StringsTh {
         return 'เล่น/หยุดชั่วคราว';
       case 'video_control_previous_cue':
         return 'คำบรรยายก่อนหน้า';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
       case 'video_control_reject_unavailable':
@@ -630548,6 +630978,8 @@ extension on _StringsTh {
         return 'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
       case 'video_control_remove_from_slot':
         return 'นำออก';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
       case 'video_control_screenshot':
@@ -631692,6 +632124,10 @@ extension on _StringsTh {
         return 'โหมดดื่มด่ำ';
       case 'video_setting_immersive_mode_hint':
         return 'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
@@ -650148,6 +650584,10 @@ extension on _StringsTr {
         return 'Geçerli cümleyi sık kullanılanlara ekle';
       case 'video_control_fullscreen':
         return 'Tam ekran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sonraki altyazı';
       case 'video_control_ocr_frame':
@@ -650160,6 +650600,8 @@ extension on _StringsTr {
         return 'Oynat/Duraklat';
       case 'video_control_previous_cue':
         return 'Önceki altyazı';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Zorunlu denetimler oynatıcıda kalmalıdır.';
       case 'video_control_reject_unavailable':
@@ -650168,6 +650610,8 @@ extension on _StringsTr {
         return 'Ses yalnızca alt çubukta bulunabilir.';
       case 'video_control_remove_from_slot':
         return 'Dışarı taşı';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Oynatıcı düğme düzenini sıfırla';
       case 'video_control_screenshot':
@@ -651315,6 +651759,10 @@ extension on _StringsTr {
         return 'Sürükleyici mod';
       case 'video_setting_immersive_mode_hint':
         return 'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
@@ -669759,6 +670207,10 @@ extension on _StringsVi {
         return 'Yêu thích câu hiện tại';
       case 'video_control_fullscreen':
         return 'Toàn màn hình';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Câu phụ đề sau';
       case 'video_control_ocr_frame':
@@ -669771,6 +670223,8 @@ extension on _StringsVi {
         return 'Phát/Tạm dừng';
       case 'video_control_previous_cue':
         return 'Câu phụ đề trước';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Các nút điều khiển bắt buộc phải ở lại trình phát.';
       case 'video_control_reject_unavailable':
@@ -669779,6 +670233,8 @@ extension on _StringsVi {
         return 'Âm lượng chỉ có thể đặt ở thanh dưới.';
       case 'video_control_remove_from_slot':
         return 'Gỡ ra';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Khôi phục bố cục nút trình phát mặc định';
       case 'video_control_screenshot':
@@ -670924,6 +671380,10 @@ extension on _StringsVi {
         return 'Chế độ đắm chìm';
       case 'video_setting_immersive_mode_hint':
         return 'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
@@ -689167,6 +689627,10 @@ extension on _StringsZhCn {
         return '收藏当前句';
       case 'video_control_fullscreen':
         return '全屏';
+      case 'video_control_immersive_layout_hint':
+        return '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+      case 'video_control_immersive_layout_title':
+        return '沉浸模式按钮';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -689179,6 +689643,8 @@ extension on _StringsZhCn {
         return '播放/暂停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return '锁按钮是退出沉浸模式的唯一入口，必须保留。';
       case 'video_control_reject_required':
         return '必选控制必须保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -689187,6 +689653,8 @@ extension on _StringsZhCn {
         return '音量只能放在底栏。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return '恢复默认沉浸模式按钮';
       case 'video_control_reset_layout':
         return '恢复默认播放器按钮布局';
       case 'video_control_screenshot':
@@ -690320,6 +690788,10 @@ extension on _StringsZhCn {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下侧边锁后仍允许哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return '沉浸时点画面显示字幕';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
       case 'video_setting_jimaku_default_language':
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
@@ -708604,6 +709076,10 @@ extension on _StringsZhHk {
         return '收藏目前句子';
       case 'video_control_fullscreen':
         return '全螢幕';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -708616,6 +709092,8 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必選控制必須保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -708624,6 +709102,8 @@ extension on _StringsZhHk {
         return '音量只能放在底欄。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '還原預設播放器按鈕版面';
       case 'video_control_screenshot':
@@ -709758,6 +710238,10 @@ extension on _StringsZhHk {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下側邊鎖後仍可使用哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
