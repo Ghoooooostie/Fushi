@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160055 (9415 per locale)
+/// Strings: 161568 (9504 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1234,7 +1234,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_default_section => 'Default tags';
   String get anki_tag_include_category => 'Add source category tag';
   String get anki_tag_include_category_hint =>
-      'Books get "book", videos get "video", games get "game"';
+      'Books get "book", videos get "video", games get "game", music gets "music"';
   String get anki_tag_include_fushi => 'Add "fushi" tag';
   String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
@@ -7358,6 +7358,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_artist_unknown => 'Unknown artist';
   String get music_audio_device_auto => 'System default';
   String get music_audio_device_title => 'Output device';
+  String get music_cd_album_name => 'Audio CD';
+  String get music_cd_choose_drive => 'Choose a drive';
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  String get music_cd_no_drive => 'No optical drive found';
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  String get music_cd_read => 'Read audio CD';
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  String get music_cd_reading => 'Reading disc…';
+  String get music_cd_reread => 'Read disc again';
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   String get music_crossfade_continuous_title => 'Crossfade gapless tracks too';
@@ -7372,8 +7391,61 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_desktop_lyrics_hint =>
       'Show the current lyric line in a floating always-on-top window while music plays';
   String get music_desktop_lyrics_title => 'Desktop lyrics';
+  String get music_disc_add => 'Add disc';
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  String get music_disc_choose_titles => 'Choose titles to import';
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
   String music_disc_label({required Object n}) => 'Disc ${n}';
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  String get music_disc_lookup_pick => 'Choose a release';
+  String get music_disc_lookup_query => 'Release title';
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  String get music_disc_not_imported => 'Chapters not imported';
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  String get music_disc_remove => 'Remove from library';
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  String get music_disc_title_main => 'Main feature';
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  String get music_eq_bands => 'Bands';
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  String get music_eq_enabled_title => 'Enable equalizer';
+  String get music_eq_off => 'Off';
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  String get music_eq_reset => 'Reset to flat';
+  String get music_eq_title => 'Equalizer';
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
   String get music_exclusive_title => 'Exclusive (bit-perfect) output';
@@ -7383,6 +7455,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Preload the next track so albums play without gaps';
   String get music_gapless_title => 'Gapless playback';
   String get music_hi_res_badge => 'Hi-Res';
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  String get music_karaoke_open => 'Open karaoke view';
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  String get music_karaoke_overlay_off => 'Off';
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  String get music_karaoke_title => 'Karaoke subtitles';
   String get music_library_empty => 'No music yet';
   String get music_library_empty_hint =>
       'Add a folder that holds your music files.';
@@ -7398,13 +7482,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_lyrics_ab_loop_line => 'Loop this line';
   String get music_lyrics_ab_loop_off => 'Stop looping';
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   String get music_lyrics_empty => 'No lyrics for this track';
   String get music_lyrics_export_ttml => 'Export TTML next to the audio file';
   String get music_lyrics_exported => 'Lyrics exported';
@@ -7447,6 +7524,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_output_fallback_exclusive =>
       'Exclusive output is unavailable, switched to shared mode';
   String get music_play_all => 'Play';
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
   String get music_playlists_empty => 'No playlists yet';
   String get music_replaygain_hint =>
       'Album gain when playing an album in order, track gain otherwise';
@@ -7490,6 +7569,48 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_section_playlists => 'Playlists';
   String get music_section_songs => 'Songs';
   String get music_section_works => 'Works';
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  String music_server_added({required Object name}) => 'Added ${name}';
+  String music_server_album_count({required Object count}) => '${count} albums';
+  String get music_server_allow_http => 'Allow plain HTTP';
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  String get music_server_bitrate_original => 'Original';
+  String get music_server_bitrate_title => 'Server streaming quality';
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  String get music_server_field_api_key => 'API key (optional)';
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  String get music_server_field_name => 'Name (optional)';
+  String get music_server_field_password => 'Password';
+  String get music_server_field_url => 'Server address';
+  String get music_server_field_user => 'Username';
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  String get music_server_load_failed => 'Could not load from the server';
+  String get music_server_no_albums => 'No albums on this server';
+  String get music_server_remove => 'Remove server';
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  String get music_server_retry => 'Retry';
+  String get music_server_search => 'Search server';
+  String get music_server_search_empty => 'No results';
+  String get music_server_search_hint => 'Albums, artists, songs';
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  String get music_server_test_and_save => 'Test and save';
+  String get music_servers_empty => 'No music servers yet';
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  String get music_servers_manage => 'Servers';
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  String get music_servers_title => 'Server libraries';
   String get music_setting_acoustid_key => 'AcoustID API key';
   String get music_setting_acoustid_key_builtin_hint =>
       'Built in; enter your own AcoustID application key to override it. Only the fingerprint and duration are sent.';
@@ -7524,6 +7645,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get music_signal_stage_channel_remix => 'Channel remix';
   String get music_signal_stage_crossfade => 'Crossfade';
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  String get music_signal_stage_equalizer => 'Equalizer';
   String get music_signal_stage_filters => 'Audio filters';
   String get music_signal_stage_format_conversion => 'Sample format conversion';
   String get music_signal_stage_no_output => 'Audio output not open';
@@ -15356,7 +15478,7 @@ class _StringsAr extends _StringsEn {
   String get anki_tag_include_category => 'إضافة وسم فئة المصدر';
   @override
   String get anki_tag_include_category_hint =>
-      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+      'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
   @override
   String get anki_tag_include_fushi => 'إضافة وسم "fushi"';
   @override
@@ -25714,6 +25836,38 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -25737,9 +25891,96 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -25756,6 +25997,28 @@ class _StringsAr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -25783,15 +26046,6 @@ class _StringsAr extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -25873,6 +26127,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -25948,6 +26205,80 @@ class _StringsAr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -26008,6 +26339,8 @@ class _StringsAr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -38228,7 +38561,7 @@ class _StringsDe extends _StringsEn {
   String get anki_tag_include_category => 'Tag für Quellkategorie hinzufügen';
   @override
   String get anki_tag_include_category_hint =>
-      'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+      'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
   @override
   String get anki_tag_include_fushi => 'Tag „fushi“ hinzufügen';
   @override
@@ -48795,6 +49128,38 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -48818,9 +49183,96 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -48837,6 +49289,28 @@ class _StringsDe extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -48864,15 +49338,6 @@ class _StringsDe extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -48954,6 +49419,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -49029,6 +49497,80 @@ class _StringsDe extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -49089,6 +49631,8 @@ class _StringsDe extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -61469,7 +62013,7 @@ class _StringsEs extends _StringsEn {
       'Añadir etiqueta de categoría de origen';
   @override
   String get anki_tag_include_category_hint =>
-      'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+      'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
   @override
   String get anki_tag_include_fushi => 'Añadir la etiqueta «fushi»';
   @override
@@ -72052,6 +72596,38 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -72075,9 +72651,96 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -72094,6 +72757,28 @@ class _StringsEs extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -72121,15 +72806,6 @@ class _StringsEs extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -72211,6 +72887,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -72286,6 +72965,80 @@ class _StringsEs extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -72346,6 +73099,8 @@ class _StringsEs extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -84764,7 +85519,7 @@ class _StringsFr extends _StringsEn {
       'Ajouter une étiquette de catégorie source';
   @override
   String get anki_tag_include_category_hint =>
-      'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+      'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
   @override
   String get anki_tag_include_fushi => 'Ajouter l\'étiquette « fushi »';
   @override
@@ -95387,6 +96142,38 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -95410,9 +96197,96 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -95429,6 +96303,28 @@ class _StringsFr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -95456,15 +96352,6 @@ class _StringsFr extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -95546,6 +96433,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -95621,6 +96511,80 @@ class _StringsFr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -95681,6 +96645,8 @@ class _StringsFr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -108108,7 +109074,7 @@ class _StringsId extends _StringsEn {
   String get anki_tag_include_category => 'Tambahkan tag kategori sumber';
   @override
   String get anki_tag_include_category_hint =>
-      'Buku diberi "book", video diberi "video", gim diberi "game"';
+      'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
   @override
   String get anki_tag_include_fushi => 'Tambahkan tag "fushi"';
   @override
@@ -118558,6 +119524,38 @@ class _StringsId extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -118581,9 +119579,96 @@ class _StringsId extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -118600,6 +119685,28 @@ class _StringsId extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -118627,15 +119734,6 @@ class _StringsId extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -118717,6 +119815,9 @@ class _StringsId extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -118792,6 +119893,80 @@ class _StringsId extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -118852,6 +120027,8 @@ class _StringsId extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -131143,7 +132320,7 @@ class _StringsIt extends _StringsEn {
       'Aggiungi etichetta categoria di origine';
   @override
   String get anki_tag_include_category_hint =>
-      'I libri ricevono "book", i video "video", i giochi "game"';
+      'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
   @override
   String get anki_tag_include_fushi => 'Aggiungi etichetta "fushi"';
   @override
@@ -141681,6 +142858,38 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -141704,9 +142913,96 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -141723,6 +143019,28 @@ class _StringsIt extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -141750,15 +143068,6 @@ class _StringsIt extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -141840,6 +143149,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -141915,6 +143227,80 @@ class _StringsIt extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -141975,6 +143361,8 @@ class _StringsIt extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -154250,7 +155638,7 @@ class _StringsJa extends _StringsEn {
   String get anki_tag_include_category => 'ソース分類タグを追加';
   @override
   String get anki_tag_include_category_hint =>
-      '書籍には「book」、動画には「video」、ゲームには「game」';
+      '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
   @override
   String get anki_tag_include_fushi => '「fushi」タグを追加';
   @override
@@ -164286,6 +165674,38 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -164309,9 +165729,96 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -164328,6 +165835,28 @@ class _StringsJa extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -164355,15 +165884,6 @@ class _StringsJa extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -164445,6 +165965,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -164520,6 +166043,80 @@ class _StringsJa extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -164580,6 +166177,8 @@ class _StringsJa extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -176396,7 +177995,7 @@ class _StringsKo extends _StringsEn {
   String get anki_tag_include_category => '소스 분류 태그 추가';
   @override
   String get anki_tag_include_category_hint =>
-      '책은 "book", 비디오는 "video", 게임은 "game"';
+      '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" 태그 추가';
   @override
@@ -186456,6 +188055,38 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -186479,9 +188110,96 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -186498,6 +188216,28 @@ class _StringsKo extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -186525,15 +188265,6 @@ class _StringsKo extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -186615,6 +188346,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -186690,6 +188424,80 @@ class _StringsKo extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -186750,6 +188558,8 @@ class _StringsKo extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -198698,7 +200508,7 @@ class _StringsNl extends _StringsEn {
   String get anki_tag_include_category => 'Tag voor broncategorie toevoegen';
   @override
   String get anki_tag_include_category_hint =>
-      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+      'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
   @override
   String get anki_tag_include_fushi => 'Tag "fushi" toevoegen';
   @override
@@ -209200,6 +211010,38 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -209223,9 +211065,96 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -209242,6 +211171,28 @@ class _StringsNl extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -209269,15 +211220,6 @@ class _StringsNl extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -209359,6 +211301,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -209434,6 +211379,80 @@ class _StringsNl extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -209494,6 +211513,8 @@ class _StringsNl extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -221847,7 +223868,7 @@ class _StringsPtBr extends _StringsEn {
       'Adicionar tag de categoria de origem';
   @override
   String get anki_tag_include_category_hint =>
-      'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+      'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
   @override
   String get anki_tag_include_fushi => 'Adicionar tag "fushi"';
   @override
@@ -232386,6 +234407,38 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -232409,9 +234462,96 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -232428,6 +234568,28 @@ class _StringsPtBr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -232455,15 +234617,6 @@ class _StringsPtBr extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -232545,6 +234698,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -232620,6 +234776,80 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -232680,6 +234910,8 @@ class _StringsPtBr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -245042,7 +247274,7 @@ class _StringsRu extends _StringsEn {
   String get anki_tag_include_category => 'Добавлять тег категории источника';
   @override
   String get anki_tag_include_category_hint =>
-      'Книги получают «book», видео — «video», игры — «game»';
+      'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
   @override
   String get anki_tag_include_fushi => 'Добавлять тег «fushi»';
   @override
@@ -255546,6 +257778,38 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -255569,9 +257833,96 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -255588,6 +257939,28 @@ class _StringsRu extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -255615,15 +257988,6 @@ class _StringsRu extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -255705,6 +258069,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -255780,6 +258147,80 @@ class _StringsRu extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -255840,6 +258281,8 @@ class _StringsRu extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -268160,7 +270603,7 @@ class _StringsTh extends _StringsEn {
   String get anki_tag_include_category => 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
   @override
   String get anki_tag_include_category_hint =>
-      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+      'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
   @override
   String get anki_tag_include_fushi => 'เพิ่มแท็ก "fushi"';
   @override
@@ -278516,6 +280959,38 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -278539,9 +281014,96 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -278558,6 +281120,28 @@ class _StringsTh extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -278585,15 +281169,6 @@ class _StringsTh extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -278675,6 +281250,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -278750,6 +281328,80 @@ class _StringsTh extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -278810,6 +281462,8 @@ class _StringsTh extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -291011,7 +293665,7 @@ class _StringsTr extends _StringsEn {
   String get anki_tag_include_category => 'Kaynak kategorisi etiketi ekle';
   @override
   String get anki_tag_include_category_hint =>
-      'Kitaplara "book", videolara "video", oyunlara "game"';
+      'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
   @override
   String get anki_tag_include_fushi => '"fushi" etiketi ekle';
   @override
@@ -301474,6 +304128,38 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -301497,9 +304183,96 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -301516,6 +304289,28 @@ class _StringsTr extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -301543,15 +304338,6 @@ class _StringsTr extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -301633,6 +304419,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -301708,6 +304497,80 @@ class _StringsTr extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -301768,6 +304631,8 @@ class _StringsTr extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -314035,7 +316900,7 @@ class _StringsVi extends _StringsEn {
   String get anki_tag_include_category => 'Thêm thẻ phân loại nguồn';
   @override
   String get anki_tag_include_category_hint =>
-      'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+      'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
   @override
   String get anki_tag_include_fushi => 'Thêm thẻ "fushi"';
   @override
@@ -324466,6 +327331,38 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -324489,9 +327386,96 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -324508,6 +327492,28 @@ class _StringsVi extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -324535,15 +327541,6 @@ class _StringsVi extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -324625,6 +327622,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -324700,6 +327700,80 @@ class _StringsVi extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -324760,6 +327834,8 @@ class _StringsVi extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -336854,7 +339930,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tag_include_category => '添加来源分类标签';
   @override
-  String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」、游戏标「game」';
+  String get anki_tag_include_category_hint =>
+      '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
   @override
   String get anki_tag_include_fushi => '添加「fushi」标签';
   @override
@@ -346387,6 +349464,36 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_audio_device_title => '输出设备';
   @override
+  String get music_cd_album_name => '音频 CD';
+  @override
+  String get music_cd_choose_drive => '选择光驱';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      '已加入「${title}」（${count} 首）';
+  @override
+  String get music_cd_lookup_none => 'MusicBrainz 没有收录这张盘，曲目名取自 CD-TEXT 或轨号';
+  @override
+  String get music_cd_no_drive => '没有找到光驱';
+  @override
+  String music_cd_not_audio({required Object device}) => '${device} 里的盘没有音频轨';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      '${device} 里没有可读的音频 CD';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      '${device} 里不是这张专辑对应的 CD';
+  @override
+  String get music_cd_read => '读取音频 CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      '读不出 ${device} 里的盘（没有盘，或不是音频 CD）';
+  @override
+  String get music_cd_reading => '正在读盘…';
+  @override
+  String get music_cd_reread => '重新读盘';
+  @override
+  String music_cd_track_name({required Object n}) => '第 ${n} 轨';
+  @override
   String get music_crossfade_continuous_hint =>
       '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
   @override
@@ -346407,9 +349514,88 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => '桌面歌词';
   @override
+  String get music_disc_add => '添加光盘';
+  @override
+  String music_disc_added({required Object count}) => '已加入 ${count} 张光盘';
+  @override
+  String get music_disc_bluray_image_unsupported => '蓝光镜像（.iso）暂不支持章节导入，请使用盘目录';
+  @override
+  String music_disc_chapter_name({required Object n}) => '第 ${n} 章';
+  @override
+  String get music_disc_choose_titles => '选择要导入的标题';
+  @override
+  String get music_disc_choose_titles_hint => '所选标题的每个章节都会成为一首曲目。';
+  @override
+  String get music_disc_import_chapters => '章节导入为曲目';
+  @override
+  String music_disc_imported({required Object count}) => '已导入 ${count} 首曲目';
+  @override
   String music_disc_label({required Object n}) => '碟 ${n}';
   @override
+  String get music_disc_lookup => '在 MusicBrainz 查曲目表';
+  @override
+  String get music_disc_lookup_applied => '已按 MusicBrainz 更新曲目名';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz 查询失败：${error}';
+  @override
+  String get music_disc_lookup_hint => '按标题搜索 DVD / 蓝光发行，按曲数与时长对号。';
+  @override
+  String get music_disc_lookup_none => '没有找到曲目表对得上的发行';
+  @override
+  String get music_disc_lookup_pick => '选择发行';
+  @override
+  String get music_disc_lookup_query => '发行标题';
+  @override
+  String get music_disc_lookup_searching => '正在查询 MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) =>
+      '平均误差 ${seconds} 秒';
+  @override
+  String get music_disc_no_chapters => '所选标题读不出章节';
+  @override
+  String get music_disc_none_found => '这个文件夹里没有认得出的 DVD / 蓝光';
+  @override
+  String get music_disc_not_imported => '章节未导入';
+  @override
+  String get music_disc_reimport_chapters => '重新导入章节';
+  @override
+  String get music_disc_remove => '从曲库移除';
+  @override
+  String get music_disc_remove_confirm => '从曲库移除这张盘？盘上的文件不会改动。';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => '标题 ${title} · 第 ${n} 章';
+  @override
+  String get music_disc_title_main => '正片';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => '标题 ${title} · ${duration} · ${count} 个章节';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      '读不出这张 DVD / 蓝光：${path}';
+  @override
   String get music_dsd_rate_title => 'DSD 转 PCM 采样率';
+  @override
+  String get music_eq_bands => '频段';
+  @override
+  String get music_eq_enabled_hint =>
+      '10 段图示均衡，自动预留余量防削波。改变信号时输出即非 bit-perfect；关闭或全部 0 dB 时不挂任何滤镜。';
+  @override
+  String get music_eq_enabled_title => '启用均衡器';
+  @override
+  String get music_eq_off => '已关闭';
+  @override
+  String get music_eq_on => '已开启——播放不再是 bit-perfect';
+  @override
+  String get music_eq_reset => '复位为平直';
+  @override
+  String get music_eq_title => '均衡器';
   @override
   String get music_exclusive_hint => '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
   @override
@@ -346424,6 +349610,27 @@ class _StringsZhCn extends _StringsEn {
   String get music_gapless_title => '无缝播放';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => '自动';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS 卡拉 OK 字幕';
+  @override
+  String get music_karaoke_effects_hint => '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+  @override
+  String get music_karaoke_open => '打开卡拉 OK 字幕页';
+  @override
+  String get music_karaoke_open_failed => '卡拉 OK 字幕页打不开';
+  @override
+  String get music_karaoke_overlay_off => '关闭';
+  @override
+  String get music_karaoke_overlay_original => '原样渲染';
+  @override
+  String get music_karaoke_overlay_structured => '逐字歌词';
+  @override
+  String get music_karaoke_title => '卡拉 OK 字幕';
   @override
   String get music_library_empty => '曲库还是空的';
   @override
@@ -346448,14 +349655,6 @@ class _StringsZhCn extends _StringsEn {
   String get music_lyrics_ab_loop_off => '停止循环';
   @override
   String get music_lyrics_choose_source => '选择歌词来源';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => '已知词 ${known} / ${total}（${percent}%）';
-  @override
-  String get music_lyrics_coverage_hint => '这首歌里已在复习库中的词';
   @override
   String get music_lyrics_empty => '这首歌没有歌词';
   @override
@@ -346533,6 +349732,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_play_all => '播放';
   @override
+  String music_play_failed({required Object error}) => '播放失败：${error}';
+  @override
   String get music_playlists_empty => '还没有歌单';
   @override
   String get music_replaygain_hint => '整张专辑顺序播放用专辑增益，其它情况用单曲增益';
@@ -346605,6 +349806,76 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get music_section_works => '作品';
   @override
+  String get music_server_add_subsonic => '添加 OpenSubsonic 服务器';
+  @override
+  String music_server_added({required Object name}) => '已添加 ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} 张专辑';
+  @override
+  String get music_server_allow_http => '允许明文 HTTP';
+  @override
+  String get music_server_allow_http_hint => '只用于自己局域网里的服务器；凭据会以明文传输';
+  @override
+  String get music_server_bitrate_hint =>
+      '原始 = 按服务器上的文件原样播放（无损仍是无损）；设上限则请服务器转码';
+  @override
+  String get music_server_bitrate_original => '原始';
+  @override
+  String get music_server_bitrate_title => '服务器播放音质';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      '连接失败：${error}';
+  @override
+  String get music_server_field_api_key => 'API key（可选）';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key；服务器支持时可代替用户名和密码';
+  @override
+  String get music_server_field_name => '名称（可选）';
+  @override
+  String get music_server_field_password => '密码';
+  @override
+  String get music_server_field_url => '服务器地址';
+  @override
+  String get music_server_field_user => '用户名';
+  @override
+  String music_server_invalid({required Object error}) => '服务器设置有误：${error}';
+  @override
+  String get music_server_jellyfin_subtitle => 'Jellyfin / Emby · 显示在曲库里';
+  @override
+  String get music_server_load_failed => '从服务器读取失败';
+  @override
+  String get music_server_no_albums => '这台服务器上没有专辑';
+  @override
+  String get music_server_remove => '移除服务器';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      '移除 ${name}？本机保存的凭据会一并删除。';
+  @override
+  String get music_server_retry => '重试';
+  @override
+  String get music_server_search => '搜索服务器';
+  @override
+  String get music_server_search_empty => '没有结果';
+  @override
+  String get music_server_search_hint => '专辑、艺人、歌曲';
+  @override
+  String get music_server_subsonic_subtitle => 'OpenSubsonic · 显示在曲库里';
+  @override
+  String get music_server_test_and_save => '测试并保存';
+  @override
+  String get music_servers_empty => '还没有音乐服务器';
+  @override
+  String get music_servers_empty_hint =>
+      '在 设置 › 服务 登录 Jellyfin / Emby，或在 设置 › 音乐 添加 OpenSubsonic 服务器。';
+  @override
+  String get music_servers_manage => '服务器';
+  @override
+  String get music_servers_settings_hint =>
+      '视频里已登录的 Jellyfin / Emby 服务器会列在这里；OpenSubsonic（Navidrome 等）在下面添加。打开开关即把该服务器的专辑显示在曲库里。';
+  @override
+  String get music_servers_title => '服务器曲库';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -346662,6 +349933,8 @@ class _StringsZhCn extends _StringsEn {
   String get music_signal_stage_crossfade => '交叉淡入';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD→PCM 转换';
+  @override
+  String get music_signal_stage_equalizer => '均衡器';
   @override
   String get music_signal_stage_filters => '音频滤镜';
   @override
@@ -357865,7 +361138,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tag_include_category => '加入來源分類標籤';
   @override
-  String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」、遊戲標「game」';
+  String get anki_tag_include_category_hint =>
+      '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
   @override
   String get anki_tag_include_fushi => '加入「fushi」標籤';
   @override
@@ -367610,6 +370884,38 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_audio_device_title => 'Output device';
   @override
+  String get music_cd_album_name => 'Audio CD';
+  @override
+  String get music_cd_choose_drive => 'Choose a drive';
+  @override
+  String music_cd_imported({required Object title, required Object count}) =>
+      'Added "${title}" (${count} tracks)';
+  @override
+  String get music_cd_lookup_none =>
+      'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+  @override
+  String get music_cd_no_drive => 'No optical drive found';
+  @override
+  String music_cd_not_audio({required Object device}) =>
+      'The disc in ${device} has no audio tracks';
+  @override
+  String music_cd_play_no_disc({required Object device}) =>
+      'No audio CD to read in ${device}';
+  @override
+  String music_cd_play_other_disc({required Object device}) =>
+      'The disc in ${device} is not the CD this album was read from';
+  @override
+  String get music_cd_read => 'Read audio CD';
+  @override
+  String music_cd_read_failed({required Object device}) =>
+      'Could not read the disc in ${device} (no disc, or not an audio CD)';
+  @override
+  String get music_cd_reading => 'Reading disc…';
+  @override
+  String get music_cd_reread => 'Read disc again';
+  @override
+  String music_cd_track_name({required Object n}) => 'Track ${n}';
+  @override
   String get music_crossfade_continuous_hint =>
       'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
   @override
@@ -367633,9 +370939,96 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_desktop_lyrics_title => 'Desktop lyrics';
   @override
+  String get music_disc_add => 'Add disc';
+  @override
+  String music_disc_added({required Object count}) =>
+      'Added ${count} disc(s) to the library';
+  @override
+  String get music_disc_bluray_image_unsupported =>
+      'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+  @override
+  String music_disc_chapter_name({required Object n}) => 'Chapter ${n}';
+  @override
+  String get music_disc_choose_titles => 'Choose titles to import';
+  @override
+  String get music_disc_choose_titles_hint =>
+      'Each chapter of the chosen titles becomes a track.';
+  @override
+  String get music_disc_import_chapters => 'Import chapters as tracks';
+  @override
+  String music_disc_imported({required Object count}) =>
+      'Imported ${count} tracks';
+  @override
   String music_disc_label({required Object n}) => 'Disc ${n}';
   @override
+  String get music_disc_lookup => 'Look up on MusicBrainz';
+  @override
+  String get music_disc_lookup_applied =>
+      'Track names updated from MusicBrainz';
+  @override
+  String music_disc_lookup_failed({required Object error}) =>
+      'MusicBrainz lookup failed: ${error}';
+  @override
+  String get music_disc_lookup_hint =>
+      'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+  @override
+  String get music_disc_lookup_none =>
+      'No release with a matching track list was found';
+  @override
+  String get music_disc_lookup_pick => 'Choose a release';
+  @override
+  String get music_disc_lookup_query => 'Release title';
+  @override
+  String get music_disc_lookup_searching => 'Searching MusicBrainz…';
+  @override
+  String music_disc_match_error({required Object seconds}) => '±${seconds} s';
+  @override
+  String get music_disc_no_chapters =>
+      'No chapters could be read from the chosen titles';
+  @override
+  String get music_disc_none_found => 'No DVD or Blu-ray found in that folder';
+  @override
+  String get music_disc_not_imported => 'Chapters not imported';
+  @override
+  String get music_disc_reimport_chapters => 'Re-import chapters';
+  @override
+  String get music_disc_remove => 'Remove from library';
+  @override
+  String get music_disc_remove_confirm =>
+      'Remove this disc from the music library? Files on disk are not touched.';
+  @override
+  String music_disc_title_chapter_name({
+    required Object title,
+    required Object n,
+  }) => 'Title ${title} · Chapter ${n}';
+  @override
+  String get music_disc_title_main => 'Main feature';
+  @override
+  String music_disc_title_option({
+    required Object title,
+    required Object duration,
+    required Object count,
+  }) => 'Title ${title} · ${duration} · ${count} chapters';
+  @override
+  String music_disc_unreadable({required Object path}) =>
+      'Not a readable DVD or Blu-ray: ${path}';
+  @override
   String get music_dsd_rate_title => 'DSD to PCM sample rate';
+  @override
+  String get music_eq_bands => 'Bands';
+  @override
+  String get music_eq_enabled_hint =>
+      '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+  @override
+  String get music_eq_enabled_title => 'Enable equalizer';
+  @override
+  String get music_eq_off => 'Off';
+  @override
+  String get music_eq_on => 'On — playback is no longer bit-perfect';
+  @override
+  String get music_eq_reset => 'Reset to flat';
+  @override
+  String get music_eq_title => 'Equalizer';
   @override
   String get music_exclusive_hint =>
       'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
@@ -367652,6 +371045,28 @@ class _StringsZhHk extends _StringsEn {
   String get music_gapless_title => 'Gapless playback';
   @override
   String get music_hi_res_badge => 'Hi-Res';
+  @override
+  String get music_karaoke_ass_render_auto => 'Automatic';
+  @override
+  String get music_karaoke_ass_render_hint =>
+      'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+  @override
+  String get music_karaoke_ass_render_title => 'ASS karaoke subtitles';
+  @override
+  String get music_karaoke_effects_hint =>
+      'These subtitles have karaoke effects that look best rendered as authored';
+  @override
+  String get music_karaoke_open => 'Open karaoke view';
+  @override
+  String get music_karaoke_open_failed => 'Could not open the karaoke view';
+  @override
+  String get music_karaoke_overlay_off => 'Off';
+  @override
+  String get music_karaoke_overlay_original => 'As authored (ASS)';
+  @override
+  String get music_karaoke_overlay_structured => 'Synced lyrics';
+  @override
+  String get music_karaoke_title => 'Karaoke subtitles';
   @override
   String get music_library_empty => 'No music yet';
   @override
@@ -367679,15 +371094,6 @@ class _StringsZhHk extends _StringsEn {
   String get music_lyrics_ab_loop_off => 'Stop looping';
   @override
   String get music_lyrics_choose_source => 'Choose lyrics source';
-  @override
-  String music_lyrics_coverage({
-    required Object known,
-    required Object total,
-    required Object percent,
-  }) => 'Known words ${known} / ${total} (${percent}%)';
-  @override
-  String get music_lyrics_coverage_hint =>
-      'Words from this song that are already in your review deck';
   @override
   String get music_lyrics_empty => 'No lyrics for this track';
   @override
@@ -367769,6 +371175,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_play_all => 'Play';
   @override
+  String music_play_failed({required Object error}) =>
+      'Playback failed: ${error}';
+  @override
   String get music_playlists_empty => 'No playlists yet';
   @override
   String get music_replaygain_hint =>
@@ -367844,6 +371253,80 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get music_section_works => 'Works';
   @override
+  String get music_server_add_subsonic => 'Add OpenSubsonic server';
+  @override
+  String music_server_added({required Object name}) => 'Added ${name}';
+  @override
+  String music_server_album_count({required Object count}) => '${count} albums';
+  @override
+  String get music_server_allow_http => 'Allow plain HTTP';
+  @override
+  String get music_server_allow_http_hint =>
+      'Only for servers on your own network; credentials travel unencrypted';
+  @override
+  String get music_server_bitrate_hint =>
+      'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+  @override
+  String get music_server_bitrate_original => 'Original';
+  @override
+  String get music_server_bitrate_title => 'Server streaming quality';
+  @override
+  String music_server_connect_failed({required Object error}) =>
+      'Could not connect: ${error}';
+  @override
+  String get music_server_field_api_key => 'API key (optional)';
+  @override
+  String get music_server_field_api_key_hint =>
+      'OpenSubsonic API key; replaces username and password when the server supports it';
+  @override
+  String get music_server_field_name => 'Name (optional)';
+  @override
+  String get music_server_field_password => 'Password';
+  @override
+  String get music_server_field_url => 'Server address';
+  @override
+  String get music_server_field_user => 'Username';
+  @override
+  String music_server_invalid({required Object error}) =>
+      'Invalid server settings: ${error}';
+  @override
+  String get music_server_jellyfin_subtitle =>
+      'Jellyfin / Emby · show in music library';
+  @override
+  String get music_server_load_failed => 'Could not load from the server';
+  @override
+  String get music_server_no_albums => 'No albums on this server';
+  @override
+  String get music_server_remove => 'Remove server';
+  @override
+  String music_server_remove_confirm({required Object name}) =>
+      'Remove ${name}? Its saved credentials are deleted from this device.';
+  @override
+  String get music_server_retry => 'Retry';
+  @override
+  String get music_server_search => 'Search server';
+  @override
+  String get music_server_search_empty => 'No results';
+  @override
+  String get music_server_search_hint => 'Albums, artists, songs';
+  @override
+  String get music_server_subsonic_subtitle =>
+      'OpenSubsonic · show in music library';
+  @override
+  String get music_server_test_and_save => 'Test and save';
+  @override
+  String get music_servers_empty => 'No music servers yet';
+  @override
+  String get music_servers_empty_hint =>
+      'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+  @override
+  String get music_servers_manage => 'Servers';
+  @override
+  String get music_servers_settings_hint =>
+      'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+  @override
+  String get music_servers_title => 'Server libraries';
+  @override
   String get music_setting_acoustid_key => 'AcoustID API key';
   @override
   String get music_setting_acoustid_key_builtin_hint =>
@@ -367904,6 +371387,8 @@ class _StringsZhHk extends _StringsEn {
   String get music_signal_stage_crossfade => 'Crossfade';
   @override
   String get music_signal_stage_dsd_to_pcm => 'DSD → PCM conversion';
+  @override
+  String get music_signal_stage_equalizer => 'Equalizer';
   @override
   String get music_signal_stage_filters => 'Audio filters';
   @override
@@ -379232,7 +382717,7 @@ extension on _StringsEn {
       case 'anki_tag_include_category':
         return 'Add source category tag';
       case 'anki_tag_include_category_hint':
-        return 'Books get "book", videos get "video", games get "game"';
+        return 'Books get "book", videos get "video", games get "game", music gets "music"';
       case 'anki_tag_include_fushi':
         return 'Add "fushi" tag';
       case 'anki_tag_include_fushi_hint':
@@ -388097,6 +391582,36 @@ extension on _StringsEn {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -388115,10 +391630,86 @@ extension on _StringsEn {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -388133,6 +391724,26 @@ extension on _StringsEn {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -388157,14 +391768,6 @@ extension on _StringsEn {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -388241,6 +391844,8 @@ extension on _StringsEn {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -388307,6 +391912,71 @@ extension on _StringsEn {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -388362,6 +392032,8 @@ extension on _StringsEn {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -398800,7 +402472,7 @@ extension on _StringsAr {
       case 'anki_tag_include_category':
         return 'إضافة وسم فئة المصدر';
       case 'anki_tag_include_category_hint':
-        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
+        return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game" والموسيقى على "music"';
       case 'anki_tag_include_fushi':
         return 'إضافة وسم "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -407659,6 +411331,36 @@ extension on _StringsAr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -407677,10 +411379,86 @@ extension on _StringsAr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -407695,6 +411473,26 @@ extension on _StringsAr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -407719,14 +411517,6 @@ extension on _StringsAr {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -407803,6 +411593,8 @@ extension on _StringsAr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -407869,6 +411661,71 @@ extension on _StringsAr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -407924,6 +411781,8 @@ extension on _StringsAr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -418374,7 +422233,7 @@ extension on _StringsDe {
       case 'anki_tag_include_category':
         return 'Tag für Quellkategorie hinzufügen';
       case 'anki_tag_include_category_hint':
-        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“';
+        return 'Bücher erhalten „book“, Videos „video“, Spiele „game“, Musik „music“';
       case 'anki_tag_include_fushi':
         return 'Tag „fushi“ hinzufügen';
       case 'anki_tag_include_fushi_hint':
@@ -427272,6 +431131,36 @@ extension on _StringsDe {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -427290,10 +431179,86 @@ extension on _StringsDe {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -427308,6 +431273,26 @@ extension on _StringsDe {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -427332,14 +431317,6 @@ extension on _StringsDe {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -427416,6 +431393,8 @@ extension on _StringsDe {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -427482,6 +431461,71 @@ extension on _StringsDe {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -427537,6 +431581,8 @@ extension on _StringsDe {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -438004,7 +442050,7 @@ extension on _StringsEs {
       case 'anki_tag_include_category':
         return 'Añadir etiqueta de categoría de origen';
       case 'anki_tag_include_category_hint':
-        return 'Los libros llevan «book», los vídeos «video» y los juegos «game»';
+        return 'Los libros llevan «book», los vídeos «video», los juegos «game» y la música «music»';
       case 'anki_tag_include_fushi':
         return 'Añadir la etiqueta «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -446895,6 +450941,36 @@ extension on _StringsEs {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -446913,10 +450989,86 @@ extension on _StringsEs {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -446931,6 +451083,26 @@ extension on _StringsEs {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -446955,14 +451127,6 @@ extension on _StringsEs {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -447039,6 +451203,8 @@ extension on _StringsEs {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -447105,6 +451271,71 @@ extension on _StringsEs {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -447160,6 +451391,8 @@ extension on _StringsEs {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -457628,7 +461861,7 @@ extension on _StringsFr {
       case 'anki_tag_include_category':
         return 'Ajouter une étiquette de catégorie source';
       case 'anki_tag_include_category_hint':
-        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
+        return 'Les livres reçoivent « book », les vidéos « video », les jeux « game », la musique « music »';
       case 'anki_tag_include_fushi':
         return 'Ajouter l\'étiquette « fushi »';
       case 'anki_tag_include_fushi_hint':
@@ -466528,6 +470761,36 @@ extension on _StringsFr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -466546,10 +470809,86 @@ extension on _StringsFr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -466564,6 +470903,26 @@ extension on _StringsFr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -466588,14 +470947,6 @@ extension on _StringsFr {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -466672,6 +471023,8 @@ extension on _StringsFr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -466738,6 +471091,71 @@ extension on _StringsFr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -466793,6 +471211,8 @@ extension on _StringsFr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -477258,7 +481678,7 @@ extension on _StringsId {
       case 'anki_tag_include_category':
         return 'Tambahkan tag kategori sumber';
       case 'anki_tag_include_category_hint':
-        return 'Buku diberi "book", video diberi "video", gim diberi "game"';
+        return 'Buku diberi "book", video diberi "video", gim diberi "game", musik diberi "music"';
       case 'anki_tag_include_fushi':
         return 'Tambahkan tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -486130,6 +490550,36 @@ extension on _StringsId {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -486148,10 +490598,86 @@ extension on _StringsId {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -486166,6 +490692,26 @@ extension on _StringsId {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -486190,14 +490736,6 @@ extension on _StringsId {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -486274,6 +490812,8 @@ extension on _StringsId {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -486340,6 +490880,71 @@ extension on _StringsId {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -486395,6 +491000,8 @@ extension on _StringsId {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -496842,7 +501449,7 @@ extension on _StringsIt {
       case 'anki_tag_include_category':
         return 'Aggiungi etichetta categoria di origine';
       case 'anki_tag_include_category_hint':
-        return 'I libri ricevono "book", i video "video", i giochi "game"';
+        return 'I libri ricevono "book", i video "video", i giochi "game", la musica "music"';
       case 'anki_tag_include_fushi':
         return 'Aggiungi etichetta "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -505729,6 +510336,36 @@ extension on _StringsIt {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -505747,10 +510384,86 @@ extension on _StringsIt {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -505765,6 +510478,26 @@ extension on _StringsIt {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -505789,14 +510522,6 @@ extension on _StringsIt {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -505873,6 +510598,8 @@ extension on _StringsIt {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -505939,6 +510666,71 @@ extension on _StringsIt {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -505994,6 +510786,8 @@ extension on _StringsIt {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -516444,7 +521238,7 @@ extension on _StringsJa {
       case 'anki_tag_include_category':
         return 'ソース分類タグを追加';
       case 'anki_tag_include_category_hint':
-        return '書籍には「book」、動画には「video」、ゲームには「game」';
+        return '書籍には「book」、動画には「video」、ゲームには「game」、音楽には「music」';
       case 'anki_tag_include_fushi':
         return '「fushi」タグを追加';
       case 'anki_tag_include_fushi_hint':
@@ -525276,6 +530070,36 @@ extension on _StringsJa {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -525294,10 +530118,86 @@ extension on _StringsJa {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -525312,6 +530212,26 @@ extension on _StringsJa {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -525336,14 +530256,6 @@ extension on _StringsJa {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -525420,6 +530332,8 @@ extension on _StringsJa {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -525486,6 +530400,71 @@ extension on _StringsJa {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -525541,6 +530520,8 @@ extension on _StringsJa {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -535925,7 +540906,7 @@ extension on _StringsKo {
       case 'anki_tag_include_category':
         return '소스 분류 태그 추가';
       case 'anki_tag_include_category_hint':
-        return '책은 "book", 비디오는 "video", 게임은 "game"';
+        return '책은 "book", 비디오는 "video", 게임은 "game", 음악은 "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" 태그 추가';
       case 'anki_tag_include_fushi_hint':
@@ -544760,6 +549741,36 @@ extension on _StringsKo {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -544778,10 +549789,86 @@ extension on _StringsKo {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -544796,6 +549883,26 @@ extension on _StringsKo {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -544820,14 +549927,6 @@ extension on _StringsKo {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -544904,6 +550003,8 @@ extension on _StringsKo {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -544970,6 +550071,71 @@ extension on _StringsKo {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -545025,6 +550191,8 @@ extension on _StringsKo {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -555440,7 +560608,7 @@ extension on _StringsNl {
       case 'anki_tag_include_category':
         return 'Tag voor broncategorie toevoegen';
       case 'anki_tag_include_category_hint':
-        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
+        return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game", muziek krijgt "music"';
       case 'anki_tag_include_fushi':
         return 'Tag "fushi" toevoegen';
       case 'anki_tag_include_fushi_hint':
@@ -564328,6 +569496,36 @@ extension on _StringsNl {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -564346,10 +569544,86 @@ extension on _StringsNl {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -564364,6 +569638,26 @@ extension on _StringsNl {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -564388,14 +569682,6 @@ extension on _StringsNl {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -564472,6 +569758,8 @@ extension on _StringsNl {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -564538,6 +569826,71 @@ extension on _StringsNl {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -564593,6 +569946,8 @@ extension on _StringsNl {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -575051,7 +580406,7 @@ extension on _StringsPtBr {
       case 'anki_tag_include_category':
         return 'Adicionar tag de categoria de origem';
       case 'anki_tag_include_category_hint':
-        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
+        return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game", músicas recebem "music"';
       case 'anki_tag_include_fushi':
         return 'Adicionar tag "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -583935,6 +589290,36 @@ extension on _StringsPtBr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -583953,10 +589338,86 @@ extension on _StringsPtBr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -583971,6 +589432,26 @@ extension on _StringsPtBr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -583995,14 +589476,6 @@ extension on _StringsPtBr {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -584079,6 +589552,8 @@ extension on _StringsPtBr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -584145,6 +589620,71 @@ extension on _StringsPtBr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -584200,6 +589740,8 @@ extension on _StringsPtBr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -594656,7 +600198,7 @@ extension on _StringsRu {
       case 'anki_tag_include_category':
         return 'Добавлять тег категории источника';
       case 'anki_tag_include_category_hint':
-        return 'Книги получают «book», видео — «video», игры — «game»';
+        return 'Книги получают «book», видео — «video», игры — «game», музыка — «music»';
       case 'anki_tag_include_fushi':
         return 'Добавлять тег «fushi»';
       case 'anki_tag_include_fushi_hint':
@@ -603546,6 +609088,36 @@ extension on _StringsRu {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -603564,10 +609136,86 @@ extension on _StringsRu {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -603582,6 +609230,26 @@ extension on _StringsRu {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -603606,14 +609274,6 @@ extension on _StringsRu {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -603690,6 +609350,8 @@ extension on _StringsRu {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -603756,6 +609418,71 @@ extension on _StringsRu {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -603811,6 +609538,8 @@ extension on _StringsRu {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -614256,7 +619985,7 @@ extension on _StringsTh {
       case 'anki_tag_include_category':
         return 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
       case 'anki_tag_include_category_hint':
-        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
+        return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game" เพลงได้แท็ก "music"';
       case 'anki_tag_include_fushi':
         return 'เพิ่มแท็ก "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -623122,6 +628851,36 @@ extension on _StringsTh {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -623140,10 +628899,86 @@ extension on _StringsTh {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -623158,6 +628993,26 @@ extension on _StringsTh {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -623182,14 +629037,6 @@ extension on _StringsTh {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -623266,6 +629113,8 @@ extension on _StringsTh {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -623332,6 +629181,71 @@ extension on _StringsTh {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -623387,6 +629301,8 @@ extension on _StringsTh {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -633829,7 +639745,7 @@ extension on _StringsTr {
       case 'anki_tag_include_category':
         return 'Kaynak kategorisi etiketi ekle';
       case 'anki_tag_include_category_hint':
-        return 'Kitaplara "book", videolara "video", oyunlara "game"';
+        return 'Kitaplara "book", videolara "video", oyunlara "game", müziğe "music"';
       case 'anki_tag_include_fushi':
         return '"fushi" etiketi ekle';
       case 'anki_tag_include_fushi_hint':
@@ -642711,6 +648627,36 @@ extension on _StringsTr {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -642729,10 +648675,86 @@ extension on _StringsTr {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -642747,6 +648769,26 @@ extension on _StringsTr {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -642771,14 +648813,6 @@ extension on _StringsTr {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -642855,6 +648889,8 @@ extension on _StringsTr {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -642921,6 +648957,71 @@ extension on _StringsTr {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -642976,6 +649077,8 @@ extension on _StringsTr {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -653421,7 +659524,7 @@ extension on _StringsVi {
       case 'anki_tag_include_category':
         return 'Thêm thẻ phân loại nguồn';
       case 'anki_tag_include_category_hint':
-        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
+        return 'Sách gắn "book", video gắn "video", trò chơi gắn "game", nhạc gắn "music"';
       case 'anki_tag_include_fushi':
         return 'Thêm thẻ "fushi"';
       case 'anki_tag_include_fushi_hint':
@@ -662292,6 +668395,36 @@ extension on _StringsVi {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -662310,10 +668443,86 @@ extension on _StringsVi {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -662328,6 +668537,26 @@ extension on _StringsVi {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -662352,14 +668581,6 @@ extension on _StringsVi {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -662436,6 +668657,8 @@ extension on _StringsVi {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -662502,6 +668725,71 @@ extension on _StringsVi {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -662557,6 +668845,8 @@ extension on _StringsVi {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
@@ -672969,7 +679259,7 @@ extension on _StringsZhCn {
       case 'anki_tag_include_category':
         return '添加来源分类标签';
       case 'anki_tag_include_category_hint':
-        return '书籍标「book」、视频标「video」、游戏标「game」';
+        return '书籍标「book」、视频标「video」、游戏标「game」、音乐标「music」';
       case 'anki_tag_include_fushi':
         return '添加「fushi」标签';
       case 'anki_tag_include_fushi_hint':
@@ -681739,6 +688029,33 @@ extension on _StringsZhCn {
         return '系统默认';
       case 'music_audio_device_title':
         return '输出设备';
+      case 'music_cd_album_name':
+        return '音频 CD';
+      case 'music_cd_choose_drive':
+        return '选择光驱';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            '已加入「${title}」（${count} 首）';
+      case 'music_cd_lookup_none':
+        return 'MusicBrainz 没有收录这张盘，曲目名取自 CD-TEXT 或轨号';
+      case 'music_cd_no_drive':
+        return '没有找到光驱';
+      case 'music_cd_not_audio':
+        return ({required Object device}) => '${device} 里的盘没有音频轨';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => '${device} 里没有可读的音频 CD';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) => '${device} 里不是这张专辑对应的 CD';
+      case 'music_cd_read':
+        return '读取音频 CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) => '读不出 ${device} 里的盘（没有盘，或不是音频 CD）';
+      case 'music_cd_reading':
+        return '正在读盘…';
+      case 'music_cd_reread':
+        return '重新读盘';
+      case 'music_cd_track_name':
+        return ({required Object n}) => '第 ${n} 轨';
       case 'music_crossfade_continuous_hint':
         return '专辑相邻曲目与 CUE 拆轨默认保持无缝，打开后也交叉淡入。';
       case 'music_crossfade_continuous_title':
@@ -681757,10 +688074,83 @@ extension on _StringsZhCn {
         return '播放音乐时在置顶悬浮窗里显示当前歌词';
       case 'music_desktop_lyrics_title':
         return '桌面歌词';
+      case 'music_disc_add':
+        return '添加光盘';
+      case 'music_disc_added':
+        return ({required Object count}) => '已加入 ${count} 张光盘';
+      case 'music_disc_bluray_image_unsupported':
+        return '蓝光镜像（.iso）暂不支持章节导入，请使用盘目录';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => '第 ${n} 章';
+      case 'music_disc_choose_titles':
+        return '选择要导入的标题';
+      case 'music_disc_choose_titles_hint':
+        return '所选标题的每个章节都会成为一首曲目。';
+      case 'music_disc_import_chapters':
+        return '章节导入为曲目';
+      case 'music_disc_imported':
+        return ({required Object count}) => '已导入 ${count} 首曲目';
       case 'music_disc_label':
         return ({required Object n}) => '碟 ${n}';
+      case 'music_disc_lookup':
+        return '在 MusicBrainz 查曲目表';
+      case 'music_disc_lookup_applied':
+        return '已按 MusicBrainz 更新曲目名';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) => 'MusicBrainz 查询失败：${error}';
+      case 'music_disc_lookup_hint':
+        return '按标题搜索 DVD / 蓝光发行，按曲数与时长对号。';
+      case 'music_disc_lookup_none':
+        return '没有找到曲目表对得上的发行';
+      case 'music_disc_lookup_pick':
+        return '选择发行';
+      case 'music_disc_lookup_query':
+        return '发行标题';
+      case 'music_disc_lookup_searching':
+        return '正在查询 MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '平均误差 ${seconds} 秒';
+      case 'music_disc_no_chapters':
+        return '所选标题读不出章节';
+      case 'music_disc_none_found':
+        return '这个文件夹里没有认得出的 DVD / 蓝光';
+      case 'music_disc_not_imported':
+        return '章节未导入';
+      case 'music_disc_reimport_chapters':
+        return '重新导入章节';
+      case 'music_disc_remove':
+        return '从曲库移除';
+      case 'music_disc_remove_confirm':
+        return '从曲库移除这张盘？盘上的文件不会改动。';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            '标题 ${title} · 第 ${n} 章';
+      case 'music_disc_title_main':
+        return '正片';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => '标题 ${title} · ${duration} · ${count} 个章节';
+      case 'music_disc_unreadable':
+        return ({required Object path}) => '读不出这张 DVD / 蓝光：${path}';
       case 'music_dsd_rate_title':
         return 'DSD 转 PCM 采样率';
+      case 'music_eq_bands':
+        return '频段';
+      case 'music_eq_enabled_hint':
+        return '10 段图示均衡，自动预留余量防削波。改变信号时输出即非 bit-perfect；关闭或全部 0 dB 时不挂任何滤镜。';
+      case 'music_eq_enabled_title':
+        return '启用均衡器';
+      case 'music_eq_off':
+        return '已关闭';
+      case 'music_eq_on':
+        return '已开启——播放不再是 bit-perfect';
+      case 'music_eq_reset':
+        return '复位为平直';
+      case 'music_eq_title':
+        return '均衡器';
       case 'music_exclusive_hint':
         return '绕过系统混音，让 DAC 收到原样的源样本。播放音乐时其他程序没有声音。';
       case 'music_exclusive_title':
@@ -681775,6 +688165,26 @@ extension on _StringsZhCn {
         return '无缝播放';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return '自动';
+      case 'music_karaoke_ass_render_hint':
+        return '卡拉 OK 字幕页里 ASS 歌词的显示方式。自动：带特效的原样渲染，纯逐字时间走逐字歌词';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS 卡拉 OK 字幕';
+      case 'music_karaoke_effects_hint':
+        return '这份字幕带卡拉 OK 特效，原样渲染效果更好';
+      case 'music_karaoke_open':
+        return '打开卡拉 OK 字幕页';
+      case 'music_karaoke_open_failed':
+        return '卡拉 OK 字幕页打不开';
+      case 'music_karaoke_overlay_off':
+        return '关闭';
+      case 'music_karaoke_overlay_original':
+        return '原样渲染';
+      case 'music_karaoke_overlay_structured':
+        return '逐字歌词';
+      case 'music_karaoke_title':
+        return '卡拉 OK 字幕';
       case 'music_library_empty':
         return '曲库还是空的';
       case 'music_library_empty_hint':
@@ -681799,14 +688209,6 @@ extension on _StringsZhCn {
         return '停止循环';
       case 'music_lyrics_choose_source':
         return '选择歌词来源';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => '已知词 ${known} / ${total}（${percent}%）';
-      case 'music_lyrics_coverage_hint':
-        return '这首歌里已在复习库中的词';
       case 'music_lyrics_empty':
         return '这首歌没有歌词';
       case 'music_lyrics_export_ttml':
@@ -681883,6 +688285,8 @@ extension on _StringsZhCn {
         return '独占输出不可用，已退回共享模式';
       case 'music_play_all':
         return '播放';
+      case 'music_play_failed':
+        return ({required Object error}) => '播放失败：${error}';
       case 'music_playlists_empty':
         return '还没有歌单';
       case 'music_replaygain_hint':
@@ -681949,6 +688353,70 @@ extension on _StringsZhCn {
         return '歌曲';
       case 'music_section_works':
         return '作品';
+      case 'music_server_add_subsonic':
+        return '添加 OpenSubsonic 服务器';
+      case 'music_server_added':
+        return ({required Object name}) => '已添加 ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} 张专辑';
+      case 'music_server_allow_http':
+        return '允许明文 HTTP';
+      case 'music_server_allow_http_hint':
+        return '只用于自己局域网里的服务器；凭据会以明文传输';
+      case 'music_server_bitrate_hint':
+        return '原始 = 按服务器上的文件原样播放（无损仍是无损）；设上限则请服务器转码';
+      case 'music_server_bitrate_original':
+        return '原始';
+      case 'music_server_bitrate_title':
+        return '服务器播放音质';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => '连接失败：${error}';
+      case 'music_server_field_api_key':
+        return 'API key（可选）';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key；服务器支持时可代替用户名和密码';
+      case 'music_server_field_name':
+        return '名称（可选）';
+      case 'music_server_field_password':
+        return '密码';
+      case 'music_server_field_url':
+        return '服务器地址';
+      case 'music_server_field_user':
+        return '用户名';
+      case 'music_server_invalid':
+        return ({required Object error}) => '服务器设置有误：${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · 显示在曲库里';
+      case 'music_server_load_failed':
+        return '从服务器读取失败';
+      case 'music_server_no_albums':
+        return '这台服务器上没有专辑';
+      case 'music_server_remove':
+        return '移除服务器';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) => '移除 ${name}？本机保存的凭据会一并删除。';
+      case 'music_server_retry':
+        return '重试';
+      case 'music_server_search':
+        return '搜索服务器';
+      case 'music_server_search_empty':
+        return '没有结果';
+      case 'music_server_search_hint':
+        return '专辑、艺人、歌曲';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · 显示在曲库里';
+      case 'music_server_test_and_save':
+        return '测试并保存';
+      case 'music_servers_empty':
+        return '还没有音乐服务器';
+      case 'music_servers_empty_hint':
+        return '在 设置 › 服务 登录 Jellyfin / Emby，或在 设置 › 音乐 添加 OpenSubsonic 服务器。';
+      case 'music_servers_manage':
+        return '服务器';
+      case 'music_servers_settings_hint':
+        return '视频里已登录的 Jellyfin / Emby 服务器会列在这里；OpenSubsonic（Navidrome 等）在下面添加。打开开关即把该服务器的专辑显示在曲库里。';
+      case 'music_servers_title':
+        return '服务器曲库';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -682003,6 +688471,8 @@ extension on _StringsZhCn {
         return '交叉淡入';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD→PCM 转换';
+      case 'music_signal_stage_equalizer':
+        return '均衡器';
       case 'music_signal_stage_filters':
         return '音频滤镜';
       case 'music_signal_stage_format_conversion':
@@ -692309,7 +698779,7 @@ extension on _StringsZhHk {
       case 'anki_tag_include_category':
         return '加入來源分類標籤';
       case 'anki_tag_include_category_hint':
-        return '書籍標「book」、影片標「video」、遊戲標「game」';
+        return '書籍標「book」、影片標「video」、遊戲標「game」、音樂標「music」';
       case 'anki_tag_include_fushi':
         return '加入「fushi」標籤';
       case 'anki_tag_include_fushi_hint':
@@ -701115,6 +707585,36 @@ extension on _StringsZhHk {
         return 'System default';
       case 'music_audio_device_title':
         return 'Output device';
+      case 'music_cd_album_name':
+        return 'Audio CD';
+      case 'music_cd_choose_drive':
+        return 'Choose a drive';
+      case 'music_cd_imported':
+        return ({required Object title, required Object count}) =>
+            'Added "${title}" (${count} tracks)';
+      case 'music_cd_lookup_none':
+        return 'This disc is not in MusicBrainz; track names come from CD-TEXT or track numbers';
+      case 'music_cd_no_drive':
+        return 'No optical drive found';
+      case 'music_cd_not_audio':
+        return ({required Object device}) =>
+            'The disc in ${device} has no audio tracks';
+      case 'music_cd_play_no_disc':
+        return ({required Object device}) => 'No audio CD to read in ${device}';
+      case 'music_cd_play_other_disc':
+        return ({required Object device}) =>
+            'The disc in ${device} is not the CD this album was read from';
+      case 'music_cd_read':
+        return 'Read audio CD';
+      case 'music_cd_read_failed':
+        return ({required Object device}) =>
+            'Could not read the disc in ${device} (no disc, or not an audio CD)';
+      case 'music_cd_reading':
+        return 'Reading disc…';
+      case 'music_cd_reread':
+        return 'Read disc again';
+      case 'music_cd_track_name':
+        return ({required Object n}) => 'Track ${n}';
       case 'music_crossfade_continuous_hint':
         return 'Also crossfade consecutive album tracks and CUE splits, which normally stay gapless.';
       case 'music_crossfade_continuous_title':
@@ -701133,10 +707633,86 @@ extension on _StringsZhHk {
         return 'Show the current lyric line in a floating always-on-top window while music plays';
       case 'music_desktop_lyrics_title':
         return 'Desktop lyrics';
+      case 'music_disc_add':
+        return 'Add disc';
+      case 'music_disc_added':
+        return ({required Object count}) =>
+            'Added ${count} disc(s) to the library';
+      case 'music_disc_bluray_image_unsupported':
+        return 'Chapter import from Blu-ray images (.iso) is not supported yet; use the disc folder';
+      case 'music_disc_chapter_name':
+        return ({required Object n}) => 'Chapter ${n}';
+      case 'music_disc_choose_titles':
+        return 'Choose titles to import';
+      case 'music_disc_choose_titles_hint':
+        return 'Each chapter of the chosen titles becomes a track.';
+      case 'music_disc_import_chapters':
+        return 'Import chapters as tracks';
+      case 'music_disc_imported':
+        return ({required Object count}) => 'Imported ${count} tracks';
       case 'music_disc_label':
         return ({required Object n}) => 'Disc ${n}';
+      case 'music_disc_lookup':
+        return 'Look up on MusicBrainz';
+      case 'music_disc_lookup_applied':
+        return 'Track names updated from MusicBrainz';
+      case 'music_disc_lookup_failed':
+        return ({required Object error}) =>
+            'MusicBrainz lookup failed: ${error}';
+      case 'music_disc_lookup_hint':
+        return 'Searches DVD and Blu-ray releases by title and matches them by track count and length.';
+      case 'music_disc_lookup_none':
+        return 'No release with a matching track list was found';
+      case 'music_disc_lookup_pick':
+        return 'Choose a release';
+      case 'music_disc_lookup_query':
+        return 'Release title';
+      case 'music_disc_lookup_searching':
+        return 'Searching MusicBrainz…';
+      case 'music_disc_match_error':
+        return ({required Object seconds}) => '±${seconds} s';
+      case 'music_disc_no_chapters':
+        return 'No chapters could be read from the chosen titles';
+      case 'music_disc_none_found':
+        return 'No DVD or Blu-ray found in that folder';
+      case 'music_disc_not_imported':
+        return 'Chapters not imported';
+      case 'music_disc_reimport_chapters':
+        return 'Re-import chapters';
+      case 'music_disc_remove':
+        return 'Remove from library';
+      case 'music_disc_remove_confirm':
+        return 'Remove this disc from the music library? Files on disk are not touched.';
+      case 'music_disc_title_chapter_name':
+        return ({required Object title, required Object n}) =>
+            'Title ${title} · Chapter ${n}';
+      case 'music_disc_title_main':
+        return 'Main feature';
+      case 'music_disc_title_option':
+        return ({
+          required Object title,
+          required Object duration,
+          required Object count,
+        }) => 'Title ${title} · ${duration} · ${count} chapters';
+      case 'music_disc_unreadable':
+        return ({required Object path}) =>
+            'Not a readable DVD or Blu-ray: ${path}';
       case 'music_dsd_rate_title':
         return 'DSD to PCM sample rate';
+      case 'music_eq_bands':
+        return 'Bands';
+      case 'music_eq_enabled_hint':
+        return '10-band graphic EQ with automatic headroom. While it changes the signal the output is not bit-perfect; off or flat adds no filter.';
+      case 'music_eq_enabled_title':
+        return 'Enable equalizer';
+      case 'music_eq_off':
+        return 'Off';
+      case 'music_eq_on':
+        return 'On — playback is no longer bit-perfect';
+      case 'music_eq_reset':
+        return 'Reset to flat';
+      case 'music_eq_title':
+        return 'Equalizer';
       case 'music_exclusive_hint':
         return 'Bypass the system mixer so the DAC gets the source samples unchanged. Other apps are silent while music plays.';
       case 'music_exclusive_title':
@@ -701151,6 +707727,26 @@ extension on _StringsZhHk {
         return 'Gapless playback';
       case 'music_hi_res_badge':
         return 'Hi-Res';
+      case 'music_karaoke_ass_render_auto':
+        return 'Automatic';
+      case 'music_karaoke_ass_render_hint':
+        return 'How ASS lyrics show in the karaoke view. Automatic renders subtitles with effects as authored and plain karaoke timing as synced lyrics';
+      case 'music_karaoke_ass_render_title':
+        return 'ASS karaoke subtitles';
+      case 'music_karaoke_effects_hint':
+        return 'These subtitles have karaoke effects that look best rendered as authored';
+      case 'music_karaoke_open':
+        return 'Open karaoke view';
+      case 'music_karaoke_open_failed':
+        return 'Could not open the karaoke view';
+      case 'music_karaoke_overlay_off':
+        return 'Off';
+      case 'music_karaoke_overlay_original':
+        return 'As authored (ASS)';
+      case 'music_karaoke_overlay_structured':
+        return 'Synced lyrics';
+      case 'music_karaoke_title':
+        return 'Karaoke subtitles';
       case 'music_library_empty':
         return 'No music yet';
       case 'music_library_empty_hint':
@@ -701175,14 +707771,6 @@ extension on _StringsZhHk {
         return 'Stop looping';
       case 'music_lyrics_choose_source':
         return 'Choose lyrics source';
-      case 'music_lyrics_coverage':
-        return ({
-          required Object known,
-          required Object total,
-          required Object percent,
-        }) => 'Known words ${known} / ${total} (${percent}%)';
-      case 'music_lyrics_coverage_hint':
-        return 'Words from this song that are already in your review deck';
       case 'music_lyrics_empty':
         return 'No lyrics for this track';
       case 'music_lyrics_export_ttml':
@@ -701259,6 +707847,8 @@ extension on _StringsZhHk {
         return 'Exclusive output is unavailable, switched to shared mode';
       case 'music_play_all':
         return 'Play';
+      case 'music_play_failed':
+        return ({required Object error}) => 'Playback failed: ${error}';
       case 'music_playlists_empty':
         return 'No playlists yet';
       case 'music_replaygain_hint':
@@ -701325,6 +707915,71 @@ extension on _StringsZhHk {
         return 'Songs';
       case 'music_section_works':
         return 'Works';
+      case 'music_server_add_subsonic':
+        return 'Add OpenSubsonic server';
+      case 'music_server_added':
+        return ({required Object name}) => 'Added ${name}';
+      case 'music_server_album_count':
+        return ({required Object count}) => '${count} albums';
+      case 'music_server_allow_http':
+        return 'Allow plain HTTP';
+      case 'music_server_allow_http_hint':
+        return 'Only for servers on your own network; credentials travel unencrypted';
+      case 'music_server_bitrate_hint':
+        return 'Original plays the file as stored (lossless stays lossless); a cap asks the server to transcode';
+      case 'music_server_bitrate_original':
+        return 'Original';
+      case 'music_server_bitrate_title':
+        return 'Server streaming quality';
+      case 'music_server_connect_failed':
+        return ({required Object error}) => 'Could not connect: ${error}';
+      case 'music_server_field_api_key':
+        return 'API key (optional)';
+      case 'music_server_field_api_key_hint':
+        return 'OpenSubsonic API key; replaces username and password when the server supports it';
+      case 'music_server_field_name':
+        return 'Name (optional)';
+      case 'music_server_field_password':
+        return 'Password';
+      case 'music_server_field_url':
+        return 'Server address';
+      case 'music_server_field_user':
+        return 'Username';
+      case 'music_server_invalid':
+        return ({required Object error}) => 'Invalid server settings: ${error}';
+      case 'music_server_jellyfin_subtitle':
+        return 'Jellyfin / Emby · show in music library';
+      case 'music_server_load_failed':
+        return 'Could not load from the server';
+      case 'music_server_no_albums':
+        return 'No albums on this server';
+      case 'music_server_remove':
+        return 'Remove server';
+      case 'music_server_remove_confirm':
+        return ({required Object name}) =>
+            'Remove ${name}? Its saved credentials are deleted from this device.';
+      case 'music_server_retry':
+        return 'Retry';
+      case 'music_server_search':
+        return 'Search server';
+      case 'music_server_search_empty':
+        return 'No results';
+      case 'music_server_search_hint':
+        return 'Albums, artists, songs';
+      case 'music_server_subsonic_subtitle':
+        return 'OpenSubsonic · show in music library';
+      case 'music_server_test_and_save':
+        return 'Test and save';
+      case 'music_servers_empty':
+        return 'No music servers yet';
+      case 'music_servers_empty_hint':
+        return 'Sign in to Jellyfin / Emby in Settings › Services, or add an OpenSubsonic server in Settings › Music.';
+      case 'music_servers_manage':
+        return 'Servers';
+      case 'music_servers_settings_hint':
+        return 'Jellyfin / Emby servers you signed in to for video are listed here; add OpenSubsonic servers (Navidrome and others) below. Turn a server on to show its albums in the music library.';
+      case 'music_servers_title':
+        return 'Server libraries';
       case 'music_setting_acoustid_key':
         return 'AcoustID API key';
       case 'music_setting_acoustid_key_builtin_hint':
@@ -701380,6 +708035,8 @@ extension on _StringsZhHk {
         return 'Crossfade';
       case 'music_signal_stage_dsd_to_pcm':
         return 'DSD → PCM conversion';
+      case 'music_signal_stage_equalizer':
+        return 'Equalizer';
       case 'music_signal_stage_filters':
         return 'Audio filters';
       case 'music_signal_stage_format_conversion':
