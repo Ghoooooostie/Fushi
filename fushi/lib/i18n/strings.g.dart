@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160123 (9419 per locale)
+/// Strings: 161330 (9490 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9136,63 +9136,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
-  String get srs_backup_auto => 'Automatic backups';
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  String get srs_backup_change_location => 'Change storage location';
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  String get srs_backup_delete => 'Delete backup';
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  String get srs_backup_done => 'Backup saved';
-  String get srs_backup_empty => 'No backups yet';
-  String get srs_backup_export => 'Save or share';
-  String get srs_backup_failed => 'Backup failed';
-  String get srs_backup_interval => 'Minimum interval';
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  String get srs_backup_kind_auto => 'Automatic';
-  String get srs_backup_kind_manual => 'Manual';
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  String get srs_backup_list => 'Saved backups';
-  String get srs_backup_location => 'Backup folder';
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  String get srs_backup_menu => 'Backup actions';
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  String get srs_backup_now => 'Back up now';
-  String get srs_backup_open_folder => 'Open folder';
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  String get srs_backup_restore => 'Restore to this point';
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  String get srs_backup_restore_failed => 'Restore failed';
-  String get srs_backup_restore_from_file => 'Restore from file';
-  String get srs_backup_saved => 'Saved';
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  String get srs_backup_title => 'Backups';
   String get srs_browse_batch_actions => 'Actions';
   String get srs_browse_bury_toggle => 'Bury / unbury';
   String get srs_browse_change_note_type => 'Change note type';
@@ -9363,14 +9306,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_change_type_title => 'Change note type';
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
+  String get srs_conflict_apply_delete => 'Delete';
   String get srs_conflict_confirm => 'Keep current';
   String get srs_conflict_confirm_all => 'Keep all current';
   String get srs_conflict_current => 'Current';
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  String get srs_conflict_keep => 'Keep';
   String get srs_conflict_profile => 'Review settings';
   String get srs_conflict_replaced => 'Replaced';
   String get srs_conflict_revert => 'Switch back';
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   String get srs_conflicts_empty => 'No sync conflicts';
   String get srs_conflicts_empty_hint =>
       'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
@@ -9419,6 +9372,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Many reviews due today — new cards reduced to ${n}';
   String get srs_deck_rename => 'Rename deck';
   String get srs_deck_settings => 'Deck settings';
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  String get srs_duplicates_keep => 'Keep';
+  String get srs_duplicates_merge => 'Merge';
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  String get srs_duplicates_title => 'Possible duplicate notes';
   String get srs_empty_action => 'Add a card';
   String get srs_empty_body =>
       'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
@@ -9830,6 +9792,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_furigana_hint => 'Tap a word to change its reading';
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
+  String get srs_note_history => 'Edit history';
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  String get srs_note_history_deleted => 'Deleted';
+  String get srs_note_history_empty => 'No edits yet';
+  String get srs_note_history_purged => 'Content permanently erased';
+  String get srs_note_history_restored => 'Restored';
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
   String get srs_note_image_paste => 'Paste image';
   String get srs_note_image_paste_empty => 'No image on the clipboard';
   String get srs_note_image_pick => 'Choose image';
@@ -10216,10 +10188,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  String get srs_sync_confirm_later => 'Later';
+  String get srs_sync_confirm_start => 'Start syncing';
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
   String get srs_sync_done => 'Review data synced';
@@ -10233,6 +10212,125 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  String get srs_timeline_all_published => 'All changes are synced';
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  String get srs_timeline_checkpoints => 'Restore points';
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  String get srs_timeline_export_done => 'Exported';
+  String get srs_timeline_export_failed => 'Export failed';
+  String get srs_timeline_frozen => 'Inactive';
+  String get srs_timeline_import => 'Import .fushisrs';
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  String get srs_timeline_import_failed => 'Import failed';
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  String get srs_timeline_location_add => 'Add folder';
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  String get srs_timeline_location_channel => 'Sync channel';
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  String get srs_timeline_location_idle => 'Not in use';
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  String get srs_timeline_location_never => 'Not synced yet';
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  String get srs_timeline_location_purpose_media => 'Media';
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  String get srs_timeline_location_remove => 'Stop using folder';
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  String get srs_timeline_locations => 'Storage locations';
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  String get srs_timeline_passphrase => 'Passphrase';
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  String get srs_timeline_reason_import => 'Before an import';
+  String get srs_timeline_reason_manual => 'Added by you';
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  String get srs_timeline_reason_restore => 'Before a restore';
+  String get srs_timeline_restore => 'Restore';
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  String get srs_timeline_restore_failed => 'Restore failed';
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  String get srs_timeline_restore_title => 'Restore review data?';
+  String get srs_timeline_section => 'Timeline';
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  String get srs_timeline_status => 'Sync status';
+  String get srs_timeline_this_device => 'This device';
+  String get srs_timeline_title => 'Sync & history';
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   String get srs_value_no => 'No';
   String get srs_value_yes => 'Yes';
   String get srs_visual_add_field => 'Add field';
@@ -28822,104 +28920,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -29231,20 +29231,36 @@ class _StringsAr extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -29330,6 +29346,22 @@ class _StringsAr extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -30013,6 +30045,24 @@ class _StringsAr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -30676,11 +30726,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -30702,6 +30764,211 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -51994,104 +52261,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -52403,20 +52572,36 @@ class _StringsDe extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -52502,6 +52687,22 @@ class _StringsDe extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -53185,6 +53386,24 @@ class _StringsDe extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -53848,11 +54067,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -53874,6 +54105,211 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -75290,104 +75726,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -75699,20 +76037,36 @@ class _StringsEs extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -75798,6 +76152,22 @@ class _StringsEs extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -76481,6 +76851,24 @@ class _StringsEs extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -77144,11 +77532,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -77170,6 +77570,211 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -98674,104 +99279,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -99083,20 +99590,36 @@ class _StringsFr extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -99182,6 +99705,22 @@ class _StringsFr extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -99865,6 +100404,24 @@ class _StringsFr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -100528,11 +101085,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -100554,6 +101123,211 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -121822,104 +122596,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -122231,20 +122907,36 @@ class _StringsId extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -122330,6 +123022,22 @@ class _StringsId extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -123013,6 +123721,24 @@ class _StringsId extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -123676,11 +124402,23 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -123702,6 +124440,211 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -145011,104 +145954,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -145420,20 +146265,36 @@ class _StringsIt extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -145519,6 +146380,22 @@ class _StringsIt extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -146202,6 +147079,24 @@ class _StringsIt extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -146865,11 +147760,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -146891,6 +147798,211 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -167489,104 +168601,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -167898,20 +168912,36 @@ class _StringsJa extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -167997,6 +169027,22 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -168680,6 +169726,24 @@ class _StringsJa extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -169343,11 +170407,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -169369,6 +170445,211 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -189698,104 +190979,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -190107,20 +191290,36 @@ class _StringsKo extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -190206,6 +191405,22 @@ class _StringsKo extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -190889,6 +192104,24 @@ class _StringsKo extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -191552,11 +192785,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -191578,6 +192823,211 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -212616,104 +214066,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -213025,20 +214377,36 @@ class _StringsNl extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -213124,6 +214492,22 @@ class _StringsNl extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -213807,6 +215191,24 @@ class _StringsNl extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -214470,11 +215872,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -214496,6 +215910,211 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -235836,104 +237455,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -236245,20 +237766,36 @@ class _StringsPtBr extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -236344,6 +237881,22 @@ class _StringsPtBr extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -237027,6 +238580,24 @@ class _StringsPtBr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -237690,11 +239261,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -237716,6 +239299,211 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -259034,104 +260822,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -259443,20 +261133,36 @@ class _StringsRu extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -259542,6 +261248,22 @@ class _StringsRu extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -260225,6 +261947,24 @@ class _StringsRu extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -260888,11 +262628,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -260914,6 +262666,211 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -281983,104 +283940,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -282392,20 +284251,36 @@ class _StringsTh extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -282491,6 +284366,22 @@ class _StringsTh extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -283174,6 +285065,24 @@ class _StringsTh extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -283837,11 +285746,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -283863,6 +285784,211 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -304998,104 +307124,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -305407,20 +307435,36 @@ class _StringsTr extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -305506,6 +307550,22 @@ class _StringsTr extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -306189,6 +308249,24 @@ class _StringsTr extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -306852,11 +308930,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -306878,6 +308968,211 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -328009,104 +330304,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -328418,20 +330615,36 @@ class _StringsVi extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -328517,6 +330730,22 @@ class _StringsVi extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -329200,6 +331429,24 @@ class _StringsVi extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -329863,11 +332110,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -329889,6 +332148,211 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_store_unavailable =>
       'SRS data isn\'t open on this device right now';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -349703,99 +352167,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
   @override
-  String get srs_backup_auto => '自动备份';
-  @override
-  String get srs_backup_auto_hint =>
-      '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
-  @override
-  String get srs_backup_change_location => '更改存储位置';
-  @override
-  String get srs_backup_cloud_hint =>
-      '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
-  @override
-  String get srs_backup_corrupt => '备份文件已损坏';
-  @override
-  String get srs_backup_delete => '删除备份';
-  @override
-  String srs_backup_delete_confirm({required Object time}) => '删除 ${time} 的备份？';
-  @override
-  String srs_backup_disk_usage({required Object size}) => '本机占用 ${size}';
-  @override
-  String get srs_backup_done => '已备份';
-  @override
-  String get srs_backup_empty => '还没有备份';
-  @override
-  String get srs_backup_export => '另存为 / 分享';
-  @override
-  String get srs_backup_failed => '备份失败';
-  @override
-  String get srs_backup_interval => '最短间隔';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} 分钟';
-  @override
-  String get srs_backup_invalid => '这个文件不是 Fushi 复习备份';
-  @override
-  String get srs_backup_keep_daily => '每日备份保留份数';
-  @override
-  String get srs_backup_keep_hint =>
-      '今天和昨天的备份全部保留；更早的按日、周、月各留一份，超出份数的自动删除（与 Anki 相同）。';
-  @override
-  String get srs_backup_keep_monthly => '每月备份保留份数';
-  @override
-  String get srs_backup_keep_weekly => '每周备份保留份数';
-  @override
-  String get srs_backup_kind_auto => '自动';
-  @override
-  String get srs_backup_kind_manual => '手动';
-  @override
-  String get srs_backup_kind_pre_restore => '恢复前';
-  @override
-  String get srs_backup_list => '已有备份';
-  @override
-  String get srs_backup_location => '备份存放位置';
-  @override
-  String get srs_backup_location_desktop => '随 Fushi 的数据存储位置一起迁移。';
-  @override
-  String get srs_backup_location_mobile =>
-      '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
-  @override
-  String get srs_backup_menu => '备份操作';
-  @override
-  String get srs_backup_newer => '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
-  @override
-  String get srs_backup_now => '立即备份';
-  @override
-  String get srs_backup_open_folder => '打开文件夹';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
-  @override
-  String get srs_backup_restore => '恢复到此时间点';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      '复习数据将回到 ${time}：之后新建的笔记会被删除，之后删掉的笔记会恢复，之后的复习会被撤销；其它设备同步后也会一致。恢复前会先备份当前状态，可以随时撤回。';
-  @override
-  String get srs_backup_restore_confirm_title => '恢复复习数据？';
-  @override
-  String srs_backup_restore_done({required Object time}) => '已恢复到 ${time}';
-  @override
-  String get srs_backup_restore_failed => '恢复失败';
-  @override
-  String get srs_backup_restore_from_file => '从文件恢复';
-  @override
-  String get srs_backup_saved => '已保存';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      '这份备份属于本机的配置「${name}」，请先切换到该配置再恢复。';
-  @override
-  String get srs_backup_title => '备份';
-  @override
   String get srs_browse_batch_actions => '批量操作';
   @override
   String get srs_browse_bury_toggle => '搁置 / 取消搁置';
@@ -350093,20 +352464,34 @@ class _StringsZhCn extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       '这些字段的内容不会带过去：${names}';
   @override
+  String get srs_conflict_apply_delete => '删除';
+  @override
   String get srs_conflict_confirm => '确认';
   @override
   String get srs_conflict_confirm_all => '全部确认';
   @override
   String get srs_conflict_current => '当前生效';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      '在另一台设备上被删除，同时这里改过它（${n} 处）';
+  @override
+  String get srs_conflict_deleted_while_moved => '在另一台设备上被删除，同时被移动了';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      '在另一台设备上被删除，同时有人复习了它（${n} 次）';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       '设备 ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => '保留';
   @override
   String get srs_conflict_profile => '复习设置';
   @override
   String get srs_conflict_replaced => '被替换';
   @override
   String get srs_conflict_revert => '改回';
+  @override
+  String get srs_conflicts_deletions => '一边删除、一边修改';
   @override
   String get srs_conflicts_empty => '没有同步冲突';
   @override
@@ -350185,6 +352570,21 @@ class _StringsZhCn extends _StringsEn {
   String get srs_deck_rename => '重命名牌组';
   @override
   String get srs_deck_settings => '牌组设置';
+  @override
+  String get srs_duplicates_dismiss => '不是重复';
+  @override
+  String get srs_duplicates_hint =>
+      '同一笔记类型下词形和读音都相同，多半是在两台设备上各加了一次。合并会保留选中的那条，并把所有的复习历史合在一起。';
+  @override
+  String get srs_duplicates_keep => '保留';
+  @override
+  String get srs_duplicates_merge => '合并';
+  @override
+  String srs_duplicates_merged({required Object n}) => '已合并，${n} 张卡的复习历史合在了一起';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '复习 ${n} 次';
+  @override
+  String get srs_duplicates_title => '可能重复的笔记';
   @override
   String get srs_empty_action => '添加卡片';
   @override
@@ -350808,6 +353208,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_note_furigana_reading({required Object base}) => '「${base}」的读音';
   @override
+  String get srs_note_history => '修改历史';
+  @override
+  String srs_note_history_card({required Object n}) => '卡片 ${n}';
+  @override
+  String get srs_note_history_deleted => '删除';
+  @override
+  String get srs_note_history_empty => '还没有修改记录';
+  @override
+  String get srs_note_history_purged => '内容已彻底清除';
+  @override
+  String get srs_note_history_restored => '恢复';
+  @override
+  String srs_note_history_tag_added({required Object tag}) => '添加标签 ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) => '移除标签 ${tag}';
+  @override
   String get srs_note_image_paste => '粘贴图片';
   @override
   String get srs_note_image_paste_empty => '剪贴板里没有图片';
@@ -351426,9 +353842,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_status_suspended => '已暂停';
   @override
+  String get srs_sync_awaiting_confirm => '在复习页确认后才会开始同步复习数据';
+  @override
   String get srs_sync_backend_unsupported => '当前同步后端不支持复习数据同步';
   @override
   String get srs_sync_clock_skew => '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+  @override
+  String get srs_sync_confirm_body =>
+      '首次同步会把各台设备上的复习数据合到一起：每台设备的笔记和复习都保留，不会用一边覆盖另一边。同一个词若在两台设备上各加了一次，会在「同步冲突」里提示合并。';
+  @override
+  String get srs_sync_confirm_later => '稍后';
+  @override
+  String get srs_sync_confirm_start => '开始同步';
+  @override
+  String get srs_sync_confirm_title => '复习同步已升级';
   @override
   String get srs_sync_directory_unidentified => '暂时认不出同步目录（账号或地址还没就绪）';
   @override
@@ -351447,6 +353874,189 @@ class _StringsZhCn extends _StringsEn {
       '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
   @override
   String get srs_sync_store_unavailable => '本机的 SRS 数据此刻没有打开';
+  @override
+  String get srs_timeline_all_published => '所有改动都已同步';
+  @override
+  String srs_timeline_behind({required Object n}) => '还有 ${n} 条改动没收到';
+  @override
+  String get srs_timeline_checkpoint_add => '添加还原点';
+  @override
+  String get srs_timeline_checkpoint_done => '已添加还原点';
+  @override
+  String get srs_timeline_checkpoint_failed => '添加还原点失败';
+  @override
+  String get srs_timeline_checkpoints => '还原点';
+  @override
+  String get srs_timeline_checkpoints_empty => '还没有还原点';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      '批量删除、导入、更改笔记类型、更新 FSRS 参数和恢复之前会自动添加。';
+  @override
+  String get srs_timeline_cloud_hint =>
+      '复习数据随「同步与备份」（云盘）或「Fushi 互联」一起同步。每次改动都留在下面的历史里，不需要另外手动备份。';
+  @override
+  String get srs_timeline_device_warning => '该设备时钟明显超前';
+  @override
+  String get srs_timeline_digest_mismatch => '在同一进度下数据与本机不一致，请反馈这个问题';
+  @override
+  String get srs_timeline_export => '导出（.fushisrs）';
+  @override
+  String get srs_timeline_export_done => '已导出';
+  @override
+  String get srs_timeline_export_failed => '导出失败';
+  @override
+  String get srs_timeline_frozen => '已休眠';
+  @override
+  String get srs_timeline_import => '导入 .fushisrs';
+  @override
+  String get srs_timeline_import_confirm => '文件里的改动会并入当前 profile，不会覆盖这里的任何内容。';
+  @override
+  String srs_timeline_import_done({required Object n}) => '已并入 ${n} 条改动';
+  @override
+  String get srs_timeline_import_failed => '导入失败';
+  @override
+  String get srs_timeline_import_invalid => '这不是 Fushi 复习导出文件，或由更新版本生成';
+  @override
+  String get srs_timeline_import_other_profile => '这个文件属于另一个 profile';
+  @override
+  String get srs_timeline_location_add => '添加文件夹';
+  @override
+  String get srs_timeline_location_add_hint => 'U 盘、NAS，或由其它同步工具同步的文件夹';
+  @override
+  String get srs_timeline_location_channel => '同步通道';
+  @override
+  String get srs_timeline_location_encrypt => '开启加密';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      '这个位置里的复习数据和媒体会用口令加密，存储服务只看得到密文和文件大小。在这里同步的每台设备都要输入同一个口令。忘了口令，这个位置就读不出来，但每台设备本机的数据都还在。开启后不能在这里关闭。';
+  @override
+  String get srs_timeline_location_encrypt_done => '这个位置已开启加密';
+  @override
+  String get srs_timeline_location_encrypt_failed => '设置加密失败';
+  @override
+  String get srs_timeline_location_encrypt_pending => '下次同步时开启加密';
+  @override
+  String get srs_timeline_location_encrypted => '已加密';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
+  @override
+  String get srs_timeline_location_encryption => '端到端加密';
+  @override
+  String get srs_timeline_location_idle => '未使用';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      '上次同步 ${time}';
+  @override
+  String get srs_timeline_location_needs_key => '已加密，需要输入口令';
+  @override
+  String get srs_timeline_location_never => '尚未同步';
+  @override
+  String get srs_timeline_location_purpose_archive => '归档';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      '保存全部内容、这里的文件永不删除，作为额外的保险副本';
+  @override
+  String get srs_timeline_location_purpose_media => '媒体';
+  @override
+  String get srs_timeline_location_purpose_media_hint => '在这里保存卡片图片和音频的副本';
+  @override
+  String get srs_timeline_location_purpose_sync => '同步';
+  @override
+  String get srs_timeline_location_purpose_sync_hint => '经这个文件夹与其它设备交换改动';
+  @override
+  String get srs_timeline_location_purposes => '这个文件夹用于';
+  @override
+  String get srs_timeline_location_remove => '停用文件夹';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi 不再同步到这个文件夹，里面已有的文件会保留。';
+  @override
+  String get srs_timeline_location_unavailable => '文件夹不可用';
+  @override
+  String get srs_timeline_location_unlock => '输入口令';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      '另一台设备给这个位置开启了加密，输入同一个口令后才能在这里同步。';
+  @override
+  String get srs_timeline_location_unlocked => '已解锁，开始同步';
+  @override
+  String get srs_timeline_location_wrong_key => '口令不对';
+  @override
+  String get srs_timeline_locations => '存储位置';
+  @override
+  String srs_timeline_ops({required Object n}) => '历史中共 ${n} 条改动';
+  @override
+  String get srs_timeline_passphrase => '口令';
+  @override
+  String get srs_timeline_passphrase_again => '再输一遍口令';
+  @override
+  String get srs_timeline_passphrase_mismatch => '两次输入的口令不一致';
+  @override
+  String get srs_timeline_passphrase_too_short => '至少 8 个字符';
+  @override
+  String srs_timeline_plan_fields({required Object n}) => '改回 ${n} 项内容';
+  @override
+  String srs_timeline_plan_removed({required Object n}) => '删除 ${n} 个之后新建的条目';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) => '撤回 ${n} 次复习';
+  @override
+  String srs_timeline_plan_revived({required Object n}) => '恢复 ${n} 个被删的条目';
+  @override
+  String srs_timeline_plan_tags({required Object n}) => '撤销 ${n} 处标签改动';
+  @override
+  String get srs_timeline_reason_bulk_delete => '删除牌组之前';
+  @override
+  String get srs_timeline_reason_fsrs_params => '更新 FSRS 参数之前';
+  @override
+  String get srs_timeline_reason_import => '导入之前';
+  @override
+  String get srs_timeline_reason_manual => '手动添加';
+  @override
+  String get srs_timeline_reason_merge_notes => '合并笔记之前';
+  @override
+  String get srs_timeline_reason_note_type => '更改笔记类型之前';
+  @override
+  String get srs_timeline_reason_restore => '恢复之前';
+  @override
+  String get srs_timeline_restore => '恢复';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      '笔记、卡片、牌组和设置会回到 ${time} 时的样子。恢复前会先添加还原点，可以撤销。';
+  @override
+  String srs_timeline_restore_done({required Object time}) => '已恢复到 ${time}';
+  @override
+  String get srs_timeline_restore_failed => '恢复失败';
+  @override
+  String get srs_timeline_restore_moment => '恢复到某个时间点';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      '选日期和时刻。恢复是追加改动并同步到所有设备，之后还能撤销。';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      '${time} 之后没有改动';
+  @override
+  String get srs_timeline_restore_retract => '同时撤回之后的复习';
+  @override
+  String get srs_timeline_restore_retract_hint => '关闭时保留之后做过的复习，排程从它们继续。';
+  @override
+  String get srs_timeline_restore_title => '恢复复习数据？';
+  @override
+  String get srs_timeline_section => '时间线';
+  @override
+  String srs_timeline_seen({required Object time}) => '最后同步 ${time}';
+  @override
+  String get srs_timeline_status => '同步状态';
+  @override
+  String get srs_timeline_this_device => '本机';
+  @override
+  String get srs_timeline_title => '同步与历史';
+  @override
+  String srs_timeline_unpublished({required Object n}) => '还有 ${n} 条改动没上传';
+  @override
+  String srs_timeline_waiting({required Object n}) => '${n} 条改动在等更早的改动';
+  @override
+  String get srs_timeline_waiting_hint => '它们来自别的设备，所依赖的改动一到就会应用。';
   @override
   String get srs_value_no => '否';
   @override
@@ -371006,104 +373616,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
-  String get srs_backup_auto => 'Automatic backups';
-  @override
-  String get srs_backup_auto_hint =>
-      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-  @override
-  String get srs_backup_change_location => 'Change storage location';
-  @override
-  String get srs_backup_cloud_hint =>
-      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-  @override
-  String get srs_backup_corrupt => 'This backup file is damaged';
-  @override
-  String get srs_backup_delete => 'Delete backup';
-  @override
-  String srs_backup_delete_confirm({required Object time}) =>
-      'Delete the backup from ${time}?';
-  @override
-  String srs_backup_disk_usage({required Object size}) =>
-      'Using ${size} on this device';
-  @override
-  String get srs_backup_done => 'Backup saved';
-  @override
-  String get srs_backup_empty => 'No backups yet';
-  @override
-  String get srs_backup_export => 'Save or share';
-  @override
-  String get srs_backup_failed => 'Backup failed';
-  @override
-  String get srs_backup_interval => 'Minimum interval';
-  @override
-  String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
-  @override
-  String get srs_backup_keep_daily => 'Daily backups to keep';
-  @override
-  String get srs_backup_keep_hint =>
-      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-  @override
-  String get srs_backup_keep_monthly => 'Monthly backups to keep';
-  @override
-  String get srs_backup_keep_weekly => 'Weekly backups to keep';
-  @override
-  String get srs_backup_kind_auto => 'Automatic';
-  @override
-  String get srs_backup_kind_manual => 'Manual';
-  @override
-  String get srs_backup_kind_pre_restore => 'Before restore';
-  @override
-  String get srs_backup_list => 'Saved backups';
-  @override
-  String get srs_backup_location => 'Backup folder';
-  @override
-  String get srs_backup_location_desktop =>
-      'Moves together with Fushi\'s data storage location.';
-  @override
-  String get srs_backup_location_mobile =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
-  String get srs_backup_menu => 'Backup actions';
-  @override
-  String get srs_backup_newer =>
-      'This backup was made by a newer version of Fushi. Update the app to restore it.';
-  @override
-  String get srs_backup_now => 'Back up now';
-  @override
-  String get srs_backup_open_folder => 'Open folder';
-  @override
-  String srs_backup_other_profile({required Object name}) =>
-      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-  @override
-  String get srs_backup_restore => 'Restore to this point';
-  @override
-  String srs_backup_restore_confirm({required Object time}) =>
-      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-  @override
-  String get srs_backup_restore_confirm_title => 'Restore review data?';
-  @override
-  String srs_backup_restore_done({required Object time}) =>
-      'Restored to ${time}';
-  @override
-  String get srs_backup_restore_failed => 'Restore failed';
-  @override
-  String get srs_backup_restore_from_file => 'Restore from file';
-  @override
-  String get srs_backup_saved => 'Saved';
-  @override
-  String srs_backup_summary({
-    required Object notes,
-    required Object reviews,
-    required Object size,
-  }) => '${notes} notes · ${reviews} reviews · ${size}';
-  @override
-  String srs_backup_switch_profile({required Object name}) =>
-      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-  @override
-  String get srs_backup_title => 'Backups';
-  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -371415,20 +373927,36 @@ class _StringsZhHk extends _StringsEn {
   String srs_change_type_unused({required Object names}) =>
       'Content not carried over: ${names}';
   @override
+  String get srs_conflict_apply_delete => 'Delete';
+  @override
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
   @override
   String get srs_conflict_current => 'Current';
   @override
+  String srs_conflict_deleted_while_edited({required Object n}) =>
+      'Deleted on another device while it was edited here (${n} changes)';
+  @override
+  String get srs_conflict_deleted_while_moved =>
+      'Deleted on another device while it was moved';
+  @override
+  String srs_conflict_deleted_while_reviewed({required Object n}) =>
+      'Deleted on another device while it was reviewed (${n} reviews)';
+  @override
   String srs_conflict_from({required Object device, required Object time}) =>
       'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_keep => 'Keep';
   @override
   String get srs_conflict_profile => 'Review settings';
   @override
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflicts_deletions =>
+      'Deleted on one device, changed on another';
   @override
   String get srs_conflicts_empty => 'No sync conflicts';
   @override
@@ -371514,6 +374042,22 @@ class _StringsZhHk extends _StringsEn {
   String get srs_deck_rename => 'Rename deck';
   @override
   String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
   @override
   String get srs_empty_action => 'Add a card';
   @override
@@ -372197,6 +374741,24 @@ class _StringsZhHk extends _StringsEn {
   String srs_note_furigana_reading({required Object base}) =>
       'Reading of ${base}';
   @override
+  String get srs_note_history => 'Edit history';
+  @override
+  String srs_note_history_card({required Object n}) => 'Card ${n}';
+  @override
+  String get srs_note_history_deleted => 'Deleted';
+  @override
+  String get srs_note_history_empty => 'No edits yet';
+  @override
+  String get srs_note_history_purged => 'Content permanently erased';
+  @override
+  String get srs_note_history_restored => 'Restored';
+  @override
+  String srs_note_history_tag_added({required Object tag}) =>
+      'Added tag ${tag}';
+  @override
+  String srs_note_history_tag_removed({required Object tag}) =>
+      'Removed tag ${tag}';
+  @override
   String get srs_note_image_paste => 'Paste image';
   @override
   String get srs_note_image_paste_empty => 'No image on the clipboard';
@@ -372860,11 +375422,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -372885,6 +375459,211 @@ class _StringsZhHk extends _StringsEn {
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_sync_store_unavailable => '本機的 SRS 資料此刻沒有開啟';
+  @override
+  String get srs_timeline_all_published => 'All changes are synced';
+  @override
+  String srs_timeline_behind({required Object n}) =>
+      '${n} changes not received yet';
+  @override
+  String get srs_timeline_checkpoint_add => 'Add restore point';
+  @override
+  String get srs_timeline_checkpoint_done => 'Restore point added';
+  @override
+  String get srs_timeline_checkpoint_failed => 'Could not add a restore point';
+  @override
+  String get srs_timeline_checkpoints => 'Restore points';
+  @override
+  String get srs_timeline_checkpoints_empty => 'No restore points yet';
+  @override
+  String get srs_timeline_checkpoints_empty_hint =>
+      'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+  @override
+  String get srs_timeline_cloud_hint =>
+      'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+  @override
+  String get srs_timeline_device_warning => 'Its clock is far ahead';
+  @override
+  String get srs_timeline_digest_mismatch =>
+      'Data differs from this device at the same point. Please report this.';
+  @override
+  String get srs_timeline_export => 'Export (.fushisrs)';
+  @override
+  String get srs_timeline_export_done => 'Exported';
+  @override
+  String get srs_timeline_export_failed => 'Export failed';
+  @override
+  String get srs_timeline_frozen => 'Inactive';
+  @override
+  String get srs_timeline_import => 'Import .fushisrs';
+  @override
+  String get srs_timeline_import_confirm =>
+      'Changes in the file are merged into this profile. Nothing here is overwritten.';
+  @override
+  String srs_timeline_import_done({required Object n}) => 'Merged ${n} changes';
+  @override
+  String get srs_timeline_import_failed => 'Import failed';
+  @override
+  String get srs_timeline_import_invalid =>
+      'This is not a Fushi review export, or it was made by a newer version';
+  @override
+  String get srs_timeline_import_other_profile =>
+      'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
+  String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
+  @override
+  String srs_timeline_plan_fields({required Object n}) =>
+      '${n} values changed back';
+  @override
+  String srs_timeline_plan_removed({required Object n}) =>
+      '${n} items added later removed';
+  @override
+  String srs_timeline_plan_reviews({required Object n}) =>
+      '${n} reviews undone';
+  @override
+  String srs_timeline_plan_revived({required Object n}) =>
+      '${n} items brought back';
+  @override
+  String srs_timeline_plan_tags({required Object n}) =>
+      '${n} tag changes undone';
+  @override
+  String get srs_timeline_reason_bulk_delete => 'Before deleting a deck';
+  @override
+  String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
+  @override
+  String get srs_timeline_reason_import => 'Before an import';
+  @override
+  String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
+  @override
+  String get srs_timeline_reason_note_type => 'Before changing note type';
+  @override
+  String get srs_timeline_reason_restore => 'Before a restore';
+  @override
+  String get srs_timeline_restore => 'Restore';
+  @override
+  String srs_timeline_restore_body({required Object time}) =>
+      'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+  @override
+  String srs_timeline_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_timeline_restore_failed => 'Restore failed';
+  @override
+  String get srs_timeline_restore_moment => 'Restore to a point in time';
+  @override
+  String get srs_timeline_restore_moment_hint =>
+      'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+  @override
+  String srs_timeline_restore_nothing({required Object time}) =>
+      'Nothing changed since ${time}';
+  @override
+  String get srs_timeline_restore_retract => 'Also undo later reviews';
+  @override
+  String get srs_timeline_restore_retract_hint =>
+      'Off: reviews done since then are kept and scheduling continues from them.';
+  @override
+  String get srs_timeline_restore_title => 'Restore review data?';
+  @override
+  String get srs_timeline_section => 'Timeline';
+  @override
+  String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
+  @override
+  String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_this_device => 'This device';
+  @override
+  String get srs_timeline_title => 'Sync & history';
+  @override
+  String srs_timeline_unpublished({required Object n}) =>
+      '${n} changes not uploaded yet';
+  @override
+  String srs_timeline_waiting({required Object n}) =>
+      '${n} changes waiting for earlier ones';
+  @override
+  String get srs_timeline_waiting_hint =>
+      'They come from another device and are applied as soon as the changes they depend on arrive.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -391286,95 +394065,6 @@ extension on _StringsEn {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -391663,21 +394353,35 @@ extension on _StringsEn {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -391754,6 +394458,21 @@ extension on _StringsEn {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -392338,6 +395057,22 @@ extension on _StringsEn {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -392920,10 +395655,20 @@ extension on _StringsEn {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -392942,6 +395687,179 @@ extension on _StringsEn {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -410863,95 +413781,6 @@ extension on _StringsAr {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -411240,21 +414069,35 @@ extension on _StringsAr {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -411331,6 +414174,21 @@ extension on _StringsAr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -411915,6 +414773,22 @@ extension on _StringsAr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -412497,10 +415371,20 @@ extension on _StringsAr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -412519,6 +415403,179 @@ extension on _StringsAr {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -430496,95 +433553,6 @@ extension on _StringsDe {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -430873,21 +433841,35 @@ extension on _StringsDe {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -430964,6 +433946,21 @@ extension on _StringsDe {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -431548,6 +434545,22 @@ extension on _StringsDe {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -432130,10 +435143,20 @@ extension on _StringsDe {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -432152,6 +435175,179 @@ extension on _StringsDe {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -450133,95 +453329,6 @@ extension on _StringsEs {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -450510,21 +453617,35 @@ extension on _StringsEs {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -450601,6 +453722,21 @@ extension on _StringsEs {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -451185,6 +454321,22 @@ extension on _StringsEs {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -451767,10 +454919,20 @@ extension on _StringsEs {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -451789,6 +454951,179 @@ extension on _StringsEs {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -469781,95 +473116,6 @@ extension on _StringsFr {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -470158,21 +473404,35 @@ extension on _StringsFr {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -470249,6 +473509,21 @@ extension on _StringsFr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -470833,6 +474108,22 @@ extension on _StringsFr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -471415,10 +474706,20 @@ extension on _StringsFr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -471437,6 +474738,179 @@ extension on _StringsFr {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -489389,95 +492863,6 @@ extension on _StringsId {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -489766,21 +493151,35 @@ extension on _StringsId {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -489857,6 +493256,21 @@ extension on _StringsId {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -490441,6 +493855,22 @@ extension on _StringsId {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -491023,10 +494453,20 @@ extension on _StringsId {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -491045,6 +494485,179 @@ extension on _StringsId {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -509006,95 +512619,6 @@ extension on _StringsIt {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -509383,21 +512907,35 @@ extension on _StringsIt {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -509474,6 +513012,21 @@ extension on _StringsIt {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -510058,6 +513611,22 @@ extension on _StringsIt {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -510640,10 +514209,20 @@ extension on _StringsIt {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -510662,6 +514241,179 @@ extension on _StringsIt {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -528557,95 +532309,6 @@ extension on _StringsJa {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -528934,21 +532597,35 @@ extension on _StringsJa {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -529025,6 +532702,21 @@ extension on _StringsJa {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -529609,6 +533301,22 @@ extension on _StringsJa {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -530191,10 +533899,20 @@ extension on _StringsJa {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -530213,6 +533931,179 @@ extension on _StringsJa {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -548057,95 +551948,6 @@ extension on _StringsKo {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -548434,21 +552236,35 @@ extension on _StringsKo {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -548525,6 +552341,21 @@ extension on _StringsKo {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -549109,6 +552940,22 @@ extension on _StringsKo {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -549691,10 +553538,20 @@ extension on _StringsKo {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -549713,6 +553570,179 @@ extension on _StringsKo {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -567647,95 +571677,6 @@ extension on _StringsNl {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -568024,21 +571965,35 @@ extension on _StringsNl {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -568115,6 +572070,21 @@ extension on _StringsNl {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -568699,6 +572669,22 @@ extension on _StringsNl {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -569281,10 +573267,20 @@ extension on _StringsNl {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -569303,6 +573299,179 @@ extension on _StringsNl {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -587268,95 +591437,6 @@ extension on _StringsPtBr {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -587645,21 +591725,35 @@ extension on _StringsPtBr {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -587736,6 +591830,21 @@ extension on _StringsPtBr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -588320,6 +592429,22 @@ extension on _StringsPtBr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -588902,10 +593027,20 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -588924,6 +593059,179 @@ extension on _StringsPtBr {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -606893,95 +611201,6 @@ extension on _StringsRu {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -607270,21 +611489,35 @@ extension on _StringsRu {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -607361,6 +611594,21 @@ extension on _StringsRu {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -607945,6 +612193,22 @@ extension on _StringsRu {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -608527,10 +612791,20 @@ extension on _StringsRu {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -608549,6 +612823,179 @@ extension on _StringsRu {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -626478,95 +630925,6 @@ extension on _StringsTh {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -626855,21 +631213,35 @@ extension on _StringsTh {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -626946,6 +631318,21 @@ extension on _StringsTh {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -627530,6 +631917,22 @@ extension on _StringsTh {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -628112,10 +632515,20 @@ extension on _StringsTh {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -628134,6 +632547,179 @@ extension on _StringsTh {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -646081,95 +650667,6 @@ extension on _StringsTr {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -646458,21 +650955,35 @@ extension on _StringsTr {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -646549,6 +651060,21 @@ extension on _StringsTr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -647133,6 +651659,22 @@ extension on _StringsTr {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -647715,10 +652257,20 @@ extension on _StringsTr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -647737,6 +652289,179 @@ extension on _StringsTr {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -665679,95 +670404,6 @@ extension on _StringsVi {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -666056,21 +670692,35 @@ extension on _StringsVi {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -666147,6 +670797,21 @@ extension on _StringsVi {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -666731,6 +671396,22 @@ extension on _StringsVi {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -667313,10 +671994,20 @@ extension on _StringsVi {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -667335,6 +672026,179 @@ extension on _StringsVi {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return 'SRS data isn\'t open on this device right now';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -685127,94 +689991,6 @@ extension on _StringsZhCn {
             '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect（Fushi 复习）';
-      case 'srs_backup_auto':
-        return '自动备份';
-      case 'srs_backup_auto_hint':
-        return '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
-      case 'srs_backup_change_location':
-        return '更改存储位置';
-      case 'srs_backup_cloud_hint':
-        return '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
-      case 'srs_backup_corrupt':
-        return '备份文件已损坏';
-      case 'srs_backup_delete':
-        return '删除备份';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => '删除 ${time} 的备份？';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => '本机占用 ${size}';
-      case 'srs_backup_done':
-        return '已备份';
-      case 'srs_backup_empty':
-        return '还没有备份';
-      case 'srs_backup_export':
-        return '另存为 / 分享';
-      case 'srs_backup_failed':
-        return '备份失败';
-      case 'srs_backup_interval':
-        return '最短间隔';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} 分钟';
-      case 'srs_backup_invalid':
-        return '这个文件不是 Fushi 复习备份';
-      case 'srs_backup_keep_daily':
-        return '每日备份保留份数';
-      case 'srs_backup_keep_hint':
-        return '今天和昨天的备份全部保留；更早的按日、周、月各留一份，超出份数的自动删除（与 Anki 相同）。';
-      case 'srs_backup_keep_monthly':
-        return '每月备份保留份数';
-      case 'srs_backup_keep_weekly':
-        return '每周备份保留份数';
-      case 'srs_backup_kind_auto':
-        return '自动';
-      case 'srs_backup_kind_manual':
-        return '手动';
-      case 'srs_backup_kind_pre_restore':
-        return '恢复前';
-      case 'srs_backup_list':
-        return '已有备份';
-      case 'srs_backup_location':
-        return '备份存放位置';
-      case 'srs_backup_location_desktop':
-        return '随 Fushi 的数据存储位置一起迁移。';
-      case 'srs_backup_location_mobile':
-        return '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
-      case 'srs_backup_menu':
-        return '备份操作';
-      case 'srs_backup_newer':
-        return '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
-      case 'srs_backup_now':
-        return '立即备份';
-      case 'srs_backup_open_folder':
-        return '打开文件夹';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
-      case 'srs_backup_restore':
-        return '恢复到此时间点';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            '复习数据将回到 ${time}：之后新建的笔记会被删除，之后删掉的笔记会恢复，之后的复习会被撤销；其它设备同步后也会一致。恢复前会先备份当前状态，可以随时撤回。';
-      case 'srs_backup_restore_confirm_title':
-        return '恢复复习数据？';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => '已恢复到 ${time}';
-      case 'srs_backup_restore_failed':
-        return '恢复失败';
-      case 'srs_backup_restore_from_file':
-        return '从文件恢复';
-      case 'srs_backup_saved':
-        return '已保存';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) => '这份备份属于本机的配置「${name}」，请先切换到该配置再恢复。';
-      case 'srs_backup_title':
-        return '备份';
       case 'srs_browse_batch_actions':
         return '批量操作';
       case 'srs_browse_bury_toggle':
@@ -685498,21 +690274,33 @@ extension on _StringsZhCn {
         return '更改笔记类型';
       case 'srs_change_type_unused':
         return ({required Object names}) => '这些字段的内容不会带过去：${names}';
+      case 'srs_conflict_apply_delete':
+        return '删除';
       case 'srs_conflict_confirm':
         return '确认';
       case 'srs_conflict_confirm_all':
         return '全部确认';
       case 'srs_conflict_current':
         return '当前生效';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) => '在另一台设备上被删除，同时这里改过它（${n} 处）';
+      case 'srs_conflict_deleted_while_moved':
+        return '在另一台设备上被删除，同时被移动了';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) => '在另一台设备上被删除，同时有人复习了它（${n} 次）';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             '设备 ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return '保留';
       case 'srs_conflict_profile':
         return '复习设置';
       case 'srs_conflict_replaced':
         return '被替换';
       case 'srs_conflict_revert':
         return '改回';
+      case 'srs_conflicts_deletions':
+        return '一边删除、一边修改';
       case 'srs_conflicts_empty':
         return '没有同步冲突';
       case 'srs_conflicts_empty_hint':
@@ -685587,6 +690375,20 @@ extension on _StringsZhCn {
         return '重命名牌组';
       case 'srs_deck_settings':
         return '牌组设置';
+      case 'srs_duplicates_dismiss':
+        return '不是重复';
+      case 'srs_duplicates_hint':
+        return '同一笔记类型下词形和读音都相同，多半是在两台设备上各加了一次。合并会保留选中的那条，并把所有的复习历史合在一起。';
+      case 'srs_duplicates_keep':
+        return '保留';
+      case 'srs_duplicates_merge':
+        return '合并';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) => '已合并，${n} 张卡的复习历史合在了一起';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '复习 ${n} 次';
+      case 'srs_duplicates_title':
+        return '可能重复的笔记';
       case 'srs_empty_action':
         return '添加卡片';
       case 'srs_empty_body':
@@ -686155,6 +690957,22 @@ extension on _StringsZhCn {
         return '点词改读音';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => '「${base}」的读音';
+      case 'srs_note_history':
+        return '修改历史';
+      case 'srs_note_history_card':
+        return ({required Object n}) => '卡片 ${n}';
+      case 'srs_note_history_deleted':
+        return '删除';
+      case 'srs_note_history_empty':
+        return '还没有修改记录';
+      case 'srs_note_history_purged':
+        return '内容已彻底清除';
+      case 'srs_note_history_restored':
+        return '恢复';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => '添加标签 ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => '移除标签 ${tag}';
       case 'srs_note_image_paste':
         return '粘贴图片';
       case 'srs_note_image_paste_empty':
@@ -686735,10 +691553,20 @@ extension on _StringsZhCn {
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
         return '已暂停';
+      case 'srs_sync_awaiting_confirm':
+        return '在复习页确认后才会开始同步复习数据';
       case 'srs_sync_backend_unsupported':
         return '当前同步后端不支持复习数据同步';
       case 'srs_sync_clock_skew':
         return '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+      case 'srs_sync_confirm_body':
+        return '首次同步会把各台设备上的复习数据合到一起：每台设备的笔记和复习都保留，不会用一边覆盖另一边。同一个词若在两台设备上各加了一次，会在「同步冲突」里提示合并。';
+      case 'srs_sync_confirm_later':
+        return '稍后';
+      case 'srs_sync_confirm_start':
+        return '开始同步';
+      case 'srs_sync_confirm_title':
+        return '复习同步已升级';
       case 'srs_sync_directory_unidentified':
         return '暂时认不出同步目录（账号或地址还没就绪）';
       case 'srs_sync_done':
@@ -686756,6 +691584,179 @@ extension on _StringsZhCn {
         return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
       case 'srs_sync_store_unavailable':
         return '本机的 SRS 数据此刻没有打开';
+      case 'srs_timeline_all_published':
+        return '所有改动都已同步';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '还有 ${n} 条改动没收到';
+      case 'srs_timeline_checkpoint_add':
+        return '添加还原点';
+      case 'srs_timeline_checkpoint_done':
+        return '已添加还原点';
+      case 'srs_timeline_checkpoint_failed':
+        return '添加还原点失败';
+      case 'srs_timeline_checkpoints':
+        return '还原点';
+      case 'srs_timeline_checkpoints_empty':
+        return '还没有还原点';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return '批量删除、导入、更改笔记类型、更新 FSRS 参数和恢复之前会自动添加。';
+      case 'srs_timeline_cloud_hint':
+        return '复习数据随「同步与备份」（云盘）或「Fushi 互联」一起同步。每次改动都留在下面的历史里，不需要另外手动备份。';
+      case 'srs_timeline_device_warning':
+        return '该设备时钟明显超前';
+      case 'srs_timeline_digest_mismatch':
+        return '在同一进度下数据与本机不一致，请反馈这个问题';
+      case 'srs_timeline_export':
+        return '导出（.fushisrs）';
+      case 'srs_timeline_export_done':
+        return '已导出';
+      case 'srs_timeline_export_failed':
+        return '导出失败';
+      case 'srs_timeline_frozen':
+        return '已休眠';
+      case 'srs_timeline_import':
+        return '导入 .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return '文件里的改动会并入当前 profile，不会覆盖这里的任何内容。';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => '已并入 ${n} 条改动';
+      case 'srs_timeline_import_failed':
+        return '导入失败';
+      case 'srs_timeline_import_invalid':
+        return '这不是 Fushi 复习导出文件，或由更新版本生成';
+      case 'srs_timeline_import_other_profile':
+        return '这个文件属于另一个 profile';
+      case 'srs_timeline_location_add':
+        return '添加文件夹';
+      case 'srs_timeline_location_add_hint':
+        return 'U 盘、NAS，或由其它同步工具同步的文件夹';
+      case 'srs_timeline_location_channel':
+        return '同步通道';
+      case 'srs_timeline_location_encrypt':
+        return '开启加密';
+      case 'srs_timeline_location_encrypt_body':
+        return '这个位置里的复习数据和媒体会用口令加密，存储服务只看得到密文和文件大小。在这里同步的每台设备都要输入同一个口令。忘了口令，这个位置就读不出来，但每台设备本机的数据都还在。开启后不能在这里关闭。';
+      case 'srs_timeline_location_encrypt_done':
+        return '这个位置已开启加密';
+      case 'srs_timeline_location_encrypt_failed':
+        return '设置加密失败';
+      case 'srs_timeline_location_encrypt_pending':
+        return '下次同步时开启加密';
+      case 'srs_timeline_location_encrypted':
+        return '已加密';
+      case 'srs_timeline_location_encrypted_hint':
+        return '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
+      case 'srs_timeline_location_encryption':
+        return '端到端加密';
+      case 'srs_timeline_location_idle':
+        return '未使用';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => '上次同步 ${time}';
+      case 'srs_timeline_location_needs_key':
+        return '已加密，需要输入口令';
+      case 'srs_timeline_location_never':
+        return '尚未同步';
+      case 'srs_timeline_location_purpose_archive':
+        return '归档';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return '保存全部内容、这里的文件永不删除，作为额外的保险副本';
+      case 'srs_timeline_location_purpose_media':
+        return '媒体';
+      case 'srs_timeline_location_purpose_media_hint':
+        return '在这里保存卡片图片和音频的副本';
+      case 'srs_timeline_location_purpose_sync':
+        return '同步';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return '经这个文件夹与其它设备交换改动';
+      case 'srs_timeline_location_purposes':
+        return '这个文件夹用于';
+      case 'srs_timeline_location_remove':
+        return '停用文件夹';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi 不再同步到这个文件夹，里面已有的文件会保留。';
+      case 'srs_timeline_location_unavailable':
+        return '文件夹不可用';
+      case 'srs_timeline_location_unlock':
+        return '输入口令';
+      case 'srs_timeline_location_unlock_body':
+        return '另一台设备给这个位置开启了加密，输入同一个口令后才能在这里同步。';
+      case 'srs_timeline_location_unlocked':
+        return '已解锁，开始同步';
+      case 'srs_timeline_location_wrong_key':
+        return '口令不对';
+      case 'srs_timeline_locations':
+        return '存储位置';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '历史中共 ${n} 条改动';
+      case 'srs_timeline_passphrase':
+        return '口令';
+      case 'srs_timeline_passphrase_again':
+        return '再输一遍口令';
+      case 'srs_timeline_passphrase_mismatch':
+        return '两次输入的口令不一致';
+      case 'srs_timeline_passphrase_too_short':
+        return '至少 8 个字符';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '改回 ${n} 项内容';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '删除 ${n} 个之后新建的条目';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '撤回 ${n} 次复习';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '恢复 ${n} 个被删的条目';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '撤销 ${n} 处标签改动';
+      case 'srs_timeline_reason_bulk_delete':
+        return '删除牌组之前';
+      case 'srs_timeline_reason_fsrs_params':
+        return '更新 FSRS 参数之前';
+      case 'srs_timeline_reason_import':
+        return '导入之前';
+      case 'srs_timeline_reason_manual':
+        return '手动添加';
+      case 'srs_timeline_reason_merge_notes':
+        return '合并笔记之前';
+      case 'srs_timeline_reason_note_type':
+        return '更改笔记类型之前';
+      case 'srs_timeline_reason_restore':
+        return '恢复之前';
+      case 'srs_timeline_restore':
+        return '恢复';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            '笔记、卡片、牌组和设置会回到 ${time} 时的样子。恢复前会先添加还原点，可以撤销。';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => '已恢复到 ${time}';
+      case 'srs_timeline_restore_failed':
+        return '恢复失败';
+      case 'srs_timeline_restore_moment':
+        return '恢复到某个时间点';
+      case 'srs_timeline_restore_moment_hint':
+        return '选日期和时刻。恢复是追加改动并同步到所有设备，之后还能撤销。';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => '${time} 之后没有改动';
+      case 'srs_timeline_restore_retract':
+        return '同时撤回之后的复习';
+      case 'srs_timeline_restore_retract_hint':
+        return '关闭时保留之后做过的复习，排程从它们继续。';
+      case 'srs_timeline_restore_title':
+        return '恢复复习数据？';
+      case 'srs_timeline_section':
+        return '时间线';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => '最后同步 ${time}';
+      case 'srs_timeline_status':
+        return '同步状态';
+      case 'srs_timeline_this_device':
+        return '本机';
+      case 'srs_timeline_title':
+        return '同步与历史';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '还有 ${n} 条改动没上传';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} 条改动在等更早的改动';
+      case 'srs_timeline_waiting_hint':
+        return '它们来自别的设备，所依赖的改动一到就会应用。';
       case 'srs_value_no':
         return '否';
       case 'srs_value_yes':
@@ -704522,95 +709523,6 @@ extension on _StringsZhHk {
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
-      case 'srs_backup_auto':
-        return 'Automatic backups';
-      case 'srs_backup_auto_hint':
-        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
-      case 'srs_backup_change_location':
-        return 'Change storage location';
-      case 'srs_backup_cloud_hint':
-        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
-      case 'srs_backup_corrupt':
-        return 'This backup file is damaged';
-      case 'srs_backup_delete':
-        return 'Delete backup';
-      case 'srs_backup_delete_confirm':
-        return ({required Object time}) => 'Delete the backup from ${time}?';
-      case 'srs_backup_disk_usage':
-        return ({required Object size}) => 'Using ${size} on this device';
-      case 'srs_backup_done':
-        return 'Backup saved';
-      case 'srs_backup_empty':
-        return 'No backups yet';
-      case 'srs_backup_export':
-        return 'Save or share';
-      case 'srs_backup_failed':
-        return 'Backup failed';
-      case 'srs_backup_interval':
-        return 'Minimum interval';
-      case 'srs_backup_interval_minutes':
-        return ({required Object n}) => '${n} min';
-      case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
-      case 'srs_backup_keep_daily':
-        return 'Daily backups to keep';
-      case 'srs_backup_keep_hint':
-        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
-      case 'srs_backup_keep_monthly':
-        return 'Monthly backups to keep';
-      case 'srs_backup_keep_weekly':
-        return 'Weekly backups to keep';
-      case 'srs_backup_kind_auto':
-        return 'Automatic';
-      case 'srs_backup_kind_manual':
-        return 'Manual';
-      case 'srs_backup_kind_pre_restore':
-        return 'Before restore';
-      case 'srs_backup_list':
-        return 'Saved backups';
-      case 'srs_backup_location':
-        return 'Backup folder';
-      case 'srs_backup_location_desktop':
-        return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_mobile':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-      case 'srs_backup_menu':
-        return 'Backup actions';
-      case 'srs_backup_newer':
-        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
-      case 'srs_backup_now':
-        return 'Back up now';
-      case 'srs_backup_open_folder':
-        return 'Open folder';
-      case 'srs_backup_other_profile':
-        return ({required Object name}) =>
-            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
-      case 'srs_backup_restore':
-        return 'Restore to this point';
-      case 'srs_backup_restore_confirm':
-        return ({required Object time}) =>
-            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
-      case 'srs_backup_restore_confirm_title':
-        return 'Restore review data?';
-      case 'srs_backup_restore_done':
-        return ({required Object time}) => 'Restored to ${time}';
-      case 'srs_backup_restore_failed':
-        return 'Restore failed';
-      case 'srs_backup_restore_from_file':
-        return 'Restore from file';
-      case 'srs_backup_saved':
-        return 'Saved';
-      case 'srs_backup_summary':
-        return ({
-          required Object notes,
-          required Object reviews,
-          required Object size,
-        }) => '${notes} notes · ${reviews} reviews · ${size}';
-      case 'srs_backup_switch_profile':
-        return ({required Object name}) =>
-            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
-      case 'srs_backup_title':
-        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -704899,21 +709811,35 @@ extension on _StringsZhHk {
       case 'srs_change_type_unused':
         return ({required Object names}) =>
             'Content not carried over: ${names}';
+      case 'srs_conflict_apply_delete':
+        return 'Delete';
       case 'srs_conflict_confirm':
         return 'Keep current';
       case 'srs_conflict_confirm_all':
         return 'Keep all current';
       case 'srs_conflict_current':
         return 'Current';
+      case 'srs_conflict_deleted_while_edited':
+        return ({required Object n}) =>
+            'Deleted on another device while it was edited here (${n} changes)';
+      case 'srs_conflict_deleted_while_moved':
+        return 'Deleted on another device while it was moved';
+      case 'srs_conflict_deleted_while_reviewed':
+        return ({required Object n}) =>
+            'Deleted on another device while it was reviewed (${n} reviews)';
       case 'srs_conflict_from':
         return ({required Object device, required Object time}) =>
             'Device ${device} · ${time}';
+      case 'srs_conflict_keep':
+        return 'Keep';
       case 'srs_conflict_profile':
         return 'Review settings';
       case 'srs_conflict_replaced':
         return 'Replaced';
       case 'srs_conflict_revert':
         return 'Switch back';
+      case 'srs_conflicts_deletions':
+        return 'Deleted on one device, changed on another';
       case 'srs_conflicts_empty':
         return 'No sync conflicts';
       case 'srs_conflicts_empty_hint':
@@ -704990,6 +709916,21 @@ extension on _StringsZhHk {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -705573,6 +710514,22 @@ extension on _StringsZhHk {
         return 'Tap a word to change its reading';
       case 'srs_note_furigana_reading':
         return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_history':
+        return 'Edit history';
+      case 'srs_note_history_card':
+        return ({required Object n}) => 'Card ${n}';
+      case 'srs_note_history_deleted':
+        return 'Deleted';
+      case 'srs_note_history_empty':
+        return 'No edits yet';
+      case 'srs_note_history_purged':
+        return 'Content permanently erased';
+      case 'srs_note_history_restored':
+        return 'Restored';
+      case 'srs_note_history_tag_added':
+        return ({required Object tag}) => 'Added tag ${tag}';
+      case 'srs_note_history_tag_removed':
+        return ({required Object tag}) => 'Removed tag ${tag}';
       case 'srs_note_image_paste':
         return 'Paste image';
       case 'srs_note_image_paste_empty':
@@ -706155,10 +711112,20 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -706177,6 +711144,179 @@ extension on _StringsZhHk {
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
         return '本機的 SRS 資料此刻沒有開啟';
+      case 'srs_timeline_all_published':
+        return 'All changes are synced';
+      case 'srs_timeline_behind':
+        return ({required Object n}) => '${n} changes not received yet';
+      case 'srs_timeline_checkpoint_add':
+        return 'Add restore point';
+      case 'srs_timeline_checkpoint_done':
+        return 'Restore point added';
+      case 'srs_timeline_checkpoint_failed':
+        return 'Could not add a restore point';
+      case 'srs_timeline_checkpoints':
+        return 'Restore points';
+      case 'srs_timeline_checkpoints_empty':
+        return 'No restore points yet';
+      case 'srs_timeline_checkpoints_empty_hint':
+        return 'One is added automatically before bulk deletes, imports, note type changes, new FSRS parameters and restores.';
+      case 'srs_timeline_cloud_hint':
+        return 'Review data syncs along with your cloud drive (Sync & backup) or Fushi Interconnect. Every change is kept in the history below, so there is nothing to back up by hand.';
+      case 'srs_timeline_device_warning':
+        return 'Its clock is far ahead';
+      case 'srs_timeline_digest_mismatch':
+        return 'Data differs from this device at the same point. Please report this.';
+      case 'srs_timeline_export':
+        return 'Export (.fushisrs)';
+      case 'srs_timeline_export_done':
+        return 'Exported';
+      case 'srs_timeline_export_failed':
+        return 'Export failed';
+      case 'srs_timeline_frozen':
+        return 'Inactive';
+      case 'srs_timeline_import':
+        return 'Import .fushisrs';
+      case 'srs_timeline_import_confirm':
+        return 'Changes in the file are merged into this profile. Nothing here is overwritten.';
+      case 'srs_timeline_import_done':
+        return ({required Object n}) => 'Merged ${n} changes';
+      case 'srs_timeline_import_failed':
+        return 'Import failed';
+      case 'srs_timeline_import_invalid':
+        return 'This is not a Fushi review export, or it was made by a newer version';
+      case 'srs_timeline_import_other_profile':
+        return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
+      case 'srs_timeline_ops':
+        return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
+      case 'srs_timeline_plan_fields':
+        return ({required Object n}) => '${n} values changed back';
+      case 'srs_timeline_plan_removed':
+        return ({required Object n}) => '${n} items added later removed';
+      case 'srs_timeline_plan_reviews':
+        return ({required Object n}) => '${n} reviews undone';
+      case 'srs_timeline_plan_revived':
+        return ({required Object n}) => '${n} items brought back';
+      case 'srs_timeline_plan_tags':
+        return ({required Object n}) => '${n} tag changes undone';
+      case 'srs_timeline_reason_bulk_delete':
+        return 'Before deleting a deck';
+      case 'srs_timeline_reason_fsrs_params':
+        return 'Before new FSRS parameters';
+      case 'srs_timeline_reason_import':
+        return 'Before an import';
+      case 'srs_timeline_reason_manual':
+        return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
+      case 'srs_timeline_reason_note_type':
+        return 'Before changing note type';
+      case 'srs_timeline_reason_restore':
+        return 'Before a restore';
+      case 'srs_timeline_restore':
+        return 'Restore';
+      case 'srs_timeline_restore_body':
+        return ({required Object time}) =>
+            'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
+      case 'srs_timeline_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_timeline_restore_failed':
+        return 'Restore failed';
+      case 'srs_timeline_restore_moment':
+        return 'Restore to a point in time';
+      case 'srs_timeline_restore_moment_hint':
+        return 'Pick a date and time. Restoring adds changes on top and syncs to every device; it can be undone.';
+      case 'srs_timeline_restore_nothing':
+        return ({required Object time}) => 'Nothing changed since ${time}';
+      case 'srs_timeline_restore_retract':
+        return 'Also undo later reviews';
+      case 'srs_timeline_restore_retract_hint':
+        return 'Off: reviews done since then are kept and scheduling continues from them.';
+      case 'srs_timeline_restore_title':
+        return 'Restore review data?';
+      case 'srs_timeline_section':
+        return 'Timeline';
+      case 'srs_timeline_seen':
+        return ({required Object time}) => 'Last seen ${time}';
+      case 'srs_timeline_status':
+        return 'Sync status';
+      case 'srs_timeline_this_device':
+        return 'This device';
+      case 'srs_timeline_title':
+        return 'Sync & history';
+      case 'srs_timeline_unpublished':
+        return ({required Object n}) => '${n} changes not uploaded yet';
+      case 'srs_timeline_waiting':
+        return ({required Object n}) => '${n} changes waiting for earlier ones';
+      case 'srs_timeline_waiting_hint':
+        return 'They come from another device and are applied as soon as the changes they depend on arrive.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
