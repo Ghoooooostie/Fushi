@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160497 (9441 per locale)
+/// Strings: 160786 (9458 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10195,9 +10195,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   String get srs_timeline_location_channel => 'Sync channel';
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
   String get srs_timeline_location_idle => 'Not in use';
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   String get srs_timeline_location_never => 'Not synced yet';
   String get srs_timeline_location_purpose_archive => 'Archive';
   String get srs_timeline_location_purpose_archive_hint =>
@@ -10213,8 +10228,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_location_remove_confirm =>
       'Fushi stops syncing to this folder. Files already in it are kept.';
   String get srs_timeline_location_unavailable => 'Folder not available';
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
   String get srs_timeline_locations => 'Storage locations';
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  String get srs_timeline_passphrase => 'Passphrase';
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
   String srs_timeline_plan_removed({required Object n}) =>
@@ -30667,10 +30691,34 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -30698,9 +30746,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -53886,10 +53951,34 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -53917,9 +54006,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -77229,10 +77335,34 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -77260,9 +77390,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -100660,10 +100807,34 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -100691,9 +100862,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -123855,10 +124043,34 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -123886,9 +124098,26 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -147091,10 +147320,34 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -147122,9 +147375,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -169616,10 +169886,34 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -169647,9 +169941,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -191872,10 +192183,34 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -191903,9 +192238,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -214838,10 +215190,34 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -214869,9 +215245,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -238105,10 +238498,34 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -238136,9 +238553,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -261350,10 +261784,34 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -261381,9 +261839,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -284346,10 +284821,34 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -284377,9 +284876,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -307408,10 +307924,34 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -307439,9 +307979,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -330466,10 +331023,34 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -330497,9 +331078,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -352073,10 +352671,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_location_channel => '同步通道';
   @override
+  String get srs_timeline_location_encrypt => '开启加密';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      '这个位置里的复习数据和媒体会用口令加密，存储服务只看得到密文和文件大小。在这里同步的每台设备都要输入同一个口令。忘了口令，这个位置就读不出来，但每台设备本机的数据都还在。开启后不能在这里关闭。';
+  @override
+  String get srs_timeline_location_encrypt_done => '这个位置已开启加密';
+  @override
+  String get srs_timeline_location_encrypt_failed => '设置加密失败';
+  @override
+  String get srs_timeline_location_encrypt_pending => '下次同步时开启加密';
+  @override
+  String get srs_timeline_location_encrypted => '已加密';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
+  @override
+  String get srs_timeline_location_encryption => '端到端加密';
+  @override
   String get srs_timeline_location_idle => '未使用';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       '上次同步 ${time}';
+  @override
+  String get srs_timeline_location_needs_key => '已加密，需要输入口令';
   @override
   String get srs_timeline_location_never => '尚未同步';
   @override
@@ -352102,9 +352720,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => '文件夹不可用';
   @override
+  String get srs_timeline_location_unlock => '输入口令';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      '另一台设备给这个位置开启了加密，输入同一个口令后才能在这里同步。';
+  @override
+  String get srs_timeline_location_unlocked => '已解锁，开始同步';
+  @override
+  String get srs_timeline_location_wrong_key => '口令不对';
+  @override
   String get srs_timeline_locations => '存储位置';
   @override
   String srs_timeline_ops({required Object n}) => '历史中共 ${n} 条改动';
+  @override
+  String get srs_timeline_passphrase => '口令';
+  @override
+  String get srs_timeline_passphrase_again => '再输一遍口令';
+  @override
+  String get srs_timeline_passphrase_mismatch => '两次输入的口令不一致';
+  @override
+  String get srs_timeline_passphrase_too_short => '至少 8 个字符';
   @override
   String srs_timeline_plan_fields({required Object n}) => '改回 ${n} 项内容';
   @override
@@ -373547,10 +374182,34 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
+  String get srs_timeline_location_encrypt => 'Turn on encryption';
+  @override
+  String get srs_timeline_location_encrypt_body =>
+      'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+  @override
+  String get srs_timeline_location_encrypt_done =>
+      'Encryption is on for this location';
+  @override
+  String get srs_timeline_location_encrypt_failed =>
+      'Could not set up encryption';
+  @override
+  String get srs_timeline_location_encrypt_pending =>
+      'Encryption turns on at the next sync';
+  @override
+  String get srs_timeline_location_encrypted => 'Encrypted';
+  @override
+  String get srs_timeline_location_encrypted_hint =>
+      'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
+  @override
+  String get srs_timeline_location_needs_key =>
+      'Encrypted, enter the passphrase';
   @override
   String get srs_timeline_location_never => 'Not synced yet';
   @override
@@ -373578,9 +374237,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_timeline_location_unavailable => 'Folder not available';
   @override
+  String get srs_timeline_location_unlock => 'Enter passphrase';
+  @override
+  String get srs_timeline_location_unlock_body =>
+      'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+  @override
+  String get srs_timeline_location_unlocked => 'Unlocked, syncing';
+  @override
+  String get srs_timeline_location_wrong_key => 'Passphrase does not match';
+  @override
   String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
+  @override
+  String get srs_timeline_passphrase => 'Passphrase';
+  @override
+  String get srs_timeline_passphrase_again => 'Passphrase again';
+  @override
+  String get srs_timeline_passphrase_mismatch => 'The two passphrases differ';
+  @override
+  String get srs_timeline_passphrase_too_short => 'Use at least 8 characters';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -393660,10 +394336,28 @@ extension on _StringsEn {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -393686,10 +394380,26 @@ extension on _StringsEn {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -413277,10 +413987,28 @@ extension on _StringsAr {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -413303,10 +414031,26 @@ extension on _StringsAr {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -432950,10 +433694,28 @@ extension on _StringsDe {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -432976,10 +433738,26 @@ extension on _StringsDe {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -452627,10 +453405,28 @@ extension on _StringsEs {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -452653,10 +453449,26 @@ extension on _StringsEs {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -472315,10 +473127,28 @@ extension on _StringsFr {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -472341,10 +473171,26 @@ extension on _StringsFr {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -491963,10 +492809,28 @@ extension on _StringsId {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -491989,10 +492853,26 @@ extension on _StringsId {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -511620,10 +512500,28 @@ extension on _StringsIt {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -511646,10 +512544,26 @@ extension on _StringsIt {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -531211,10 +532125,28 @@ extension on _StringsJa {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -531237,10 +532169,26 @@ extension on _StringsJa {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -550751,10 +551699,28 @@ extension on _StringsKo {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -550777,10 +551743,26 @@ extension on _StringsKo {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -570381,10 +571363,28 @@ extension on _StringsNl {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -570407,10 +571407,26 @@ extension on _StringsNl {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -590042,10 +591058,28 @@ extension on _StringsPtBr {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -590068,10 +591102,26 @@ extension on _StringsPtBr {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -609707,10 +610757,28 @@ extension on _StringsRu {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -609733,10 +610801,26 @@ extension on _StringsRu {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -629332,10 +630416,28 @@ extension on _StringsTh {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -629358,10 +630460,26 @@ extension on _StringsTh {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -648975,10 +650093,28 @@ extension on _StringsTr {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -649001,10 +650137,26 @@ extension on _StringsTr {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -668613,10 +669765,28 @@ extension on _StringsVi {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -668639,10 +669809,26 @@ extension on _StringsVi {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
@@ -688072,10 +689258,28 @@ extension on _StringsZhCn {
         return 'U 盘、NAS，或由其它同步工具同步的文件夹';
       case 'srs_timeline_location_channel':
         return '同步通道';
+      case 'srs_timeline_location_encrypt':
+        return '开启加密';
+      case 'srs_timeline_location_encrypt_body':
+        return '这个位置里的复习数据和媒体会用口令加密，存储服务只看得到密文和文件大小。在这里同步的每台设备都要输入同一个口令。忘了口令，这个位置就读不出来，但每台设备本机的数据都还在。开启后不能在这里关闭。';
+      case 'srs_timeline_location_encrypt_done':
+        return '这个位置已开启加密';
+      case 'srs_timeline_location_encrypt_failed':
+        return '设置加密失败';
+      case 'srs_timeline_location_encrypt_pending':
+        return '下次同步时开启加密';
+      case 'srs_timeline_location_encrypted':
+        return '已加密';
+      case 'srs_timeline_location_encrypted_hint':
+        return '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
+      case 'srs_timeline_location_encryption':
+        return '端到端加密';
       case 'srs_timeline_location_idle':
         return '未使用';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => '上次同步 ${time}';
+      case 'srs_timeline_location_needs_key':
+        return '已加密，需要输入口令';
       case 'srs_timeline_location_never':
         return '尚未同步';
       case 'srs_timeline_location_purpose_archive':
@@ -688098,10 +689302,26 @@ extension on _StringsZhCn {
         return 'Fushi 不再同步到这个文件夹，里面已有的文件会保留。';
       case 'srs_timeline_location_unavailable':
         return '文件夹不可用';
+      case 'srs_timeline_location_unlock':
+        return '输入口令';
+      case 'srs_timeline_location_unlock_body':
+        return '另一台设备给这个位置开启了加密，输入同一个口令后才能在这里同步。';
+      case 'srs_timeline_location_unlocked':
+        return '已解锁，开始同步';
+      case 'srs_timeline_location_wrong_key':
+        return '口令不对';
       case 'srs_timeline_locations':
         return '存储位置';
       case 'srs_timeline_ops':
         return ({required Object n}) => '历史中共 ${n} 条改动';
+      case 'srs_timeline_passphrase':
+        return '口令';
+      case 'srs_timeline_passphrase_again':
+        return '再输一遍口令';
+      case 'srs_timeline_passphrase_mismatch':
+        return '两次输入的口令不一致';
+      case 'srs_timeline_passphrase_too_short':
+        return '至少 8 个字符';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '改回 ${n} 项内容';
       case 'srs_timeline_plan_removed':
@@ -707533,10 +708753,28 @@ extension on _StringsZhHk {
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
+      case 'srs_timeline_location_encrypt':
+        return 'Turn on encryption';
+      case 'srs_timeline_location_encrypt_body':
+        return 'Review data and media in this location are encrypted with a passphrase; the storage only sees ciphertext and file sizes. Every device syncing here needs the same passphrase. If you forget it, this location cannot be read, but each device still has all its data. Encryption cannot be turned off here later.';
+      case 'srs_timeline_location_encrypt_done':
+        return 'Encryption is on for this location';
+      case 'srs_timeline_location_encrypt_failed':
+        return 'Could not set up encryption';
+      case 'srs_timeline_location_encrypt_pending':
+        return 'Encryption turns on at the next sync';
+      case 'srs_timeline_location_encrypted':
+        return 'Encrypted';
+      case 'srs_timeline_location_encrypted_hint':
+        return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
+      case 'srs_timeline_location_encryption':
+        return 'End-to-end encryption';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
         return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_needs_key':
+        return 'Encrypted, enter the passphrase';
       case 'srs_timeline_location_never':
         return 'Not synced yet';
       case 'srs_timeline_location_purpose_archive':
@@ -707559,10 +708797,26 @@ extension on _StringsZhHk {
         return 'Fushi stops syncing to this folder. Files already in it are kept.';
       case 'srs_timeline_location_unavailable':
         return 'Folder not available';
+      case 'srs_timeline_location_unlock':
+        return 'Enter passphrase';
+      case 'srs_timeline_location_unlock_body':
+        return 'Another device turned on encryption for this location. Enter the same passphrase to sync here.';
+      case 'srs_timeline_location_unlocked':
+        return 'Unlocked, syncing';
+      case 'srs_timeline_location_wrong_key':
+        return 'Passphrase does not match';
       case 'srs_timeline_locations':
         return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
+      case 'srs_timeline_passphrase':
+        return 'Passphrase';
+      case 'srs_timeline_passphrase_again':
+        return 'Passphrase again';
+      case 'srs_timeline_passphrase_mismatch':
+        return 'The two passphrases differ';
+      case 'srs_timeline_passphrase_too_short':
+        return 'Use at least 8 characters';
       case 'srs_timeline_plan_fields':
         return ({required Object n}) => '${n} values changed back';
       case 'srs_timeline_plan_removed':
