@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159579 (9387 per locale)
+/// Strings: 159647 (9391 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6552,6 +6552,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_series_empty => 'No volumes in this series.';
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
   String get manga_online_stage_cbz => 'Downloading volume…';
   String get manga_online_stage_extract => 'Extracting…';
   String get manga_online_stage_mokuro => 'Downloading OCR data…';
@@ -7840,10 +7844,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get online_source_error_webview_unavailable =>
       'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
   String get online_sources_all_header => 'All sources';
+  String get online_sources_browse_extensions => 'Browse extensions';
   String get online_sources_filter_all => 'All';
   String get online_sources_filter_disabled => 'Disabled';
   String get online_sources_filter_enabled => 'Enabled';
   String get online_sources_pinned_header => 'Pinned';
+  String get online_sources_stores_manage => 'Extension repositories';
   String get options_collapse => 'Collapse in lookup';
   String get options_delete => 'Delete';
   String get options_edit => 'Edit';
@@ -24301,6 +24307,12 @@ class _StringsAr extends _StringsEn {
   String get manga_online_source_disabled =>
       'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'جارٍ تحميل المجلد…';
   @override
   String get manga_online_stage_extract => 'جارٍ الاستخراج…';
@@ -26488,6 +26500,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -26495,6 +26509,8 @@ class _StringsAr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'طي عند البحث';
   @override
@@ -47300,6 +47316,12 @@ class _StringsDe extends _StringsEn {
   String get manga_online_source_disabled =>
       'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Band wird heruntergeladen…';
   @override
   String get manga_online_stage_extract => 'Wird entpackt…';
@@ -49540,6 +49562,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -49547,6 +49571,8 @@ class _StringsDe extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Bei Suche einklappen';
   @override
@@ -70502,6 +70528,12 @@ class _StringsEs extends _StringsEn {
   String get manga_online_source_disabled =>
       'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Descargando volumen…';
   @override
   String get manga_online_stage_extract => 'Extrayendo…';
@@ -72747,6 +72779,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -72754,6 +72788,8 @@ class _StringsEs extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Contraer en búsqueda';
   @override
@@ -93785,6 +93821,12 @@ class _StringsFr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Téléchargement du tome…';
   @override
   String get manga_online_stage_extract => 'Extraction…';
@@ -96043,6 +96085,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -96050,6 +96094,8 @@ class _StringsFr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Réduire lors de la recherche';
   @override
@@ -116938,6 +116984,12 @@ class _StringsId extends _StringsEn {
   String get manga_online_source_disabled =>
       'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Mengunduh volume…';
   @override
   String get manga_online_stage_extract => 'Mengekstrak…';
@@ -119147,6 +119199,8 @@ class _StringsId extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -119154,6 +119208,8 @@ class _StringsId extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Ciutkan saat pencarian';
   @override
@@ -139991,6 +140047,12 @@ class _StringsIt extends _StringsEn {
   String get manga_online_source_disabled =>
       'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Download volume…';
   @override
   String get manga_online_stage_extract => 'Estrazione…';
@@ -142228,6 +142290,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -142235,6 +142299,8 @@ class _StringsIt extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Comprimi nella ricerca';
   @override
@@ -162627,6 +162693,12 @@ class _StringsJa extends _StringsEn {
   String get manga_online_source_disabled =>
       'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
   @override
+  String get manga_online_sources_empty =>
+      '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
+  @override
+  String get manga_online_sources_hint =>
+      'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
+  @override
   String get manga_online_stage_cbz => '巻をダウンロード中…';
   @override
   String get manga_online_stage_extract => '展開中…';
@@ -164735,6 +164807,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => '拡張機能を見る';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -164742,6 +164816,8 @@ class _StringsJa extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => '拡張機能リポジトリ';
   @override
   String get options_collapse => '検索時に折りたたむ';
   @override
@@ -184742,6 +184818,12 @@ class _StringsKo extends _StringsEn {
   String get manga_online_source_disabled =>
       '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => '권 다운로드 중…';
   @override
   String get manga_online_stage_extract => '압축 해제 중…';
@@ -186858,6 +186940,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -186865,6 +186949,8 @@ class _StringsKo extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => '검색 시 접기';
   @override
@@ -207374,6 +207460,12 @@ class _StringsNl extends _StringsEn {
   String get manga_online_source_disabled =>
       'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Deel downloaden…';
   @override
   String get manga_online_stage_extract => 'Uitpakken…';
@@ -209600,6 +209692,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -209607,6 +209701,8 @@ class _StringsNl extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Inklappen bij opzoeken';
   @override
@@ -230506,6 +230602,12 @@ class _StringsPtBr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Baixando volume…';
   @override
   String get manga_online_stage_extract => 'Extraindo…';
@@ -232738,6 +232840,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -232745,6 +232849,8 @@ class _StringsPtBr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Recolher na busca';
   @override
@@ -253620,6 +253726,12 @@ class _StringsRu extends _StringsEn {
   String get manga_online_source_disabled =>
       'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Скачивание тома…';
   @override
   String get manga_online_stage_extract => 'Извлечение…';
@@ -255854,6 +255966,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -255861,6 +255975,8 @@ class _StringsRu extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Свернуть при поиске';
   @override
@@ -276566,6 +276682,12 @@ class _StringsTh extends _StringsEn {
   String get manga_online_source_disabled =>
       'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'กำลังดาวน์โหลดเล่ม…';
   @override
   String get manga_online_stage_extract => 'กำลังแตกไฟล์…';
@@ -278757,6 +278879,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -278764,6 +278888,8 @@ class _StringsTh extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'ยุบในการค้นหา';
   @override
@@ -299464,6 +299590,12 @@ class _StringsTr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Cilt indiriliyor…';
   @override
   String get manga_online_stage_extract => 'Çıkarılıyor…';
@@ -301677,6 +301809,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -301684,6 +301818,8 @@ class _StringsTr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Daralt';
   @override
@@ -322417,6 +322553,12 @@ class _StringsVi extends _StringsEn {
   String get manga_online_source_disabled =>
       'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Đang tải xuống tập…';
   @override
   String get manga_online_stage_extract => 'Đang giải nén…';
@@ -324614,6 +324756,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -324621,6 +324765,8 @@ class _StringsVi extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Thu gọn khi tra cứu';
   @override
@@ -344394,6 +344540,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
+  String get manga_online_sources_empty => '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+  @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
+  @override
   String get manga_online_stage_cbz => '下载卷包…';
   @override
   String get manga_online_stage_extract => '解包中…';
@@ -346403,6 +346554,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get online_sources_all_header => '全部来源';
   @override
+  String get online_sources_browse_extensions => '浏览扩展';
+  @override
   String get online_sources_filter_all => '全部';
   @override
   String get online_sources_filter_disabled => '已停用';
@@ -346410,6 +346563,8 @@ class _StringsZhCn extends _StringsEn {
   String get online_sources_filter_enabled => '已启用';
   @override
   String get online_sources_pinned_header => '已置顶';
+  @override
+  String get online_sources_stores_manage => '扩展仓库';
   @override
   String get options_collapse => '查词时折叠';
   @override
@@ -365536,6 +365691,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_online_source_disabled => '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
   @override
+  String get manga_online_sources_empty => '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
+  @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
+  @override
   String get manga_online_stage_cbz => '下載卷包…';
   @override
   String get manga_online_stage_extract => '解包中…';
@@ -367576,6 +367736,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => '瀏覽擴展';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -367583,6 +367745,8 @@ class _StringsZhHk extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => '擴展倉庫';
   @override
   String get options_collapse => '查詞時摺疊';
   @override
@@ -386049,6 +386213,10 @@ extension on _StringsEn {
         return 'No volumes in this series.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Downloading volume…';
       case 'manga_online_stage_extract':
@@ -387928,6 +388096,8 @@ extension on _StringsEn {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -387936,6 +388106,8 @@ extension on _StringsEn {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Collapse in lookup';
       case 'options_delete':
@@ -405560,6 +405732,10 @@ extension on _StringsAr {
         return 'لا توجد مجلدات في هذه السلسلة.';
       case 'manga_online_source_disabled':
         return 'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'جارٍ تحميل المجلد…';
       case 'manga_online_stage_extract':
@@ -407440,6 +407616,8 @@ extension on _StringsAr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -407448,6 +407626,8 @@ extension on _StringsAr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'طي عند البحث';
       case 'options_delete':
@@ -425116,6 +425296,10 @@ extension on _StringsDe {
         return 'Diese Serie enthält keine Bände.';
       case 'manga_online_source_disabled':
         return 'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Band wird heruntergeladen…';
       case 'manga_online_stage_extract':
@@ -427006,6 +427190,8 @@ extension on _StringsDe {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -427014,6 +427200,8 @@ extension on _StringsDe {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Bei Suche einklappen';
       case 'options_delete':
@@ -444689,6 +444877,10 @@ extension on _StringsEs {
         return 'Esta serie no tiene volúmenes.';
       case 'manga_online_source_disabled':
         return 'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Descargando volumen…';
       case 'manga_online_stage_extract':
@@ -446576,6 +446768,8 @@ extension on _StringsEs {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -446584,6 +446778,8 @@ extension on _StringsEs {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Contraer en búsqueda';
       case 'options_delete':
@@ -464270,6 +464466,10 @@ extension on _StringsFr {
         return 'Aucun volume dans cette série.';
       case 'manga_online_source_disabled':
         return 'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Téléchargement du tome…';
       case 'manga_online_stage_extract':
@@ -466160,6 +466360,8 @@ extension on _StringsFr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -466168,6 +466370,8 @@ extension on _StringsFr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Réduire lors de la recherche';
       case 'options_delete':
@@ -483827,6 +484031,10 @@ extension on _StringsId {
         return 'Seri ini tidak memiliki volume.';
       case 'manga_online_source_disabled':
         return 'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Mengunduh volume…';
       case 'manga_online_stage_extract':
@@ -485706,6 +485914,8 @@ extension on _StringsId {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -485714,6 +485924,8 @@ extension on _StringsId {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Ciutkan saat pencarian';
       case 'options_delete':
@@ -503370,6 +503582,10 @@ extension on _StringsIt {
         return 'Nessun volume in questa serie.';
       case 'manga_online_source_disabled':
         return 'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Download volume…';
       case 'manga_online_stage_extract':
@@ -505256,6 +505472,8 @@ extension on _StringsIt {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -505264,6 +505482,8 @@ extension on _StringsIt {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Comprimi nella ricerca';
       case 'options_delete':
@@ -522874,6 +523094,10 @@ extension on _StringsJa {
         return 'このシリーズには巻がありません。';
       case 'manga_online_source_disabled':
         return 'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
+      case 'manga_online_sources_empty':
+        return '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
+      case 'manga_online_sources_hint':
+        return 'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
       case 'manga_online_stage_cbz':
         return '巻をダウンロード中…';
       case 'manga_online_stage_extract':
@@ -524746,6 +524970,8 @@ extension on _StringsJa {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return '拡張機能を見る';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -524754,6 +524980,8 @@ extension on _StringsJa {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return '拡張機能リポジトリ';
       case 'options_collapse':
         return '検索時に折りたたむ';
       case 'options_delete':
@@ -542309,6 +542537,10 @@ extension on _StringsKo {
         return '이 시리즈에는 권이 없습니다.';
       case 'manga_online_source_disabled':
         return '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return '권 다운로드 중…';
       case 'manga_online_stage_extract':
@@ -544180,6 +544412,8 @@ extension on _StringsKo {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -544188,6 +544422,8 @@ extension on _StringsKo {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return '검색 시 접기';
       case 'options_delete':
@@ -561815,6 +562051,10 @@ extension on _StringsNl {
         return 'Deze serie bevat geen delen.';
       case 'manga_online_source_disabled':
         return 'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Deel downloaden…';
       case 'manga_online_stage_extract':
@@ -563702,6 +563942,8 @@ extension on _StringsNl {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -563710,6 +563952,8 @@ extension on _StringsNl {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Inklappen bij opzoeken';
       case 'options_delete':
@@ -581372,6 +581616,10 @@ extension on _StringsPtBr {
         return 'Esta série não tem volumes.';
       case 'manga_online_source_disabled':
         return 'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Baixando volume…';
       case 'manga_online_stage_extract':
@@ -583258,6 +583506,8 @@ extension on _StringsPtBr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -583266,6 +583516,8 @@ extension on _StringsPtBr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Recolher na busca';
       case 'options_delete':
@@ -600932,6 +601184,10 @@ extension on _StringsRu {
         return 'В этой серии нет томов.';
       case 'manga_online_source_disabled':
         return 'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Скачивание тома…';
       case 'manga_online_stage_extract':
@@ -602818,6 +603074,8 @@ extension on _StringsRu {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -602826,6 +603084,8 @@ extension on _StringsRu {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Свернуть при поиске';
       case 'options_delete':
@@ -620462,6 +620722,10 @@ extension on _StringsTh {
         return 'ซีรีส์นี้ไม่มีเล่ม';
       case 'manga_online_source_disabled':
         return 'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'กำลังดาวน์โหลดเล่ม…';
       case 'manga_online_stage_extract':
@@ -622340,6 +622604,8 @@ extension on _StringsTh {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -622348,6 +622614,8 @@ extension on _StringsTh {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'ยุบในการค้นหา';
       case 'options_delete':
@@ -639997,6 +640265,10 @@ extension on _StringsTr {
         return 'Bu seride hiç cilt yok.';
       case 'manga_online_source_disabled':
         return 'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Cilt indiriliyor…';
       case 'manga_online_stage_extract':
@@ -641878,6 +642150,8 @@ extension on _StringsTr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -641886,6 +642160,8 @@ extension on _StringsTr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Daralt';
       case 'options_delete':
@@ -659530,6 +659806,10 @@ extension on _StringsVi {
         return 'Bộ truyện này không có tập nào.';
       case 'manga_online_source_disabled':
         return 'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Đang tải xuống tập…';
       case 'manga_online_stage_extract':
@@ -661409,6 +661689,8 @@ extension on _StringsVi {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -661417,6 +661699,8 @@ extension on _StringsVi {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Thu gọn khi tra cứu';
       case 'options_delete':
@@ -678941,6 +679225,10 @@ extension on _StringsZhCn {
         return '这个系列没有可下载的卷。';
       case 'manga_online_source_disabled':
         return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
+      case 'manga_online_sources_empty':
+        return '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
       case 'manga_online_stage_cbz':
         return '下载卷包…';
       case 'manga_online_stage_extract':
@@ -680800,6 +681088,8 @@ extension on _StringsZhCn {
         return '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
       case 'online_sources_all_header':
         return '全部来源';
+      case 'online_sources_browse_extensions':
+        return '浏览扩展';
       case 'online_sources_filter_all':
         return '全部';
       case 'online_sources_filter_disabled':
@@ -680808,6 +681098,8 @@ extension on _StringsZhCn {
         return '已启用';
       case 'online_sources_pinned_header':
         return '已置顶';
+      case 'online_sources_stores_manage':
+        return '扩展仓库';
       case 'options_collapse':
         return '查词时折叠';
       case 'options_delete':
@@ -698259,6 +698551,10 @@ extension on _StringsZhHk {
         return '這個系列沒有可下載的卷。';
       case 'manga_online_source_disabled':
         return '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
+      case 'manga_online_sources_empty':
+        return '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
       case 'manga_online_stage_cbz':
         return '下載卷包…';
       case 'manga_online_stage_extract':
@@ -700127,6 +700423,8 @@ extension on _StringsZhHk {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return '瀏覽擴展';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -700135,6 +700433,8 @@ extension on _StringsZhHk {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return '擴展倉庫';
       case 'options_collapse':
         return '查詞時摺疊';
       case 'options_delete':
