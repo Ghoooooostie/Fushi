@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168776 (9928 per locale)
+/// Strings: 168861 (9933 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1066,9 +1066,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_action_overwrite => 'Overwrite this card';
   String get anki_mined_action_view => 'View / open in Anki';
+  String get anki_mined_action_view_only => 'View card';
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
   String get anki_mined_card_subtitle =>
       'Choose what to do with the matching card.';
   String get anki_mined_card_title => 'Card already in Anki';
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   String get anki_mined_forget_done => 'Mining record cleared';
   String anki_mined_multiple_matches({required Object count}) =>
       '${count} matching cards';
@@ -1078,9 +1081,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_not_configured =>
       'Tap Refresh to load your Anki decks and note types.';
   String get anki_note_open_failed => 'Could not open the card in Anki.';
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
   String get anki_note_type => 'Note type';
   String get anki_note_viewer_empty => 'This card has no readable fields.';
   String get anki_note_viewer_open_in_anki => 'Open in Anki';
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   String get anki_note_viewer_title => 'Existing card';
   String get anki_open_no_card => 'No card found for this word in Anki.';
   String get anki_overwrite_scope => 'Overwrite range';
@@ -15795,9 +15801,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'عرض / فتح في Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'اختر ما تريد فعله بالبطاقة المطابقة.';
   @override
   String get anki_mined_card_title => 'البطاقة موجودة في Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'تم مسح سجل الاستخراج';
   @override
@@ -15814,12 +15826,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'تعذر فتح البطاقة في Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'نوع الملاحظة';
   @override
   String get anki_note_viewer_empty =>
       'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
   @override
   String get anki_note_viewer_open_in_anki => 'فتح في Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'بطاقة موجودة';
   @override
@@ -39882,10 +39899,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_mined_action_view => 'In Anki anzeigen / öffnen';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
   @override
   String get anki_mined_card_title => 'Karte bereits in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Mining-Eintrag gelöscht';
   @override
@@ -39902,11 +39925,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Konnte die Karte nicht in Anki öffnen.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notiztyp';
   @override
   String get anki_note_viewer_empty => 'Diese Karte hat keine lesbaren Felder.';
   @override
   String get anki_note_viewer_open_in_anki => 'In Anki öffnen';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Vorhandene Karte';
   @override
@@ -64342,10 +64370,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir en Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Elija qué hacer con la tarjeta coincidente.';
   @override
   String get anki_mined_card_title => 'Tarjeta ya existente en Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de creación borrado';
   @override
@@ -64362,11 +64396,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_note_open_failed => 'No se pudo abrir la tarjeta en Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Esta tarjeta no tiene campos legibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir en Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Tarjeta existente';
   @override
@@ -88853,10 +88892,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Voir / ouvrir dans Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Choisissez quoi faire avec la carte correspondante.';
   @override
   String get anki_mined_card_title => 'Carte déjà dans Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Enregistrement de création effacé';
   @override
@@ -88874,12 +88919,17 @@ class _StringsFr extends _StringsEn {
   String get anki_note_open_failed =>
       'Impossible d\'ouvrir la carte dans Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Type de note';
   @override
   String get anki_note_viewer_empty =>
       'Cette carte n\'a pas de champs lisibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Ouvrir dans Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carte existante';
   @override
@@ -113429,10 +113479,16 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Lihat / buka di Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Pilih apa yang dilakukan dengan kartu yang cocok.';
   @override
   String get anki_mined_card_title => 'Kartu sudah ada di Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Catatan mining dihapus';
   @override
@@ -113449,12 +113505,17 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Tidak dapat membuka kartu di Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipe Catatan';
   @override
   String get anki_note_viewer_empty =>
       'Kartu ini tidak memiliki bidang yang bisa dibaca.';
   @override
   String get anki_note_viewer_open_in_anki => 'Buka di Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Kartu yang sudah ada';
   @override
@@ -137683,10 +137744,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Visualizza / apri in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Scegli cosa fare con la carta corrispondente.';
   @override
   String get anki_mined_card_title => 'Carta già in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro del mining cancellato';
   @override
@@ -137703,11 +137770,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Impossibile aprire la carta in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo di nota';
   @override
   String get anki_note_viewer_empty => 'Questa carta non ha campi leggibili.';
   @override
   String get anki_note_viewer_open_in_anki => 'Apri in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carta esistente';
   @override
@@ -162029,9 +162101,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_mined_action_view => '表示 / Anki で開く';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '一致するカードの処理方法を選択してください。';
   @override
   String get anki_mined_card_title => 'Anki にカードが既にあります';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'カード作成の記録を消去しました';
   @override
@@ -162047,11 +162125,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki でカードを開けませんでした。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ノートタイプ';
   @override
   String get anki_note_viewer_empty => 'このカードには読み取り可能なフィールドがありません。';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki で開く';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '既存のカード';
   @override
@@ -185392,9 +185475,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki에서 보기 / 열기';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '일치하는 카드의 처리 방법을 선택하세요.';
   @override
   String get anki_mined_card_title => 'Anki에 이미 있는 카드';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '마이닝 기록을 지웠습니다';
   @override
@@ -185410,11 +185499,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki에서 카드를 열 수 없습니다.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '노트 유형';
   @override
   String get anki_note_viewer_empty => '이 카드에 읽을 수 있는 필드가 없습니다.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki에서 열기';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '기존 카드';
   @override
@@ -208897,10 +208991,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Bekijken / openen in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Kies wat je wilt doen met de overeenkomende kaart.';
   @override
   String get anki_mined_card_title => 'Kaart al in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Miningrecord gewist';
   @override
@@ -208917,11 +209017,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kon de kaart niet openen in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notitietype';
   @override
   String get anki_note_viewer_empty => 'Deze kaart heeft geen leesbare velden.';
   @override
   String get anki_note_viewer_open_in_anki => 'Openen in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Bestaande kaart';
   @override
@@ -233265,10 +233370,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir no Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Escolha o que fazer com o cartão correspondente.';
   @override
   String get anki_mined_card_title => 'Cartão já existe no Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de mineração apagado';
   @override
@@ -233286,11 +233397,16 @@ class _StringsPtBr extends _StringsEn {
   String get anki_note_open_failed =>
       'Não foi possível abrir o cartão no Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Este cartão não tem campos legíveis.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir no Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Cartão existente';
   @override
@@ -257681,10 +257797,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Просмотреть / открыть в Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Выберите действие с найденной карточкой.';
   @override
   String get anki_mined_card_title => 'Карточка уже в Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Запись о создании очищена';
   @override
@@ -257701,11 +257823,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Не удалось открыть карточку в Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Тип заметки';
   @override
   String get anki_note_viewer_empty => 'У этой карточки нет читаемых полей.';
   @override
   String get anki_note_viewer_open_in_anki => 'Открыть в Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Существующая карточка';
   @override
@@ -282032,9 +282159,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_mined_action_view => 'ดู / เปิดใน Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
   @override
   String get anki_mined_card_title => 'บัตรมีอยู่ใน Anki แล้ว';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'ล้างบันทึกการสร้างการ์ดแล้ว';
   @override
@@ -282051,11 +282184,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_note_open_failed => 'ไม่สามารถเปิดบัตรใน Anki ได้';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ประเภทโน้ต';
   @override
   String get anki_note_viewer_empty => 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
   @override
   String get anki_note_viewer_open_in_anki => 'เปิดใน Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'บัตรที่มีอยู่';
   @override
@@ -306098,10 +306236,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki\'de görüntüle / aç';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Eşleşen kartla ne yapılacağını seçin.';
   @override
   String get anki_mined_card_title => 'Kart zaten Anki\'de mevcut';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Kart oluşturma kaydı temizlendi';
   @override
@@ -306119,11 +306263,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kart Anki\'de açılamadı.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Not Türü';
   @override
   String get anki_note_viewer_empty => 'Bu kartın okunabilir alanı yok.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki\'de aç';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Mevcut kart';
   @override
@@ -330349,9 +330498,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Xem / mở trong Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'Chọn thao tác với thẻ trùng khớp.';
   @override
   String get anki_mined_card_title => 'Thẻ đã có trong Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Đã xóa bản ghi tạo thẻ';
   @override
@@ -330368,11 +330523,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Không thể mở thẻ trong Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Loại ghi chú';
   @override
   String get anki_note_viewer_empty => 'Thẻ này không có trường có thể đọc.';
   @override
   String get anki_note_viewer_open_in_anki => 'Mở trong Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Thẻ hiện có';
   @override
@@ -354406,9 +354566,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打开';
   @override
+  String get anki_mined_action_view_only => '查看卡片';
+  @override
+  String get anki_mined_action_view_review => '查看 / 在 Fushi 复习中打开';
+  @override
   String get anki_mined_card_subtitle => '选择对这张已存在的卡片做什么。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => '卡片已在 Fushi 复习中';
   @override
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
@@ -354424,11 +354590,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_note_open_failed => '无法在 Anki 中打开这张卡片。';
   @override
+  String get anki_note_open_failed_review => '无法在 Fushi 复习中打开这张卡片。';
+  @override
   String get anki_note_type => '笔记类型';
   @override
   String get anki_note_viewer_empty => '这张卡片没有可读取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打开';
+  @override
+  String get anki_note_viewer_open_in_review => '在 Fushi 复习中打开';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -376531,9 +376701,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打開';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '選擇對這張已存在的卡片做什麼。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '已清除制卡記錄';
   @override
@@ -376549,11 +376725,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_note_open_failed => '無法在 Anki 中打開這張卡片。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '筆記類型';
   @override
   String get anki_note_viewer_empty => '這張卡片沒有可讀取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打開';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -399144,10 +399325,16 @@ extension on _StringsEn {
         return 'Overwrite this card';
       case 'anki_mined_action_view':
         return 'View / open in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choose what to do with the matching card.';
       case 'anki_mined_card_title':
         return 'Card already in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining record cleared';
       case 'anki_mined_multiple_matches':
@@ -399160,12 +399347,16 @@ extension on _StringsEn {
         return 'Tap Refresh to load your Anki decks and note types.';
       case 'anki_note_open_failed':
         return 'Could not open the card in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Note type';
       case 'anki_note_viewer_empty':
         return 'This card has no readable fields.';
       case 'anki_note_viewer_open_in_anki':
         return 'Open in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Existing card';
       case 'anki_open_no_card':
@@ -419763,10 +419954,16 @@ extension on _StringsAr {
         return 'الكتابة فوق هذه البطاقة';
       case 'anki_mined_action_view':
         return 'عرض / فتح في Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'اختر ما تريد فعله بالبطاقة المطابقة.';
       case 'anki_mined_card_title':
         return 'البطاقة موجودة في Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'تم مسح سجل الاستخراج';
       case 'anki_mined_multiple_matches':
@@ -419779,12 +419976,16 @@ extension on _StringsAr {
         return 'انقر «تحديث» لتحميل مجموعات Anki وأنواع الملاحظات.';
       case 'anki_note_open_failed':
         return 'تعذر فتح البطاقة في Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'نوع الملاحظة';
       case 'anki_note_viewer_empty':
         return 'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
       case 'anki_note_viewer_open_in_anki':
         return 'فتح في Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'بطاقة موجودة';
       case 'anki_open_no_card':
@@ -440385,10 +440586,16 @@ extension on _StringsDe {
         return 'Diese Karte überschreiben';
       case 'anki_mined_action_view':
         return 'In Anki anzeigen / öffnen';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
       case 'anki_mined_card_title':
         return 'Karte bereits in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining-Eintrag gelöscht';
       case 'anki_mined_multiple_matches':
@@ -440401,12 +440608,16 @@ extension on _StringsDe {
         return 'Tippe auf Aktualisieren, um deine Anki-Stapel und Notiztypen zu laden.';
       case 'anki_note_open_failed':
         return 'Konnte die Karte nicht in Anki öffnen.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notiztyp';
       case 'anki_note_viewer_empty':
         return 'Diese Karte hat keine lesbaren Felder.';
       case 'anki_note_viewer_open_in_anki':
         return 'In Anki öffnen';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Vorhandene Karte';
       case 'anki_open_no_card':
@@ -461070,10 +461281,16 @@ extension on _StringsEs {
         return 'Sobrescribir esta tarjeta';
       case 'anki_mined_action_view':
         return 'Ver / abrir en Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Elija qué hacer con la tarjeta coincidente.';
       case 'anki_mined_card_title':
         return 'Tarjeta ya existente en Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de creación borrado';
       case 'anki_mined_multiple_matches':
@@ -461086,12 +461303,16 @@ extension on _StringsEs {
         return 'Toca Actualizar para cargar tus mazos y tipos de nota de Anki.';
       case 'anki_note_open_failed':
         return 'No se pudo abrir la tarjeta en Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Esta tarjeta no tiene campos legibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir en Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Tarjeta existente';
       case 'anki_open_no_card':
@@ -481745,10 +481966,16 @@ extension on _StringsFr {
         return 'Écraser cette carte';
       case 'anki_mined_action_view':
         return 'Voir / ouvrir dans Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choisissez quoi faire avec la carte correspondante.';
       case 'anki_mined_card_title':
         return 'Carte déjà dans Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Enregistrement de création effacé';
       case 'anki_mined_multiple_matches':
@@ -481761,12 +481988,16 @@ extension on _StringsFr {
         return 'Touchez « Actualiser » pour charger vos paquets et types de notes Anki.';
       case 'anki_note_open_failed':
         return 'Impossible d\'ouvrir la carte dans Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Type de note';
       case 'anki_note_viewer_empty':
         return 'Cette carte n\'a pas de champs lisibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Ouvrir dans Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carte existante';
       case 'anki_open_no_card':
@@ -502432,10 +502663,16 @@ extension on _StringsId {
         return 'Timpa kartu ini';
       case 'anki_mined_action_view':
         return 'Lihat / buka di Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Pilih apa yang dilakukan dengan kartu yang cocok.';
       case 'anki_mined_card_title':
         return 'Kartu sudah ada di Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Catatan mining dihapus';
       case 'anki_mined_multiple_matches':
@@ -502448,12 +502685,16 @@ extension on _StringsId {
         return 'Ketuk Segarkan untuk memuat dek dan tipe catatan Anki kamu.';
       case 'anki_note_open_failed':
         return 'Tidak dapat membuka kartu di Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipe Catatan';
       case 'anki_note_viewer_empty':
         return 'Kartu ini tidak memiliki bidang yang bisa dibaca.';
       case 'anki_note_viewer_open_in_anki':
         return 'Buka di Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Kartu yang sudah ada';
       case 'anki_open_no_card':
@@ -523067,10 +523308,16 @@ extension on _StringsIt {
         return 'Sovrascrivi questa carta';
       case 'anki_mined_action_view':
         return 'Visualizza / apri in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Scegli cosa fare con la carta corrispondente.';
       case 'anki_mined_card_title':
         return 'Carta già in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro del mining cancellato';
       case 'anki_mined_multiple_matches':
@@ -523083,12 +523330,16 @@ extension on _StringsIt {
         return 'Tocca Aggiorna per caricare i tuoi mazzi e tipi di nota di Anki.';
       case 'anki_note_open_failed':
         return 'Impossibile aprire la carta in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo di nota';
       case 'anki_note_viewer_empty':
         return 'Questa carta non ha campi leggibili.';
       case 'anki_note_viewer_open_in_anki':
         return 'Apri in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carta esistente';
       case 'anki_open_no_card':
@@ -543727,10 +543978,16 @@ extension on _StringsJa {
         return 'このカードを上書き';
       case 'anki_mined_action_view':
         return '表示 / Anki で開く';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '一致するカードの処理方法を選択してください。';
       case 'anki_mined_card_title':
         return 'Anki にカードが既にあります';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'カード作成の記録を消去しました';
       case 'anki_mined_multiple_matches':
@@ -543743,12 +544000,16 @@ extension on _StringsJa {
         return '「更新」をタップして Anki のデッキとノートタイプを読み込んでください。';
       case 'anki_note_open_failed':
         return 'Anki でカードを開けませんでした。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ノートタイプ';
       case 'anki_note_viewer_empty':
         return 'このカードには読み取り可能なフィールドがありません。';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki で開く';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '既存のカード';
       case 'anki_open_no_card':
@@ -564261,10 +564522,16 @@ extension on _StringsKo {
         return '이 카드 덮어쓰기';
       case 'anki_mined_action_view':
         return 'Anki에서 보기 / 열기';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '일치하는 카드의 처리 방법을 선택하세요.';
       case 'anki_mined_card_title':
         return 'Anki에 이미 있는 카드';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '마이닝 기록을 지웠습니다';
       case 'anki_mined_multiple_matches':
@@ -564277,12 +564544,16 @@ extension on _StringsKo {
         return '「새로고침」을 눌러 Anki 덱과 노트 유형을 불러오세요.';
       case 'anki_note_open_failed':
         return 'Anki에서 카드를 열 수 없습니다.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '노트 유형';
       case 'anki_note_viewer_empty':
         return '이 카드에 읽을 수 있는 필드가 없습니다.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki에서 열기';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '기존 카드';
       case 'anki_open_no_card':
@@ -584824,10 +585095,16 @@ extension on _StringsNl {
         return 'Deze kaart overschrijven';
       case 'anki_mined_action_view':
         return 'Bekijken / openen in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Kies wat je wilt doen met de overeenkomende kaart.';
       case 'anki_mined_card_title':
         return 'Kaart al in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Miningrecord gewist';
       case 'anki_mined_multiple_matches':
@@ -584840,12 +585117,16 @@ extension on _StringsNl {
         return 'Tik op Vernieuwen om je Anki-decks en notitietypen te laden.';
       case 'anki_note_open_failed':
         return 'Kon de kaart niet openen in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notitietype';
       case 'anki_note_viewer_empty':
         return 'Deze kaart heeft geen leesbare velden.';
       case 'anki_note_viewer_open_in_anki':
         return 'Openen in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Bestaande kaart';
       case 'anki_open_no_card':
@@ -605488,10 +605769,16 @@ extension on _StringsPtBr {
         return 'Sobrescrever este cartão';
       case 'anki_mined_action_view':
         return 'Ver / abrir no Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Escolha o que fazer com o cartão correspondente.';
       case 'anki_mined_card_title':
         return 'Cartão já existe no Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de mineração apagado';
       case 'anki_mined_multiple_matches':
@@ -605504,12 +605791,16 @@ extension on _StringsPtBr {
         return 'Toque em Atualizar para carregar seus baralhos e tipos de nota do Anki.';
       case 'anki_note_open_failed':
         return 'Não foi possível abrir o cartão no Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Este cartão não tem campos legíveis.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir no Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Cartão existente';
       case 'anki_open_no_card':
@@ -626145,10 +626436,16 @@ extension on _StringsRu {
         return 'Перезаписать эту карточку';
       case 'anki_mined_action_view':
         return 'Просмотреть / открыть в Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Выберите действие с найденной карточкой.';
       case 'anki_mined_card_title':
         return 'Карточка уже в Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Запись о создании очищена';
       case 'anki_mined_multiple_matches':
@@ -626161,12 +626458,16 @@ extension on _StringsRu {
         return 'Нажмите «Обновить», чтобы загрузить ваши колоды и типы заметок Anki.';
       case 'anki_note_open_failed':
         return 'Не удалось открыть карточку в Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Тип заметки';
       case 'anki_note_viewer_empty':
         return 'У этой карточки нет читаемых полей.';
       case 'anki_note_viewer_open_in_anki':
         return 'Открыть в Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Существующая карточка';
       case 'anki_open_no_card':
@@ -646802,10 +647103,16 @@ extension on _StringsTh {
         return 'เขียนทับบัตรนี้';
       case 'anki_mined_action_view':
         return 'ดู / เปิดใน Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
       case 'anki_mined_card_title':
         return 'บัตรมีอยู่ใน Anki แล้ว';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'ล้างบันทึกการสร้างการ์ดแล้ว';
       case 'anki_mined_multiple_matches':
@@ -646818,12 +647125,16 @@ extension on _StringsTh {
         return 'แตะรีเฟรชเพื่อโหลดเด็คและชนิดโน้ต Anki ของคุณ';
       case 'anki_note_open_failed':
         return 'ไม่สามารถเปิดบัตรใน Anki ได้';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ประเภทโน้ต';
       case 'anki_note_viewer_empty':
         return 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
       case 'anki_note_viewer_open_in_anki':
         return 'เปิดใน Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'บัตรที่มีอยู่';
       case 'anki_open_no_card':
@@ -667424,10 +667735,16 @@ extension on _StringsTr {
         return 'Bu kartın üzerine yaz';
       case 'anki_mined_action_view':
         return 'Anki\'de görüntüle / aç';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Eşleşen kartla ne yapılacağını seçin.';
       case 'anki_mined_card_title':
         return 'Kart zaten Anki\'de mevcut';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Kart oluşturma kaydı temizlendi';
       case 'anki_mined_multiple_matches':
@@ -667440,12 +667757,16 @@ extension on _StringsTr {
         return 'Anki destelerinizi ve not türlerinizi yüklemek için Yenile\'ye dokunun.';
       case 'anki_note_open_failed':
         return 'Kart Anki\'de açılamadı.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Not Türü';
       case 'anki_note_viewer_empty':
         return 'Bu kartın okunabilir alanı yok.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki\'de aç';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Mevcut kart';
       case 'anki_open_no_card':
@@ -688072,10 +688393,16 @@ extension on _StringsVi {
         return 'Ghi đè thẻ này';
       case 'anki_mined_action_view':
         return 'Xem / mở trong Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Chọn thao tác với thẻ trùng khớp.';
       case 'anki_mined_card_title':
         return 'Thẻ đã có trong Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Đã xóa bản ghi tạo thẻ';
       case 'anki_mined_multiple_matches':
@@ -688088,12 +688415,16 @@ extension on _StringsVi {
         return 'Nhấn Làm mới để tải các bộ thẻ và loại ghi chú Anki của bạn.';
       case 'anki_note_open_failed':
         return 'Không thể mở thẻ trong Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Loại ghi chú';
       case 'anki_note_viewer_empty':
         return 'Thẻ này không có trường có thể đọc.';
       case 'anki_note_viewer_open_in_anki':
         return 'Mở trong Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Thẻ hiện có';
       case 'anki_open_no_card':
@@ -708677,10 +709008,16 @@ extension on _StringsZhCn {
         return '覆写这张卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打开';
+      case 'anki_mined_action_view_only':
+        return '查看卡片';
+      case 'anki_mined_action_view_review':
+        return '查看 / 在 Fushi 复习中打开';
       case 'anki_mined_card_subtitle':
         return '选择对这张已存在的卡片做什么。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return '卡片已在 Fushi 复习中';
       case 'anki_mined_forget_done':
         return '已清除制卡记录';
       case 'anki_mined_multiple_matches':
@@ -708693,12 +709030,16 @@ extension on _StringsZhCn {
         return '点击「刷新」加载你的 Anki 牌组与笔记类型。';
       case 'anki_note_open_failed':
         return '无法在 Anki 中打开这张卡片。';
+      case 'anki_note_open_failed_review':
+        return '无法在 Fushi 复习中打开这张卡片。';
       case 'anki_note_type':
         return '笔记类型';
       case 'anki_note_viewer_empty':
         return '这张卡片没有可读取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打开';
+      case 'anki_note_viewer_open_in_review':
+        return '在 Fushi 复习中打开';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
@@ -729058,10 +729399,16 @@ extension on _StringsZhHk {
         return '覆寫這張卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打開';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '選擇對這張已存在的卡片做什麼。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '已清除制卡記錄';
       case 'anki_mined_multiple_matches':
@@ -729074,12 +729421,16 @@ extension on _StringsZhHk {
         return '點按「重新整理」載入你的 Anki 牌組與筆記類型。';
       case 'anki_note_open_failed':
         return '無法在 Anki 中打開這張卡片。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '筆記類型';
       case 'anki_note_viewer_empty':
         return '這張卡片沒有可讀取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打開';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
