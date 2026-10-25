@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159851 (9403 per locale)
+/// Strings: 160140 (9420 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10165,6 +10165,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This is not a Fushi review export, or it was made by a newer version';
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  String get srs_timeline_location_add => 'Add folder';
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  String get srs_timeline_location_channel => 'Sync channel';
+  String get srs_timeline_location_idle => 'Not in use';
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  String get srs_timeline_location_never => 'Not synced yet';
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  String get srs_timeline_location_purpose_media => 'Media';
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  String get srs_timeline_location_remove => 'Stop using folder';
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  String get srs_timeline_locations => 'Storage locations';
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   String srs_timeline_plan_fields({required Object n}) =>
       '${n} values changed back';
@@ -30563,6 +30586,46 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -53694,6 +53757,46 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -76949,6 +77052,46 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -100293,6 +100436,46 @@ class _StringsFr extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -123399,6 +123582,46 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -146548,6 +146771,46 @@ class _StringsIt extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -168985,6 +169248,46 @@ class _StringsJa extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -191152,6 +191455,46 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -214030,6 +214373,46 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -237210,6 +237593,46 @@ class _StringsPtBr extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -260367,6 +260790,46 @@ class _StringsRu extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -283274,6 +283737,46 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
+  @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
   @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
@@ -306249,6 +306752,46 @@ class _StringsTr extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -329219,6 +329762,46 @@ class _StringsVi extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -350743,6 +351326,43 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_import_other_profile => '这个文件属于另一个 profile';
   @override
+  String get srs_timeline_location_add => '添加文件夹';
+  @override
+  String get srs_timeline_location_add_hint => 'U 盘、NAS，或由其它同步工具同步的文件夹';
+  @override
+  String get srs_timeline_location_channel => '同步通道';
+  @override
+  String get srs_timeline_location_idle => '未使用';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      '上次同步 ${time}';
+  @override
+  String get srs_timeline_location_never => '尚未同步';
+  @override
+  String get srs_timeline_location_purpose_archive => '归档';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      '保存全部内容、这里的文件永不删除，作为额外的保险副本';
+  @override
+  String get srs_timeline_location_purpose_media => '媒体';
+  @override
+  String get srs_timeline_location_purpose_media_hint => '在这里保存卡片图片和音频的副本';
+  @override
+  String get srs_timeline_location_purpose_sync => '同步';
+  @override
+  String get srs_timeline_location_purpose_sync_hint => '经这个文件夹与其它设备交换改动';
+  @override
+  String get srs_timeline_location_purposes => '这个文件夹用于';
+  @override
+  String get srs_timeline_location_remove => '停用文件夹';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi 不再同步到这个文件夹，里面已有的文件会保留。';
+  @override
+  String get srs_timeline_location_unavailable => '文件夹不可用';
+  @override
+  String get srs_timeline_locations => '存储位置';
+  @override
   String srs_timeline_ops({required Object n}) => '历史中共 ${n} 条改动';
   @override
   String srs_timeline_plan_fields({required Object n}) => '改回 ${n} 项内容';
@@ -372131,6 +372751,46 @@ class _StringsZhHk extends _StringsEn {
   String get srs_timeline_import_other_profile =>
       'This file belongs to another profile';
   @override
+  String get srs_timeline_location_add => 'Add folder';
+  @override
+  String get srs_timeline_location_add_hint =>
+      'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  @override
+  String get srs_timeline_location_channel => 'Sync channel';
+  @override
+  String get srs_timeline_location_idle => 'Not in use';
+  @override
+  String srs_timeline_location_last_ok({required Object time}) =>
+      'Last synced ${time}';
+  @override
+  String get srs_timeline_location_never => 'Not synced yet';
+  @override
+  String get srs_timeline_location_purpose_archive => 'Archive';
+  @override
+  String get srs_timeline_location_purpose_archive_hint =>
+      'Keep everything and never delete anything here, as an extra safety copy';
+  @override
+  String get srs_timeline_location_purpose_media => 'Media';
+  @override
+  String get srs_timeline_location_purpose_media_hint =>
+      'Keep a copy of card images and audio here';
+  @override
+  String get srs_timeline_location_purpose_sync => 'Sync';
+  @override
+  String get srs_timeline_location_purpose_sync_hint =>
+      'Exchange changes with other devices through this folder';
+  @override
+  String get srs_timeline_location_purposes => 'Use this folder for';
+  @override
+  String get srs_timeline_location_remove => 'Stop using folder';
+  @override
+  String get srs_timeline_location_remove_confirm =>
+      'Fushi stops syncing to this folder. Files already in it are kept.';
+  @override
+  String get srs_timeline_location_unavailable => 'Folder not available';
+  @override
+  String get srs_timeline_locations => 'Storage locations';
+  @override
   String srs_timeline_ops({required Object n}) => '${n} changes in history';
   @override
   String srs_timeline_plan_fields({required Object n}) =>
@@ -392162,6 +392822,40 @@ extension on _StringsEn {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -411702,6 +412396,40 @@ extension on _StringsAr {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -431298,6 +432026,40 @@ extension on _StringsDe {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -450898,6 +451660,40 @@ extension on _StringsEs {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -470509,6 +471305,40 @@ extension on _StringsFr {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -490080,6 +490910,40 @@ extension on _StringsId {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -509660,6 +510524,40 @@ extension on _StringsIt {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -529174,6 +530072,40 @@ extension on _StringsJa {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -548637,6 +549569,40 @@ extension on _StringsKo {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -568190,6 +569156,40 @@ extension on _StringsNl {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -587774,6 +588774,40 @@ extension on _StringsPtBr {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -607362,6 +608396,40 @@ extension on _StringsRu {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -626910,6 +627978,40 @@ extension on _StringsTh {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -646476,6 +647578,40 @@ extension on _StringsTr {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -666037,6 +667173,40 @@ extension on _StringsVi {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
@@ -685420,6 +686590,40 @@ extension on _StringsZhCn {
         return '这不是 Fushi 复习导出文件，或由更新版本生成';
       case 'srs_timeline_import_other_profile':
         return '这个文件属于另一个 profile';
+      case 'srs_timeline_location_add':
+        return '添加文件夹';
+      case 'srs_timeline_location_add_hint':
+        return 'U 盘、NAS，或由其它同步工具同步的文件夹';
+      case 'srs_timeline_location_channel':
+        return '同步通道';
+      case 'srs_timeline_location_idle':
+        return '未使用';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => '上次同步 ${time}';
+      case 'srs_timeline_location_never':
+        return '尚未同步';
+      case 'srs_timeline_location_purpose_archive':
+        return '归档';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return '保存全部内容、这里的文件永不删除，作为额外的保险副本';
+      case 'srs_timeline_location_purpose_media':
+        return '媒体';
+      case 'srs_timeline_location_purpose_media_hint':
+        return '在这里保存卡片图片和音频的副本';
+      case 'srs_timeline_location_purpose_sync':
+        return '同步';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return '经这个文件夹与其它设备交换改动';
+      case 'srs_timeline_location_purposes':
+        return '这个文件夹用于';
+      case 'srs_timeline_location_remove':
+        return '停用文件夹';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi 不再同步到这个文件夹，里面已有的文件会保留。';
+      case 'srs_timeline_location_unavailable':
+        return '文件夹不可用';
+      case 'srs_timeline_locations':
+        return '存储位置';
       case 'srs_timeline_ops':
         return ({required Object n}) => '历史中共 ${n} 条改动';
       case 'srs_timeline_plan_fields':
@@ -704804,6 +706008,40 @@ extension on _StringsZhHk {
         return 'This is not a Fushi review export, or it was made by a newer version';
       case 'srs_timeline_import_other_profile':
         return 'This file belongs to another profile';
+      case 'srs_timeline_location_add':
+        return 'Add folder';
+      case 'srs_timeline_location_add_hint':
+        return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_channel':
+        return 'Sync channel';
+      case 'srs_timeline_location_idle':
+        return 'Not in use';
+      case 'srs_timeline_location_last_ok':
+        return ({required Object time}) => 'Last synced ${time}';
+      case 'srs_timeline_location_never':
+        return 'Not synced yet';
+      case 'srs_timeline_location_purpose_archive':
+        return 'Archive';
+      case 'srs_timeline_location_purpose_archive_hint':
+        return 'Keep everything and never delete anything here, as an extra safety copy';
+      case 'srs_timeline_location_purpose_media':
+        return 'Media';
+      case 'srs_timeline_location_purpose_media_hint':
+        return 'Keep a copy of card images and audio here';
+      case 'srs_timeline_location_purpose_sync':
+        return 'Sync';
+      case 'srs_timeline_location_purpose_sync_hint':
+        return 'Exchange changes with other devices through this folder';
+      case 'srs_timeline_location_purposes':
+        return 'Use this folder for';
+      case 'srs_timeline_location_remove':
+        return 'Stop using folder';
+      case 'srs_timeline_location_remove_confirm':
+        return 'Fushi stops syncing to this folder. Files already in it are kept.';
+      case 'srs_timeline_location_unavailable':
+        return 'Folder not available';
+      case 'srs_timeline_locations':
+        return 'Storage locations';
       case 'srs_timeline_ops':
         return ({required Object n}) => '${n} changes in history';
       case 'srs_timeline_plan_fields':
