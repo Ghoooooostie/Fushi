@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159715 (9395 per locale)
+/// Strings: 159681 (9393 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5389,11 +5389,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_nav_bar_style => 'Bottom bar style';
   String get home_nav_bar_style_dial => 'Thumb dial';
   String get home_nav_bar_style_drum => 'Drum';
-  String get home_nav_bar_style_fan => 'Card fan';
   String get home_nav_bar_style_flat => 'Flat';
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   String get home_nav_bar_style_pager => 'Paged swipe';
-  String get home_nav_bar_style_shelf => 'Book spines';
   String get home_nav_more => 'More';
   String get home_nav_rail_collapse => 'Collapse navigation';
   String get home_nav_rail_expand => 'Expand navigation';
@@ -22375,15 +22373,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -45358,15 +45352,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -68578,15 +68568,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -91873,15 +91859,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -115074,15 +115056,11 @@ class _StringsId extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -138137,15 +138115,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -160885,15 +160859,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -183013,15 +182983,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -205581,15 +205547,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -228729,15 +228691,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -251869,15 +251827,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -274862,15 +274816,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -297764,15 +297714,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -320743,15 +320689,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -342901,15 +342843,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => '圆柱滚筒';
   @override
-  String get home_nav_bar_style_fan => '纸牌扇';
-  @override
   String get home_nav_bar_style_flat => '平铺';
   @override
   String get home_nav_bar_style_mode_strip => '相机模式条';
   @override
   String get home_nav_bar_style_pager => '分页滑动';
-  @override
-  String get home_nav_bar_style_shelf => '书脊';
   @override
   String get home_nav_more => '更多';
   @override
@@ -364034,15 +363972,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -384741,16 +384675,12 @@ extension on _StringsEn {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -404272,16 +404202,12 @@ extension on _StringsAr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -423832,16 +423758,12 @@ extension on _StringsDe {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -443424,16 +443346,12 @@ extension on _StringsEs {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -463022,16 +462940,12 @@ extension on _StringsFr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -482598,16 +482512,12 @@ extension on _StringsId {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -502155,16 +502065,12 @@ extension on _StringsIt {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -521691,16 +521597,12 @@ extension on _StringsJa {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -541141,16 +541043,12 @@ extension on _StringsKo {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -560644,16 +560542,12 @@ extension on _StringsNl {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -580220,16 +580114,12 @@ extension on _StringsPtBr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -599796,16 +599686,12 @@ extension on _StringsRu {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -619346,16 +619232,12 @@ extension on _StringsTh {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -638894,16 +638776,12 @@ extension on _StringsTr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -658447,16 +658325,12 @@ extension on _StringsVi {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -677892,16 +677766,12 @@ extension on _StringsZhCn {
         return '拇指转盘';
       case 'home_nav_bar_style_drum':
         return '圆柱滚筒';
-      case 'home_nav_bar_style_fan':
-        return '纸牌扇';
       case 'home_nav_bar_style_flat':
         return '平铺';
       case 'home_nav_bar_style_mode_strip':
         return '相机模式条';
       case 'home_nav_bar_style_pager':
         return '分页滑动';
-      case 'home_nav_bar_style_shelf':
-        return '书脊';
       case 'home_nav_more':
         return '更多';
       case 'home_nav_rail_collapse':
@@ -697224,16 +697094,12 @@ extension on _StringsZhHk {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
