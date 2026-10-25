@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159630 (9390 per locale)
+/// Strings: 159647 (9391 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6554,6 +6554,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
   String get manga_online_stage_cbz => 'Downloading volume…';
   String get manga_online_stage_extract => 'Extracting…';
   String get manga_online_stage_mokuro => 'Downloading OCR data…';
@@ -7301,7 +7303,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get move_up => 'Move up';
   String get name => 'Name';
   String get nav_browse => 'Browse';
-  String get nav_browser_extension => 'Browser extension';
+  String get nav_browser_extension => 'Extension';
   String get nav_downloads => 'Downloads';
   String get nav_game => 'Game';
   String get nav_home => 'Home';
@@ -24308,6 +24310,9 @@ class _StringsAr extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'جارٍ تحميل المجلد…';
   @override
   String get manga_online_stage_extract => 'جارٍ الاستخراج…';
@@ -25600,7 +25605,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get nav_browse => 'تصفح';
   @override
-  String get nav_browser_extension => 'إضافة المتصفح';
+  String get nav_browser_extension => 'الإضافة';
   @override
   String get nav_downloads => 'التحميلات';
   @override
@@ -47314,6 +47319,9 @@ class _StringsDe extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Band wird heruntergeladen…';
   @override
   String get manga_online_stage_extract => 'Wird entpackt…';
@@ -48639,7 +48647,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get nav_browse => 'Durchsuchen';
   @override
-  String get nav_browser_extension => 'Browser-Erweiterung';
+  String get nav_browser_extension => 'Erweiterung';
   @override
   String get nav_downloads => 'Downloads';
   @override
@@ -70523,6 +70531,9 @@ class _StringsEs extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Descargando volumen…';
   @override
   String get manga_online_stage_extract => 'Extrayendo…';
@@ -71855,7 +71866,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get nav_browse => 'Explorar';
   @override
-  String get nav_browser_extension => 'Extensión del navegador';
+  String get nav_browser_extension => 'Extensión';
   @override
   String get nav_downloads => 'Descargas';
   @override
@@ -93813,6 +93824,9 @@ class _StringsFr extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Téléchargement du tome…';
   @override
   String get manga_online_stage_extract => 'Extraction…';
@@ -95149,7 +95163,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get nav_browse => 'Parcourir';
   @override
-  String get nav_browser_extension => 'Extension de navigateur';
+  String get nav_browser_extension => 'Extension';
   @override
   String get nav_downloads => 'Téléchargements';
   @override
@@ -116973,6 +116987,9 @@ class _StringsId extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Mengunduh volume…';
   @override
   String get manga_online_stage_extract => 'Mengekstrak…';
@@ -118280,7 +118297,7 @@ class _StringsId extends _StringsEn {
   @override
   String get nav_browse => 'Jelajah';
   @override
-  String get nav_browser_extension => 'Ekstensi browser';
+  String get nav_browser_extension => 'Ekstensi';
   @override
   String get nav_downloads => 'Unduhan';
   @override
@@ -140033,6 +140050,9 @@ class _StringsIt extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Download volume…';
   @override
   String get manga_online_stage_extract => 'Estrazione…';
@@ -141363,7 +141383,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get nav_browse => 'Sfoglia';
   @override
-  String get nav_browser_extension => 'Estensione browser';
+  String get nav_browser_extension => 'Estensione';
   @override
   String get nav_downloads => 'Download';
   @override
@@ -162676,6 +162696,9 @@ class _StringsJa extends _StringsEn {
   String get manga_online_sources_empty =>
       '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
   @override
+  String get manga_online_sources_hint =>
+      'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
+  @override
   String get manga_online_stage_cbz => '巻をダウンロード中…';
   @override
   String get manga_online_stage_extract => '展開中…';
@@ -163924,7 +163947,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get nav_browse => 'ブラウズ';
   @override
-  String get nav_browser_extension => 'ブラウザ拡張';
+  String get nav_browser_extension => '拡張機能';
   @override
   String get nav_downloads => 'ダウンロード';
   @override
@@ -184798,6 +184821,9 @@ class _StringsKo extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => '권 다운로드 중…';
   @override
   String get manga_online_stage_extract => '압축 해제 중…';
@@ -186051,7 +186077,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get nav_browse => '탐색';
   @override
-  String get nav_browser_extension => '브라우저 확장';
+  String get nav_browser_extension => '확장 프로그램';
   @override
   String get nav_downloads => '다운로드';
   @override
@@ -207437,6 +207463,9 @@ class _StringsNl extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Deel downloaden…';
   @override
   String get manga_online_stage_extract => 'Uitpakken…';
@@ -208752,7 +208781,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get nav_browse => 'Bladeren';
   @override
-  String get nav_browser_extension => 'Browserextensie';
+  String get nav_browser_extension => 'Extensie';
   @override
   String get nav_downloads => 'Downloads';
   @override
@@ -230576,6 +230605,9 @@ class _StringsPtBr extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Baixando volume…';
   @override
   String get manga_online_stage_extract => 'Extraindo…';
@@ -231898,7 +231930,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get nav_browse => 'Navegar';
   @override
-  String get nav_browser_extension => 'Extensão do navegador';
+  String get nav_browser_extension => 'Extensão';
   @override
   String get nav_downloads => 'Downloads';
   @override
@@ -253697,6 +253729,9 @@ class _StringsRu extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Скачивание тома…';
   @override
   String get manga_online_stage_extract => 'Извлечение…';
@@ -255017,7 +255052,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get nav_browse => 'Обзор';
   @override
-  String get nav_browser_extension => 'Расширение браузера';
+  String get nav_browser_extension => 'Расширение';
   @override
   String get nav_downloads => 'Загрузки';
   @override
@@ -276650,6 +276685,9 @@ class _StringsTh extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'กำลังดาวน์โหลดเล่ม…';
   @override
   String get manga_online_stage_extract => 'กำลังแตกไฟล์…';
@@ -277947,7 +277985,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get nav_browse => 'เรียกดู';
   @override
-  String get nav_browser_extension => 'ส่วนขยายเบราว์เซอร์';
+  String get nav_browser_extension => 'ส่วนขยาย';
   @override
   String get nav_downloads => 'ดาวน์โหลด';
   @override
@@ -299555,6 +299593,9 @@ class _StringsTr extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Cilt indiriliyor…';
   @override
   String get manga_online_stage_extract => 'Çıkarılıyor…';
@@ -300864,7 +300905,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get nav_browse => 'Göz at';
   @override
-  String get nav_browser_extension => 'Tarayıcı uzantısı';
+  String get nav_browser_extension => 'Uzantı';
   @override
   String get nav_downloads => 'İndirmeler';
   @override
@@ -322515,6 +322556,9 @@ class _StringsVi extends _StringsEn {
   String get manga_online_sources_empty =>
       'No extension sources yet. Install an extension to add more manga sources.';
   @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Đang tải xuống tập…';
   @override
   String get manga_online_stage_extract => 'Đang giải nén…';
@@ -323816,7 +323860,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get nav_browse => 'Duyệt';
   @override
-  String get nav_browser_extension => 'Tiện ích trình duyệt';
+  String get nav_browser_extension => 'Tiện ích mở rộng';
   @override
   String get nav_downloads => 'Tải xuống';
   @override
@@ -344497,6 +344541,9 @@ class _StringsZhCn extends _StringsEn {
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
   String get manga_online_sources_empty => '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+  @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
   @override
   String get manga_online_stage_cbz => '下载卷包…';
   @override
@@ -365646,6 +365693,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_online_sources_empty => '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
   @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
+  @override
   String get manga_online_stage_cbz => '下載卷包…';
   @override
   String get manga_online_stage_extract => '解包中…';
@@ -386165,6 +386215,8 @@ extension on _StringsEn {
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Downloading volume…';
       case 'manga_online_stage_extract':
@@ -387319,7 +387371,7 @@ extension on _StringsEn {
       case 'nav_browse':
         return 'Browse';
       case 'nav_browser_extension':
-        return 'Browser extension';
+        return 'Extension';
       case 'nav_downloads':
         return 'Downloads';
       case 'nav_game':
@@ -405682,6 +405734,8 @@ extension on _StringsAr {
         return 'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'جارٍ تحميل المجلد…';
       case 'manga_online_stage_extract':
@@ -406836,7 +406890,7 @@ extension on _StringsAr {
       case 'nav_browse':
         return 'تصفح';
       case 'nav_browser_extension':
-        return 'إضافة المتصفح';
+        return 'الإضافة';
       case 'nav_downloads':
         return 'التحميلات';
       case 'nav_game':
@@ -425244,6 +425298,8 @@ extension on _StringsDe {
         return 'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Band wird heruntergeladen…';
       case 'manga_online_stage_extract':
@@ -426404,7 +426460,7 @@ extension on _StringsDe {
       case 'nav_browse':
         return 'Durchsuchen';
       case 'nav_browser_extension':
-        return 'Browser-Erweiterung';
+        return 'Erweiterung';
       case 'nav_downloads':
         return 'Downloads';
       case 'nav_game':
@@ -444823,6 +444879,8 @@ extension on _StringsEs {
         return 'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Descargando volumen…';
       case 'manga_online_stage_extract':
@@ -445982,7 +446040,7 @@ extension on _StringsEs {
       case 'nav_browse':
         return 'Explorar';
       case 'nav_browser_extension':
-        return 'Extensión del navegador';
+        return 'Extensión';
       case 'nav_downloads':
         return 'Descargas';
       case 'nav_game':
@@ -464410,6 +464468,8 @@ extension on _StringsFr {
         return 'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Téléchargement du tome…';
       case 'manga_online_stage_extract':
@@ -465570,7 +465630,7 @@ extension on _StringsFr {
       case 'nav_browse':
         return 'Parcourir';
       case 'nav_browser_extension':
-        return 'Extension de navigateur';
+        return 'Extension';
       case 'nav_downloads':
         return 'Téléchargements';
       case 'nav_game':
@@ -483973,6 +484033,8 @@ extension on _StringsId {
         return 'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Mengunduh volume…';
       case 'manga_online_stage_extract':
@@ -485127,7 +485189,7 @@ extension on _StringsId {
       case 'nav_browse':
         return 'Jelajah';
       case 'nav_browser_extension':
-        return 'Ekstensi browser';
+        return 'Ekstensi';
       case 'nav_downloads':
         return 'Unduhan';
       case 'nav_game':
@@ -503522,6 +503584,8 @@ extension on _StringsIt {
         return 'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Download volume…';
       case 'manga_online_stage_extract':
@@ -504681,7 +504745,7 @@ extension on _StringsIt {
       case 'nav_browse':
         return 'Sfoglia';
       case 'nav_browser_extension':
-        return 'Estensione browser';
+        return 'Estensione';
       case 'nav_downloads':
         return 'Download';
       case 'nav_game':
@@ -523032,6 +523096,8 @@ extension on _StringsJa {
         return 'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
       case 'manga_online_sources_empty':
         return '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
+      case 'manga_online_sources_hint':
+        return 'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
       case 'manga_online_stage_cbz':
         return '巻をダウンロード中…';
       case 'manga_online_stage_extract':
@@ -524183,7 +524249,7 @@ extension on _StringsJa {
       case 'nav_browse':
         return 'ブラウズ';
       case 'nav_browser_extension':
-        return 'ブラウザ拡張';
+        return '拡張機能';
       case 'nav_downloads':
         return 'ダウンロード';
       case 'nav_game':
@@ -542473,6 +542539,8 @@ extension on _StringsKo {
         return '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return '권 다운로드 중…';
       case 'manga_online_stage_extract':
@@ -543622,7 +543690,7 @@ extension on _StringsKo {
       case 'nav_browse':
         return '탐색';
       case 'nav_browser_extension':
-        return '브라우저 확장';
+        return '확장 프로그램';
       case 'nav_downloads':
         return '다운로드';
       case 'nav_game':
@@ -561985,6 +562053,8 @@ extension on _StringsNl {
         return 'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Deel downloaden…';
       case 'manga_online_stage_extract':
@@ -563145,7 +563215,7 @@ extension on _StringsNl {
       case 'nav_browse':
         return 'Bladeren';
       case 'nav_browser_extension':
-        return 'Browserextensie';
+        return 'Extensie';
       case 'nav_downloads':
         return 'Downloads';
       case 'nav_game':
@@ -581548,6 +581618,8 @@ extension on _StringsPtBr {
         return 'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Baixando volume…';
       case 'manga_online_stage_extract':
@@ -582707,7 +582779,7 @@ extension on _StringsPtBr {
       case 'nav_browse':
         return 'Navegar';
       case 'nav_browser_extension':
-        return 'Extensão do navegador';
+        return 'Extensão';
       case 'nav_downloads':
         return 'Downloads';
       case 'nav_game':
@@ -601114,6 +601186,8 @@ extension on _StringsRu {
         return 'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Скачивание тома…';
       case 'manga_online_stage_extract':
@@ -602273,7 +602347,7 @@ extension on _StringsRu {
       case 'nav_browse':
         return 'Обзор';
       case 'nav_browser_extension':
-        return 'Расширение браузера';
+        return 'Расширение';
       case 'nav_downloads':
         return 'Загрузки';
       case 'nav_game':
@@ -620650,6 +620724,8 @@ extension on _StringsTh {
         return 'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'กำลังดาวน์โหลดเล่ม…';
       case 'manga_online_stage_extract':
@@ -621804,7 +621880,7 @@ extension on _StringsTh {
       case 'nav_browse':
         return 'เรียกดู';
       case 'nav_browser_extension':
-        return 'ส่วนขยายเบราว์เซอร์';
+        return 'ส่วนขยาย';
       case 'nav_downloads':
         return 'ดาวน์โหลด';
       case 'nav_game':
@@ -640191,6 +640267,8 @@ extension on _StringsTr {
         return 'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Cilt indiriliyor…';
       case 'manga_online_stage_extract':
@@ -641348,7 +641426,7 @@ extension on _StringsTr {
       case 'nav_browse':
         return 'Göz at';
       case 'nav_browser_extension':
-        return 'Tarayıcı uzantısı';
+        return 'Uzantı';
       case 'nav_downloads':
         return 'İndirmeler';
       case 'nav_game':
@@ -659730,6 +659808,8 @@ extension on _StringsVi {
         return 'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
       case 'manga_online_sources_empty':
         return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Đang tải xuống tập…';
       case 'manga_online_stage_extract':
@@ -660884,7 +660964,7 @@ extension on _StringsVi {
       case 'nav_browse':
         return 'Duyệt';
       case 'nav_browser_extension':
-        return 'Tiện ích trình duyệt';
+        return 'Tiện ích mở rộng';
       case 'nav_downloads':
         return 'Tải xuống';
       case 'nav_game':
@@ -679147,6 +679227,8 @@ extension on _StringsZhCn {
         return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
       case 'manga_online_sources_empty':
         return '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
       case 'manga_online_stage_cbz':
         return '下载卷包…';
       case 'manga_online_stage_extract':
@@ -698471,6 +698553,8 @@ extension on _StringsZhHk {
         return '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
       case 'manga_online_sources_empty':
         return '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
       case 'manga_online_stage_cbz':
         return '下載卷包…';
       case 'manga_online_stage_extract':
