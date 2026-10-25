@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160786 (9458 per locale)
+/// Strings: 161330 (9490 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4004,6 +4004,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get floating_ball_action_open_app => 'Open Fushi';
   String get floating_ball_action_popup_lookup => 'App-external lookup';
   String get floating_ball_action_screen_ocr => 'Screen OCR';
+  String get floating_ball_action_switch_profile => 'Switch profile';
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   String get floating_ball_auto_restore_both => 'In and out of app';
   String get floating_ball_auto_restore_hint =>
@@ -4035,6 +4036,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
   String get floating_ball_overlay_permission_needed =>
       'Allow Fushi to display over other apps to keep the ball on screen';
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   String get floating_ball_scope_general => 'Other pages';
   String get floating_ball_scope_manga => 'Manga reader';
   String get floating_ball_scope_reader => 'Book reader';
@@ -4404,6 +4408,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_card_sentence_audio_missing =>
       'The card was created without sentence audio; no other line\'s audio was substituted.';
   String get game_clear_events => 'Clear events';
+  String game_collection_work_count({required Object n}) => '${n} games';
   String get game_cover_not_found =>
       'No usable cover found in the game folder or executable';
   String get game_cover_searching => 'Looking for a cover...';
@@ -5385,11 +5390,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_nav_bar_style => 'Bottom bar style';
   String get home_nav_bar_style_dial => 'Thumb dial';
   String get home_nav_bar_style_drum => 'Drum';
-  String get home_nav_bar_style_fan => 'Card fan';
   String get home_nav_bar_style_flat => 'Flat';
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   String get home_nav_bar_style_pager => 'Paged swipe';
-  String get home_nav_bar_style_shelf => 'Book spines';
   String get home_nav_more => 'More';
   String get home_nav_rail_collapse => 'Collapse navigation';
   String get home_nav_rail_expand => 'Expand navigation';
@@ -5692,6 +5695,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Invert bottom-bar skip buttons';
   String get invert_swipe_direction => 'Invert swipe page turn direction';
   String get invert_volume_buttons => 'Invert volume buttons';
+  String get item_actions_group_content => 'Content';
+  String get item_actions_group_organize => 'Organize';
+  String get item_actions_group_progress => 'Progress';
+  String get item_actions_group_settings => 'Settings';
   String get jellyfin_auto_list_hint =>
       'Off: entering the video page sends no request to the media server; pull to refresh in the video library to list items manually. Recommended for very large servers, where automatic enumeration looks like scraping and can trip abuse detection.';
   String get jellyfin_auto_list_title => 'Auto-list items on entering Video';
@@ -6236,6 +6243,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_blur => 'Blur lyrics';
   String get lyrics_blur_hint =>
       'Blur the current line for listening immersion; hover or tap to reveal';
+  String get lyrics_control_item_study_timer => 'Study timer';
+  String get lyrics_control_layout => 'Button layout';
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  String get lyrics_control_zone_top => 'Top';
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
   String get lyrics_exit_to_library => 'Close and return to library';
   String get lyrics_font_size => 'Lyrics font size';
   String get lyrics_font_size_hint =>
@@ -6552,16 +6570,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_series_empty => 'No volumes in this series.';
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
   String get manga_online_stage_cbz => 'Downloading volume…';
   String get manga_online_stage_extract => 'Extracting…';
   String get manga_online_stage_mokuro => 'Downloading OCR data…';
   String get manga_page_actions => 'Page actions';
-  String get manga_page_copy => 'Copy image';
   String manga_page_number_hint({required Object total}) =>
       'Page number (1-${total})';
-  String get manga_page_save => 'Save image';
   String get manga_page_set_cover => 'Set as cover';
-  String get manga_page_share => 'Share image';
   String get manga_panel_detect_failed => 'Panel detection failed';
   String manga_panel_index({required Object index}) => 'Panel ${index}';
   String get manga_panel_model => 'AI panel model';
@@ -6672,11 +6691,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_restore => 'Restore all global defaults';
   String get manga_reader_rotate_wide_pages => 'Rotate to fit';
   String get manga_reader_saturation => 'Saturation';
-  String get manga_reader_save_book => 'By title';
-  String get manga_reader_save_chapter => 'By title and chapter';
-  String get manga_reader_save_directory => 'Saved image folders';
   String get manga_reader_save_failed => 'Could not save reader settings';
-  String get manga_reader_save_flat => 'One folder';
   String get manga_reader_scale => 'Image scaling';
   String get manga_reader_scope_global => 'Global';
   String get manga_reader_scope_hint =>
@@ -6888,6 +6903,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   String get media_server_items_empty => 'No items';
   String get media_server_items_load_failed =>
       'Could not load items from the server';
@@ -7840,10 +7857,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get online_source_error_webview_unavailable =>
       'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
   String get online_sources_all_header => 'All sources';
+  String get online_sources_browse_extensions => 'Browse extensions';
   String get online_sources_filter_all => 'All';
   String get online_sources_filter_disabled => 'Disabled';
   String get online_sources_filter_enabled => 'Enabled';
   String get online_sources_pinned_header => 'Pinned';
+  String get online_sources_stores_manage => 'Extension repositories';
   String get options_collapse => 'Collapse in lookup';
   String get options_delete => 'Delete';
   String get options_edit => 'Edit';
@@ -8264,9 +8283,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_highlight_title => 'Highlight style';
   String get reader_highlight_vertical => 'Vertical';
   String get reader_horizontal => 'Horizontal';
+  String get reader_image_actions_title => 'Image';
   String reader_image_copy_failed({required Object error}) =>
       'Failed to copy image: ${error}';
   String get reader_image_file_unavailable => 'Image file is unavailable.';
+  String get reader_image_save => 'Save image';
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  String get reader_image_share => 'Share image';
   String reader_image_share_failed({required Object error}) =>
       'Failed to share image: ${error}';
   String get reader_line_height => 'Line height';
@@ -8735,6 +8764,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_view_changelog => 'View changelog';
   String get share => 'Share';
   String get share_theme => 'Share theme';
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  String get shelf_card_meta_download_failed => 'Download failed';
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
   String get shelf_collection_series_label => 'Series';
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   String get shelf_filter_read_status => 'Reading status';
@@ -8746,8 +8783,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_audiobook_next_sentence => 'Next sentence';
   String get shortcut_action_audiobook_play_pause => 'Play / pause';
   String get shortcut_action_audiobook_prev_sentence => 'Previous sentence';
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
   String get shortcut_action_audiobook_seek_clicked =>
       'Seek audio to clicked sentence';
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   String get shortcut_action_dpad_down => 'D-pad down';
   String get shortcut_action_dpad_left => 'D-pad left';
   String get shortcut_action_dpad_right => 'D-pad right';
@@ -8978,6 +9025,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get show_expression_tags => 'Show expression tags';
   String get show_floating_lyric => 'Floating lyric overlay';
   String get show_media_notification => 'Show media notification';
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   String get show_options => 'Show options';
   String get show_top_progress_bar => 'Reading progress indicator';
   String get skip_action => 'Skip action';
@@ -20097,6 +20146,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR للشاشة';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -20150,6 +20201,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'اسمح لـ Fushi بالعرض فوق التطبيقات الأخرى لإبقاء الكرة على الشاشة';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'صفحات أخرى';
   @override
@@ -20785,6 +20841,8 @@ class _StringsAr extends _StringsEn {
       'تم إنشاء البطاقة بدون صوت الجملة؛ لم يتم استبدال صوت سطر آخر.';
   @override
   String get game_clear_events => 'مسح الأحداث';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'لم يُعثر على غلاف قابل للاستخدام في مجلد اللعبة أو ملفها التنفيذي';
@@ -22454,15 +22512,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -22954,6 +23008,14 @@ class _StringsAr extends _StringsEn {
   String get invert_swipe_direction => 'عكس اتجاه التمرير لقلب الصفحات';
   @override
   String get invert_volume_buttons => 'عكس أزرار الصوت';
+  @override
+  String get item_actions_group_content => 'المحتوى';
+  @override
+  String get item_actions_group_organize => 'تنظيم';
+  @override
+  String get item_actions_group_progress => 'التقدم';
+  @override
+  String get item_actions_group_settings => 'الإعدادات';
   @override
   String get jellyfin_auto_list_hint =>
       'عند الإيقاف: لا يُرسل فتح صفحة الفيديو أي طلب إلى خادم الوسائط؛ اسحب للتحديث في مكتبة الفيديو لسرد العناصر يدويًا. يُنصح به للخوادم الكبيرة جدًا، حيث يبدو السرد التلقائي كأنه كشط وقد يُفعّل كشف إساءة الاستخدام.';
@@ -23863,6 +23925,25 @@ class _StringsAr extends _StringsEn {
   String get lyrics_blur_hint =>
       'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'حجم خط كلمات الأغاني';
@@ -24399,6 +24480,12 @@ class _StringsAr extends _StringsEn {
   String get manga_online_source_disabled =>
       'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'جارٍ تحميل المجلد…';
   @override
   String get manga_online_stage_extract => 'جارٍ الاستخراج…';
@@ -24407,16 +24494,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_page_actions => 'إجراءات الصفحة';
   @override
-  String get manga_page_copy => 'نسخ الصورة';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'رقم الصفحة (1-${total})';
   @override
-  String get manga_page_save => 'حفظ الصورة';
-  @override
   String get manga_page_set_cover => 'تعيين كغلاف';
-  @override
-  String get manga_page_share => 'مشاركة الصورة';
   @override
   String get manga_panel_detect_failed => 'فشل اكتشاف الإطارات';
   @override
@@ -24624,15 +24705,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'التشبع';
   @override
-  String get manga_reader_save_book => 'حسب العنوان';
-  @override
-  String get manga_reader_save_chapter => 'حسب العنوان والفصل';
-  @override
-  String get manga_reader_save_directory => 'مجلدات الصور المحفوظة';
-  @override
   String get manga_reader_save_failed => 'تعذّر حفظ إعدادات القارئ';
-  @override
-  String get manga_reader_save_flat => 'مجلد واحد';
   @override
   String get manga_reader_scale => 'تحجيم الصورة';
   @override
@@ -24999,6 +25072,9 @@ class _StringsAr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'مجلد';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'لا توجد عناصر';
   @override
@@ -26586,6 +26662,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -26593,6 +26671,8 @@ class _StringsAr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'طي عند البحث';
   @override
@@ -27336,10 +27416,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_horizontal => 'أفقي';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'فشل نسخ الصورة: ${error}';
   @override
   String get reader_image_file_unavailable => 'ملف الصورة غير متاح.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'فشل مشاركة الصورة: ${error}';
@@ -28173,6 +28270,19 @@ class _StringsAr extends _StringsEn {
   @override
   String get share_theme => 'مشاركة المظهر';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -28195,8 +28305,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'الجملة السابقة';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'نقل الصوت إلى الجملة المنقورة';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'أزرار الاتجاهات للأسفل';
   @override
@@ -28610,6 +28737,9 @@ class _StringsAr extends _StringsEn {
   String get show_floating_lyric => 'ترجمة عائمة';
   @override
   String get show_media_notification => 'عرض إشعار الوسائط';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'عرض الخيارات';
   @override
@@ -43162,6 +43292,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Bildschirm-OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -43218,6 +43350,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Erlaube Fushi, über anderen Apps angezeigt zu werden, damit die Kugel auf dem Bildschirm bleibt';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Andere Seiten';
   @override
@@ -43868,6 +44005,8 @@ class _StringsDe extends _StringsEn {
       'Die Karte wurde ohne Satzaudio erstellt; Audio einer anderen Zeile wurde nicht ersetzt.';
   @override
   String get game_clear_events => 'Ereignisse löschen';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Kein verwendbares Cover im Spielordner oder in der ausführbaren Datei gefunden';
@@ -45586,15 +45725,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -46091,6 +46226,14 @@ class _StringsDe extends _StringsEn {
   String get invert_swipe_direction => 'Wischrichtung zum Blättern umkehren';
   @override
   String get invert_volume_buttons => 'Lautstärketasten invertieren';
+  @override
+  String get item_actions_group_content => 'Inhalt';
+  @override
+  String get item_actions_group_organize => 'Organisieren';
+  @override
+  String get item_actions_group_progress => 'Fortschritt';
+  @override
+  String get item_actions_group_settings => 'Einstellungen';
   @override
   String get jellyfin_auto_list_hint =>
       'Aus: Beim Öffnen der Videoseite geht keine Anfrage an den Medienserver; ziehe in der Videobibliothek zum Aktualisieren, um manuell aufzulisten. Empfohlen für sehr große Server, wo automatisches Auflisten wie Scraping aussieht und die Missbrauchserkennung auslösen kann.';
@@ -47019,6 +47162,25 @@ class _StringsDe extends _StringsEn {
   String get lyrics_blur_hint =>
       'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Liedtext-Schriftgröße';
@@ -47567,6 +47729,12 @@ class _StringsDe extends _StringsEn {
   String get manga_online_source_disabled =>
       'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Band wird heruntergeladen…';
   @override
   String get manga_online_stage_extract => 'Wird entpackt…';
@@ -47575,16 +47743,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_page_actions => 'Seitenaktionen';
   @override
-  String get manga_page_copy => 'Bild kopieren';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Seitenzahl (1-${total})';
   @override
-  String get manga_page_save => 'Bild speichern';
-  @override
   String get manga_page_set_cover => 'Als Cover festlegen';
-  @override
-  String get manga_page_share => 'Bild teilen';
   @override
   String get manga_panel_detect_failed => 'Panel-Erkennung fehlgeschlagen';
   @override
@@ -47797,16 +47959,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Sättigung';
   @override
-  String get manga_reader_save_book => 'Nach Titel';
-  @override
-  String get manga_reader_save_chapter => 'Nach Titel und Kapitel';
-  @override
-  String get manga_reader_save_directory => 'Ordner für gespeicherte Bilder';
-  @override
   String get manga_reader_save_failed =>
       'Leser-Einstellungen konnten nicht gespeichert werden';
-  @override
-  String get manga_reader_save_flat => 'Ein Ordner';
   @override
   String get manga_reader_scale => 'Bildskalierung';
   @override
@@ -48185,6 +48339,9 @@ class _StringsDe extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Ordner';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Keine Einträge';
   @override
@@ -49807,6 +49964,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -49814,6 +49973,8 @@ class _StringsDe extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Bei Suche einklappen';
   @override
@@ -50571,10 +50732,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Bild konnte nicht kopiert werden: ${error}';
   @override
   String get reader_image_file_unavailable => 'Bilddatei ist nicht verfügbar.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Bild konnte nicht geteilt werden: ${error}';
@@ -51423,6 +51601,19 @@ class _StringsDe extends _StringsEn {
   @override
   String get share_theme => 'Theme teilen';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -51445,8 +51636,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Vorheriger Satz';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Audio zum angeklickten Satz springen';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad unten';
   @override
@@ -51870,6 +52078,9 @@ class _StringsDe extends _StringsEn {
   String get show_floating_lyric => 'Schwebende Textzeile';
   @override
   String get show_media_notification => 'Medienbenachrichtigung anzeigen';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Optionen anzeigen';
   @override
@@ -66533,6 +66744,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR de pantalla';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -66587,6 +66800,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Permite que Fushi se muestre sobre otras apps para mantener la bola en pantalla';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Otras páginas';
   @override
@@ -67241,6 +67459,8 @@ class _StringsEs extends _StringsEn {
       'La tarjeta fue creada sin audio de oración; no se sustituyó audio de otra línea.';
   @override
   String get game_clear_events => 'Limpiar eventos';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'No se encontró portada utilizable en la carpeta o ejecutable del juego';
@@ -68955,15 +69175,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -69464,6 +69680,14 @@ class _StringsEs extends _StringsEn {
       'Invertir dirección de deslizamiento para pasar páginas';
   @override
   String get invert_volume_buttons => 'Invertir botones de volumen';
+  @override
+  String get item_actions_group_content => 'Contenido';
+  @override
+  String get item_actions_group_organize => 'Organizar';
+  @override
+  String get item_actions_group_progress => 'Progreso';
+  @override
+  String get item_actions_group_settings => 'Ajustes';
   @override
   String get jellyfin_auto_list_hint =>
       'Desactivado: entrar en la página de vídeo no envía ninguna petición al servidor de medios; desliza para actualizar en la videoteca para listar manualmente. Recomendado en servidores muy grandes, donde la enumeración automática parece scraping y puede activar la detección de abuso.';
@@ -70395,6 +70619,25 @@ class _StringsEs extends _StringsEn {
   String get lyrics_blur_hint =>
       'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamaño de fuente de letras';
@@ -70938,6 +71181,12 @@ class _StringsEs extends _StringsEn {
   String get manga_online_source_disabled =>
       'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Descargando volumen…';
   @override
   String get manga_online_stage_extract => 'Extrayendo…';
@@ -70946,16 +71195,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_page_actions => 'Acciones de página';
   @override
-  String get manga_page_copy => 'Copiar imagen';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Número de página (1-${total})';
   @override
-  String get manga_page_save => 'Guardar imagen';
-  @override
   String get manga_page_set_cover => 'Establecer como portada';
-  @override
-  String get manga_page_share => 'Compartir imagen';
   @override
   String get manga_panel_detect_failed => 'Error en la detección de viñetas';
   @override
@@ -71176,16 +71419,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturación';
   @override
-  String get manga_reader_save_book => 'Por título';
-  @override
-  String get manga_reader_save_chapter => 'Por título y capítulo';
-  @override
-  String get manga_reader_save_directory => 'Carpetas de imágenes guardadas';
-  @override
   String get manga_reader_save_failed =>
       'No se pudieron guardar los ajustes del lector';
-  @override
-  String get manga_reader_save_flat => 'Una sola carpeta';
   @override
   String get manga_reader_scale => 'Escalado de imagen';
   @override
@@ -71566,6 +71801,9 @@ class _StringsEs extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Carpeta';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Sin elementos';
   @override
@@ -73183,6 +73421,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -73190,6 +73430,8 @@ class _StringsEs extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Contraer en búsqueda';
   @override
@@ -73944,11 +74186,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Error al copiar la imagen: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'El archivo de imagen no está disponible.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Error al compartir la imagen: ${error}';
@@ -74802,6 +75061,19 @@ class _StringsEs extends _StringsEn {
   @override
   String get share_theme => 'Compartir tema';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -74824,8 +75096,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase anterior';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Saltar el audio a la frase pulsada';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Cruceta Abajo';
   @override
@@ -75253,6 +75542,9 @@ class _StringsEs extends _StringsEn {
   String get show_floating_lyric => 'Letra flotante superpuesta';
   @override
   String get show_media_notification => 'Mostrar notificación multimedia';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Mostrar opciones';
   @override
@@ -89969,6 +90261,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR de l\'écran';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -90025,6 +90319,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Autorisez Fushi à s\'afficher par-dessus d\'autres applications pour garder la bulle à l\'écran';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Autres pages';
   @override
@@ -90676,6 +90975,8 @@ class _StringsFr extends _StringsEn {
       'La carte a été créée sans audio de phrase ; aucun audio d\'une autre ligne n\'a été substitué.';
   @override
   String get game_clear_events => 'Effacer les événements';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Aucune couverture utilisable trouvée dans le dossier ou l\'exécutable du jeu';
@@ -92399,15 +92700,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -92910,6 +93207,14 @@ class _StringsFr extends _StringsEn {
       'Inverser la direction du balayage pour tourner les pages';
   @override
   String get invert_volume_buttons => 'Inverser les boutons de volume';
+  @override
+  String get item_actions_group_content => 'Contenu';
+  @override
+  String get item_actions_group_organize => 'Organiser';
+  @override
+  String get item_actions_group_progress => 'Progression';
+  @override
+  String get item_actions_group_settings => 'Paramètres';
   @override
   String get jellyfin_auto_list_hint =>
       'Désactivé : ouvrir la page vidéo n\'envoie aucune requête au serveur média ; tirez pour actualiser dans la vidéothèque afin de lister manuellement. Recommandé pour les très gros serveurs, où l\'énumération automatique ressemble à du scraping et peut déclencher la détection d\'abus.';
@@ -93842,6 +94147,25 @@ class _StringsFr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Taille de police des paroles';
@@ -94390,6 +94714,12 @@ class _StringsFr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Téléchargement du tome…';
   @override
   String get manga_online_stage_extract => 'Extraction…';
@@ -94398,16 +94728,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_page_actions => 'Actions sur la page';
   @override
-  String get manga_page_copy => 'Copier l\'image';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Numéro de page (1-${total})';
   @override
-  String get manga_page_save => 'Enregistrer l\'image';
-  @override
   String get manga_page_set_cover => 'Définir comme couverture';
-  @override
-  String get manga_page_share => 'Partager l\'image';
   @override
   String get manga_panel_detect_failed => 'Échec de la détection des cases';
   @override
@@ -94627,16 +94951,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturation';
   @override
-  String get manga_reader_save_book => 'Par titre';
-  @override
-  String get manga_reader_save_chapter => 'Par titre et chapitre';
-  @override
-  String get manga_reader_save_directory => 'Dossiers des images enregistrées';
-  @override
   String get manga_reader_save_failed =>
       'Impossible d\'enregistrer les réglages du lecteur';
-  @override
-  String get manga_reader_save_flat => 'Un seul dossier';
   @override
   String get manga_reader_scale => 'Mise à l\'échelle des images';
   @override
@@ -95018,6 +95334,9 @@ class _StringsFr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Dossier';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Aucun élément';
   @override
@@ -96648,6 +96967,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -96655,6 +96976,8 @@ class _StringsFr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Réduire lors de la recherche';
   @override
@@ -97410,11 +97733,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Échec de la copie de l\'image : ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Le fichier image est indisponible.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Échec du partage de l\'image : ${error}';
@@ -98274,6 +98614,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get share_theme => 'Partager le thème';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -98296,8 +98649,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Phrase précédente';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Aller à la phrase cliquée dans l\'audio';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Croix directionnelle Bas';
   @override
@@ -98725,6 +99095,9 @@ class _StringsFr extends _StringsEn {
   String get show_floating_lyric => 'Sous-titre flottant';
   @override
   String get show_media_notification => 'Notification multimédia';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Afficher les options';
   @override
@@ -113360,6 +113733,8 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR layar';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -113413,6 +113788,11 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Izinkan Fushi tampil di atas aplikasi lain agar bola tetap di layar';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Halaman lain';
   @override
@@ -114054,6 +114434,8 @@ class _StringsId extends _StringsEn {
       'Kartu dibuat tanpa audio kalimat; tidak ada audio baris lain yang disubstitusi.';
   @override
   String get game_clear_events => 'Bersihkan peristiwa';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Tidak ditemukan sampul yang bisa digunakan di folder game atau eksekutabel';
@@ -115749,15 +116131,11 @@ class _StringsId extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -116251,6 +116629,14 @@ class _StringsId extends _StringsEn {
       'Balik arah geser untuk membalik halaman';
   @override
   String get invert_volume_buttons => 'Balik tombol volume';
+  @override
+  String get item_actions_group_content => 'Konten';
+  @override
+  String get item_actions_group_organize => 'Atur';
+  @override
+  String get item_actions_group_progress => 'Progres';
+  @override
+  String get item_actions_group_settings => 'Pengaturan';
   @override
   String get jellyfin_auto_list_hint =>
       'Mati: masuk ke halaman video tidak mengirim permintaan apa pun ke server media; tarik untuk menyegarkan di pustaka video agar item didaftar manual. Disarankan untuk server yang sangat besar, karena pendaftaran otomatis terlihat seperti scraping dan bisa memicu deteksi penyalahgunaan.';
@@ -117171,6 +117557,25 @@ class _StringsId extends _StringsEn {
   String get lyrics_blur_hint =>
       'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Ukuran Font Lirik';
@@ -117712,6 +118117,12 @@ class _StringsId extends _StringsEn {
   String get manga_online_source_disabled =>
       'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Mengunduh volume…';
   @override
   String get manga_online_stage_extract => 'Mengekstrak…';
@@ -117720,16 +118131,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_page_actions => 'Aksi halaman';
   @override
-  String get manga_page_copy => 'Salin gambar';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Nomor halaman (1-${total})';
   @override
-  String get manga_page_save => 'Simpan gambar';
-  @override
   String get manga_page_set_cover => 'Atur sebagai sampul';
-  @override
-  String get manga_page_share => 'Bagikan gambar';
   @override
   String get manga_panel_detect_failed => 'Deteksi panel gagal';
   @override
@@ -117937,16 +118342,8 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturasi';
   @override
-  String get manga_reader_save_book => 'Menurut judul';
-  @override
-  String get manga_reader_save_chapter => 'Menurut judul dan bab';
-  @override
-  String get manga_reader_save_directory => 'Folder gambar tersimpan';
-  @override
   String get manga_reader_save_failed =>
       'Tidak dapat menyimpan pengaturan pembaca';
-  @override
-  String get manga_reader_save_flat => 'Satu folder';
   @override
   String get manga_reader_scale => 'Penskalaan gambar';
   @override
@@ -118321,6 +118718,9 @@ class _StringsId extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Tidak ada item';
   @override
@@ -119921,6 +120321,8 @@ class _StringsId extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -119928,6 +120330,8 @@ class _StringsId extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Ciutkan saat pencarian';
   @override
@@ -120678,10 +121082,27 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Gagal menyalin gambar: ${error}';
   @override
   String get reader_image_file_unavailable => 'File gambar tidak tersedia.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Gagal membagikan gambar: ${error}';
@@ -121525,6 +121946,19 @@ class _StringsId extends _StringsEn {
   @override
   String get share_theme => 'Bagikan Tema';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -121547,8 +121981,25 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Kalimat Sebelumnya';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Lompat audio ke kalimat yang diklik';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Bawah';
   @override
@@ -121962,6 +122413,9 @@ class _StringsId extends _StringsEn {
   String get show_floating_lyric => 'Overlay subtitle mengambang';
   @override
   String get show_media_notification => 'Tampilkan notifikasi media';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Tampilkan Opsi';
   @override
@@ -136551,6 +137005,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR dello schermo';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -136606,6 +137062,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Consenti a Fushi di mostrarsi sopra altre app per mantenere il pulsante sullo schermo';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Altre pagine';
   @override
@@ -137249,6 +137710,8 @@ class _StringsIt extends _StringsEn {
       'La carta è stata creata senza audio della frase; l\'audio di nessun\'altra riga è stato sostituito.';
   @override
   String get game_clear_events => 'Cancella eventi';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Nessuna copertina utilizzabile trovata nella cartella o nell\'eseguibile del gioco';
@@ -138961,15 +139424,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -139468,6 +139927,14 @@ class _StringsIt extends _StringsEn {
       'Inverti direzione scorrimento per voltare pagina';
   @override
   String get invert_volume_buttons => 'Inverti tasti volume';
+  @override
+  String get item_actions_group_content => 'Contenuto';
+  @override
+  String get item_actions_group_organize => 'Organizza';
+  @override
+  String get item_actions_group_progress => 'Avanzamento';
+  @override
+  String get item_actions_group_settings => 'Impostazioni';
   @override
   String get jellyfin_auto_list_hint =>
       'Disattivato: aprire la pagina video non invia alcuna richiesta al server multimediale; tira per aggiornare nella videoteca per elencare manualmente. Consigliato per server molto grandi, dove l\'enumerazione automatica sembra scraping e può far scattare il rilevamento abusi.';
@@ -140389,6 +140856,25 @@ class _StringsIt extends _StringsEn {
   String get lyrics_blur_hint =>
       'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Dimensione carattere testi';
@@ -140934,6 +141420,12 @@ class _StringsIt extends _StringsEn {
   String get manga_online_source_disabled =>
       'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Download volume…';
   @override
   String get manga_online_stage_extract => 'Estrazione…';
@@ -140942,16 +141434,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_page_actions => 'Azioni della pagina';
   @override
-  String get manga_page_copy => 'Copia immagine';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Numero pagina (1-${total})';
   @override
-  String get manga_page_save => 'Salva immagine';
-  @override
   String get manga_page_set_cover => 'Imposta come copertina';
-  @override
-  String get manga_page_share => 'Condividi immagine';
   @override
   String get manga_panel_detect_failed =>
       'Rilevamento delle vignette non riuscito';
@@ -141172,16 +141658,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturazione';
   @override
-  String get manga_reader_save_book => 'Per titolo';
-  @override
-  String get manga_reader_save_chapter => 'Per titolo e capitolo';
-  @override
-  String get manga_reader_save_directory => 'Cartelle delle immagini salvate';
-  @override
   String get manga_reader_save_failed =>
       'Impossibile salvare le impostazioni del lettore';
-  @override
-  String get manga_reader_save_flat => 'Una cartella';
   @override
   String get manga_reader_scale => 'Scala dell\'immagine';
   @override
@@ -141558,6 +142036,9 @@ class _StringsIt extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Cartella';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Nessun elemento';
   @override
@@ -143171,6 +143652,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -143178,6 +143661,8 @@ class _StringsIt extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Comprimi nella ricerca';
   @override
@@ -143929,11 +144414,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_horizontal => 'Orizzontale';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Copia dell\'immagine non riuscita: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Il file immagine non è disponibile.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Condivisione dell\'immagine non riuscita: ${error}';
@@ -144788,6 +145290,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get share_theme => 'Condividi tema';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -144810,8 +145325,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase precedente';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Sposta l\'audio alla frase cliccata';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Giù';
   @override
@@ -145239,6 +145771,9 @@ class _StringsIt extends _StringsEn {
   String get show_floating_lyric => 'Testo flottante sovrapposto';
   @override
   String get show_media_notification => 'Mostra notifica multimediale';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Mostra opzioni';
   @override
@@ -159587,6 +160122,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '画面 OCR';
   @override
+  String get floating_ball_action_switch_profile => 'プロファイル切り替え';
+  @override
   String get floating_ball_auto_restore => 'フローティングボールの自動復元';
   @override
   String get floating_ball_auto_restore_both => 'アプリ内外';
@@ -159638,6 +160175,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'ボールを画面に表示し続けるため、Fushi に他のアプリの上に重ねて表示する権限を許可してください';
+  @override
+  String get floating_ball_profile_switch_failed => 'プロファイルを切り替えられませんでした';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'プロファイル「${name}」に切り替えました';
   @override
   String get floating_ball_scope_general => 'その他のページ';
   @override
@@ -160251,6 +160793,8 @@ class _StringsJa extends _StringsEn {
       '文音声なしでカードが作成されました。他の行の音声は代用されていません。';
   @override
   String get game_clear_events => 'イベントをクリア';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} 作品';
   @override
   String get game_cover_not_found => 'ゲームフォルダや実行ファイルから使用可能なカバーが見つかりませんでした';
   @override
@@ -161858,15 +162402,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -162336,6 +162876,14 @@ class _StringsJa extends _StringsEn {
   String get invert_swipe_direction => 'スワイプページ送り方向を反転';
   @override
   String get invert_volume_buttons => '音量ボタンの方向を反転';
+  @override
+  String get item_actions_group_content => 'コンテンツ';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '進捗';
+  @override
+  String get item_actions_group_settings => '設定';
   @override
   String get jellyfin_auto_list_hint =>
       'オフ: 動画ページを開いてもメディアサーバーにリクエストを送りません。動画ライブラリで引っ張って更新すると手動で一覧表示できます。非常に大きなサーバーでは、自動列挙がスクレイピングのように見えて不正利用検知に引っかかることがあるため、オフを推奨します。';
@@ -163216,6 +163764,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get lyrics_blur_hint => 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞フォントサイズ';
@@ -163739,6 +164306,12 @@ class _StringsJa extends _StringsEn {
   String get manga_online_source_disabled =>
       'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
   @override
+  String get manga_online_sources_empty =>
+      '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
+  @override
+  String get manga_online_sources_hint =>
+      'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
+  @override
   String get manga_online_stage_cbz => '巻をダウンロード中…';
   @override
   String get manga_online_stage_extract => '展開中…';
@@ -163747,15 +164320,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_page_actions => 'ページ操作';
   @override
-  String get manga_page_copy => '画像をコピー';
-  @override
   String manga_page_number_hint({required Object total}) => 'ページ番号（1-${total}）';
   @override
-  String get manga_page_save => '画像を保存';
-  @override
   String get manga_page_set_cover => 'カバーに設定';
-  @override
-  String get manga_page_share => '画像を共有';
   @override
   String get manga_panel_detect_failed => 'コマの検出に失敗しました';
   @override
@@ -163959,15 +164526,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_saturation => '彩度';
   @override
-  String get manga_reader_save_book => '作品ごと';
-  @override
-  String get manga_reader_save_chapter => '作品と章ごと';
-  @override
-  String get manga_reader_save_directory => '画像の保存先フォルダー';
-  @override
   String get manga_reader_save_failed => 'リーダー設定を保存できませんでした';
-  @override
-  String get manga_reader_save_flat => '1つのフォルダー';
   @override
   String get manga_reader_scale => '画像の拡大縮小';
   @override
@@ -164325,6 +164884,9 @@ class _StringsJa extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'フォルダー';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未視聴 ${n} 話';
   @override
   String get media_server_items_empty => '項目がありません';
   @override
@@ -165847,6 +166409,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => '拡張機能を見る';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -165854,6 +166418,8 @@ class _StringsJa extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => '拡張機能リポジトリ';
   @override
   String get options_collapse => '検索時に折りたたむ';
   @override
@@ -166578,10 +167144,27 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_horizontal => '横書き';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       '画像のコピーに失敗しました：${error}';
   @override
   String get reader_image_file_unavailable => '画像ファイルが利用できません。';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '画像の共有に失敗しました：${error}';
@@ -167393,6 +167976,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get share_theme => 'テーマを共有';
   @override
+  String get shelf_card_meta_alignment_failed => '同期に失敗';
+  @override
+  String get shelf_card_meta_alignment_partial => '一部のみ同期';
+  @override
+  String get shelf_card_meta_download_failed => 'ダウンロード失敗';
+  @override
+  String get shelf_card_meta_not_downloaded => '未ダウンロード';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '全 ${n} 巻 · ${index} 巻目を読書中';
+  @override
   String get shelf_collection_series_label => 'シリーズ';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} 冊';
@@ -167415,7 +168011,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '前の文';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => 'クリックした文へ音声をシーク';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '十字キー 下';
   @override
@@ -167805,6 +168418,9 @@ class _StringsJa extends _StringsEn {
   String get show_floating_lyric => 'フローティング字幕';
   @override
   String get show_media_notification => 'メディア通知を表示';
+  @override
+  String get show_media_notification_hint =>
+      'オフにしても、再生中はタイトルと再生/一時停止ボタンだけの最小限の通知が残り、バックグラウンド再生がシステムに止められないようにします。';
   @override
   String get show_options => 'オプション表示';
   @override
@@ -181865,6 +182481,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '화면 OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -181916,6 +182534,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '볼을 화면에 유지하려면 Fushi가 다른 앱 위에 표시되도록 허용하세요';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => '기타 페이지';
   @override
@@ -182531,6 +183154,8 @@ class _StringsKo extends _StringsEn {
       '문장 오디오 없이 카드가 생성되었습니다. 다른 대사의 오디오로 대체되지 않았습니다.';
   @override
   String get game_clear_events => '이벤트 지우기';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found => '게임 폴더나 실행 파일에서 사용 가능한 표지를 찾을 수 없습니다';
   @override
@@ -184135,15 +184760,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -184614,6 +185235,14 @@ class _StringsKo extends _StringsEn {
   String get invert_swipe_direction => '스와이프 페이지 넘김 방향 반전';
   @override
   String get invert_volume_buttons => '볼륨 버튼 반전';
+  @override
+  String get item_actions_group_content => '콘텐츠';
+  @override
+  String get item_actions_group_organize => '정리';
+  @override
+  String get item_actions_group_progress => '진행';
+  @override
+  String get item_actions_group_settings => '설정';
   @override
   String get jellyfin_auto_list_hint =>
       '끄면: 비디오 페이지에 들어가도 미디어 서버로 요청을 보내지 않아요. 비디오 라이브러리에서 당겨서 새로고침하면 수동으로 나열할 수 있어요. 아주 큰 서버에서는 자동 열거가 스크래핑처럼 보여 남용 감지에 걸릴 수 있으니 끄는 것을 권장해요.';
@@ -185494,6 +186123,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get lyrics_blur_hint => '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '가사 글꼴 크기';
@@ -186023,6 +186671,12 @@ class _StringsKo extends _StringsEn {
   String get manga_online_source_disabled =>
       '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => '권 다운로드 중…';
   @override
   String get manga_online_stage_extract => '압축 해제 중…';
@@ -186031,16 +186685,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_page_actions => '페이지 동작';
   @override
-  String get manga_page_copy => '이미지 복사';
-  @override
   String manga_page_number_hint({required Object total}) =>
       '페이지 번호 (1-${total})';
   @override
-  String get manga_page_save => '이미지 저장';
-  @override
   String get manga_page_set_cover => '표지로 설정';
-  @override
-  String get manga_page_share => '이미지 공유';
   @override
   String get manga_panel_detect_failed => '컷 감지 실패';
   @override
@@ -186245,15 +186893,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_saturation => '채도';
   @override
-  String get manga_reader_save_book => '제목별';
-  @override
-  String get manga_reader_save_chapter => '제목 및 챕터별';
-  @override
-  String get manga_reader_save_directory => '저장된 이미지 폴더';
-  @override
   String get manga_reader_save_failed => '리더 설정을 저장할 수 없습니다';
-  @override
-  String get manga_reader_save_flat => '폴더 하나';
   @override
   String get manga_reader_scale => '이미지 크기 조정';
   @override
@@ -186612,6 +187252,9 @@ class _StringsKo extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => '폴더';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => '항목 없음';
   @override
@@ -188139,6 +188782,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -188146,6 +188791,8 @@ class _StringsKo extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => '검색 시 접기';
   @override
@@ -188874,10 +189521,27 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_horizontal => '가로';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       '이미지 복사 실패: ${error}';
   @override
   String get reader_image_file_unavailable => '이미지 파일을 사용할 수 없습니다.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '이미지 공유 실패: ${error}';
@@ -189689,6 +190353,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get share_theme => '테마 공유';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -189711,7 +190388,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '이전 문장';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '클릭한 문장으로 오디오 이동';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '방향키 아래';
   @override
@@ -190102,6 +190796,9 @@ class _StringsKo extends _StringsEn {
   String get show_floating_lyric => '플로팅 자막';
   @override
   String get show_media_notification => '미디어 알림 표시';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => '옵션 표시';
   @override
@@ -204456,6 +205153,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Scherm-OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -204509,6 +205208,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Sta Fushi toe om over andere apps te tekenen om de knop op het scherm te houden';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Andere pagina\'s';
   @override
@@ -205150,6 +205854,8 @@ class _StringsNl extends _StringsEn {
       'De kaart is aangemaakt zonder zinsaudio; audio van een andere regel is niet gebruikt.';
   @override
   String get game_clear_events => 'Gebeurtenissen wissen';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Geen bruikbare omslag gevonden in de spelmap of het uitvoerbestand';
@@ -206852,15 +207558,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -207358,6 +208060,14 @@ class _StringsNl extends _StringsEn {
   String get invert_swipe_direction => 'Veegrichting voor bladeren omdraaien';
   @override
   String get invert_volume_buttons => 'Volumeknoppen omkeren';
+  @override
+  String get item_actions_group_content => 'Inhoud';
+  @override
+  String get item_actions_group_organize => 'Ordenen';
+  @override
+  String get item_actions_group_progress => 'Voortgang';
+  @override
+  String get item_actions_group_settings => 'Instellingen';
   @override
   String get jellyfin_auto_list_hint =>
       'Uit: bij het openen van de videopagina wordt geen verzoek naar de mediaserver gestuurd; trek in de videobibliotheek omlaag om te vernieuwen en items handmatig te tonen. Aanbevolen voor zeer grote servers, waar automatisch opsommen op scraping lijkt en misbruikdetectie kan activeren.';
@@ -208281,6 +208991,25 @@ class _StringsNl extends _StringsEn {
   String get lyrics_blur_hint =>
       'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Lettergrootte songtekst';
@@ -208824,6 +209553,12 @@ class _StringsNl extends _StringsEn {
   String get manga_online_source_disabled =>
       'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Deel downloaden…';
   @override
   String get manga_online_stage_extract => 'Uitpakken…';
@@ -208832,16 +209567,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_page_actions => 'Pagina-acties';
   @override
-  String get manga_page_copy => 'Afbeelding kopiëren';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Paginanummer (1-${total})';
   @override
-  String get manga_page_save => 'Afbeelding opslaan';
-  @override
   String get manga_page_set_cover => 'Instellen als omslag';
-  @override
-  String get manga_page_share => 'Afbeelding delen';
   @override
   String get manga_panel_detect_failed => 'Paneeldetectie mislukt';
   @override
@@ -209051,17 +209780,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Verzadiging';
   @override
-  String get manga_reader_save_book => 'Per titel';
-  @override
-  String get manga_reader_save_chapter => 'Per titel en hoofdstuk';
-  @override
-  String get manga_reader_save_directory =>
-      'Mappen voor opgeslagen afbeeldingen';
-  @override
   String get manga_reader_save_failed =>
       'Lezerinstellingen konden niet worden opgeslagen';
-  @override
-  String get manga_reader_save_flat => 'Eén map';
   @override
   String get manga_reader_scale => 'Afbeeldingsschaling';
   @override
@@ -209437,6 +210157,9 @@ class _StringsNl extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Map';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Geen items';
   @override
@@ -211050,6 +211773,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -211057,6 +211782,8 @@ class _StringsNl extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Inklappen bij opzoeken';
   @override
@@ -211810,11 +212537,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontaal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Afbeelding kopiëren mislukt: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'Afbeeldingsbestand is niet beschikbaar.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Afbeelding delen mislukt: ${error}';
@@ -212663,6 +213407,19 @@ class _StringsNl extends _StringsEn {
   @override
   String get share_theme => 'Thema delen';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -212685,8 +213442,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Vorige zin';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Audio naar aangeklikte zin springen';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad omlaag';
   @override
@@ -213109,6 +213883,9 @@ class _StringsNl extends _StringsEn {
   String get show_floating_lyric => 'Zwevende ondertitel';
   @override
   String get show_media_notification => 'Mediamelding tonen';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Opties tonen';
   @override
@@ -227735,6 +228512,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR da tela';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -227790,6 +228569,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Permita que o Fushi seja exibido sobre outros apps para manter a bola na tela';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Outras páginas';
   @override
@@ -228437,6 +229221,8 @@ class _StringsPtBr extends _StringsEn {
       'O cartão foi criado sem áudio da frase; nenhum áudio de outra linha foi substituído.';
   @override
   String get game_clear_events => 'Limpar eventos';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Nenhuma capa utilizável encontrada na pasta ou executável do jogo';
@@ -230149,15 +230935,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -230655,6 +231437,14 @@ class _StringsPtBr extends _StringsEn {
       'Inverter direção do deslizar para virar páginas';
   @override
   String get invert_volume_buttons => 'Inverter botões de volume';
+  @override
+  String get item_actions_group_content => 'Conteúdo';
+  @override
+  String get item_actions_group_organize => 'Organizar';
+  @override
+  String get item_actions_group_progress => 'Progresso';
+  @override
+  String get item_actions_group_settings => 'Configurações';
   @override
   String get jellyfin_auto_list_hint =>
       'Desativado: entrar na página de vídeo não envia nenhuma requisição ao servidor de mídia; puxe para atualizar na videoteca para listar manualmente. Recomendado para servidores muito grandes, onde a enumeração automática parece scraping e pode acionar a detecção de abuso.';
@@ -231582,6 +232372,25 @@ class _StringsPtBr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamanho da fonte das letras';
@@ -232125,6 +232934,12 @@ class _StringsPtBr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Baixando volume…';
   @override
   String get manga_online_stage_extract => 'Extraindo…';
@@ -232133,16 +232948,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_page_actions => 'Ações da página';
   @override
-  String get manga_page_copy => 'Copiar imagem';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Número da página (1-${total})';
   @override
-  String get manga_page_save => 'Salvar imagem';
-  @override
   String get manga_page_set_cover => 'Definir como capa';
-  @override
-  String get manga_page_share => 'Compartilhar imagem';
   @override
   String get manga_panel_detect_failed => 'Falha na detecção de quadros';
   @override
@@ -232356,16 +233165,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturação';
   @override
-  String get manga_reader_save_book => 'Por título';
-  @override
-  String get manga_reader_save_chapter => 'Por título e capítulo';
-  @override
-  String get manga_reader_save_directory => 'Pastas de imagens salvas';
-  @override
   String get manga_reader_save_failed =>
       'Não foi possível salvar as configurações do leitor';
-  @override
-  String get manga_reader_save_flat => 'Uma pasta';
   @override
   String get manga_reader_scale => 'Escala da imagem';
   @override
@@ -232743,6 +233544,9 @@ class _StringsPtBr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Pasta';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Nenhum item';
   @override
@@ -234357,6 +235161,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -234364,6 +235170,8 @@ class _StringsPtBr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Recolher na busca';
   @override
@@ -235117,11 +235925,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_horizontal => 'Horizontal';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Falha ao copiar a imagem: ${error}';
   @override
   String get reader_image_file_unavailable =>
       'O arquivo de imagem está indisponível.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Falha ao compartilhar a imagem: ${error}';
@@ -235971,6 +236796,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get share_theme => 'Compartilhar tema';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -235993,8 +236831,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase anterior';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Avançar áudio para a frase clicada';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Direcional Baixo';
   @override
@@ -236416,6 +237271,9 @@ class _StringsPtBr extends _StringsEn {
   String get show_floating_lyric => 'Legenda flutuante sobreposta';
   @override
   String get show_media_notification => 'Mostrar notificação de mídia';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Mostrar Opções';
   @override
@@ -251035,6 +251893,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR экрана';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -251088,6 +251948,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Разрешите Fushi отображаться поверх других приложений, чтобы кнопка оставалась на экране';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Остальные страницы';
   @override
@@ -251732,6 +252597,8 @@ class _StringsRu extends _StringsEn {
       'Карточка создана без аудио предложения; аудио другой строки не подставлено.';
   @override
   String get game_clear_events => 'Очистить события';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Подходящая обложка не найдена в папке игры или исполняемом файле';
@@ -253438,15 +254305,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -253942,6 +254805,14 @@ class _StringsRu extends _StringsEn {
       'Инвертировать направление свайпа для перелистывания';
   @override
   String get invert_volume_buttons => 'Инвертировать кнопки громкости';
+  @override
+  String get item_actions_group_content => 'Содержимое';
+  @override
+  String get item_actions_group_organize => 'Упорядочить';
+  @override
+  String get item_actions_group_progress => 'Прогресс';
+  @override
+  String get item_actions_group_settings => 'Настройки';
   @override
   String get jellyfin_auto_list_hint =>
       'Выключено: при открытии страницы видео запрос на медиасервер не отправляется; потяните для обновления в видеотеке, чтобы вывести список вручную. Рекомендуется для очень больших серверов, где автоматический перебор выглядит как скрапинг и может сработать защита от злоупотреблений.';
@@ -254867,6 +255738,25 @@ class _StringsRu extends _StringsEn {
   String get lyrics_blur_hint =>
       'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Размер шрифта текста песен';
@@ -255408,6 +256298,12 @@ class _StringsRu extends _StringsEn {
   String get manga_online_source_disabled =>
       'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Скачивание тома…';
   @override
   String get manga_online_stage_extract => 'Извлечение…';
@@ -255416,16 +256312,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_page_actions => 'Действия со страницей';
   @override
-  String get manga_page_copy => 'Копировать изображение';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Номер страницы (1-${total})';
   @override
-  String get manga_page_save => 'Сохранить изображение';
-  @override
   String get manga_page_set_cover => 'Сделать обложкой';
-  @override
-  String get manga_page_share => 'Поделиться изображением';
   @override
   String get manga_panel_detect_failed => 'Не удалось определить панели';
   @override
@@ -255639,16 +256529,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Насыщенность';
   @override
-  String get manga_reader_save_book => 'По названию';
-  @override
-  String get manga_reader_save_chapter => 'По названию и главе';
-  @override
-  String get manga_reader_save_directory => 'Папки для сохранённых изображений';
-  @override
   String get manga_reader_save_failed =>
       'Не удалось сохранить настройки читалки';
-  @override
-  String get manga_reader_save_flat => 'Одна папка';
   @override
   String get manga_reader_scale => 'Масштабирование изображения';
   @override
@@ -256024,6 +256906,9 @@ class _StringsRu extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Папка';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Нет элементов';
   @override
@@ -257642,6 +258527,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -257649,6 +258536,8 @@ class _StringsRu extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Свернуть при поиске';
   @override
@@ -258404,10 +259293,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_horizontal => 'Горизонтальное';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Не удалось скопировать изображение: ${error}';
   @override
   String get reader_image_file_unavailable => 'Файл изображения недоступен.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Не удалось поделиться изображением: ${error}';
@@ -259255,6 +260161,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get share_theme => 'Поделиться темой';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -259278,8 +260197,25 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_audiobook_prev_sentence =>
       'Предыдущее предложение';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Перейти к выбранному предложению';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Крестовина вниз';
   @override
@@ -259703,6 +260639,9 @@ class _StringsRu extends _StringsEn {
   String get show_floating_lyric => 'Плавающие субтитры';
   @override
   String get show_media_notification => 'Показать уведомление о медиа';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Показать параметры';
   @override
@@ -274228,6 +275167,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR หน้าจอ';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -274280,6 +275221,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'อนุญาตให้ Fushi แสดงทับแอปอื่นเพื่อคงปุ่มไว้บนหน้าจอ';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'หน้าอื่น';
   @override
@@ -274911,6 +275857,8 @@ class _StringsTh extends _StringsEn {
       'การ์ดถูกสร้างโดยไม่มีเสียงประโยค; ไม่มีการใช้เสียงจากบรรทัดอื่นแทน';
   @override
   String get game_clear_events => 'ล้างเหตุการณ์';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'ไม่พบปกที่ใช้ได้ในโฟลเดอร์เกมหรือไฟล์โปรแกรม';
@@ -276580,15 +277528,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -277078,6 +278022,14 @@ class _StringsTh extends _StringsEn {
   String get invert_swipe_direction => 'กลับทิศทางการปัดเปลี่ยนหน้า';
   @override
   String get invert_volume_buttons => 'กลับปุ่มเสียง';
+  @override
+  String get item_actions_group_content => 'เนื้อหา';
+  @override
+  String get item_actions_group_organize => 'จัดระเบียบ';
+  @override
+  String get item_actions_group_progress => 'ความคืบหน้า';
+  @override
+  String get item_actions_group_settings => 'การตั้งค่า';
   @override
   String get jellyfin_auto_list_hint =>
       'ปิด: การเข้าหน้าวิดีโอจะไม่ส่งคำขอไปยังมีเดียเซิร์ฟเวอร์ ให้ดึงเพื่อรีเฟรชในคลังวิดีโอเพื่อแสดงรายการเอง แนะนำสำหรับเซิร์ฟเวอร์ขนาดใหญ่มาก เพราะการไล่รายการอัตโนมัติดูเหมือนการขูดข้อมูลและอาจไปกระตุ้นระบบตรวจจับการใช้งานผิดปกติ';
@@ -277987,6 +278939,25 @@ class _StringsTh extends _StringsEn {
   String get lyrics_blur_hint =>
       'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'ขนาดตัวอักษรเนื้อเพลง';
@@ -278523,6 +279494,12 @@ class _StringsTh extends _StringsEn {
   String get manga_online_source_disabled =>
       'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'กำลังดาวน์โหลดเล่ม…';
   @override
   String get manga_online_stage_extract => 'กำลังแตกไฟล์…';
@@ -278531,16 +279508,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_page_actions => 'การกระทำของหน้า';
   @override
-  String get manga_page_copy => 'คัดลอกภาพ';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'หมายเลขหน้า (1-${total})';
   @override
-  String get manga_page_save => 'บันทึกภาพ';
-  @override
   String get manga_page_set_cover => 'ตั้งเป็นภาพปก';
-  @override
-  String get manga_page_share => 'แชร์ภาพ';
   @override
   String get manga_panel_detect_failed => 'ตรวจจับช่องไม่สำเร็จ';
   @override
@@ -278748,15 +279719,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_saturation => 'ความอิ่มตัวของสี';
   @override
-  String get manga_reader_save_book => 'ตามชื่อเรื่อง';
-  @override
-  String get manga_reader_save_chapter => 'ตามชื่อเรื่องและตอน';
-  @override
-  String get manga_reader_save_directory => 'โฟลเดอร์ของภาพที่บันทึก';
-  @override
   String get manga_reader_save_failed => 'บันทึกการตั้งค่าตัวอ่านไม่ได้';
-  @override
-  String get manga_reader_save_flat => 'โฟลเดอร์เดียว';
   @override
   String get manga_reader_scale => 'การปรับขนาดภาพ';
   @override
@@ -279125,6 +280088,9 @@ class _StringsTh extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'โฟลเดอร์';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'ไม่มีรายการ';
   @override
@@ -280714,6 +281680,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -280721,6 +281689,8 @@ class _StringsTh extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'ยุบในการค้นหา';
   @override
@@ -281466,10 +282436,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_horizontal => 'แนวนอน';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'คัดลอกรูปภาพไม่สำเร็จ: ${error}';
   @override
   String get reader_image_file_unavailable => 'ไฟล์รูปภาพใช้งานไม่ได้';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'แชร์รูปภาพไม่สำเร็จ: ${error}';
@@ -282306,6 +283293,19 @@ class _StringsTh extends _StringsEn {
   @override
   String get share_theme => 'แชร์ธีม';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -282328,8 +283328,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'ประโยคก่อนหน้า';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'เลื่อนเสียงไปยังประโยคที่คลิก';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'ปุ่มทิศทาง ลง';
   @override
@@ -282740,6 +283757,9 @@ class _StringsTh extends _StringsEn {
   String get show_floating_lyric => 'ซับไตเติลลอย';
   @override
   String get show_media_notification => 'แสดงการแจ้งเตือนสื่อ';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'แสดงตัวเลือก';
   @override
@@ -297238,6 +298258,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'Ekran OCR';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -297291,6 +298313,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Topu ekranda tutmak için Fushi\'nin diğer uygulamaların üzerinde görüntülenmesine izin verin';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Diğer sayfalar';
   @override
@@ -297932,6 +298959,8 @@ class _StringsTr extends _StringsEn {
       'Kart cümle sesi olmadan oluşturuldu; başka bir satırın sesi kullanılmadı.';
   @override
   String get game_clear_events => 'Olayları temizle';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Oyun klasöründe veya çalıştırılabilir dosyada kullanılabilir kapak bulunamadı';
@@ -299631,15 +300660,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -300134,6 +301159,14 @@ class _StringsTr extends _StringsEn {
   String get invert_swipe_direction => 'Kaydırma yönünü tersine çevir';
   @override
   String get invert_volume_buttons => 'Ses düğmelerini ters çevir';
+  @override
+  String get item_actions_group_content => 'İçerik';
+  @override
+  String get item_actions_group_organize => 'Düzenle';
+  @override
+  String get item_actions_group_progress => 'İlerleme';
+  @override
+  String get item_actions_group_settings => 'Ayarlar';
   @override
   String get jellyfin_auto_list_hint =>
       'Kapalı: video sayfasına girmek medya sunucusuna hiçbir istek göndermez; öğeleri elle listelemek için video kitaplığında çekerek yenileyin. Otomatik sayımın kazıma gibi görünüp kötüye kullanım tespitini tetikleyebildiği çok büyük sunucular için önerilir.';
@@ -301050,6 +302083,25 @@ class _StringsTr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Şarkı Sözü Yazı Boyutu';
@@ -301590,6 +302642,12 @@ class _StringsTr extends _StringsEn {
   String get manga_online_source_disabled =>
       'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Cilt indiriliyor…';
   @override
   String get manga_online_stage_extract => 'Çıkarılıyor…';
@@ -301598,16 +302656,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_page_actions => 'Sayfa eylemleri';
   @override
-  String get manga_page_copy => 'Görseli kopyala';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Sayfa numarası (1-${total})';
   @override
-  String get manga_page_save => 'Görseli kaydet';
-  @override
   String get manga_page_set_cover => 'Kapak olarak ayarla';
-  @override
-  String get manga_page_share => 'Görseli paylaş';
   @override
   String get manga_panel_detect_failed => 'Panel algılama başarısız oldu';
   @override
@@ -301818,15 +302870,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Doygunluk';
   @override
-  String get manga_reader_save_book => 'Başlığa göre';
-  @override
-  String get manga_reader_save_chapter => 'Başlığa ve bölüme göre';
-  @override
-  String get manga_reader_save_directory => 'Kaydedilen görsel klasörleri';
-  @override
   String get manga_reader_save_failed => 'Okuyucu ayarları kaydedilemedi';
-  @override
-  String get manga_reader_save_flat => 'Tek klasör';
   @override
   String get manga_reader_scale => 'Görsel ölçekleme';
   @override
@@ -302199,6 +303243,9 @@ class _StringsTr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Klasör';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Öğe yok';
   @override
@@ -303803,6 +304850,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -303810,6 +304859,8 @@ class _StringsTr extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Daralt';
   @override
@@ -304559,10 +305610,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_horizontal => 'Yatay';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Görsel kopyalanamadı: ${error}';
   @override
   String get reader_image_file_unavailable => 'Görsel dosyası kullanılamıyor.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Görsel paylaşılamadı: ${error}';
@@ -305404,6 +306472,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get share_theme => 'Temayı paylaş';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -305426,8 +306507,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Önceki Cümle';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Sesi tıklanan cümleye atla';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Yön Tuşu Aşağı';
   @override
@@ -305843,6 +306941,9 @@ class _StringsTr extends _StringsEn {
   String get show_floating_lyric => 'Kayan altyazı katmanı';
   @override
   String get show_media_notification => 'Medya bildirimini göster';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Seçenekleri göster';
   @override
@@ -320376,6 +321477,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => 'OCR màn hình';
   @override
+  String get floating_ball_action_switch_profile => 'Switch profile';
+  @override
   String get floating_ball_auto_restore => 'Auto-restore floating ball';
   @override
   String get floating_ball_auto_restore_both => 'In and out of app';
@@ -320429,6 +321532,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       'Hãy cho phép Fushi hiển thị trên các ứng dụng khác để giữ bóng trên màn hình';
+  @override
+  String get floating_ball_profile_switch_failed => 'Couldn\'t switch profile';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      'Switched to profile "${name}"';
   @override
   String get floating_ball_scope_general => 'Các trang khác';
   @override
@@ -321070,6 +322178,8 @@ class _StringsVi extends _StringsEn {
       'Thẻ được tạo mà không có âm thanh câu; không có âm thanh dòng khác được thay thế.';
   @override
   String get game_clear_events => 'Xóa sự kiện';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} games';
   @override
   String get game_cover_not_found =>
       'Không tìm thấy ảnh bìa trong thư mục hoặc tệp thực thi trò chơi';
@@ -322759,15 +323869,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -323258,6 +324364,14 @@ class _StringsVi extends _StringsEn {
   String get invert_swipe_direction => 'Đảo ngược hướng vuốt lật trang';
   @override
   String get invert_volume_buttons => 'Đảo ngược nút âm lượng';
+  @override
+  String get item_actions_group_content => 'Nội dung';
+  @override
+  String get item_actions_group_organize => 'Sắp xếp';
+  @override
+  String get item_actions_group_progress => 'Tiến độ';
+  @override
+  String get item_actions_group_settings => 'Cài đặt';
   @override
   String get jellyfin_auto_list_hint =>
       'Tắt: vào trang video sẽ không gửi yêu cầu nào tới máy chủ phương tiện; kéo để làm mới trong thư viện video để liệt kê thủ công. Nên tắt với máy chủ rất lớn, vì việc liệt kê tự động trông giống thu thập dữ liệu và có thể kích hoạt cơ chế phát hiện lạm dụng.';
@@ -324173,6 +325287,25 @@ class _StringsVi extends _StringsEn {
   String get lyrics_blur_hint =>
       'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Cỡ chữ lời bài hát';
@@ -324712,6 +325845,12 @@ class _StringsVi extends _StringsEn {
   String get manga_online_source_disabled =>
       'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
   @override
+  String get manga_online_sources_empty =>
+      'No extension sources yet. Install an extension to add more manga sources.';
+  @override
+  String get manga_online_sources_hint =>
+      'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
+  @override
   String get manga_online_stage_cbz => 'Đang tải xuống tập…';
   @override
   String get manga_online_stage_extract => 'Đang giải nén…';
@@ -324720,16 +325859,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_page_actions => 'Thao tác trang';
   @override
-  String get manga_page_copy => 'Sao chép ảnh';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Số trang (1-${total})';
   @override
-  String get manga_page_save => 'Lưu ảnh';
-  @override
   String get manga_page_set_cover => 'Đặt làm ảnh bìa';
-  @override
-  String get manga_page_share => 'Chia sẻ ảnh';
   @override
   String get manga_panel_detect_failed => 'Phát hiện khung truyện thất bại';
   @override
@@ -324938,15 +326071,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Độ bão hòa';
   @override
-  String get manga_reader_save_book => 'Theo tiêu đề';
-  @override
-  String get manga_reader_save_chapter => 'Theo tiêu đề và chương';
-  @override
-  String get manga_reader_save_directory => 'Thư mục lưu ảnh';
-  @override
   String get manga_reader_save_failed => 'Không thể lưu cài đặt trình đọc';
-  @override
-  String get manga_reader_save_flat => 'Một thư mục';
   @override
   String get manga_reader_scale => 'Tỷ lệ ảnh';
   @override
@@ -325317,6 +326442,9 @@ class _StringsVi extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Thư mục';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Không có mục nào';
   @override
@@ -326909,6 +328037,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => 'Browse extensions';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -326916,6 +328046,8 @@ class _StringsVi extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => 'Extension repositories';
   @override
   String get options_collapse => 'Thu gọn khi tra cứu';
   @override
@@ -327663,10 +328795,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_horizontal => 'Ngang';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) =>
       'Sao chép hình ảnh thất bại: ${error}';
   @override
   String get reader_image_file_unavailable => 'Tệp hình ảnh không khả dụng.';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       'Chia sẻ hình ảnh thất bại: ${error}';
@@ -328505,6 +329654,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get share_theme => 'Chia sẻ giao diện';
   @override
+  String get shelf_card_meta_alignment_failed => 'Alignment failed';
+  @override
+  String get shelf_card_meta_alignment_partial => 'Partially aligned';
+  @override
+  String get shelf_card_meta_download_failed => 'Download failed';
+  @override
+  String get shelf_card_meta_not_downloaded => 'Not downloaded';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} vols · reading vol. ${index}';
+  @override
   String get shelf_collection_series_label => 'Series';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
@@ -328527,8 +329689,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Câu trước';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Tua âm thanh tới câu đã nhấp';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Xuống';
   @override
@@ -328942,6 +330121,9 @@ class _StringsVi extends _StringsEn {
   String get show_floating_lyric => 'Phụ đề nổi';
   @override
   String get show_media_notification => 'Hiện thông báo media';
+  @override
+  String get show_media_notification_hint =>
+      'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
   @override
   String get show_options => 'Hiện tùy chọn';
   @override
@@ -342911,6 +344093,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '截屏识字';
   @override
+  String get floating_ball_action_switch_profile => '切换配置';
+  @override
   String get floating_ball_auto_restore => '自动恢复悬浮球';
   @override
   String get floating_ball_auto_restore_both => '应用内外';
@@ -342962,6 +344146,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '需要授予「显示在其他应用上层」权限，悬浮球才能系统常驻';
+  @override
+  String get floating_ball_profile_switch_failed => '切换配置失败';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      '已切换到配置「${name}」';
   @override
   String get floating_ball_scope_general => '其它页面';
   @override
@@ -343534,6 +344723,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_card_sentence_audio_missing => '卡片已创建，但没有句子音频；未借用其他台词的音频。';
   @override
   String get game_clear_events => '清空事件';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} 作';
   @override
   String get game_cover_not_found => '游戏目录和程序图标里都没找到可用封面';
   @override
@@ -345066,15 +346257,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => '圆柱滚筒';
   @override
-  String get home_nav_bar_style_fan => '纸牌扇';
-  @override
   String get home_nav_bar_style_flat => '平铺';
   @override
   String get home_nav_bar_style_mode_strip => '相机模式条';
   @override
   String get home_nav_bar_style_pager => '分页滑动';
-  @override
-  String get home_nav_bar_style_shelf => '书脊';
   @override
   String get home_nav_more => '更多';
   @override
@@ -345514,6 +346701,14 @@ class _StringsZhCn extends _StringsEn {
   String get invert_swipe_direction => '反转滑动翻页方向';
   @override
   String get invert_volume_buttons => '反转音量键方向';
+  @override
+  String get item_actions_group_content => '内容';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '进度';
+  @override
+  String get item_actions_group_settings => '设置';
   @override
   String get jellyfin_auto_list_hint =>
       '关闭后：进入视频页不向媒体服务器发任何请求，需在视频库下拉刷新手动列出。超大服务器建议关闭——自动枚举看起来像刮削，可能触发服务器的滥用检测。';
@@ -346359,6 +347554,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lyrics_blur_hint => '听力沉浸：模糊当前句，悬停或点击显形';
   @override
+  String get lyrics_control_item_study_timer => '统计计时';
+  @override
+  String get lyrics_control_layout => '按钮布局';
+  @override
+  String get lyrics_control_layout_hint =>
+      '把按钮拖到顶部、播放卡工具条或 ⋯ 菜单，或移出歌词页，改动立即生效。移出的按钮仍可用快捷键触发。';
+  @override
+  String get lyrics_control_zone_hidden_hint => '不在歌词页显示';
+  @override
+  String get lyrics_control_zone_toolbar => '播放卡工具条';
+  @override
+  String get lyrics_control_zone_toolbar_hint => '播放控件旁边，⋯ 始终在最后';
+  @override
+  String get lyrics_control_zone_top => '顶部';
+  @override
+  String get lyrics_control_zone_top_hint => '手机在顶栏，宽屏在右上角';
+  @override
   String get lyrics_exit_to_library => '关闭并返回书架';
   @override
   String get lyrics_font_size => '歌词字号';
@@ -346858,6 +348070,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
+  String get manga_online_sources_empty => '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+  @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
+  @override
   String get manga_online_stage_cbz => '下载卷包…';
   @override
   String get manga_online_stage_extract => '解包中…';
@@ -346866,15 +348083,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_page_actions => '页面操作';
   @override
-  String get manga_page_copy => '复制图片';
-  @override
   String manga_page_number_hint({required Object total}) => '页码（1-${total}）';
   @override
-  String get manga_page_save => '保存图片';
-  @override
   String get manga_page_set_cover => '设为封面';
-  @override
-  String get manga_page_share => '分享图片';
   @override
   String get manga_panel_detect_failed => '分镜检测失败';
   @override
@@ -347074,15 +348285,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_saturation => '饱和度';
   @override
-  String get manga_reader_save_book => '按作品';
-  @override
-  String get manga_reader_save_chapter => '按作品及章节';
-  @override
-  String get manga_reader_save_directory => '图片保存目录';
-  @override
   String get manga_reader_save_failed => '无法保存阅读设置';
-  @override
-  String get manga_reader_save_flat => '统一目录';
   @override
   String get manga_reader_scale => '图片缩放';
   @override
@@ -347430,6 +348633,9 @@ class _StringsZhCn extends _StringsEn {
   String get media_server_browse_by_title => '按作品浏览';
   @override
   String get media_server_item_folder => '文件夹';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未看 ${n} 集';
   @override
   String get media_server_items_empty => '没有条目';
   @override
@@ -348867,6 +350073,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get online_sources_all_header => '全部来源';
   @override
+  String get online_sources_browse_extensions => '浏览扩展';
+  @override
   String get online_sources_filter_all => '全部';
   @override
   String get online_sources_filter_disabled => '已停用';
@@ -348874,6 +350082,8 @@ class _StringsZhCn extends _StringsEn {
   String get online_sources_filter_enabled => '已启用';
   @override
   String get online_sources_pinned_header => '已置顶';
+  @override
+  String get online_sources_stores_manage => '扩展仓库';
   @override
   String get options_collapse => '查词时折叠';
   @override
@@ -349564,9 +350774,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_horizontal => '横排';
   @override
+  String get reader_image_actions_title => '图片';
+  @override
   String reader_image_copy_failed({required Object error}) => '复制图片失败：${error}';
   @override
   String get reader_image_file_unavailable => '图片文件不可用。';
+  @override
+  String get reader_image_save => '保存图片';
+  @override
+  String get reader_image_save_denied => '没有相册权限，请在系统设置里允许后再保存图片。';
+  @override
+  String reader_image_save_done_file({required Object path}) => '已保存到 ${path}';
+  @override
+  String get reader_image_save_done_gallery => '已保存到相册';
+  @override
+  String reader_image_save_failed({required Object error}) => '保存图片失败：${error}';
+  @override
+  String get reader_image_share => '分享图片';
   @override
   String reader_image_share_failed({required Object error}) =>
       '分享图片失败：${error}';
@@ -350346,6 +351570,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get share_theme => '分享主题';
   @override
+  String get shelf_card_meta_alignment_failed => '对齐失败';
+  @override
+  String get shelf_card_meta_alignment_partial => '部分对齐';
+  @override
+  String get shelf_card_meta_download_failed => '下载失败';
+  @override
+  String get shelf_card_meta_not_downloaded => '未下载';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} 卷 · 读到第 ${index} 卷';
+  @override
   String get shelf_collection_series_label => '系列';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} 册';
@@ -350368,7 +351605,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '上一句';
   @override
+  String get shortcut_action_audiobook_replay_sentence => '重播当前句';
+  @override
+  String get shortcut_action_audiobook_seek_backward => '快退 10 秒';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '跳转音频到点击的句子';
+  @override
+  String get shortcut_action_audiobook_seek_forward => '快进 10 秒';
+  @override
+  String get shortcut_action_audiobook_speed_down => '减慢倍速';
+  @override
+  String get shortcut_action_audiobook_speed_up => '加快倍速';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask => '切换歌词模糊';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode => '切换歌词模式';
   @override
   String get shortcut_action_dpad_down => '方向键 下';
   @override
@@ -350743,6 +351994,9 @@ class _StringsZhCn extends _StringsEn {
   String get show_floating_lyric => '悬浮字幕';
   @override
   String get show_media_notification => '显示媒体通知';
+  @override
+  String get show_media_notification_hint =>
+      '关闭后，播放时仍保留一条只有书名和播放/暂停键的最简通知，防止后台播放被系统停掉。';
   @override
   String get show_options => '显示选项';
   @override
@@ -364152,6 +365406,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_action_screen_ocr => '截屏識字';
   @override
+  String get floating_ball_action_switch_profile => '切換設定檔';
+  @override
   String get floating_ball_auto_restore => '自動恢復懸浮球';
   @override
   String get floating_ball_auto_restore_both => '應用內外';
@@ -364203,6 +365459,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_overlay_permission_needed =>
       '需要授予「顯示在其他應用上層」權限，懸浮球才能系統常駐';
+  @override
+  String get floating_ball_profile_switch_failed => '切換設定檔失敗';
+  @override
+  String floating_ball_profile_switched({required Object name}) =>
+      '已切換到設定檔「${name}」';
   @override
   String get floating_ball_scope_general => '其它頁面';
   @override
@@ -364786,6 +366047,8 @@ class _StringsZhHk extends _StringsEn {
   String get game_card_sentence_audio_missing => '卡片已創建，但沒有句子音頻；未借用其他台詞的音頻。';
   @override
   String get game_clear_events => '清空事件';
+  @override
+  String game_collection_work_count({required Object n}) => '${n} 作';
   @override
   String get game_cover_not_found => '遊戲目錄和程式圖標裡都沒找到可用封面';
   @override
@@ -366326,15 +367589,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_nav_bar_style_drum => 'Drum';
   @override
-  String get home_nav_bar_style_fan => 'Card fan';
-  @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
   String get home_nav_bar_style_mode_strip => 'Mode strip';
   @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_shelf => 'Book spines';
   @override
   String get home_nav_more => 'More';
   @override
@@ -366791,6 +368050,14 @@ class _StringsZhHk extends _StringsEn {
   String get invert_swipe_direction => '反轉滑動翻頁方向';
   @override
   String get invert_volume_buttons => '反轉音量鍵方向';
+  @override
+  String get item_actions_group_content => '內容';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '進度';
+  @override
+  String get item_actions_group_settings => '設定';
   @override
   String get jellyfin_auto_list_hint =>
       '關閉後：進入影片頁不向媒體伺服器發任何請求，需在影片庫下拉重新整理手動列出。超大伺服器建議關閉——自動列舉看起來像刮削，可能觸發伺服器的濫用偵測。';
@@ -367641,6 +368908,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lyrics_blur_hint => '聽力沉浸：模糊當前句，懸停或點擊顯形';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞字體大小';
@@ -368146,6 +369432,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_online_source_disabled => '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
   @override
+  String get manga_online_sources_empty => '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
+  @override
+  String get manga_online_sources_hint =>
+      '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
+  @override
   String get manga_online_stage_cbz => '下載卷包…';
   @override
   String get manga_online_stage_extract => '解包中…';
@@ -368154,15 +369445,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_page_actions => '頁面操作';
   @override
-  String get manga_page_copy => '複製圖片';
-  @override
   String manga_page_number_hint({required Object total}) => '頁碼（1-${total}）';
   @override
-  String get manga_page_save => '儲存圖片';
-  @override
   String get manga_page_set_cover => '設為封面';
-  @override
-  String get manga_page_share => '分享圖片';
   @override
   String get manga_panel_detect_failed => '分鏡檢測失敗';
   @override
@@ -368366,15 +369651,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_saturation => '飽和度';
   @override
-  String get manga_reader_save_book => '按作品';
-  @override
-  String get manga_reader_save_chapter => '按作品及章節';
-  @override
-  String get manga_reader_save_directory => '圖片儲存目錄';
-  @override
   String get manga_reader_save_failed => '無法儲存閱讀設定';
-  @override
-  String get manga_reader_save_flat => '統一目錄';
   @override
   String get manga_reader_scale => '圖片縮放';
   @override
@@ -368728,6 +370005,9 @@ class _StringsZhHk extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => '資料夾';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未看 ${n} 集';
   @override
   String get media_server_items_empty => '沒有條目';
   @override
@@ -370186,6 +371466,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get online_sources_all_header => 'All sources';
   @override
+  String get online_sources_browse_extensions => '瀏覽擴展';
+  @override
   String get online_sources_filter_all => 'All';
   @override
   String get online_sources_filter_disabled => 'Disabled';
@@ -370193,6 +371475,8 @@ class _StringsZhHk extends _StringsEn {
   String get online_sources_filter_enabled => 'Enabled';
   @override
   String get online_sources_pinned_header => 'Pinned';
+  @override
+  String get online_sources_stores_manage => '擴展倉庫';
   @override
   String get options_collapse => '查詞時摺疊';
   @override
@@ -370903,9 +372187,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_horizontal => '橫排';
   @override
+  String get reader_image_actions_title => 'Image';
+  @override
   String reader_image_copy_failed({required Object error}) => '複製圖片失敗：${error}';
   @override
   String get reader_image_file_unavailable => '圖片檔案不可用。';
+  @override
+  String get reader_image_save => 'Save image';
+  @override
+  String get reader_image_save_denied =>
+      'Photo library access was denied. Allow it in system settings to save images.';
+  @override
+  String reader_image_save_done_file({required Object path}) =>
+      'Saved to ${path}';
+  @override
+  String get reader_image_save_done_gallery => 'Saved to Photos';
+  @override
+  String reader_image_save_failed({required Object error}) =>
+      'Failed to save image: ${error}';
+  @override
+  String get reader_image_share => 'Share image';
   @override
   String reader_image_share_failed({required Object error}) =>
       '分享圖片失敗：${error}';
@@ -371695,6 +372996,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get share_theme => '分享主題';
   @override
+  String get shelf_card_meta_alignment_failed => '對齊失敗';
+  @override
+  String get shelf_card_meta_alignment_partial => '部分對齊';
+  @override
+  String get shelf_card_meta_download_failed => '下載失敗';
+  @override
+  String get shelf_card_meta_not_downloaded => '未下載';
+  @override
+  String shelf_card_meta_series_reading({
+    required Object n,
+    required Object index,
+  }) => '${n} 卷 · 讀到第 ${index} 卷';
+  @override
   String get shelf_collection_series_label => '系列';
   @override
   String shelf_collection_volume_count({required Object n}) => '${n} 冊';
@@ -371717,7 +373031,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '上一句';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '將音訊跳轉到所點選的句子';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '方向鍵 下';
   @override
@@ -372102,6 +373433,9 @@ class _StringsZhHk extends _StringsEn {
   String get show_floating_lyric => '懸浮字幕';
   @override
   String get show_media_notification => '顯示媒體通知';
+  @override
+  String get show_media_notification_hint =>
+      '關閉後，播放時仍保留一則只有書名和播放/暫停鍵的最簡通知，防止背景播放被系統停掉。';
   @override
   String get show_options => '顯示選項';
   @override
@@ -385182,6 +386516,8 @@ extension on _StringsEn {
         return 'App-external lookup';
       case 'floating_ball_action_screen_ocr':
         return 'Screen OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -385228,6 +386564,10 @@ extension on _StringsEn {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Allow Fushi to display over other apps to keep the ball on screen';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Other pages';
       case 'floating_ball_scope_manga':
@@ -385768,6 +387108,8 @@ extension on _StringsEn {
         return 'The card was created without sentence audio; no other line\'s audio was substituted.';
       case 'game_clear_events':
         return 'Clear events';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'No usable cover found in the game folder or executable';
       case 'game_cover_searching':
@@ -387184,16 +388526,12 @@ extension on _StringsEn {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -387603,6 +388941,14 @@ extension on _StringsEn {
         return 'Invert swipe page turn direction';
       case 'invert_volume_buttons':
         return 'Invert volume buttons';
+      case 'item_actions_group_content':
+        return 'Content';
+      case 'item_actions_group_organize':
+        return 'Organize';
+      case 'item_actions_group_progress':
+        return 'Progress';
+      case 'item_actions_group_settings':
+        return 'Settings';
       case 'jellyfin_auto_list_hint':
         return 'Off: entering the video page sends no request to the media server; pull to refresh in the video library to list items manually. Recommended for very large servers, where automatic enumeration looks like scraping and can trip abuse detection.';
       case 'jellyfin_auto_list_title':
@@ -388368,6 +389714,22 @@ extension on _StringsEn {
         return 'Blur lyrics';
       case 'lyrics_blur_hint':
         return 'Blur the current line for listening immersion; hover or tap to reveal';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -388828,6 +390190,10 @@ extension on _StringsEn {
         return 'No volumes in this series.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Downloading volume…';
       case 'manga_online_stage_extract':
@@ -388836,16 +390202,10 @@ extension on _StringsEn {
         return 'Downloading OCR data…';
       case 'manga_page_actions':
         return 'Page actions';
-      case 'manga_page_copy':
-        return 'Copy image';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Page number (1-${total})';
-      case 'manga_page_save':
-        return 'Save image';
       case 'manga_page_set_cover':
         return 'Set as cover';
-      case 'manga_page_share':
-        return 'Share image';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
       case 'manga_panel_index':
@@ -389039,16 +390399,8 @@ extension on _StringsEn {
         return 'Rotate to fit';
       case 'manga_reader_saturation':
         return 'Saturation';
-      case 'manga_reader_save_book':
-        return 'By title';
-      case 'manga_reader_save_chapter':
-        return 'By title and chapter';
-      case 'manga_reader_save_directory':
-        return 'Saved image folders';
       case 'manga_reader_save_failed':
         return 'Could not save reader settings';
-      case 'manga_reader_save_flat':
-        return 'One folder';
       case 'manga_reader_scale':
         return 'Image scaling';
       case 'manga_reader_scope_global':
@@ -389380,6 +390732,8 @@ extension on _StringsEn {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'No items';
       case 'media_server_items_load_failed':
@@ -390707,6 +392061,8 @@ extension on _StringsEn {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -390715,6 +392071,8 @@ extension on _StringsEn {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Collapse in lookup';
       case 'options_delete':
@@ -391374,10 +392732,24 @@ extension on _StringsEn {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Failed to copy image: ${error}';
       case 'reader_image_file_unavailable':
         return 'Image file is unavailable.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Failed to share image: ${error}';
       case 'reader_line_height':
@@ -392126,6 +393498,17 @@ extension on _StringsEn {
         return 'Share';
       case 'share_theme':
         return 'Share theme';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -392148,8 +393531,22 @@ extension on _StringsEn {
         return 'Play / pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Previous sentence';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Seek audio to clicked sentence';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad down';
       case 'shortcut_action_dpad_left':
@@ -392517,6 +393914,8 @@ extension on _StringsEn {
         return 'Floating lyric overlay';
       case 'show_media_notification':
         return 'Show media notification';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Show options';
       case 'show_top_progress_bar':
@@ -404837,6 +406236,8 @@ extension on _StringsAr {
         return 'البحث خارج التطبيق';
       case 'floating_ball_action_screen_ocr':
         return 'OCR للشاشة';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -404883,6 +406284,10 @@ extension on _StringsAr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'اسمح لـ Fushi بالعرض فوق التطبيقات الأخرى لإبقاء الكرة على الشاشة';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'صفحات أخرى';
       case 'floating_ball_scope_manga':
@@ -405423,6 +406828,8 @@ extension on _StringsAr {
         return 'تم إنشاء البطاقة بدون صوت الجملة؛ لم يتم استبدال صوت سطر آخر.';
       case 'game_clear_events':
         return 'مسح الأحداث';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'لم يُعثر على غلاف قابل للاستخدام في مجلد اللعبة أو ملفها التنفيذي';
       case 'game_cover_searching':
@@ -406838,16 +408245,12 @@ extension on _StringsAr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -407254,6 +408657,14 @@ extension on _StringsAr {
         return 'عكس اتجاه التمرير لقلب الصفحات';
       case 'invert_volume_buttons':
         return 'عكس أزرار الصوت';
+      case 'item_actions_group_content':
+        return 'المحتوى';
+      case 'item_actions_group_organize':
+        return 'تنظيم';
+      case 'item_actions_group_progress':
+        return 'التقدم';
+      case 'item_actions_group_settings':
+        return 'الإعدادات';
       case 'jellyfin_auto_list_hint':
         return 'عند الإيقاف: لا يُرسل فتح صفحة الفيديو أي طلب إلى خادم الوسائط؛ اسحب للتحديث في مكتبة الفيديو لسرد العناصر يدويًا. يُنصح به للخوادم الكبيرة جدًا، حيث يبدو السرد التلقائي كأنه كشط وقد يُفعّل كشف إساءة الاستخدام.';
       case 'jellyfin_auto_list_title':
@@ -408018,6 +409429,22 @@ extension on _StringsAr {
         return 'تمويه كلمات الأغاني';
       case 'lyrics_blur_hint':
         return 'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -408478,6 +409905,10 @@ extension on _StringsAr {
         return 'لا توجد مجلدات في هذه السلسلة.';
       case 'manga_online_source_disabled':
         return 'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'جارٍ تحميل المجلد…';
       case 'manga_online_stage_extract':
@@ -408486,16 +409917,10 @@ extension on _StringsAr {
         return 'جارٍ تحميل بيانات OCR…';
       case 'manga_page_actions':
         return 'إجراءات الصفحة';
-      case 'manga_page_copy':
-        return 'نسخ الصورة';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'رقم الصفحة (1-${total})';
-      case 'manga_page_save':
-        return 'حفظ الصورة';
       case 'manga_page_set_cover':
         return 'تعيين كغلاف';
-      case 'manga_page_share':
-        return 'مشاركة الصورة';
       case 'manga_panel_detect_failed':
         return 'فشل اكتشاف الإطارات';
       case 'manga_panel_index':
@@ -408689,16 +410114,8 @@ extension on _StringsAr {
         return 'التدوير للملاءمة';
       case 'manga_reader_saturation':
         return 'التشبع';
-      case 'manga_reader_save_book':
-        return 'حسب العنوان';
-      case 'manga_reader_save_chapter':
-        return 'حسب العنوان والفصل';
-      case 'manga_reader_save_directory':
-        return 'مجلدات الصور المحفوظة';
       case 'manga_reader_save_failed':
         return 'تعذّر حفظ إعدادات القارئ';
-      case 'manga_reader_save_flat':
-        return 'مجلد واحد';
       case 'manga_reader_scale':
         return 'تحجيم الصورة';
       case 'manga_reader_scope_global':
@@ -409030,6 +410447,8 @@ extension on _StringsAr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'مجلد';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'لا توجد عناصر';
       case 'media_server_items_load_failed':
@@ -410358,6 +411777,8 @@ extension on _StringsAr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -410366,6 +411787,8 @@ extension on _StringsAr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'طي عند البحث';
       case 'options_delete':
@@ -411025,10 +412448,24 @@ extension on _StringsAr {
         return 'عمودي';
       case 'reader_horizontal':
         return 'أفقي';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'فشل نسخ الصورة: ${error}';
       case 'reader_image_file_unavailable':
         return 'ملف الصورة غير متاح.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'فشل مشاركة الصورة: ${error}';
       case 'reader_line_height':
@@ -411777,6 +413214,17 @@ extension on _StringsAr {
         return 'مشاركة';
       case 'share_theme':
         return 'مشاركة المظهر';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -411799,8 +413247,22 @@ extension on _StringsAr {
         return 'تشغيل / إيقاف مؤقت';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'الجملة السابقة';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'نقل الصوت إلى الجملة المنقورة';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'أزرار الاتجاهات للأسفل';
       case 'shortcut_action_dpad_left':
@@ -412168,6 +413630,8 @@ extension on _StringsAr {
         return 'ترجمة عائمة';
       case 'show_media_notification':
         return 'عرض إشعار الوسائط';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'عرض الخيارات';
       case 'show_top_progress_bar':
@@ -424518,6 +425982,8 @@ extension on _StringsDe {
         return 'Nachschlagen außerhalb der App';
       case 'floating_ball_action_screen_ocr':
         return 'Bildschirm-OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -424564,6 +426030,10 @@ extension on _StringsDe {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Erlaube Fushi, über anderen Apps angezeigt zu werden, damit die Kugel auf dem Bildschirm bleibt';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Andere Seiten';
       case 'floating_ball_scope_manga':
@@ -425104,6 +426574,8 @@ extension on _StringsDe {
         return 'Die Karte wurde ohne Satzaudio erstellt; Audio einer anderen Zeile wurde nicht ersetzt.';
       case 'game_clear_events':
         return 'Ereignisse löschen';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Kein verwendbares Cover im Spielordner oder in der ausführbaren Datei gefunden';
       case 'game_cover_searching':
@@ -426521,16 +427993,12 @@ extension on _StringsDe {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -426943,6 +428411,14 @@ extension on _StringsDe {
         return 'Wischrichtung zum Blättern umkehren';
       case 'invert_volume_buttons':
         return 'Lautstärketasten invertieren';
+      case 'item_actions_group_content':
+        return 'Inhalt';
+      case 'item_actions_group_organize':
+        return 'Organisieren';
+      case 'item_actions_group_progress':
+        return 'Fortschritt';
+      case 'item_actions_group_settings':
+        return 'Einstellungen';
       case 'jellyfin_auto_list_hint':
         return 'Aus: Beim Öffnen der Videoseite geht keine Anfrage an den Medienserver; ziehe in der Videobibliothek zum Aktualisieren, um manuell aufzulisten. Empfohlen für sehr große Server, wo automatisches Auflisten wie Scraping aussieht und die Missbrauchserkennung auslösen kann.';
       case 'jellyfin_auto_list_title':
@@ -427709,6 +429185,22 @@ extension on _StringsDe {
         return 'Liedtext unscharf';
       case 'lyrics_blur_hint':
         return 'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -428173,6 +429665,10 @@ extension on _StringsDe {
         return 'Diese Serie enthält keine Bände.';
       case 'manga_online_source_disabled':
         return 'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Band wird heruntergeladen…';
       case 'manga_online_stage_extract':
@@ -428181,16 +429677,10 @@ extension on _StringsDe {
         return 'OCR-Daten werden heruntergeladen…';
       case 'manga_page_actions':
         return 'Seitenaktionen';
-      case 'manga_page_copy':
-        return 'Bild kopieren';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Seitenzahl (1-${total})';
-      case 'manga_page_save':
-        return 'Bild speichern';
       case 'manga_page_set_cover':
         return 'Als Cover festlegen';
-      case 'manga_page_share':
-        return 'Bild teilen';
       case 'manga_panel_detect_failed':
         return 'Panel-Erkennung fehlgeschlagen';
       case 'manga_panel_index':
@@ -428385,16 +429875,8 @@ extension on _StringsDe {
         return 'Zum Anpassen drehen';
       case 'manga_reader_saturation':
         return 'Sättigung';
-      case 'manga_reader_save_book':
-        return 'Nach Titel';
-      case 'manga_reader_save_chapter':
-        return 'Nach Titel und Kapitel';
-      case 'manga_reader_save_directory':
-        return 'Ordner für gespeicherte Bilder';
       case 'manga_reader_save_failed':
         return 'Leser-Einstellungen konnten nicht gespeichert werden';
-      case 'manga_reader_save_flat':
-        return 'Ein Ordner';
       case 'manga_reader_scale':
         return 'Bildskalierung';
       case 'manga_reader_scope_global':
@@ -428727,6 +430209,8 @@ extension on _StringsDe {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Ordner';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Keine Einträge';
       case 'media_server_items_load_failed':
@@ -430063,6 +431547,8 @@ extension on _StringsDe {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -430071,6 +431557,8 @@ extension on _StringsDe {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Bei Suche einklappen';
       case 'options_delete':
@@ -430730,11 +432218,25 @@ extension on _StringsDe {
         return 'Vertikal';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Bild konnte nicht kopiert werden: ${error}';
       case 'reader_image_file_unavailable':
         return 'Bilddatei ist nicht verfügbar.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Bild konnte nicht geteilt werden: ${error}';
@@ -431484,6 +432986,17 @@ extension on _StringsDe {
         return 'Teilen';
       case 'share_theme':
         return 'Theme teilen';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -431506,8 +433019,22 @@ extension on _StringsDe {
         return 'Wiedergabe / Pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Vorheriger Satz';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Audio zum angeklickten Satz springen';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad unten';
       case 'shortcut_action_dpad_left':
@@ -431875,6 +433402,8 @@ extension on _StringsDe {
         return 'Schwebende Textzeile';
       case 'show_media_notification':
         return 'Medienbenachrichtigung anzeigen';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Optionen anzeigen';
       case 'show_top_progress_bar':
@@ -444233,6 +445762,8 @@ extension on _StringsEs {
         return 'Consulta fuera de la app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR de pantalla';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -444279,6 +445810,10 @@ extension on _StringsEs {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Permite que Fushi se muestre sobre otras apps para mantener la bola en pantalla';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Otras páginas';
       case 'floating_ball_scope_manga':
@@ -444819,6 +446354,8 @@ extension on _StringsEs {
         return 'La tarjeta fue creada sin audio de oración; no se sustituyó audio de otra línea.';
       case 'game_clear_events':
         return 'Limpiar eventos';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'No se encontró portada utilizable en la carpeta o ejecutable del juego';
       case 'game_cover_searching':
@@ -446236,16 +447773,12 @@ extension on _StringsEs {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -446656,6 +448189,14 @@ extension on _StringsEs {
         return 'Invertir dirección de deslizamiento para pasar páginas';
       case 'invert_volume_buttons':
         return 'Invertir botones de volumen';
+      case 'item_actions_group_content':
+        return 'Contenido';
+      case 'item_actions_group_organize':
+        return 'Organizar';
+      case 'item_actions_group_progress':
+        return 'Progreso';
+      case 'item_actions_group_settings':
+        return 'Ajustes';
       case 'jellyfin_auto_list_hint':
         return 'Desactivado: entrar en la página de vídeo no envía ninguna petición al servidor de medios; desliza para actualizar en la videoteca para listar manualmente. Recomendado en servidores muy grandes, donde la enumeración automática parece scraping y puede activar la detección de abuso.';
       case 'jellyfin_auto_list_title':
@@ -447421,6 +448962,22 @@ extension on _StringsEs {
         return 'Difuminar letras';
       case 'lyrics_blur_hint':
         return 'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -447885,6 +449442,10 @@ extension on _StringsEs {
         return 'Esta serie no tiene volúmenes.';
       case 'manga_online_source_disabled':
         return 'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Descargando volumen…';
       case 'manga_online_stage_extract':
@@ -447893,16 +449454,10 @@ extension on _StringsEs {
         return 'Descargando datos de OCR…';
       case 'manga_page_actions':
         return 'Acciones de página';
-      case 'manga_page_copy':
-        return 'Copiar imagen';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número de página (1-${total})';
-      case 'manga_page_save':
-        return 'Guardar imagen';
       case 'manga_page_set_cover':
         return 'Establecer como portada';
-      case 'manga_page_share':
-        return 'Compartir imagen';
       case 'manga_panel_detect_failed':
         return 'Error en la detección de viñetas';
       case 'manga_panel_index':
@@ -448096,16 +449651,8 @@ extension on _StringsEs {
         return 'Girar para ajustar';
       case 'manga_reader_saturation':
         return 'Saturación';
-      case 'manga_reader_save_book':
-        return 'Por título';
-      case 'manga_reader_save_chapter':
-        return 'Por título y capítulo';
-      case 'manga_reader_save_directory':
-        return 'Carpetas de imágenes guardadas';
       case 'manga_reader_save_failed':
         return 'No se pudieron guardar los ajustes del lector';
-      case 'manga_reader_save_flat':
-        return 'Una sola carpeta';
       case 'manga_reader_scale':
         return 'Escalado de imagen';
       case 'manga_reader_scope_global':
@@ -448438,6 +449985,8 @@ extension on _StringsEs {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Carpeta';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Sin elementos';
       case 'media_server_items_load_failed':
@@ -449772,6 +451321,8 @@ extension on _StringsEs {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -449780,6 +451331,8 @@ extension on _StringsEs {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Contraer en búsqueda';
       case 'options_delete':
@@ -450441,11 +451994,25 @@ extension on _StringsEs {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Error al copiar la imagen: ${error}';
       case 'reader_image_file_unavailable':
         return 'El archivo de imagen no está disponible.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Error al compartir la imagen: ${error}';
@@ -451195,6 +452762,17 @@ extension on _StringsEs {
         return 'Compartir';
       case 'share_theme':
         return 'Compartir tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -451217,8 +452795,22 @@ extension on _StringsEs {
         return 'Reproducir / Pausar';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase anterior';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Saltar el audio a la frase pulsada';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Cruceta Abajo';
       case 'shortcut_action_dpad_left':
@@ -451586,6 +453178,8 @@ extension on _StringsEs {
         return 'Letra flotante superpuesta';
       case 'show_media_notification':
         return 'Mostrar notificación multimedia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostrar opciones';
       case 'show_top_progress_bar':
@@ -463953,6 +465547,8 @@ extension on _StringsFr {
         return 'Recherche hors application';
       case 'floating_ball_action_screen_ocr':
         return 'OCR de l\'écran';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -463999,6 +465595,10 @@ extension on _StringsFr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Autorisez Fushi à s\'afficher par-dessus d\'autres applications pour garder la bulle à l\'écran';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Autres pages';
       case 'floating_ball_scope_manga':
@@ -464539,6 +466139,8 @@ extension on _StringsFr {
         return 'La carte a été créée sans audio de phrase ; aucun audio d\'une autre ligne n\'a été substitué.';
       case 'game_clear_events':
         return 'Effacer les événements';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Aucune couverture utilisable trouvée dans le dossier ou l\'exécutable du jeu';
       case 'game_cover_searching':
@@ -465957,16 +467559,12 @@ extension on _StringsFr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -466378,6 +467976,14 @@ extension on _StringsFr {
         return 'Inverser la direction du balayage pour tourner les pages';
       case 'invert_volume_buttons':
         return 'Inverser les boutons de volume';
+      case 'item_actions_group_content':
+        return 'Contenu';
+      case 'item_actions_group_organize':
+        return 'Organiser';
+      case 'item_actions_group_progress':
+        return 'Progression';
+      case 'item_actions_group_settings':
+        return 'Paramètres';
       case 'jellyfin_auto_list_hint':
         return 'Désactivé : ouvrir la page vidéo n\'envoie aucune requête au serveur média ; tirez pour actualiser dans la vidéothèque afin de lister manuellement. Recommandé pour les très gros serveurs, où l\'énumération automatique ressemble à du scraping et peut déclencher la détection d\'abus.';
       case 'jellyfin_auto_list_title':
@@ -467143,6 +468749,22 @@ extension on _StringsFr {
         return 'Flouter les paroles';
       case 'lyrics_blur_hint':
         return 'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -467605,6 +469227,10 @@ extension on _StringsFr {
         return 'Aucun volume dans cette série.';
       case 'manga_online_source_disabled':
         return 'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Téléchargement du tome…';
       case 'manga_online_stage_extract':
@@ -467613,16 +469239,10 @@ extension on _StringsFr {
         return 'Téléchargement des données OCR…';
       case 'manga_page_actions':
         return 'Actions sur la page';
-      case 'manga_page_copy':
-        return 'Copier l\'image';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numéro de page (1-${total})';
-      case 'manga_page_save':
-        return 'Enregistrer l\'image';
       case 'manga_page_set_cover':
         return 'Définir comme couverture';
-      case 'manga_page_share':
-        return 'Partager l\'image';
       case 'manga_panel_detect_failed':
         return 'Échec de la détection des cases';
       case 'manga_panel_index':
@@ -467816,16 +469436,8 @@ extension on _StringsFr {
         return 'Pivoter pour ajuster';
       case 'manga_reader_saturation':
         return 'Saturation';
-      case 'manga_reader_save_book':
-        return 'Par titre';
-      case 'manga_reader_save_chapter':
-        return 'Par titre et chapitre';
-      case 'manga_reader_save_directory':
-        return 'Dossiers des images enregistrées';
       case 'manga_reader_save_failed':
         return 'Impossible d\'enregistrer les réglages du lecteur';
-      case 'manga_reader_save_flat':
-        return 'Un seul dossier';
       case 'manga_reader_scale':
         return 'Mise à l\'échelle des images';
       case 'manga_reader_scope_global':
@@ -468159,6 +469771,8 @@ extension on _StringsFr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Dossier';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Aucun élément';
       case 'media_server_items_load_failed':
@@ -469495,6 +471109,8 @@ extension on _StringsFr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -469503,6 +471119,8 @@ extension on _StringsFr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Réduire lors de la recherche';
       case 'options_delete':
@@ -470163,11 +471781,25 @@ extension on _StringsFr {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Échec de la copie de l\'image : ${error}';
       case 'reader_image_file_unavailable':
         return 'Le fichier image est indisponible.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Échec du partage de l\'image : ${error}';
@@ -470917,6 +472549,17 @@ extension on _StringsFr {
         return 'Partager';
       case 'share_theme':
         return 'Partager le thème';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -470939,8 +472582,22 @@ extension on _StringsFr {
         return 'Lecture / Pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Phrase précédente';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Aller à la phrase cliquée dans l\'audio';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Croix directionnelle Bas';
       case 'shortcut_action_dpad_left':
@@ -471308,6 +472965,8 @@ extension on _StringsFr {
         return 'Sous-titre flottant';
       case 'show_media_notification':
         return 'Notification multimédia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Afficher les options';
       case 'show_top_progress_bar':
@@ -483654,6 +485313,8 @@ extension on _StringsId {
         return 'Pencarian di luar aplikasi';
       case 'floating_ball_action_screen_ocr':
         return 'OCR layar';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -483700,6 +485361,10 @@ extension on _StringsId {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Izinkan Fushi tampil di atas aplikasi lain agar bola tetap di layar';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Halaman lain';
       case 'floating_ball_scope_manga':
@@ -484240,6 +485905,8 @@ extension on _StringsId {
         return 'Kartu dibuat tanpa audio kalimat; tidak ada audio baris lain yang disubstitusi.';
       case 'game_clear_events':
         return 'Bersihkan peristiwa';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Tidak ditemukan sampul yang bisa digunakan di folder game atau eksekutabel';
       case 'game_cover_searching':
@@ -485656,16 +487323,12 @@ extension on _StringsId {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -486075,6 +487738,14 @@ extension on _StringsId {
         return 'Balik arah geser untuk membalik halaman';
       case 'invert_volume_buttons':
         return 'Balik tombol volume';
+      case 'item_actions_group_content':
+        return 'Konten';
+      case 'item_actions_group_organize':
+        return 'Atur';
+      case 'item_actions_group_progress':
+        return 'Progres';
+      case 'item_actions_group_settings':
+        return 'Pengaturan';
       case 'jellyfin_auto_list_hint':
         return 'Mati: masuk ke halaman video tidak mengirim permintaan apa pun ke server media; tarik untuk menyegarkan di pustaka video agar item didaftar manual. Disarankan untuk server yang sangat besar, karena pendaftaran otomatis terlihat seperti scraping dan bisa memicu deteksi penyalahgunaan.';
       case 'jellyfin_auto_list_title':
@@ -486840,6 +488511,22 @@ extension on _StringsId {
         return 'Buramkan lirik';
       case 'lyrics_blur_hint':
         return 'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -487301,6 +488988,10 @@ extension on _StringsId {
         return 'Seri ini tidak memiliki volume.';
       case 'manga_online_source_disabled':
         return 'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Mengunduh volume…';
       case 'manga_online_stage_extract':
@@ -487309,16 +489000,10 @@ extension on _StringsId {
         return 'Mengunduh data OCR…';
       case 'manga_page_actions':
         return 'Aksi halaman';
-      case 'manga_page_copy':
-        return 'Salin gambar';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Nomor halaman (1-${total})';
-      case 'manga_page_save':
-        return 'Simpan gambar';
       case 'manga_page_set_cover':
         return 'Atur sebagai sampul';
-      case 'manga_page_share':
-        return 'Bagikan gambar';
       case 'manga_panel_detect_failed':
         return 'Deteksi panel gagal';
       case 'manga_panel_index':
@@ -487512,16 +489197,8 @@ extension on _StringsId {
         return 'Putar agar pas';
       case 'manga_reader_saturation':
         return 'Saturasi';
-      case 'manga_reader_save_book':
-        return 'Menurut judul';
-      case 'manga_reader_save_chapter':
-        return 'Menurut judul dan bab';
-      case 'manga_reader_save_directory':
-        return 'Folder gambar tersimpan';
       case 'manga_reader_save_failed':
         return 'Tidak dapat menyimpan pengaturan pembaca';
-      case 'manga_reader_save_flat':
-        return 'Satu folder';
       case 'manga_reader_scale':
         return 'Penskalaan gambar';
       case 'manga_reader_scope_global':
@@ -487853,6 +489530,8 @@ extension on _StringsId {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Tidak ada item';
       case 'media_server_items_load_failed':
@@ -489180,6 +490859,8 @@ extension on _StringsId {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -489188,6 +490869,8 @@ extension on _StringsId {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Ciutkan saat pencarian';
       case 'options_delete':
@@ -489847,10 +491530,24 @@ extension on _StringsId {
         return 'Vertikal';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Gagal menyalin gambar: ${error}';
       case 'reader_image_file_unavailable':
         return 'File gambar tidak tersedia.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Gagal membagikan gambar: ${error}';
       case 'reader_line_height':
@@ -490599,6 +492296,17 @@ extension on _StringsId {
         return 'Bagikan';
       case 'share_theme':
         return 'Bagikan Tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -490621,8 +492329,22 @@ extension on _StringsId {
         return 'Putar / Jeda';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Kalimat Sebelumnya';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Lompat audio ke kalimat yang diklik';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Bawah';
       case 'shortcut_action_dpad_left':
@@ -490990,6 +492712,8 @@ extension on _StringsId {
         return 'Overlay subtitle mengambang';
       case 'show_media_notification':
         return 'Tampilkan notifikasi media';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Tampilkan Opsi';
       case 'show_top_progress_bar':
@@ -503333,6 +505057,8 @@ extension on _StringsIt {
         return 'Ricerca fuori dall\'app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR dello schermo';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -503379,6 +505105,10 @@ extension on _StringsIt {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Consenti a Fushi di mostrarsi sopra altre app per mantenere il pulsante sullo schermo';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Altre pagine';
       case 'floating_ball_scope_manga':
@@ -503919,6 +505649,8 @@ extension on _StringsIt {
         return 'La carta è stata creata senza audio della frase; l\'audio di nessun\'altra riga è stato sostituito.';
       case 'game_clear_events':
         return 'Cancella eventi';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Nessuna copertina utilizzabile trovata nella cartella o nell\'eseguibile del gioco';
       case 'game_cover_searching':
@@ -505336,16 +507068,12 @@ extension on _StringsIt {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -505756,6 +507484,14 @@ extension on _StringsIt {
         return 'Inverti direzione scorrimento per voltare pagina';
       case 'invert_volume_buttons':
         return 'Inverti tasti volume';
+      case 'item_actions_group_content':
+        return 'Contenuto';
+      case 'item_actions_group_organize':
+        return 'Organizza';
+      case 'item_actions_group_progress':
+        return 'Avanzamento';
+      case 'item_actions_group_settings':
+        return 'Impostazioni';
       case 'jellyfin_auto_list_hint':
         return 'Disattivato: aprire la pagina video non invia alcuna richiesta al server multimediale; tira per aggiornare nella videoteca per elencare manualmente. Consigliato per server molto grandi, dove l\'enumerazione automatica sembra scraping e può far scattare il rilevamento abusi.';
       case 'jellyfin_auto_list_title':
@@ -506521,6 +508257,22 @@ extension on _StringsIt {
         return 'Sfoca testi';
       case 'lyrics_blur_hint':
         return 'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -506983,6 +508735,10 @@ extension on _StringsIt {
         return 'Nessun volume in questa serie.';
       case 'manga_online_source_disabled':
         return 'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Download volume…';
       case 'manga_online_stage_extract':
@@ -506991,16 +508747,10 @@ extension on _StringsIt {
         return 'Download dati OCR…';
       case 'manga_page_actions':
         return 'Azioni della pagina';
-      case 'manga_page_copy':
-        return 'Copia immagine';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numero pagina (1-${total})';
-      case 'manga_page_save':
-        return 'Salva immagine';
       case 'manga_page_set_cover':
         return 'Imposta come copertina';
-      case 'manga_page_share':
-        return 'Condividi immagine';
       case 'manga_panel_detect_failed':
         return 'Rilevamento delle vignette non riuscito';
       case 'manga_panel_index':
@@ -507194,16 +508944,8 @@ extension on _StringsIt {
         return 'Ruota per adattare';
       case 'manga_reader_saturation':
         return 'Saturazione';
-      case 'manga_reader_save_book':
-        return 'Per titolo';
-      case 'manga_reader_save_chapter':
-        return 'Per titolo e capitolo';
-      case 'manga_reader_save_directory':
-        return 'Cartelle delle immagini salvate';
       case 'manga_reader_save_failed':
         return 'Impossibile salvare le impostazioni del lettore';
-      case 'manga_reader_save_flat':
-        return 'Una cartella';
       case 'manga_reader_scale':
         return 'Scala dell\'immagine';
       case 'manga_reader_scope_global':
@@ -507536,6 +509278,8 @@ extension on _StringsIt {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Cartella';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Nessun elemento';
       case 'media_server_items_load_failed':
@@ -508869,6 +510613,8 @@ extension on _StringsIt {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -508877,6 +510623,8 @@ extension on _StringsIt {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Comprimi nella ricerca';
       case 'options_delete':
@@ -509536,11 +511284,25 @@ extension on _StringsIt {
         return 'Verticale';
       case 'reader_horizontal':
         return 'Orizzontale';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Copia dell\'immagine non riuscita: ${error}';
       case 'reader_image_file_unavailable':
         return 'Il file immagine non è disponibile.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Condivisione dell\'immagine non riuscita: ${error}';
@@ -510290,6 +512052,17 @@ extension on _StringsIt {
         return 'Condividi';
       case 'share_theme':
         return 'Condividi tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -510312,8 +512085,22 @@ extension on _StringsIt {
         return 'Riproduci / Pausa';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase precedente';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Sposta l\'audio alla frase cliccata';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Giù';
       case 'shortcut_action_dpad_left':
@@ -510681,6 +512468,8 @@ extension on _StringsIt {
         return 'Testo flottante sovrapposto';
       case 'show_media_notification':
         return 'Mostra notifica multimediale';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostra opzioni';
       case 'show_top_progress_bar':
@@ -522993,6 +524782,8 @@ extension on _StringsJa {
         return 'アプリ外で辞書検索';
       case 'floating_ball_action_screen_ocr':
         return '画面 OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'プロファイル切り替え';
       case 'floating_ball_auto_restore':
         return 'フローティングボールの自動復元';
       case 'floating_ball_auto_restore_both':
@@ -523039,6 +524830,10 @@ extension on _StringsJa {
         return '画面の文字認識を使うには「システム設定 → プライバシーとセキュリティ → 画面収録」で Fushi を許可してください';
       case 'floating_ball_overlay_permission_needed':
         return 'ボールを画面に表示し続けるため、Fushi に他のアプリの上に重ねて表示する権限を許可してください';
+      case 'floating_ball_profile_switch_failed':
+        return 'プロファイルを切り替えられませんでした';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'プロファイル「${name}」に切り替えました';
       case 'floating_ball_scope_general':
         return 'その他のページ';
       case 'floating_ball_scope_manga':
@@ -523579,6 +525374,8 @@ extension on _StringsJa {
         return '文音声なしでカードが作成されました。他の行の音声は代用されていません。';
       case 'game_clear_events':
         return 'イベントをクリア';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作品';
       case 'game_cover_not_found':
         return 'ゲームフォルダや実行ファイルから使用可能なカバーが見つかりませんでした';
       case 'game_cover_searching':
@@ -524995,16 +526792,12 @@ extension on _StringsJa {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -525405,6 +527198,14 @@ extension on _StringsJa {
         return 'スワイプページ送り方向を反転';
       case 'invert_volume_buttons':
         return '音量ボタンの方向を反転';
+      case 'item_actions_group_content':
+        return 'コンテンツ';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '進捗';
+      case 'item_actions_group_settings':
+        return '設定';
       case 'jellyfin_auto_list_hint':
         return 'オフ: 動画ページを開いてもメディアサーバーにリクエストを送りません。動画ライブラリで引っ張って更新すると手動で一覧表示できます。非常に大きなサーバーでは、自動列挙がスクレイピングのように見えて不正利用検知に引っかかることがあるため、オフを推奨します。';
       case 'jellyfin_auto_list_title':
@@ -526166,6 +527967,22 @@ extension on _StringsJa {
         return '歌詞をぼかす';
       case 'lyrics_blur_hint':
         return 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -526626,6 +528443,10 @@ extension on _StringsJa {
         return 'このシリーズには巻がありません。';
       case 'manga_online_source_disabled':
         return 'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
+      case 'manga_online_sources_empty':
+        return '拡張機能のソースがまだありません。拡張機能をインストールすると漫画ソースを追加できます。';
+      case 'manga_online_sources_hint':
+        return 'サードパーティの Mihon 拡張機能（extensions-lib 1.4 / 1.6）。コンテンツは各拡張機能の配信元サイトから取得し、内蔵の漫画リーダーで読みます。';
       case 'manga_online_stage_cbz':
         return '巻をダウンロード中…';
       case 'manga_online_stage_extract':
@@ -526634,16 +528455,10 @@ extension on _StringsJa {
         return 'OCRデータをダウンロード中…';
       case 'manga_page_actions':
         return 'ページ操作';
-      case 'manga_page_copy':
-        return '画像をコピー';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'ページ番号（1-${total}）';
-      case 'manga_page_save':
-        return '画像を保存';
       case 'manga_page_set_cover':
         return 'カバーに設定';
-      case 'manga_page_share':
-        return '画像を共有';
       case 'manga_panel_detect_failed':
         return 'コマの検出に失敗しました';
       case 'manga_panel_index':
@@ -526836,16 +528651,8 @@ extension on _StringsJa {
         return '回転して画面に合わせる';
       case 'manga_reader_saturation':
         return '彩度';
-      case 'manga_reader_save_book':
-        return '作品ごと';
-      case 'manga_reader_save_chapter':
-        return '作品と章ごと';
-      case 'manga_reader_save_directory':
-        return '画像の保存先フォルダー';
       case 'manga_reader_save_failed':
         return 'リーダー設定を保存できませんでした';
-      case 'manga_reader_save_flat':
-        return '1つのフォルダー';
       case 'manga_reader_scale':
         return '画像の拡大縮小';
       case 'manga_reader_scope_global':
@@ -527177,6 +528984,8 @@ extension on _StringsJa {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'フォルダー';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未視聴 ${n} 話';
       case 'media_server_items_empty':
         return '項目がありません';
       case 'media_server_items_load_failed':
@@ -528498,6 +530307,8 @@ extension on _StringsJa {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return '拡張機能を見る';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -528506,6 +530317,8 @@ extension on _StringsJa {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return '拡張機能リポジトリ';
       case 'options_collapse':
         return '検索時に折りたたむ';
       case 'options_delete':
@@ -529164,10 +530977,24 @@ extension on _StringsJa {
         return '縦書き';
       case 'reader_horizontal':
         return '横書き';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '画像のコピーに失敗しました：${error}';
       case 'reader_image_file_unavailable':
         return '画像ファイルが利用できません。';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '画像の共有に失敗しました：${error}';
       case 'reader_line_height':
@@ -529915,6 +531742,17 @@ extension on _StringsJa {
         return '共有';
       case 'share_theme':
         return 'テーマを共有';
+      case 'shelf_card_meta_alignment_failed':
+        return '同期に失敗';
+      case 'shelf_card_meta_alignment_partial':
+        return '一部のみ同期';
+      case 'shelf_card_meta_download_failed':
+        return 'ダウンロード失敗';
+      case 'shelf_card_meta_not_downloaded':
+        return '未ダウンロード';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '全 ${n} 巻 · ${index} 巻目を読書中';
       case 'shelf_collection_series_label':
         return 'シリーズ';
       case 'shelf_collection_volume_count':
@@ -529937,8 +531775,22 @@ extension on _StringsJa {
         return '再生 / 一時停止';
       case 'shortcut_action_audiobook_prev_sentence':
         return '前の文';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'クリックした文へ音声をシーク';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '十字キー 下';
       case 'shortcut_action_dpad_left':
@@ -530306,6 +532158,8 @@ extension on _StringsJa {
         return 'フローティング字幕';
       case 'show_media_notification':
         return 'メディア通知を表示';
+      case 'show_media_notification_hint':
+        return 'オフにしても、再生中はタイトルと再生/一時停止ボタンだけの最小限の通知が残り、バックグラウンド再生がシステムに止められないようにします。';
       case 'show_options':
         return 'オプション表示';
       case 'show_top_progress_bar':
@@ -542567,6 +544421,8 @@ extension on _StringsKo {
         return '앱 외부 검색';
       case 'floating_ball_action_screen_ocr':
         return '화면 OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -542613,6 +544469,10 @@ extension on _StringsKo {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return '볼을 화면에 유지하려면 Fushi가 다른 앱 위에 표시되도록 허용하세요';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return '기타 페이지';
       case 'floating_ball_scope_manga':
@@ -543153,6 +545013,8 @@ extension on _StringsKo {
         return '문장 오디오 없이 카드가 생성되었습니다. 다른 대사의 오디오로 대체되지 않았습니다.';
       case 'game_clear_events':
         return '이벤트 지우기';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return '게임 폴더나 실행 파일에서 사용 가능한 표지를 찾을 수 없습니다';
       case 'game_cover_searching':
@@ -544568,16 +546430,12 @@ extension on _StringsKo {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -544979,6 +546837,14 @@ extension on _StringsKo {
         return '스와이프 페이지 넘김 방향 반전';
       case 'invert_volume_buttons':
         return '볼륨 버튼 반전';
+      case 'item_actions_group_content':
+        return '콘텐츠';
+      case 'item_actions_group_organize':
+        return '정리';
+      case 'item_actions_group_progress':
+        return '진행';
+      case 'item_actions_group_settings':
+        return '설정';
       case 'jellyfin_auto_list_hint':
         return '끄면: 비디오 페이지에 들어가도 미디어 서버로 요청을 보내지 않아요. 비디오 라이브러리에서 당겨서 새로고침하면 수동으로 나열할 수 있어요. 아주 큰 서버에서는 자동 열거가 스크래핑처럼 보여 남용 감지에 걸릴 수 있으니 끄는 것을 권장해요.';
       case 'jellyfin_auto_list_title':
@@ -545740,6 +547606,22 @@ extension on _StringsKo {
         return '가사 흐리게';
       case 'lyrics_blur_hint':
         return '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -546200,6 +548082,10 @@ extension on _StringsKo {
         return '이 시리즈에는 권이 없습니다.';
       case 'manga_online_source_disabled':
         return '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return '권 다운로드 중…';
       case 'manga_online_stage_extract':
@@ -546208,16 +548094,10 @@ extension on _StringsKo {
         return 'OCR 데이터 다운로드 중…';
       case 'manga_page_actions':
         return '페이지 동작';
-      case 'manga_page_copy':
-        return '이미지 복사';
       case 'manga_page_number_hint':
         return ({required Object total}) => '페이지 번호 (1-${total})';
-      case 'manga_page_save':
-        return '이미지 저장';
       case 'manga_page_set_cover':
         return '표지로 설정';
-      case 'manga_page_share':
-        return '이미지 공유';
       case 'manga_panel_detect_failed':
         return '컷 감지 실패';
       case 'manga_panel_index':
@@ -546410,16 +548290,8 @@ extension on _StringsKo {
         return '화면에 맞게 회전';
       case 'manga_reader_saturation':
         return '채도';
-      case 'manga_reader_save_book':
-        return '제목별';
-      case 'manga_reader_save_chapter':
-        return '제목 및 챕터별';
-      case 'manga_reader_save_directory':
-        return '저장된 이미지 폴더';
       case 'manga_reader_save_failed':
         return '리더 설정을 저장할 수 없습니다';
-      case 'manga_reader_save_flat':
-        return '폴더 하나';
       case 'manga_reader_scale':
         return '이미지 크기 조정';
       case 'manga_reader_scope_global':
@@ -546750,6 +548622,8 @@ extension on _StringsKo {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return '폴더';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return '항목 없음';
       case 'media_server_items_load_failed':
@@ -548071,6 +549945,8 @@ extension on _StringsKo {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -548079,6 +549955,8 @@ extension on _StringsKo {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return '검색 시 접기';
       case 'options_delete':
@@ -548737,10 +550615,24 @@ extension on _StringsKo {
         return '세로쓰기';
       case 'reader_horizontal':
         return '가로';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '이미지 복사 실패: ${error}';
       case 'reader_image_file_unavailable':
         return '이미지 파일을 사용할 수 없습니다.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '이미지 공유 실패: ${error}';
       case 'reader_line_height':
@@ -549489,6 +551381,17 @@ extension on _StringsKo {
         return '공유';
       case 'share_theme':
         return '테마 공유';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -549511,8 +551414,22 @@ extension on _StringsKo {
         return '재생 / 일시정지';
       case 'shortcut_action_audiobook_prev_sentence':
         return '이전 문장';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return '클릭한 문장으로 오디오 이동';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '방향키 아래';
       case 'shortcut_action_dpad_left':
@@ -549880,6 +551797,8 @@ extension on _StringsKo {
         return '플로팅 자막';
       case 'show_media_notification':
         return '미디어 알림 표시';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return '옵션 표시';
       case 'show_top_progress_bar':
@@ -562192,6 +564111,8 @@ extension on _StringsNl {
         return 'Opzoeken buiten de app';
       case 'floating_ball_action_screen_ocr':
         return 'Scherm-OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -562238,6 +564159,10 @@ extension on _StringsNl {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Sta Fushi toe om over andere apps te tekenen om de knop op het scherm te houden';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Andere pagina\'s';
       case 'floating_ball_scope_manga':
@@ -562778,6 +564703,8 @@ extension on _StringsNl {
         return 'De kaart is aangemaakt zonder zinsaudio; audio van een andere regel is niet gebruikt.';
       case 'game_clear_events':
         return 'Gebeurtenissen wissen';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Geen bruikbare omslag gevonden in de spelmap of het uitvoerbestand';
       case 'game_cover_searching':
@@ -564194,16 +566121,12 @@ extension on _StringsNl {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -564615,6 +566538,14 @@ extension on _StringsNl {
         return 'Veegrichting voor bladeren omdraaien';
       case 'invert_volume_buttons':
         return 'Volumeknoppen omkeren';
+      case 'item_actions_group_content':
+        return 'Inhoud';
+      case 'item_actions_group_organize':
+        return 'Ordenen';
+      case 'item_actions_group_progress':
+        return 'Voortgang';
+      case 'item_actions_group_settings':
+        return 'Instellingen';
       case 'jellyfin_auto_list_hint':
         return 'Uit: bij het openen van de videopagina wordt geen verzoek naar de mediaserver gestuurd; trek in de videobibliotheek omlaag om te vernieuwen en items handmatig te tonen. Aanbevolen voor zeer grote servers, waar automatisch opsommen op scraping lijkt en misbruikdetectie kan activeren.';
       case 'jellyfin_auto_list_title':
@@ -565381,6 +567312,22 @@ extension on _StringsNl {
         return 'Songtekst vervagen';
       case 'lyrics_blur_hint':
         return 'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -565845,6 +567792,10 @@ extension on _StringsNl {
         return 'Deze serie bevat geen delen.';
       case 'manga_online_source_disabled':
         return 'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Deel downloaden…';
       case 'manga_online_stage_extract':
@@ -565853,16 +567804,10 @@ extension on _StringsNl {
         return 'OCR-gegevens downloaden…';
       case 'manga_page_actions':
         return 'Pagina-acties';
-      case 'manga_page_copy':
-        return 'Afbeelding kopiëren';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Paginanummer (1-${total})';
-      case 'manga_page_save':
-        return 'Afbeelding opslaan';
       case 'manga_page_set_cover':
         return 'Instellen als omslag';
-      case 'manga_page_share':
-        return 'Afbeelding delen';
       case 'manga_panel_detect_failed':
         return 'Paneeldetectie mislukt';
       case 'manga_panel_index':
@@ -566056,16 +568001,8 @@ extension on _StringsNl {
         return 'Draaien om passend te maken';
       case 'manga_reader_saturation':
         return 'Verzadiging';
-      case 'manga_reader_save_book':
-        return 'Per titel';
-      case 'manga_reader_save_chapter':
-        return 'Per titel en hoofdstuk';
-      case 'manga_reader_save_directory':
-        return 'Mappen voor opgeslagen afbeeldingen';
       case 'manga_reader_save_failed':
         return 'Lezerinstellingen konden niet worden opgeslagen';
-      case 'manga_reader_save_flat':
-        return 'Eén map';
       case 'manga_reader_scale':
         return 'Afbeeldingsschaling';
       case 'manga_reader_scope_global':
@@ -566399,6 +568336,8 @@ extension on _StringsNl {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Map';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Geen items';
       case 'media_server_items_load_failed':
@@ -567732,6 +569671,8 @@ extension on _StringsNl {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -567740,6 +569681,8 @@ extension on _StringsNl {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Inklappen bij opzoeken';
       case 'options_delete':
@@ -568399,11 +570342,25 @@ extension on _StringsNl {
         return 'Verticaal';
       case 'reader_horizontal':
         return 'Horizontaal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Afbeelding kopiëren mislukt: ${error}';
       case 'reader_image_file_unavailable':
         return 'Afbeeldingsbestand is niet beschikbaar.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Afbeelding delen mislukt: ${error}';
@@ -569153,6 +571110,17 @@ extension on _StringsNl {
         return 'Delen';
       case 'share_theme':
         return 'Thema delen';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -569175,8 +571143,22 @@ extension on _StringsNl {
         return 'Afspelen / pauzeren';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Vorige zin';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Audio naar aangeklikte zin springen';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad omlaag';
       case 'shortcut_action_dpad_left':
@@ -569544,6 +571526,8 @@ extension on _StringsNl {
         return 'Zwevende ondertitel';
       case 'show_media_notification':
         return 'Mediamelding tonen';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Opties tonen';
       case 'show_top_progress_bar':
@@ -581891,6 +583875,8 @@ extension on _StringsPtBr {
         return 'Consulta fora do app';
       case 'floating_ball_action_screen_ocr':
         return 'OCR da tela';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -581937,6 +583923,10 @@ extension on _StringsPtBr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Permita que o Fushi seja exibido sobre outros apps para manter a bola na tela';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Outras páginas';
       case 'floating_ball_scope_manga':
@@ -582477,6 +584467,8 @@ extension on _StringsPtBr {
         return 'O cartão foi criado sem áudio da frase; nenhum áudio de outra linha foi substituído.';
       case 'game_clear_events':
         return 'Limpar eventos';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Nenhuma capa utilizável encontrada na pasta ou executável do jogo';
       case 'game_cover_searching':
@@ -583893,16 +585885,12 @@ extension on _StringsPtBr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -584313,6 +586301,14 @@ extension on _StringsPtBr {
         return 'Inverter direção do deslizar para virar páginas';
       case 'invert_volume_buttons':
         return 'Inverter botões de volume';
+      case 'item_actions_group_content':
+        return 'Conteúdo';
+      case 'item_actions_group_organize':
+        return 'Organizar';
+      case 'item_actions_group_progress':
+        return 'Progresso';
+      case 'item_actions_group_settings':
+        return 'Configurações';
       case 'jellyfin_auto_list_hint':
         return 'Desativado: entrar na página de vídeo não envia nenhuma requisição ao servidor de mídia; puxe para atualizar na videoteca para listar manualmente. Recomendado para servidores muito grandes, onde a enumeração automática parece scraping e pode acionar a detecção de abuso.';
       case 'jellyfin_auto_list_title':
@@ -585078,6 +587074,22 @@ extension on _StringsPtBr {
         return 'Desfocar letras';
       case 'lyrics_blur_hint':
         return 'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -585541,6 +587553,10 @@ extension on _StringsPtBr {
         return 'Esta série não tem volumes.';
       case 'manga_online_source_disabled':
         return 'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Baixando volume…';
       case 'manga_online_stage_extract':
@@ -585549,16 +587565,10 @@ extension on _StringsPtBr {
         return 'Baixando dados de OCR…';
       case 'manga_page_actions':
         return 'Ações da página';
-      case 'manga_page_copy':
-        return 'Copiar imagem';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número da página (1-${total})';
-      case 'manga_page_save':
-        return 'Salvar imagem';
       case 'manga_page_set_cover':
         return 'Definir como capa';
-      case 'manga_page_share':
-        return 'Compartilhar imagem';
       case 'manga_panel_detect_failed':
         return 'Falha na detecção de quadros';
       case 'manga_panel_index':
@@ -585752,16 +587762,8 @@ extension on _StringsPtBr {
         return 'Girar para ajustar';
       case 'manga_reader_saturation':
         return 'Saturação';
-      case 'manga_reader_save_book':
-        return 'Por título';
-      case 'manga_reader_save_chapter':
-        return 'Por título e capítulo';
-      case 'manga_reader_save_directory':
-        return 'Pastas de imagens salvas';
       case 'manga_reader_save_failed':
         return 'Não foi possível salvar as configurações do leitor';
-      case 'manga_reader_save_flat':
-        return 'Uma pasta';
       case 'manga_reader_scale':
         return 'Escala da imagem';
       case 'manga_reader_scope_global':
@@ -586094,6 +588096,8 @@ extension on _StringsPtBr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Pasta';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Nenhum item';
       case 'media_server_items_load_failed':
@@ -587427,6 +589431,8 @@ extension on _StringsPtBr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -587435,6 +589441,8 @@ extension on _StringsPtBr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Recolher na busca';
       case 'options_delete':
@@ -588094,11 +590102,25 @@ extension on _StringsPtBr {
         return 'Vertical';
       case 'reader_horizontal':
         return 'Horizontal';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Falha ao copiar a imagem: ${error}';
       case 'reader_image_file_unavailable':
         return 'O arquivo de imagem está indisponível.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Falha ao compartilhar a imagem: ${error}';
@@ -588848,6 +590870,17 @@ extension on _StringsPtBr {
         return 'Compartilhar';
       case 'share_theme':
         return 'Compartilhar tema';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -588870,8 +590903,22 @@ extension on _StringsPtBr {
         return 'Reproduzir / Pausar';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase anterior';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Avançar áudio para a frase clicada';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Direcional Baixo';
       case 'shortcut_action_dpad_left':
@@ -589239,6 +591286,8 @@ extension on _StringsPtBr {
         return 'Legenda flutuante sobreposta';
       case 'show_media_notification':
         return 'Mostrar notificação de mídia';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Mostrar Opções';
       case 'show_top_progress_bar':
@@ -601590,6 +603639,8 @@ extension on _StringsRu {
         return 'Поиск вне приложения';
       case 'floating_ball_action_screen_ocr':
         return 'OCR экрана';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -601636,6 +603687,10 @@ extension on _StringsRu {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Разрешите Fushi отображаться поверх других приложений, чтобы кнопка оставалась на экране';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Остальные страницы';
       case 'floating_ball_scope_manga':
@@ -602176,6 +604231,8 @@ extension on _StringsRu {
         return 'Карточка создана без аудио предложения; аудио другой строки не подставлено.';
       case 'game_clear_events':
         return 'Очистить события';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Подходящая обложка не найдена в папке игры или исполняемом файле';
       case 'game_cover_searching':
@@ -603592,16 +605649,12 @@ extension on _StringsRu {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -604012,6 +606065,14 @@ extension on _StringsRu {
         return 'Инвертировать направление свайпа для перелистывания';
       case 'invert_volume_buttons':
         return 'Инвертировать кнопки громкости';
+      case 'item_actions_group_content':
+        return 'Содержимое';
+      case 'item_actions_group_organize':
+        return 'Упорядочить';
+      case 'item_actions_group_progress':
+        return 'Прогресс';
+      case 'item_actions_group_settings':
+        return 'Настройки';
       case 'jellyfin_auto_list_hint':
         return 'Выключено: при открытии страницы видео запрос на медиасервер не отправляется; потяните для обновления в видеотеке, чтобы вывести список вручную. Рекомендуется для очень больших серверов, где автоматический перебор выглядит как скрапинг и может сработать защита от злоупотреблений.';
       case 'jellyfin_auto_list_title':
@@ -604777,6 +606838,22 @@ extension on _StringsRu {
         return 'Размытие текста песен';
       case 'lyrics_blur_hint':
         return 'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -605240,6 +607317,10 @@ extension on _StringsRu {
         return 'В этой серии нет томов.';
       case 'manga_online_source_disabled':
         return 'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Скачивание тома…';
       case 'manga_online_stage_extract':
@@ -605248,16 +607329,10 @@ extension on _StringsRu {
         return 'Загрузка данных OCR…';
       case 'manga_page_actions':
         return 'Действия со страницей';
-      case 'manga_page_copy':
-        return 'Копировать изображение';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Номер страницы (1-${total})';
-      case 'manga_page_save':
-        return 'Сохранить изображение';
       case 'manga_page_set_cover':
         return 'Сделать обложкой';
-      case 'manga_page_share':
-        return 'Поделиться изображением';
       case 'manga_panel_detect_failed':
         return 'Не удалось определить панели';
       case 'manga_panel_index':
@@ -605451,16 +607526,8 @@ extension on _StringsRu {
         return 'Поворачивать по размеру экрана';
       case 'manga_reader_saturation':
         return 'Насыщенность';
-      case 'manga_reader_save_book':
-        return 'По названию';
-      case 'manga_reader_save_chapter':
-        return 'По названию и главе';
-      case 'manga_reader_save_directory':
-        return 'Папки для сохранённых изображений';
       case 'manga_reader_save_failed':
         return 'Не удалось сохранить настройки читалки';
-      case 'manga_reader_save_flat':
-        return 'Одна папка';
       case 'manga_reader_scale':
         return 'Масштабирование изображения';
       case 'manga_reader_scope_global':
@@ -605793,6 +607860,8 @@ extension on _StringsRu {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Папка';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Нет элементов';
       case 'media_server_items_load_failed':
@@ -607126,6 +609195,8 @@ extension on _StringsRu {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -607134,6 +609205,8 @@ extension on _StringsRu {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Свернуть при поиске';
       case 'options_delete':
@@ -607793,11 +609866,25 @@ extension on _StringsRu {
         return 'Вертикально';
       case 'reader_horizontal':
         return 'Горизонтальное';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Не удалось скопировать изображение: ${error}';
       case 'reader_image_file_unavailable':
         return 'Файл изображения недоступен.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Не удалось поделиться изображением: ${error}';
@@ -608547,6 +610634,17 @@ extension on _StringsRu {
         return 'Поделиться';
       case 'share_theme':
         return 'Поделиться темой';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -608569,8 +610667,22 @@ extension on _StringsRu {
         return 'Воспроизведение / пауза';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Предыдущее предложение';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Перейти к выбранному предложению';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Крестовина вниз';
       case 'shortcut_action_dpad_left':
@@ -608938,6 +611050,8 @@ extension on _StringsRu {
         return 'Плавающие субтитры';
       case 'show_media_notification':
         return 'Показать уведомление о медиа';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Показать параметры';
       case 'show_top_progress_bar':
@@ -621263,6 +623377,8 @@ extension on _StringsTh {
         return 'ค้นหานอกแอป';
       case 'floating_ball_action_screen_ocr':
         return 'OCR หน้าจอ';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -621309,6 +623425,10 @@ extension on _StringsTh {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'อนุญาตให้ Fushi แสดงทับแอปอื่นเพื่อคงปุ่มไว้บนหน้าจอ';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'หน้าอื่น';
       case 'floating_ball_scope_manga':
@@ -621849,6 +623969,8 @@ extension on _StringsTh {
         return 'การ์ดถูกสร้างโดยไม่มีเสียงประโยค; ไม่มีการใช้เสียงจากบรรทัดอื่นแทน';
       case 'game_clear_events':
         return 'ล้างเหตุการณ์';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'ไม่พบปกที่ใช้ได้ในโฟลเดอร์เกมหรือไฟล์โปรแกรม';
       case 'game_cover_searching':
@@ -623265,16 +625387,12 @@ extension on _StringsTh {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -623683,6 +625801,14 @@ extension on _StringsTh {
         return 'กลับทิศทางการปัดเปลี่ยนหน้า';
       case 'invert_volume_buttons':
         return 'กลับปุ่มเสียง';
+      case 'item_actions_group_content':
+        return 'เนื้อหา';
+      case 'item_actions_group_organize':
+        return 'จัดระเบียบ';
+      case 'item_actions_group_progress':
+        return 'ความคืบหน้า';
+      case 'item_actions_group_settings':
+        return 'การตั้งค่า';
       case 'jellyfin_auto_list_hint':
         return 'ปิด: การเข้าหน้าวิดีโอจะไม่ส่งคำขอไปยังมีเดียเซิร์ฟเวอร์ ให้ดึงเพื่อรีเฟรชในคลังวิดีโอเพื่อแสดงรายการเอง แนะนำสำหรับเซิร์ฟเวอร์ขนาดใหญ่มาก เพราะการไล่รายการอัตโนมัติดูเหมือนการขูดข้อมูลและอาจไปกระตุ้นระบบตรวจจับการใช้งานผิดปกติ';
       case 'jellyfin_auto_list_title':
@@ -624449,6 +626575,22 @@ extension on _StringsTh {
         return 'เบลอเนื้อเพลง';
       case 'lyrics_blur_hint':
         return 'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -624909,6 +627051,10 @@ extension on _StringsTh {
         return 'ซีรีส์นี้ไม่มีเล่ม';
       case 'manga_online_source_disabled':
         return 'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'กำลังดาวน์โหลดเล่ม…';
       case 'manga_online_stage_extract':
@@ -624917,16 +627063,10 @@ extension on _StringsTh {
         return 'กำลังดาวน์โหลดข้อมูล OCR…';
       case 'manga_page_actions':
         return 'การกระทำของหน้า';
-      case 'manga_page_copy':
-        return 'คัดลอกภาพ';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'หมายเลขหน้า (1-${total})';
-      case 'manga_page_save':
-        return 'บันทึกภาพ';
       case 'manga_page_set_cover':
         return 'ตั้งเป็นภาพปก';
-      case 'manga_page_share':
-        return 'แชร์ภาพ';
       case 'manga_panel_detect_failed':
         return 'ตรวจจับช่องไม่สำเร็จ';
       case 'manga_panel_index':
@@ -625120,16 +627260,8 @@ extension on _StringsTh {
         return 'หมุนให้พอดีหน้าจอ';
       case 'manga_reader_saturation':
         return 'ความอิ่มตัวของสี';
-      case 'manga_reader_save_book':
-        return 'ตามชื่อเรื่อง';
-      case 'manga_reader_save_chapter':
-        return 'ตามชื่อเรื่องและตอน';
-      case 'manga_reader_save_directory':
-        return 'โฟลเดอร์ของภาพที่บันทึก';
       case 'manga_reader_save_failed':
         return 'บันทึกการตั้งค่าตัวอ่านไม่ได้';
-      case 'manga_reader_save_flat':
-        return 'โฟลเดอร์เดียว';
       case 'manga_reader_scale':
         return 'การปรับขนาดภาพ';
       case 'manga_reader_scope_global':
@@ -625461,6 +627593,8 @@ extension on _StringsTh {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'โฟลเดอร์';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'ไม่มีรายการ';
       case 'media_server_items_load_failed':
@@ -626787,6 +628921,8 @@ extension on _StringsTh {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -626795,6 +628931,8 @@ extension on _StringsTh {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'ยุบในการค้นหา';
       case 'options_delete':
@@ -627454,10 +629592,24 @@ extension on _StringsTh {
         return 'แนวตั้ง';
       case 'reader_horizontal':
         return 'แนวนอน';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'คัดลอกรูปภาพไม่สำเร็จ: ${error}';
       case 'reader_image_file_unavailable':
         return 'ไฟล์รูปภาพใช้งานไม่ได้';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'แชร์รูปภาพไม่สำเร็จ: ${error}';
       case 'reader_line_height':
@@ -628206,6 +630358,17 @@ extension on _StringsTh {
         return 'แชร์';
       case 'share_theme':
         return 'แชร์ธีม';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -628228,8 +630391,22 @@ extension on _StringsTh {
         return 'เล่น / หยุดชั่วคราว';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'ประโยคก่อนหน้า';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'เลื่อนเสียงไปยังประโยคที่คลิก';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'ปุ่มทิศทาง ลง';
       case 'shortcut_action_dpad_left':
@@ -628597,6 +630774,8 @@ extension on _StringsTh {
         return 'ซับไตเติลลอย';
       case 'show_media_notification':
         return 'แสดงการแจ้งเตือนสื่อ';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'แสดงตัวเลือก';
       case 'show_top_progress_bar':
@@ -640933,6 +643112,8 @@ extension on _StringsTr {
         return 'Uygulama dışı arama';
       case 'floating_ball_action_screen_ocr':
         return 'Ekran OCR';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -640979,6 +643160,10 @@ extension on _StringsTr {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Topu ekranda tutmak için Fushi\'nin diğer uygulamaların üzerinde görüntülenmesine izin verin';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Diğer sayfalar';
       case 'floating_ball_scope_manga':
@@ -641519,6 +643704,8 @@ extension on _StringsTr {
         return 'Kart cümle sesi olmadan oluşturuldu; başka bir satırın sesi kullanılmadı.';
       case 'game_clear_events':
         return 'Olayları temizle';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Oyun klasöründe veya çalıştırılabilir dosyada kullanılabilir kapak bulunamadı';
       case 'game_cover_searching':
@@ -642936,16 +645123,12 @@ extension on _StringsTr {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -643355,6 +645538,14 @@ extension on _StringsTr {
         return 'Kaydırma yönünü tersine çevir';
       case 'invert_volume_buttons':
         return 'Ses düğmelerini ters çevir';
+      case 'item_actions_group_content':
+        return 'İçerik';
+      case 'item_actions_group_organize':
+        return 'Düzenle';
+      case 'item_actions_group_progress':
+        return 'İlerleme';
+      case 'item_actions_group_settings':
+        return 'Ayarlar';
       case 'jellyfin_auto_list_hint':
         return 'Kapalı: video sayfasına girmek medya sunucusuna hiçbir istek göndermez; öğeleri elle listelemek için video kitaplığında çekerek yenileyin. Otomatik sayımın kazıma gibi görünüp kötüye kullanım tespitini tetikleyebildiği çok büyük sunucular için önerilir.';
       case 'jellyfin_auto_list_title':
@@ -644121,6 +646312,22 @@ extension on _StringsTr {
         return 'Sözleri bulanıklaştır';
       case 'lyrics_blur_hint':
         return 'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -644583,6 +646790,10 @@ extension on _StringsTr {
         return 'Bu seride hiç cilt yok.';
       case 'manga_online_source_disabled':
         return 'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Cilt indiriliyor…';
       case 'manga_online_stage_extract':
@@ -644591,16 +646802,10 @@ extension on _StringsTr {
         return 'OCR verileri indiriliyor…';
       case 'manga_page_actions':
         return 'Sayfa eylemleri';
-      case 'manga_page_copy':
-        return 'Görseli kopyala';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Sayfa numarası (1-${total})';
-      case 'manga_page_save':
-        return 'Görseli kaydet';
       case 'manga_page_set_cover':
         return 'Kapak olarak ayarla';
-      case 'manga_page_share':
-        return 'Görseli paylaş';
       case 'manga_panel_detect_failed':
         return 'Panel algılama başarısız oldu';
       case 'manga_panel_index':
@@ -644794,16 +646999,8 @@ extension on _StringsTr {
         return 'Sığdırmak için döndür';
       case 'manga_reader_saturation':
         return 'Doygunluk';
-      case 'manga_reader_save_book':
-        return 'Başlığa göre';
-      case 'manga_reader_save_chapter':
-        return 'Başlığa ve bölüme göre';
-      case 'manga_reader_save_directory':
-        return 'Kaydedilen görsel klasörleri';
       case 'manga_reader_save_failed':
         return 'Okuyucu ayarları kaydedilemedi';
-      case 'manga_reader_save_flat':
-        return 'Tek klasör';
       case 'manga_reader_scale':
         return 'Görsel ölçekleme';
       case 'manga_reader_scope_global':
@@ -645135,6 +647332,8 @@ extension on _StringsTr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Klasör';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Öğe yok';
       case 'media_server_items_load_failed':
@@ -646464,6 +648663,8 @@ extension on _StringsTr {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -646472,6 +648673,8 @@ extension on _StringsTr {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Daralt';
       case 'options_delete':
@@ -647131,10 +649334,24 @@ extension on _StringsTr {
         return 'Dikey';
       case 'reader_horizontal':
         return 'Yatay';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => 'Görsel kopyalanamadı: ${error}';
       case 'reader_image_file_unavailable':
         return 'Görsel dosyası kullanılamıyor.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => 'Görsel paylaşılamadı: ${error}';
       case 'reader_line_height':
@@ -647883,6 +650100,17 @@ extension on _StringsTr {
         return 'Paylaş';
       case 'share_theme':
         return 'Temayı paylaş';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -647905,8 +650133,22 @@ extension on _StringsTr {
         return 'Oynat / Duraklat';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Önceki Cümle';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Sesi tıklanan cümleye atla';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Yön Tuşu Aşağı';
       case 'shortcut_action_dpad_left':
@@ -648274,6 +650516,8 @@ extension on _StringsTr {
         return 'Kayan altyazı katmanı';
       case 'show_media_notification':
         return 'Medya bildirimini göster';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Seçenekleri göster';
       case 'show_top_progress_bar':
@@ -660610,6 +662854,8 @@ extension on _StringsVi {
         return 'Tra từ ngoài ứng dụng';
       case 'floating_ball_action_screen_ocr':
         return 'OCR màn hình';
+      case 'floating_ball_action_switch_profile':
+        return 'Switch profile';
       case 'floating_ball_auto_restore':
         return 'Auto-restore floating ball';
       case 'floating_ball_auto_restore_both':
@@ -660656,6 +662902,10 @@ extension on _StringsVi {
         return 'Allow Fushi under System Settings → Privacy & Security → Screen Recording to use screen OCR';
       case 'floating_ball_overlay_permission_needed':
         return 'Hãy cho phép Fushi hiển thị trên các ứng dụng khác để giữ bóng trên màn hình';
+      case 'floating_ball_profile_switch_failed':
+        return 'Couldn\'t switch profile';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => 'Switched to profile "${name}"';
       case 'floating_ball_scope_general':
         return 'Các trang khác';
       case 'floating_ball_scope_manga':
@@ -661196,6 +663446,8 @@ extension on _StringsVi {
         return 'Thẻ được tạo mà không có âm thanh câu; không có âm thanh dòng khác được thay thế.';
       case 'game_clear_events':
         return 'Xóa sự kiện';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} games';
       case 'game_cover_not_found':
         return 'Không tìm thấy ảnh bìa trong thư mục hoặc tệp thực thi trò chơi';
       case 'game_cover_searching':
@@ -662612,16 +664864,12 @@ extension on _StringsVi {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -663030,6 +665278,14 @@ extension on _StringsVi {
         return 'Đảo ngược hướng vuốt lật trang';
       case 'invert_volume_buttons':
         return 'Đảo ngược nút âm lượng';
+      case 'item_actions_group_content':
+        return 'Nội dung';
+      case 'item_actions_group_organize':
+        return 'Sắp xếp';
+      case 'item_actions_group_progress':
+        return 'Tiến độ';
+      case 'item_actions_group_settings':
+        return 'Cài đặt';
       case 'jellyfin_auto_list_hint':
         return 'Tắt: vào trang video sẽ không gửi yêu cầu nào tới máy chủ phương tiện; kéo để làm mới trong thư viện video để liệt kê thủ công. Nên tắt với máy chủ rất lớn, vì việc liệt kê tự động trông giống thu thập dữ liệu và có thể kích hoạt cơ chế phát hiện lạm dụng.';
       case 'jellyfin_auto_list_title':
@@ -663795,6 +666051,22 @@ extension on _StringsVi {
         return 'Làm mờ lời bài';
       case 'lyrics_blur_hint':
         return 'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -664255,6 +666527,10 @@ extension on _StringsVi {
         return 'Bộ truyện này không có tập nào.';
       case 'manga_online_source_disabled':
         return 'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
+      case 'manga_online_sources_empty':
+        return 'No extension sources yet. Install an extension to add more manga sources.';
+      case 'manga_online_sources_hint':
+        return 'Third-party Mihon extensions (extensions-lib 1.4 / 1.6). Content comes from each extension\'s website and opens in the built-in manga reader.';
       case 'manga_online_stage_cbz':
         return 'Đang tải xuống tập…';
       case 'manga_online_stage_extract':
@@ -664263,16 +666539,10 @@ extension on _StringsVi {
         return 'Đang tải dữ liệu OCR…';
       case 'manga_page_actions':
         return 'Thao tác trang';
-      case 'manga_page_copy':
-        return 'Sao chép ảnh';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Số trang (1-${total})';
-      case 'manga_page_save':
-        return 'Lưu ảnh';
       case 'manga_page_set_cover':
         return 'Đặt làm ảnh bìa';
-      case 'manga_page_share':
-        return 'Chia sẻ ảnh';
       case 'manga_panel_detect_failed':
         return 'Phát hiện khung truyện thất bại';
       case 'manga_panel_index':
@@ -664466,16 +666736,8 @@ extension on _StringsVi {
         return 'Xoay cho vừa màn hình';
       case 'manga_reader_saturation':
         return 'Độ bão hòa';
-      case 'manga_reader_save_book':
-        return 'Theo tiêu đề';
-      case 'manga_reader_save_chapter':
-        return 'Theo tiêu đề và chương';
-      case 'manga_reader_save_directory':
-        return 'Thư mục lưu ảnh';
       case 'manga_reader_save_failed':
         return 'Không thể lưu cài đặt trình đọc';
-      case 'manga_reader_save_flat':
-        return 'Một thư mục';
       case 'manga_reader_scale':
         return 'Tỷ lệ ảnh';
       case 'manga_reader_scope_global':
@@ -664807,6 +667069,8 @@ extension on _StringsVi {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Thư mục';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Không có mục nào';
       case 'media_server_items_load_failed':
@@ -666134,6 +668398,8 @@ extension on _StringsVi {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return 'Browse extensions';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -666142,6 +668408,8 @@ extension on _StringsVi {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return 'Extension repositories';
       case 'options_collapse':
         return 'Thu gọn khi tra cứu';
       case 'options_delete':
@@ -666801,11 +669069,25 @@ extension on _StringsVi {
         return 'Dọc';
       case 'reader_horizontal':
         return 'Ngang';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) =>
             'Sao chép hình ảnh thất bại: ${error}';
       case 'reader_image_file_unavailable':
         return 'Tệp hình ảnh không khả dụng.';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) =>
             'Chia sẻ hình ảnh thất bại: ${error}';
@@ -667555,6 +669837,17 @@ extension on _StringsVi {
         return 'Chia sẻ';
       case 'share_theme':
         return 'Chia sẻ giao diện';
+      case 'shelf_card_meta_alignment_failed':
+        return 'Alignment failed';
+      case 'shelf_card_meta_alignment_partial':
+        return 'Partially aligned';
+      case 'shelf_card_meta_download_failed':
+        return 'Download failed';
+      case 'shelf_card_meta_not_downloaded':
+        return 'Not downloaded';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} vols · reading vol. ${index}';
       case 'shelf_collection_series_label':
         return 'Series';
       case 'shelf_collection_volume_count':
@@ -667577,8 +669870,22 @@ extension on _StringsVi {
         return 'Phát / Tạm dừng';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Câu trước';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Tua âm thanh tới câu đã nhấp';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Xuống';
       case 'shortcut_action_dpad_left':
@@ -667946,6 +670253,8 @@ extension on _StringsVi {
         return 'Phụ đề nổi';
       case 'show_media_notification':
         return 'Hiện thông báo media';
+      case 'show_media_notification_hint':
+        return 'When off, a minimal notification (title and play/pause only) stays during playback so the system doesn\'t stop audio in the background.';
       case 'show_options':
         return 'Hiện tùy chọn';
       case 'show_top_progress_bar':
@@ -680181,6 +682490,8 @@ extension on _StringsZhCn {
         return '应用外查词';
       case 'floating_ball_action_screen_ocr':
         return '截屏识字';
+      case 'floating_ball_action_switch_profile':
+        return '切换配置';
       case 'floating_ball_auto_restore':
         return '自动恢复悬浮球';
       case 'floating_ball_auto_restore_both':
@@ -680227,6 +682538,10 @@ extension on _StringsZhCn {
         return '需要在「系统设置 → 隐私与安全性 → 屏幕录制」里允许 Fushi，才能截屏识字';
       case 'floating_ball_overlay_permission_needed':
         return '需要授予「显示在其他应用上层」权限，悬浮球才能系统常驻';
+      case 'floating_ball_profile_switch_failed':
+        return '切换配置失败';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => '已切换到配置「${name}」';
       case 'floating_ball_scope_general':
         return '其它页面';
       case 'floating_ball_scope_manga':
@@ -680765,6 +683080,8 @@ extension on _StringsZhCn {
         return '卡片已创建，但没有句子音频；未借用其他台词的音频。';
       case 'game_clear_events':
         return '清空事件';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作';
       case 'game_cover_not_found':
         return '游戏目录和程序图标里都没找到可用封面';
       case 'game_cover_searching':
@@ -682180,16 +684497,12 @@ extension on _StringsZhCn {
         return '拇指转盘';
       case 'home_nav_bar_style_drum':
         return '圆柱滚筒';
-      case 'home_nav_bar_style_fan':
-        return '纸牌扇';
       case 'home_nav_bar_style_flat':
         return '平铺';
       case 'home_nav_bar_style_mode_strip':
         return '相机模式条';
       case 'home_nav_bar_style_pager':
         return '分页滑动';
-      case 'home_nav_bar_style_shelf':
-        return '书脊';
       case 'home_nav_more':
         return '更多';
       case 'home_nav_rail_collapse':
@@ -682588,6 +684901,14 @@ extension on _StringsZhCn {
         return '反转滑动翻页方向';
       case 'invert_volume_buttons':
         return '反转音量键方向';
+      case 'item_actions_group_content':
+        return '内容';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '进度';
+      case 'item_actions_group_settings':
+        return '设置';
       case 'jellyfin_auto_list_hint':
         return '关闭后：进入视频页不向媒体服务器发任何请求，需在视频库下拉刷新手动列出。超大服务器建议关闭——自动枚举看起来像刮削，可能触发服务器的滥用检测。';
       case 'jellyfin_auto_list_title':
@@ -683347,6 +685668,22 @@ extension on _StringsZhCn {
         return '模糊歌词';
       case 'lyrics_blur_hint':
         return '听力沉浸：模糊当前句，悬停或点击显形';
+      case 'lyrics_control_item_study_timer':
+        return '统计计时';
+      case 'lyrics_control_layout':
+        return '按钮布局';
+      case 'lyrics_control_layout_hint':
+        return '把按钮拖到顶部、播放卡工具条或 ⋯ 菜单，或移出歌词页，改动立即生效。移出的按钮仍可用快捷键触发。';
+      case 'lyrics_control_zone_hidden_hint':
+        return '不在歌词页显示';
+      case 'lyrics_control_zone_toolbar':
+        return '播放卡工具条';
+      case 'lyrics_control_zone_toolbar_hint':
+        return '播放控件旁边，⋯ 始终在最后';
+      case 'lyrics_control_zone_top':
+        return '顶部';
+      case 'lyrics_control_zone_top_hint':
+        return '手机在顶栏，宽屏在右上角';
       case 'lyrics_exit_to_library':
         return '关闭并返回书架';
       case 'lyrics_font_size':
@@ -683805,6 +686142,10 @@ extension on _StringsZhCn {
         return '这个系列没有可下载的卷。';
       case 'manga_online_source_disabled':
         return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
+      case 'manga_online_sources_empty':
+        return '还没有扩展提供的漫画源。安装扩展即可添加更多来源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 扩展（extensions-lib 1.4 / 1.6）。内容来自各扩展对应的站点，在内置漫画阅读器中阅读。';
       case 'manga_online_stage_cbz':
         return '下载卷包…';
       case 'manga_online_stage_extract':
@@ -683813,16 +686154,10 @@ extension on _StringsZhCn {
         return '下载 OCR 数据…';
       case 'manga_page_actions':
         return '页面操作';
-      case 'manga_page_copy':
-        return '复制图片';
       case 'manga_page_number_hint':
         return ({required Object total}) => '页码（1-${total}）';
-      case 'manga_page_save':
-        return '保存图片';
       case 'manga_page_set_cover':
         return '设为封面';
-      case 'manga_page_share':
-        return '分享图片';
       case 'manga_panel_detect_failed':
         return '分镜检测失败';
       case 'manga_panel_index':
@@ -684015,16 +686350,8 @@ extension on _StringsZhCn {
         return '旋转以适应屏幕';
       case 'manga_reader_saturation':
         return '饱和度';
-      case 'manga_reader_save_book':
-        return '按作品';
-      case 'manga_reader_save_chapter':
-        return '按作品及章节';
-      case 'manga_reader_save_directory':
-        return '图片保存目录';
       case 'manga_reader_save_failed':
         return '无法保存阅读设置';
-      case 'manga_reader_save_flat':
-        return '统一目录';
       case 'manga_reader_scale':
         return '图片缩放';
       case 'manga_reader_scope_global':
@@ -684351,6 +686678,8 @@ extension on _StringsZhCn {
         return '按作品浏览';
       case 'media_server_item_folder':
         return '文件夹';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未看 ${n} 集';
       case 'media_server_items_empty':
         return '没有条目';
       case 'media_server_items_load_failed':
@@ -685664,6 +687993,8 @@ extension on _StringsZhCn {
         return '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
       case 'online_sources_all_header':
         return '全部来源';
+      case 'online_sources_browse_extensions':
+        return '浏览扩展';
       case 'online_sources_filter_all':
         return '全部';
       case 'online_sources_filter_disabled':
@@ -685672,6 +688003,8 @@ extension on _StringsZhCn {
         return '已启用';
       case 'online_sources_pinned_header':
         return '已置顶';
+      case 'online_sources_stores_manage':
+        return '扩展仓库';
       case 'options_collapse':
         return '查词时折叠';
       case 'options_delete':
@@ -686329,10 +688662,24 @@ extension on _StringsZhCn {
         return '竖排';
       case 'reader_horizontal':
         return '横排';
+      case 'reader_image_actions_title':
+        return '图片';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '复制图片失败：${error}';
       case 'reader_image_file_unavailable':
         return '图片文件不可用。';
+      case 'reader_image_save':
+        return '保存图片';
+      case 'reader_image_save_denied':
+        return '没有相册权限，请在系统设置里允许后再保存图片。';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => '已保存到 ${path}';
+      case 'reader_image_save_done_gallery':
+        return '已保存到相册';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => '保存图片失败：${error}';
+      case 'reader_image_share':
+        return '分享图片';
       case 'reader_image_share_failed':
         return ({required Object error}) => '分享图片失败：${error}';
       case 'reader_line_height':
@@ -687079,6 +689426,17 @@ extension on _StringsZhCn {
         return '分享';
       case 'share_theme':
         return '分享主题';
+      case 'shelf_card_meta_alignment_failed':
+        return '对齐失败';
+      case 'shelf_card_meta_alignment_partial':
+        return '部分对齐';
+      case 'shelf_card_meta_download_failed':
+        return '下载失败';
+      case 'shelf_card_meta_not_downloaded':
+        return '未下载';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} 卷 · 读到第 ${index} 卷';
       case 'shelf_collection_series_label':
         return '系列';
       case 'shelf_collection_volume_count':
@@ -687101,8 +689459,22 @@ extension on _StringsZhCn {
         return '播放/暂停';
       case 'shortcut_action_audiobook_prev_sentence':
         return '上一句';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return '重播当前句';
+      case 'shortcut_action_audiobook_seek_backward':
+        return '快退 10 秒';
       case 'shortcut_action_audiobook_seek_clicked':
         return '跳转音频到点击的句子';
+      case 'shortcut_action_audiobook_seek_forward':
+        return '快进 10 秒';
+      case 'shortcut_action_audiobook_speed_down':
+        return '减慢倍速';
+      case 'shortcut_action_audiobook_speed_up':
+        return '加快倍速';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return '切换歌词模糊';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return '切换歌词模式';
       case 'shortcut_action_dpad_down':
         return '方向键 下';
       case 'shortcut_action_dpad_left':
@@ -687469,6 +689841,8 @@ extension on _StringsZhCn {
         return '悬浮字幕';
       case 'show_media_notification':
         return '显示媒体通知';
+      case 'show_media_notification_hint':
+        return '关闭后，播放时仍保留一条只有书名和播放/暂停键的最简通知，防止后台播放被系统停掉。';
       case 'show_options':
         return '显示选项';
       case 'show_top_progress_bar':
@@ -699632,6 +702006,8 @@ extension on _StringsZhHk {
         return '應用外查詞';
       case 'floating_ball_action_screen_ocr':
         return '截屏識字';
+      case 'floating_ball_action_switch_profile':
+        return '切換設定檔';
       case 'floating_ball_auto_restore':
         return '自動恢復懸浮球';
       case 'floating_ball_auto_restore_both':
@@ -699678,6 +702054,10 @@ extension on _StringsZhHk {
         return '需要在「系統設定 → 私隱與安全性 → 螢幕錄影」裏允許 Fushi，才能截圖識字';
       case 'floating_ball_overlay_permission_needed':
         return '需要授予「顯示在其他應用上層」權限，懸浮球才能系統常駐';
+      case 'floating_ball_profile_switch_failed':
+        return '切換設定檔失敗';
+      case 'floating_ball_profile_switched':
+        return ({required Object name}) => '已切換到設定檔「${name}」';
       case 'floating_ball_scope_general':
         return '其它頁面';
       case 'floating_ball_scope_manga':
@@ -700218,6 +702598,8 @@ extension on _StringsZhHk {
         return '卡片已創建，但沒有句子音頻；未借用其他台詞的音頻。';
       case 'game_clear_events':
         return '清空事件';
+      case 'game_collection_work_count':
+        return ({required Object n}) => '${n} 作';
       case 'game_cover_not_found':
         return '遊戲目錄和程式圖標裡都沒找到可用封面';
       case 'game_cover_searching':
@@ -701633,16 +704015,12 @@ extension on _StringsZhHk {
         return 'Thumb dial';
       case 'home_nav_bar_style_drum':
         return 'Drum';
-      case 'home_nav_bar_style_fan':
-        return 'Card fan';
       case 'home_nav_bar_style_flat':
         return 'Flat';
       case 'home_nav_bar_style_mode_strip':
         return 'Mode strip';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_shelf':
-        return 'Book spines';
       case 'home_nav_more':
         return 'More';
       case 'home_nav_rail_collapse':
@@ -702042,6 +704420,14 @@ extension on _StringsZhHk {
         return '反轉滑動翻頁方向';
       case 'invert_volume_buttons':
         return '反轉音量鍵方向';
+      case 'item_actions_group_content':
+        return '內容';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '進度';
+      case 'item_actions_group_settings':
+        return '設定';
       case 'jellyfin_auto_list_hint':
         return '關閉後：進入影片頁不向媒體伺服器發任何請求，需在影片庫下拉重新整理手動列出。超大伺服器建議關閉——自動列舉看起來像刮削，可能觸發伺服器的濫用偵測。';
       case 'jellyfin_auto_list_title':
@@ -702801,6 +705187,22 @@ extension on _StringsZhHk {
         return '模糊歌詞';
       case 'lyrics_blur_hint':
         return '聽力沉浸：模糊當前句，懸停或點擊顯形';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -703260,6 +705662,10 @@ extension on _StringsZhHk {
         return '這個系列沒有可下載的卷。';
       case 'manga_online_source_disabled':
         return '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
+      case 'manga_online_sources_empty':
+        return '還沒有擴展提供的漫畫源。安裝擴展即可添加更多來源。';
+      case 'manga_online_sources_hint':
+        return '第三方 Mihon 擴展（extensions-lib 1.4 / 1.6）。內容來自各擴展對應的網站，在內置漫畫閱讀器中閱讀。';
       case 'manga_online_stage_cbz':
         return '下載卷包…';
       case 'manga_online_stage_extract':
@@ -703268,16 +705674,10 @@ extension on _StringsZhHk {
         return '下載 OCR 數據…';
       case 'manga_page_actions':
         return '頁面操作';
-      case 'manga_page_copy':
-        return '複製圖片';
       case 'manga_page_number_hint':
         return ({required Object total}) => '頁碼（1-${total}）';
-      case 'manga_page_save':
-        return '儲存圖片';
       case 'manga_page_set_cover':
         return '設為封面';
-      case 'manga_page_share':
-        return '分享圖片';
       case 'manga_panel_detect_failed':
         return '分鏡檢測失敗';
       case 'manga_panel_index':
@@ -703470,16 +705870,8 @@ extension on _StringsZhHk {
         return '旋轉以配合螢幕';
       case 'manga_reader_saturation':
         return '飽和度';
-      case 'manga_reader_save_book':
-        return '按作品';
-      case 'manga_reader_save_chapter':
-        return '按作品及章節';
-      case 'manga_reader_save_directory':
-        return '圖片儲存目錄';
       case 'manga_reader_save_failed':
         return '無法儲存閱讀設定';
-      case 'manga_reader_save_flat':
-        return '統一目錄';
       case 'manga_reader_scale':
         return '圖片縮放';
       case 'manga_reader_scope_global':
@@ -703810,6 +706202,8 @@ extension on _StringsZhHk {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return '資料夾';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未看 ${n} 集';
       case 'media_server_items_empty':
         return '沒有條目';
       case 'media_server_items_load_failed':
@@ -705128,6 +707522,8 @@ extension on _StringsZhHk {
         return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       case 'online_sources_all_header':
         return 'All sources';
+      case 'online_sources_browse_extensions':
+        return '瀏覽擴展';
       case 'online_sources_filter_all':
         return 'All';
       case 'online_sources_filter_disabled':
@@ -705136,6 +707532,8 @@ extension on _StringsZhHk {
         return 'Enabled';
       case 'online_sources_pinned_header':
         return 'Pinned';
+      case 'online_sources_stores_manage':
+        return '擴展倉庫';
       case 'options_collapse':
         return '查詞時摺疊';
       case 'options_delete':
@@ -705794,10 +708192,24 @@ extension on _StringsZhHk {
         return '直排';
       case 'reader_horizontal':
         return '橫排';
+      case 'reader_image_actions_title':
+        return 'Image';
       case 'reader_image_copy_failed':
         return ({required Object error}) => '複製圖片失敗：${error}';
       case 'reader_image_file_unavailable':
         return '圖片檔案不可用。';
+      case 'reader_image_save':
+        return 'Save image';
+      case 'reader_image_save_denied':
+        return 'Photo library access was denied. Allow it in system settings to save images.';
+      case 'reader_image_save_done_file':
+        return ({required Object path}) => 'Saved to ${path}';
+      case 'reader_image_save_done_gallery':
+        return 'Saved to Photos';
+      case 'reader_image_save_failed':
+        return ({required Object error}) => 'Failed to save image: ${error}';
+      case 'reader_image_share':
+        return 'Share image';
       case 'reader_image_share_failed':
         return ({required Object error}) => '分享圖片失敗：${error}';
       case 'reader_line_height':
@@ -706545,6 +708957,17 @@ extension on _StringsZhHk {
         return '分享';
       case 'share_theme':
         return '分享主題';
+      case 'shelf_card_meta_alignment_failed':
+        return '對齊失敗';
+      case 'shelf_card_meta_alignment_partial':
+        return '部分對齊';
+      case 'shelf_card_meta_download_failed':
+        return '下載失敗';
+      case 'shelf_card_meta_not_downloaded':
+        return '未下載';
+      case 'shelf_card_meta_series_reading':
+        return ({required Object n, required Object index}) =>
+            '${n} 卷 · 讀到第 ${index} 卷';
       case 'shelf_collection_series_label':
         return '系列';
       case 'shelf_collection_volume_count':
@@ -706567,8 +708990,22 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'shortcut_action_audiobook_prev_sentence':
         return '上一句';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return '將音訊跳轉到所點選的句子';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '方向鍵 下';
       case 'shortcut_action_dpad_left':
@@ -706935,6 +709372,8 @@ extension on _StringsZhHk {
         return '懸浮字幕';
       case 'show_media_notification':
         return '顯示媒體通知';
+      case 'show_media_notification_hint':
+        return '關閉後，播放時仍保留一則只有書名和播放/暫停鍵的最簡通知，防止背景播放被系統停掉。';
       case 'show_options':
         return '顯示選項';
       case 'show_top_progress_bar':
