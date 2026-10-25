@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168810 (9930 per locale)
+/// Strings: 168963 (9939 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10731,8 +10731,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The location\'s settings file can\'t be read right now; it will be retried next time.';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  String get srs_sync_now_started => 'Review sync started';
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  String get srs_sync_progress_media => 'Syncing card media';
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   String get srs_sync_store_unavailable =>
@@ -10834,6 +10845,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_reason_merge_notes => 'Before merging notes';
   String get srs_timeline_reason_note_type => 'Before changing note type';
   String get srs_timeline_reason_restore => 'Before a restore';
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
   String get srs_timeline_restore => 'Restore';
   String srs_timeline_restore_body({required Object time}) =>
       'Notes, cards, decks and settings go back to how they were at ${time}. A restore point is added first, so you can undo this.';
@@ -10852,6 +10865,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_section => 'Timeline';
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   String get srs_timeline_status => 'Sync status';
+  String get srs_timeline_syncing => 'Syncing review data';
   String get srs_timeline_this_device => 'This device';
   String get srs_timeline_title => 'Sync & history';
   String srs_timeline_unpublished({required Object n}) =>
@@ -30677,6 +30691,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -30691,10 +30709,6 @@ class _StringsAr extends _StringsEn {
   String get srs_card_video_play => 'Play clip';
   @override
   String get srs_card_video_replay => 'Replay clip from the start';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -32266,8 +32280,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -32442,6 +32474,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -32472,6 +32507,8 @@ class _StringsAr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -55042,6 +55079,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -55079,10 +55120,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_change_type_mixed =>
       'The selected notes have different note types. Select notes of one type.';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_change_type_no_target =>
       'There is no other note type yet. Create one under Note types first.';
@@ -56631,8 +56668,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -56807,6 +56862,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -56837,6 +56895,8 @@ class _StringsDe extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -79530,6 +79590,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -79590,10 +79654,6 @@ class _StringsEs extends _StringsEn {
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_conflict_current => 'Current';
   @override
@@ -81119,8 +81179,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -81295,6 +81373,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -81325,6 +81406,8 @@ class _StringsEs extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -104105,6 +104188,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -104187,10 +104274,6 @@ class _StringsFr extends _StringsEn {
   String get srs_conflict_replaced => 'Replaced';
   @override
   String get srs_conflict_revert => 'Switch back';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_conflicts_deletions =>
       'Deleted on one device, changed on another';
@@ -105694,8 +105777,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -105870,6 +105971,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -105900,6 +106004,8 @@ class _StringsFr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -128444,6 +128550,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -128549,10 +128659,6 @@ class _StringsId extends _StringsEn {
   String get srs_count_new => 'New';
   @override
   String get srs_count_review => 'Due';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
@@ -130033,8 +130139,26 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -130209,6 +130333,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -130239,6 +130366,8 @@ class _StringsId extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -152825,6 +152954,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -152954,10 +153087,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_delete_with_cards_hint =>
       'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -154414,8 +154543,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -154590,6 +154737,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -154620,6 +154770,8 @@ class _StringsIt extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -176495,6 +176647,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => '画像は未同期です';
+  @override
+  String get srs_card_media_missing_video => '動画は未同期です';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -176647,10 +176803,6 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_move_top_level => 'Top level';
   @override
   String get srs_deck_move_up => 'Move up';
-  String get srs_card_media_missing_image => '画像は未同期です';
-  @override
-  String get srs_card_media_missing_video => '動画は未同期です';
-  @override
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -178084,8 +178236,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -178260,6 +178430,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -178290,6 +178463,8 @@ class _StringsJa extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -199898,6 +200073,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -200073,10 +200252,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_duplicates_hint =>
       'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_duplicates_keep => 'Keep';
   @override
@@ -201487,8 +201662,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -201663,6 +201856,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -201693,6 +201889,8 @@ class _StringsKo extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -224009,6 +224207,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -224207,10 +224409,6 @@ class _StringsNl extends _StringsEn {
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
   String get srs_export_anki_compatible => 'Anki-compatible only';
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
   @override
   String get srs_export_anki_compatible_desc =>
       'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
@@ -225598,8 +225796,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -225774,6 +225990,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -225804,6 +226023,8 @@ class _StringsNl extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -248421,6 +248642,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -248641,10 +248866,6 @@ class _StringsPtBr extends _StringsEn {
       'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
   @override
   String get srs_export_with_scheduling => 'Include learning progress';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_export_with_scheduling_desc =>
       'Review history and due dates. When off, every card is exported as new.';
@@ -250010,8 +250231,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -250186,6 +250425,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -250216,6 +250458,8 @@ class _StringsPtBr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -272810,6 +273054,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -273053,10 +273301,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_field_info_description_override_hint =>
       'Write your own to replace the built-in description';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String srs_field_info_example({required Object value}) => 'Example: ${value}';
   @override
@@ -274399,8 +274643,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -274575,6 +274837,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -274605,6 +274870,8 @@ class _StringsRu extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -296951,6 +297218,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -297217,10 +297488,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_field_info_expression_reading_desc =>
       'The kana reading of the word, e.g. たべる.';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_field_info_expression_reading_name => 'Reading';
   @override
@@ -298540,8 +298807,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -298716,6 +299001,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -298746,6 +299034,8 @@ class _StringsTh extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -321157,6 +321447,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -321447,10 +321741,6 @@ class _StringsTr extends _StringsEn {
   String get srs_field_info_hint_name => 'Hint';
   @override
   String get srs_field_info_is_audio_card_desc =>
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
-  @override
       'Type any character to turn it on: the front only plays audio, testing listening.';
   @override
   String get srs_field_info_is_audio_card_name => 'Switch: audio card';
@@ -322746,8 +323036,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -322922,6 +323230,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -322952,6 +323263,8 @@ class _StringsTr extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -345359,6 +345672,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -345671,10 +345988,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_field_info_main_definition_desc =>
       'The main definition (by default the first entry of the first dictionary).';
-  @override
-  String get srs_card_media_missing_image => 'Picture not synced yet';
-  @override
-  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_field_info_main_definition_name => 'Main definition';
   @override
@@ -346948,8 +347261,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -347124,6 +347455,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -347154,6 +347488,8 @@ class _StringsVi extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -368180,6 +368516,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_label_source => '来源';
   @override
+  String get srs_card_media_missing_image => '图片未同步';
+  @override
+  String get srs_card_media_missing_video => '视频未同步';
+  @override
   String get srs_card_move => '移到牌组';
   @override
   String get srs_card_reset => '重置为新卡';
@@ -368515,10 +368855,6 @@ class _StringsZhCn extends _StringsEn {
       '用到它的卡片模板：${names}';
   @override
   String get srs_field_info_templates_none => '目前没有卡片模板显示这个字段。';
-  @override
-  String get srs_card_media_missing_image => '图片未同步';
-  @override
-  String get srs_card_media_missing_video => '视频未同步';
   @override
   String get srs_field_info_title => '字段';
   @override
@@ -369642,8 +369978,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_now => '立即同步';
   @override
+  String srs_sync_now_busy({required Object progress}) => '正在同步：${progress}';
+  @override
+  String get srs_sync_now_started => '开始同步复习数据…';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+  @override
+  String get srs_sync_progress_downloading => '同步复习数据';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => '同步复习数据 (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => '同步卡片媒体';
+  @override
+  String get srs_sync_progress_preparing => '正在准备同步复习数据';
+  @override
+  String get srs_sync_progress_uploading => '上传复习改动';
   @override
   String get srs_sync_setup_body =>
       '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
@@ -369799,6 +370152,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => '恢复之前';
   @override
+  String srs_timeline_receiving({required Object n}) => '正在接收 ${n} 条改动';
+  @override
   String get srs_timeline_restore => '恢复';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -369827,6 +370182,8 @@ class _StringsZhCn extends _StringsEn {
   String srs_timeline_seen({required Object time}) => '最后同步 ${time}';
   @override
   String get srs_timeline_status => '同步状态';
+  @override
+  String get srs_timeline_syncing => '正在同步复习数据';
   @override
   String get srs_timeline_this_device => '本机';
   @override
@@ -390653,6 +391010,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
+  String get srs_card_media_missing_image => '圖片未同步';
+  @override
+  String get srs_card_media_missing_video => '影片未同步';
+  @override
   String get srs_card_move => 'Move to deck';
   @override
   String get srs_card_reset => 'Reset to new';
@@ -391009,10 +391370,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_field_info_sentence_desc =>
       'The sentence you met the word in; the word itself is bolded.';
-  @override
-  String get srs_card_media_missing_image => '圖片未同步';
-  @override
-  String get srs_card_media_missing_video => '影片未同步';
   @override
   String get srs_field_info_sentence_furigana_desc =>
       'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
@@ -392242,8 +392599,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_now => 'Sync now';
   @override
+  String srs_sync_now_busy({required Object progress}) =>
+      'Already syncing: ${progress}';
+  @override
+  String get srs_sync_now_started => 'Review sync started';
+  @override
   String srs_sync_profile_not_linked({required Object name}) =>
       'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+  @override
+  String get srs_sync_progress_downloading => 'Syncing review data';
+  @override
+  String srs_sync_progress_downloading_count({
+    required Object done,
+    required Object total,
+  }) => 'Syncing review data (${done}/${total})';
+  @override
+  String get srs_sync_progress_media => 'Syncing card media';
+  @override
+  String get srs_sync_progress_preparing => 'Preparing review sync';
+  @override
+  String get srs_sync_progress_uploading => 'Uploading review changes';
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
@@ -392417,6 +392792,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_timeline_reason_restore => 'Before a restore';
   @override
+  String srs_timeline_receiving({required Object n}) =>
+      'Receiving ${n} changes';
+  @override
   String get srs_timeline_restore => 'Restore';
   @override
   String srs_timeline_restore_body({required Object time}) =>
@@ -392447,6 +392825,8 @@ class _StringsZhHk extends _StringsEn {
   String srs_timeline_seen({required Object time}) => 'Last seen ${time}';
   @override
   String get srs_timeline_status => 'Sync status';
+  @override
+  String get srs_timeline_syncing => 'Syncing review data';
   @override
   String get srs_timeline_this_device => 'This device';
   @override
@@ -412015,6 +412395,10 @@ extension on _StringsEn {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -412395,10 +412779,6 @@ extension on _StringsEn {
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
       case 'srs_import_needs_kernel':
         return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
@@ -413397,9 +413777,24 @@ extension on _StringsEn {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -413544,6 +413939,8 @@ extension on _StringsEn {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -413571,6 +413968,8 @@ extension on _StringsEn {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -432635,6 +433034,10 @@ extension on _StringsAr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -433034,10 +433437,6 @@ extension on _StringsAr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_default_fsrs':
         return ({required Object preset}) =>
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
@@ -434017,9 +434416,24 @@ extension on _StringsAr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -434164,6 +434578,8 @@ extension on _StringsAr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -434191,6 +434607,8 @@ extension on _StringsAr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -453311,6 +453729,10 @@ extension on _StringsDe {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -453729,10 +454151,6 @@ extension on _StringsDe {
         return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_import_report_lapis_migrated':
         return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
@@ -454693,9 +455111,24 @@ extension on _StringsDe {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -454840,6 +455273,8 @@ extension on _StringsDe {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -454867,6 +455302,8 @@ extension on _StringsDe {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -473991,6 +474428,10 @@ extension on _StringsEs {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -474428,10 +474869,6 @@ extension on _StringsEs {
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return ({required Object n}) =>
             'Deck presets not imported: ${n} (new decks use the default settings)';
       case 'srs_import_report_removed':
@@ -475373,9 +475810,24 @@ extension on _StringsEs {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -475520,6 +475972,8 @@ extension on _StringsEs {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -475547,6 +476001,8 @@ extension on _StringsEs {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -494682,6 +495138,10 @@ extension on _StringsFr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -495138,10 +495598,6 @@ extension on _StringsFr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_import_report_rwkv_on_fsrs':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
@@ -496064,9 +496520,24 @@ extension on _StringsFr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -496211,6 +496682,8 @@ extension on _StringsFr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -496238,6 +496711,8 @@ extension on _StringsFr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -515333,6 +515808,10 @@ extension on _StringsId {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -515808,10 +516287,6 @@ extension on _StringsId {
       case 'srs_import_task_cancelled':
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return 'Dismiss';
       case 'srs_import_task_done_summary':
         return ({
@@ -516715,9 +517190,24 @@ extension on _StringsId {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -516862,6 +517352,8 @@ extension on _StringsId {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -516889,6 +517381,8 @@ extension on _StringsId {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -535993,6 +536487,10 @@ extension on _StringsIt {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -536487,10 +536985,6 @@ extension on _StringsIt {
         return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_task_stopping':
         return ({required Object name}) =>
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
             'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
@@ -537375,9 +537869,24 @@ extension on _StringsIt {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -537522,6 +538031,8 @@ extension on _StringsIt {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -537549,6 +538060,8 @@ extension on _StringsIt {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -556587,6 +557100,10 @@ extension on _StringsJa {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return '画像は未同期です';
+      case 'srs_card_media_missing_video':
+        return '動画は未同期です';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -557100,10 +557617,6 @@ extension on _StringsJa {
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
         return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
-      case 'srs_card_media_missing_image':
-        return '画像は未同期です';
-      case 'srs_card_media_missing_video':
-        return '動画は未同期です';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -557969,9 +558482,24 @@ extension on _StringsJa {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -558116,6 +558644,8 @@ extension on _StringsJa {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -558143,6 +558673,8 @@ extension on _StringsJa {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -577130,6 +577662,10 @@ extension on _StringsKo {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -577662,10 +578198,6 @@ extension on _StringsKo {
       case 'srs_interval_minutes':
         return ({required Object n}) => '${n}m';
       case 'srs_interval_months':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return ({required Object n}) => '${n}mo';
       case 'srs_interval_years':
         return ({required Object n}) => '${n}y';
@@ -578512,9 +579044,24 @@ extension on _StringsKo {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -578659,6 +579206,8 @@ extension on _StringsKo {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -578686,6 +579235,8 @@ extension on _StringsKo {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -597763,6 +598314,10 @@ extension on _StringsNl {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -598314,10 +598869,6 @@ extension on _StringsNl {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_lapis_migration_backfill_action':
         return 'Fill in';
       case 'srs_lapis_migration_backfill_done':
@@ -599145,9 +599696,24 @@ extension on _StringsNl {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -599292,6 +599858,8 @@ extension on _StringsNl {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -599319,6 +599887,8 @@ extension on _StringsNl {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -618427,6 +618997,10 @@ extension on _StringsPtBr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -618997,10 +619571,6 @@ extension on _StringsPtBr {
             'Migrate ${n} notes of “${name}” to Fushi Card?';
       case 'srs_lapis_migration_confirm_deck':
         return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -619809,9 +620379,24 @@ extension on _StringsPtBr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -619956,6 +620541,8 @@ extension on _StringsPtBr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -619983,6 +620570,8 @@ extension on _StringsPtBr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -639095,6 +639684,10 @@ extension on _StringsRu {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -639684,10 +640277,6 @@ extension on _StringsRu {
       case 'srs_lapis_migration_left_empty':
         return 'Left empty';
       case 'srs_lapis_migration_lost':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return ({required Object fields}) =>
             'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
       case 'srs_lapis_migration_migrate':
@@ -640477,9 +641066,24 @@ extension on _StringsRu {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -640624,6 +641228,8 @@ extension on _StringsRu {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -640651,6 +641257,8 @@ extension on _StringsRu {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -659723,6 +660331,10 @@ extension on _StringsTh {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -660331,10 +660943,6 @@ extension on _StringsTh {
       case 'srs_list_separator':
         return ', ';
       case 'srs_media_missing':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
         return 'Migrate to Fushi Card';
@@ -661105,9 +661713,24 @@ extension on _StringsTh {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -661252,6 +661875,8 @@ extension on _StringsTh {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -661279,6 +661904,8 @@ extension on _StringsTh {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -680369,6 +680996,10 @@ extension on _StringsTr {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -680996,10 +681627,6 @@ extension on _StringsTr {
       case 'srs_mining_deck_fallback':
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_field_required':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return 'Required';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
@@ -681751,9 +682378,24 @@ extension on _StringsTr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -681898,6 +682540,8 @@ extension on _StringsTr {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -681925,6 +682569,8 @@ extension on _StringsTr {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -701010,6 +701656,10 @@ extension on _StringsVi {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -701656,10 +702306,6 @@ extension on _StringsVi {
       case 'srs_note_add':
         return 'Add note';
       case 'srs_note_add_action':
-      case 'srs_card_media_missing_image':
-        return 'Picture not synced yet';
-      case 'srs_card_media_missing_video':
-        return 'Video not synced yet';
         return 'Add';
       case 'srs_note_added':
         return 'Added';
@@ -702392,9 +703038,24 @@ extension on _StringsVi {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -702539,6 +703200,8 @@ extension on _StringsVi {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -702566,6 +703229,8 @@ extension on _StringsVi {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
@@ -721488,6 +722153,10 @@ extension on _StringsZhCn {
         return '展开全文';
       case 'srs_card_label_source':
         return '来源';
+      case 'srs_card_media_missing_image':
+        return '图片未同步';
+      case 'srs_card_media_missing_video':
+        return '视频未同步';
       case 'srs_card_move':
         return '移到牌组';
       case 'srs_card_reset':
@@ -722153,10 +722822,6 @@ extension on _StringsZhCn {
       case 'srs_note_deleted':
         return '这条笔记已被删除。';
       case 'srs_note_edit':
-      case 'srs_card_media_missing_image':
-        return '图片未同步';
-      case 'srs_card_media_missing_video':
-        return '视频未同步';
         return '编辑笔记';
       case 'srs_note_field_ai':
         return 'AI 改写 / 补全';
@@ -722844,9 +723509,24 @@ extension on _StringsZhCn {
         return '还没有配置同步服务';
       case 'srs_sync_now':
         return '立即同步';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => '正在同步：${progress}';
+      case 'srs_sync_now_started':
+        return '开始同步复习数据…';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             '同步目录里另一台设备的 profile「${name}」也有笔记，无法自动关联，两边的复习数据不会互通。';
+      case 'srs_sync_progress_downloading':
+        return '同步复习数据';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            '同步复习数据 (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return '同步卡片媒体';
+      case 'srs_sync_progress_preparing':
+        return '正在准备同步复习数据';
+      case 'srs_sync_progress_uploading':
+        return '上传复习改动';
       case 'srs_sync_setup_body':
         return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
       case 'srs_sync_store_unavailable':
@@ -722991,6 +723671,8 @@ extension on _StringsZhCn {
         return '更改笔记类型之前';
       case 'srs_timeline_reason_restore':
         return '恢复之前';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => '正在接收 ${n} 条改动';
       case 'srs_timeline_restore':
         return '恢复';
       case 'srs_timeline_restore_body':
@@ -723018,6 +723700,8 @@ extension on _StringsZhCn {
         return ({required Object time}) => '最后同步 ${time}';
       case 'srs_timeline_status':
         return '同步状态';
+      case 'srs_timeline_syncing':
+        return '正在同步复习数据';
       case 'srs_timeline_this_device':
         return '本机';
       case 'srs_timeline_title':
@@ -741926,6 +742610,10 @@ extension on _StringsZhHk {
         return 'Show more';
       case 'srs_card_label_source':
         return 'Source';
+      case 'srs_card_media_missing_image':
+        return '圖片未同步';
+      case 'srs_card_media_missing_video':
+        return '影片未同步';
       case 'srs_card_move':
         return 'Move to deck';
       case 'srs_card_reset':
@@ -742610,10 +743298,6 @@ extension on _StringsZhHk {
         return 'Delete this note and all of its cards?';
       case 'srs_note_delete_conflict':
         return 'Deleted on one device while edited on another.';
-      case 'srs_card_media_missing_image':
-        return '圖片未同步';
-      case 'srs_card_media_missing_video':
-        return '影片未同步';
       case 'srs_note_deleted':
         return 'This note was deleted.';
       case 'srs_note_edit':
@@ -743307,9 +743991,24 @@ extension on _StringsZhHk {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_now_busy':
+        return ({required Object progress}) => 'Already syncing: ${progress}';
+      case 'srs_sync_now_started':
+        return 'Review sync started';
       case 'srs_sync_profile_not_linked':
         return ({required Object name}) =>
             'Another device\'s profile "${name}" in the sync folder also has notes, so it couldn\'t be linked automatically. Review data isn\'t shared between them.';
+      case 'srs_sync_progress_downloading':
+        return 'Syncing review data';
+      case 'srs_sync_progress_downloading_count':
+        return ({required Object done, required Object total}) =>
+            'Syncing review data (${done}/${total})';
+      case 'srs_sync_progress_media':
+        return 'Syncing card media';
+      case 'srs_sync_progress_preparing':
+        return 'Preparing review sync';
+      case 'srs_sync_progress_uploading':
+        return 'Uploading review changes';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_sync_store_unavailable':
@@ -743454,6 +744153,8 @@ extension on _StringsZhHk {
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
         return 'Before a restore';
+      case 'srs_timeline_receiving':
+        return ({required Object n}) => 'Receiving ${n} changes';
       case 'srs_timeline_restore':
         return 'Restore';
       case 'srs_timeline_restore_body':
@@ -743481,6 +744182,8 @@ extension on _StringsZhHk {
         return ({required Object time}) => 'Last seen ${time}';
       case 'srs_timeline_status':
         return 'Sync status';
+      case 'srs_timeline_syncing':
+        return 'Syncing review data';
       case 'srs_timeline_this_device':
         return 'This device';
       case 'srs_timeline_title':
