@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168776 (9928 per locale)
+/// Strings: 168810 (9930 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9793,6 +9793,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_label_other_dictionaries => 'Other dictionaries';
   String get srs_card_label_show_more => 'Show more';
   String get srs_card_label_source => 'Source';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  String get srs_card_media_missing_video => 'Video not synced yet';
   String get srs_card_move => 'Move to deck';
   String get srs_card_reset => 'Reset to new';
   String get srs_card_reset_confirm =>
@@ -30689,6 +30691,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_video_play => 'Play clip';
   @override
   String get srs_card_video_replay => 'Replay clip from the start';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -55073,6 +55079,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_change_type_mixed =>
       'The selected notes have different note types. Select notes of one type.';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_change_type_no_target =>
       'There is no other note type yet. Create one under Note types first.';
@@ -79580,6 +79590,10 @@ class _StringsEs extends _StringsEn {
   String get srs_conflict_confirm => 'Keep current';
   @override
   String get srs_conflict_confirm_all => 'Keep all current';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_conflict_current => 'Current';
   @override
@@ -104174,6 +104188,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_conflict_revert => 'Switch back';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_conflicts_deletions =>
       'Deleted on one device, changed on another';
   @override
@@ -128531,6 +128549,10 @@ class _StringsId extends _StringsEn {
   String get srs_count_new => 'New';
   @override
   String get srs_count_review => 'Due';
+  @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
@@ -152932,6 +152954,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_delete_with_cards_hint =>
       'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -176621,6 +176647,10 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_move_top_level => 'Top level';
   @override
   String get srs_deck_move_up => 'Move up';
+  String get srs_card_media_missing_image => '画像は未同期です';
+  @override
+  String get srs_card_media_missing_video => '動画は未同期です';
+  @override
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -200043,6 +200073,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_duplicates_hint =>
       'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_duplicates_keep => 'Keep';
   @override
@@ -224173,6 +224207,10 @@ class _StringsNl extends _StringsEn {
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
   String get srs_export_anki_compatible => 'Anki-compatible only';
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   @override
   String get srs_export_anki_compatible_desc =>
       'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
@@ -248604,6 +248642,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_export_with_scheduling => 'Include learning progress';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_export_with_scheduling_desc =>
       'Review history and due dates. When off, every card is exported as new.';
   @override
@@ -273012,6 +273054,10 @@ class _StringsRu extends _StringsEn {
   String get srs_field_info_description_override_hint =>
       'Write your own to replace the built-in description';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String srs_field_info_example({required Object value}) => 'Example: ${value}';
   @override
   String get srs_field_info_example_from_catalog =>
@@ -297171,6 +297217,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_field_info_expression_reading_desc =>
       'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
   @override
   String get srs_field_info_expression_reading_name => 'Reading';
   @override
@@ -321397,6 +321447,10 @@ class _StringsTr extends _StringsEn {
   String get srs_field_info_hint_name => 'Hint';
   @override
   String get srs_field_info_is_audio_card_desc =>
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
       'Type any character to turn it on: the front only plays audio, testing listening.';
   @override
   String get srs_field_info_is_audio_card_name => 'Switch: audio card';
@@ -345618,6 +345672,10 @@ class _StringsVi extends _StringsEn {
   String get srs_field_info_main_definition_desc =>
       'The main definition (by default the first entry of the first dictionary).';
   @override
+  String get srs_card_media_missing_image => 'Picture not synced yet';
+  @override
+  String get srs_card_media_missing_video => 'Video not synced yet';
+  @override
   String get srs_field_info_main_definition_name => 'Main definition';
   @override
   String srs_field_info_mining({required Object slot}) =>
@@ -368458,6 +368516,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_field_info_templates_none => '目前没有卡片模板显示这个字段。';
   @override
+  String get srs_card_media_missing_image => '图片未同步';
+  @override
+  String get srs_card_media_missing_video => '视频未同步';
+  @override
   String get srs_field_info_title => '字段';
   @override
   String get srs_field_info_usage => '怎么填、在哪用';
@@ -390948,6 +391010,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_field_info_sentence_desc =>
       'The sentence you met the word in; the word itself is bolded.';
   @override
+  String get srs_card_media_missing_image => '圖片未同步';
+  @override
+  String get srs_card_media_missing_video => '影片未同步';
+  @override
   String get srs_field_info_sentence_furigana_desc =>
       'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
   @override
@@ -412329,6 +412395,10 @@ extension on _StringsEn {
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
       case 'srs_import_needs_kernel':
         return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
@@ -432964,6 +433034,10 @@ extension on _StringsAr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_default_fsrs':
         return ({required Object preset}) =>
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
@@ -453655,6 +453729,10 @@ extension on _StringsDe {
         return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_import_report_lapis_migrated':
         return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
@@ -474350,6 +474428,10 @@ extension on _StringsEs {
       case 'srs_import_report_notetypes_updated':
         return ({required Object n}) => 'Note types updated: ${n}';
       case 'srs_import_report_presets_skipped':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return ({required Object n}) =>
             'Deck presets not imported: ${n} (new decks use the default settings)';
       case 'srs_import_report_removed':
@@ -495056,6 +495138,10 @@ extension on _StringsFr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_import_report_rwkv_on_fsrs':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
@@ -515722,6 +515808,10 @@ extension on _StringsId {
       case 'srs_import_task_cancelled':
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return 'Dismiss';
       case 'srs_import_task_done_summary':
         return ({
@@ -536397,6 +536487,10 @@ extension on _StringsIt {
         return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_task_stopping':
         return ({required Object name}) =>
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
             'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
@@ -557006,6 +557100,10 @@ extension on _StringsJa {
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
         return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
+      case 'srs_card_media_missing_image':
+        return '画像は未同期です';
+      case 'srs_card_media_missing_video':
+        return '動画は未同期です';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -577564,6 +577662,10 @@ extension on _StringsKo {
       case 'srs_interval_minutes':
         return ({required Object n}) => '${n}m';
       case 'srs_interval_months':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return ({required Object n}) => '${n}mo';
       case 'srs_interval_years':
         return ({required Object n}) => '${n}y';
@@ -598212,6 +598314,10 @@ extension on _StringsNl {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_lapis_migration_backfill_action':
         return 'Fill in';
       case 'srs_lapis_migration_backfill_done':
@@ -618891,6 +618997,10 @@ extension on _StringsPtBr {
             'Migrate ${n} notes of “${name}” to Fushi Card?';
       case 'srs_lapis_migration_confirm_deck':
         return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -639574,6 +639684,10 @@ extension on _StringsRu {
       case 'srs_lapis_migration_left_empty':
         return 'Left empty';
       case 'srs_lapis_migration_lost':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return ({required Object fields}) =>
             'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
       case 'srs_lapis_migration_migrate':
@@ -660217,6 +660331,10 @@ extension on _StringsTh {
       case 'srs_list_separator':
         return ', ';
       case 'srs_media_missing':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
         return 'Migrate to Fushi Card';
@@ -680878,6 +680996,10 @@ extension on _StringsTr {
       case 'srs_mining_deck_fallback':
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_field_required':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return 'Required';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
@@ -701534,6 +701656,10 @@ extension on _StringsVi {
       case 'srs_note_add':
         return 'Add note';
       case 'srs_note_add_action':
+      case 'srs_card_media_missing_image':
+        return 'Picture not synced yet';
+      case 'srs_card_media_missing_video':
+        return 'Video not synced yet';
         return 'Add';
       case 'srs_note_added':
         return 'Added';
@@ -722027,6 +722153,10 @@ extension on _StringsZhCn {
       case 'srs_note_deleted':
         return '这条笔记已被删除。';
       case 'srs_note_edit':
+      case 'srs_card_media_missing_image':
+        return '图片未同步';
+      case 'srs_card_media_missing_video':
+        return '视频未同步';
         return '编辑笔记';
       case 'srs_note_field_ai':
         return 'AI 改写 / 补全';
@@ -742480,6 +742610,10 @@ extension on _StringsZhHk {
         return 'Delete this note and all of its cards?';
       case 'srs_note_delete_conflict':
         return 'Deleted on one device while edited on another.';
+      case 'srs_card_media_missing_image':
+        return '圖片未同步';
+      case 'srs_card_media_missing_video':
+        return '影片未同步';
       case 'srs_note_deleted':
         return 'This note was deleted.';
       case 'srs_note_edit':
