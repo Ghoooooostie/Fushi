@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 161415 (9495 per locale)
+/// Strings: 161449 (9497 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12080,6 +12080,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_quality_switched({required Object label}) => 'Quality: ${label}';
   String get video_recently_added_badge => 'NEW';
   String get video_remote_all => 'All videos';
+  String get video_remote_close_video => 'Close video';
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   String get video_remote_control_customize => 'Customize buttons';
   String get video_remote_control_editor_hint =>
       'Drag buttons between the main controls and more buttons. Play/pause always stays.';
@@ -33999,6 +34002,11 @@ class _StringsAr extends _StringsEn {
   String get video_recently_added_badge => 'جديد';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -57403,6 +57411,11 @@ class _StringsDe extends _StringsEn {
   String get video_recently_added_badge => 'NEU';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -80897,6 +80910,11 @@ class _StringsEs extends _StringsEn {
   String get video_recently_added_badge => 'NUEVO';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -104469,6 +104487,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -127760,6 +127783,11 @@ class _StringsId extends _StringsEn {
   String get video_recently_added_badge => 'BARU';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -151142,6 +151170,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -173652,6 +173685,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -196050,6 +196088,11 @@ class _StringsKo extends _StringsEn {
   String get video_recently_added_badge => 'NEW';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -219299,6 +219342,11 @@ class _StringsNl extends _StringsEn {
   String get video_recently_added_badge => 'NIEUW';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -242708,6 +242756,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -266077,6 +266130,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -289170,6 +289228,11 @@ class _StringsTh extends _StringsEn {
   String get video_recently_added_badge => 'ใหม่';
   @override
   String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
   @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
@@ -312394,6 +312457,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -335582,6 +335650,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -357027,6 +357100,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_recently_added_badge => '新';
   @override
   String get video_remote_all => '全部视频';
+  @override
+  String get video_remote_close_video => '关闭视频';
+  @override
+  String get video_remote_close_video_confirm => '关闭电脑上正在播放的视频？播放进度会保存。';
   @override
   String get video_remote_control_customize => '自定义按钮';
   @override
@@ -378700,6 +378777,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_all => 'All videos';
   @override
+  String get video_remote_close_video => 'Close video';
+  @override
+  String get video_remote_close_video_confirm =>
+      'Close the video playing on the computer? Its position is saved.';
+  @override
   String get video_remote_control_customize => 'Customize buttons';
   @override
   String get video_remote_control_editor_hint =>
@@ -398699,6 +398781,10 @@ extension on _StringsEn {
         return 'NEW';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -418421,6 +418507,10 @@ extension on _StringsAr {
         return 'جديد';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -438219,6 +438309,10 @@ extension on _StringsDe {
         return 'NEU';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -458002,6 +458096,10 @@ extension on _StringsEs {
         return 'NUEVO';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -477801,6 +477899,10 @@ extension on _StringsFr {
         return 'NOUVEAU';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -497548,6 +497650,10 @@ extension on _StringsId {
         return 'BARU';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -517325,6 +517431,10 @@ extension on _StringsIt {
         return 'NUOVO';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -536987,6 +537097,10 @@ extension on _StringsJa {
         return 'NEW';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -556643,6 +556757,10 @@ extension on _StringsKo {
         return 'NEW';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -576405,6 +576523,10 @@ extension on _StringsNl {
         return 'NIEUW';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -596174,6 +596296,10 @@ extension on _StringsPtBr {
         return 'NOVO';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -615947,6 +616073,10 @@ extension on _StringsRu {
         return 'НОВОЕ';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -635677,6 +635807,10 @@ extension on _StringsTh {
         return 'ใหม่';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -655433,6 +655567,10 @@ extension on _StringsTr {
         return 'YENİ';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -675178,6 +675316,10 @@ extension on _StringsVi {
         return 'MỚI';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
@@ -694712,6 +694854,10 @@ extension on _StringsZhCn {
         return '新';
       case 'video_remote_all':
         return '全部视频';
+      case 'video_remote_close_video':
+        return '关闭视频';
+      case 'video_remote_close_video_confirm':
+        return '关闭电脑上正在播放的视频？播放进度会保存。';
       case 'video_remote_control_customize':
         return '自定义按钮';
       case 'video_remote_control_editor_hint':
@@ -714284,6 +714430,10 @@ extension on _StringsZhHk {
         return '新';
       case 'video_remote_all':
         return 'All videos';
+      case 'video_remote_close_video':
+        return 'Close video';
+      case 'video_remote_close_video_confirm':
+        return 'Close the video playing on the computer? Its position is saved.';
       case 'video_remote_control_customize':
         return 'Customize buttons';
       case 'video_remote_control_editor_hint':
