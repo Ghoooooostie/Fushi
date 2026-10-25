@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159698 (9394 per locale)
+/// Strings: 159579 (9387 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6556,12 +6556,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_stage_extract => 'Extracting…';
   String get manga_online_stage_mokuro => 'Downloading OCR data…';
   String get manga_page_actions => 'Page actions';
-  String get manga_page_copy => 'Copy image';
   String manga_page_number_hint({required Object total}) =>
       'Page number (1-${total})';
-  String get manga_page_save => 'Save image';
   String get manga_page_set_cover => 'Set as cover';
-  String get manga_page_share => 'Share image';
   String get manga_panel_detect_failed => 'Panel detection failed';
   String manga_panel_index({required Object index}) => 'Panel ${index}';
   String get manga_panel_model => 'AI panel model';
@@ -6672,11 +6669,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_restore => 'Restore all global defaults';
   String get manga_reader_rotate_wide_pages => 'Rotate to fit';
   String get manga_reader_saturation => 'Saturation';
-  String get manga_reader_save_book => 'By title';
-  String get manga_reader_save_chapter => 'By title and chapter';
-  String get manga_reader_save_directory => 'Saved image folders';
   String get manga_reader_save_failed => 'Could not save reader settings';
-  String get manga_reader_save_flat => 'One folder';
   String get manga_reader_scale => 'Image scaling';
   String get manga_reader_scope_global => 'Global';
   String get manga_reader_scope_hint =>
@@ -24319,16 +24312,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_page_actions => 'إجراءات الصفحة';
   @override
-  String get manga_page_copy => 'نسخ الصورة';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'رقم الصفحة (1-${total})';
   @override
-  String get manga_page_save => 'حفظ الصورة';
-  @override
   String get manga_page_set_cover => 'تعيين كغلاف';
-  @override
-  String get manga_page_share => 'مشاركة الصورة';
   @override
   String get manga_panel_detect_failed => 'فشل اكتشاف الإطارات';
   @override
@@ -24536,15 +24523,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'التشبع';
   @override
-  String get manga_reader_save_book => 'حسب العنوان';
-  @override
-  String get manga_reader_save_chapter => 'حسب العنوان والفصل';
-  @override
-  String get manga_reader_save_directory => 'مجلدات الصور المحفوظة';
-  @override
   String get manga_reader_save_failed => 'تعذّر حفظ إعدادات القارئ';
-  @override
-  String get manga_reader_save_flat => 'مجلد واحد';
   @override
   String get manga_reader_scale => 'تحجيم الصورة';
   @override
@@ -47335,16 +47314,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_page_actions => 'Seitenaktionen';
   @override
-  String get manga_page_copy => 'Bild kopieren';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Seitenzahl (1-${total})';
   @override
-  String get manga_page_save => 'Bild speichern';
-  @override
   String get manga_page_set_cover => 'Als Cover festlegen';
-  @override
-  String get manga_page_share => 'Bild teilen';
   @override
   String get manga_panel_detect_failed => 'Panel-Erkennung fehlgeschlagen';
   @override
@@ -47557,16 +47530,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Sättigung';
   @override
-  String get manga_reader_save_book => 'Nach Titel';
-  @override
-  String get manga_reader_save_chapter => 'Nach Titel und Kapitel';
-  @override
-  String get manga_reader_save_directory => 'Ordner für gespeicherte Bilder';
-  @override
   String get manga_reader_save_failed =>
       'Leser-Einstellungen konnten nicht gespeichert werden';
-  @override
-  String get manga_reader_save_flat => 'Ein Ordner';
   @override
   String get manga_reader_scale => 'Bildskalierung';
   @override
@@ -70554,16 +70519,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_page_actions => 'Acciones de página';
   @override
-  String get manga_page_copy => 'Copiar imagen';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Número de página (1-${total})';
   @override
-  String get manga_page_save => 'Guardar imagen';
-  @override
   String get manga_page_set_cover => 'Establecer como portada';
-  @override
-  String get manga_page_share => 'Compartir imagen';
   @override
   String get manga_panel_detect_failed => 'Error en la detección de viñetas';
   @override
@@ -70784,16 +70743,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturación';
   @override
-  String get manga_reader_save_book => 'Por título';
-  @override
-  String get manga_reader_save_chapter => 'Por título y capítulo';
-  @override
-  String get manga_reader_save_directory => 'Carpetas de imágenes guardadas';
-  @override
   String get manga_reader_save_failed =>
       'No se pudieron guardar los ajustes del lector';
-  @override
-  String get manga_reader_save_flat => 'Una sola carpeta';
   @override
   String get manga_reader_scale => 'Escalado de imagen';
   @override
@@ -93854,16 +93805,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_page_actions => 'Actions sur la page';
   @override
-  String get manga_page_copy => 'Copier l\'image';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Numéro de page (1-${total})';
   @override
-  String get manga_page_save => 'Enregistrer l\'image';
-  @override
   String get manga_page_set_cover => 'Définir comme couverture';
-  @override
-  String get manga_page_share => 'Partager l\'image';
   @override
   String get manga_panel_detect_failed => 'Échec de la détection des cases';
   @override
@@ -94083,16 +94028,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturation';
   @override
-  String get manga_reader_save_book => 'Par titre';
-  @override
-  String get manga_reader_save_chapter => 'Par titre et chapitre';
-  @override
-  String get manga_reader_save_directory => 'Dossiers des images enregistrées';
-  @override
   String get manga_reader_save_failed =>
       'Impossible d\'enregistrer les réglages du lecteur';
-  @override
-  String get manga_reader_save_flat => 'Un seul dossier';
   @override
   String get manga_reader_scale => 'Mise à l\'échelle des images';
   @override
@@ -117024,16 +116961,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_page_actions => 'Aksi halaman';
   @override
-  String get manga_page_copy => 'Salin gambar';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Nomor halaman (1-${total})';
   @override
-  String get manga_page_save => 'Simpan gambar';
-  @override
   String get manga_page_set_cover => 'Atur sebagai sampul';
-  @override
-  String get manga_page_share => 'Bagikan gambar';
   @override
   String get manga_panel_detect_failed => 'Deteksi panel gagal';
   @override
@@ -117241,16 +117172,8 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturasi';
   @override
-  String get manga_reader_save_book => 'Menurut judul';
-  @override
-  String get manga_reader_save_chapter => 'Menurut judul dan bab';
-  @override
-  String get manga_reader_save_directory => 'Folder gambar tersimpan';
-  @override
   String get manga_reader_save_failed =>
       'Tidak dapat menyimpan pengaturan pembaca';
-  @override
-  String get manga_reader_save_flat => 'Satu folder';
   @override
   String get manga_reader_scale => 'Penskalaan gambar';
   @override
@@ -140094,16 +140017,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_page_actions => 'Azioni della pagina';
   @override
-  String get manga_page_copy => 'Copia immagine';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Numero pagina (1-${total})';
   @override
-  String get manga_page_save => 'Salva immagine';
-  @override
   String get manga_page_set_cover => 'Imposta come copertina';
-  @override
-  String get manga_page_share => 'Condividi immagine';
   @override
   String get manga_panel_detect_failed =>
       'Rilevamento delle vignette non riuscito';
@@ -140324,16 +140241,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturazione';
   @override
-  String get manga_reader_save_book => 'Per titolo';
-  @override
-  String get manga_reader_save_chapter => 'Per titolo e capitolo';
-  @override
-  String get manga_reader_save_directory => 'Cartelle delle immagini salvate';
-  @override
   String get manga_reader_save_failed =>
       'Impossibile salvare le impostazioni del lettore';
-  @override
-  String get manga_reader_save_flat => 'Una cartella';
   @override
   String get manga_reader_scale => 'Scala dell\'immagine';
   @override
@@ -162747,15 +162656,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_page_actions => 'ページ操作';
   @override
-  String get manga_page_copy => '画像をコピー';
-  @override
   String manga_page_number_hint({required Object total}) => 'ページ番号（1-${total}）';
   @override
-  String get manga_page_save => '画像を保存';
-  @override
   String get manga_page_set_cover => 'カバーに設定';
-  @override
-  String get manga_page_share => '画像を共有';
   @override
   String get manga_panel_detect_failed => 'コマの検出に失敗しました';
   @override
@@ -162959,15 +162862,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_saturation => '彩度';
   @override
-  String get manga_reader_save_book => '作品ごと';
-  @override
-  String get manga_reader_save_chapter => '作品と章ごと';
-  @override
-  String get manga_reader_save_directory => '画像の保存先フォルダー';
-  @override
   String get manga_reader_save_failed => 'リーダー設定を保存できませんでした';
-  @override
-  String get manga_reader_save_flat => '1つのフォルダー';
   @override
   String get manga_reader_scale => '画像の拡大縮小';
   @override
@@ -184879,16 +184774,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_page_actions => '페이지 동작';
   @override
-  String get manga_page_copy => '이미지 복사';
-  @override
   String manga_page_number_hint({required Object total}) =>
       '페이지 번호 (1-${total})';
   @override
-  String get manga_page_save => '이미지 저장';
-  @override
   String get manga_page_set_cover => '표지로 설정';
-  @override
-  String get manga_page_share => '이미지 공유';
   @override
   String get manga_panel_detect_failed => '컷 감지 실패';
   @override
@@ -185093,15 +184982,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_saturation => '채도';
   @override
-  String get manga_reader_save_book => '제목별';
-  @override
-  String get manga_reader_save_chapter => '제목 및 챕터별';
-  @override
-  String get manga_reader_save_directory => '저장된 이미지 폴더';
-  @override
   String get manga_reader_save_failed => '리더 설정을 저장할 수 없습니다';
-  @override
-  String get manga_reader_save_flat => '폴더 하나';
   @override
   String get manga_reader_scale => '이미지 크기 조정';
   @override
@@ -207528,16 +207409,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_page_actions => 'Pagina-acties';
   @override
-  String get manga_page_copy => 'Afbeelding kopiëren';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Paginanummer (1-${total})';
   @override
-  String get manga_page_save => 'Afbeelding opslaan';
-  @override
   String get manga_page_set_cover => 'Instellen als omslag';
-  @override
-  String get manga_page_share => 'Afbeelding delen';
   @override
   String get manga_panel_detect_failed => 'Paneeldetectie mislukt';
   @override
@@ -207747,17 +207622,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Verzadiging';
   @override
-  String get manga_reader_save_book => 'Per titel';
-  @override
-  String get manga_reader_save_chapter => 'Per titel en hoofdstuk';
-  @override
-  String get manga_reader_save_directory =>
-      'Mappen voor opgeslagen afbeeldingen';
-  @override
   String get manga_reader_save_failed =>
       'Lezerinstellingen konden niet worden opgeslagen';
-  @override
-  String get manga_reader_save_flat => 'Eén map';
   @override
   String get manga_reader_scale => 'Afbeeldingsschaling';
   @override
@@ -230677,16 +230543,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_page_actions => 'Ações da página';
   @override
-  String get manga_page_copy => 'Copiar imagem';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Número da página (1-${total})';
   @override
-  String get manga_page_save => 'Salvar imagem';
-  @override
   String get manga_page_set_cover => 'Definir como capa';
-  @override
-  String get manga_page_share => 'Compartilhar imagem';
   @override
   String get manga_panel_detect_failed => 'Falha na detecção de quadros';
   @override
@@ -230900,16 +230760,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Saturação';
   @override
-  String get manga_reader_save_book => 'Por título';
-  @override
-  String get manga_reader_save_chapter => 'Por título e capítulo';
-  @override
-  String get manga_reader_save_directory => 'Pastas de imagens salvas';
-  @override
   String get manga_reader_save_failed =>
       'Não foi possível salvar as configurações do leitor';
-  @override
-  String get manga_reader_save_flat => 'Uma pasta';
   @override
   String get manga_reader_scale => 'Escala da imagem';
   @override
@@ -253808,16 +253660,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_page_actions => 'Действия со страницей';
   @override
-  String get manga_page_copy => 'Копировать изображение';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Номер страницы (1-${total})';
   @override
-  String get manga_page_save => 'Сохранить изображение';
-  @override
   String get manga_page_set_cover => 'Сделать обложкой';
-  @override
-  String get manga_page_share => 'Поделиться изображением';
   @override
   String get manga_panel_detect_failed => 'Не удалось определить панели';
   @override
@@ -254031,16 +253877,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Насыщенность';
   @override
-  String get manga_reader_save_book => 'По названию';
-  @override
-  String get manga_reader_save_chapter => 'По названию и главе';
-  @override
-  String get manga_reader_save_directory => 'Папки для сохранённых изображений';
-  @override
   String get manga_reader_save_failed =>
       'Не удалось сохранить настройки читалки';
-  @override
-  String get manga_reader_save_flat => 'Одна папка';
   @override
   String get manga_reader_scale => 'Масштабирование изображения';
   @override
@@ -276771,16 +276609,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_page_actions => 'การกระทำของหน้า';
   @override
-  String get manga_page_copy => 'คัดลอกภาพ';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'หมายเลขหน้า (1-${total})';
   @override
-  String get manga_page_save => 'บันทึกภาพ';
-  @override
   String get manga_page_set_cover => 'ตั้งเป็นภาพปก';
-  @override
-  String get manga_page_share => 'แชร์ภาพ';
   @override
   String get manga_panel_detect_failed => 'ตรวจจับช่องไม่สำเร็จ';
   @override
@@ -276988,15 +276820,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_saturation => 'ความอิ่มตัวของสี';
   @override
-  String get manga_reader_save_book => 'ตามชื่อเรื่อง';
-  @override
-  String get manga_reader_save_chapter => 'ตามชื่อเรื่องและตอน';
-  @override
-  String get manga_reader_save_directory => 'โฟลเดอร์ของภาพที่บันทึก';
-  @override
   String get manga_reader_save_failed => 'บันทึกการตั้งค่าตัวอ่านไม่ได้';
-  @override
-  String get manga_reader_save_flat => 'โฟลเดอร์เดียว';
   @override
   String get manga_reader_scale => 'การปรับขนาดภาพ';
   @override
@@ -299686,16 +299510,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_page_actions => 'Sayfa eylemleri';
   @override
-  String get manga_page_copy => 'Görseli kopyala';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Sayfa numarası (1-${total})';
   @override
-  String get manga_page_save => 'Görseli kaydet';
-  @override
   String get manga_page_set_cover => 'Kapak olarak ayarla';
-  @override
-  String get manga_page_share => 'Görseli paylaş';
   @override
   String get manga_panel_detect_failed => 'Panel algılama başarısız oldu';
   @override
@@ -299906,15 +299724,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Doygunluk';
   @override
-  String get manga_reader_save_book => 'Başlığa göre';
-  @override
-  String get manga_reader_save_chapter => 'Başlığa ve bölüme göre';
-  @override
-  String get manga_reader_save_directory => 'Kaydedilen görsel klasörleri';
-  @override
   String get manga_reader_save_failed => 'Okuyucu ayarları kaydedilemedi';
-  @override
-  String get manga_reader_save_flat => 'Tek klasör';
   @override
   String get manga_reader_scale => 'Görsel ölçekleme';
   @override
@@ -322656,16 +322466,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_page_actions => 'Thao tác trang';
   @override
-  String get manga_page_copy => 'Sao chép ảnh';
-  @override
   String manga_page_number_hint({required Object total}) =>
       'Số trang (1-${total})';
   @override
-  String get manga_page_save => 'Lưu ảnh';
-  @override
   String get manga_page_set_cover => 'Đặt làm ảnh bìa';
-  @override
-  String get manga_page_share => 'Chia sẻ ảnh';
   @override
   String get manga_panel_detect_failed => 'Phát hiện khung truyện thất bại';
   @override
@@ -322874,15 +322678,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_saturation => 'Độ bão hòa';
   @override
-  String get manga_reader_save_book => 'Theo tiêu đề';
-  @override
-  String get manga_reader_save_chapter => 'Theo tiêu đề và chương';
-  @override
-  String get manga_reader_save_directory => 'Thư mục lưu ảnh';
-  @override
   String get manga_reader_save_failed => 'Không thể lưu cài đặt trình đọc';
-  @override
-  String get manga_reader_save_flat => 'Một thư mục';
   @override
   String get manga_reader_scale => 'Tỷ lệ ảnh';
   @override
@@ -344650,15 +344446,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_page_actions => '页面操作';
   @override
-  String get manga_page_copy => '复制图片';
-  @override
   String manga_page_number_hint({required Object total}) => '页码（1-${total}）';
   @override
-  String get manga_page_save => '保存图片';
-  @override
   String get manga_page_set_cover => '设为封面';
-  @override
-  String get manga_page_share => '分享图片';
   @override
   String get manga_panel_detect_failed => '分镜检测失败';
   @override
@@ -344858,15 +344648,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_saturation => '饱和度';
   @override
-  String get manga_reader_save_book => '按作品';
-  @override
-  String get manga_reader_save_chapter => '按作品及章节';
-  @override
-  String get manga_reader_save_directory => '图片保存目录';
-  @override
   String get manga_reader_save_failed => '无法保存阅读设置';
-  @override
-  String get manga_reader_save_flat => '统一目录';
   @override
   String get manga_reader_scale => '图片缩放';
   @override
@@ -365806,15 +365588,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_page_actions => '頁面操作';
   @override
-  String get manga_page_copy => '複製圖片';
-  @override
   String manga_page_number_hint({required Object total}) => '頁碼（1-${total}）';
   @override
-  String get manga_page_save => '儲存圖片';
-  @override
   String get manga_page_set_cover => '設為封面';
-  @override
-  String get manga_page_share => '分享圖片';
   @override
   String get manga_panel_detect_failed => '分鏡檢測失敗';
   @override
@@ -366018,15 +365794,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_saturation => '飽和度';
   @override
-  String get manga_reader_save_book => '按作品';
-  @override
-  String get manga_reader_save_chapter => '按作品及章節';
-  @override
-  String get manga_reader_save_directory => '圖片儲存目錄';
-  @override
   String get manga_reader_save_failed => '無法儲存閱讀設定';
-  @override
-  String get manga_reader_save_flat => '統一目錄';
   @override
   String get manga_reader_scale => '圖片縮放';
   @override
@@ -386336,16 +386104,10 @@ extension on _StringsEn {
         return 'Downloading OCR data…';
       case 'manga_page_actions':
         return 'Page actions';
-      case 'manga_page_copy':
-        return 'Copy image';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Page number (1-${total})';
-      case 'manga_page_save':
-        return 'Save image';
       case 'manga_page_set_cover':
         return 'Set as cover';
-      case 'manga_page_share':
-        return 'Share image';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
       case 'manga_panel_index':
@@ -386539,16 +386301,8 @@ extension on _StringsEn {
         return 'Rotate to fit';
       case 'manga_reader_saturation':
         return 'Saturation';
-      case 'manga_reader_save_book':
-        return 'By title';
-      case 'manga_reader_save_chapter':
-        return 'By title and chapter';
-      case 'manga_reader_save_directory':
-        return 'Saved image folders';
       case 'manga_reader_save_failed':
         return 'Could not save reader settings';
-      case 'manga_reader_save_flat':
-        return 'One folder';
       case 'manga_reader_scale':
         return 'Image scaling';
       case 'manga_reader_scope_global':
@@ -405861,16 +405615,10 @@ extension on _StringsAr {
         return 'جارٍ تحميل بيانات OCR…';
       case 'manga_page_actions':
         return 'إجراءات الصفحة';
-      case 'manga_page_copy':
-        return 'نسخ الصورة';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'رقم الصفحة (1-${total})';
-      case 'manga_page_save':
-        return 'حفظ الصورة';
       case 'manga_page_set_cover':
         return 'تعيين كغلاف';
-      case 'manga_page_share':
-        return 'مشاركة الصورة';
       case 'manga_panel_detect_failed':
         return 'فشل اكتشاف الإطارات';
       case 'manga_panel_index':
@@ -406064,16 +405812,8 @@ extension on _StringsAr {
         return 'التدوير للملاءمة';
       case 'manga_reader_saturation':
         return 'التشبع';
-      case 'manga_reader_save_book':
-        return 'حسب العنوان';
-      case 'manga_reader_save_chapter':
-        return 'حسب العنوان والفصل';
-      case 'manga_reader_save_directory':
-        return 'مجلدات الصور المحفوظة';
       case 'manga_reader_save_failed':
         return 'تعذّر حفظ إعدادات القارئ';
-      case 'manga_reader_save_flat':
-        return 'مجلد واحد';
       case 'manga_reader_scale':
         return 'تحجيم الصورة';
       case 'manga_reader_scope_global':
@@ -425431,16 +425171,10 @@ extension on _StringsDe {
         return 'OCR-Daten werden heruntergeladen…';
       case 'manga_page_actions':
         return 'Seitenaktionen';
-      case 'manga_page_copy':
-        return 'Bild kopieren';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Seitenzahl (1-${total})';
-      case 'manga_page_save':
-        return 'Bild speichern';
       case 'manga_page_set_cover':
         return 'Als Cover festlegen';
-      case 'manga_page_share':
-        return 'Bild teilen';
       case 'manga_panel_detect_failed':
         return 'Panel-Erkennung fehlgeschlagen';
       case 'manga_panel_index':
@@ -425635,16 +425369,8 @@ extension on _StringsDe {
         return 'Zum Anpassen drehen';
       case 'manga_reader_saturation':
         return 'Sättigung';
-      case 'manga_reader_save_book':
-        return 'Nach Titel';
-      case 'manga_reader_save_chapter':
-        return 'Nach Titel und Kapitel';
-      case 'manga_reader_save_directory':
-        return 'Ordner für gespeicherte Bilder';
       case 'manga_reader_save_failed':
         return 'Leser-Einstellungen konnten nicht gespeichert werden';
-      case 'manga_reader_save_flat':
-        return 'Ein Ordner';
       case 'manga_reader_scale':
         return 'Bildskalierung';
       case 'manga_reader_scope_global':
@@ -445018,16 +444744,10 @@ extension on _StringsEs {
         return 'Descargando datos de OCR…';
       case 'manga_page_actions':
         return 'Acciones de página';
-      case 'manga_page_copy':
-        return 'Copiar imagen';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número de página (1-${total})';
-      case 'manga_page_save':
-        return 'Guardar imagen';
       case 'manga_page_set_cover':
         return 'Establecer como portada';
-      case 'manga_page_share':
-        return 'Compartir imagen';
       case 'manga_panel_detect_failed':
         return 'Error en la detección de viñetas';
       case 'manga_panel_index':
@@ -445221,16 +444941,8 @@ extension on _StringsEs {
         return 'Girar para ajustar';
       case 'manga_reader_saturation':
         return 'Saturación';
-      case 'manga_reader_save_book':
-        return 'Por título';
-      case 'manga_reader_save_chapter':
-        return 'Por título y capítulo';
-      case 'manga_reader_save_directory':
-        return 'Carpetas de imágenes guardadas';
       case 'manga_reader_save_failed':
         return 'No se pudieron guardar los ajustes del lector';
-      case 'manga_reader_save_flat':
-        return 'Una sola carpeta';
       case 'manga_reader_scale':
         return 'Escalado de imagen';
       case 'manga_reader_scope_global':
@@ -464613,16 +464325,10 @@ extension on _StringsFr {
         return 'Téléchargement des données OCR…';
       case 'manga_page_actions':
         return 'Actions sur la page';
-      case 'manga_page_copy':
-        return 'Copier l\'image';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numéro de page (1-${total})';
-      case 'manga_page_save':
-        return 'Enregistrer l\'image';
       case 'manga_page_set_cover':
         return 'Définir comme couverture';
-      case 'manga_page_share':
-        return 'Partager l\'image';
       case 'manga_panel_detect_failed':
         return 'Échec de la détection des cases';
       case 'manga_panel_index':
@@ -464816,16 +464522,8 @@ extension on _StringsFr {
         return 'Pivoter pour ajuster';
       case 'manga_reader_saturation':
         return 'Saturation';
-      case 'manga_reader_save_book':
-        return 'Par titre';
-      case 'manga_reader_save_chapter':
-        return 'Par titre et chapitre';
-      case 'manga_reader_save_directory':
-        return 'Dossiers des images enregistrées';
       case 'manga_reader_save_failed':
         return 'Impossible d\'enregistrer les réglages du lecteur';
-      case 'manga_reader_save_flat':
-        return 'Un seul dossier';
       case 'manga_reader_scale':
         return 'Mise à l\'échelle des images';
       case 'manga_reader_scope_global':
@@ -484184,16 +483882,10 @@ extension on _StringsId {
         return 'Mengunduh data OCR…';
       case 'manga_page_actions':
         return 'Aksi halaman';
-      case 'manga_page_copy':
-        return 'Salin gambar';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Nomor halaman (1-${total})';
-      case 'manga_page_save':
-        return 'Simpan gambar';
       case 'manga_page_set_cover':
         return 'Atur sebagai sampul';
-      case 'manga_page_share':
-        return 'Bagikan gambar';
       case 'manga_panel_detect_failed':
         return 'Deteksi panel gagal';
       case 'manga_panel_index':
@@ -484387,16 +484079,8 @@ extension on _StringsId {
         return 'Putar agar pas';
       case 'manga_reader_saturation':
         return 'Saturasi';
-      case 'manga_reader_save_book':
-        return 'Menurut judul';
-      case 'manga_reader_save_chapter':
-        return 'Menurut judul dan bab';
-      case 'manga_reader_save_directory':
-        return 'Folder gambar tersimpan';
       case 'manga_reader_save_failed':
         return 'Tidak dapat menyimpan pengaturan pembaca';
-      case 'manga_reader_save_flat':
-        return 'Satu folder';
       case 'manga_reader_scale':
         return 'Penskalaan gambar';
       case 'manga_reader_scope_global':
@@ -503741,16 +503425,10 @@ extension on _StringsIt {
         return 'Download dati OCR…';
       case 'manga_page_actions':
         return 'Azioni della pagina';
-      case 'manga_page_copy':
-        return 'Copia immagine';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numero pagina (1-${total})';
-      case 'manga_page_save':
-        return 'Salva immagine';
       case 'manga_page_set_cover':
         return 'Imposta come copertina';
-      case 'manga_page_share':
-        return 'Condividi immagine';
       case 'manga_panel_detect_failed':
         return 'Rilevamento delle vignette non riuscito';
       case 'manga_panel_index':
@@ -503944,16 +503622,8 @@ extension on _StringsIt {
         return 'Ruota per adattare';
       case 'manga_reader_saturation':
         return 'Saturazione';
-      case 'manga_reader_save_book':
-        return 'Per titolo';
-      case 'manga_reader_save_chapter':
-        return 'Per titolo e capitolo';
-      case 'manga_reader_save_directory':
-        return 'Cartelle delle immagini salvate';
       case 'manga_reader_save_failed':
         return 'Impossibile salvare le impostazioni del lettore';
-      case 'manga_reader_save_flat':
-        return 'Una cartella';
       case 'manga_reader_scale':
         return 'Scala dell\'immagine';
       case 'manga_reader_scope_global':
@@ -523259,16 +522929,10 @@ extension on _StringsJa {
         return 'OCRデータをダウンロード中…';
       case 'manga_page_actions':
         return 'ページ操作';
-      case 'manga_page_copy':
-        return '画像をコピー';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'ページ番号（1-${total}）';
-      case 'manga_page_save':
-        return '画像を保存';
       case 'manga_page_set_cover':
         return 'カバーに設定';
-      case 'manga_page_share':
-        return '画像を共有';
       case 'manga_panel_detect_failed':
         return 'コマの検出に失敗しました';
       case 'manga_panel_index':
@@ -523461,16 +523125,8 @@ extension on _StringsJa {
         return '回転して画面に合わせる';
       case 'manga_reader_saturation':
         return '彩度';
-      case 'manga_reader_save_book':
-        return '作品ごと';
-      case 'manga_reader_save_chapter':
-        return '作品と章ごと';
-      case 'manga_reader_save_directory':
-        return '画像の保存先フォルダー';
       case 'manga_reader_save_failed':
         return 'リーダー設定を保存できませんでした';
-      case 'manga_reader_save_flat':
-        return '1つのフォルダー';
       case 'manga_reader_scale':
         return '画像の拡大縮小';
       case 'manga_reader_scope_global':
@@ -542708,16 +542364,10 @@ extension on _StringsKo {
         return 'OCR 데이터 다운로드 중…';
       case 'manga_page_actions':
         return '페이지 동작';
-      case 'manga_page_copy':
-        return '이미지 복사';
       case 'manga_page_number_hint':
         return ({required Object total}) => '페이지 번호 (1-${total})';
-      case 'manga_page_save':
-        return '이미지 저장';
       case 'manga_page_set_cover':
         return '표지로 설정';
-      case 'manga_page_share':
-        return '이미지 공유';
       case 'manga_panel_detect_failed':
         return '컷 감지 실패';
       case 'manga_panel_index':
@@ -542910,16 +542560,8 @@ extension on _StringsKo {
         return '화면에 맞게 회전';
       case 'manga_reader_saturation':
         return '채도';
-      case 'manga_reader_save_book':
-        return '제목별';
-      case 'manga_reader_save_chapter':
-        return '제목 및 챕터별';
-      case 'manga_reader_save_directory':
-        return '저장된 이미지 폴더';
       case 'manga_reader_save_failed':
         return '리더 설정을 저장할 수 없습니다';
-      case 'manga_reader_save_flat':
-        return '폴더 하나';
       case 'manga_reader_scale':
         return '이미지 크기 조정';
       case 'manga_reader_scope_global':
@@ -562228,16 +561870,10 @@ extension on _StringsNl {
         return 'OCR-gegevens downloaden…';
       case 'manga_page_actions':
         return 'Pagina-acties';
-      case 'manga_page_copy':
-        return 'Afbeelding kopiëren';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Paginanummer (1-${total})';
-      case 'manga_page_save':
-        return 'Afbeelding opslaan';
       case 'manga_page_set_cover':
         return 'Instellen als omslag';
-      case 'manga_page_share':
-        return 'Afbeelding delen';
       case 'manga_panel_detect_failed':
         return 'Paneeldetectie mislukt';
       case 'manga_panel_index':
@@ -562431,16 +562067,8 @@ extension on _StringsNl {
         return 'Draaien om passend te maken';
       case 'manga_reader_saturation':
         return 'Verzadiging';
-      case 'manga_reader_save_book':
-        return 'Per titel';
-      case 'manga_reader_save_chapter':
-        return 'Per titel en hoofdstuk';
-      case 'manga_reader_save_directory':
-        return 'Mappen voor opgeslagen afbeeldingen';
       case 'manga_reader_save_failed':
         return 'Lezerinstellingen konden niet worden opgeslagen';
-      case 'manga_reader_save_flat':
-        return 'Eén map';
       case 'manga_reader_scale':
         return 'Afbeeldingsschaling';
       case 'manga_reader_scope_global':
@@ -581799,16 +581427,10 @@ extension on _StringsPtBr {
         return 'Baixando dados de OCR…';
       case 'manga_page_actions':
         return 'Ações da página';
-      case 'manga_page_copy':
-        return 'Copiar imagem';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número da página (1-${total})';
-      case 'manga_page_save':
-        return 'Salvar imagem';
       case 'manga_page_set_cover':
         return 'Definir como capa';
-      case 'manga_page_share':
-        return 'Compartilhar imagem';
       case 'manga_panel_detect_failed':
         return 'Falha na detecção de quadros';
       case 'manga_panel_index':
@@ -582002,16 +581624,8 @@ extension on _StringsPtBr {
         return 'Girar para ajustar';
       case 'manga_reader_saturation':
         return 'Saturação';
-      case 'manga_reader_save_book':
-        return 'Por título';
-      case 'manga_reader_save_chapter':
-        return 'Por título e capítulo';
-      case 'manga_reader_save_directory':
-        return 'Pastas de imagens salvas';
       case 'manga_reader_save_failed':
         return 'Não foi possível salvar as configurações do leitor';
-      case 'manga_reader_save_flat':
-        return 'Uma pasta';
       case 'manga_reader_scale':
         return 'Escala da imagem';
       case 'manga_reader_scope_global':
@@ -601373,16 +600987,10 @@ extension on _StringsRu {
         return 'Загрузка данных OCR…';
       case 'manga_page_actions':
         return 'Действия со страницей';
-      case 'manga_page_copy':
-        return 'Копировать изображение';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Номер страницы (1-${total})';
-      case 'manga_page_save':
-        return 'Сохранить изображение';
       case 'manga_page_set_cover':
         return 'Сделать обложкой';
-      case 'manga_page_share':
-        return 'Поделиться изображением';
       case 'manga_panel_detect_failed':
         return 'Не удалось определить панели';
       case 'manga_panel_index':
@@ -601576,16 +601184,8 @@ extension on _StringsRu {
         return 'Поворачивать по размеру экрана';
       case 'manga_reader_saturation':
         return 'Насыщенность';
-      case 'manga_reader_save_book':
-        return 'По названию';
-      case 'manga_reader_save_chapter':
-        return 'По названию и главе';
-      case 'manga_reader_save_directory':
-        return 'Папки для сохранённых изображений';
       case 'manga_reader_save_failed':
         return 'Не удалось сохранить настройки читалки';
-      case 'manga_reader_save_flat':
-        return 'Одна папка';
       case 'manga_reader_scale':
         return 'Масштабирование изображения';
       case 'manga_reader_scope_global':
@@ -620917,16 +620517,10 @@ extension on _StringsTh {
         return 'กำลังดาวน์โหลดข้อมูล OCR…';
       case 'manga_page_actions':
         return 'การกระทำของหน้า';
-      case 'manga_page_copy':
-        return 'คัดลอกภาพ';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'หมายเลขหน้า (1-${total})';
-      case 'manga_page_save':
-        return 'บันทึกภาพ';
       case 'manga_page_set_cover':
         return 'ตั้งเป็นภาพปก';
-      case 'manga_page_share':
-        return 'แชร์ภาพ';
       case 'manga_panel_detect_failed':
         return 'ตรวจจับช่องไม่สำเร็จ';
       case 'manga_panel_index':
@@ -621120,16 +620714,8 @@ extension on _StringsTh {
         return 'หมุนให้พอดีหน้าจอ';
       case 'manga_reader_saturation':
         return 'ความอิ่มตัวของสี';
-      case 'manga_reader_save_book':
-        return 'ตามชื่อเรื่อง';
-      case 'manga_reader_save_chapter':
-        return 'ตามชื่อเรื่องและตอน';
-      case 'manga_reader_save_directory':
-        return 'โฟลเดอร์ของภาพที่บันทึก';
       case 'manga_reader_save_failed':
         return 'บันทึกการตั้งค่าตัวอ่านไม่ได้';
-      case 'manga_reader_save_flat':
-        return 'โฟลเดอร์เดียว';
       case 'manga_reader_scale':
         return 'การปรับขนาดภาพ';
       case 'manga_reader_scope_global':
@@ -640466,16 +640052,10 @@ extension on _StringsTr {
         return 'OCR verileri indiriliyor…';
       case 'manga_page_actions':
         return 'Sayfa eylemleri';
-      case 'manga_page_copy':
-        return 'Görseli kopyala';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Sayfa numarası (1-${total})';
-      case 'manga_page_save':
-        return 'Görseli kaydet';
       case 'manga_page_set_cover':
         return 'Kapak olarak ayarla';
-      case 'manga_page_share':
-        return 'Görseli paylaş';
       case 'manga_panel_detect_failed':
         return 'Panel algılama başarısız oldu';
       case 'manga_panel_index':
@@ -640669,16 +640249,8 @@ extension on _StringsTr {
         return 'Sığdırmak için döndür';
       case 'manga_reader_saturation':
         return 'Doygunluk';
-      case 'manga_reader_save_book':
-        return 'Başlığa göre';
-      case 'manga_reader_save_chapter':
-        return 'Başlığa ve bölüme göre';
-      case 'manga_reader_save_directory':
-        return 'Kaydedilen görsel klasörleri';
       case 'manga_reader_save_failed':
         return 'Okuyucu ayarları kaydedilemedi';
-      case 'manga_reader_save_flat':
-        return 'Tek klasör';
       case 'manga_reader_scale':
         return 'Görsel ölçekleme';
       case 'manga_reader_scope_global':
@@ -660013,16 +659585,10 @@ extension on _StringsVi {
         return 'Đang tải dữ liệu OCR…';
       case 'manga_page_actions':
         return 'Thao tác trang';
-      case 'manga_page_copy':
-        return 'Sao chép ảnh';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Số trang (1-${total})';
-      case 'manga_page_save':
-        return 'Lưu ảnh';
       case 'manga_page_set_cover':
         return 'Đặt làm ảnh bìa';
-      case 'manga_page_share':
-        return 'Chia sẻ ảnh';
       case 'manga_panel_detect_failed':
         return 'Phát hiện khung truyện thất bại';
       case 'manga_panel_index':
@@ -660216,16 +659782,8 @@ extension on _StringsVi {
         return 'Xoay cho vừa màn hình';
       case 'manga_reader_saturation':
         return 'Độ bão hòa';
-      case 'manga_reader_save_book':
-        return 'Theo tiêu đề';
-      case 'manga_reader_save_chapter':
-        return 'Theo tiêu đề và chương';
-      case 'manga_reader_save_directory':
-        return 'Thư mục lưu ảnh';
       case 'manga_reader_save_failed':
         return 'Không thể lưu cài đặt trình đọc';
-      case 'manga_reader_save_flat':
-        return 'Một thư mục';
       case 'manga_reader_scale':
         return 'Tỷ lệ ảnh';
       case 'manga_reader_scope_global':
@@ -679438,16 +678996,10 @@ extension on _StringsZhCn {
         return '下载 OCR 数据…';
       case 'manga_page_actions':
         return '页面操作';
-      case 'manga_page_copy':
-        return '复制图片';
       case 'manga_page_number_hint':
         return ({required Object total}) => '页码（1-${total}）';
-      case 'manga_page_save':
-        return '保存图片';
       case 'manga_page_set_cover':
         return '设为封面';
-      case 'manga_page_share':
-        return '分享图片';
       case 'manga_panel_detect_failed':
         return '分镜检测失败';
       case 'manga_panel_index':
@@ -679640,16 +679192,8 @@ extension on _StringsZhCn {
         return '旋转以适应屏幕';
       case 'manga_reader_saturation':
         return '饱和度';
-      case 'manga_reader_save_book':
-        return '按作品';
-      case 'manga_reader_save_chapter':
-        return '按作品及章节';
-      case 'manga_reader_save_directory':
-        return '图片保存目录';
       case 'manga_reader_save_failed':
         return '无法保存阅读设置';
-      case 'manga_reader_save_flat':
-        return '统一目录';
       case 'manga_reader_scale':
         return '图片缩放';
       case 'manga_reader_scope_global':
@@ -698770,16 +698314,10 @@ extension on _StringsZhHk {
         return '下載 OCR 數據…';
       case 'manga_page_actions':
         return '頁面操作';
-      case 'manga_page_copy':
-        return '複製圖片';
       case 'manga_page_number_hint':
         return ({required Object total}) => '頁碼（1-${total}）';
-      case 'manga_page_save':
-        return '儲存圖片';
       case 'manga_page_set_cover':
         return '設為封面';
-      case 'manga_page_share':
-        return '分享圖片';
       case 'manga_panel_detect_failed':
         return '分鏡檢測失敗';
       case 'manga_panel_index':
@@ -698972,16 +698510,8 @@ extension on _StringsZhHk {
         return '旋轉以配合螢幕';
       case 'manga_reader_saturation':
         return '飽和度';
-      case 'manga_reader_save_book':
-        return '按作品';
-      case 'manga_reader_save_chapter':
-        return '按作品及章節';
-      case 'manga_reader_save_directory':
-        return '圖片儲存目錄';
       case 'manga_reader_save_failed':
         return '無法儲存閱讀設定';
-      case 'manga_reader_save_flat':
-        return '統一目錄';
       case 'manga_reader_scale':
         return '圖片縮放';
       case 'manga_reader_scope_global':
