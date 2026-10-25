@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 160140 (9420 per locale)
+/// Strings: 160361 (9433 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9323,6 +9323,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Many reviews due today — new cards reduced to ${n}';
   String get srs_deck_rename => 'Rename deck';
   String get srs_deck_settings => 'Deck settings';
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  String get srs_duplicates_keep => 'Keep';
+  String get srs_duplicates_merge => 'Merge';
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  String get srs_duplicates_title => 'Possible duplicate notes';
   String get srs_empty_action => 'Add a card';
   String get srs_empty_body =>
       'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
@@ -10120,10 +10129,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  String get srs_sync_confirm_later => 'Later';
+  String get srs_sync_confirm_start => 'Start syncing';
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
   String get srs_sync_done => 'Review data synced';
@@ -10203,6 +10219,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_reason_fsrs_params => 'Before new FSRS parameters';
   String get srs_timeline_reason_import => 'Before an import';
   String get srs_timeline_reason_manual => 'Added by you';
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   String get srs_timeline_reason_note_type => 'Before changing note type';
   String get srs_timeline_reason_restore => 'Before a restore';
   String get srs_timeline_restore => 'Restore';
@@ -29166,6 +29183,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -30511,11 +30544,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -30651,6 +30696,8 @@ class _StringsAr extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -52337,6 +52384,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -53682,11 +53745,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -53822,6 +53897,8 @@ class _StringsDe extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -75632,6 +75709,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -76977,11 +77070,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -77117,6 +77222,8 @@ class _StringsEs extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -99015,6 +99122,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -100360,11 +100483,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -100500,6 +100635,8 @@ class _StringsFr extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -122162,6 +122299,22 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -123507,11 +123660,23 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -123647,6 +123812,8 @@ class _StringsId extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -145350,6 +145517,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -146695,11 +146878,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -146835,6 +147030,8 @@ class _StringsIt extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -167827,6 +168024,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -169172,11 +169385,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -169312,6 +169537,8 @@ class _StringsJa extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -190035,6 +190262,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -191380,11 +191623,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -191520,6 +191775,8 @@ class _StringsKo extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -212953,6 +213210,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -214298,11 +214571,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -214438,6 +214723,8 @@ class _StringsNl extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -236172,6 +236459,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -237517,11 +237820,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -237657,6 +237972,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -259369,6 +259686,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -260714,11 +261047,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -260854,6 +261199,8 @@ class _StringsRu extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -282317,6 +282664,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -283662,11 +284025,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -283802,6 +284177,8 @@ class _StringsTh extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -305331,6 +305708,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -306676,11 +307069,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -306816,6 +307221,8 @@ class _StringsTr extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -328341,6 +328748,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -329686,11 +330109,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -329826,6 +330261,8 @@ class _StringsVi extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -350020,6 +350457,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_deck_settings => '牌组设置';
   @override
+  String get srs_duplicates_dismiss => '不是重复';
+  @override
+  String get srs_duplicates_hint =>
+      '同一笔记类型下词形和读音都相同，多半是在两台设备上各加了一次。合并会保留选中的那条，并把所有的复习历史合在一起。';
+  @override
+  String get srs_duplicates_keep => '保留';
+  @override
+  String get srs_duplicates_merge => '合并';
+  @override
+  String srs_duplicates_merged({required Object n}) => '已合并，${n} 张卡的复习历史合在了一起';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '复习 ${n} 次';
+  @override
+  String get srs_duplicates_title => '可能重复的笔记';
+  @override
   String get srs_empty_action => '添加卡片';
   @override
   String get srs_empty_body => '往默认牌组里加一条笔记，它就会出现在这里等你复习。阅读时制的卡也可以直接进入复习。';
@@ -351260,9 +351712,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_status_suspended => '已暂停';
   @override
+  String get srs_sync_awaiting_confirm => '在复习页确认后才会开始同步复习数据';
+  @override
   String get srs_sync_backend_unsupported => '当前同步后端不支持复习数据同步';
   @override
   String get srs_sync_clock_skew => '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+  @override
+  String get srs_sync_confirm_body =>
+      '首次同步会把各台设备上的复习数据合到一起：每台设备的笔记和复习都保留，不会用一边覆盖另一边。同一个词若在两台设备上各加了一次，会在「同步冲突」里提示合并。';
+  @override
+  String get srs_sync_confirm_later => '稍后';
+  @override
+  String get srs_sync_confirm_start => '开始同步';
+  @override
+  String get srs_sync_confirm_title => '复习同步已升级';
   @override
   String get srs_sync_directory_unidentified => '暂时认不出同步目录（账号或地址还没就绪）';
   @override
@@ -351382,6 +351845,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_timeline_reason_import => '导入之前';
   @override
   String get srs_timeline_reason_manual => '手动添加';
+  @override
+  String get srs_timeline_reason_merge_notes => '合并笔记之前';
   @override
   String get srs_timeline_reason_note_type => '更改笔记类型之前';
   @override
@@ -371331,6 +371796,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_deck_settings => 'Deck settings';
   @override
+  String get srs_duplicates_dismiss => 'Not duplicates';
+  @override
+  String get srs_duplicates_hint =>
+      'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+  @override
+  String get srs_duplicates_keep => 'Keep';
+  @override
+  String get srs_duplicates_merge => 'Merge';
+  @override
+  String srs_duplicates_merged({required Object n}) =>
+      'Merged. Review history of ${n} cards was combined.';
+  @override
+  String srs_duplicates_reviews({required Object n}) => '${n} reviews';
+  @override
+  String get srs_duplicates_title => 'Possible duplicate notes';
+  @override
   String get srs_empty_action => 'Add a card';
   @override
   String get srs_empty_body =>
@@ -372676,11 +373157,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_status_suspended => 'Suspended';
   @override
+  String get srs_sync_awaiting_confirm =>
+      'Review data will sync after you confirm on the review page';
+  @override
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   @override
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_sync_confirm_body =>
+      'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+  @override
+  String get srs_sync_confirm_later => 'Later';
+  @override
+  String get srs_sync_confirm_start => 'Start syncing';
+  @override
+  String get srs_sync_confirm_title => 'Review sync has been upgraded';
   @override
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
@@ -372815,6 +373308,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_timeline_reason_import => 'Before an import';
   @override
   String get srs_timeline_reason_manual => 'Added by you';
+  @override
+  String get srs_timeline_reason_merge_notes => 'Before merging notes';
   @override
   String get srs_timeline_reason_note_type => 'Before changing note type';
   @override
@@ -391592,6 +392087,21 @@ extension on _StringsEn {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -392758,10 +393268,20 @@ extension on _StringsEn {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -392876,6 +393396,8 @@ extension on _StringsEn {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -411166,6 +411688,21 @@ extension on _StringsAr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -412332,10 +412869,20 @@ extension on _StringsAr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -412450,6 +412997,8 @@ extension on _StringsAr {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -430796,6 +431345,21 @@ extension on _StringsDe {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -431962,10 +432526,20 @@ extension on _StringsDe {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -432080,6 +432654,8 @@ extension on _StringsDe {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -450430,6 +451006,21 @@ extension on _StringsEs {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -451596,10 +452187,20 @@ extension on _StringsEs {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -451714,6 +452315,8 @@ extension on _StringsEs {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -470075,6 +470678,21 @@ extension on _StringsFr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -471241,10 +471859,20 @@ extension on _StringsFr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -471359,6 +471987,8 @@ extension on _StringsFr {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -489680,6 +490310,21 @@ extension on _StringsId {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -490846,10 +491491,20 @@ extension on _StringsId {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -490964,6 +491619,8 @@ extension on _StringsId {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -509294,6 +509951,21 @@ extension on _StringsIt {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -510460,10 +511132,20 @@ extension on _StringsIt {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -510578,6 +511260,8 @@ extension on _StringsIt {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -528842,6 +529526,21 @@ extension on _StringsJa {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -530008,10 +530707,20 @@ extension on _StringsJa {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -530126,6 +530835,8 @@ extension on _StringsJa {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -548339,6 +549050,21 @@ extension on _StringsKo {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -549505,10 +550231,20 @@ extension on _StringsKo {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -549623,6 +550359,8 @@ extension on _StringsKo {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -567926,6 +568664,21 @@ extension on _StringsNl {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -569092,10 +569845,20 @@ extension on _StringsNl {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -569210,6 +569973,8 @@ extension on _StringsNl {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -587544,6 +588309,21 @@ extension on _StringsPtBr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -588710,10 +589490,20 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -588828,6 +589618,8 @@ extension on _StringsPtBr {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -607166,6 +607958,21 @@ extension on _StringsRu {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -608332,10 +609139,20 @@ extension on _StringsRu {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -608450,6 +609267,8 @@ extension on _StringsRu {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -626748,6 +627567,21 @@ extension on _StringsTh {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -627914,10 +628748,20 @@ extension on _StringsTh {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -628032,6 +628876,8 @@ extension on _StringsTh {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -646348,6 +647194,21 @@ extension on _StringsTr {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -647514,10 +648375,20 @@ extension on _StringsTr {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -647632,6 +648503,8 @@ extension on _StringsTr {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -665943,6 +666816,21 @@ extension on _StringsVi {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -667109,10 +667997,20 @@ extension on _StringsVi {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -667227,6 +668125,8 @@ extension on _StringsVi {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
@@ -685379,6 +686279,20 @@ extension on _StringsZhCn {
         return '重命名牌组';
       case 'srs_deck_settings':
         return '牌组设置';
+      case 'srs_duplicates_dismiss':
+        return '不是重复';
+      case 'srs_duplicates_hint':
+        return '同一笔记类型下词形和读音都相同，多半是在两台设备上各加了一次。合并会保留选中的那条，并把所有的复习历史合在一起。';
+      case 'srs_duplicates_keep':
+        return '保留';
+      case 'srs_duplicates_merge':
+        return '合并';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) => '已合并，${n} 张卡的复习历史合在了一起';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '复习 ${n} 次';
+      case 'srs_duplicates_title':
+        return '可能重复的笔记';
       case 'srs_empty_action':
         return '添加卡片';
       case 'srs_empty_body':
@@ -686527,10 +687441,20 @@ extension on _StringsZhCn {
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
         return '已暂停';
+      case 'srs_sync_awaiting_confirm':
+        return '在复习页确认后才会开始同步复习数据';
       case 'srs_sync_backend_unsupported':
         return '当前同步后端不支持复习数据同步';
       case 'srs_sync_clock_skew':
         return '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+      case 'srs_sync_confirm_body':
+        return '首次同步会把各台设备上的复习数据合到一起：每台设备的笔记和复习都保留，不会用一边覆盖另一边。同一个词若在两台设备上各加了一次，会在「同步冲突」里提示合并。';
+      case 'srs_sync_confirm_later':
+        return '稍后';
+      case 'srs_sync_confirm_start':
+        return '开始同步';
+      case 'srs_sync_confirm_title':
+        return '复习同步已升级';
       case 'srs_sync_directory_unidentified':
         return '暂时认不出同步目录（账号或地址还没就绪）';
       case 'srs_sync_done':
@@ -686644,6 +687568,8 @@ extension on _StringsZhCn {
         return '导入之前';
       case 'srs_timeline_reason_manual':
         return '手动添加';
+      case 'srs_timeline_reason_merge_notes':
+        return '合并笔记之前';
       case 'srs_timeline_reason_note_type':
         return '更改笔记类型之前';
       case 'srs_timeline_reason_restore':
@@ -704779,6 +705705,21 @@ extension on _StringsZhHk {
         return 'Rename deck';
       case 'srs_deck_settings':
         return 'Deck settings';
+      case 'srs_duplicates_dismiss':
+        return 'Not duplicates';
+      case 'srs_duplicates_hint':
+        return 'Same word and reading in the same note type, probably added on two devices. Merging keeps the selected note and combines the review history of all of them.';
+      case 'srs_duplicates_keep':
+        return 'Keep';
+      case 'srs_duplicates_merge':
+        return 'Merge';
+      case 'srs_duplicates_merged':
+        return ({required Object n}) =>
+            'Merged. Review history of ${n} cards was combined.';
+      case 'srs_duplicates_reviews':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_duplicates_title':
+        return 'Possible duplicate notes';
       case 'srs_empty_action':
         return 'Add a card';
       case 'srs_empty_body':
@@ -705944,10 +706885,20 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
         return 'Suspended';
+      case 'srs_sync_awaiting_confirm':
+        return 'Review data will sync after you confirm on the review page';
       case 'srs_sync_backend_unsupported':
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_confirm_body':
+        return 'The first sync combines the review data on all your devices: notes and reviews from every device are kept, nothing is overwritten. If the same word was added on two devices, Sync conflicts will offer to merge them.';
+      case 'srs_sync_confirm_later':
+        return 'Later';
+      case 'srs_sync_confirm_start':
+        return 'Start syncing';
+      case 'srs_sync_confirm_title':
+        return 'Review sync has been upgraded';
       case 'srs_sync_directory_unidentified':
         return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
@@ -706062,6 +707013,8 @@ extension on _StringsZhHk {
         return 'Before an import';
       case 'srs_timeline_reason_manual':
         return 'Added by you';
+      case 'srs_timeline_reason_merge_notes':
+        return 'Before merging notes';
       case 'srs_timeline_reason_note_type':
         return 'Before changing note type';
       case 'srs_timeline_reason_restore':
