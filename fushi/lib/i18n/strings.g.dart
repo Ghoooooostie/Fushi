@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159800 (9400 per locale)
+/// Strings: 159868 (9404 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5695,6 +5695,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Invert bottom-bar skip buttons';
   String get invert_swipe_direction => 'Invert swipe page turn direction';
   String get invert_volume_buttons => 'Invert volume buttons';
+  String get item_actions_group_content => 'Content';
+  String get item_actions_group_organize => 'Organize';
+  String get item_actions_group_progress => 'Progress';
+  String get item_actions_group_settings => 'Settings';
   String get jellyfin_auto_list_hint =>
       'Off: entering the video page sends no request to the media server; pull to refresh in the video library to list items manually. Recommended for very large servers, where automatic enumeration looks like scraping and can trip abuse detection.';
   String get jellyfin_auto_list_title => 'Auto-list items on entering Video';
@@ -22882,6 +22886,14 @@ class _StringsAr extends _StringsEn {
   String get invert_swipe_direction => 'عكس اتجاه التمرير لقلب الصفحات';
   @override
   String get invert_volume_buttons => 'عكس أزرار الصوت';
+  @override
+  String get item_actions_group_content => 'المحتوى';
+  @override
+  String get item_actions_group_organize => 'تنظيم';
+  @override
+  String get item_actions_group_progress => 'التقدم';
+  @override
+  String get item_actions_group_settings => 'الإعدادات';
   @override
   String get jellyfin_auto_list_hint =>
       'عند الإيقاف: لا يُرسل فتح صفحة الفيديو أي طلب إلى خادم الوسائط؛ اسحب للتحديث في مكتبة الفيديو لسرد العناصر يدويًا. يُنصح به للخوادم الكبيرة جدًا، حيث يبدو السرد التلقائي كأنه كشط وقد يُفعّل كشف إساءة الاستخدام.';
@@ -45884,6 +45896,14 @@ class _StringsDe extends _StringsEn {
   String get invert_swipe_direction => 'Wischrichtung zum Blättern umkehren';
   @override
   String get invert_volume_buttons => 'Lautstärketasten invertieren';
+  @override
+  String get item_actions_group_content => 'Inhalt';
+  @override
+  String get item_actions_group_organize => 'Organisieren';
+  @override
+  String get item_actions_group_progress => 'Fortschritt';
+  @override
+  String get item_actions_group_settings => 'Einstellungen';
   @override
   String get jellyfin_auto_list_hint =>
       'Aus: Beim Öffnen der Videoseite geht keine Anfrage an den Medienserver; ziehe in der Videobibliothek zum Aktualisieren, um manuell aufzulisten. Empfohlen für sehr große Server, wo automatisches Auflisten wie Scraping aussieht und die Missbrauchserkennung auslösen kann.';
@@ -69122,6 +69142,14 @@ class _StringsEs extends _StringsEn {
       'Invertir dirección de deslizamiento para pasar páginas';
   @override
   String get invert_volume_buttons => 'Invertir botones de volumen';
+  @override
+  String get item_actions_group_content => 'Contenido';
+  @override
+  String get item_actions_group_organize => 'Organizar';
+  @override
+  String get item_actions_group_progress => 'Progreso';
+  @override
+  String get item_actions_group_settings => 'Ajustes';
   @override
   String get jellyfin_auto_list_hint =>
       'Desactivado: entrar en la página de vídeo no envía ninguna petición al servidor de medios; desliza para actualizar en la videoteca para listar manualmente. Recomendado en servidores muy grandes, donde la enumeración automática parece scraping y puede activar la detección de abuso.';
@@ -92434,6 +92462,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Inverser les boutons de volume';
   @override
+  String get item_actions_group_content => 'Contenu';
+  @override
+  String get item_actions_group_organize => 'Organiser';
+  @override
+  String get item_actions_group_progress => 'Progression';
+  @override
+  String get item_actions_group_settings => 'Paramètres';
+  @override
   String get jellyfin_auto_list_hint =>
       'Désactivé : ouvrir la page vidéo n\'envoie aucune requête au serveur média ; tirez pour actualiser dans la vidéothèque afin de lister manuellement. Recommandé pour les très gros serveurs, où l\'énumération automatique ressemble à du scraping et peut déclencher la détection d\'abus.';
   @override
@@ -115640,6 +115676,14 @@ class _StringsId extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Balik tombol volume';
   @override
+  String get item_actions_group_content => 'Konten';
+  @override
+  String get item_actions_group_organize => 'Atur';
+  @override
+  String get item_actions_group_progress => 'Progres';
+  @override
+  String get item_actions_group_settings => 'Pengaturan';
+  @override
   String get jellyfin_auto_list_hint =>
       'Mati: masuk ke halaman video tidak mengirim permintaan apa pun ke server media; tarik untuk menyegarkan di pustaka video agar item didaftar manual. Disarankan untuk server yang sangat besar, karena pendaftaran otomatis terlihat seperti scraping dan bisa memicu deteksi penyalahgunaan.';
   @override
@@ -138722,6 +138766,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Inverti tasti volume';
   @override
+  String get item_actions_group_content => 'Contenuto';
+  @override
+  String get item_actions_group_organize => 'Organizza';
+  @override
+  String get item_actions_group_progress => 'Avanzamento';
+  @override
+  String get item_actions_group_settings => 'Impostazioni';
+  @override
   String get jellyfin_auto_list_hint =>
       'Disattivato: aprire la pagina video non invia alcuna richiesta al server multimediale; tira per aggiornare nella videoteca per elencare manualmente. Consigliato per server molto grandi, dove l\'enumerazione automatica sembra scraping e può far scattare il rilevamento abusi.';
   @override
@@ -161455,6 +161507,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get invert_volume_buttons => '音量ボタンの方向を反転';
   @override
+  String get item_actions_group_content => 'コンテンツ';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '進捗';
+  @override
+  String get item_actions_group_settings => '設定';
+  @override
   String get jellyfin_auto_list_hint =>
       'オフ: 動画ページを開いてもメディアサーバーにリクエストを送りません。動画ライブラリで引っ張って更新すると手動で一覧表示できます。非常に大きなサーバーでは、自動列挙がスクレイピングのように見えて不正利用検知に引っかかることがあるため、オフを推奨します。';
   @override
@@ -183597,6 +183657,14 @@ class _StringsKo extends _StringsEn {
   String get invert_swipe_direction => '스와이프 페이지 넘김 방향 반전';
   @override
   String get invert_volume_buttons => '볼륨 버튼 반전';
+  @override
+  String get item_actions_group_content => '콘텐츠';
+  @override
+  String get item_actions_group_organize => '정리';
+  @override
+  String get item_actions_group_progress => '진행';
+  @override
+  String get item_actions_group_settings => '설정';
   @override
   String get jellyfin_auto_list_hint =>
       '끄면: 비디오 페이지에 들어가도 미디어 서버로 요청을 보내지 않아요. 비디오 라이브러리에서 당겨서 새로고침하면 수동으로 나열할 수 있어요. 아주 큰 서버에서는 자동 열거가 스크래핑처럼 보여 남용 감지에 걸릴 수 있으니 끄는 것을 권장해요.';
@@ -206206,6 +206274,14 @@ class _StringsNl extends _StringsEn {
   String get invert_swipe_direction => 'Veegrichting voor bladeren omdraaien';
   @override
   String get invert_volume_buttons => 'Volumeknoppen omkeren';
+  @override
+  String get item_actions_group_content => 'Inhoud';
+  @override
+  String get item_actions_group_organize => 'Ordenen';
+  @override
+  String get item_actions_group_progress => 'Voortgang';
+  @override
+  String get item_actions_group_settings => 'Instellingen';
   @override
   String get jellyfin_auto_list_hint =>
       'Uit: bij het openen van de videopagina wordt geen verzoek naar de mediaserver gestuurd; trek in de videobibliotheek omlaag om te vernieuwen en items handmatig te tonen. Aanbevolen voor zeer grote servers, waar automatisch opsommen op scraping lijkt en misbruikdetectie kan activeren.';
@@ -229369,6 +229445,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Inverter botões de volume';
   @override
+  String get item_actions_group_content => 'Conteúdo';
+  @override
+  String get item_actions_group_organize => 'Organizar';
+  @override
+  String get item_actions_group_progress => 'Progresso';
+  @override
+  String get item_actions_group_settings => 'Configurações';
+  @override
   String get jellyfin_auto_list_hint =>
       'Desativado: entrar na página de vídeo não envia nenhuma requisição ao servidor de mídia; puxe para atualizar na videoteca para listar manualmente. Recomendado para servidores muito grandes, onde a enumeração automática parece scraping e pode acionar a detecção de abuso.';
   @override
@@ -252521,6 +252605,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Инвертировать кнопки громкости';
   @override
+  String get item_actions_group_content => 'Содержимое';
+  @override
+  String get item_actions_group_organize => 'Упорядочить';
+  @override
+  String get item_actions_group_progress => 'Прогресс';
+  @override
+  String get item_actions_group_settings => 'Настройки';
+  @override
   String get jellyfin_auto_list_hint =>
       'Выключено: при открытии страницы видео запрос на медиасервер не отправляется; потяните для обновления в видеотеке, чтобы вывести список вручную. Рекомендуется для очень больших серверов, где автоматический перебор выглядит как скрапинг и может сработать защита от злоупотреблений.';
   @override
@@ -275522,6 +275614,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get invert_volume_buttons => 'กลับปุ่มเสียง';
   @override
+  String get item_actions_group_content => 'เนื้อหา';
+  @override
+  String get item_actions_group_organize => 'จัดระเบียบ';
+  @override
+  String get item_actions_group_progress => 'ความคืบหน้า';
+  @override
+  String get item_actions_group_settings => 'การตั้งค่า';
+  @override
   String get jellyfin_auto_list_hint =>
       'ปิด: การเข้าหน้าวิดีโอจะไม่ส่งคำขอไปยังมีเดียเซิร์ฟเวอร์ ให้ดึงเพื่อรีเฟรชในคลังวิดีโอเพื่อแสดงรายการเอง แนะนำสำหรับเซิร์ฟเวอร์ขนาดใหญ่มาก เพราะการไล่รายการอัตโนมัติดูเหมือนการขูดข้อมูลและอาจไปกระตุ้นระบบตรวจจับการใช้งานผิดปกติ';
   @override
@@ -298442,6 +298542,14 @@ class _StringsTr extends _StringsEn {
   String get invert_swipe_direction => 'Kaydırma yönünü tersine çevir';
   @override
   String get invert_volume_buttons => 'Ses düğmelerini ters çevir';
+  @override
+  String get item_actions_group_content => 'İçerik';
+  @override
+  String get item_actions_group_organize => 'Düzenle';
+  @override
+  String get item_actions_group_progress => 'İlerleme';
+  @override
+  String get item_actions_group_settings => 'Ayarlar';
   @override
   String get jellyfin_auto_list_hint =>
       'Kapalı: video sayfasına girmek medya sunucusuna hiçbir istek göndermez; öğeleri elle listelemek için video kitaplığında çekerek yenileyin. Otomatik sayımın kazıma gibi görünüp kötüye kullanım tespitini tetikleyebildiği çok büyük sunucular için önerilir.';
@@ -321432,6 +321540,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get invert_volume_buttons => 'Đảo ngược nút âm lượng';
   @override
+  String get item_actions_group_content => 'Nội dung';
+  @override
+  String get item_actions_group_organize => 'Sắp xếp';
+  @override
+  String get item_actions_group_progress => 'Tiến độ';
+  @override
+  String get item_actions_group_settings => 'Cài đặt';
+  @override
   String get jellyfin_auto_list_hint =>
       'Tắt: vào trang video sẽ không gửi yêu cầu nào tới máy chủ phương tiện; kéo để làm mới trong thư viện video để liệt kê thủ công. Nên tắt với máy chủ rất lớn, vì việc liệt kê tự động trông giống thu thập dữ liệu và có thể kích hoạt cơ chế phát hiện lạm dụng.';
   @override
@@ -343553,6 +343669,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get invert_volume_buttons => '反转音量键方向';
   @override
+  String get item_actions_group_content => '内容';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '进度';
+  @override
+  String get item_actions_group_settings => '设置';
+  @override
   String get jellyfin_auto_list_hint =>
       '关闭后：进入视频页不向媒体服务器发任何请求，需在视频库下拉刷新手动列出。超大服务器建议关闭——自动枚举看起来像刮削，可能触发服务器的滥用检测。';
   @override
@@ -364717,6 +364841,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get invert_volume_buttons => '反轉音量鍵方向';
   @override
+  String get item_actions_group_content => '內容';
+  @override
+  String get item_actions_group_organize => '整理';
+  @override
+  String get item_actions_group_progress => '進度';
+  @override
+  String get item_actions_group_settings => '設定';
+  @override
   String get jellyfin_auto_list_hint =>
       '關閉後：進入影片頁不向媒體伺服器發任何請求，需在影片庫下拉重新整理手動列出。超大伺服器建議關閉——自動列舉看起來像刮削，可能觸發伺服器的濫用偵測。';
   @override
@@ -385391,6 +385523,14 @@ extension on _StringsEn {
         return 'Invert swipe page turn direction';
       case 'invert_volume_buttons':
         return 'Invert volume buttons';
+      case 'item_actions_group_content':
+        return 'Content';
+      case 'item_actions_group_organize':
+        return 'Organize';
+      case 'item_actions_group_progress':
+        return 'Progress';
+      case 'item_actions_group_settings':
+        return 'Settings';
       case 'jellyfin_auto_list_hint':
         return 'Off: entering the video page sends no request to the media server; pull to refresh in the video library to list items manually. Recommended for very large servers, where automatic enumeration looks like scraping and can trip abuse detection.';
       case 'jellyfin_auto_list_title':
@@ -404930,6 +405070,14 @@ extension on _StringsAr {
         return 'عكس اتجاه التمرير لقلب الصفحات';
       case 'invert_volume_buttons':
         return 'عكس أزرار الصوت';
+      case 'item_actions_group_content':
+        return 'المحتوى';
+      case 'item_actions_group_organize':
+        return 'تنظيم';
+      case 'item_actions_group_progress':
+        return 'التقدم';
+      case 'item_actions_group_settings':
+        return 'الإعدادات';
       case 'jellyfin_auto_list_hint':
         return 'عند الإيقاف: لا يُرسل فتح صفحة الفيديو أي طلب إلى خادم الوسائط؛ اسحب للتحديث في مكتبة الفيديو لسرد العناصر يدويًا. يُنصح به للخوادم الكبيرة جدًا، حيث يبدو السرد التلقائي كأنه كشط وقد يُفعّل كشف إساءة الاستخدام.';
       case 'jellyfin_auto_list_title':
@@ -424507,6 +424655,14 @@ extension on _StringsDe {
         return 'Wischrichtung zum Blättern umkehren';
       case 'invert_volume_buttons':
         return 'Lautstärketasten invertieren';
+      case 'item_actions_group_content':
+        return 'Inhalt';
+      case 'item_actions_group_organize':
+        return 'Organisieren';
+      case 'item_actions_group_progress':
+        return 'Fortschritt';
+      case 'item_actions_group_settings':
+        return 'Einstellungen';
       case 'jellyfin_auto_list_hint':
         return 'Aus: Beim Öffnen der Videoseite geht keine Anfrage an den Medienserver; ziehe in der Videobibliothek zum Aktualisieren, um manuell aufzulisten. Empfohlen für sehr große Server, wo automatisches Auflisten wie Scraping aussieht und die Missbrauchserkennung auslösen kann.';
       case 'jellyfin_auto_list_title':
@@ -444108,6 +444264,14 @@ extension on _StringsEs {
         return 'Invertir dirección de deslizamiento para pasar páginas';
       case 'invert_volume_buttons':
         return 'Invertir botones de volumen';
+      case 'item_actions_group_content':
+        return 'Contenido';
+      case 'item_actions_group_organize':
+        return 'Organizar';
+      case 'item_actions_group_progress':
+        return 'Progreso';
+      case 'item_actions_group_settings':
+        return 'Ajustes';
       case 'jellyfin_auto_list_hint':
         return 'Desactivado: entrar en la página de vídeo no envía ninguna petición al servidor de medios; desliza para actualizar en la videoteca para listar manualmente. Recomendado en servidores muy grandes, donde la enumeración automática parece scraping y puede activar la detección de abuso.';
       case 'jellyfin_auto_list_title':
@@ -463718,6 +463882,14 @@ extension on _StringsFr {
         return 'Inverser la direction du balayage pour tourner les pages';
       case 'invert_volume_buttons':
         return 'Inverser les boutons de volume';
+      case 'item_actions_group_content':
+        return 'Contenu';
+      case 'item_actions_group_organize':
+        return 'Organiser';
+      case 'item_actions_group_progress':
+        return 'Progression';
+      case 'item_actions_group_settings':
+        return 'Paramètres';
       case 'jellyfin_auto_list_hint':
         return 'Désactivé : ouvrir la page vidéo n\'envoie aucune requête au serveur média ; tirez pour actualiser dans la vidéothèque afin de lister manuellement. Recommandé pour les très gros serveurs, où l\'énumération automatique ressemble à du scraping et peut déclencher la détection d\'abus.';
       case 'jellyfin_auto_list_title':
@@ -483303,6 +483475,14 @@ extension on _StringsId {
         return 'Balik arah geser untuk membalik halaman';
       case 'invert_volume_buttons':
         return 'Balik tombol volume';
+      case 'item_actions_group_content':
+        return 'Konten';
+      case 'item_actions_group_organize':
+        return 'Atur';
+      case 'item_actions_group_progress':
+        return 'Progres';
+      case 'item_actions_group_settings':
+        return 'Pengaturan';
       case 'jellyfin_auto_list_hint':
         return 'Mati: masuk ke halaman video tidak mengirim permintaan apa pun ke server media; tarik untuk menyegarkan di pustaka video agar item didaftar manual. Disarankan untuk server yang sangat besar, karena pendaftaran otomatis terlihat seperti scraping dan bisa memicu deteksi penyalahgunaan.';
       case 'jellyfin_auto_list_title':
@@ -502872,6 +503052,14 @@ extension on _StringsIt {
         return 'Inverti direzione scorrimento per voltare pagina';
       case 'invert_volume_buttons':
         return 'Inverti tasti volume';
+      case 'item_actions_group_content':
+        return 'Contenuto';
+      case 'item_actions_group_organize':
+        return 'Organizza';
+      case 'item_actions_group_progress':
+        return 'Avanzamento';
+      case 'item_actions_group_settings':
+        return 'Impostazioni';
       case 'jellyfin_auto_list_hint':
         return 'Disattivato: aprire la pagina video non invia alcuna richiesta al server multimediale; tira per aggiornare nella videoteca per elencare manualmente. Consigliato per server molto grandi, dove l\'enumerazione automatica sembra scraping e può far scattare il rilevamento abusi.';
       case 'jellyfin_auto_list_title':
@@ -522409,6 +522597,14 @@ extension on _StringsJa {
         return 'スワイプページ送り方向を反転';
       case 'invert_volume_buttons':
         return '音量ボタンの方向を反転';
+      case 'item_actions_group_content':
+        return 'コンテンツ';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '進捗';
+      case 'item_actions_group_settings':
+        return '設定';
       case 'jellyfin_auto_list_hint':
         return 'オフ: 動画ページを開いてもメディアサーバーにリクエストを送りません。動画ライブラリで引っ張って更新すると手動で一覧表示できます。非常に大きなサーバーでは、自動列挙がスクレイピングのように見えて不正利用検知に引っかかることがあるため、オフを推奨します。';
       case 'jellyfin_auto_list_title':
@@ -541871,6 +542067,14 @@ extension on _StringsKo {
         return '스와이프 페이지 넘김 방향 반전';
       case 'invert_volume_buttons':
         return '볼륨 버튼 반전';
+      case 'item_actions_group_content':
+        return '콘텐츠';
+      case 'item_actions_group_organize':
+        return '정리';
+      case 'item_actions_group_progress':
+        return '진행';
+      case 'item_actions_group_settings':
+        return '설정';
       case 'jellyfin_auto_list_hint':
         return '끄면: 비디오 페이지에 들어가도 미디어 서버로 요청을 보내지 않아요. 비디오 라이브러리에서 당겨서 새로고침하면 수동으로 나열할 수 있어요. 아주 큰 서버에서는 자동 열거가 스크래핑처럼 보여 남용 감지에 걸릴 수 있으니 끄는 것을 권장해요.';
       case 'jellyfin_auto_list_title':
@@ -561395,6 +561599,14 @@ extension on _StringsNl {
         return 'Veegrichting voor bladeren omdraaien';
       case 'invert_volume_buttons':
         return 'Volumeknoppen omkeren';
+      case 'item_actions_group_content':
+        return 'Inhoud';
+      case 'item_actions_group_organize':
+        return 'Ordenen';
+      case 'item_actions_group_progress':
+        return 'Voortgang';
+      case 'item_actions_group_settings':
+        return 'Instellingen';
       case 'jellyfin_auto_list_hint':
         return 'Uit: bij het openen van de videopagina wordt geen verzoek naar de mediaserver gestuurd; trek in de videobibliotheek omlaag om te vernieuwen en items handmatig te tonen. Aanbevolen voor zeer grote servers, waar automatisch opsommen op scraping lijkt en misbruikdetectie kan activeren.';
       case 'jellyfin_auto_list_title':
@@ -580981,6 +581193,14 @@ extension on _StringsPtBr {
         return 'Inverter direção do deslizar para virar páginas';
       case 'invert_volume_buttons':
         return 'Inverter botões de volume';
+      case 'item_actions_group_content':
+        return 'Conteúdo';
+      case 'item_actions_group_organize':
+        return 'Organizar';
+      case 'item_actions_group_progress':
+        return 'Progresso';
+      case 'item_actions_group_settings':
+        return 'Configurações';
       case 'jellyfin_auto_list_hint':
         return 'Desativado: entrar na página de vídeo não envia nenhuma requisição ao servidor de mídia; puxe para atualizar na videoteca para listar manualmente. Recomendado para servidores muito grandes, onde a enumeração automática parece scraping e pode acionar a detecção de abuso.';
       case 'jellyfin_auto_list_title':
@@ -600568,6 +600788,14 @@ extension on _StringsRu {
         return 'Инвертировать направление свайпа для перелистывания';
       case 'invert_volume_buttons':
         return 'Инвертировать кнопки громкости';
+      case 'item_actions_group_content':
+        return 'Содержимое';
+      case 'item_actions_group_organize':
+        return 'Упорядочить';
+      case 'item_actions_group_progress':
+        return 'Прогресс';
+      case 'item_actions_group_settings':
+        return 'Настройки';
       case 'jellyfin_auto_list_hint':
         return 'Выключено: при открытии страницы видео запрос на медиасервер не отправляется; потяните для обновления в видеотеке, чтобы вывести список вручную. Рекомендуется для очень больших серверов, где автоматический перебор выглядит как скрапинг и может сработать защита от злоупотреблений.';
       case 'jellyfin_auto_list_title':
@@ -620127,6 +620355,14 @@ extension on _StringsTh {
         return 'กลับทิศทางการปัดเปลี่ยนหน้า';
       case 'invert_volume_buttons':
         return 'กลับปุ่มเสียง';
+      case 'item_actions_group_content':
+        return 'เนื้อหา';
+      case 'item_actions_group_organize':
+        return 'จัดระเบียบ';
+      case 'item_actions_group_progress':
+        return 'ความคืบหน้า';
+      case 'item_actions_group_settings':
+        return 'การตั้งค่า';
       case 'jellyfin_auto_list_hint':
         return 'ปิด: การเข้าหน้าวิดีโอจะไม่ส่งคำขอไปยังมีเดียเซิร์ฟเวอร์ ให้ดึงเพื่อรีเฟรชในคลังวิดีโอเพื่อแสดงรายการเอง แนะนำสำหรับเซิร์ฟเวอร์ขนาดใหญ่มาก เพราะการไล่รายการอัตโนมัติดูเหมือนการขูดข้อมูลและอาจไปกระตุ้นระบบตรวจจับการใช้งานผิดปกติ';
       case 'jellyfin_auto_list_title':
@@ -639687,6 +639923,14 @@ extension on _StringsTr {
         return 'Kaydırma yönünü tersine çevir';
       case 'invert_volume_buttons':
         return 'Ses düğmelerini ters çevir';
+      case 'item_actions_group_content':
+        return 'İçerik';
+      case 'item_actions_group_organize':
+        return 'Düzenle';
+      case 'item_actions_group_progress':
+        return 'İlerleme';
+      case 'item_actions_group_settings':
+        return 'Ayarlar';
       case 'jellyfin_auto_list_hint':
         return 'Kapalı: video sayfasına girmek medya sunucusuna hiçbir istek göndermez; öğeleri elle listelemek için video kitaplığında çekerek yenileyin. Otomatik sayımın kazıma gibi görünüp kötüye kullanım tespitini tetikleyebildiği çok büyük sunucular için önerilir.';
       case 'jellyfin_auto_list_title':
@@ -659250,6 +659494,14 @@ extension on _StringsVi {
         return 'Đảo ngược hướng vuốt lật trang';
       case 'invert_volume_buttons':
         return 'Đảo ngược nút âm lượng';
+      case 'item_actions_group_content':
+        return 'Nội dung';
+      case 'item_actions_group_organize':
+        return 'Sắp xếp';
+      case 'item_actions_group_progress':
+        return 'Tiến độ';
+      case 'item_actions_group_settings':
+        return 'Cài đặt';
       case 'jellyfin_auto_list_hint':
         return 'Tắt: vào trang video sẽ không gửi yêu cầu nào tới máy chủ phương tiện; kéo để làm mới trong thư viện video để liệt kê thủ công. Nên tắt với máy chủ rất lớn, vì việc liệt kê tự động trông giống thu thập dữ liệu và có thể kích hoạt cơ chế phát hiện lạm dụng.';
       case 'jellyfin_auto_list_title':
@@ -678696,6 +678948,14 @@ extension on _StringsZhCn {
         return '反转滑动翻页方向';
       case 'invert_volume_buttons':
         return '反转音量键方向';
+      case 'item_actions_group_content':
+        return '内容';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '进度';
+      case 'item_actions_group_settings':
+        return '设置';
       case 'jellyfin_auto_list_hint':
         return '关闭后：进入视频页不向媒体服务器发任何请求，需在视频库下拉刷新手动列出。超大服务器建议关闭——自动枚举看起来像刮削，可能触发服务器的滥用检测。';
       case 'jellyfin_auto_list_title':
@@ -698040,6 +698300,14 @@ extension on _StringsZhHk {
         return '反轉滑動翻頁方向';
       case 'invert_volume_buttons':
         return '反轉音量鍵方向';
+      case 'item_actions_group_content':
+        return '內容';
+      case 'item_actions_group_organize':
+        return '整理';
+      case 'item_actions_group_progress':
+        return '進度';
+      case 'item_actions_group_settings':
+        return '設定';
       case 'jellyfin_auto_list_hint':
         return '關閉後：進入影片頁不向媒體伺服器發任何請求，需在影片庫下拉重新整理手動列出。超大伺服器建議關閉——自動列舉看起來像刮削，可能觸發伺服器的濫用偵測。';
       case 'jellyfin_auto_list_title':
