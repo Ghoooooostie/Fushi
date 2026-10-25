@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 161330 (9490 per locale)
+/// Strings: 161381 (9493 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10204,6 +10204,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_sync_done => 'Review data synced';
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
   String srs_sync_profile_not_linked({required Object name}) =>
@@ -10243,6 +10245,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_location_add => 'Add folder';
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
   String get srs_timeline_location_channel => 'Sync channel';
   String get srs_timeline_location_encrypt => 'Turn on encryption';
   String get srs_timeline_location_encrypt_body =>
@@ -10257,6 +10261,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_timeline_location_encrypted_hint =>
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   String get srs_timeline_location_idle => 'Not in use';
   String srs_timeline_location_last_ok({required Object time}) =>
       'Last synced ${time}';
@@ -30752,6 +30758,9 @@ class _StringsAr extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -30819,6 +30828,9 @@ class _StringsAr extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -30841,6 +30853,9 @@ class _StringsAr extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -54093,6 +54108,9 @@ class _StringsDe extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -54160,6 +54178,9 @@ class _StringsDe extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -54182,6 +54203,9 @@ class _StringsDe extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -77558,6 +77582,9 @@ class _StringsEs extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -77625,6 +77652,9 @@ class _StringsEs extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -77647,6 +77677,9 @@ class _StringsEs extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -101111,6 +101144,9 @@ class _StringsFr extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -101178,6 +101214,9 @@ class _StringsFr extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -101200,6 +101239,9 @@ class _StringsFr extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -124428,6 +124470,9 @@ class _StringsId extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -124495,6 +124540,9 @@ class _StringsId extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -124517,6 +124565,9 @@ class _StringsId extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -147786,6 +147837,9 @@ class _StringsIt extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -147853,6 +147907,9 @@ class _StringsIt extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -147875,6 +147932,9 @@ class _StringsIt extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -170433,6 +170493,9 @@ class _StringsJa extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -170500,6 +170563,9 @@ class _StringsJa extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -170522,6 +170588,9 @@ class _StringsJa extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -192811,6 +192880,9 @@ class _StringsKo extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -192878,6 +192950,9 @@ class _StringsKo extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -192900,6 +192975,9 @@ class _StringsKo extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -215898,6 +215976,9 @@ class _StringsNl extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -215965,6 +216046,9 @@ class _StringsNl extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -215987,6 +216071,9 @@ class _StringsNl extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -239287,6 +239374,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -239354,6 +239444,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -239376,6 +239469,9 @@ class _StringsPtBr extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -262654,6 +262750,9 @@ class _StringsRu extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -262721,6 +262820,9 @@ class _StringsRu extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -262743,6 +262845,9 @@ class _StringsRu extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -285772,6 +285877,9 @@ class _StringsTh extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -285839,6 +285947,9 @@ class _StringsTh extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -285861,6 +285972,9 @@ class _StringsTh extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -308956,6 +309070,9 @@ class _StringsTr extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -309023,6 +309140,9 @@ class _StringsTr extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -309045,6 +309165,9 @@ class _StringsTr extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -332136,6 +332259,9 @@ class _StringsVi extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -332203,6 +332329,9 @@ class _StringsVi extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -332225,6 +332354,9 @@ class _StringsVi extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -353863,6 +353995,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_sync_failed({required Object reason}) => '复习数据同步失败：${reason}';
   @override
+  String get srs_sync_location_meta_unavailable => '暂时读不到这个位置的设置文件，下次同步时再试。';
+  @override
   String get srs_sync_no_backend => '还没有配置同步服务';
   @override
   String get srs_sync_now => '立即同步';
@@ -353923,6 +354057,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_timeline_location_add_hint => 'U 盘、NAS，或由其它同步工具同步的文件夹';
   @override
+  String get srs_timeline_location_bad_kdf => '这个位置的加密参数无效，已暂停同步。';
+  @override
   String get srs_timeline_location_channel => '同步通道';
   @override
   String get srs_timeline_location_encrypt => '开启加密';
@@ -353942,6 +354078,9 @@ class _StringsZhCn extends _StringsEn {
       '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
   @override
   String get srs_timeline_location_encryption => '端到端加密';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      '这个位置的加密设置不见了。为避免以明文上传，已暂停同步——点按以恢复加密设置。';
   @override
   String get srs_timeline_location_idle => '未使用';
   @override
@@ -375448,6 +375587,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_sync_failed({required Object reason}) =>
       'Couldn\'t sync review data: ${reason}';
   @override
+  String get srs_sync_location_meta_unavailable =>
+      'The location\'s settings file can\'t be read right now; it will be retried next time.';
+  @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
@@ -375514,6 +375656,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_timeline_location_add_hint =>
       'A USB drive, a NAS, or a folder another sync tool keeps in sync';
   @override
+  String get srs_timeline_location_bad_kdf =>
+      'This location\'s encryption parameters are invalid. Sync is paused.';
+  @override
   String get srs_timeline_location_channel => 'Sync channel';
   @override
   String get srs_timeline_location_encrypt => 'Turn on encryption';
@@ -375536,6 +375681,9 @@ class _StringsZhHk extends _StringsEn {
       'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
   @override
   String get srs_timeline_location_encryption => 'End-to-end encryption';
+  @override
+  String get srs_timeline_location_encryption_missing =>
+      'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
   @override
   String get srs_timeline_location_idle => 'Not in use';
   @override
@@ -395676,6 +395824,8 @@ extension on _StringsEn {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -395733,6 +395883,8 @@ extension on _StringsEn {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -395751,6 +395903,8 @@ extension on _StringsEn {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -415392,6 +415546,8 @@ extension on _StringsAr {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -415449,6 +415605,8 @@ extension on _StringsAr {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -415467,6 +415625,8 @@ extension on _StringsAr {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -435164,6 +435324,8 @@ extension on _StringsDe {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -435221,6 +435383,8 @@ extension on _StringsDe {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -435239,6 +435403,8 @@ extension on _StringsDe {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -454940,6 +455106,8 @@ extension on _StringsEs {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -454997,6 +455165,8 @@ extension on _StringsEs {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -455015,6 +455185,8 @@ extension on _StringsEs {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -474727,6 +474899,8 @@ extension on _StringsFr {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -474784,6 +474958,8 @@ extension on _StringsFr {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -474802,6 +474978,8 @@ extension on _StringsFr {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -494474,6 +494652,8 @@ extension on _StringsId {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -494531,6 +494711,8 @@ extension on _StringsId {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -494549,6 +494731,8 @@ extension on _StringsId {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -514230,6 +514414,8 @@ extension on _StringsIt {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -514287,6 +514473,8 @@ extension on _StringsIt {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -514305,6 +514493,8 @@ extension on _StringsIt {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -533920,6 +534110,8 @@ extension on _StringsJa {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -533977,6 +534169,8 @@ extension on _StringsJa {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -533995,6 +534189,8 @@ extension on _StringsJa {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -553559,6 +553755,8 @@ extension on _StringsKo {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -553616,6 +553814,8 @@ extension on _StringsKo {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -553634,6 +553834,8 @@ extension on _StringsKo {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -573288,6 +573490,8 @@ extension on _StringsNl {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -573345,6 +573549,8 @@ extension on _StringsNl {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -573363,6 +573569,8 @@ extension on _StringsNl {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -593048,6 +593256,8 @@ extension on _StringsPtBr {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -593105,6 +593315,8 @@ extension on _StringsPtBr {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -593123,6 +593335,8 @@ extension on _StringsPtBr {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -612812,6 +613026,8 @@ extension on _StringsRu {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -612869,6 +613085,8 @@ extension on _StringsRu {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -612887,6 +613105,8 @@ extension on _StringsRu {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -632536,6 +632756,8 @@ extension on _StringsTh {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -632593,6 +632815,8 @@ extension on _StringsTh {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -632611,6 +632835,8 @@ extension on _StringsTh {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -652278,6 +652504,8 @@ extension on _StringsTr {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -652335,6 +652563,8 @@ extension on _StringsTr {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -652353,6 +652583,8 @@ extension on _StringsTr {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -672015,6 +672247,8 @@ extension on _StringsVi {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -672072,6 +672306,8 @@ extension on _StringsVi {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -672090,6 +672326,8 @@ extension on _StringsVi {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
@@ -691573,6 +691811,8 @@ extension on _StringsZhCn {
         return '复习数据已同步';
       case 'srs_sync_failed':
         return ({required Object reason}) => '复习数据同步失败：${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return '暂时读不到这个位置的设置文件，下次同步时再试。';
       case 'srs_sync_no_backend':
         return '还没有配置同步服务';
       case 'srs_sync_now':
@@ -691630,6 +691870,8 @@ extension on _StringsZhCn {
         return '添加文件夹';
       case 'srs_timeline_location_add_hint':
         return 'U 盘、NAS，或由其它同步工具同步的文件夹';
+      case 'srs_timeline_location_bad_kdf':
+        return '这个位置的加密参数无效，已暂停同步。';
       case 'srs_timeline_location_channel':
         return '同步通道';
       case 'srs_timeline_location_encrypt':
@@ -691648,6 +691890,8 @@ extension on _StringsZhCn {
         return '这个位置已开启端到端加密，其它设备要输入同一个口令才能在这里同步。';
       case 'srs_timeline_location_encryption':
         return '端到端加密';
+      case 'srs_timeline_location_encryption_missing':
+        return '这个位置的加密设置不见了。为避免以明文上传，已暂停同步——点按以恢复加密设置。';
       case 'srs_timeline_location_idle':
         return '未使用';
       case 'srs_timeline_location_last_ok':
@@ -711133,6 +711377,8 @@ extension on _StringsZhHk {
       case 'srs_sync_failed':
         return ({required Object reason}) =>
             'Couldn\'t sync review data: ${reason}';
+      case 'srs_sync_location_meta_unavailable':
+        return 'The location\'s settings file can\'t be read right now; it will be retried next time.';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -711190,6 +711436,8 @@ extension on _StringsZhHk {
         return 'Add folder';
       case 'srs_timeline_location_add_hint':
         return 'A USB drive, a NAS, or a folder another sync tool keeps in sync';
+      case 'srs_timeline_location_bad_kdf':
+        return 'This location\'s encryption parameters are invalid. Sync is paused.';
       case 'srs_timeline_location_channel':
         return 'Sync channel';
       case 'srs_timeline_location_encrypt':
@@ -711208,6 +711456,8 @@ extension on _StringsZhHk {
         return 'This location is end-to-end encrypted. Other devices need the same passphrase to sync here.';
       case 'srs_timeline_location_encryption':
         return 'End-to-end encryption';
+      case 'srs_timeline_location_encryption_missing':
+        return 'This location\'s encryption settings are gone. Sync is paused so nothing is uploaded unencrypted — tap to restore them.';
       case 'srs_timeline_location_idle':
         return 'Not in use';
       case 'srs_timeline_location_last_ok':
