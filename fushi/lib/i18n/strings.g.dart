@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159681 (9393 per locale)
+/// Strings: 159698 (9394 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6889,6 +6889,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   String get media_server_items_empty => 'No items';
   String get media_server_items_load_failed =>
       'Could not load items from the server';
@@ -24912,6 +24914,9 @@ class _StringsAr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'مجلد';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'لا توجد عناصر';
   @override
@@ -47944,6 +47949,9 @@ class _StringsDe extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Ordner';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Keine Einträge';
   @override
@@ -71171,6 +71179,9 @@ class _StringsEs extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Carpeta';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Sin elementos';
   @override
@@ -94470,6 +94481,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_server_item_folder => 'Dossier';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Aucun élément';
   @override
   String get media_server_items_load_failed =>
@@ -117619,6 +117633,9 @@ class _StringsId extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Tidak ada item';
   @override
   String get media_server_items_load_failed =>
@@ -140702,6 +140719,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_server_item_folder => 'Cartella';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Nessun elemento';
   @override
   String get media_server_items_load_failed =>
@@ -163315,6 +163335,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_server_item_folder => 'フォルダー';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未視聴 ${n} 話';
+  @override
   String get media_server_items_empty => '項目がありません';
   @override
   String get media_server_items_load_failed => 'サーバーから項目を読み込めませんでした';
@@ -185447,6 +185470,9 @@ class _StringsKo extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => '폴더';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => '항목 없음';
   @override
@@ -208118,6 +208144,9 @@ class _StringsNl extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Map';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Geen items';
   @override
@@ -231271,6 +231300,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_server_item_folder => 'Pasta';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Nenhum item';
   @override
   String get media_server_items_load_failed =>
@@ -254398,6 +254430,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_server_item_folder => 'Папка';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Нет элементов';
   @override
   String get media_server_items_load_failed =>
@@ -277345,6 +277380,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_server_item_folder => 'โฟลเดอร์';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'ไม่มีรายการ';
   @override
   String get media_server_items_load_failed => 'โหลดรายการจากเซิร์ฟเวอร์ไม่ได้';
@@ -300264,6 +300302,9 @@ class _StringsTr extends _StringsEn {
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
   String get media_server_item_folder => 'Klasör';
+  @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
   @override
   String get media_server_items_empty => 'Öğe yok';
   @override
@@ -323229,6 +323270,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_server_item_folder => 'Thư mục';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '${n} unwatched';
+  @override
   String get media_server_items_empty => 'Không có mục nào';
   @override
   String get media_server_items_load_failed =>
@@ -345188,6 +345232,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_server_item_folder => '文件夹';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未看 ${n} 集';
+  @override
   String get media_server_items_empty => '没有条目';
   @override
   String get media_server_items_load_failed => '无法从服务器加载条目';
@@ -366355,6 +366402,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_server_item_folder => '資料夾';
   @override
+  String media_server_item_unplayed_episodes({required Object n}) =>
+      '未看 ${n} 集';
+  @override
   String get media_server_items_empty => '沒有條目';
   @override
   String get media_server_items_load_failed => '無法從伺服器加載條目';
@@ -386852,6 +386902,8 @@ extension on _StringsEn {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'No items';
       case 'media_server_items_load_failed':
@@ -406376,6 +406428,8 @@ extension on _StringsAr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'مجلد';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'لا توجد عناصر';
       case 'media_server_items_load_failed':
@@ -425947,6 +426001,8 @@ extension on _StringsDe {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Ordner';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Keine Einträge';
       case 'media_server_items_load_failed':
@@ -445532,6 +445588,8 @@ extension on _StringsEs {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Carpeta';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Sin elementos';
       case 'media_server_items_load_failed':
@@ -465127,6 +465185,8 @@ extension on _StringsFr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Dossier';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Aucun élément';
       case 'media_server_items_load_failed':
@@ -484695,6 +484755,8 @@ extension on _StringsId {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Tidak ada item';
       case 'media_server_items_load_failed':
@@ -504252,6 +504314,8 @@ extension on _StringsIt {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Cartella';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Nessun elemento';
       case 'media_server_items_load_failed':
@@ -523767,6 +523831,8 @@ extension on _StringsJa {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'フォルダー';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未視聴 ${n} 話';
       case 'media_server_items_empty':
         return '項目がありません';
       case 'media_server_items_load_failed':
@@ -543214,6 +543280,8 @@ extension on _StringsKo {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return '폴더';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return '항목 없음';
       case 'media_server_items_load_failed':
@@ -562737,6 +562805,8 @@ extension on _StringsNl {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Map';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Geen items';
       case 'media_server_items_load_failed':
@@ -582306,6 +582376,8 @@ extension on _StringsPtBr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Pasta';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Nenhum item';
       case 'media_server_items_load_failed':
@@ -601879,6 +601951,8 @@ extension on _StringsRu {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Папка';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Нет элементов';
       case 'media_server_items_load_failed':
@@ -621421,6 +621495,8 @@ extension on _StringsTh {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'โฟลเดอร์';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'ไม่มีรายการ';
       case 'media_server_items_load_failed':
@@ -640969,6 +641045,8 @@ extension on _StringsTr {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Klasör';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Öğe yok';
       case 'media_server_items_load_failed':
@@ -660515,6 +660593,8 @@ extension on _StringsVi {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return 'Thư mục';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '${n} unwatched';
       case 'media_server_items_empty':
         return 'Không có mục nào';
       case 'media_server_items_load_failed':
@@ -679933,6 +680013,8 @@ extension on _StringsZhCn {
         return '按作品浏览';
       case 'media_server_item_folder':
         return '文件夹';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未看 ${n} 集';
       case 'media_server_items_empty':
         return '没有条目';
       case 'media_server_items_load_failed':
@@ -699268,6 +699350,8 @@ extension on _StringsZhHk {
         return 'Browse shows and movies';
       case 'media_server_item_folder':
         return '資料夾';
+      case 'media_server_item_unplayed_episodes':
+        return ({required Object n}) => '未看 ${n} 集';
       case 'media_server_items_empty':
         return '沒有條目';
       case 'media_server_items_load_failed':
