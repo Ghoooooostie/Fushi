@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 159868 (9404 per locale)
+/// Strings: 160123 (9419 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6243,6 +6243,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_blur => 'Blur lyrics';
   String get lyrics_blur_hint =>
       'Blur the current line for listening immersion; hover or tap to reveal';
+  String get lyrics_control_item_study_timer => 'Study timer';
+  String get lyrics_control_layout => 'Button layout';
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  String get lyrics_control_zone_top => 'Top';
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
   String get lyrics_exit_to_library => 'Close and return to library';
   String get lyrics_font_size => 'Lyrics font size';
   String get lyrics_font_size_hint =>
@@ -8772,8 +8783,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_audiobook_next_sentence => 'Next sentence';
   String get shortcut_action_audiobook_play_pause => 'Play / pause';
   String get shortcut_action_audiobook_prev_sentence => 'Previous sentence';
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
   String get shortcut_action_audiobook_seek_clicked =>
       'Seek audio to clicked sentence';
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   String get shortcut_action_dpad_down => 'D-pad down';
   String get shortcut_action_dpad_left => 'D-pad left';
   String get shortcut_action_dpad_right => 'D-pad right';
@@ -23806,6 +23827,25 @@ class _StringsAr extends _StringsEn {
   String get lyrics_blur_hint =>
       'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'حجم خط كلمات الأغاني';
@@ -28167,8 +28207,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'الجملة السابقة';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'نقل الصوت إلى الجملة المنقورة';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'أزرار الاتجاهات للأسفل';
   @override
@@ -46838,6 +46895,25 @@ class _StringsDe extends _StringsEn {
   String get lyrics_blur_hint =>
       'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Liedtext-Schriftgröße';
@@ -51293,8 +51369,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Vorheriger Satz';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Audio zum angeklickten Satz springen';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad unten';
   @override
@@ -70090,6 +70183,25 @@ class _StringsEs extends _StringsEn {
   String get lyrics_blur_hint =>
       'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamaño de fuente de letras';
@@ -74548,8 +74660,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase anterior';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Saltar el audio a la frase pulsada';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Cruceta Abajo';
   @override
@@ -93413,6 +93542,25 @@ class _StringsFr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Taille de police des paroles';
@@ -97896,8 +98044,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Phrase précédente';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Aller à la phrase cliquée dans l\'audio';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Croix directionnelle Bas';
   @override
@@ -116618,6 +116783,25 @@ class _StringsId extends _StringsEn {
   String get lyrics_blur_hint =>
       'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Ukuran Font Lirik';
@@ -121023,8 +121207,25 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Kalimat Sebelumnya';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Lompat audio ke kalimat yang diklik';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Bawah';
   @override
@@ -139712,6 +139913,25 @@ class _StringsIt extends _StringsEn {
   String get lyrics_blur_hint =>
       'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Dimensione carattere testi';
@@ -144162,8 +144382,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase precedente';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Sposta l\'audio alla frase cliccata';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Giù';
   @override
@@ -162415,6 +162652,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get lyrics_blur_hint => 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞フォントサイズ';
@@ -166643,7 +166899,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '前の文';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => 'クリックした文へ音声をシーク';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '十字キー 下';
   @override
@@ -184569,6 +184842,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get lyrics_blur_hint => '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '가사 글꼴 크기';
@@ -188815,7 +189107,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '이전 문장';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '클릭한 문장으로 오디오 이동';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '방향키 아래';
   @override
@@ -207232,6 +207541,25 @@ class _StringsNl extends _StringsEn {
   String get lyrics_blur_hint =>
       'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Lettergrootte songtekst';
@@ -211664,8 +211992,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Vorige zin';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Audio naar aangeklikte zin springen';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad omlaag';
   @override
@@ -230408,6 +230753,25 @@ class _StringsPtBr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamanho da fonte das letras';
@@ -234848,8 +235212,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Frase anterior';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Avançar áudio para a frase clicada';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Direcional Baixo';
   @override
@@ -253569,6 +253950,25 @@ class _StringsRu extends _StringsEn {
   String get lyrics_blur_hint =>
       'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Размер шрифта текста песен';
@@ -258009,8 +258409,25 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_audiobook_prev_sentence =>
       'Предыдущее предложение';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Перейти к выбранному предложению';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Крестовина вниз';
   @override
@@ -276565,6 +276982,25 @@ class _StringsTh extends _StringsEn {
   String get lyrics_blur_hint =>
       'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'ขนาดตัวอักษรเนื้อเพลง';
@@ -280935,8 +281371,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'ประโยคก่อนหน้า';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'เลื่อนเสียงไปยังประโยคที่คลิก';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'ปุ่มทิศทาง ลง';
   @override
@@ -299504,6 +299957,25 @@ class _StringsTr extends _StringsEn {
   String get lyrics_blur_hint =>
       'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Şarkı Sözü Yazı Boyutu';
@@ -303909,8 +304381,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Önceki Cümle';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Sesi tıklanan cümleye atla';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'Yön Tuşu Aşağı';
   @override
@@ -322503,6 +322992,25 @@ class _StringsVi extends _StringsEn {
   String get lyrics_blur_hint =>
       'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Cỡ chữ lời bài hát';
@@ -326886,8 +327394,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => 'Câu trước';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked =>
       'Tua âm thanh tới câu đã nhấp';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => 'D-pad Xuống';
   @override
@@ -344565,6 +345090,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lyrics_blur_hint => '听力沉浸：模糊当前句，悬停或点击显形';
   @override
+  String get lyrics_control_item_study_timer => '统计计时';
+  @override
+  String get lyrics_control_layout => '按钮布局';
+  @override
+  String get lyrics_control_layout_hint =>
+      '把按钮拖到顶部、播放卡工具条或 ⋯ 菜单，或移出歌词页，改动立即生效。移出的按钮仍可用快捷键触发。';
+  @override
+  String get lyrics_control_zone_hidden_hint => '不在歌词页显示';
+  @override
+  String get lyrics_control_zone_toolbar => '播放卡工具条';
+  @override
+  String get lyrics_control_zone_toolbar_hint => '播放控件旁边，⋯ 始终在最后';
+  @override
+  String get lyrics_control_zone_top => '顶部';
+  @override
+  String get lyrics_control_zone_top_hint => '手机在顶栏，宽屏在右上角';
+  @override
   String get lyrics_exit_to_library => '关闭并返回书架';
   @override
   String get lyrics_font_size => '歌词字号';
@@ -348599,7 +349141,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '上一句';
   @override
+  String get shortcut_action_audiobook_replay_sentence => '重播当前句';
+  @override
+  String get shortcut_action_audiobook_seek_backward => '快退 10 秒';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '跳转音频到点击的句子';
+  @override
+  String get shortcut_action_audiobook_seek_forward => '快进 10 秒';
+  @override
+  String get shortcut_action_audiobook_speed_down => '减慢倍速';
+  @override
+  String get shortcut_action_audiobook_speed_up => '加快倍速';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask => '切换歌词模糊';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode => '切换歌词模式';
   @override
   String get shortcut_action_dpad_down => '方向键 下';
   @override
@@ -365742,6 +366298,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lyrics_blur_hint => '聽力沉浸：模糊當前句，懸停或點擊顯形';
   @override
+  String get lyrics_control_item_study_timer => 'Study timer';
+  @override
+  String get lyrics_control_layout => 'Button layout';
+  @override
+  String get lyrics_control_layout_hint =>
+      'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+  @override
+  String get lyrics_control_zone_hidden_hint => 'Not shown on the lyrics page';
+  @override
+  String get lyrics_control_zone_toolbar => 'Player toolbar';
+  @override
+  String get lyrics_control_zone_toolbar_hint =>
+      'Next to the playback controls; ⋯ always stays last';
+  @override
+  String get lyrics_control_zone_top => 'Top';
+  @override
+  String get lyrics_control_zone_top_hint =>
+      'Top bar on phones, top-right corner on wide screens';
+  @override
   String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞字體大小';
@@ -369846,7 +370421,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_audiobook_prev_sentence => '上一句';
   @override
+  String get shortcut_action_audiobook_replay_sentence =>
+      'Replay current sentence';
+  @override
+  String get shortcut_action_audiobook_seek_backward => 'Rewind 10 seconds';
+  @override
   String get shortcut_action_audiobook_seek_clicked => '將音訊跳轉到所點選的句子';
+  @override
+  String get shortcut_action_audiobook_seek_forward => 'Forward 10 seconds';
+  @override
+  String get shortcut_action_audiobook_speed_down => 'Slow down playback';
+  @override
+  String get shortcut_action_audiobook_speed_up => 'Speed up playback';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mask =>
+      'Toggle lyrics blur';
+  @override
+  String get shortcut_action_audiobook_toggle_lyrics_mode =>
+      'Toggle lyrics mode';
   @override
   String get shortcut_action_dpad_down => '方向鍵 下';
   @override
@@ -386343,6 +386935,22 @@ extension on _StringsEn {
         return 'Blur lyrics';
       case 'lyrics_blur_hint':
         return 'Blur the current line for listening immersion; hover or tap to reveal';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -390144,8 +390752,22 @@ extension on _StringsEn {
         return 'Play / pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Previous sentence';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Seek audio to clicked sentence';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad down';
       case 'shortcut_action_dpad_left':
@@ -405889,6 +406511,22 @@ extension on _StringsAr {
         return 'تمويه كلمات الأغاني';
       case 'lyrics_blur_hint':
         return 'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -409691,8 +410329,22 @@ extension on _StringsAr {
         return 'تشغيل / إيقاف مؤقت';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'الجملة السابقة';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'نقل الصوت إلى الجملة المنقورة';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'أزرار الاتجاهات للأسفل';
       case 'shortcut_action_dpad_left':
@@ -425476,6 +426128,22 @@ extension on _StringsDe {
         return 'Liedtext unscharf';
       case 'lyrics_blur_hint':
         return 'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -429294,8 +429962,22 @@ extension on _StringsDe {
         return 'Wiedergabe / Pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Vorheriger Satz';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Audio zum angeklickten Satz springen';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad unten';
       case 'shortcut_action_dpad_left':
@@ -445084,6 +445766,22 @@ extension on _StringsEs {
         return 'Difuminar letras';
       case 'lyrics_blur_hint':
         return 'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -448901,8 +449599,22 @@ extension on _StringsEs {
         return 'Reproducir / Pausar';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase anterior';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Saltar el audio a la frase pulsada';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Cruceta Abajo';
       case 'shortcut_action_dpad_left':
@@ -464702,6 +465414,22 @@ extension on _StringsFr {
         return 'Flouter les paroles';
       case 'lyrics_blur_hint':
         return 'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -468519,8 +469247,22 @@ extension on _StringsFr {
         return 'Lecture / Pause';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Phrase précédente';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Aller à la phrase cliquée dans l\'audio';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Croix directionnelle Bas';
       case 'shortcut_action_dpad_left':
@@ -484295,6 +485037,22 @@ extension on _StringsId {
         return 'Buramkan lirik';
       case 'lyrics_blur_hint':
         return 'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -488097,8 +488855,22 @@ extension on _StringsId {
         return 'Putar / Jeda';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Kalimat Sebelumnya';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Lompat audio ke kalimat yang diklik';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Bawah';
       case 'shortcut_action_dpad_left':
@@ -503872,6 +504644,22 @@ extension on _StringsIt {
         return 'Sfoca testi';
       case 'lyrics_blur_hint':
         return 'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -507684,8 +508472,22 @@ extension on _StringsIt {
         return 'Riproduci / Pausa';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase precedente';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Sposta l\'audio alla frase cliccata';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Giù';
       case 'shortcut_action_dpad_left':
@@ -523413,6 +524215,22 @@ extension on _StringsJa {
         return '歌詞をぼかす';
       case 'lyrics_blur_hint':
         return 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -527205,8 +528023,22 @@ extension on _StringsJa {
         return '再生 / 一時停止';
       case 'shortcut_action_audiobook_prev_sentence':
         return '前の文';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'クリックした文へ音声をシーク';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '十字キー 下';
       case 'shortcut_action_dpad_left':
@@ -542883,6 +543715,22 @@ extension on _StringsKo {
         return '가사 흐리게';
       case 'lyrics_blur_hint':
         return '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -546675,8 +547523,22 @@ extension on _StringsKo {
         return '재생 / 일시정지';
       case 'shortcut_action_audiobook_prev_sentence':
         return '이전 문장';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return '클릭한 문장으로 오디오 이동';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '방향키 아래';
       case 'shortcut_action_dpad_left':
@@ -562420,6 +563282,22 @@ extension on _StringsNl {
         return 'Songtekst vervagen';
       case 'lyrics_blur_hint':
         return 'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -566235,8 +567113,22 @@ extension on _StringsNl {
         return 'Afspelen / pauzeren';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Vorige zin';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Audio naar aangeklikte zin springen';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad omlaag';
       case 'shortcut_action_dpad_left':
@@ -582013,6 +582905,22 @@ extension on _StringsPtBr {
         return 'Desfocar letras';
       case 'lyrics_blur_hint':
         return 'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -585826,8 +586734,22 @@ extension on _StringsPtBr {
         return 'Reproduzir / Pausar';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Frase anterior';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Avançar áudio para a frase clicada';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Direcional Baixo';
       case 'shortcut_action_dpad_left':
@@ -601608,6 +602530,22 @@ extension on _StringsRu {
         return 'Размытие текста песен';
       case 'lyrics_blur_hint':
         return 'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -605421,8 +606359,22 @@ extension on _StringsRu {
         return 'Воспроизведение / пауза';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Предыдущее предложение';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Перейти к выбранному предложению';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Крестовина вниз';
       case 'shortcut_action_dpad_left':
@@ -621176,6 +622128,22 @@ extension on _StringsTh {
         return 'เบลอเนื้อเพลง';
       case 'lyrics_blur_hint':
         return 'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -624976,8 +625944,22 @@ extension on _StringsTh {
         return 'เล่น / หยุดชั่วคราว';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'ประโยคก่อนหน้า';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'เลื่อนเสียงไปยังประโยคที่คลิก';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'ปุ่มทิศทาง ลง';
       case 'shortcut_action_dpad_left':
@@ -640744,6 +641726,22 @@ extension on _StringsTr {
         return 'Sözleri bulanıklaştır';
       case 'lyrics_blur_hint':
         return 'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -644549,8 +645547,22 @@ extension on _StringsTr {
         return 'Oynat / Duraklat';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Önceki Cümle';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Sesi tıklanan cümleye atla';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'Yön Tuşu Aşağı';
       case 'shortcut_action_dpad_left':
@@ -660314,6 +661326,22 @@ extension on _StringsVi {
         return 'Làm mờ lời bài';
       case 'lyrics_blur_hint':
         return 'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -664117,8 +665145,22 @@ extension on _StringsVi {
         return 'Phát / Tạm dừng';
       case 'shortcut_action_audiobook_prev_sentence':
         return 'Câu trước';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return 'Tua âm thanh tới câu đã nhấp';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return 'D-pad Xuống';
       case 'shortcut_action_dpad_left':
@@ -679762,6 +680804,22 @@ extension on _StringsZhCn {
         return '模糊歌词';
       case 'lyrics_blur_hint':
         return '听力沉浸：模糊当前句，悬停或点击显形';
+      case 'lyrics_control_item_study_timer':
+        return '统计计时';
+      case 'lyrics_control_layout':
+        return '按钮布局';
+      case 'lyrics_control_layout_hint':
+        return '把按钮拖到顶部、播放卡工具条或 ⋯ 菜单，或移出歌词页，改动立即生效。移出的按钮仍可用快捷键触发。';
+      case 'lyrics_control_zone_hidden_hint':
+        return '不在歌词页显示';
+      case 'lyrics_control_zone_toolbar':
+        return '播放卡工具条';
+      case 'lyrics_control_zone_toolbar_hint':
+        return '播放控件旁边，⋯ 始终在最后';
+      case 'lyrics_control_zone_top':
+        return '顶部';
+      case 'lyrics_control_zone_top_hint':
+        return '手机在顶栏，宽屏在右上角';
       case 'lyrics_exit_to_library':
         return '关闭并返回书架';
       case 'lyrics_font_size':
@@ -683537,8 +684595,22 @@ extension on _StringsZhCn {
         return '播放/暂停';
       case 'shortcut_action_audiobook_prev_sentence':
         return '上一句';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return '重播当前句';
+      case 'shortcut_action_audiobook_seek_backward':
+        return '快退 10 秒';
       case 'shortcut_action_audiobook_seek_clicked':
         return '跳转音频到点击的句子';
+      case 'shortcut_action_audiobook_seek_forward':
+        return '快进 10 秒';
+      case 'shortcut_action_audiobook_speed_down':
+        return '减慢倍速';
+      case 'shortcut_action_audiobook_speed_up':
+        return '加快倍速';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return '切换歌词模糊';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return '切换歌词模式';
       case 'shortcut_action_dpad_down':
         return '方向键 下';
       case 'shortcut_action_dpad_left':
@@ -699114,6 +700186,22 @@ extension on _StringsZhHk {
         return '模糊歌詞';
       case 'lyrics_blur_hint':
         return '聽力沉浸：模糊當前句，懸停或點擊顯形';
+      case 'lyrics_control_item_study_timer':
+        return 'Study timer';
+      case 'lyrics_control_layout':
+        return 'Button layout';
+      case 'lyrics_control_layout_hint':
+        return 'Drag buttons to the top, the player toolbar or the ⋯ menu, or remove them from the lyrics page. Changes apply right away; removed buttons still work through keyboard shortcuts.';
+      case 'lyrics_control_zone_hidden_hint':
+        return 'Not shown on the lyrics page';
+      case 'lyrics_control_zone_toolbar':
+        return 'Player toolbar';
+      case 'lyrics_control_zone_toolbar_hint':
+        return 'Next to the playback controls; ⋯ always stays last';
+      case 'lyrics_control_zone_top':
+        return 'Top';
+      case 'lyrics_control_zone_top_hint':
+        return 'Top bar on phones, top-right corner on wide screens';
       case 'lyrics_exit_to_library':
         return 'Close and return to library';
       case 'lyrics_font_size':
@@ -702901,8 +703989,22 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'shortcut_action_audiobook_prev_sentence':
         return '上一句';
+      case 'shortcut_action_audiobook_replay_sentence':
+        return 'Replay current sentence';
+      case 'shortcut_action_audiobook_seek_backward':
+        return 'Rewind 10 seconds';
       case 'shortcut_action_audiobook_seek_clicked':
         return '將音訊跳轉到所點選的句子';
+      case 'shortcut_action_audiobook_seek_forward':
+        return 'Forward 10 seconds';
+      case 'shortcut_action_audiobook_speed_down':
+        return 'Slow down playback';
+      case 'shortcut_action_audiobook_speed_up':
+        return 'Speed up playback';
+      case 'shortcut_action_audiobook_toggle_lyrics_mask':
+        return 'Toggle lyrics blur';
+      case 'shortcut_action_audiobook_toggle_lyrics_mode':
+        return 'Toggle lyrics mode';
       case 'shortcut_action_dpad_down':
         return '方向鍵 下';
       case 'shortcut_action_dpad_left':
