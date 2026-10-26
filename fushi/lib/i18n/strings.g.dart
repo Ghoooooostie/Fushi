@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168810 (9930 per locale)
+/// Strings: 168759 (9927 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14131,6 +14131,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
+  String get web_browser_login_import => 'Import sign-in from browser';
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14150,7 +14155,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_microphone => 'Microphone';
   String get web_browser_permission_notifications => 'Notifications';
   String get web_browser_permission_popups => 'Pop-ups and redirects';
-  String get web_browser_permission_protected_content => 'Protected content';
   String get web_browser_permission_request_allow => 'Allow';
   String get web_browser_permission_request_block => 'Block';
   String get web_browser_permission_request_camera => 'your camera';
@@ -14160,8 +14164,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_request_geolocation => 'your location';
   String get web_browser_permission_request_microphone => 'your microphone';
   String get web_browser_permission_request_notifications => 'notifications';
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   String get web_browser_permission_request_remember =>
       'Remember for this site';
   String web_browser_permission_request_title({
@@ -14219,6 +14221,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_site_name => 'Name';
   String get web_browser_site_name_hint => 'Leave empty to use the host name';
   String get web_browser_site_new => 'Add site';
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  String get web_browser_site_opens_in_player => 'Opens in the player';
   String get web_browser_site_remove => 'Remove from sites';
   String get web_browser_site_settings_clear_all => 'Reset all sites';
   String get web_browser_site_settings_clear_all_confirm =>
@@ -14259,7 +14267,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_youtube_subtitles_track_live => 'Live capture';
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
-  String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
   String web_video_blocked_error({required Object code}) =>
@@ -14309,14 +14316,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
-  String get web_video_site_add => 'Add site';
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  String get web_video_site_address_invalid => 'Not a web address';
-  String get web_video_site_name_hint => 'Name (optional)';
-  String get web_video_site_open => 'Open';
-  String get web_video_site_remove => 'Remove';
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
   String get web_video_track_image =>
@@ -38038,6 +38037,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -38075,8 +38082,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -38093,9 +38098,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -38195,6 +38197,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -38269,8 +38281,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -38351,21 +38361,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -62497,6 +62492,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -62534,8 +62537,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -62552,9 +62553,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -62654,6 +62652,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -62728,8 +62736,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -62810,21 +62816,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -87011,6 +87002,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -87048,8 +87047,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -87066,9 +87063,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -87168,6 +87162,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -87242,8 +87246,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -87324,21 +87326,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -111606,6 +111593,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -111643,8 +111638,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -111661,9 +111654,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -111763,6 +111753,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -111837,8 +111837,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -111920,21 +111918,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -135860,6 +135843,14 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -135897,8 +135888,6 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -135915,9 +135904,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -136017,6 +136003,16 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -136091,8 +136087,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -136173,21 +136167,6 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -160272,6 +160251,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -160309,8 +160296,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -160327,9 +160312,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -160429,6 +160411,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -160503,8 +160495,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -160586,21 +160576,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -183651,6 +183626,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -183688,8 +183671,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => '保護されたコンテンツ';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -183706,9 +183687,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      '保護されたコンテンツの再生';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -183808,6 +183786,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -183882,8 +183870,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -183963,21 +183949,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -207093,6 +207064,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -207130,8 +207109,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -207148,9 +207125,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -207250,6 +207224,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -207324,8 +207308,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -207404,21 +207386,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -231453,6 +231420,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -231490,8 +231465,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -231508,9 +231481,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -231610,6 +231580,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -231684,8 +231664,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -231767,21 +231745,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -255886,6 +255849,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -255923,8 +255894,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -255941,9 +255910,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -256043,6 +256009,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -256117,8 +256093,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -256199,21 +256173,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -280264,6 +280223,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -280301,8 +280268,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -280319,9 +280284,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -280421,6 +280383,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -280495,8 +280467,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -280577,21 +280547,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -304319,6 +304274,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -304356,8 +304319,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -304374,9 +304335,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -304476,6 +304434,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -304550,8 +304518,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -304632,21 +304598,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -328577,6 +328528,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -328614,8 +328573,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -328632,9 +328589,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -328734,6 +328688,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -328808,8 +328772,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -328890,21 +328852,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -352763,6 +352710,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -352800,8 +352755,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => 'Protected content';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -352818,9 +352771,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content =>
-      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -352920,6 +352870,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -352994,8 +352954,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -353076,21 +353034,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
-  @override
-  String get web_video_site_add => 'Add site';
-  @override
-  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
-  @override
-  String get web_video_site_address_invalid => 'Not a web address';
-  @override
-  String get web_video_site_name_hint => 'Name (optional)';
-  @override
-  String get web_video_site_open => 'Open';
-  @override
-  String get web_video_site_remove => 'Remove';
-  @override
-  String get web_video_sites_hint =>
-      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -374902,6 +374845,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_link_share => '分享链接';
   @override
+  String get web_browser_login_import => '从浏览器导入登录';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String get web_browser_login_import_waiting =>
+      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+  @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
@@ -374938,8 +374889,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_permission_popups => '弹出式窗口和重定向';
   @override
-  String get web_browser_permission_protected_content => '受保护内容';
-  @override
   String get web_browser_permission_request_allow => '允许';
   @override
   String get web_browser_permission_request_block => '阻止';
@@ -374955,8 +374904,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_permission_request_microphone => '麦克风';
   @override
   String get web_browser_permission_request_notifications => '通知';
-  @override
-  String get web_browser_permission_request_protected_content => '受保护内容播放';
   @override
   String get web_browser_permission_request_remember => '记住对此网站的选择';
   @override
@@ -375046,6 +374993,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_site_new => '添加站点';
   @override
+  String get web_browser_site_open_in_browser => '改回用浏览器打开';
+  @override
+  String get web_browser_site_open_in_player => '默认用播放页打开';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
+  @override
+  String get web_browser_site_opens_in_player => '点开进播放页';
+  @override
   String get web_browser_site_remove => '从站点移除';
   @override
   String get web_browser_site_settings_clear_all => '重置所有网站';
@@ -375116,8 +375072,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
-  @override
-  String get web_hub_video_sites => '视频站点';
   @override
   String get web_video_ad_skipping => '正在跳过广告…';
   @override
@@ -375192,21 +375146,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
-  @override
-  String get web_video_site_add => '添加网站';
-  @override
-  String get web_video_site_address_hint => '网址，比如 netflix.com';
-  @override
-  String get web_video_site_address_invalid => '不是有效的网址';
-  @override
-  String get web_video_site_name_hint => '名称（可选）';
-  @override
-  String get web_video_site_open => '打开';
-  @override
-  String get web_video_site_remove => '移除';
-  @override
-  String get web_video_sites_hint =>
-      '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
   @override
   String get web_video_track_failed => '未能截获这条字幕，点选重试';
   @override
@@ -397664,6 +397603,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -397701,8 +397648,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
-  String get web_browser_permission_protected_content => '受保護內容';
-  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -397719,8 +397664,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
-  @override
-  String get web_browser_permission_request_protected_content => '受保護內容播放';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -397820,6 +397763,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
+  String get web_browser_site_open_in_browser =>
+      'Open in the browser by default';
+  @override
+  String get web_browser_site_open_in_player => 'Open in the player by default';
+  @override
+  String get web_browser_site_open_in_player_hint =>
+      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+  @override
+  String get web_browser_site_opens_in_player => 'Opens in the player';
+  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -397895,8 +397848,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_hub_browse => 'Web';
   @override
-  String get web_hub_video_sites => 'Video sites';
-  @override
   String get web_video_ad_skipping => '正在略過廣告…';
   @override
   String get web_video_address_hint => '搜尋或輸入網址';
@@ -397971,21 +397922,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
-  @override
-  String get web_video_site_add => '新增網站';
-  @override
-  String get web_video_site_address_hint => '網址，例如 netflix.com';
-  @override
-  String get web_video_site_address_invalid => '不是有效的網址';
-  @override
-  String get web_video_site_name_hint => '名稱（可選）';
-  @override
-  String get web_video_site_open => '開啟';
-  @override
-  String get web_video_site_remove => '移除';
-  @override
-  String get web_video_sites_hint =>
-      '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -418318,6 +418254,13 @@ extension on _StringsEn {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -418354,8 +418297,6 @@ extension on _StringsEn {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -418372,8 +418313,6 @@ extension on _StringsEn {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -418457,6 +418396,14 @@ extension on _StringsEn {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -418527,8 +418474,6 @@ extension on _StringsEn {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -418597,20 +418542,6 @@ extension on _StringsEn {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -438936,6 +438867,13 @@ extension on _StringsAr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -438972,8 +438910,6 @@ extension on _StringsAr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -438990,8 +438926,6 @@ extension on _StringsAr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -439075,6 +439009,14 @@ extension on _StringsAr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -439145,8 +439087,6 @@ extension on _StringsAr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -439215,20 +439155,6 @@ extension on _StringsAr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -459630,6 +459556,13 @@ extension on _StringsDe {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -459666,8 +459599,6 @@ extension on _StringsDe {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -459684,8 +459615,6 @@ extension on _StringsDe {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -459769,6 +459698,14 @@ extension on _StringsDe {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -459839,8 +459776,6 @@ extension on _StringsDe {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -459909,20 +459844,6 @@ extension on _StringsDe {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -480306,6 +480227,13 @@ extension on _StringsEs {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -480342,8 +480270,6 @@ extension on _StringsEs {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -480360,8 +480286,6 @@ extension on _StringsEs {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -480445,6 +480369,14 @@ extension on _StringsEs {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -480515,8 +480447,6 @@ extension on _StringsEs {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -480585,20 +480515,6 @@ extension on _StringsEs {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -501000,6 +500916,13 @@ extension on _StringsFr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -501036,8 +500959,6 @@ extension on _StringsFr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -501054,8 +500975,6 @@ extension on _StringsFr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -501139,6 +501058,14 @@ extension on _StringsFr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -501209,8 +501136,6 @@ extension on _StringsFr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -501279,20 +501204,6 @@ extension on _StringsFr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -521638,6 +521549,13 @@ extension on _StringsId {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -521674,8 +521592,6 @@ extension on _StringsId {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -521692,8 +521608,6 @@ extension on _StringsId {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -521777,6 +521691,14 @@ extension on _StringsId {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -521847,8 +521769,6 @@ extension on _StringsId {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -521917,20 +521837,6 @@ extension on _StringsId {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -542312,6 +542218,13 @@ extension on _StringsIt {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -542348,8 +542261,6 @@ extension on _StringsIt {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -542366,8 +542277,6 @@ extension on _StringsIt {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -542451,6 +542360,14 @@ extension on _StringsIt {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -542521,8 +542438,6 @@ extension on _StringsIt {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -542591,20 +542506,6 @@ extension on _StringsIt {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -562854,6 +562755,13 @@ extension on _StringsJa {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -562890,8 +562798,6 @@ extension on _StringsJa {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return '保護されたコンテンツ';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -562908,8 +562814,6 @@ extension on _StringsJa {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return '保護されたコンテンツの再生';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -562993,6 +562897,14 @@ extension on _StringsJa {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -563063,8 +562975,6 @@ extension on _StringsJa {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -563131,20 +563041,6 @@ extension on _StringsJa {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -583409,6 +583305,13 @@ extension on _StringsKo {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -583445,8 +583348,6 @@ extension on _StringsKo {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -583463,8 +583364,6 @@ extension on _StringsKo {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -583548,6 +583447,14 @@ extension on _StringsKo {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -583618,8 +583525,6 @@ extension on _StringsKo {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -583687,20 +583592,6 @@ extension on _StringsKo {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -604075,6 +603966,13 @@ extension on _StringsNl {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -604111,8 +604009,6 @@ extension on _StringsNl {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -604129,8 +604025,6 @@ extension on _StringsNl {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -604214,6 +604108,14 @@ extension on _StringsNl {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -604284,8 +604186,6 @@ extension on _StringsNl {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -604354,20 +604254,6 @@ extension on _StringsNl {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -624736,6 +624622,13 @@ extension on _StringsPtBr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -624772,8 +624665,6 @@ extension on _StringsPtBr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -624790,8 +624681,6 @@ extension on _StringsPtBr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -624875,6 +624764,14 @@ extension on _StringsPtBr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -624945,8 +624842,6 @@ extension on _StringsPtBr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -625015,20 +624910,6 @@ extension on _StringsPtBr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -645402,6 +645283,13 @@ extension on _StringsRu {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -645438,8 +645326,6 @@ extension on _StringsRu {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -645456,8 +645342,6 @@ extension on _StringsRu {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -645541,6 +645425,14 @@ extension on _StringsRu {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -645611,8 +645503,6 @@ extension on _StringsRu {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -645681,20 +645571,6 @@ extension on _StringsRu {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -666024,6 +665900,13 @@ extension on _StringsTh {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -666060,8 +665943,6 @@ extension on _StringsTh {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -666078,8 +665959,6 @@ extension on _StringsTh {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -666163,6 +666042,14 @@ extension on _StringsTh {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -666233,8 +666120,6 @@ extension on _StringsTh {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -666303,20 +666188,6 @@ extension on _StringsTh {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -686677,6 +686548,13 @@ extension on _StringsTr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -686713,8 +686591,6 @@ extension on _StringsTr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -686731,8 +686607,6 @@ extension on _StringsTr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -686816,6 +686690,14 @@ extension on _StringsTr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -686886,8 +686768,6 @@ extension on _StringsTr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -686956,20 +686836,6 @@ extension on _StringsTr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -707313,6 +707179,13 @@ extension on _StringsVi {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -707349,8 +707222,6 @@ extension on _StringsVi {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -707367,8 +707238,6 @@ extension on _StringsVi {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -707452,6 +707321,14 @@ extension on _StringsVi {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -707522,8 +707399,6 @@ extension on _StringsVi {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -707592,20 +707467,6 @@ extension on _StringsVi {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
-      case 'web_video_site_add':
-        return 'Add site';
-      case 'web_video_site_address_hint':
-        return 'Web address, e.g. netflix.com';
-      case 'web_video_site_address_invalid':
-        return 'Not a web address';
-      case 'web_video_site_name_hint':
-        return 'Name (optional)';
-      case 'web_video_site_open':
-        return 'Open';
-      case 'web_video_site_remove':
-        return 'Remove';
-      case 'web_video_sites_hint':
-        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -727702,6 +727563,12 @@ extension on _StringsZhCn {
         return '在新标签页中打开';
       case 'web_browser_link_share':
         return '分享链接';
+      case 'web_browser_login_import':
+        return '从浏览器导入登录';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_browser_login_import_waiting':
+        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -727738,8 +727605,6 @@ extension on _StringsZhCn {
         return '通知';
       case 'web_browser_permission_popups':
         return '弹出式窗口和重定向';
-      case 'web_browser_permission_protected_content':
-        return '受保护内容';
       case 'web_browser_permission_request_allow':
         return '允许';
       case 'web_browser_permission_request_block':
@@ -727756,8 +727621,6 @@ extension on _StringsZhCn {
         return '麦克风';
       case 'web_browser_permission_request_notifications':
         return '通知';
-      case 'web_browser_permission_request_protected_content':
-        return '受保护内容播放';
       case 'web_browser_permission_request_remember':
         return '记住对此网站的选择';
       case 'web_browser_permission_request_title':
@@ -727841,6 +727704,14 @@ extension on _StringsZhCn {
         return '留空则使用域名';
       case 'web_browser_site_new':
         return '添加站点';
+      case 'web_browser_site_open_in_browser':
+        return '改回用浏览器打开';
+      case 'web_browser_site_open_in_player':
+        return '默认用播放页打开';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
+      case 'web_browser_site_opens_in_player':
+        return '点开进播放页';
       case 'web_browser_site_remove':
         return '从站点移除';
       case 'web_browser_site_settings_clear_all':
@@ -727911,8 +727782,6 @@ extension on _StringsZhCn {
         return '选中加载';
       case 'web_hub_browse':
         return '网页';
-      case 'web_hub_video_sites':
-        return '视频站点';
       case 'web_video_ad_skipping':
         return '正在跳过广告…';
       case 'web_video_address_hint':
@@ -727977,20 +727846,6 @@ extension on _StringsZhCn {
         return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
-      case 'web_video_site_add':
-        return '添加网站';
-      case 'web_video_site_address_hint':
-        return '网址，比如 netflix.com';
-      case 'web_video_site_address_invalid':
-        return '不是有效的网址';
-      case 'web_video_site_name_hint':
-        return '名称（可选）';
-      case 'web_video_site_open':
-        return '打开';
-      case 'web_video_site_remove':
-        return '移除';
-      case 'web_video_sites_hint':
-        return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
       case 'web_video_track_failed':
         return '未能截获这条字幕，点选重试';
       case 'web_video_track_image':
@@ -748175,6 +748030,13 @@ extension on _StringsZhHk {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -748211,8 +748073,6 @@ extension on _StringsZhHk {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
-      case 'web_browser_permission_protected_content':
-        return '受保護內容';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -748229,8 +748089,6 @@ extension on _StringsZhHk {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
-      case 'web_browser_permission_request_protected_content':
-        return '受保護內容播放';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -748314,6 +748172,14 @@ extension on _StringsZhHk {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
+      case 'web_browser_site_open_in_browser':
+        return 'Open in the browser by default';
+      case 'web_browser_site_open_in_player':
+        return 'Open in the player by default';
+      case 'web_browser_site_open_in_player_hint':
+        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
+      case 'web_browser_site_opens_in_player':
+        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -748384,8 +748250,6 @@ extension on _StringsZhHk {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_video_sites':
-        return 'Video sites';
       case 'web_video_ad_skipping':
         return '正在略過廣告…';
       case 'web_video_address_hint':
@@ -748451,20 +748315,6 @@ extension on _StringsZhHk {
         return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
-      case 'web_video_site_add':
-        return '新增網站';
-      case 'web_video_site_address_hint':
-        return '網址，例如 netflix.com';
-      case 'web_video_site_address_invalid':
-        return '不是有效的網址';
-      case 'web_video_site_name_hint':
-        return '名稱（可選）';
-      case 'web_video_site_open':
-        return '開啟';
-      case 'web_video_site_remove':
-        return '移除';
-      case 'web_video_sites_hint':
-        return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
