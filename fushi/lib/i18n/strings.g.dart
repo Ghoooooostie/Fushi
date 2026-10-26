@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168776 (9928 per locale)
+/// Strings: 169575 (9975 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -242,6 +242,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'vol. ${number}';
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  String get ai_agent_choice_cancel => 'None of these';
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  String get ai_agent_confirm_approve => 'Run';
+  String get ai_agent_confirm_approved => 'Confirmed';
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  String get ai_agent_confirm_declined => 'Declined';
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  String get ai_agent_confirm_title => 'Confirm before running';
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  String get ai_agent_details => 'Details';
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  String get ai_agent_empty_title => 'What should I do?';
+  String get ai_agent_expand => 'Open as full page';
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  String get ai_agent_history_resume => 'Continue conversation';
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  String get ai_agent_history_title => 'AI action log';
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  String get ai_agent_new_session => 'New conversation';
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  String get ai_agent_open_settings => 'Open settings';
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  String get ai_agent_send => 'Send';
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  String get ai_agent_stop => 'Stop';
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  String get ai_agent_title => 'AI assistant';
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  String get ai_agent_tool_declined => 'Not run';
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  String get ai_agent_tool_running => 'Running…';
+  String get ai_agent_undo => 'Undo';
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  String get ai_agent_undone => 'Undone';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
   String ai_assist_failed({required Object reason}) =>
@@ -265,6 +318,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_acquire => 'AI download';
   String get ai_feature_acquire_summary =>
       'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
+  String get ai_feature_agent => 'AI assistant';
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   String get ai_feature_assigned_unavailable =>
       'Selected provider unavailable (incomplete or disabled)';
   String get ai_feature_audiobook_cast => 'Audiobook casting';
@@ -4035,6 +4091,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object secondField,
   }) => 'The ${field} field used ${secondField} as its fallback search term.';
   String file_count({required Object count}) => '${count} files';
+  String get floating_ball_action_ai => 'AI';
   String get floating_ball_action_camera_ocr => 'Photo lookup';
   String get floating_ball_action_clipboard => 'Look up clipboard';
   String get floating_ball_action_close => 'Close floating ball';
@@ -14447,6 +14504,103 @@ class _StringsAr extends _StringsEn {
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
   @override
@@ -14485,6 +14639,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
@@ -20774,6 +20933,8 @@ class _StringsAr extends _StringsEn {
   }) => 'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
   @override
   String file_count({required Object count}) => '${count} ملفات';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'البحث بالتصوير';
   @override
@@ -38510,6 +38671,103 @@ class _StringsDe extends _StringsEn {
   @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
   @override
@@ -38551,6 +38809,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
@@ -44939,6 +45202,8 @@ class _StringsDe extends _StringsEn {
       'Das Feld ${field} hat ${secondField} als Ersatz-Suchbegriff verwendet.';
   @override
   String file_count({required Object count}) => '${count} Dateien';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Foto nachschlagen';
   @override
@@ -62964,6 +63229,103 @@ class _StringsEs extends _StringsEn {
   @override
   String get add_to_collection => 'Añadir a colección';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
   @override
@@ -63005,6 +63367,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'El proveedor seleccionado no está disponible (incompleto o desactivado)';
@@ -69411,6 +69778,8 @@ class _StringsEs extends _StringsEn {
       'El campo ${field} usó ${secondField} como término de búsqueda alternativo.';
   @override
   String file_count({required Object count}) => '${count} archivos';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
@@ -87475,6 +87844,103 @@ class _StringsFr extends _StringsEn {
   @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
   @override
@@ -87515,6 +87981,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
@@ -93947,6 +94418,8 @@ class _StringsFr extends _StringsEn {
       'Le champ ${field} a utilisé ${secondField} comme terme de recherche de secours.';
   @override
   String file_count({required Object count}) => '${count} fichiers';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Recherche par photo';
   @override
@@ -112066,6 +112539,103 @@ class _StringsId extends _StringsEn {
   @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
   @override
@@ -112106,6 +112676,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
@@ -118437,6 +119012,8 @@ class _StringsId extends _StringsEn {
       'Field ${field} menggunakan ${secondField} sebagai kata pencarian cadangan.';
   @override
   String file_count({required Object count}) => '${count} file';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Pencarian foto';
   @override
@@ -136312,6 +136889,103 @@ class _StringsIt extends _StringsEn {
   @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
   @override
@@ -136353,6 +137027,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Il provider selezionato non è disponibile (incompleto o disattivato)';
@@ -142727,6 +143406,8 @@ class _StringsIt extends _StringsEn {
       'Il campo ${field} ha usato ${secondField} come termine di ricerca di riserva.';
   @override
   String file_count({required Object count}) => '${count} file';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Ricerca da foto';
   @override
@@ -160722,6 +161403,103 @@ class _StringsJa extends _StringsEn {
   @override
   String get add_to_collection => 'コレクションに追加';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
   String ai_assist_failed({required Object reason}) =>
@@ -160759,6 +161537,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '選択したプロバイダーを利用できません（設定が不完全、または無効）';
@@ -166863,6 +167646,8 @@ class _StringsJa extends _StringsEn {
   }) => '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
   @override
   String file_count({required Object count}) => '${count} ファイル';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => '撮影して検索';
   @override
@@ -184091,6 +184876,103 @@ class _StringsKo extends _StringsEn {
   @override
   String get add_to_collection => '컬렉션에 추가';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 요청 실패: ${reason}';
@@ -184126,6 +185008,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
@@ -190243,6 +191130,8 @@ class _StringsKo extends _StringsEn {
   }) => '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
   @override
   String file_count({required Object count}) => '${count}개 파일';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => '사진으로 검색';
   @override
@@ -207528,6 +208417,103 @@ class _StringsNl extends _StringsEn {
   @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
   @override
@@ -207569,6 +208555,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
@@ -213936,6 +214927,8 @@ class _StringsNl extends _StringsEn {
   }) => 'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
   @override
   String file_count({required Object count}) => '${count} bestanden';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Opzoeken via foto';
   @override
@@ -231887,6 +232880,103 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
   @override
@@ -231928,6 +233018,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Provedor selecionado indisponível (incompleto ou desativado)';
@@ -238312,6 +239407,8 @@ class _StringsPtBr extends _StringsEn {
   }) => 'O campo ${field} usou ${secondField} como termo de busca alternativo.';
   @override
   String file_count({required Object count}) => '${count} arquivos';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
@@ -256314,6 +257411,103 @@ class _StringsRu extends _StringsEn {
   @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
   @override
@@ -256354,6 +257548,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Выбранный провайдер недоступен (не настроен полностью или отключён)';
@@ -262713,6 +263912,8 @@ class _StringsRu extends _StringsEn {
       'Поле ${field} использовало ${secondField} в качестве резервного запроса.';
   @override
   String file_count({required Object count}) => '${count} файлов';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Поиск по фото';
   @override
@@ -280686,6 +281887,103 @@ class _StringsTh extends _StringsEn {
   @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
   @override
@@ -280725,6 +282023,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
@@ -287005,6 +288308,8 @@ class _StringsTh extends _StringsEn {
   }) => 'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
   @override
   String file_count({required Object count}) => '${count} ไฟล์';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'ค้นหาจากภาพถ่าย';
   @override
@@ -304736,6 +306041,103 @@ class _StringsTr extends _StringsEn {
   @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
   @override
@@ -304777,6 +306179,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
@@ -311115,6 +312522,8 @@ class _StringsTr extends _StringsEn {
   }) => '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
   @override
   String file_count({required Object count}) => '${count} dosya';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Fotoğrafla arama';
   @override
@@ -328990,6 +330399,103 @@ class _StringsVi extends _StringsEn {
   @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty =>
       'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
   @override
@@ -329030,6 +330536,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
@@ -335352,6 +336863,8 @@ class _StringsVi extends _StringsEn {
   }) => 'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
   @override
   String file_count({required Object count}) => '${count} tệp';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => 'Tra từ bằng ảnh chụp';
   @override
@@ -353167,6 +354680,95 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_attach_screen_text => '附上屏幕文字';
+  @override
+  String get ai_agent_choice_cancel => '都不是';
+  @override
+  String ai_agent_choice_picked({required Object label}) => '已选：${label}';
+  @override
+  String get ai_agent_confirm_approve => '执行';
+  @override
+  String get ai_agent_confirm_approved => '已确认';
+  @override
+  String get ai_agent_confirm_decline => '不执行';
+  @override
+  String get ai_agent_confirm_declined => '已拒绝';
+  @override
+  String get ai_agent_confirm_install_title => '要安装这个扩展吗？';
+  @override
+  String get ai_agent_confirm_irreversible => '这一步无法撤销。';
+  @override
+  String get ai_agent_confirm_title => '执行前请确认';
+  @override
+  String get ai_agent_confirm_undoable => '执行后可以撤销。';
+  @override
+  String ai_agent_context_chip({required Object title}) => '关于：${title}';
+  @override
+  String get ai_agent_details => '详情';
+  @override
+  String get ai_agent_empty_examples => '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
+  @override
+  String get ai_agent_empty_title => '要我做什么？';
+  @override
+  String get ai_agent_expand => '展开成整页';
+  @override
+  String get ai_agent_history_by_user => '经你确认';
+  @override
+  String get ai_agent_history_empty => 'AI 助手还没做过改动。';
+  @override
+  String get ai_agent_history_resume => '继续这场对话';
+  @override
+  String get ai_agent_history_summary => 'AI 助手做过的所有改动，可逐条撤销';
+  @override
+  String get ai_agent_history_title => 'AI 操作记录';
+  @override
+  String get ai_agent_input_hint => '告诉 AI 要做什么…';
+  @override
+  String get ai_agent_new_session => '新对话';
+  @override
+  String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
+  @override
+  String get ai_agent_open_settings => '去设置';
+  @override
+  String get ai_agent_risk_irreversible => '不可撤销';
+  @override
+  String get ai_agent_send => '发送';
+  @override
+  String ai_agent_session_summary({required Object n}) => '本次对话做了 ${n} 处改动';
+  @override
+  String get ai_agent_stop => '停止';
+  @override
+  String get ai_agent_stop_cancelled => '已停止。';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'AI 请求失败：${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure => '已停止：同一步连续失败两次。';
+  @override
+  String get ai_agent_stop_token_budget => '已停止：本次对话的 token 预算已用完。';
+  @override
+  String get ai_agent_stop_tool_limit => '已停止：这一轮步骤太多。';
+  @override
+  String get ai_agent_superseded => '之后又被改过，保留现状';
+  @override
+  String get ai_agent_title => 'AI 助手';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => '未执行';
+  @override
+  String ai_agent_tool_failed({required Object code}) => '失败：${code}';
+  @override
+  String get ai_agent_tool_running => '执行中…';
+  @override
+  String get ai_agent_undo => '撤销';
+  @override
+  String ai_agent_undo_all({required Object n}) => '全部撤销（${n}）';
+  @override
+  String ai_agent_undo_failed({required Object reason}) => '撤销失败：${reason}';
+  @override
+  String get ai_agent_undone => '已撤销';
+  @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 请求失败：${reason}';
@@ -353202,6 +354804,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
+  @override
+  String get ai_feature_agent => 'AI 助手';
+  @override
+  String get ai_feature_agent_summary => '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
   @override
   String get ai_feature_assigned_unavailable => '所选提供商不可用（未配置完整或已停用）';
   @override
@@ -358983,6 +360589,8 @@ class _StringsZhCn extends _StringsEn {
   }) => '${field} 字段使用 ${secondField} 作为备选搜索词。';
   @override
   String file_count({required Object count}) => '${count} 个文件';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => '拍照查词';
   @override
@@ -375278,6 +376886,103 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_attach_screen_text => 'Attach screen text';
+  @override
+  String get ai_agent_choice_cancel => 'None of these';
+  @override
+  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
+  @override
+  String get ai_agent_confirm_approve => 'Run';
+  @override
+  String get ai_agent_confirm_approved => 'Confirmed';
+  @override
+  String get ai_agent_confirm_decline => 'Don\'t run';
+  @override
+  String get ai_agent_confirm_declined => 'Declined';
+  @override
+  String get ai_agent_confirm_install_title => 'Install this extension?';
+  @override
+  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
+  @override
+  String get ai_agent_confirm_title => 'Confirm before running';
+  @override
+  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
+  @override
+  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  @override
+  String get ai_agent_details => 'Details';
+  @override
+  String get ai_agent_empty_examples =>
+      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+  @override
+  String get ai_agent_empty_title => 'What should I do?';
+  @override
+  String get ai_agent_expand => 'Open as full page';
+  @override
+  String get ai_agent_history_by_user => 'Confirmed by you';
+  @override
+  String get ai_agent_history_empty =>
+      'The AI assistant hasn\'t changed anything yet.';
+  @override
+  String get ai_agent_history_resume => 'Continue conversation';
+  @override
+  String get ai_agent_history_summary =>
+      'Everything the AI assistant changed; undo any of it';
+  @override
+  String get ai_agent_history_title => 'AI action log';
+  @override
+  String get ai_agent_input_hint => 'Tell the assistant what to do…';
+  @override
+  String get ai_agent_new_session => 'New conversation';
+  @override
+  String get ai_agent_no_provider =>
+      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+  @override
+  String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String get ai_agent_send => 'Send';
+  @override
+  String ai_agent_session_summary({required Object n}) =>
+      '${n} changes in this conversation';
+  @override
+  String get ai_agent_stop => 'Stop';
+  @override
+  String get ai_agent_stop_cancelled => 'Stopped.';
+  @override
+  String ai_agent_stop_llm_error({required Object reason}) =>
+      'The AI request failed: ${reason}';
+  @override
+  String get ai_agent_stop_repeated_failure =>
+      'Stopped: the same step failed twice.';
+  @override
+  String get ai_agent_stop_token_budget =>
+      'Stopped: this conversation used up its token budget.';
+  @override
+  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
+  @override
+  String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String get ai_agent_title => 'AI assistant';
+  @override
+  String ai_agent_tokens({required Object n}) => '${n} tokens';
+  @override
+  String get ai_agent_tool_declined => 'Not run';
+  @override
+  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
+  @override
+  String get ai_agent_tool_running => 'Running…';
+  @override
+  String get ai_agent_undo => 'Undo';
+  @override
+  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
+  @override
+  String ai_agent_undo_failed({required Object reason}) =>
+      'Undo failed: ${reason}';
+  @override
+  String get ai_agent_undone => 'Undone';
+  @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 請求失敗：${reason}';
@@ -375313,6 +377018,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
+  @override
+  String get ai_feature_agent => 'AI assistant';
+  @override
+  String get ai_feature_agent_summary =>
+      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable => '所選提供商不可用（未配置完整或已停用）';
   @override
@@ -381254,6 +382964,8 @@ class _StringsZhHk extends _StringsEn {
   }) => '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
   @override
   String file_count({required Object count}) => '${count} 個檔案';
+  @override
+  String get floating_ball_action_ai => 'AI';
   @override
   String get floating_ball_action_camera_ocr => '拍照查詞';
   @override
@@ -398010,6 +399722,94 @@ extension on _StringsEn {
         return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI did not return a usable result. Try describing it differently.';
       case 'ai_assist_failed':
@@ -398045,6 +399845,10 @@ extension on _StringsEn {
         return 'AI download';
       case 'ai_feature_acquire_summary':
         return 'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Selected provider unavailable (incomplete or disabled)';
       case 'ai_feature_audiobook_cast':
@@ -403377,6 +405181,8 @@ extension on _StringsEn {
             'The ${field} field used ${secondField} as its fallback search term.';
       case 'file_count':
         return ({required Object count}) => '${count} files';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Photo lookup';
       case 'floating_ball_action_clipboard':
@@ -418630,6 +420436,94 @@ extension on _StringsAr {
         return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
       case 'ai_assist_failed':
@@ -418665,6 +420559,10 @@ extension on _StringsAr {
         return 'تنزيل بالذكاء الاصطناعي';
       case 'ai_feature_acquire_summary':
         return 'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
       case 'ai_feature_audiobook_cast':
@@ -423997,6 +425895,8 @@ extension on _StringsAr {
             'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
       case 'file_count':
         return ({required Object count}) => '${count} ملفات';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'البحث بالتصوير';
       case 'floating_ball_action_clipboard':
@@ -439244,6 +441144,94 @@ extension on _StringsDe {
         return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
       case 'ai_assist_failed':
@@ -439280,6 +441268,10 @@ extension on _StringsDe {
         return 'KI-Download';
       case 'ai_feature_acquire_summary':
         return 'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
       case 'ai_feature_audiobook_cast':
@@ -444643,6 +446635,8 @@ extension on _StringsDe {
             'Das Feld ${field} hat ${secondField} als Ersatz-Suchbegriff verwendet.';
       case 'file_count':
         return ({required Object count}) => '${count} Dateien';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Foto nachschlagen';
       case 'floating_ball_action_clipboard':
@@ -459934,6 +461928,94 @@ extension on _StringsEs {
         return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
       case 'ai_assist_failed':
@@ -459970,6 +462052,10 @@ extension on _StringsEs {
         return 'Descarga con IA';
       case 'ai_feature_acquire_summary':
         return 'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'El proveedor seleccionado no está disponible (incompleto o desactivado)';
       case 'ai_feature_audiobook_cast':
@@ -465323,6 +467409,8 @@ extension on _StringsEs {
             'El campo ${field} usó ${secondField} como término de búsqueda alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} archivos';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -480606,6 +482694,94 @@ extension on _StringsFr {
         return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
       case 'ai_assist_failed':
@@ -480642,6 +482818,10 @@ extension on _StringsFr {
         return 'Téléchargement par IA';
       case 'ai_feature_acquire_summary':
         return 'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
       case 'ai_feature_audiobook_cast':
@@ -486008,6 +488188,8 @@ extension on _StringsFr {
             'Le champ ${field} a utilisé ${secondField} comme terme de recherche de secours.';
       case 'file_count':
         return ({required Object count}) => '${count} fichiers';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Recherche par photo';
       case 'floating_ball_action_clipboard':
@@ -501296,6 +503478,94 @@ extension on _StringsId {
         return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
       case 'ai_assist_failed':
@@ -501331,6 +503601,10 @@ extension on _StringsId {
         return 'Unduhan AI';
       case 'ai_feature_acquire_summary':
         return 'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
       case 'ai_feature_audiobook_cast':
@@ -506674,6 +508948,8 @@ extension on _StringsId {
             'Field ${field} menggunakan ${secondField} sebagai kata pencarian cadangan.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Pencarian foto';
       case 'floating_ball_action_clipboard':
@@ -521930,6 +524206,94 @@ extension on _StringsIt {
         return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
       case 'ai_assist_failed':
@@ -521966,6 +524330,10 @@ extension on _StringsIt {
         return 'Download con IA';
       case 'ai_feature_acquire_summary':
         return 'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Il provider selezionato non è disponibile (incompleto o disattivato)';
       case 'ai_feature_audiobook_cast':
@@ -527318,6 +529686,8 @@ extension on _StringsIt {
             'Il campo ${field} ha usato ${secondField} come termine di ricerca di riserva.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Ricerca da foto';
       case 'floating_ball_action_clipboard':
@@ -542600,6 +544970,94 @@ extension on _StringsJa {
         return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -542634,6 +545092,10 @@ extension on _StringsJa {
         return 'AI ダウンロード';
       case 'ai_feature_acquire_summary':
         return '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '選択したプロバイダーを利用できません（設定が不完全、または無効）';
       case 'ai_feature_audiobook_cast':
@@ -547943,6 +550405,8 @@ extension on _StringsJa {
             '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
       case 'file_count':
         return ({required Object count}) => '${count} ファイル';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '撮影して検索';
       case 'floating_ball_action_clipboard':
@@ -563135,6 +565599,94 @@ extension on _StringsKo {
         return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
       case 'ai_assist_failed':
@@ -563169,6 +565721,10 @@ extension on _StringsKo {
         return 'AI 다운로드';
       case 'ai_feature_acquire_summary':
         return '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
       case 'ai_feature_audiobook_cast':
@@ -568482,6 +571038,8 @@ extension on _StringsKo {
             '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
       case 'file_count':
         return ({required Object count}) => '${count}개 파일';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '사진으로 검색';
       case 'floating_ball_action_clipboard':
@@ -583686,6 +586244,94 @@ extension on _StringsNl {
         return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
       case 'ai_assist_failed':
@@ -583721,6 +586367,10 @@ extension on _StringsNl {
         return 'AI-download';
       case 'ai_feature_acquire_summary':
         return 'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
       case 'ai_feature_audiobook_cast':
@@ -589072,6 +591722,8 @@ extension on _StringsNl {
             'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
       case 'file_count':
         return ({required Object count}) => '${count} bestanden';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Opzoeken via foto';
       case 'floating_ball_action_clipboard':
@@ -604351,6 +607003,94 @@ extension on _StringsPtBr {
         return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
       case 'ai_assist_failed':
@@ -604387,6 +607127,10 @@ extension on _StringsPtBr {
         return 'Download com IA';
       case 'ai_feature_acquire_summary':
         return 'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Provedor selecionado indisponível (incompleto ou desativado)';
       case 'ai_feature_audiobook_cast':
@@ -609736,6 +612480,8 @@ extension on _StringsPtBr {
             'O campo ${field} usou ${secondField} como termo de busca alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} arquivos';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -625008,6 +627754,94 @@ extension on _StringsRu {
         return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
       case 'ai_assist_failed':
@@ -625042,6 +627876,10 @@ extension on _StringsRu {
         return 'ИИ-загрузка';
       case 'ai_feature_acquire_summary':
         return 'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Выбранный провайдер недоступен (не настроен полностью или отключён)';
       case 'ai_feature_audiobook_cast':
@@ -630400,6 +633238,8 @@ extension on _StringsRu {
             'Поле ${field} использовало ${secondField} в качестве резервного запроса.';
       case 'file_count':
         return ({required Object count}) => '${count} файлов';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Поиск по фото';
       case 'floating_ball_action_clipboard':
@@ -645670,6 +648510,94 @@ extension on _StringsTh {
         return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
       case 'ai_assist_failed':
@@ -645705,6 +648633,10 @@ extension on _StringsTh {
         return 'ดาวน์โหลดด้วย AI';
       case 'ai_feature_acquire_summary':
         return 'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
       case 'ai_feature_audiobook_cast':
@@ -651038,6 +653970,8 @@ extension on _StringsTh {
             'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
       case 'file_count':
         return ({required Object count}) => '${count} ไฟล์';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'ค้นหาจากภาพถ่าย';
       case 'floating_ball_action_clipboard':
@@ -666288,6 +669222,94 @@ extension on _StringsTr {
         return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
       case 'ai_assist_failed':
@@ -666323,6 +669345,10 @@ extension on _StringsTr {
         return 'Yapay zeka ile indirme';
       case 'ai_feature_acquire_summary':
         return 'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
       case 'ai_feature_audiobook_cast':
@@ -671673,6 +674699,8 @@ extension on _StringsTr {
             '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
       case 'file_count':
         return ({required Object count}) => '${count} dosya';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Fotoğrafla arama';
       case 'floating_ball_action_clipboard':
@@ -686937,6 +689965,94 @@ extension on _StringsVi {
         return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
       case 'ai_assist_failed':
@@ -686971,6 +690087,10 @@ extension on _StringsVi {
         return 'Tải bằng AI';
       case 'ai_feature_acquire_summary':
         return 'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
       case 'ai_feature_audiobook_cast':
@@ -692315,6 +695435,8 @@ extension on _StringsVi {
             'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
       case 'file_count':
         return ({required Object count}) => '${count} tệp';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Tra từ bằng ảnh chụp';
       case 'floating_ball_action_clipboard':
@@ -707568,6 +710690,94 @@ extension on _StringsZhCn {
         return '卷';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_attach_screen_text':
+        return '附上屏幕文字';
+      case 'ai_agent_choice_cancel':
+        return '都不是';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => '已选：${label}';
+      case 'ai_agent_confirm_approve':
+        return '执行';
+      case 'ai_agent_confirm_approved':
+        return '已确认';
+      case 'ai_agent_confirm_decline':
+        return '不执行';
+      case 'ai_agent_confirm_declined':
+        return '已拒绝';
+      case 'ai_agent_confirm_install_title':
+        return '要安装这个扩展吗？';
+      case 'ai_agent_confirm_irreversible':
+        return '这一步无法撤销。';
+      case 'ai_agent_confirm_title':
+        return '执行前请确认';
+      case 'ai_agent_confirm_undoable':
+        return '执行后可以撤销。';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => '关于：${title}';
+      case 'ai_agent_details':
+        return '详情';
+      case 'ai_agent_empty_examples':
+        return '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
+      case 'ai_agent_empty_title':
+        return '要我做什么？';
+      case 'ai_agent_expand':
+        return '展开成整页';
+      case 'ai_agent_history_by_user':
+        return '经你确认';
+      case 'ai_agent_history_empty':
+        return 'AI 助手还没做过改动。';
+      case 'ai_agent_history_resume':
+        return '继续这场对话';
+      case 'ai_agent_history_summary':
+        return 'AI 助手做过的所有改动，可逐条撤销';
+      case 'ai_agent_history_title':
+        return 'AI 操作记录';
+      case 'ai_agent_input_hint':
+        return '告诉 AI 要做什么…';
+      case 'ai_agent_new_session':
+        return '新对话';
+      case 'ai_agent_no_provider':
+        return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
+      case 'ai_agent_open_settings':
+        return '去设置';
+      case 'ai_agent_risk_irreversible':
+        return '不可撤销';
+      case 'ai_agent_send':
+        return '发送';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '本次对话做了 ${n} 处改动';
+      case 'ai_agent_stop':
+        return '停止';
+      case 'ai_agent_stop_cancelled':
+        return '已停止。';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'AI 请求失败：${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return '已停止：同一步连续失败两次。';
+      case 'ai_agent_stop_token_budget':
+        return '已停止：本次对话的 token 预算已用完。';
+      case 'ai_agent_stop_tool_limit':
+        return '已停止：这一轮步骤太多。';
+      case 'ai_agent_superseded':
+        return '之后又被改过，保留现状';
+      case 'ai_agent_title':
+        return 'AI 助手';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return '未执行';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => '失败：${code}';
+      case 'ai_agent_tool_running':
+        return '执行中…';
+      case 'ai_agent_undo':
+        return '撤销';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => '全部撤销（${n}）';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => '撤销失败：${reason}';
+      case 'ai_agent_undone':
+        return '已撤销';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -707602,6 +710812,10 @@ extension on _StringsZhCn {
         return 'AI 下载';
       case 'ai_feature_acquire_summary':
         return '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
+      case 'ai_feature_agent':
+        return 'AI 助手';
+      case 'ai_feature_agent_summary':
+        return '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
       case 'ai_feature_assigned_unavailable':
         return '所选提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -712850,6 +716064,8 @@ extension on _StringsZhCn {
             '${field} 字段使用 ${secondField} 作为备选搜索词。';
       case 'file_count':
         return ({required Object count}) => '${count} 个文件';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查词';
       case 'floating_ball_action_clipboard':
@@ -727947,6 +731163,94 @@ extension on _StringsZhHk {
         return 'Volume';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_attach_screen_text':
+        return 'Attach screen text';
+      case 'ai_agent_choice_cancel':
+        return 'None of these';
+      case 'ai_agent_choice_picked':
+        return ({required Object label}) => 'Picked: ${label}';
+      case 'ai_agent_confirm_approve':
+        return 'Run';
+      case 'ai_agent_confirm_approved':
+        return 'Confirmed';
+      case 'ai_agent_confirm_decline':
+        return 'Don\'t run';
+      case 'ai_agent_confirm_declined':
+        return 'Declined';
+      case 'ai_agent_confirm_install_title':
+        return 'Install this extension?';
+      case 'ai_agent_confirm_irreversible':
+        return 'This cannot be undone.';
+      case 'ai_agent_confirm_title':
+        return 'Confirm before running';
+      case 'ai_agent_confirm_undoable':
+        return 'You can undo it afterwards.';
+      case 'ai_agent_context_chip':
+        return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_details':
+        return 'Details';
+      case 'ai_agent_empty_examples':
+        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
+      case 'ai_agent_empty_title':
+        return 'What should I do?';
+      case 'ai_agent_expand':
+        return 'Open as full page';
+      case 'ai_agent_history_by_user':
+        return 'Confirmed by you';
+      case 'ai_agent_history_empty':
+        return 'The AI assistant hasn\'t changed anything yet.';
+      case 'ai_agent_history_resume':
+        return 'Continue conversation';
+      case 'ai_agent_history_summary':
+        return 'Everything the AI assistant changed; undo any of it';
+      case 'ai_agent_history_title':
+        return 'AI action log';
+      case 'ai_agent_input_hint':
+        return 'Tell the assistant what to do…';
+      case 'ai_agent_new_session':
+        return 'New conversation';
+      case 'ai_agent_no_provider':
+        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
+      case 'ai_agent_open_settings':
+        return 'Open settings';
+      case 'ai_agent_risk_irreversible':
+        return 'Cannot be undone';
+      case 'ai_agent_send':
+        return 'Send';
+      case 'ai_agent_session_summary':
+        return ({required Object n}) => '${n} changes in this conversation';
+      case 'ai_agent_stop':
+        return 'Stop';
+      case 'ai_agent_stop_cancelled':
+        return 'Stopped.';
+      case 'ai_agent_stop_llm_error':
+        return ({required Object reason}) => 'The AI request failed: ${reason}';
+      case 'ai_agent_stop_repeated_failure':
+        return 'Stopped: the same step failed twice.';
+      case 'ai_agent_stop_token_budget':
+        return 'Stopped: this conversation used up its token budget.';
+      case 'ai_agent_stop_tool_limit':
+        return 'Stopped: too many steps in one turn.';
+      case 'ai_agent_superseded':
+        return 'Changed again afterwards; left as is';
+      case 'ai_agent_title':
+        return 'AI assistant';
+      case 'ai_agent_tokens':
+        return ({required Object n}) => '${n} tokens';
+      case 'ai_agent_tool_declined':
+        return 'Not run';
+      case 'ai_agent_tool_failed':
+        return ({required Object code}) => 'Failed: ${code}';
+      case 'ai_agent_tool_running':
+        return 'Running…';
+      case 'ai_agent_undo':
+        return 'Undo';
+      case 'ai_agent_undo_all':
+        return ({required Object n}) => 'Undo all (${n})';
+      case 'ai_agent_undo_failed':
+        return ({required Object reason}) => 'Undo failed: ${reason}';
+      case 'ai_agent_undone':
+        return 'Undone';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -727981,6 +731285,10 @@ extension on _StringsZhHk {
         return 'AI 下載';
       case 'ai_feature_acquire_summary':
         return '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
+      case 'ai_feature_agent':
+        return 'AI assistant';
+      case 'ai_feature_agent_summary':
+        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '所選提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -733256,6 +736564,8 @@ extension on _StringsZhHk {
             '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
       case 'file_count':
         return ({required Object count}) => '${count} 個檔案';
+      case 'floating_ball_action_ai':
+        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查詞';
       case 'floating_ball_action_clipboard':
