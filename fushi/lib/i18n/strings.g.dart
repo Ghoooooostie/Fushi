@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169048 (9944 per locale)
+/// Strings: 169524 (9972 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -661,7 +661,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
   String get anime_download_no_subs => 'No subs';
   String get anime_download_no_tasks => 'No download tasks yet';
-  String get anime_download_nyaa_query => 'Nyaa search terms';
+  String get anime_download_nyaa_query => 'BT search terms';
   String get anime_download_play_now => 'Play while downloading';
   String get anime_download_play_now_fail =>
       'Not ready yet (metadata pending or connection failed) — try again later';
@@ -2430,6 +2430,47 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
+  String get bt_site_add_action => 'Add BT site';
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  String get bt_site_detecting_status => 'Recognizing site…';
+  String get bt_site_domain_anime => 'Anime';
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  String get bt_site_domain_game => 'Games';
+  String get bt_site_domain_manga => 'Manga';
+  String get bt_site_domain_movie => 'Movies';
+  String get bt_site_domain_novel => 'Novels';
+  String get bt_site_domain_tv => 'TV shows';
+  String get bt_site_domains_label => 'Use for';
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  String get bt_site_edit_title => 'Edit BT site';
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  String get bt_site_enabled_label => 'Enabled';
+  String get bt_site_missing_status => 'Add a BT site first';
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  String get bt_site_name_label => 'Name (optional)';
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  String get bt_site_redetect_action => 'Recognize again';
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  String get bt_site_section_title => 'BT sites';
+  String get bt_site_test_search_action => 'Test search';
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  String get bt_site_url_hint => 'https://example.com';
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  String get bt_site_url_label => 'Site address';
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
@@ -12089,15 +12130,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_bottom_seek_back_label => '−10s';
   String get video_bottom_seek_forward => 'Forward 10s';
   String get video_bottom_seek_forward_label => '+10s';
-  String get video_builtin_apibay_hint =>
-      'Movies and TV shows. Public index, no account needed.';
-  String get video_builtin_knaben_hint =>
-      'Movies and TV shows. Aggregates several public indexers.';
-  String get video_builtin_nyaa_hint =>
-      'Anime only. Movies and TV shows are covered by the two public indexers below.';
-  String get video_builtin_sources_hint =>
-      'Ship with the app: no account, no API key. Turn one off to keep it out of resource searches.';
-  String get video_builtin_sources_title => 'Built-in sources';
   String video_chapter_n({required Object n}) => 'Chapter ${n}';
   String get video_chapters => 'Chapters';
   String get video_chapters_empty => 'No chapters';
@@ -12815,8 +12847,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The file for 『${title}』 could not be found. Its location may have changed, or the drive may not be connected. You can re-import it, or remove this entry.';
   String get video_resource_missing_reimport => 'Re-import';
   String get video_resource_missing_title => 'Video unavailable';
-  String get video_resource_no_provider_hint =>
-      'This search had no provider to query. Re-enable a built-in source, or add a Torznab indexer, under Settings, Downloads, External resource and subtitle providers.';
   String get video_resource_no_provider_title =>
       'No resource indexer configured';
   String video_resource_query_failed({required Object query}) =>
@@ -15147,7 +15177,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'لا توجد مهام تحميل بعد';
   @override
-  String get anime_download_nyaa_query => 'عبارات بحث Nyaa';
+  String get anime_download_nyaa_query => 'عبارات بحث BT';
   @override
   String get anime_download_play_now => 'تشغيل أثناء التحميل';
   @override
@@ -18048,6 +18078,81 @@ class _StringsAr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'إلغاء';
   @override
@@ -34643,20 +34748,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10 ث';
   @override
-  String get video_builtin_apibay_hint =>
-      'أفلام ومسلسلات تلفزيونية. فهرس عام، لا يحتاج حساب.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'أفلام ومسلسلات تلفزيونية. يجمع عدة مُفهرسات عامة.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'أنمي فقط. الأفلام والمسلسلات يغطيها المُفهرسان العامان أدناه.';
-  @override
-  String get video_builtin_sources_hint =>
-      'مضمّنة مع التطبيق: لا حساب ولا مفتاح API. أوقف أحدها لاستبعاده من بحث الموارد.';
-  @override
-  String get video_builtin_sources_title => 'المصادر المدمجة';
-  @override
   String video_chapter_n({required Object n}) => 'الفصل ${n}';
   @override
   String get video_chapters => 'الفصول';
@@ -35872,9 +35963,6 @@ class _StringsAr extends _StringsEn {
   String get video_resource_missing_reimport => 'إعادة استيراد';
   @override
   String get video_resource_missing_title => 'الفيديو غير متوفر';
-  @override
-  String get video_resource_no_provider_hint =>
-      'لم يكن لهذا البحث مزوّد للاستعلام. أعد تفعيل مصدر مدمج أو أضف مُفهرس Torznab من الإعدادات، التحميلات، مزوّدو الموارد والترجمات الخارجية.';
   @override
   String get video_resource_no_provider_title => 'لم يتم تكوين مُفهرس موارد';
   @override
@@ -39255,7 +39343,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Noch keine Download-Aufgaben';
   @override
-  String get anime_download_nyaa_query => 'Nyaa-Suchbegriffe';
+  String get anime_download_nyaa_query => 'BT-Suchbegriffe';
   @override
   String get anime_download_play_now => 'Während des Downloads abspielen';
   @override
@@ -42203,6 +42291,81 @@ class _StringsDe extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Abbrechen';
   @override
@@ -59070,20 +59233,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filme und Serien. Öffentlicher Index, kein Konto erforderlich.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filme und Serien. Bündelt mehrere öffentliche Indexer.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Nur Anime. Filme und Serien werden von den beiden öffentlichen Indexern unten abgedeckt.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Mit der App mitgeliefert: kein Konto, kein API-Schlüssel. Deaktivieren, um sie aus Ressourcensuchen auszuschließen.';
-  @override
-  String get video_builtin_sources_title => 'Integrierte Quellen';
-  @override
   String video_chapter_n({required Object n}) => 'Kapitel ${n}';
   @override
   String get video_chapters => 'Kapitel';
@@ -60319,9 +60468,6 @@ class _StringsDe extends _StringsEn {
   String get video_resource_missing_reimport => 'Erneut importieren';
   @override
   String get video_resource_missing_title => 'Video nicht verfügbar';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Diese Suche hatte keinen Anbieter zum Abfragen. Aktivieren Sie eine integrierte Quelle erneut oder fügen Sie einen Torznab-Indexer unter Einstellungen, Downloads, Externe Ressourcen- und Untertitelanbieter hinzu.';
   @override
   String get video_resource_no_provider_title =>
       'Kein Ressourcen-Indexer konfiguriert';
@@ -63748,7 +63894,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Aún no hay tareas de descarga';
   @override
-  String get anime_download_nyaa_query => 'Términos de búsqueda en Nyaa';
+  String get anime_download_nyaa_query => 'Términos de búsqueda en BT';
   @override
   String get anime_download_play_now => 'Reproducir mientras descarga';
   @override
@@ -66704,6 +66850,81 @@ class _StringsEs extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -83602,20 +83823,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Películas y series de TV. Índice público, sin cuenta necesaria.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Películas y series de TV. Agrega varios indexadores públicos.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Solo anime. Películas y series de TV están cubiertas por los dos indexadores públicos de abajo.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Incluidas con la app: sin cuenta, sin clave API. Desactive una para mantenerla fuera de las búsquedas de recursos.';
-  @override
-  String get video_builtin_sources_title => 'Fuentes integradas';
-  @override
   String video_chapter_n({required Object n}) => 'Capítulo ${n}';
   @override
   String get video_chapters => 'Capítulos';
@@ -84856,9 +85063,6 @@ class _StringsEs extends _StringsEn {
   String get video_resource_missing_reimport => 'Reimportar';
   @override
   String get video_resource_missing_title => 'Vídeo no disponible';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Esta búsqueda no tuvo proveedor para consultar. Reactive una fuente integrada, o añada un indexador Torznab, en Ajustes, Descargas, Proveedores externos de recursos y subtítulos.';
   @override
   String get video_resource_no_provider_title =>
       'Sin indexador de recursos configurado';
@@ -88295,7 +88499,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Aucune tâche de téléchargement';
   @override
-  String get anime_download_nyaa_query => 'Termes de recherche Nyaa';
+  String get anime_download_nyaa_query => 'Termes de recherche BT';
   @override
   String get anime_download_play_now => 'Lire pendant le téléchargement';
   @override
@@ -91267,6 +91471,81 @@ class _StringsFr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annuler';
   @override
@@ -108208,20 +108487,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Films et séries TV. Index public, pas de compte nécessaire.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Films et séries TV. Agrège plusieurs indexeurs publics.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Anime uniquement. Les films et séries TV sont couverts par les deux indexeurs publics ci-dessous.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Fournies avec l\'application : pas de compte, pas de clé API. Désactivez-en une pour l\'exclure des recherches de ressources.';
-  @override
-  String get video_builtin_sources_title => 'Sources intégrées';
-  @override
   String video_chapter_n({required Object n}) => 'Chapitre ${n}';
   @override
   String get video_chapters => 'Chapitres';
@@ -109468,9 +109733,6 @@ class _StringsFr extends _StringsEn {
   String get video_resource_missing_reimport => 'Réimporter';
   @override
   String get video_resource_missing_title => 'Vidéo indisponible';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Cette recherche n\'avait aucun fournisseur. Réactivez une source intégrée, ou ajoutez un indexeur Torznab, sous Paramètres, Téléchargements, Fournisseurs de ressources et sous-titres externes.';
   @override
   String get video_resource_no_provider_title =>
       'Aucun indexeur de ressources configuré';
@@ -112919,7 +113181,7 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Belum ada tugas unduhan';
   @override
-  String get anime_download_nyaa_query => 'Kata kunci pencarian Nyaa';
+  String get anime_download_nyaa_query => 'Kata kunci pencarian BT';
   @override
   String get anime_download_play_now => 'Putar sambil mengunduh';
   @override
@@ -115842,6 +116104,81 @@ class _StringsId extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Batal';
   @override
@@ -132556,20 +132893,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10d';
   @override
-  String get video_builtin_apibay_hint =>
-      'Film dan acara TV. Indeks publik, tidak perlu akun.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Film dan acara TV. Mengagregasi beberapa indexer publik.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Hanya anime. Film dan acara TV dicakup oleh dua indexer publik di bawah.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Dikirimkan bersama aplikasi: tanpa akun, tanpa kunci API. Nonaktifkan satu untuk mengecualikannya dari pencarian sumber daya.';
-  @override
-  String get video_builtin_sources_title => 'Sumber bawaan';
-  @override
   String video_chapter_n({required Object n}) => 'Bab ${n}';
   @override
   String get video_chapters => 'Bab';
@@ -133800,9 +134123,6 @@ class _StringsId extends _StringsEn {
   String get video_resource_missing_reimport => 'Impor ulang';
   @override
   String get video_resource_missing_title => 'Video tidak tersedia';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Pencarian ini tidak memiliki penyedia untuk dikueri. Aktifkan kembali sumber bawaan, atau tambahkan indexer Torznab, di Pengaturan, Unduhan, Penyedia sumber daya dan subtitle eksternal.';
   @override
   String get video_resource_no_provider_title =>
       'Tidak ada indexer sumber daya yang dikonfigurasi';
@@ -137206,7 +137526,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nessun download in corso';
   @override
-  String get anime_download_nyaa_query => 'Termini di ricerca Nyaa';
+  String get anime_download_nyaa_query => 'Termini di ricerca BT';
   @override
   String get anime_download_play_now => 'Riproduci durante il download';
   @override
@@ -140148,6 +140468,81 @@ class _StringsIt extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annulla';
   @override
@@ -156979,20 +157374,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Film e serie TV. Indice pubblico, nessun account necessario.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Film e serie TV. Aggrega diversi indexer pubblici.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Solo anime. Film e serie TV sono coperti dai due indexer pubblici sotto.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Incluse nell\'app: nessun account, nessuna chiave API. Disattivane una per escluderla dalle ricerche di risorse.';
-  @override
-  String get video_builtin_sources_title => 'Fonti integrate';
-  @override
   String video_chapter_n({required Object n}) => 'Capitolo ${n}';
   @override
   String get video_chapters => 'Capitoli';
@@ -158224,9 +158605,6 @@ class _StringsIt extends _StringsEn {
   String get video_resource_missing_reimport => 'Reimporta';
   @override
   String get video_resource_missing_title => 'Video non disponibile';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Questa ricerca non aveva un provider da interrogare. Riabilita una fonte integrata, o aggiungi un indexer Torznab, in Impostazioni, Download, Provider di risorse e sottotitoli esterni.';
   @override
   String get video_resource_no_provider_title =>
       'Nessun indexer di risorse configurato';
@@ -161624,7 +162002,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'ダウンロードタスクはまだありません';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 検索語';
+  String get anime_download_nyaa_query => 'BT 検索語';
   @override
   String get anime_download_play_now => 'ダウンロード中に再生';
   @override
@@ -164453,6 +164831,81 @@ class _StringsJa extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'キャンセル';
   @override
@@ -180587,17 +181040,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10秒';
   @override
-  String get video_builtin_apibay_hint => '映画とテレビ番組。公開インデックス、アカウント不要。';
-  @override
-  String get video_builtin_knaben_hint => '映画とテレビ番組。複数の公開インデクサーを集約。';
-  @override
-  String get video_builtin_nyaa_hint => 'アニメのみ。映画とテレビ番組は下の2つの公開インデクサーでカバーされます。';
-  @override
-  String get video_builtin_sources_hint =>
-      'アプリに同梱：アカウントもAPIキーも不要。オフにするとリソース検索から除外されます。';
-  @override
-  String get video_builtin_sources_title => '組み込みソース';
-  @override
   String video_chapter_n({required Object n}) => 'チャプター ${n}';
   @override
   String get video_chapters => 'チャプター';
@@ -181769,9 +182211,6 @@ class _StringsJa extends _StringsEn {
   String get video_resource_missing_reimport => '再インポート';
   @override
   String get video_resource_missing_title => '動画が利用できません';
-  @override
-  String get video_resource_no_provider_hint =>
-      'この検索にはクエリ先のプロバイダーがありませんでした。組み込みソースを再有効化するか、設定 → ダウンロード → 外部リソース・字幕プロバイダーでTorznabインデクサーを追加してください。';
   @override
   String get video_resource_no_provider_title => 'リソースインデクサーが未設定';
   @override
@@ -185028,7 +185467,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_no_tasks => '다운로드 작업이 없습니다';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 검색어';
+  String get anime_download_nyaa_query => 'BT 검색어';
   @override
   String get anime_download_play_now => '다운로드하면서 재생';
   @override
@@ -187856,6 +188295,81 @@ class _StringsKo extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => '취소';
   @override
@@ -204025,18 +204539,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10초';
   @override
-  String get video_builtin_apibay_hint => '영화 및 TV 프로그램. 공개 인덱스, 계정 불필요.';
-  @override
-  String get video_builtin_knaben_hint => '영화 및 TV 프로그램. 여러 공개 인덱서를 통합합니다.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      '애니메이션 전용. 영화 및 TV 프로그램은 아래 두 공개 인덱서에서 다룹니다.';
-  @override
-  String get video_builtin_sources_hint =>
-      '앱에 내장: 계정이나 API 키 불필요. 하나를 끄면 리소스 검색에서 제외됩니다.';
-  @override
-  String get video_builtin_sources_title => '내장 소스';
-  @override
   String video_chapter_n({required Object n}) => '챕터 ${n}';
   @override
   String get video_chapters => '챕터';
@@ -205217,9 +205719,6 @@ class _StringsKo extends _StringsEn {
   String get video_resource_missing_reimport => '다시 가져오기';
   @override
   String get video_resource_missing_title => '동영상을 사용할 수 없음';
-  @override
-  String get video_resource_no_provider_hint =>
-      '이 검색에 쿼리할 제공자가 없습니다. 설정 > 다운로드 > 외부 리소스 및 자막 제공자에서 내장 소스를 다시 활성화하거나 Torznab 인덱서를 추가하세요.';
   @override
   String get video_resource_no_provider_title => '리소스 인덱서가 설정되지 않았습니다';
   @override
@@ -208534,7 +209033,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nog geen downloadtaken';
   @override
-  String get anime_download_nyaa_query => 'Nyaa zoektermen';
+  String get anime_download_nyaa_query => 'BT zoektermen';
   @override
   String get anime_download_play_now => 'Afspelen tijdens downloaden';
   @override
@@ -211471,6 +211970,81 @@ class _StringsNl extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Annuleren';
   @override
@@ -228267,20 +228841,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Films en tv-series. Openbare index, geen account nodig.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Films en tv-series. Aggregeert meerdere openbare indexers.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Alleen anime. Films en tv-series worden gedekt door de twee onderstaande openbare indexers.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Meegeleverd met de app: geen account, geen API-sleutel. Schakel er een uit om deze buiten resource-zoekopdrachten te houden.';
-  @override
-  String get video_builtin_sources_title => 'Ingebouwde bronnen';
-  @override
   String video_chapter_n({required Object n}) => 'Hoofdstuk ${n}';
   @override
   String get video_chapters => 'Hoofdstukken';
@@ -229510,9 +230070,6 @@ class _StringsNl extends _StringsEn {
   String get video_resource_missing_reimport => 'Opnieuw importeren';
   @override
   String get video_resource_missing_title => 'Video niet beschikbaar';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Deze zoekopdracht had geen provider om te bevragen. Schakel een ingebouwde bron opnieuw in, of voeg een Torznab-indexer toe, via Instellingen, Downloads, Externe resource- en ondertitelproviders.';
   @override
   String get video_resource_no_provider_title =>
       'Geen resource-indexer geconfigureerd';
@@ -232929,7 +233486,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Nenhuma tarefa de download ainda';
   @override
-  String get anime_download_nyaa_query => 'Termos de busca no Nyaa';
+  String get anime_download_nyaa_query => 'Termos de busca no BT';
   @override
   String get anime_download_play_now => 'Assistir durante o download';
   @override
@@ -235879,6 +236436,81 @@ class _StringsPtBr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -252709,20 +253341,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filmes e séries de TV. Índice público, sem necessidade de conta.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filmes e séries de TV. Agrega vários indexadores públicos.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Apenas anime. Filmes e séries de TV são cobertos pelos dois indexadores públicos abaixo.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Vêm com o app: sem conta, sem chave de API. Desative uma para mantê-la fora das buscas de recursos.';
-  @override
-  String get video_builtin_sources_title => 'Fontes integradas';
-  @override
   String video_chapter_n({required Object n}) => 'Capítulo ${n}';
   @override
   String get video_chapters => 'Capítulos';
@@ -253962,9 +254580,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_resource_missing_reimport => 'Reimportar';
   @override
   String get video_resource_missing_title => 'Vídeo indisponível';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Esta busca não tinha provedor para consultar. Reative uma fonte integrada ou adicione um indexador Torznab em Configurações, Downloads, Provedores externos de recursos e legendas.';
   @override
   String get video_resource_no_provider_title =>
       'Nenhum indexador de recursos configurado';
@@ -257391,7 +258006,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Загрузок пока нет';
   @override
-  String get anime_download_nyaa_query => 'Поисковый запрос Nyaa';
+  String get anime_download_nyaa_query => 'Поисковый запрос BT';
   @override
   String get anime_download_play_now => 'Воспроизвести во время загрузки';
   @override
@@ -260329,6 +260944,81 @@ class _StringsRu extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Отмена';
   @override
@@ -277123,20 +277813,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10с';
   @override
-  String get video_builtin_apibay_hint =>
-      'Фильмы и сериалы. Публичный индекс, аккаунт не нужен.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Фильмы и сериалы. Агрегирует несколько публичных индексаторов.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Только аниме. Фильмы и сериалы покрываются двумя публичными индексаторами ниже.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Встроены в приложение: без аккаунта, без API-ключа. Отключите источник, чтобы исключить его из поиска ресурсов.';
-  @override
-  String get video_builtin_sources_title => 'Встроенные источники';
-  @override
   String video_chapter_n({required Object n}) => 'Глава ${n}';
   @override
   String get video_chapters => 'Главы';
@@ -278372,9 +279048,6 @@ class _StringsRu extends _StringsEn {
   String get video_resource_missing_reimport => 'Импортировать заново';
   @override
   String get video_resource_missing_title => 'Видео недоступно';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Для этого поиска не нашлось провайдера. Включите встроенный источник или добавьте Torznab-индексатор в разделе Настройки, Загрузки, Внешние провайдеры ресурсов и субтитров.';
   @override
   String get video_resource_no_provider_title =>
       'Индексатор ресурсов не настроен';
@@ -281795,7 +282468,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'ยังไม่มีงานดาวน์โหลด';
   @override
-  String get anime_download_nyaa_query => 'คำค้นหา Nyaa';
+  String get anime_download_nyaa_query => 'คำค้นหา BT';
   @override
   String get anime_download_play_now => 'เล่นระหว่างดาวน์โหลด';
   @override
@@ -284687,6 +285360,81 @@ class _StringsTh extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'ยกเลิก';
   @override
@@ -301279,20 +302027,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10 วิ';
   @override
-  String get video_builtin_apibay_hint =>
-      'ภาพยนตร์และรายการทีวี ดัชนีสาธารณะ ไม่ต้องมีบัญชี';
-  @override
-  String get video_builtin_knaben_hint =>
-      'ภาพยนตร์และรายการทีวี รวบรวมจากตัวจัดทำดัชนีสาธารณะหลายแห่ง';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'อนิเมะเท่านั้น ภาพยนตร์และรายการทีวีรองรับโดยตัวจัดทำดัชนีสาธารณะด้านล่าง';
-  @override
-  String get video_builtin_sources_hint =>
-      'มาพร้อมกับแอป: ไม่ต้องมีบัญชี ไม่ต้องมีคีย์ API ปิดเพื่อไม่ให้ปรากฏในการค้นหาทรัพยากร';
-  @override
-  String get video_builtin_sources_title => 'แหล่งข้อมูลในตัว';
-  @override
   String video_chapter_n({required Object n}) => 'บทที่ ${n}';
   @override
   String get video_chapters => 'บท';
@@ -302506,9 +303240,6 @@ class _StringsTh extends _StringsEn {
   String get video_resource_missing_reimport => 'นำเข้าใหม่';
   @override
   String get video_resource_missing_title => 'วิดีโอไม่พร้อมใช้งาน';
-  @override
-  String get video_resource_no_provider_hint =>
-      'การค้นหานี้ไม่มีผู้ให้บริการที่จะสอบถาม เปิดใช้แหล่งในตัวอีกครั้ง หรือเพิ่มตัวจัดทำดัชนี Torznab ในการตั้งค่า > ดาวน์โหลด > ผู้ให้บริการทรัพยากรและคำบรรยายภายนอก';
   @override
   String get video_resource_no_provider_title =>
       'ยังไม่ได้ตั้งค่าตัวจัดทำดัชนีทรัพยากร';
@@ -305886,7 +306617,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Henüz indirme görevi yok';
   @override
-  String get anime_download_nyaa_query => 'Nyaa arama terimleri';
+  String get anime_download_nyaa_query => 'BT arama terimleri';
   @override
   String get anime_download_play_now => 'İndirirken oynat';
   @override
@@ -308808,6 +309539,81 @@ class _StringsTr extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'İptal';
   @override
@@ -325533,20 +326339,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10sn';
   @override
-  String get video_builtin_apibay_hint =>
-      'Filmler ve TV dizileri. Herkese açık dizin, hesap gerekmez.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Filmler ve TV dizileri. Birden fazla herkese açık dizinleyiciyi toplar.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Yalnızca anime. Filmler ve TV dizileri aşağıdaki iki herkese açık dizinleyici tarafından kapsanır.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Uygulamayla birlikte gelir: hesap veya API anahtarı gerekmez. Kaynak aramalarından çıkarmak için birini kapatın.';
-  @override
-  String get video_builtin_sources_title => 'Yerleşik kaynaklar';
-  @override
   String video_chapter_n({required Object n}) => 'Bölüm ${n}';
   @override
   String get video_chapters => 'Bölümler';
@@ -326769,9 +327561,6 @@ class _StringsTr extends _StringsEn {
   String get video_resource_missing_reimport => 'Yeniden içe aktar';
   @override
   String get video_resource_missing_title => 'Video kullanılamıyor';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Bu aramanın sorgu yapacak bir sağlayıcısı yoktu. Ayarlar, İndirmeler, Harici kaynak ve altyazı sağlayıcıları bölümünden yerleşik bir kaynağı yeniden etkinleştirin veya bir Torznab dizinleyicisi ekleyin.';
   @override
   String get video_resource_no_provider_title =>
       'Kaynak dizinleyici yapılandırılmadı';
@@ -330176,7 +330965,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_no_tasks => 'Chưa có tác vụ tải xuống';
   @override
-  String get anime_download_nyaa_query => 'Từ khóa tìm kiếm Nyaa';
+  String get anime_download_nyaa_query => 'Từ khóa tìm kiếm BT';
   @override
   String get anime_download_play_now => 'Phát trong khi tải';
   @override
@@ -333089,6 +333878,81 @@ class _StringsVi extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => 'Hủy';
   @override
@@ -349762,20 +350626,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint =>
-      'Phim và chương trình truyền hình. Chỉ mục công khai, không cần tài khoản.';
-  @override
-  String get video_builtin_knaben_hint =>
-      'Phim và chương trình truyền hình. Tổng hợp nhiều trình lập chỉ mục công khai.';
-  @override
-  String get video_builtin_nyaa_hint =>
-      'Chỉ dành cho anime. Phim và chương trình truyền hình được phục vụ bởi hai trình lập chỉ mục công khai bên dưới.';
-  @override
-  String get video_builtin_sources_hint =>
-      'Đi kèm ứng dụng: không cần tài khoản, không cần khóa API. Tắt một nguồn để loại khỏi tìm kiếm tài nguyên.';
-  @override
-  String get video_builtin_sources_title => 'Nguồn tích hợp';
-  @override
   String video_chapter_n({required Object n}) => 'Chương ${n}';
   @override
   String get video_chapters => 'Chương';
@@ -350999,9 +351849,6 @@ class _StringsVi extends _StringsEn {
   String get video_resource_missing_reimport => 'Nhập lại';
   @override
   String get video_resource_missing_title => 'Video không khả dụng';
-  @override
-  String get video_resource_no_provider_hint =>
-      'Tìm kiếm này không có nhà cung cấp để truy vấn. Bật lại nguồn tích hợp hoặc thêm trình lập chỉ mục Torznab trong Cài đặt, Tải xuống, Nhà cung cấp tài nguyên và phụ đề bên ngoài.';
   @override
   String get video_resource_no_provider_title =>
       'Chưa cấu hình trình lập chỉ mục tài nguyên';
@@ -354329,7 +355176,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anime_download_no_tasks => '暂无下载任务';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 查询词';
+  String get anime_download_nyaa_query => 'BT 查询词';
   @override
   String get anime_download_play_now => '边下边播';
   @override
@@ -356970,6 +357817,75 @@ class _StringsZhCn extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
+  @override
+  String get bt_site_add_action => '添加 BT 站';
+  @override
+  String get bt_site_allow_http_label => '允许明文 HTTP（局域网）';
+  @override
+  String get bt_site_delete_confirm_title => '删除这个 BT 站？';
+  @override
+  String get bt_site_detect_failed_error => '无法识别这个站点。';
+  @override
+  String get bt_site_detect_timeout_error => '站点响应超时。';
+  @override
+  String get bt_site_detecting_status => '正在识别站点…';
+  @override
+  String get bt_site_domain_anime => '动画';
+  @override
+  String get bt_site_domain_audiobook => '有声书';
+  @override
+  String get bt_site_domain_game => '游戏';
+  @override
+  String get bt_site_domain_manga => '漫画';
+  @override
+  String get bt_site_domain_movie => '电影';
+  @override
+  String get bt_site_domain_novel => '小说';
+  @override
+  String get bt_site_domain_tv => '剧集';
+  @override
+  String get bt_site_domains_label => '用于';
+  @override
+  String get bt_site_domains_required_error => '至少选择一种媒体类型。';
+  @override
+  String get bt_site_domains_unmatched_status => '该站点没有与所选媒体类型对应的分类。';
+  @override
+  String get bt_site_edit_title => '编辑 BT 站';
+  @override
+  String get bt_site_empty_hint => '还没有 BT 来源。添加一个 BT 站地址，或接入 Torznab 索引器。';
+  @override
+  String get bt_site_enabled_label => '启用';
+  @override
+  String get bt_site_missing_status => '请先添加 BT 站';
+  @override
+  String get bt_site_name_hint => '默认使用站点主机名';
+  @override
+  String get bt_site_name_label => '名称（可选）';
+  @override
+  String get bt_site_open_settings_action => '前往 BT 站设置';
+  @override
+  String get bt_site_redetect_action => '重新检测';
+  @override
+  String get bt_site_redetect_done_status => '已重新识别站点。';
+  @override
+  String get bt_site_section_hint => '添加你常用的 BT 站地址，Fushi 会在添加时自动识别如何搜索它。';
+  @override
+  String get bt_site_section_title => 'BT 站';
+  @override
+  String get bt_site_test_search_action => '测试搜索';
+  @override
+  String get bt_site_test_search_failed_error => '搜索失败。';
+  @override
+  String bt_site_test_search_result({required Object n}) => '找到 ${n} 条结果';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      '明文 HTTP 仅允许用于局域网站点；如需继续，请打开「允许明文 HTTP」。';
+  @override
+  String get bt_site_url_invalid_error => '请输入有效的网址。';
+  @override
+  String get bt_site_url_label => '站点地址';
   @override
   String get cancel => '取消';
   @override
@@ -372285,17 +373201,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint => '电影与剧集。公共索引，无需账号。';
-  @override
-  String get video_builtin_knaben_hint => '电影与剧集。聚合多家公共索引器。';
-  @override
-  String get video_builtin_nyaa_hint => '仅动漫。电影与剧集由下面两个公共索引器覆盖。';
-  @override
-  String get video_builtin_sources_hint =>
-      '随应用内置：无需账号，无需 API key。关闭后该来源不再参与资源搜索。';
-  @override
-  String get video_builtin_sources_title => '内置来源';
-  @override
   String video_chapter_n({required Object n}) => '章节 ${n}';
   @override
   String get video_chapters => '章节';
@@ -373382,9 +374287,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_resource_missing_reimport => '重新导入';
   @override
   String get video_resource_missing_title => '视频无法访问';
-  @override
-  String get video_resource_no_provider_hint =>
-      '本次搜索没有可用的来源。请到 设置 → 下载 → 外部资源与字幕来源 重新启用内置来源，或添加 Torznab 索引器。';
   @override
   String get video_resource_no_provider_title => '未配置资源索引器';
   @override
@@ -376486,7 +377388,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_no_tasks => '暫無下載任務';
   @override
-  String get anime_download_nyaa_query => 'Nyaa 查詢詞';
+  String get anime_download_nyaa_query => 'BT 查詢詞';
   @override
   String get anime_download_play_now => '邊下邊播';
   @override
@@ -379240,6 +380142,81 @@ class _StringsZhHk extends _StringsEn {
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
       '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
+  @override
+  String get bt_site_add_action => 'Add BT site';
+  @override
+  String get bt_site_allow_http_label => 'Allow plain HTTP (local network)';
+  @override
+  String get bt_site_delete_confirm_title => 'Delete this BT site?';
+  @override
+  String get bt_site_detect_failed_error => 'Couldn\'t recognize this site.';
+  @override
+  String get bt_site_detect_timeout_error =>
+      'The site didn\'t respond in time.';
+  @override
+  String get bt_site_detecting_status => 'Recognizing site…';
+  @override
+  String get bt_site_domain_anime => 'Anime';
+  @override
+  String get bt_site_domain_audiobook => 'Audiobooks';
+  @override
+  String get bt_site_domain_game => 'Games';
+  @override
+  String get bt_site_domain_manga => 'Manga';
+  @override
+  String get bt_site_domain_movie => 'Movies';
+  @override
+  String get bt_site_domain_novel => 'Novels';
+  @override
+  String get bt_site_domain_tv => 'TV shows';
+  @override
+  String get bt_site_domains_label => 'Use for';
+  @override
+  String get bt_site_domains_required_error =>
+      'Select at least one media type.';
+  @override
+  String get bt_site_domains_unmatched_status =>
+      'This site has no categories for the selected media types.';
+  @override
+  String get bt_site_edit_title => 'Edit BT site';
+  @override
+  String get bt_site_empty_hint =>
+      'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+  @override
+  String get bt_site_enabled_label => 'Enabled';
+  @override
+  String get bt_site_missing_status => 'Add a BT site first';
+  @override
+  String get bt_site_name_hint => 'Defaults to the site\'s host name';
+  @override
+  String get bt_site_name_label => 'Name (optional)';
+  @override
+  String get bt_site_open_settings_action => 'Open BT site settings';
+  @override
+  String get bt_site_redetect_action => 'Recognize again';
+  @override
+  String get bt_site_redetect_done_status => 'Site recognized again.';
+  @override
+  String get bt_site_section_hint =>
+      'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+  @override
+  String get bt_site_section_title => 'BT sites';
+  @override
+  String get bt_site_test_search_action => 'Test search';
+  @override
+  String get bt_site_test_search_failed_error => 'Search failed.';
+  @override
+  String bt_site_test_search_result({required Object n}) =>
+      'Found ${n} results';
+  @override
+  String get bt_site_url_hint => 'https://example.com';
+  @override
+  String get bt_site_url_insecure_error =>
+      'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+  @override
+  String get bt_site_url_invalid_error => 'Enter a valid web address.';
+  @override
+  String get bt_site_url_label => 'Site address';
   @override
   String get cancel => '取消';
   @override
@@ -394983,17 +395960,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_bottom_seek_forward_label => '+10s';
   @override
-  String get video_builtin_apibay_hint => '電影與劇集。公共索引，無需賬號。';
-  @override
-  String get video_builtin_knaben_hint => '電影與劇集。聚合多家公共索引器。';
-  @override
-  String get video_builtin_nyaa_hint => '僅動漫。電影與劇集由下面兩個公共索引器覆蓋。';
-  @override
-  String get video_builtin_sources_hint =>
-      '隨應用內置：無需賬號，無需 API key。關閉後該來源不再參與資源搜索。';
-  @override
-  String get video_builtin_sources_title => '內置來源';
-  @override
   String video_chapter_n({required Object n}) => '章節 ${n}';
   @override
   String get video_chapters => '章節';
@@ -396130,9 +397096,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_resource_missing_reimport => '重新導入';
   @override
   String get video_resource_missing_title => '影片無法訪問';
-  @override
-  String get video_resource_no_provider_hint =>
-      '本次搜索沒有可用的來源。請到 設定 → 下載 → 外部資源與字幕來源 重新啟用內置來源，或添加 Torznab 索引器。';
   @override
   String get video_resource_no_provider_title => '未配置資源索引器';
   @override
@@ -399196,7 +400159,7 @@ extension on _StringsEn {
       case 'anime_download_no_tasks':
         return 'No download tasks yet';
       case 'anime_download_nyaa_query':
-        return 'Nyaa search terms';
+        return 'BT search terms';
       case 'anime_download_play_now':
         return 'Play while downloading';
       case 'anime_download_play_now_fail':
@@ -401601,6 +402564,74 @@ extension on _StringsEn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancel';
       case 'card_cover_degraded_to_static':
@@ -415985,16 +417016,6 @@ extension on _StringsEn {
         return 'Forward 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Movies and TV shows. Public index, no account needed.';
-      case 'video_builtin_knaben_hint':
-        return 'Movies and TV shows. Aggregates several public indexers.';
-      case 'video_builtin_nyaa_hint':
-        return 'Anime only. Movies and TV shows are covered by the two public indexers below.';
-      case 'video_builtin_sources_hint':
-        return 'Ship with the app: no account, no API key. Turn one off to keep it out of resource searches.';
-      case 'video_builtin_sources_title':
-        return 'Built-in sources';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chapter ${n}';
       case 'video_chapters':
@@ -417020,8 +418041,6 @@ extension on _StringsEn {
         return 'Re-import';
       case 'video_resource_missing_title':
         return 'Video unavailable';
-      case 'video_resource_no_provider_hint':
-        return 'This search had no provider to query. Re-enable a built-in source, or add a Torznab indexer, under Settings, Downloads, External resource and subtitle providers.';
       case 'video_resource_no_provider_title':
         return 'No resource indexer configured';
       case 'video_resource_query_failed':
@@ -419848,7 +420867,7 @@ extension on _StringsAr {
       case 'anime_download_no_tasks':
         return 'لا توجد مهام تحميل بعد';
       case 'anime_download_nyaa_query':
-        return 'عبارات بحث Nyaa';
+        return 'عبارات بحث BT';
       case 'anime_download_play_now':
         return 'تشغيل أثناء التحميل';
       case 'anime_download_play_now_fail':
@@ -422253,6 +423272,74 @@ extension on _StringsAr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'إلغاء';
       case 'card_cover_degraded_to_static':
@@ -436630,16 +437717,6 @@ extension on _StringsAr {
         return 'تقديم 10 ثوانٍ';
       case 'video_bottom_seek_forward_label':
         return '+10 ث';
-      case 'video_builtin_apibay_hint':
-        return 'أفلام ومسلسلات تلفزيونية. فهرس عام، لا يحتاج حساب.';
-      case 'video_builtin_knaben_hint':
-        return 'أفلام ومسلسلات تلفزيونية. يجمع عدة مُفهرسات عامة.';
-      case 'video_builtin_nyaa_hint':
-        return 'أنمي فقط. الأفلام والمسلسلات يغطيها المُفهرسان العامان أدناه.';
-      case 'video_builtin_sources_hint':
-        return 'مضمّنة مع التطبيق: لا حساب ولا مفتاح API. أوقف أحدها لاستبعاده من بحث الموارد.';
-      case 'video_builtin_sources_title':
-        return 'المصادر المدمجة';
       case 'video_chapter_n':
         return ({required Object n}) => 'الفصل ${n}';
       case 'video_chapters':
@@ -437664,8 +438741,6 @@ extension on _StringsAr {
         return 'إعادة استيراد';
       case 'video_resource_missing_title':
         return 'الفيديو غير متوفر';
-      case 'video_resource_no_provider_hint':
-        return 'لم يكن لهذا البحث مزوّد للاستعلام. أعد تفعيل مصدر مدمج أو أضف مُفهرس Torznab من الإعدادات، التحميلات، مزوّدو الموارد والترجمات الخارجية.';
       case 'video_resource_no_provider_title':
         return 'لم يتم تكوين مُفهرس موارد';
       case 'video_resource_query_failed':
@@ -440496,7 +441571,7 @@ extension on _StringsDe {
       case 'anime_download_no_tasks':
         return 'Noch keine Download-Aufgaben';
       case 'anime_download_nyaa_query':
-        return 'Nyaa-Suchbegriffe';
+        return 'BT-Suchbegriffe';
       case 'anime_download_play_now':
         return 'Während des Downloads abspielen';
       case 'anime_download_play_now_fail':
@@ -442920,6 +443995,74 @@ extension on _StringsDe {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Abbrechen';
       case 'card_cover_degraded_to_static':
@@ -457345,16 +458488,6 @@ extension on _StringsDe {
         return '10 s vor';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Filme und Serien. Öffentlicher Index, kein Konto erforderlich.';
-      case 'video_builtin_knaben_hint':
-        return 'Filme und Serien. Bündelt mehrere öffentliche Indexer.';
-      case 'video_builtin_nyaa_hint':
-        return 'Nur Anime. Filme und Serien werden von den beiden öffentlichen Indexern unten abgedeckt.';
-      case 'video_builtin_sources_hint':
-        return 'Mit der App mitgeliefert: kein Konto, kein API-Schlüssel. Deaktivieren, um sie aus Ressourcensuchen auszuschließen.';
-      case 'video_builtin_sources_title':
-        return 'Integrierte Quellen';
       case 'video_chapter_n':
         return ({required Object n}) => 'Kapitel ${n}';
       case 'video_chapters':
@@ -458384,8 +459517,6 @@ extension on _StringsDe {
         return 'Erneut importieren';
       case 'video_resource_missing_title':
         return 'Video nicht verfügbar';
-      case 'video_resource_no_provider_hint':
-        return 'Diese Suche hatte keinen Anbieter zum Abfragen. Aktivieren Sie eine integrierte Quelle erneut oder fügen Sie einen Torznab-Indexer unter Einstellungen, Downloads, Externe Ressourcen- und Untertitelanbieter hinzu.';
       case 'video_resource_no_provider_title':
         return 'Kein Ressourcen-Indexer konfiguriert';
       case 'video_resource_query_failed':
@@ -461218,7 +462349,7 @@ extension on _StringsEs {
       case 'anime_download_no_tasks':
         return 'Aún no hay tareas de descarga';
       case 'anime_download_nyaa_query':
-        return 'Términos de búsqueda en Nyaa';
+        return 'Términos de búsqueda en BT';
       case 'anime_download_play_now':
         return 'Reproducir mientras descarga';
       case 'anime_download_play_now_fail':
@@ -463637,6 +464768,74 @@ extension on _StringsEs {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -478052,16 +479251,6 @@ extension on _StringsEs {
         return 'Adelante 10 s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Películas y series de TV. Índice público, sin cuenta necesaria.';
-      case 'video_builtin_knaben_hint':
-        return 'Películas y series de TV. Agrega varios indexadores públicos.';
-      case 'video_builtin_nyaa_hint':
-        return 'Solo anime. Películas y series de TV están cubiertas por los dos indexadores públicos de abajo.';
-      case 'video_builtin_sources_hint':
-        return 'Incluidas con la app: sin cuenta, sin clave API. Desactive una para mantenerla fuera de las búsquedas de recursos.';
-      case 'video_builtin_sources_title':
-        return 'Fuentes integradas';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capítulo ${n}';
       case 'video_chapters':
@@ -479089,8 +480278,6 @@ extension on _StringsEs {
         return 'Reimportar';
       case 'video_resource_missing_title':
         return 'Vídeo no disponible';
-      case 'video_resource_no_provider_hint':
-        return 'Esta búsqueda no tuvo proveedor para consultar. Reactive una fuente integrada, o añada un indexador Torznab, en Ajustes, Descargas, Proveedores externos de recursos y subtítulos.';
       case 'video_resource_no_provider_title':
         return 'Sin indexador de recursos configurado';
       case 'video_resource_query_failed':
@@ -481924,7 +483111,7 @@ extension on _StringsFr {
       case 'anime_download_no_tasks':
         return 'Aucune tâche de téléchargement';
       case 'anime_download_nyaa_query':
-        return 'Termes de recherche Nyaa';
+        return 'Termes de recherche BT';
       case 'anime_download_play_now':
         return 'Lire pendant le téléchargement';
       case 'anime_download_play_now_fail':
@@ -484346,6 +485533,74 @@ extension on _StringsFr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annuler';
       case 'card_cover_degraded_to_static':
@@ -498772,16 +500027,6 @@ extension on _StringsFr {
         return 'Avancer de 10 s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Films et séries TV. Index public, pas de compte nécessaire.';
-      case 'video_builtin_knaben_hint':
-        return 'Films et séries TV. Agrège plusieurs indexeurs publics.';
-      case 'video_builtin_nyaa_hint':
-        return 'Anime uniquement. Les films et séries TV sont couverts par les deux indexeurs publics ci-dessous.';
-      case 'video_builtin_sources_hint':
-        return 'Fournies avec l\'application : pas de compte, pas de clé API. Désactivez-en une pour l\'exclure des recherches de ressources.';
-      case 'video_builtin_sources_title':
-        return 'Sources intégrées';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chapitre ${n}';
       case 'video_chapters':
@@ -499810,8 +501055,6 @@ extension on _StringsFr {
         return 'Réimporter';
       case 'video_resource_missing_title':
         return 'Vidéo indisponible';
-      case 'video_resource_no_provider_hint':
-        return 'Cette recherche n\'avait aucun fournisseur. Réactivez une source intégrée, ou ajoutez un indexeur Torznab, sous Paramètres, Téléchargements, Fournisseurs de ressources et sous-titres externes.';
       case 'video_resource_no_provider_title':
         return 'Aucun indexeur de ressources configuré';
       case 'video_resource_query_failed':
@@ -502643,7 +503886,7 @@ extension on _StringsId {
       case 'anime_download_no_tasks':
         return 'Belum ada tugas unduhan';
       case 'anime_download_nyaa_query':
-        return 'Kata kunci pencarian Nyaa';
+        return 'Kata kunci pencarian BT';
       case 'anime_download_play_now':
         return 'Putar sambil mengunduh';
       case 'anime_download_play_now_fail':
@@ -505054,6 +506297,74 @@ extension on _StringsId {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Batal';
       case 'card_cover_degraded_to_static':
@@ -519444,16 +520755,6 @@ extension on _StringsId {
         return 'Maju 10d';
       case 'video_bottom_seek_forward_label':
         return '+10d';
-      case 'video_builtin_apibay_hint':
-        return 'Film dan acara TV. Indeks publik, tidak perlu akun.';
-      case 'video_builtin_knaben_hint':
-        return 'Film dan acara TV. Mengagregasi beberapa indexer publik.';
-      case 'video_builtin_nyaa_hint':
-        return 'Hanya anime. Film dan acara TV dicakup oleh dua indexer publik di bawah.';
-      case 'video_builtin_sources_hint':
-        return 'Dikirimkan bersama aplikasi: tanpa akun, tanpa kunci API. Nonaktifkan satu untuk mengecualikannya dari pencarian sumber daya.';
-      case 'video_builtin_sources_title':
-        return 'Sumber bawaan';
       case 'video_chapter_n':
         return ({required Object n}) => 'Bab ${n}';
       case 'video_chapters':
@@ -520479,8 +521780,6 @@ extension on _StringsId {
         return 'Impor ulang';
       case 'video_resource_missing_title':
         return 'Video tidak tersedia';
-      case 'video_resource_no_provider_hint':
-        return 'Pencarian ini tidak memiliki penyedia untuk dikueri. Aktifkan kembali sumber bawaan, atau tambahkan indexer Torznab, di Pengaturan, Unduhan, Penyedia sumber daya dan subtitle eksternal.';
       case 'video_resource_no_provider_title':
         return 'Tidak ada indexer sumber daya yang dikonfigurasi';
       case 'video_resource_query_failed':
@@ -523310,7 +524609,7 @@ extension on _StringsIt {
       case 'anime_download_no_tasks':
         return 'Nessun download in corso';
       case 'anime_download_nyaa_query':
-        return 'Termini di ricerca Nyaa';
+        return 'Termini di ricerca BT';
       case 'anime_download_play_now':
         return 'Riproduci durante il download';
       case 'anime_download_play_now_fail':
@@ -525726,6 +527025,74 @@ extension on _StringsIt {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annulla';
       case 'card_cover_degraded_to_static':
@@ -540142,16 +541509,6 @@ extension on _StringsIt {
         return 'Avanti 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Film e serie TV. Indice pubblico, nessun account necessario.';
-      case 'video_builtin_knaben_hint':
-        return 'Film e serie TV. Aggrega diversi indexer pubblici.';
-      case 'video_builtin_nyaa_hint':
-        return 'Solo anime. Film e serie TV sono coperti dai due indexer pubblici sotto.';
-      case 'video_builtin_sources_hint':
-        return 'Incluse nell\'app: nessun account, nessuna chiave API. Disattivane una per escluderla dalle ricerche di risorse.';
-      case 'video_builtin_sources_title':
-        return 'Fonti integrate';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capitolo ${n}';
       case 'video_chapters':
@@ -541178,8 +542535,6 @@ extension on _StringsIt {
         return 'Reimporta';
       case 'video_resource_missing_title':
         return 'Video non disponibile';
-      case 'video_resource_no_provider_hint':
-        return 'Questa ricerca non aveva un provider da interrogare. Riabilita una fonte integrata, o aggiungi un indexer Torznab, in Impostazioni, Download, Provider di risorse e sottotitoli esterni.';
       case 'video_resource_no_provider_title':
         return 'Nessun indexer di risorse configurato';
       case 'video_resource_query_failed':
@@ -544007,7 +545362,7 @@ extension on _StringsJa {
       case 'anime_download_no_tasks':
         return 'ダウンロードタスクはまだありません';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 検索語';
+        return 'BT 検索語';
       case 'anime_download_play_now':
         return 'ダウンロード中に再生';
       case 'anime_download_play_now_fail':
@@ -546399,6 +547754,74 @@ extension on _StringsJa {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'キャンセル';
       case 'card_cover_degraded_to_static':
@@ -560737,16 +562160,6 @@ extension on _StringsJa {
         return '10 秒進む';
       case 'video_bottom_seek_forward_label':
         return '+10秒';
-      case 'video_builtin_apibay_hint':
-        return '映画とテレビ番組。公開インデックス、アカウント不要。';
-      case 'video_builtin_knaben_hint':
-        return '映画とテレビ番組。複数の公開インデクサーを集約。';
-      case 'video_builtin_nyaa_hint':
-        return 'アニメのみ。映画とテレビ番組は下の2つの公開インデクサーでカバーされます。';
-      case 'video_builtin_sources_hint':
-        return 'アプリに同梱：アカウントもAPIキーも不要。オフにするとリソース検索から除外されます。';
-      case 'video_builtin_sources_title':
-        return '組み込みソース';
       case 'video_chapter_n':
         return ({required Object n}) => 'チャプター ${n}';
       case 'video_chapters':
@@ -561762,8 +563175,6 @@ extension on _StringsJa {
         return '再インポート';
       case 'video_resource_missing_title':
         return '動画が利用できません';
-      case 'video_resource_no_provider_hint':
-        return 'この検索にはクエリ先のプロバイダーがありませんでした。組み込みソースを再有効化するか、設定 → ダウンロード → 外部リソース・字幕プロバイダーでTorznabインデクサーを追加してください。';
       case 'video_resource_no_provider_title':
         return 'リソースインデクサーが未設定';
       case 'video_resource_query_failed':
@@ -564575,7 +565986,7 @@ extension on _StringsKo {
       case 'anime_download_no_tasks':
         return '다운로드 작업이 없습니다';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 검색어';
+        return 'BT 검색어';
       case 'anime_download_play_now':
         return '다운로드하면서 재생';
       case 'anime_download_play_now_fail':
@@ -566966,6 +568377,74 @@ extension on _StringsKo {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return '취소';
       case 'card_cover_degraded_to_static':
@@ -581310,16 +582789,6 @@ extension on _StringsKo {
         return '10초 앞으로';
       case 'video_bottom_seek_forward_label':
         return '+10초';
-      case 'video_builtin_apibay_hint':
-        return '영화 및 TV 프로그램. 공개 인덱스, 계정 불필요.';
-      case 'video_builtin_knaben_hint':
-        return '영화 및 TV 프로그램. 여러 공개 인덱서를 통합합니다.';
-      case 'video_builtin_nyaa_hint':
-        return '애니메이션 전용. 영화 및 TV 프로그램은 아래 두 공개 인덱서에서 다룹니다.';
-      case 'video_builtin_sources_hint':
-        return '앱에 내장: 계정이나 API 키 불필요. 하나를 끄면 리소스 검색에서 제외됩니다.';
-      case 'video_builtin_sources_title':
-        return '내장 소스';
       case 'video_chapter_n':
         return ({required Object n}) => '챕터 ${n}';
       case 'video_chapters':
@@ -582340,8 +583809,6 @@ extension on _StringsKo {
         return '다시 가져오기';
       case 'video_resource_missing_title':
         return '동영상을 사용할 수 없음';
-      case 'video_resource_no_provider_hint':
-        return '이 검색에 쿼리할 제공자가 없습니다. 설정 > 다운로드 > 외부 리소스 및 자막 제공자에서 내장 소스를 다시 활성화하거나 Torznab 인덱서를 추가하세요.';
       case 'video_resource_no_provider_title':
         return '리소스 인덱서가 설정되지 않았습니다';
       case 'video_resource_query_failed':
@@ -585163,7 +586630,7 @@ extension on _StringsNl {
       case 'anime_download_no_tasks':
         return 'Nog geen downloadtaken';
       case 'anime_download_nyaa_query':
-        return 'Nyaa zoektermen';
+        return 'BT zoektermen';
       case 'anime_download_play_now':
         return 'Afspelen tijdens downloaden';
       case 'anime_download_play_now_fail':
@@ -587576,6 +589043,74 @@ extension on _StringsNl {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Annuleren';
       case 'card_cover_degraded_to_static':
@@ -601987,16 +603522,6 @@ extension on _StringsNl {
         return '10s vooruit';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Films en tv-series. Openbare index, geen account nodig.';
-      case 'video_builtin_knaben_hint':
-        return 'Films en tv-series. Aggregeert meerdere openbare indexers.';
-      case 'video_builtin_nyaa_hint':
-        return 'Alleen anime. Films en tv-series worden gedekt door de twee onderstaande openbare indexers.';
-      case 'video_builtin_sources_hint':
-        return 'Meegeleverd met de app: geen account, geen API-sleutel. Schakel er een uit om deze buiten resource-zoekopdrachten te houden.';
-      case 'video_builtin_sources_title':
-        return 'Ingebouwde bronnen';
       case 'video_chapter_n':
         return ({required Object n}) => 'Hoofdstuk ${n}';
       case 'video_chapters':
@@ -603024,8 +604549,6 @@ extension on _StringsNl {
         return 'Opnieuw importeren';
       case 'video_resource_missing_title':
         return 'Video niet beschikbaar';
-      case 'video_resource_no_provider_hint':
-        return 'Deze zoekopdracht had geen provider om te bevragen. Schakel een ingebouwde bron opnieuw in, of voeg een Torznab-indexer toe, via Instellingen, Downloads, Externe resource- en ondertitelproviders.';
       case 'video_resource_no_provider_title':
         return 'Geen resource-indexer geconfigureerd';
       case 'video_resource_query_failed':
@@ -605859,7 +607382,7 @@ extension on _StringsPtBr {
       case 'anime_download_no_tasks':
         return 'Nenhuma tarefa de download ainda';
       case 'anime_download_nyaa_query':
-        return 'Termos de busca no Nyaa';
+        return 'Termos de busca no BT';
       case 'anime_download_play_now':
         return 'Assistir durante o download';
       case 'anime_download_play_now_fail':
@@ -608275,6 +609798,74 @@ extension on _StringsPtBr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -622677,16 +624268,6 @@ extension on _StringsPtBr {
         return 'Avançar 10s';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Filmes e séries de TV. Índice público, sem necessidade de conta.';
-      case 'video_builtin_knaben_hint':
-        return 'Filmes e séries de TV. Agrega vários indexadores públicos.';
-      case 'video_builtin_nyaa_hint':
-        return 'Apenas anime. Filmes e séries de TV são cobertos pelos dois indexadores públicos abaixo.';
-      case 'video_builtin_sources_hint':
-        return 'Vêm com o app: sem conta, sem chave de API. Desative uma para mantê-la fora das buscas de recursos.';
-      case 'video_builtin_sources_title':
-        return 'Fontes integradas';
       case 'video_chapter_n':
         return ({required Object n}) => 'Capítulo ${n}';
       case 'video_chapters':
@@ -623715,8 +625296,6 @@ extension on _StringsPtBr {
         return 'Reimportar';
       case 'video_resource_missing_title':
         return 'Vídeo indisponível';
-      case 'video_resource_no_provider_hint':
-        return 'Esta busca não tinha provedor para consultar. Reative uma fonte integrada ou adicione um indexador Torznab em Configurações, Downloads, Provedores externos de recursos e legendas.';
       case 'video_resource_no_provider_title':
         return 'Nenhum indexador de recursos configurado';
       case 'video_resource_query_failed':
@@ -626546,7 +628125,7 @@ extension on _StringsRu {
       case 'anime_download_no_tasks':
         return 'Загрузок пока нет';
       case 'anime_download_nyaa_query':
-        return 'Поисковый запрос Nyaa';
+        return 'Поисковый запрос BT';
       case 'anime_download_play_now':
         return 'Воспроизвести во время загрузки';
       case 'anime_download_play_now_fail':
@@ -628967,6 +630546,74 @@ extension on _StringsRu {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Отмена';
       case 'card_cover_degraded_to_static':
@@ -643375,16 +645022,6 @@ extension on _StringsRu {
         return 'Вперёд на 10 с';
       case 'video_bottom_seek_forward_label':
         return '+10с';
-      case 'video_builtin_apibay_hint':
-        return 'Фильмы и сериалы. Публичный индекс, аккаунт не нужен.';
-      case 'video_builtin_knaben_hint':
-        return 'Фильмы и сериалы. Агрегирует несколько публичных индексаторов.';
-      case 'video_builtin_nyaa_hint':
-        return 'Только аниме. Фильмы и сериалы покрываются двумя публичными индексаторами ниже.';
-      case 'video_builtin_sources_hint':
-        return 'Встроены в приложение: без аккаунта, без API-ключа. Отключите источник, чтобы исключить его из поиска ресурсов.';
-      case 'video_builtin_sources_title':
-        return 'Встроенные источники';
       case 'video_chapter_n':
         return ({required Object n}) => 'Глава ${n}';
       case 'video_chapters':
@@ -644410,8 +646047,6 @@ extension on _StringsRu {
         return 'Импортировать заново';
       case 'video_resource_missing_title':
         return 'Видео недоступно';
-      case 'video_resource_no_provider_hint':
-        return 'Для этого поиска не нашлось провайдера. Включите встроенный источник или добавьте Torznab-индексатор в разделе Настройки, Загрузки, Внешние провайдеры ресурсов и субтитров.';
       case 'video_resource_no_provider_title':
         return 'Индексатор ресурсов не настроен';
       case 'video_resource_query_failed':
@@ -647239,7 +648874,7 @@ extension on _StringsTh {
       case 'anime_download_no_tasks':
         return 'ยังไม่มีงานดาวน์โหลด';
       case 'anime_download_nyaa_query':
-        return 'คำค้นหา Nyaa';
+        return 'คำค้นหา BT';
       case 'anime_download_play_now':
         return 'เล่นระหว่างดาวน์โหลด';
       case 'anime_download_play_now_fail':
@@ -649645,6 +651280,74 @@ extension on _StringsTh {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'ยกเลิก';
       case 'card_cover_degraded_to_static':
@@ -664029,16 +665732,6 @@ extension on _StringsTh {
         return 'เดินหน้า 10 วินาที';
       case 'video_bottom_seek_forward_label':
         return '+10 วิ';
-      case 'video_builtin_apibay_hint':
-        return 'ภาพยนตร์และรายการทีวี ดัชนีสาธารณะ ไม่ต้องมีบัญชี';
-      case 'video_builtin_knaben_hint':
-        return 'ภาพยนตร์และรายการทีวี รวบรวมจากตัวจัดทำดัชนีสาธารณะหลายแห่ง';
-      case 'video_builtin_nyaa_hint':
-        return 'อนิเมะเท่านั้น ภาพยนตร์และรายการทีวีรองรับโดยตัวจัดทำดัชนีสาธารณะด้านล่าง';
-      case 'video_builtin_sources_hint':
-        return 'มาพร้อมกับแอป: ไม่ต้องมีบัญชี ไม่ต้องมีคีย์ API ปิดเพื่อไม่ให้ปรากฏในการค้นหาทรัพยากร';
-      case 'video_builtin_sources_title':
-        return 'แหล่งข้อมูลในตัว';
       case 'video_chapter_n':
         return ({required Object n}) => 'บทที่ ${n}';
       case 'video_chapters':
@@ -665062,8 +666755,6 @@ extension on _StringsTh {
         return 'นำเข้าใหม่';
       case 'video_resource_missing_title':
         return 'วิดีโอไม่พร้อมใช้งาน';
-      case 'video_resource_no_provider_hint':
-        return 'การค้นหานี้ไม่มีผู้ให้บริการที่จะสอบถาม เปิดใช้แหล่งในตัวอีกครั้ง หรือเพิ่มตัวจัดทำดัชนี Torznab ในการตั้งค่า > ดาวน์โหลด > ผู้ให้บริการทรัพยากรและคำบรรยายภายนอก';
       case 'video_resource_no_provider_title':
         return 'ยังไม่ได้ตั้งค่าตัวจัดทำดัชนีทรัพยากร';
       case 'video_resource_query_failed':
@@ -667890,7 +669581,7 @@ extension on _StringsTr {
       case 'anime_download_no_tasks':
         return 'Henüz indirme görevi yok';
       case 'anime_download_nyaa_query':
-        return 'Nyaa arama terimleri';
+        return 'BT arama terimleri';
       case 'anime_download_play_now':
         return 'İndirirken oynat';
       case 'anime_download_play_now_fail':
@@ -670307,6 +671998,74 @@ extension on _StringsTr {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'İptal';
       case 'card_cover_degraded_to_static':
@@ -684705,16 +686464,6 @@ extension on _StringsTr {
         return '10 sn ileri';
       case 'video_bottom_seek_forward_label':
         return '+10sn';
-      case 'video_builtin_apibay_hint':
-        return 'Filmler ve TV dizileri. Herkese açık dizin, hesap gerekmez.';
-      case 'video_builtin_knaben_hint':
-        return 'Filmler ve TV dizileri. Birden fazla herkese açık dizinleyiciyi toplar.';
-      case 'video_builtin_nyaa_hint':
-        return 'Yalnızca anime. Filmler ve TV dizileri aşağıdaki iki herkese açık dizinleyici tarafından kapsanır.';
-      case 'video_builtin_sources_hint':
-        return 'Uygulamayla birlikte gelir: hesap veya API anahtarı gerekmez. Kaynak aramalarından çıkarmak için birini kapatın.';
-      case 'video_builtin_sources_title':
-        return 'Yerleşik kaynaklar';
       case 'video_chapter_n':
         return ({required Object n}) => 'Bölüm ${n}';
       case 'video_chapters':
@@ -685740,8 +687489,6 @@ extension on _StringsTr {
         return 'Yeniden içe aktar';
       case 'video_resource_missing_title':
         return 'Video kullanılamıyor';
-      case 'video_resource_no_provider_hint':
-        return 'Bu aramanın sorgu yapacak bir sağlayıcısı yoktu. Ayarlar, İndirmeler, Harici kaynak ve altyazı sağlayıcıları bölümünden yerleşik bir kaynağı yeniden etkinleştirin veya bir Torznab dizinleyicisi ekleyin.';
       case 'video_resource_no_provider_title':
         return 'Kaynak dizinleyici yapılandırılmadı';
       case 'video_resource_query_failed':
@@ -688571,7 +690318,7 @@ extension on _StringsVi {
       case 'anime_download_no_tasks':
         return 'Chưa có tác vụ tải xuống';
       case 'anime_download_nyaa_query':
-        return 'Từ khóa tìm kiếm Nyaa';
+        return 'Từ khóa tìm kiếm BT';
       case 'anime_download_play_now':
         return 'Phát trong khi tải';
       case 'anime_download_play_now_fail':
@@ -690982,6 +692729,74 @@ extension on _StringsVi {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return 'Hủy';
       case 'card_cover_degraded_to_static':
@@ -705375,16 +707190,6 @@ extension on _StringsVi {
         return 'Tới 10 giây';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return 'Phim và chương trình truyền hình. Chỉ mục công khai, không cần tài khoản.';
-      case 'video_builtin_knaben_hint':
-        return 'Phim và chương trình truyền hình. Tổng hợp nhiều trình lập chỉ mục công khai.';
-      case 'video_builtin_nyaa_hint':
-        return 'Chỉ dành cho anime. Phim và chương trình truyền hình được phục vụ bởi hai trình lập chỉ mục công khai bên dưới.';
-      case 'video_builtin_sources_hint':
-        return 'Đi kèm ứng dụng: không cần tài khoản, không cần khóa API. Tắt một nguồn để loại khỏi tìm kiếm tài nguyên.';
-      case 'video_builtin_sources_title':
-        return 'Nguồn tích hợp';
       case 'video_chapter_n':
         return ({required Object n}) => 'Chương ${n}';
       case 'video_chapters':
@@ -706407,8 +708212,6 @@ extension on _StringsVi {
         return 'Nhập lại';
       case 'video_resource_missing_title':
         return 'Video không khả dụng';
-      case 'video_resource_no_provider_hint':
-        return 'Tìm kiếm này không có nhà cung cấp để truy vấn. Bật lại nguồn tích hợp hoặc thêm trình lập chỉ mục Torznab trong Cài đặt, Tải xuống, Nhà cung cấp tài nguyên và phụ đề bên ngoài.';
       case 'video_resource_no_provider_title':
         return 'Chưa cấu hình trình lập chỉ mục tài nguyên';
       case 'video_resource_query_failed':
@@ -709217,7 +711020,7 @@ extension on _StringsZhCn {
       case 'anime_download_no_tasks':
         return '暂无下载任务';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 查询词';
+        return 'BT 查询词';
       case 'anime_download_play_now':
         return '边下边播';
       case 'anime_download_play_now_fail':
@@ -711591,6 +713394,74 @@ extension on _StringsZhCn {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
+      case 'bt_site_add_action':
+        return '添加 BT 站';
+      case 'bt_site_allow_http_label':
+        return '允许明文 HTTP（局域网）';
+      case 'bt_site_delete_confirm_title':
+        return '删除这个 BT 站？';
+      case 'bt_site_detect_failed_error':
+        return '无法识别这个站点。';
+      case 'bt_site_detect_timeout_error':
+        return '站点响应超时。';
+      case 'bt_site_detecting_status':
+        return '正在识别站点…';
+      case 'bt_site_domain_anime':
+        return '动画';
+      case 'bt_site_domain_audiobook':
+        return '有声书';
+      case 'bt_site_domain_game':
+        return '游戏';
+      case 'bt_site_domain_manga':
+        return '漫画';
+      case 'bt_site_domain_movie':
+        return '电影';
+      case 'bt_site_domain_novel':
+        return '小说';
+      case 'bt_site_domain_tv':
+        return '剧集';
+      case 'bt_site_domains_label':
+        return '用于';
+      case 'bt_site_domains_required_error':
+        return '至少选择一种媒体类型。';
+      case 'bt_site_domains_unmatched_status':
+        return '该站点没有与所选媒体类型对应的分类。';
+      case 'bt_site_edit_title':
+        return '编辑 BT 站';
+      case 'bt_site_empty_hint':
+        return '还没有 BT 来源。添加一个 BT 站地址，或接入 Torznab 索引器。';
+      case 'bt_site_enabled_label':
+        return '启用';
+      case 'bt_site_missing_status':
+        return '请先添加 BT 站';
+      case 'bt_site_name_hint':
+        return '默认使用站点主机名';
+      case 'bt_site_name_label':
+        return '名称（可选）';
+      case 'bt_site_open_settings_action':
+        return '前往 BT 站设置';
+      case 'bt_site_redetect_action':
+        return '重新检测';
+      case 'bt_site_redetect_done_status':
+        return '已重新识别站点。';
+      case 'bt_site_section_hint':
+        return '添加你常用的 BT 站地址，Fushi 会在添加时自动识别如何搜索它。';
+      case 'bt_site_section_title':
+        return 'BT 站';
+      case 'bt_site_test_search_action':
+        return '测试搜索';
+      case 'bt_site_test_search_failed_error':
+        return '搜索失败。';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => '找到 ${n} 条结果';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return '明文 HTTP 仅允许用于局域网站点；如需继续，请打开「允许明文 HTTP」。';
+      case 'bt_site_url_invalid_error':
+        return '请输入有效的网址。';
+      case 'bt_site_url_label':
+        return '站点地址';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -725829,16 +727700,6 @@ extension on _StringsZhCn {
         return '前进 10 秒';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return '电影与剧集。公共索引，无需账号。';
-      case 'video_builtin_knaben_hint':
-        return '电影与剧集。聚合多家公共索引器。';
-      case 'video_builtin_nyaa_hint':
-        return '仅动漫。电影与剧集由下面两个公共索引器覆盖。';
-      case 'video_builtin_sources_hint':
-        return '随应用内置：无需账号，无需 API key。关闭后该来源不再参与资源搜索。';
-      case 'video_builtin_sources_title':
-        return '内置来源';
       case 'video_chapter_n':
         return ({required Object n}) => '章节 ${n}';
       case 'video_chapters':
@@ -726853,8 +728714,6 @@ extension on _StringsZhCn {
         return '重新导入';
       case 'video_resource_missing_title':
         return '视频无法访问';
-      case 'video_resource_no_provider_hint':
-        return '本次搜索没有可用的来源。请到 设置 → 下载 → 外部资源与字幕来源 重新启用内置来源，或添加 Torznab 索引器。';
       case 'video_resource_no_provider_title':
         return '未配置资源索引器';
       case 'video_resource_query_failed':
@@ -729630,7 +731489,7 @@ extension on _StringsZhHk {
       case 'anime_download_no_tasks':
         return '暫無下載任務';
       case 'anime_download_nyaa_query':
-        return 'Nyaa 查詢詞';
+        return 'BT 查詢詞';
       case 'anime_download_play_now':
         return '邊下邊播';
       case 'anime_download_play_now_fail':
@@ -732013,6 +733872,74 @@ extension on _StringsZhHk {
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
             '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
+      case 'bt_site_add_action':
+        return 'Add BT site';
+      case 'bt_site_allow_http_label':
+        return 'Allow plain HTTP (local network)';
+      case 'bt_site_delete_confirm_title':
+        return 'Delete this BT site?';
+      case 'bt_site_detect_failed_error':
+        return 'Couldn\'t recognize this site.';
+      case 'bt_site_detect_timeout_error':
+        return 'The site didn\'t respond in time.';
+      case 'bt_site_detecting_status':
+        return 'Recognizing site…';
+      case 'bt_site_domain_anime':
+        return 'Anime';
+      case 'bt_site_domain_audiobook':
+        return 'Audiobooks';
+      case 'bt_site_domain_game':
+        return 'Games';
+      case 'bt_site_domain_manga':
+        return 'Manga';
+      case 'bt_site_domain_movie':
+        return 'Movies';
+      case 'bt_site_domain_novel':
+        return 'Novels';
+      case 'bt_site_domain_tv':
+        return 'TV shows';
+      case 'bt_site_domains_label':
+        return 'Use for';
+      case 'bt_site_domains_required_error':
+        return 'Select at least one media type.';
+      case 'bt_site_domains_unmatched_status':
+        return 'This site has no categories for the selected media types.';
+      case 'bt_site_edit_title':
+        return 'Edit BT site';
+      case 'bt_site_empty_hint':
+        return 'No BT sources yet. Add a BT site address, or connect a Torznab indexer.';
+      case 'bt_site_enabled_label':
+        return 'Enabled';
+      case 'bt_site_missing_status':
+        return 'Add a BT site first';
+      case 'bt_site_name_hint':
+        return 'Defaults to the site\'s host name';
+      case 'bt_site_name_label':
+        return 'Name (optional)';
+      case 'bt_site_open_settings_action':
+        return 'Open BT site settings';
+      case 'bt_site_redetect_action':
+        return 'Recognize again';
+      case 'bt_site_redetect_done_status':
+        return 'Site recognized again.';
+      case 'bt_site_section_hint':
+        return 'Add the address of a BT site you use. Fushi works out how to search it when you add it.';
+      case 'bt_site_section_title':
+        return 'BT sites';
+      case 'bt_site_test_search_action':
+        return 'Test search';
+      case 'bt_site_test_search_failed_error':
+        return 'Search failed.';
+      case 'bt_site_test_search_result':
+        return ({required Object n}) => 'Found ${n} results';
+      case 'bt_site_url_hint':
+        return 'https://example.com';
+      case 'bt_site_url_insecure_error':
+        return 'Plain HTTP is only allowed for local network sites. Turn on "Allow plain HTTP" to continue.';
+      case 'bt_site_url_invalid_error':
+        return 'Enter a valid web address.';
+      case 'bt_site_url_label':
+        return 'Site address';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -746322,16 +748249,6 @@ extension on _StringsZhHk {
         return '前進 10 秒';
       case 'video_bottom_seek_forward_label':
         return '+10s';
-      case 'video_builtin_apibay_hint':
-        return '電影與劇集。公共索引，無需賬號。';
-      case 'video_builtin_knaben_hint':
-        return '電影與劇集。聚合多家公共索引器。';
-      case 'video_builtin_nyaa_hint':
-        return '僅動漫。電影與劇集由下面兩個公共索引器覆蓋。';
-      case 'video_builtin_sources_hint':
-        return '隨應用內置：無需賬號，無需 API key。關閉後該來源不再參與資源搜索。';
-      case 'video_builtin_sources_title':
-        return '內置來源';
       case 'video_chapter_n':
         return ({required Object n}) => '章節 ${n}';
       case 'video_chapters':
@@ -747346,8 +749263,6 @@ extension on _StringsZhHk {
         return '重新導入';
       case 'video_resource_missing_title':
         return '影片無法訪問';
-      case 'video_resource_no_provider_hint':
-        return '本次搜索沒有可用的來源。請到 設定 → 下載 → 外部資源與字幕來源 重新啟用內置來源，或添加 Torznab 索引器。';
       case 'video_resource_no_provider_title':
         return '未配置資源索引器';
       case 'video_resource_query_failed':
