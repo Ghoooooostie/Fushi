@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168759 (9927 per locale)
+/// Strings: 168878 (9934 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12117,6 +12117,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_episode_list => 'Episode list';
   String get video_control_favorite_sentence => 'Favorite current sentence';
   String get video_control_fullscreen => 'Fullscreen';
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
   String get video_control_next_cue => 'Next subtitle';
   String get video_control_ocr_frame => 'Recognize on-screen text';
   String get video_control_palette_hint =>
@@ -12124,6 +12127,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_palette_title => 'All buttons';
   String get video_control_play_pause => 'Play/Pause';
   String get video_control_previous_cue => 'Previous subtitle';
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
   String get video_control_reject_required =>
       'Required controls must stay on the player.';
   String get video_control_reject_unavailable =>
@@ -12131,6 +12136,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_reject_volume_bottom =>
       'Volume can only sit on the bottom bar.';
   String get video_control_remove_from_slot => 'Move out';
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   String get video_control_reset_layout => 'Reset player button layout';
   String get video_control_screenshot => 'Screenshot';
   String get video_control_seek_backward => 'Back 10s';
@@ -12983,6 +12990,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_immersive_mode => 'Immersive mode';
   String get video_setting_immersive_mode_hint =>
       'Controls what remains available after pressing the side lock button';
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   String get video_setting_jimaku_default_language =>
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
@@ -14131,11 +14142,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
-  String get web_browser_login_import => 'Import sign-in from browser';
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14221,12 +14227,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_site_name => 'Name';
   String get web_browser_site_name_hint => 'Leave empty to use the host name';
   String get web_browser_site_new => 'Add site';
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  String get web_browser_site_opens_in_player => 'Opens in the player';
   String get web_browser_site_remove => 'Remove from sites';
   String get web_browser_site_settings_clear_all => 'Reset all sites';
   String get web_browser_site_settings_clear_all_confirm =>
@@ -14267,6 +14267,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_youtube_subtitles_track_live => 'Live capture';
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   String get web_hub_browse => 'Web';
+  String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
   String web_video_blocked_error({required Object code}) =>
@@ -14316,6 +14317,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+  String get web_video_site_add => 'Add site';
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  String get web_video_site_address_invalid => 'Not a web address';
+  String get web_video_site_name_hint => 'Name (optional)';
+  String get web_video_site_open => 'Open';
+  String get web_video_site_remove => 'Remove';
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
   String get web_video_track_image =>
@@ -34672,6 +34681,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'ملء الشاشة';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'الترجمة التالية';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -34685,6 +34699,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'الترجمة السابقة';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
   @override
@@ -34694,6 +34711,9 @@ class _StringsAr extends _StringsEn {
       'لا يمكن وضع الصوت إلا في الشريط السفلي.';
   @override
   String get video_control_remove_from_slot => 'نقل للخارج';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'إعادة تعيين تخطيط أزرار المشغّل';
   @override
@@ -36129,6 +36149,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'لغة الترجمة الافتراضية';
   @override
@@ -38037,14 +38063,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -38197,16 +38215,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -38281,6 +38289,8 @@ class _StringsAr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -38361,6 +38371,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -59066,6 +59091,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Vollbild';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Nächster Untertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -59079,6 +59109,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Voriger Untertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
   @override
@@ -59089,6 +59122,9 @@ class _StringsDe extends _StringsEn {
       'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
   @override
   String get video_control_remove_from_slot => 'Entfernen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Player-Tastenlayout zurücksetzen';
   @override
@@ -60550,6 +60586,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standard-Untertitelsprache';
@@ -62492,14 +62534,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -62652,16 +62686,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -62736,6 +62760,8 @@ class _StringsDe extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -62816,6 +62842,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -83564,6 +83605,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Pantalla completa';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtítulo siguiente';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -83577,6 +83623,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtítulo anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Los controles obligatorios deben permanecer en el reproductor.';
   @override
@@ -83587,6 +83636,9 @@ class _StringsEs extends _StringsEn {
       'El volumen solo puede ir en la barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Quitar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restablecer la disposición de los botones del reproductor';
@@ -85050,6 +85102,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma de subtítulos predeterminado';
@@ -87002,14 +87060,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -87162,16 +87212,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -87246,6 +87286,8 @@ class _StringsEs extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -87326,6 +87368,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -108133,6 +108190,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Plein écran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sous-titre suivant';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -108146,6 +108208,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sous-titre précédent';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Les contrôles obligatoires doivent rester sur le lecteur.';
   @override
@@ -108156,6 +108221,9 @@ class _StringsFr extends _StringsEn {
       'Le volume ne peut être placé que sur la barre du bas.';
   @override
   String get video_control_remove_from_slot => 'Retirer';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Rétablir la disposition des boutons du lecteur';
@@ -109628,6 +109696,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Langue de sous-titres par défaut';
@@ -111593,14 +111667,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -111753,16 +111819,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -111837,6 +111893,8 @@ class _StringsFr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -111918,6 +111976,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -132443,6 +132516,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Layar penuh';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Subtitle berikutnya';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -132456,6 +132534,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Subtitle sebelumnya';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Kontrol wajib harus tetap di pemutar.';
   @override
@@ -132466,6 +132547,9 @@ class _StringsId extends _StringsEn {
       'Volume hanya bisa berada di bilah bawah.';
   @override
   String get video_control_remove_from_slot => 'Pindahkan keluar';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Setel ulang tata letak tombol pemutar';
@@ -133917,6 +134001,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Bahasa subtitle default';
   @override
@@ -135843,14 +135933,6 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -136003,16 +136085,6 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -136087,6 +136159,8 @@ class _StringsId extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -136167,6 +136241,21 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -156832,6 +156921,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Schermo intero';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sottotitolo successivo';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -156845,6 +156939,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Sottotitolo precedente';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'I controlli obbligatori devono restare sul lettore.';
   @override
@@ -156855,6 +156952,9 @@ class _StringsIt extends _StringsEn {
       'Il volume può stare solo sulla barra inferiore.';
   @override
   String get video_control_remove_from_slot => 'Rimuovi';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Ripristina il layout dei pulsanti del lettore';
@@ -158307,6 +158407,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Lingua sottotitoli predefinita';
@@ -160251,14 +160357,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -160411,16 +160509,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -160495,6 +160583,8 @@ class _StringsIt extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -160576,6 +160666,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -180394,6 +180499,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_fullscreen => '全画面';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '次の字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -180407,6 +180517,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_previous_cue => '前の字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必須の操作ボタンはプレーヤー上に残す必要があります。';
   @override
   String get video_control_reject_unavailable => 'この操作ボタンはそこに配置できません。';
@@ -180414,6 +180527,9 @@ class _StringsJa extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量は下部バーにのみ配置できます。';
   @override
   String get video_control_remove_from_slot => '外す';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'プレーヤーのボタン配置を初期化';
   @override
@@ -181798,6 +181914,12 @@ class _StringsJa extends _StringsEn {
   String get video_setting_immersive_mode => 'イマーシブモード';
   @override
   String get video_setting_immersive_mode_hint => 'サイドのロックボタンを押した後も使える操作を制御します';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'デフォルト字幕言語';
   @override
@@ -183626,14 +183748,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -183786,16 +183900,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -183870,6 +183974,8 @@ class _StringsJa extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -183949,6 +184055,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -203797,6 +203918,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_fullscreen => '전체 화면';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '다음 자막';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -203810,6 +203936,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_previous_cue => '이전 자막';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '필수 조작은 플레이어에 남아 있어야 합니다.';
   @override
   String get video_control_reject_unavailable => '이 조작은 여기에 둘 수 없습니다.';
@@ -203817,6 +203946,9 @@ class _StringsKo extends _StringsEn {
   String get video_control_reject_volume_bottom => '음량은 하단 바에만 둘 수 있습니다.';
   @override
   String get video_control_remove_from_slot => '빼내기';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '플레이어 버튼 배치 초기화';
   @override
@@ -205211,6 +205343,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '기본 자막 언어';
   @override
@@ -207064,14 +207202,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -207224,16 +207354,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -207308,6 +207428,8 @@ class _StringsKo extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -207386,6 +207508,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -228011,6 +228148,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Volledig scherm';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Volgende ondertitel';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -228024,6 +228166,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Vorige ondertitel';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Vereiste bedieningselementen moeten op de speler blijven.';
   @override
@@ -228034,6 +228179,9 @@ class _StringsNl extends _StringsEn {
       'Het volume kan alleen op de onderbalk staan.';
   @override
   String get video_control_remove_from_slot => 'Verwijderen';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Spelerknopindeling herstellen';
   @override
@@ -229485,6 +229633,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Standaard ondertiteltaal';
@@ -231420,14 +231574,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -231580,16 +231726,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -231664,6 +231800,8 @@ class _StringsNl extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -231745,6 +231883,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -252418,6 +252571,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tela cheia';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Próxima legenda';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -252431,6 +252589,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Legenda anterior';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Os controles obrigatórios devem permanecer no player.';
   @override
@@ -252441,6 +252602,9 @@ class _StringsPtBr extends _StringsEn {
       'O volume só pode ficar na barra inferior.';
   @override
   String get video_control_remove_from_slot => 'Remover';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Restaurar layout dos botões do player';
@@ -253903,6 +254067,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Idioma padrão de legenda';
@@ -255849,14 +256019,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -256009,16 +256171,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -256093,6 +256245,8 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -256173,6 +256327,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -276794,6 +276963,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Полный экран';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Следующий субтитр';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -276807,6 +276981,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Предыдущий субтитр';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Обязательные элементы управления должны оставаться на плеере.';
   @override
@@ -276817,6 +276994,9 @@ class _StringsRu extends _StringsEn {
       'Громкость можно разместить только на нижней панели.';
   @override
   String get video_control_remove_from_slot => 'Убрать';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Сбросить расположение кнопок плеера';
@@ -278276,6 +278456,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Язык субтитров по умолчанию';
@@ -280223,14 +280409,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -280383,16 +280561,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -280467,6 +280635,8 @@ class _StringsRu extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -280547,6 +280717,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -300913,6 +301098,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_fullscreen => 'เต็มจอ';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'คำบรรยายถัดไป';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -300926,6 +301116,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_previous_cue => 'คำบรรยายก่อนหน้า';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
   @override
@@ -300936,6 +301129,9 @@ class _StringsTh extends _StringsEn {
       'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
   @override
   String get video_control_remove_from_slot => 'นำออก';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
@@ -302366,6 +302562,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'ภาษาคำบรรยายเริ่มต้น';
   @override
@@ -304274,14 +304476,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -304434,16 +304628,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -304518,6 +304702,8 @@ class _StringsTh extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -304598,6 +304784,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -325131,6 +325332,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Tam ekran';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Sonraki altyazı';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -325144,6 +325350,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Önceki altyazı';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Zorunlu denetimler oynatıcıda kalmalıdır.';
   @override
@@ -325154,6 +325363,9 @@ class _StringsTr extends _StringsEn {
       'Ses yalnızca alt çubukta bulunabilir.';
   @override
   String get video_control_remove_from_slot => 'Dışarı taşı';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => 'Oynatıcı düğme düzenini sıfırla';
   @override
@@ -326601,6 +326813,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => 'Varsayılan altyazı dili';
   @override
@@ -328528,14 +328746,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -328688,16 +328898,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -328772,6 +328972,8 @@ class _StringsTr extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -328852,6 +329054,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -349323,6 +349540,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_fullscreen => 'Toàn màn hình';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => 'Câu phụ đề sau';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -349336,6 +349558,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_previous_cue => 'Câu phụ đề trước';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required =>
       'Các nút điều khiển bắt buộc phải ở lại trình phát.';
   @override
@@ -349346,6 +349571,9 @@ class _StringsVi extends _StringsEn {
       'Âm lượng chỉ có thể đặt ở thanh dưới.';
   @override
   String get video_control_remove_from_slot => 'Gỡ ra';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout =>
       'Khôi phục bố cục nút trình phát mặc định';
@@ -350791,6 +351019,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_immersive_mode_hint =>
       'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language =>
       'Ngôn ngữ phụ đề mặc định';
@@ -352710,14 +352944,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -352870,16 +353096,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -352954,6 +353170,8 @@ class _StringsVi extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => 'Select to load';
   @override
   String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -353034,6 +353252,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -371801,6 +372034,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_fullscreen => '全屏';
   @override
+  String get video_control_immersive_layout_hint =>
+      '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+  @override
+  String get video_control_immersive_layout_title => '沉浸模式按钮';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => '识别画面文字';
@@ -371813,6 +372051,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock => '锁按钮是退出沉浸模式的唯一入口，必须保留。';
+  @override
   String get video_control_reject_required => '必选控制必须保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在这里。';
@@ -371820,6 +372060,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底栏。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout => '恢复默认沉浸模式按钮';
   @override
   String get video_control_reset_layout => '恢复默认播放器按钮布局';
   @override
@@ -373105,6 +373347,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下侧边锁后仍允许哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal => '沉浸时点画面显示字幕';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
   @override
   String get video_setting_jimaku_default_language => '默认字幕语言';
   @override
@@ -374845,14 +375092,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_link_share => '分享链接';
   @override
-  String get web_browser_login_import => '从浏览器导入登录';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      '已从浏览器导入 ${count} 条登录信息';
-  @override
-  String get web_browser_login_import_waiting =>
-      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
-  @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
@@ -374993,15 +375232,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_site_new => '添加站点';
   @override
-  String get web_browser_site_open_in_browser => '改回用浏览器打开';
-  @override
-  String get web_browser_site_open_in_player => '默认用播放页打开';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
-  @override
-  String get web_browser_site_opens_in_player => '点开进播放页';
-  @override
   String get web_browser_site_remove => '从站点移除';
   @override
   String get web_browser_site_settings_clear_all => '重置所有网站';
@@ -375072,6 +375302,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_youtube_subtitles_track_pending => '选中加载';
   @override
   String get web_hub_browse => '网页';
+  @override
+  String get web_hub_video_sites => '视频站点';
   @override
   String get web_video_ad_skipping => '正在跳过广告…';
   @override
@@ -375146,6 +375378,21 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
+  @override
+  String get web_video_site_add => '添加网站';
+  @override
+  String get web_video_site_address_hint => '网址，比如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的网址';
+  @override
+  String get web_video_site_name_hint => '名称（可选）';
+  @override
+  String get web_video_site_open => '打开';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
   @override
   String get web_video_track_failed => '未能截获这条字幕，点选重试';
   @override
@@ -394462,6 +394709,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_fullscreen => '全螢幕';
   @override
+  String get video_control_immersive_layout_hint =>
+      'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+  @override
+  String get video_control_immersive_layout_title => 'Immersive mode buttons';
+  @override
   String get video_control_next_cue => '下一句字幕';
   @override
   String get video_control_ocr_frame => 'Recognize on-screen text';
@@ -394474,6 +394726,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_previous_cue => '上一句字幕';
   @override
+  String get video_control_reject_immersive_lock =>
+      'The lock button is the only way out of immersive mode and must stay.';
+  @override
   String get video_control_reject_required => '必選控制必須保留在播放器上。';
   @override
   String get video_control_reject_unavailable => '此控制不能放在這裡。';
@@ -394481,6 +394736,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_control_reject_volume_bottom => '音量只能放在底欄。';
   @override
   String get video_control_remove_from_slot => '移出';
+  @override
+  String get video_control_reset_immersive_layout =>
+      'Reset immersive mode buttons';
   @override
   String get video_control_reset_layout => '還原預設播放器按鈕版面';
   @override
@@ -395827,6 +396085,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_immersive_mode => '沉浸模式';
   @override
   String get video_setting_immersive_mode_hint => '控制按下側邊鎖後仍可使用哪些操作';
+  @override
+  String get video_setting_immersive_tap_reveal =>
+      'Tap picture to show subtitles';
+  @override
+  String get video_setting_immersive_tap_reveal_hint =>
+      'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
   @override
   String get video_setting_jimaku_default_language => '預設字幕語言';
   @override
@@ -397603,14 +397867,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
-  String get web_browser_login_import => 'Import sign-in from browser';
-  @override
-  String web_browser_login_import_received({required Object count}) =>
-      'Imported ${count} sign-in items from the browser';
-  @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
-  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -397763,16 +398019,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_site_new => 'Add site';
   @override
-  String get web_browser_site_open_in_browser =>
-      'Open in the browser by default';
-  @override
-  String get web_browser_site_open_in_player => 'Open in the player by default';
-  @override
-  String get web_browser_site_open_in_player_hint =>
-      'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-  @override
-  String get web_browser_site_opens_in_player => 'Opens in the player';
-  @override
   String get web_browser_site_remove => 'Remove from sites';
   @override
   String get web_browser_site_settings_clear_all => 'Reset all sites';
@@ -397848,6 +398094,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_hub_browse => 'Web';
   @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
   String get web_video_ad_skipping => '正在略過廣告…';
   @override
   String get web_video_address_hint => '搜尋或輸入網址';
@@ -397922,6 +398170,21 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
+  @override
+  String get web_video_site_add => '新增網站';
+  @override
+  String get web_video_site_address_hint => '網址，例如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的網址';
+  @override
+  String get web_video_site_name_hint => '名稱（可選）';
+  @override
+  String get web_video_site_open => '開啟';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
   @override
   String get web_video_track_failed =>
       'Couldn\'t capture this track. Select to retry';
@@ -415431,6 +415694,10 @@ extension on _StringsEn {
         return 'Favorite current sentence';
       case 'video_control_fullscreen':
         return 'Fullscreen';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Next subtitle';
       case 'video_control_ocr_frame':
@@ -415443,6 +415710,8 @@ extension on _StringsEn {
         return 'Play/Pause';
       case 'video_control_previous_cue':
         return 'Previous subtitle';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Required controls must stay on the player.';
       case 'video_control_reject_unavailable':
@@ -415451,6 +415720,8 @@ extension on _StringsEn {
         return 'Volume can only sit on the bottom bar.';
       case 'video_control_remove_from_slot':
         return 'Move out';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Reset player button layout';
       case 'video_control_screenshot':
@@ -416651,6 +416922,10 @@ extension on _StringsEn {
         return 'Immersive mode';
       case 'video_setting_immersive_mode_hint':
         return 'Controls what remains available after pressing the side lock button';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
@@ -418254,13 +418529,6 @@ extension on _StringsEn {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -418396,14 +418664,6 @@ extension on _StringsEn {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -418474,6 +418734,8 @@ extension on _StringsEn {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -418542,6 +418804,20 @@ extension on _StringsEn {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -436043,6 +436319,10 @@ extension on _StringsAr {
         return 'تفضيل الجملة الحالية';
       case 'video_control_fullscreen':
         return 'ملء الشاشة';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'الترجمة التالية';
       case 'video_control_ocr_frame':
@@ -436055,6 +436335,8 @@ extension on _StringsAr {
         return 'تشغيل/إيقاف مؤقت';
       case 'video_control_previous_cue':
         return 'الترجمة السابقة';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'يجب أن تبقى عناصر التحكم المطلوبة على المشغّل.';
       case 'video_control_reject_unavailable':
@@ -436063,6 +436345,8 @@ extension on _StringsAr {
         return 'لا يمكن وضع الصوت إلا في الشريط السفلي.';
       case 'video_control_remove_from_slot':
         return 'نقل للخارج';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'إعادة تعيين تخطيط أزرار المشغّل';
       case 'video_control_screenshot':
@@ -437263,6 +437547,10 @@ extension on _StringsAr {
         return 'وضع الانغماس';
       case 'video_setting_immersive_mode_hint':
         return 'يتحكم في ما يبقى متاحًا بعد الضغط على زر القفل الجانبي';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'لغة الترجمة الافتراضية';
       case 'video_setting_jimaku_default_language_hint':
@@ -438867,13 +439155,6 @@ extension on _StringsAr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -439009,14 +439290,6 @@ extension on _StringsAr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -439087,6 +439360,8 @@ extension on _StringsAr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -439155,6 +439430,20 @@ extension on _StringsAr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -456726,6 +457015,10 @@ extension on _StringsDe {
         return 'Aktuellen Satz favorisieren';
       case 'video_control_fullscreen':
         return 'Vollbild';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Nächster Untertitel';
       case 'video_control_ocr_frame':
@@ -456738,6 +457031,8 @@ extension on _StringsDe {
         return 'Wiedergabe/Pause';
       case 'video_control_previous_cue':
         return 'Voriger Untertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Erforderliche Bedienelemente müssen auf dem Player bleiben.';
       case 'video_control_reject_unavailable':
@@ -456746,6 +457041,8 @@ extension on _StringsDe {
         return 'Die Lautstärke kann nur auf der unteren Leiste sitzen.';
       case 'video_control_remove_from_slot':
         return 'Entfernen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Player-Tastenlayout zurücksetzen';
       case 'video_control_screenshot':
@@ -457950,6 +458247,10 @@ extension on _StringsDe {
         return 'Immersiver Modus';
       case 'video_setting_immersive_mode_hint':
         return 'Steuert, was nach Drücken der seitlichen Sperrtaste verfügbar bleibt';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standard-Untertitelsprache';
       case 'video_setting_jimaku_default_language_hint':
@@ -459556,13 +459857,6 @@ extension on _StringsDe {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -459698,14 +459992,6 @@ extension on _StringsDe {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -459776,6 +460062,8 @@ extension on _StringsDe {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -459844,6 +460132,20 @@ extension on _StringsDe {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -477400,6 +477702,10 @@ extension on _StringsEs {
         return 'Añadir la frase actual a favoritos';
       case 'video_control_fullscreen':
         return 'Pantalla completa';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtítulo siguiente';
       case 'video_control_ocr_frame':
@@ -477412,6 +477718,8 @@ extension on _StringsEs {
         return 'Reproducir/Pausar';
       case 'video_control_previous_cue':
         return 'Subtítulo anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Los controles obligatorios deben permanecer en el reproductor.';
       case 'video_control_reject_unavailable':
@@ -477420,6 +477728,8 @@ extension on _StringsEs {
         return 'El volumen solo puede ir en la barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Quitar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restablecer la disposición de los botones del reproductor';
       case 'video_control_screenshot':
@@ -478622,6 +478932,10 @@ extension on _StringsEs {
         return 'Modo inmersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla qué sigue disponible tras pulsar el botón de bloqueo lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma de subtítulos predeterminado';
       case 'video_setting_jimaku_default_language_hint':
@@ -480227,13 +480541,6 @@ extension on _StringsEs {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -480369,14 +480676,6 @@ extension on _StringsEs {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -480447,6 +480746,8 @@ extension on _StringsEs {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -480515,6 +480816,20 @@ extension on _StringsEs {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -498087,6 +498402,10 @@ extension on _StringsFr {
         return 'Mettre la phrase actuelle en favori';
       case 'video_control_fullscreen':
         return 'Plein écran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sous-titre suivant';
       case 'video_control_ocr_frame':
@@ -498099,6 +498418,8 @@ extension on _StringsFr {
         return 'Lecture/Pause';
       case 'video_control_previous_cue':
         return 'Sous-titre précédent';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Les contrôles obligatoires doivent rester sur le lecteur.';
       case 'video_control_reject_unavailable':
@@ -498107,6 +498428,8 @@ extension on _StringsFr {
         return 'Le volume ne peut être placé que sur la barre du bas.';
       case 'video_control_remove_from_slot':
         return 'Retirer';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Rétablir la disposition des boutons du lecteur';
       case 'video_control_screenshot':
@@ -499311,6 +499634,10 @@ extension on _StringsFr {
         return 'Mode immersif';
       case 'video_setting_immersive_mode_hint':
         return 'Détermine ce qui reste disponible après l\'appui sur le bouton de verrouillage latéral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Langue de sous-titres par défaut';
       case 'video_setting_jimaku_default_language_hint':
@@ -500916,13 +501243,6 @@ extension on _StringsFr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -501058,14 +501378,6 @@ extension on _StringsFr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -501136,6 +501448,8 @@ extension on _StringsFr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -501204,6 +501518,20 @@ extension on _StringsFr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -518725,6 +519053,10 @@ extension on _StringsId {
         return 'Favoritkan kalimat saat ini';
       case 'video_control_fullscreen':
         return 'Layar penuh';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Subtitle berikutnya';
       case 'video_control_ocr_frame':
@@ -518737,6 +519069,8 @@ extension on _StringsId {
         return 'Putar/Jeda';
       case 'video_control_previous_cue':
         return 'Subtitle sebelumnya';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Kontrol wajib harus tetap di pemutar.';
       case 'video_control_reject_unavailable':
@@ -518745,6 +519079,8 @@ extension on _StringsId {
         return 'Volume hanya bisa berada di bilah bawah.';
       case 'video_control_remove_from_slot':
         return 'Pindahkan keluar';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Setel ulang tata letak tombol pemutar';
       case 'video_control_screenshot':
@@ -519945,6 +520281,10 @@ extension on _StringsId {
         return 'Mode imersif';
       case 'video_setting_immersive_mode_hint':
         return 'Mengatur apa yang tetap tersedia setelah menekan tombol kunci samping';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Bahasa subtitle default';
       case 'video_setting_jimaku_default_language_hint':
@@ -521549,13 +521889,6 @@ extension on _StringsId {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -521691,14 +522024,6 @@ extension on _StringsId {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -521769,6 +522094,8 @@ extension on _StringsId {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -521837,6 +522164,20 @@ extension on _StringsId {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -539391,6 +539732,10 @@ extension on _StringsIt {
         return 'Aggiungi la frase corrente ai preferiti';
       case 'video_control_fullscreen':
         return 'Schermo intero';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sottotitolo successivo';
       case 'video_control_ocr_frame':
@@ -539403,6 +539748,8 @@ extension on _StringsIt {
         return 'Riproduci/Pausa';
       case 'video_control_previous_cue':
         return 'Sottotitolo precedente';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'I controlli obbligatori devono restare sul lettore.';
       case 'video_control_reject_unavailable':
@@ -539411,6 +539758,8 @@ extension on _StringsIt {
         return 'Il volume può stare solo sulla barra inferiore.';
       case 'video_control_remove_from_slot':
         return 'Rimuovi';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Ripristina il layout dei pulsanti del lettore';
       case 'video_control_screenshot':
@@ -540612,6 +540961,10 @@ extension on _StringsIt {
         return 'Modalità immersiva';
       case 'video_setting_immersive_mode_hint':
         return 'Controlla cosa resta disponibile dopo aver premuto il pulsante di blocco laterale';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Lingua sottotitoli predefinita';
       case 'video_setting_jimaku_default_language_hint':
@@ -542218,13 +542571,6 @@ extension on _StringsIt {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -542360,14 +542706,6 @@ extension on _StringsIt {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -542438,6 +542776,8 @@ extension on _StringsIt {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -542506,6 +542846,20 @@ extension on _StringsIt {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -559951,6 +560305,10 @@ extension on _StringsJa {
         return '現在の文をお気に入りに登録';
       case 'video_control_fullscreen':
         return '全画面';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '次の字幕';
       case 'video_control_ocr_frame':
@@ -559963,6 +560321,8 @@ extension on _StringsJa {
         return '再生／一時停止';
       case 'video_control_previous_cue':
         return '前の字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必須の操作ボタンはプレーヤー上に残す必要があります。';
       case 'video_control_reject_unavailable':
@@ -559971,6 +560331,8 @@ extension on _StringsJa {
         return '音量は下部バーにのみ配置できます。';
       case 'video_control_remove_from_slot':
         return '外す';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'プレーヤーのボタン配置を初期化';
       case 'video_control_screenshot':
@@ -561161,6 +561523,10 @@ extension on _StringsJa {
         return 'イマーシブモード';
       case 'video_setting_immersive_mode_hint':
         return 'サイドのロックボタンを押した後も使える操作を制御します';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'デフォルト字幕言語';
       case 'video_setting_jimaku_default_language_hint':
@@ -562755,13 +563121,6 @@ extension on _StringsJa {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -562897,14 +563256,6 @@ extension on _StringsJa {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -562975,6 +563326,8 @@ extension on _StringsJa {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -563041,6 +563394,20 @@ extension on _StringsJa {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -580491,6 +580858,10 @@ extension on _StringsKo {
         return '현재 문장 즐겨찾기';
       case 'video_control_fullscreen':
         return '전체 화면';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '다음 자막';
       case 'video_control_ocr_frame':
@@ -580503,6 +580874,8 @@ extension on _StringsKo {
         return '재생/일시정지';
       case 'video_control_previous_cue':
         return '이전 자막';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '필수 조작은 플레이어에 남아 있어야 합니다.';
       case 'video_control_reject_unavailable':
@@ -580511,6 +580884,8 @@ extension on _StringsKo {
         return '음량은 하단 바에만 둘 수 있습니다.';
       case 'video_control_remove_from_slot':
         return '빼내기';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '플레이어 버튼 배치 초기화';
       case 'video_control_screenshot':
@@ -581705,6 +582080,10 @@ extension on _StringsKo {
         return '몰입 모드';
       case 'video_setting_immersive_mode_hint':
         return '측면 잠금 버튼을 누른 뒤에도 어떤 조작이 가능한지 제어합니다';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '기본 자막 언어';
       case 'video_setting_jimaku_default_language_hint':
@@ -583305,13 +583684,6 @@ extension on _StringsKo {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -583447,14 +583819,6 @@ extension on _StringsKo {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -583525,6 +583889,8 @@ extension on _StringsKo {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -583592,6 +583958,20 @@ extension on _StringsKo {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -601137,6 +601517,10 @@ extension on _StringsNl {
         return 'Huidige zin toevoegen aan favorieten';
       case 'video_control_fullscreen':
         return 'Volledig scherm';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Volgende ondertitel';
       case 'video_control_ocr_frame':
@@ -601149,6 +601533,8 @@ extension on _StringsNl {
         return 'Afspelen/Pauzeren';
       case 'video_control_previous_cue':
         return 'Vorige ondertitel';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Vereiste bedieningselementen moeten op de speler blijven.';
       case 'video_control_reject_unavailable':
@@ -601157,6 +601543,8 @@ extension on _StringsNl {
         return 'Het volume kan alleen op de onderbalk staan.';
       case 'video_control_remove_from_slot':
         return 'Verwijderen';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Spelerknopindeling herstellen';
       case 'video_control_screenshot':
@@ -602360,6 +602748,10 @@ extension on _StringsNl {
         return 'Immersieve modus';
       case 'video_setting_immersive_mode_hint':
         return 'Bepaalt wat beschikbaar blijft na het indrukken van de vergrendelknop aan de zijkant';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Standaard ondertiteltaal';
       case 'video_setting_jimaku_default_language_hint':
@@ -603966,13 +604358,6 @@ extension on _StringsNl {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -604108,14 +604493,6 @@ extension on _StringsNl {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -604186,6 +604563,8 @@ extension on _StringsNl {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -604254,6 +604633,20 @@ extension on _StringsNl {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -621794,6 +622187,10 @@ extension on _StringsPtBr {
         return 'Favoritar frase atual';
       case 'video_control_fullscreen':
         return 'Tela cheia';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Próxima legenda';
       case 'video_control_ocr_frame':
@@ -621806,6 +622203,8 @@ extension on _StringsPtBr {
         return 'Reproduzir/Pausar';
       case 'video_control_previous_cue':
         return 'Legenda anterior';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Os controles obrigatórios devem permanecer no player.';
       case 'video_control_reject_unavailable':
@@ -621814,6 +622213,8 @@ extension on _StringsPtBr {
         return 'O volume só pode ficar na barra inferior.';
       case 'video_control_remove_from_slot':
         return 'Remover';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Restaurar layout dos botões do player';
       case 'video_control_screenshot':
@@ -623017,6 +623418,10 @@ extension on _StringsPtBr {
         return 'Modo imersivo';
       case 'video_setting_immersive_mode_hint':
         return 'Controla o que permanece disponível após pressionar o botão de bloqueio lateral';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Idioma padrão de legenda';
       case 'video_setting_jimaku_default_language_hint':
@@ -624622,13 +625027,6 @@ extension on _StringsPtBr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -624764,14 +625162,6 @@ extension on _StringsPtBr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -624842,6 +625232,8 @@ extension on _StringsPtBr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -624910,6 +625302,20 @@ extension on _StringsPtBr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -642459,6 +642865,10 @@ extension on _StringsRu {
         return 'В избранное текущее предложение';
       case 'video_control_fullscreen':
         return 'Полный экран';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Следующий субтитр';
       case 'video_control_ocr_frame':
@@ -642471,6 +642881,8 @@ extension on _StringsRu {
         return 'Воспроизведение/Пауза';
       case 'video_control_previous_cue':
         return 'Предыдущий субтитр';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Обязательные элементы управления должны оставаться на плеере.';
       case 'video_control_reject_unavailable':
@@ -642479,6 +642891,8 @@ extension on _StringsRu {
         return 'Громкость можно разместить только на нижней панели.';
       case 'video_control_remove_from_slot':
         return 'Убрать';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Сбросить расположение кнопок плеера';
       case 'video_control_screenshot':
@@ -643679,6 +644093,10 @@ extension on _StringsRu {
         return 'Иммерсивный режим';
       case 'video_setting_immersive_mode_hint':
         return 'Определяет, что остаётся доступным после нажатия боковой кнопки блокировки';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Язык субтитров по умолчанию';
       case 'video_setting_jimaku_default_language_hint':
@@ -645283,13 +645701,6 @@ extension on _StringsRu {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -645425,14 +645836,6 @@ extension on _StringsRu {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -645503,6 +645906,8 @@ extension on _StringsRu {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -645571,6 +645976,20 @@ extension on _StringsRu {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -663079,6 +663498,10 @@ extension on _StringsTh {
         return 'เพิ่มประโยคปัจจุบันในรายการโปรด';
       case 'video_control_fullscreen':
         return 'เต็มจอ';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'คำบรรยายถัดไป';
       case 'video_control_ocr_frame':
@@ -663091,6 +663514,8 @@ extension on _StringsTh {
         return 'เล่น/หยุดชั่วคราว';
       case 'video_control_previous_cue':
         return 'คำบรรยายก่อนหน้า';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'ปุ่มควบคุมที่จำเป็นต้องคงไว้บนโปรแกรมเล่น';
       case 'video_control_reject_unavailable':
@@ -663099,6 +663524,8 @@ extension on _StringsTh {
         return 'ปุ่มเสียงวางได้เฉพาะบนแถบล่าง';
       case 'video_control_remove_from_slot':
         return 'นำออก';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'คืนค่าเลย์เอาต์ปุ่มเริ่มต้นของโปรแกรมเล่น';
       case 'video_control_screenshot':
@@ -664297,6 +664724,10 @@ extension on _StringsTh {
         return 'โหมดดื่มด่ำ';
       case 'video_setting_immersive_mode_hint':
         return 'ควบคุมว่าหลังกดปุ่มล็อกด้านข้างแล้วยังใช้อะไรได้บ้าง';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'ภาษาคำบรรยายเริ่มต้น';
       case 'video_setting_jimaku_default_language_hint':
@@ -665900,13 +666331,6 @@ extension on _StringsTh {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -666042,14 +666466,6 @@ extension on _StringsTh {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -666120,6 +666536,8 @@ extension on _StringsTh {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -666188,6 +666606,20 @@ extension on _StringsTh {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -683723,6 +684155,10 @@ extension on _StringsTr {
         return 'Geçerli cümleyi sık kullanılanlara ekle';
       case 'video_control_fullscreen':
         return 'Tam ekran';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Sonraki altyazı';
       case 'video_control_ocr_frame':
@@ -683735,6 +684171,8 @@ extension on _StringsTr {
         return 'Oynat/Duraklat';
       case 'video_control_previous_cue':
         return 'Önceki altyazı';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Zorunlu denetimler oynatıcıda kalmalıdır.';
       case 'video_control_reject_unavailable':
@@ -683743,6 +684181,8 @@ extension on _StringsTr {
         return 'Ses yalnızca alt çubukta bulunabilir.';
       case 'video_control_remove_from_slot':
         return 'Dışarı taşı';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Oynatıcı düğme düzenini sıfırla';
       case 'video_control_screenshot':
@@ -684944,6 +685384,10 @@ extension on _StringsTr {
         return 'Sürükleyici mod';
       case 'video_setting_immersive_mode_hint':
         return 'Yan kilit düğmesine basıldıktan sonra hangi işlevlerin kullanılabilir kalacağını denetler';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Varsayılan altyazı dili';
       case 'video_setting_jimaku_default_language_hint':
@@ -686548,13 +686992,6 @@ extension on _StringsTr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -686690,14 +687127,6 @@ extension on _StringsTr {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -686768,6 +687197,8 @@ extension on _StringsTr {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -686836,6 +687267,20 @@ extension on _StringsTr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -704358,6 +704803,10 @@ extension on _StringsVi {
         return 'Yêu thích câu hiện tại';
       case 'video_control_fullscreen':
         return 'Toàn màn hình';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return 'Câu phụ đề sau';
       case 'video_control_ocr_frame':
@@ -704370,6 +704819,8 @@ extension on _StringsVi {
         return 'Phát/Tạm dừng';
       case 'video_control_previous_cue':
         return 'Câu phụ đề trước';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return 'Các nút điều khiển bắt buộc phải ở lại trình phát.';
       case 'video_control_reject_unavailable':
@@ -704378,6 +704829,8 @@ extension on _StringsVi {
         return 'Âm lượng chỉ có thể đặt ở thanh dưới.';
       case 'video_control_remove_from_slot':
         return 'Gỡ ra';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return 'Khôi phục bố cục nút trình phát mặc định';
       case 'video_control_screenshot':
@@ -705577,6 +706030,10 @@ extension on _StringsVi {
         return 'Chế độ đắm chìm';
       case 'video_setting_immersive_mode_hint':
         return 'Quyết định những gì vẫn khả dụng sau khi nhấn nút khóa bên cạnh';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return 'Ngôn ngữ phụ đề mặc định';
       case 'video_setting_jimaku_default_language_hint':
@@ -707179,13 +707636,6 @@ extension on _StringsVi {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -707321,14 +707771,6 @@ extension on _StringsVi {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -707399,6 +707841,8 @@ extension on _StringsVi {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -707467,6 +707911,20 @@ extension on _StringsVi {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
@@ -724778,6 +725236,10 @@ extension on _StringsZhCn {
         return '收藏当前句';
       case 'video_control_fullscreen':
         return '全屏';
+      case 'video_control_immersive_layout_hint':
+        return '锁定后屏幕上只剩这里的按钮：点画面时出现，在任何沉浸档位都能点。';
+      case 'video_control_immersive_layout_title':
+        return '沉浸模式按钮';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -724790,6 +725252,8 @@ extension on _StringsZhCn {
         return '播放/暂停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return '锁按钮是退出沉浸模式的唯一入口，必须保留。';
       case 'video_control_reject_required':
         return '必选控制必须保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -724798,6 +725262,8 @@ extension on _StringsZhCn {
         return '音量只能放在底栏。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return '恢复默认沉浸模式按钮';
       case 'video_control_reset_layout':
         return '恢复默认播放器按钮布局';
       case 'video_control_screenshot':
@@ -725985,6 +726451,10 @@ extension on _StringsZhCn {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下侧边锁后仍允许哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return '沉浸时点画面显示字幕';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return '沉浸锁定且字幕模糊或隐藏时，点画面任意处显示当前这一句，换句后自动遮回';
       case 'video_setting_jimaku_default_language':
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
@@ -727563,12 +728033,6 @@ extension on _StringsZhCn {
         return '在新标签页中打开';
       case 'web_browser_link_share':
         return '分享链接';
-      case 'web_browser_login_import':
-        return '从浏览器导入登录';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_browser_login_import_waiting':
-        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -727704,14 +728168,6 @@ extension on _StringsZhCn {
         return '留空则使用域名';
       case 'web_browser_site_new':
         return '添加站点';
-      case 'web_browser_site_open_in_browser':
-        return '改回用浏览器打开';
-      case 'web_browser_site_open_in_player':
-        return '默认用播放页打开';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi 字幕、查词与观看进度；Netflix 高画质需要它';
-      case 'web_browser_site_opens_in_player':
-        return '点开进播放页';
       case 'web_browser_site_remove':
         return '从站点移除';
       case 'web_browser_site_settings_clear_all':
@@ -727782,6 +728238,8 @@ extension on _StringsZhCn {
         return '选中加载';
       case 'web_hub_browse':
         return '网页';
+      case 'web_hub_video_sites':
+        return '视频站点';
       case 'web_video_ad_skipping':
         return '正在跳过广告…';
       case 'web_video_address_hint':
@@ -727846,6 +728304,20 @@ extension on _StringsZhCn {
         return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
+      case 'web_video_site_add':
+        return '添加网站';
+      case 'web_video_site_address_hint':
+        return '网址，比如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的网址';
+      case 'web_video_site_name_hint':
+        return '名称（可选）';
+      case 'web_video_site_open':
+        return '打开';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
       case 'web_video_track_failed':
         return '未能截获这条字幕，点选重试';
       case 'web_video_track_image':
@@ -745237,6 +745709,10 @@ extension on _StringsZhHk {
         return '收藏目前句子';
       case 'video_control_fullscreen':
         return '全螢幕';
+      case 'video_control_immersive_layout_hint':
+        return 'After locking, only these buttons stay on screen. They appear when you tap the picture and work in every immersive level.';
+      case 'video_control_immersive_layout_title':
+        return 'Immersive mode buttons';
       case 'video_control_next_cue':
         return '下一句字幕';
       case 'video_control_ocr_frame':
@@ -745249,6 +745725,8 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'video_control_previous_cue':
         return '上一句字幕';
+      case 'video_control_reject_immersive_lock':
+        return 'The lock button is the only way out of immersive mode and must stay.';
       case 'video_control_reject_required':
         return '必選控制必須保留在播放器上。';
       case 'video_control_reject_unavailable':
@@ -745257,6 +745735,8 @@ extension on _StringsZhHk {
         return '音量只能放在底欄。';
       case 'video_control_remove_from_slot':
         return '移出';
+      case 'video_control_reset_immersive_layout':
+        return 'Reset immersive mode buttons';
       case 'video_control_reset_layout':
         return '還原預設播放器按鈕版面';
       case 'video_control_screenshot':
@@ -746445,6 +746925,10 @@ extension on _StringsZhHk {
         return '沉浸模式';
       case 'video_setting_immersive_mode_hint':
         return '控制按下側邊鎖後仍可使用哪些操作';
+      case 'video_setting_immersive_tap_reveal':
+        return 'Tap picture to show subtitles';
+      case 'video_setting_immersive_tap_reveal_hint':
+        return 'While locked in immersive mode with subtitles blurred or hidden, tap anywhere on the picture to show the current line; it hides again when the line changes';
       case 'video_setting_jimaku_default_language':
         return '預設字幕語言';
       case 'video_setting_jimaku_default_language_hint':
@@ -748030,13 +748514,6 @@ extension on _StringsZhHk {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
-      case 'web_browser_login_import':
-        return 'Import sign-in from browser';
-      case 'web_browser_login_import_received':
-        return ({required Object count}) =>
-            'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -748172,14 +748649,6 @@ extension on _StringsZhHk {
         return 'Leave empty to use the host name';
       case 'web_browser_site_new':
         return 'Add site';
-      case 'web_browser_site_open_in_browser':
-        return 'Open in the browser by default';
-      case 'web_browser_site_open_in_player':
-        return 'Open in the player by default';
-      case 'web_browser_site_open_in_player_hint':
-        return 'Fushi subtitles, lookup and watch progress; Netflix needs it for HD';
-      case 'web_browser_site_opens_in_player':
-        return 'Opens in the player';
       case 'web_browser_site_remove':
         return 'Remove from sites';
       case 'web_browser_site_settings_clear_all':
@@ -748250,6 +748719,8 @@ extension on _StringsZhHk {
         return 'Select to load';
       case 'web_hub_browse':
         return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return '正在略過廣告…';
       case 'web_video_address_hint':
@@ -748315,6 +748786,20 @@ extension on _StringsZhHk {
         return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
+      case 'web_video_site_add':
+        return '新增網站';
+      case 'web_video_site_address_hint':
+        return '網址，例如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的網址';
+      case 'web_video_site_name_hint':
+        return '名稱（可選）';
+      case 'web_video_site_open':
+        return '開啟';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
       case 'web_video_track_failed':
         return 'Couldn\'t capture this track. Select to retry';
       case 'web_video_track_image':
