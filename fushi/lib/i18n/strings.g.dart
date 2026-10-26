@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169575 (9975 per locale)
+/// Strings: 169643 (9979 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -453,6 +453,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_provider_test_failed({required Object reason}) =>
       'Test failed: ${reason}';
   String get ai_provider_test_ok => 'Connected';
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  String get ai_provider_tool_calling_auto => 'Auto';
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  String get ai_provider_tool_calling_on => 'On';
   String get ai_providers_section => 'Provider configuration';
   String get ai_providers_section_summary =>
       'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
@@ -14869,6 +14873,14 @@ class _StringsAr extends _StringsEn {
       'فشل الاختبار: ${reason}';
   @override
   String get ai_provider_test_ok => 'متصل';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'إعداد المزودين';
   @override
@@ -39039,6 +39051,14 @@ class _StringsDe extends _StringsEn {
       'Test fehlgeschlagen: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbunden';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Anbieterkonfiguration';
   @override
@@ -63598,6 +63618,14 @@ class _StringsEs extends _StringsEn {
       'La prueba falló: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuración de proveedores';
   @override
@@ -88211,6 +88239,14 @@ class _StringsFr extends _StringsEn {
       'Échec du test : ${reason}';
   @override
   String get ai_provider_test_ok => 'Connecté';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuration des fournisseurs';
   @override
@@ -112906,6 +112942,14 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_provider_test_ok => 'Terhubung';
   @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
+  @override
   String get ai_providers_section => 'Konfigurasi penyedia';
   @override
   String get ai_providers_section_summary =>
@@ -137258,6 +137302,14 @@ class _StringsIt extends _StringsEn {
       'Prova non riuscita: ${reason}';
   @override
   String get ai_provider_test_ok => 'Connesso';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configurazione dei provider';
   @override
@@ -161762,6 +161814,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_provider_test_ok => '接続しました';
   @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
+  @override
   String get ai_providers_section => 'プロバイダー設定';
   @override
   String get ai_providers_section_summary =>
@@ -185233,6 +185293,14 @@ class _StringsKo extends _StringsEn {
       '테스트 실패: ${reason}';
   @override
   String get ai_provider_test_ok => '연결됨';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '제공자 설정';
   @override
@@ -208785,6 +208853,14 @@ class _StringsNl extends _StringsEn {
       'Test mislukt: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbonden';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Providerconfiguratie';
   @override
@@ -233250,6 +233326,14 @@ class _StringsPtBr extends _StringsEn {
       'Falha no teste: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuração de provedores';
   @override
@@ -257778,6 +257862,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_provider_test_ok => 'Подключено';
   @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
+  @override
   String get ai_providers_section => 'Настройка провайдеров';
   @override
   String get ai_providers_section_summary =>
@@ -282253,6 +282345,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_provider_test_ok => 'เชื่อมต่อแล้ว';
   @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
+  @override
   String get ai_providers_section => 'การตั้งค่าผู้ให้บริการ';
   @override
   String get ai_providers_section_summary =>
@@ -306410,6 +306510,14 @@ class _StringsTr extends _StringsEn {
       'Test başarısız oldu: ${reason}';
   @override
   String get ai_provider_test_ok => 'Bağlandı';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Sağlayıcı yapılandırması';
   @override
@@ -330766,6 +330874,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_provider_test_ok => 'Đã kết nối';
   @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
+  @override
   String get ai_providers_section => 'Cấu hình nhà cung cấp';
   @override
   String get ai_providers_section_summary =>
@@ -355012,6 +355128,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_provider_test_ok => '连接正常';
   @override
+  String get ai_provider_tool_calling => '工具调用（AI 助手）';
+  @override
+  String get ai_provider_tool_calling_auto => '自动';
+  @override
+  String get ai_provider_tool_calling_off => '关（JSON 降级）';
+  @override
+  String get ai_provider_tool_calling_on => '开';
+  @override
   String get ai_providers_section => '提供商配置';
   @override
   String get ai_providers_section_summary =>
@@ -377232,6 +377356,14 @@ class _StringsZhHk extends _StringsEn {
   String ai_provider_test_failed({required Object reason}) => '測試失敗：${reason}';
   @override
   String get ai_provider_test_ok => '連接正常';
+  @override
+  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
+  @override
+  String get ai_provider_tool_calling_auto => 'Auto';
+  @override
+  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
+  @override
+  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '提供商配置';
   @override
@@ -400037,6 +400169,14 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Test failed: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connected';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Provider configuration';
       case 'ai_providers_section_summary':
@@ -420752,6 +420892,14 @@ extension on _StringsAr {
         return ({required Object reason}) => 'فشل الاختبار: ${reason}';
       case 'ai_provider_test_ok':
         return 'متصل';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'إعداد المزودين';
       case 'ai_providers_section_summary':
@@ -441460,6 +441608,14 @@ extension on _StringsDe {
         return ({required Object reason}) => 'Test fehlgeschlagen: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbunden';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Anbieterkonfiguration';
       case 'ai_providers_section_summary':
@@ -462244,6 +462400,14 @@ extension on _StringsEs {
         return ({required Object reason}) => 'La prueba falló: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuración de proveedores';
       case 'ai_providers_section_summary':
@@ -483012,6 +483176,14 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Échec du test : ${reason}';
       case 'ai_provider_test_ok':
         return 'Connecté';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuration des fournisseurs';
       case 'ai_providers_section_summary':
@@ -503793,6 +503965,14 @@ extension on _StringsId {
         return ({required Object reason}) => 'Pengujian gagal: ${reason}';
       case 'ai_provider_test_ok':
         return 'Terhubung';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Konfigurasi penyedia';
       case 'ai_providers_section_summary':
@@ -524522,6 +524702,14 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Prova non riuscita: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connesso';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configurazione dei provider';
       case 'ai_providers_section_summary':
@@ -545284,6 +545472,14 @@ extension on _StringsJa {
         return ({required Object reason}) => 'テストに失敗しました：${reason}';
       case 'ai_provider_test_ok':
         return '接続しました';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'プロバイダー設定';
       case 'ai_providers_section_summary':
@@ -565913,6 +566109,14 @@ extension on _StringsKo {
         return ({required Object reason}) => '테스트 실패: ${reason}';
       case 'ai_provider_test_ok':
         return '연결됨';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return '제공자 설정';
       case 'ai_providers_section_summary':
@@ -586559,6 +586763,14 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Test mislukt: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbonden';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Providerconfiguratie';
       case 'ai_providers_section_summary':
@@ -607319,6 +607531,14 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Falha no teste: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Configuração de provedores';
       case 'ai_providers_section_summary':
@@ -628068,6 +628288,14 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Проверка не удалась: ${reason}';
       case 'ai_provider_test_ok':
         return 'Подключено';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Настройка провайдеров';
       case 'ai_providers_section_summary':
@@ -648825,6 +649053,14 @@ extension on _StringsTh {
         return ({required Object reason}) => 'ทดสอบไม่สำเร็จ: ${reason}';
       case 'ai_provider_test_ok':
         return 'เชื่อมต่อแล้ว';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'การตั้งค่าผู้ให้บริการ';
       case 'ai_providers_section_summary':
@@ -669538,6 +669774,14 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Test başarısız oldu: ${reason}';
       case 'ai_provider_test_ok':
         return 'Bağlandı';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Sağlayıcı yapılandırması';
       case 'ai_providers_section_summary':
@@ -690279,6 +690523,14 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Kiểm tra thất bại: ${reason}';
       case 'ai_provider_test_ok':
         return 'Đã kết nối';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return 'Cấu hình nhà cung cấp';
       case 'ai_providers_section_summary':
@@ -711004,6 +711256,14 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '测试失败：${reason}';
       case 'ai_provider_test_ok':
         return '连接正常';
+      case 'ai_provider_tool_calling':
+        return '工具调用（AI 助手）';
+      case 'ai_provider_tool_calling_auto':
+        return '自动';
+      case 'ai_provider_tool_calling_off':
+        return '关（JSON 降级）';
+      case 'ai_provider_tool_calling_on':
+        return '开';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
@@ -731477,6 +731737,14 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '測試失敗：${reason}';
       case 'ai_provider_test_ok':
         return '連接正常';
+      case 'ai_provider_tool_calling':
+        return 'Tool calling (AI assistant)';
+      case 'ai_provider_tool_calling_auto':
+        return 'Auto';
+      case 'ai_provider_tool_calling_off':
+        return 'Off (JSON fallback)';
+      case 'ai_provider_tool_calling_on':
+        return 'On';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
