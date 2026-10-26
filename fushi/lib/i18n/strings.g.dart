@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173604 (10212 per locale)
+/// Strings: 173621 (10213 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6484,6 +6484,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_import => 'Import';
   String get library_view_kavita => 'Kavita';
   String get library_view_media => 'Library';
+  String get library_view_media_servers => 'Media servers';
   String get library_view_shelf => 'Shelf';
   String get library_view_sources => 'Sources';
   String get loading_illustrations => 'Loading illustrations…';
@@ -25333,6 +25334,8 @@ class _StringsAr extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'المكتبة';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'الرف';
   @override
@@ -50285,6 +50288,8 @@ class _StringsDe extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Bibliothek';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Regal';
   @override
@@ -75456,6 +75461,8 @@ class _StringsEs extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Biblioteca';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Estante';
   @override
@@ -100700,6 +100707,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get library_view_media => 'Bibliothèque';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Étagère';
   @override
   String get library_view_sources => 'Sources';
@@ -125825,6 +125834,8 @@ class _StringsId extends _StringsEn {
   @override
   String get library_view_media => 'Perpustakaan';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Rak';
   @override
   String get library_view_sources => 'Sumber';
@@ -150838,6 +150849,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get library_view_media => 'Libreria';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Scaffale';
   @override
   String get library_view_sources => 'Fonti';
@@ -175469,6 +175482,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get library_view_media => 'ライブラリ';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => '本棚';
   @override
   String get library_view_sources => 'ソース';
@@ -199547,6 +199562,8 @@ class _StringsKo extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => '라이브러리';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => '서재';
   @override
@@ -224130,6 +224147,8 @@ class _StringsNl extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Bibliotheek';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Plank';
   @override
@@ -249224,6 +249243,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get library_view_media => 'Biblioteca';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Estante';
   @override
   String get library_view_sources => 'Fontes';
@@ -274306,6 +274327,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get library_view_media => 'Библиотека';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Полка';
   @override
   String get library_view_sources => 'Источники';
@@ -299223,6 +299246,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get library_view_media => 'คลัง';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'ชั้นหนังสือ';
   @override
   String get library_view_sources => 'แหล่งข้อมูล';
@@ -324080,6 +324105,8 @@ class _StringsTr extends _StringsEn {
   String get library_view_kavita => 'Kavita';
   @override
   String get library_view_media => 'Kütüphane';
+  @override
+  String get library_view_media_servers => 'Media servers';
   @override
   String get library_view_shelf => 'Raf';
   @override
@@ -348998,6 +349025,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get library_view_media => 'Thư viện';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => 'Kệ';
   @override
   String get library_view_sources => 'Nguồn';
@@ -372950,6 +372979,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get library_view_media => '媒体库';
   @override
+  String get library_view_media_servers => '媒体服务器';
+  @override
   String get library_view_shelf => '书架';
   @override
   String get library_view_sources => '来源';
@@ -395938,6 +395969,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get library_view_media => '媒體庫';
   @override
+  String get library_view_media_servers => 'Media servers';
+  @override
   String get library_view_shelf => '書架';
   @override
   String get library_view_sources => '來源';
@@ -418409,6 +418442,8 @@ extension on _StringsEn {
         return 'Kavita';
       case 'library_view_media':
         return 'Library';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Shelf';
       case 'library_view_sources':
@@ -439623,6 +439658,8 @@ extension on _StringsAr {
         return 'Kavita';
       case 'library_view_media':
         return 'المكتبة';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'الرف';
       case 'library_view_sources':
@@ -460878,6 +460915,8 @@ extension on _StringsDe {
         return 'Kavita';
       case 'library_view_media':
         return 'Bibliothek';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Regal';
       case 'library_view_sources':
@@ -482154,6 +482193,8 @@ extension on _StringsEs {
         return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Estante';
       case 'library_view_sources':
@@ -503440,6 +503481,8 @@ extension on _StringsFr {
         return 'Kavita';
       case 'library_view_media':
         return 'Bibliothèque';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Étagère';
       case 'library_view_sources':
@@ -524701,6 +524744,8 @@ extension on _StringsId {
         return 'Kavita';
       case 'library_view_media':
         return 'Perpustakaan';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Rak';
       case 'library_view_sources':
@@ -545946,6 +545991,8 @@ extension on _StringsIt {
         return 'Kavita';
       case 'library_view_media':
         return 'Libreria';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Scaffale';
       case 'library_view_sources':
@@ -567156,6 +567203,8 @@ extension on _StringsJa {
         return 'Kavita';
       case 'library_view_media':
         return 'ライブラリ';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '本棚';
       case 'library_view_sources':
@@ -588294,6 +588343,8 @@ extension on _StringsKo {
         return 'Kavita';
       case 'library_view_media':
         return '라이브러리';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '서재';
       case 'library_view_sources':
@@ -609498,6 +609549,8 @@ extension on _StringsNl {
         return 'Kavita';
       case 'library_view_media':
         return 'Bibliotheek';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Plank';
       case 'library_view_sources':
@@ -630759,6 +630812,8 @@ extension on _StringsPtBr {
         return 'Kavita';
       case 'library_view_media':
         return 'Biblioteca';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Estante';
       case 'library_view_sources':
@@ -652022,6 +652077,8 @@ extension on _StringsRu {
         return 'Kavita';
       case 'library_view_media':
         return 'Библиотека';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Полка';
       case 'library_view_sources':
@@ -673258,6 +673315,8 @@ extension on _StringsTh {
         return 'Kavita';
       case 'library_view_media':
         return 'คลัง';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'ชั้นหนังสือ';
       case 'library_view_sources':
@@ -694494,6 +694553,8 @@ extension on _StringsTr {
         return 'Kavita';
       case 'library_view_media':
         return 'Kütüphane';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Raf';
       case 'library_view_sources':
@@ -715732,6 +715793,8 @@ extension on _StringsVi {
         return 'Kavita';
       case 'library_view_media':
         return 'Thư viện';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return 'Kệ';
       case 'library_view_sources':
@@ -736843,6 +736906,8 @@ extension on _StringsZhCn {
         return 'Kavita';
       case 'library_view_media':
         return '媒体库';
+      case 'library_view_media_servers':
+        return '媒体服务器';
       case 'library_view_shelf':
         return '书架';
       case 'library_view_sources':
@@ -757848,6 +757913,8 @@ extension on _StringsZhHk {
         return 'Kavita';
       case 'library_view_media':
         return '媒體庫';
+      case 'library_view_media_servers':
+        return 'Media servers';
       case 'library_view_shelf':
         return '書架';
       case 'library_view_sources':
