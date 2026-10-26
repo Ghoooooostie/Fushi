@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168776 (9928 per locale)
+/// Strings: 168827 (9931 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14131,6 +14131,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_incognito_tab => 'Open in incognito tab';
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
+  String get web_browser_login_import => 'Import sign-in from browser';
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -38034,6 +38039,14 @@ class _StringsAr extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -62488,6 +62501,14 @@ class _StringsDe extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -86997,6 +87018,14 @@ class _StringsEs extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -111588,6 +111617,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -135836,6 +135873,14 @@ class _StringsId extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -160244,6 +160289,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -183617,6 +183670,14 @@ class _StringsJa extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -207054,6 +207115,14 @@ class _StringsKo extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -231409,6 +231478,14 @@ class _StringsNl extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -255838,6 +255915,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -280211,6 +280296,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -304260,6 +304353,14 @@ class _StringsTh extends _StringsEn {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   @override
   String get web_browser_link_share => 'Share link';
+  @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -328514,6 +328615,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -352695,6 +352804,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -374828,6 +374945,14 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_link_open_new_tab => '在新标签页中打开';
   @override
   String get web_browser_link_share => '分享链接';
+  @override
+  String get web_browser_login_import => '从浏览器导入登录';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String get web_browser_login_import_waiting =>
+      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
   @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
@@ -397587,6 +397712,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_link_share => 'Share link';
   @override
+  String get web_browser_login_import => 'Import sign-in from browser';
+  @override
+  String web_browser_login_import_received({required Object count}) =>
+      'Imported ${count} sign-in items from the browser';
+  @override
+  String get web_browser_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
@@ -418237,6 +418370,13 @@ extension on _StringsEn {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -438851,6 +438991,13 @@ extension on _StringsAr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -459541,6 +459688,13 @@ extension on _StringsDe {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -480213,6 +480367,13 @@ extension on _StringsEs {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -500903,6 +501064,13 @@ extension on _StringsFr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -521537,6 +521705,13 @@ extension on _StringsId {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -542207,6 +542382,13 @@ extension on _StringsIt {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -562745,6 +562927,13 @@ extension on _StringsJa {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -583296,6 +583485,13 @@ extension on _StringsKo {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -603958,6 +604154,13 @@ extension on _StringsNl {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -624615,6 +624818,13 @@ extension on _StringsPtBr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -645277,6 +645487,13 @@ extension on _StringsRu {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -665895,6 +666112,13 @@ extension on _StringsTh {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -686544,6 +686768,13 @@ extension on _StringsTr {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -707176,6 +707407,13 @@ extension on _StringsVi {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -727561,6 +727799,12 @@ extension on _StringsZhCn {
         return '在新标签页中打开';
       case 'web_browser_link_share':
         return '分享链接';
+      case 'web_browser_login_import':
+        return '从浏览器导入登录';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_browser_login_import_waiting':
+        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -748030,6 +748274,13 @@ extension on _StringsZhHk {
         return 'Open in new tab';
       case 'web_browser_link_share':
         return 'Share link';
+      case 'web_browser_login_import':
+        return 'Import sign-in from browser';
+      case 'web_browser_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} sign-in items from the browser';
+      case 'web_browser_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
