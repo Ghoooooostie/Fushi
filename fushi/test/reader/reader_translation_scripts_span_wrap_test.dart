@@ -8,7 +8,7 @@ import 'package:fushi/src/reader/reader_translation_scripts.dart';
 /// 为闸门，且函数体内不得再以 `hasOwnText(el)` 跳过候选。
 void main() {
   test('collectVisibleTargets 不再因段落文本被 SPAN 包裹而跳过', () {
-    final js = kTranslationJs;
+    const js = kTranslationJs;
 
     final fnStart = js.indexOf('collectVisibleTargets: function');
     expect(fnStart, isNot(equals(-1)), reason: '源码应存在 collectVisibleTargets');
