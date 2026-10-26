@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169031 (9943 per locale)
+/// Strings: 168861 (9933 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1066,9 +1066,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_action_overwrite => 'Overwrite this card';
   String get anki_mined_action_view => 'View / open in Anki';
+  String get anki_mined_action_view_only => 'View card';
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
   String get anki_mined_card_subtitle =>
       'Choose what to do with the matching card.';
   String get anki_mined_card_title => 'Card already in Anki';
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   String get anki_mined_forget_done => 'Mining record cleared';
   String anki_mined_multiple_matches({required Object count}) =>
       '${count} matching cards';
@@ -1078,9 +1081,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_not_configured =>
       'Tap Refresh to load your Anki decks and note types.';
   String get anki_note_open_failed => 'Could not open the card in Anki.';
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
   String get anki_note_type => 'Note type';
   String get anki_note_viewer_empty => 'This card has no readable fields.';
   String get anki_note_viewer_open_in_anki => 'Open in Anki';
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   String get anki_note_viewer_title => 'Existing card';
   String get anki_open_no_card => 'No card found for this word in Anki.';
   String get anki_overwrite_scope => 'Overwrite range';
@@ -10365,16 +10371,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A note type needs at least one field';
   String get srs_note_types_field_name => 'Field name';
   String get srs_note_types_field_rename => 'Rename field';
-  String get srs_note_types_field_term_tag => 'Lookup';
-  String get srs_note_types_field_unused => 'Not on any card';
   String get srs_note_types_fields => 'Fields';
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10388,10 +10385,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Field names can\'t contain : { } " or start with # / ';
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
   String get srs_note_types_preview => 'Preview';
   String get srs_note_types_preview_empty =>
       'The front is empty for this note, so this card won\'t be shown.';
@@ -10403,7 +10396,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_saved => 'Saved';
   String get srs_note_types_side_back => 'Back';
   String get srs_note_types_side_front => 'Front';
-  String get srs_note_types_side_none => '(no fields)';
   String get srs_note_types_stock_basic => 'Basic';
   String get srs_note_types_stock_cloze => 'Cloze';
   String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
@@ -10416,8 +10408,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object cards,
   }) => '${notes} notes · ${fields} fields · ${cards} card types';
   String get srs_note_types_template_add => 'Add card type';
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   String get srs_note_types_template_delete => 'Delete card type';
@@ -10429,17 +10419,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_template_edit => 'Edit card type';
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   String get srs_note_types_template_name => 'Card type name';
   String get srs_note_types_template_rename => 'Rename card type';
   String get srs_note_types_templates => 'Card types';
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   String get srs_note_types_term_field => 'Word field';
   String get srs_note_types_term_field_hint =>
       'Review marks in the lookup popup match words against this field';
@@ -10893,16 +10877,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_align_center => 'Center';
   String get srs_visual_align_end => 'Right';
   String get srs_visual_align_start => 'Left';
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   String get srs_visual_convert_title => 'This template is written in code';
   String get srs_visual_delete => 'Remove block';
   String get srs_visual_edited_warning =>
@@ -15823,9 +15801,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'عرض / فتح في Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'اختر ما تريد فعله بالبطاقة المطابقة.';
   @override
   String get anki_mined_card_title => 'البطاقة موجودة في Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'تم مسح سجل الاستخراج';
   @override
@@ -15842,12 +15826,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'تعذر فتح البطاقة في Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'نوع الملاحظة';
   @override
   String get anki_note_viewer_empty =>
       'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
   @override
   String get anki_note_viewer_open_in_anki => 'فتح في Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'بطاقة موجودة';
   @override
@@ -31665,22 +31654,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -31706,11 +31680,6 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -31729,8 +31698,6 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -31751,9 +31718,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -31770,9 +31734,6 @@ class _StringsAr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -31781,12 +31742,6 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -32565,20 +32520,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -39953,10 +39899,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_mined_action_view => 'In Anki anzeigen / öffnen';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
   @override
   String get anki_mined_card_title => 'Karte bereits in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Mining-Eintrag gelöscht';
   @override
@@ -39973,11 +39925,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Konnte die Karte nicht in Anki öffnen.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notiztyp';
   @override
   String get anki_note_viewer_empty => 'Diese Karte hat keine lesbaren Felder.';
   @override
   String get anki_note_viewer_open_in_anki => 'In Anki öffnen';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Vorhandene Karte';
   @override
@@ -56069,22 +56026,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -56110,11 +56052,6 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -56133,8 +56070,6 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -56155,9 +56090,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -56174,9 +56106,6 @@ class _StringsDe extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -56185,12 +56114,6 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -56969,20 +56892,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -64456,10 +64370,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir en Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Elija qué hacer con la tarjeta coincidente.';
   @override
   String get anki_mined_card_title => 'Tarjeta ya existente en Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de creación borrado';
   @override
@@ -64476,11 +64396,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_note_open_failed => 'No se pudo abrir la tarjeta en Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Esta tarjeta no tiene campos legibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir en Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Tarjeta existente';
   @override
@@ -80596,22 +80521,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -80637,11 +80547,6 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -80660,8 +80565,6 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -80682,9 +80585,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -80701,9 +80601,6 @@ class _StringsEs extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -80712,12 +80609,6 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -81496,20 +81387,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -89010,10 +88892,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Voir / ouvrir dans Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Choisissez quoi faire avec la carte correspondante.';
   @override
   String get anki_mined_card_title => 'Carte déjà dans Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Enregistrement de création effacé';
   @override
@@ -89031,12 +88919,17 @@ class _StringsFr extends _StringsEn {
   String get anki_note_open_failed =>
       'Impossible d\'ouvrir la carte dans Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Type de note';
   @override
   String get anki_note_viewer_empty =>
       'Cette carte n\'a pas de champs lisibles.';
   @override
   String get anki_note_viewer_open_in_anki => 'Ouvrir dans Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carte existante';
   @override
@@ -105210,22 +105103,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -105251,11 +105129,6 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -105274,8 +105147,6 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -105296,9 +105167,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -105315,9 +105183,6 @@ class _StringsFr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -105326,12 +105191,6 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -106110,20 +105969,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -113629,10 +113479,16 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Lihat / buka di Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Pilih apa yang dilakukan dengan kartu yang cocok.';
   @override
   String get anki_mined_card_title => 'Kartu sudah ada di Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Catatan mining dihapus';
   @override
@@ -113649,12 +113505,17 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Tidak dapat membuka kartu di Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipe Catatan';
   @override
   String get anki_note_viewer_empty =>
       'Kartu ini tidak memiliki bidang yang bisa dibaca.';
   @override
   String get anki_note_viewer_open_in_anki => 'Buka di Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Kartu yang sudah ada';
   @override
@@ -129588,22 +129449,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -129629,11 +129475,6 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -129652,8 +129493,6 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -129674,9 +129513,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -129693,9 +129529,6 @@ class _StringsId extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -129704,12 +129537,6 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -130488,20 +130315,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -137926,10 +137744,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Visualizza / apri in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Scegli cosa fare con la carta corrispondente.';
   @override
   String get anki_mined_card_title => 'Carta già in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro del mining cancellato';
   @override
@@ -137946,11 +137770,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Impossibile aprire la carta in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo di nota';
   @override
   String get anki_note_viewer_empty => 'Questa carta non ha campi leggibili.';
   @override
   String get anki_note_viewer_open_in_anki => 'Apri in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Carta esistente';
   @override
@@ -154008,22 +153837,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -154049,11 +153863,6 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -154072,8 +153881,6 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -154094,9 +153901,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -154113,9 +153917,6 @@ class _StringsIt extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -154124,12 +153925,6 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -154908,20 +154703,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -162315,9 +162101,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_mined_action_view => '表示 / Anki で開く';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '一致するカードの処理方法を選択してください。';
   @override
   String get anki_mined_card_title => 'Anki にカードが既にあります';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'カード作成の記録を消去しました';
   @override
@@ -162333,11 +162125,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki でカードを開けませんでした。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ノートタイプ';
   @override
   String get anki_note_viewer_empty => 'このカードには読み取り可能なフィールドがありません。';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki で開く';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '既存のカード';
   @override
@@ -177717,22 +177514,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -177758,11 +177540,6 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -177781,8 +177558,6 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -177803,9 +177578,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -177822,9 +177594,6 @@ class _StringsJa extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -177833,12 +177602,6 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -178617,20 +178380,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -185721,9 +185475,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki에서 보기 / 열기';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '일치하는 카드의 처리 방법을 선택하세요.';
   @override
   String get anki_mined_card_title => 'Anki에 이미 있는 카드';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '마이닝 기록을 지웠습니다';
   @override
@@ -185739,11 +185499,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Anki에서 카드를 열 수 없습니다.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '노트 유형';
   @override
   String get anki_note_viewer_empty => '이 카드에 읽을 수 있는 필드가 없습니다.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki에서 열기';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '기존 카드';
   @override
@@ -201159,22 +200924,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -201200,11 +200950,6 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -201223,8 +200968,6 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -201245,9 +200988,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -201264,9 +201004,6 @@ class _StringsKo extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -201275,12 +201012,6 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -202059,20 +201790,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -209269,10 +208991,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Bekijken / openen in Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Kies wat je wilt doen met de overeenkomende kaart.';
   @override
   String get anki_mined_card_title => 'Kaart al in Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Miningrecord gewist';
   @override
@@ -209289,11 +209017,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kon de kaart niet openen in Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Notitietype';
   @override
   String get anki_note_viewer_empty => 'Deze kaart heeft geen leesbare velden.';
   @override
   String get anki_note_viewer_open_in_anki => 'Openen in Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Bestaande kaart';
   @override
@@ -225309,22 +225042,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -225350,11 +225068,6 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -225373,8 +225086,6 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -225395,9 +225106,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -225414,9 +225122,6 @@ class _StringsNl extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -225425,12 +225130,6 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -226209,20 +225908,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -233680,10 +233370,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Ver / abrir no Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Escolha o que fazer com o cartão correspondente.';
   @override
   String get anki_mined_card_title => 'Cartão já existe no Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Registro de mineração apagado';
   @override
@@ -233701,11 +233397,16 @@ class _StringsPtBr extends _StringsEn {
   String get anki_note_open_failed =>
       'Não foi possível abrir o cartão no Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Tipo de nota';
   @override
   String get anki_note_viewer_empty => 'Este cartão não tem campos legíveis.';
   @override
   String get anki_note_viewer_open_in_anki => 'Abrir no Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Cartão existente';
   @override
@@ -249760,22 +249461,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -249801,11 +249487,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -249824,8 +249505,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -249846,9 +249525,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -249865,9 +249541,6 @@ class _StringsPtBr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -249876,12 +249549,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -250660,20 +250327,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -258139,10 +257797,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Просмотреть / открыть в Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Выберите действие с найденной карточкой.';
   @override
   String get anki_mined_card_title => 'Карточка уже в Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Запись о создании очищена';
   @override
@@ -258159,11 +257823,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Не удалось открыть карточку в Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Тип заметки';
   @override
   String get anki_note_viewer_empty => 'У этой карточки нет читаемых полей.';
   @override
   String get anki_note_viewer_open_in_anki => 'Открыть в Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Существующая карточка';
   @override
@@ -274188,22 +273857,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -274229,11 +273883,6 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -274252,8 +273901,6 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -274274,9 +273921,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -274293,9 +273937,6 @@ class _StringsRu extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -274304,12 +273945,6 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -275088,20 +274723,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -282533,9 +282159,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_mined_action_view => 'ดู / เปิดใน Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
   @override
   String get anki_mined_card_title => 'บัตรมีอยู่ใน Anki แล้ว';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'ล้างบันทึกการสร้างการ์ดแล้ว';
   @override
@@ -282552,11 +282184,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_note_open_failed => 'ไม่สามารถเปิดบัตรใน Anki ได้';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'ประเภทโน้ต';
   @override
   String get anki_note_viewer_empty => 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
   @override
   String get anki_note_viewer_open_in_anki => 'เปิดใน Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'บัตรที่มีอยู่';
   @override
@@ -298368,22 +298005,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -298409,11 +298031,6 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -298432,8 +298049,6 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -298454,9 +298069,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -298473,9 +298085,6 @@ class _StringsTh extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -298484,12 +298093,6 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -299268,20 +298871,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -306642,10 +306236,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Anki\'de görüntüle / aç';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle =>
       'Eşleşen kartla ne yapılacağını seçin.';
   @override
   String get anki_mined_card_title => 'Kart zaten Anki\'de mevcut';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Kart oluşturma kaydı temizlendi';
   @override
@@ -306663,11 +306263,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Kart Anki\'de açılamadı.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Not Türü';
   @override
   String get anki_note_viewer_empty => 'Bu kartın okunabilir alanı yok.';
   @override
   String get anki_note_viewer_open_in_anki => 'Anki\'de aç';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Mevcut kart';
   @override
@@ -322613,22 +322218,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -322654,11 +322244,6 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -322677,8 +322262,6 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -322699,9 +322282,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -322718,9 +322298,6 @@ class _StringsTr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -322729,12 +322306,6 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -323513,20 +323084,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -330936,9 +330498,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_mined_action_view => 'Xem / mở trong Anki';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => 'Chọn thao tác với thẻ trùng khớp.';
   @override
   String get anki_mined_card_title => 'Thẻ đã có trong Anki';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => 'Đã xóa bản ghi tạo thẻ';
   @override
@@ -330955,11 +330523,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_note_open_failed => 'Không thể mở thẻ trong Anki.';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => 'Loại ghi chú';
   @override
   String get anki_note_viewer_empty => 'Thẻ này không có trường có thể đọc.';
   @override
   String get anki_note_viewer_open_in_anki => 'Mở trong Anki';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => 'Thẻ hiện có';
   @override
@@ -346854,22 +346427,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -346895,11 +346453,6 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -346918,8 +346471,6 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -346940,9 +346491,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -346959,9 +346507,6 @@ class _StringsVi extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -346970,12 +346515,6 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -347754,20 +347293,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -355036,9 +354566,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打开';
   @override
+  String get anki_mined_action_view_only => '查看卡片';
+  @override
+  String get anki_mined_action_view_review => '查看 / 在 Fushi 复习中打开';
+  @override
   String get anki_mined_card_subtitle => '选择对这张已存在的卡片做什么。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => '卡片已在 Fushi 复习中';
   @override
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
@@ -355054,11 +354590,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_note_open_failed => '无法在 Anki 中打开这张卡片。';
   @override
+  String get anki_note_open_failed_review => '无法在 Fushi 复习中打开这张卡片。';
+  @override
   String get anki_note_type => '笔记类型';
   @override
   String get anki_note_viewer_empty => '这张卡片没有可读取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打开';
+  @override
+  String get anki_note_viewer_open_in_review => '在 Fushi 复习中打开';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -369634,19 +369174,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_field_rename => '重命名字段';
   @override
-  String get srs_note_types_field_term_tag => '查词用';
-  @override
-  String get srs_note_types_field_unused => '没上卡面';
-  @override
   String get srs_note_types_fields => '字段';
-  @override
-  String srs_note_types_fields_count({required Object n}) => '字段（${n}）';
-  @override
-  String get srs_note_types_fields_hint => '每条笔记要填的内容；点开字段能看到它在卡面的位置';
-  @override
-  String srs_note_types_flag_fields({required Object n}) => '开关字段（${n}）';
-  @override
-  String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
   String get srs_note_types_front => '正面模板';
   @override
@@ -369671,11 +369199,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_name_reserved =>
       '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} 个字段 · ${cards} 种卡片';
-  @override
   String get srs_note_types_preview => '预览';
   @override
   String get srs_note_types_preview_empty => '这条笔记的正面为空，这张卡不会出现。';
@@ -369692,8 +369215,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_side_back => '背面';
   @override
   String get srs_note_types_side_front => '正面';
-  @override
-  String get srs_note_types_side_none => '（没有字段）';
   @override
   String get srs_note_types_stock_basic => '问答';
   @override
@@ -369713,9 +369234,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_template_add => '添加卡片模板';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      '背面：${fields}';
-  @override
   String get srs_note_types_template_cloze_single => '填空类型只有一个卡片模板';
   @override
   String get srs_note_types_template_delete => '删除卡片模板';
@@ -369730,9 +369248,6 @@ class _StringsZhCn extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       '模板有错误：${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      '正面：${fields}';
-  @override
   String get srs_note_types_template_last => '笔记类型至少要有一个卡片模板';
   @override
   String get srs_note_types_template_name => '模板名称';
@@ -369740,10 +369255,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_template_rename => '重命名卡片模板';
   @override
   String get srs_note_types_templates => '卡片模板';
-  @override
-  String get srs_note_types_templates_hint => '每个模板生成一张卡；点进去改它的版面';
-  @override
-  String srs_note_types_term_chip({required Object name}) => '查词按：${name}';
   @override
   String get srs_note_types_term_field => '词条字段';
   @override
@@ -370457,19 +369968,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_align_start => '靠左';
   @override
-  String get srs_visual_builtin_body =>
-      '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
-  @override
-  String get srs_visual_builtin_other_note =>
-      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
-  @override
-  String get srs_visual_builtin_title => '这是内置模板，用代码写成';
-  @override
   String get srs_visual_convert_body =>
       '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
   @override
   String get srs_visual_convert_title => '这个模板是用代码写的';
   @override
@@ -377198,9 +376701,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_mined_action_view => '查看 / 在 Anki 中打開';
   @override
+  String get anki_mined_action_view_only => 'View card';
+  @override
+  String get anki_mined_action_view_review => 'View / open in Fushi review';
+  @override
   String get anki_mined_card_subtitle => '選擇對這張已存在的卡片做什麼。';
   @override
   String get anki_mined_card_title => '卡片已在 Anki 中';
+  @override
+  String get anki_mined_card_title_review => 'Card already in Fushi review';
   @override
   String get anki_mined_forget_done => '已清除制卡記錄';
   @override
@@ -377216,11 +376725,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_note_open_failed => '無法在 Anki 中打開這張卡片。';
   @override
+  String get anki_note_open_failed_review =>
+      'Could not open the card in Fushi review.';
+  @override
   String get anki_note_type => '筆記類型';
   @override
   String get anki_note_viewer_empty => '這張卡片沒有可讀取的字段。';
   @override
   String get anki_note_viewer_open_in_anki => '在 Anki 中打開';
+  @override
+  String get anki_note_viewer_open_in_review => 'Open in Fushi review';
   @override
   String get anki_note_viewer_title => '已存在的卡片';
   @override
@@ -392220,22 +391734,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
-  String get srs_note_types_field_term_tag => 'Lookup';
-  @override
-  String get srs_note_types_field_unused => 'Not on any card';
-  @override
   String get srs_note_types_fields => 'Fields';
-  @override
-  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
-  @override
-  String get srs_note_types_fields_hint =>
-      'What each note holds; open a field to see where it shows on the card';
-  @override
-  String srs_note_types_flag_fields({required Object n}) =>
-      'Switch fields (${n})';
-  @override
-  String get srs_note_types_flag_fields_hint =>
-      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -392261,11 +391760,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
-  String srs_note_types_overview_counts({
-    required Object fields,
-    required Object cards,
-  }) => '${fields} fields · ${cards} card types';
-  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -392284,8 +391778,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
-  @override
-  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -392306,9 +391798,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
-  String srs_note_types_template_back_fields({required Object fields}) =>
-      'Back: ${fields}';
-  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -392325,9 +391814,6 @@ class _StringsZhHk extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
-  String srs_note_types_template_front_fields({required Object fields}) =>
-      'Front: ${fields}';
-  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -392336,12 +391822,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
-  @override
-  String get srs_note_types_templates_hint =>
-      'Each template makes one card; open one to change its layout';
-  @override
-  String srs_note_types_term_chip({required Object name}) =>
-      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -393119,20 +392599,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
-  String get srs_visual_builtin_body =>
-      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-  @override
-  String get srs_visual_builtin_fushi_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-  @override
-  String get srs_visual_builtin_other_note =>
-      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-  @override
-  String get srs_visual_builtin_title =>
-      'This is a built-in template, written in code';
-  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -399854,10 +399325,16 @@ extension on _StringsEn {
         return 'Overwrite this card';
       case 'anki_mined_action_view':
         return 'View / open in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choose what to do with the matching card.';
       case 'anki_mined_card_title':
         return 'Card already in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining record cleared';
       case 'anki_mined_multiple_matches':
@@ -399870,12 +399347,16 @@ extension on _StringsEn {
         return 'Tap Refresh to load your Anki decks and note types.';
       case 'anki_note_open_failed':
         return 'Could not open the card in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Note type';
       case 'anki_note_viewer_empty':
         return 'This card has no readable fields.';
       case 'anki_note_viewer_open_in_anki':
         return 'Open in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Existing card';
       case 'anki_open_no_card':
@@ -413492,20 +412973,8 @@ extension on _StringsEn {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -413528,9 +412997,6 @@ extension on _StringsEn {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -413547,8 +413013,6 @@ extension on _StringsEn {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -413567,8 +413031,6 @@ extension on _StringsEn {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -413580,8 +413042,6 @@ extension on _StringsEn {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -413590,10 +413050,6 @@ extension on _StringsEn {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -414267,16 +413723,10 @@ extension on _StringsEn {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -420504,10 +419954,16 @@ extension on _StringsAr {
         return 'الكتابة فوق هذه البطاقة';
       case 'anki_mined_action_view':
         return 'عرض / فتح في Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'اختر ما تريد فعله بالبطاقة المطابقة.';
       case 'anki_mined_card_title':
         return 'البطاقة موجودة في Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'تم مسح سجل الاستخراج';
       case 'anki_mined_multiple_matches':
@@ -420520,12 +419976,16 @@ extension on _StringsAr {
         return 'انقر «تحديث» لتحميل مجموعات Anki وأنواع الملاحظات.';
       case 'anki_note_open_failed':
         return 'تعذر فتح البطاقة في Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'نوع الملاحظة';
       case 'anki_note_viewer_empty':
         return 'هذه البطاقة لا تحتوي على حقول قابلة للقراءة.';
       case 'anki_note_viewer_open_in_anki':
         return 'فتح في Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'بطاقة موجودة';
       case 'anki_open_no_card':
@@ -434139,20 +433599,8 @@ extension on _StringsAr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -434175,9 +433623,6 @@ extension on _StringsAr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -434194,8 +433639,6 @@ extension on _StringsAr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -434214,8 +433657,6 @@ extension on _StringsAr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -434227,8 +433668,6 @@ extension on _StringsAr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -434237,10 +433676,6 @@ extension on _StringsAr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -434914,16 +434349,10 @@ extension on _StringsAr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -441157,10 +440586,16 @@ extension on _StringsDe {
         return 'Diese Karte überschreiben';
       case 'anki_mined_action_view':
         return 'In Anki anzeigen / öffnen';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Wähle, was mit der übereinstimmenden Karte geschehen soll.';
       case 'anki_mined_card_title':
         return 'Karte bereits in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Mining-Eintrag gelöscht';
       case 'anki_mined_multiple_matches':
@@ -441173,12 +440608,16 @@ extension on _StringsDe {
         return 'Tippe auf Aktualisieren, um deine Anki-Stapel und Notiztypen zu laden.';
       case 'anki_note_open_failed':
         return 'Konnte die Karte nicht in Anki öffnen.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notiztyp';
       case 'anki_note_viewer_empty':
         return 'Diese Karte hat keine lesbaren Felder.';
       case 'anki_note_viewer_open_in_anki':
         return 'In Anki öffnen';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Vorhandene Karte';
       case 'anki_open_no_card':
@@ -454842,20 +454281,8 @@ extension on _StringsDe {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -454878,9 +454305,6 @@ extension on _StringsDe {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -454897,8 +454321,6 @@ extension on _StringsDe {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -454917,8 +454339,6 @@ extension on _StringsDe {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -454930,8 +454350,6 @@ extension on _StringsDe {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -454940,10 +454358,6 @@ extension on _StringsDe {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -455617,16 +455031,10 @@ extension on _StringsDe {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -461873,10 +461281,16 @@ extension on _StringsEs {
         return 'Sobrescribir esta tarjeta';
       case 'anki_mined_action_view':
         return 'Ver / abrir en Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Elija qué hacer con la tarjeta coincidente.';
       case 'anki_mined_card_title':
         return 'Tarjeta ya existente en Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de creación borrado';
       case 'anki_mined_multiple_matches':
@@ -461889,12 +461303,16 @@ extension on _StringsEs {
         return 'Toca Actualizar para cargar tus mazos y tipos de nota de Anki.';
       case 'anki_note_open_failed':
         return 'No se pudo abrir la tarjeta en Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Esta tarjeta no tiene campos legibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir en Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Tarjeta existente';
       case 'anki_open_no_card':
@@ -475549,20 +474967,8 @@ extension on _StringsEs {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -475585,9 +474991,6 @@ extension on _StringsEs {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -475604,8 +475007,6 @@ extension on _StringsEs {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -475624,8 +475025,6 @@ extension on _StringsEs {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -475637,8 +475036,6 @@ extension on _StringsEs {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -475647,10 +475044,6 @@ extension on _StringsEs {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -476324,16 +475717,10 @@ extension on _StringsEs {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -482579,10 +481966,16 @@ extension on _StringsFr {
         return 'Écraser cette carte';
       case 'anki_mined_action_view':
         return 'Voir / ouvrir dans Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Choisissez quoi faire avec la carte correspondante.';
       case 'anki_mined_card_title':
         return 'Carte déjà dans Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Enregistrement de création effacé';
       case 'anki_mined_multiple_matches':
@@ -482595,12 +481988,16 @@ extension on _StringsFr {
         return 'Touchez « Actualiser » pour charger vos paquets et types de notes Anki.';
       case 'anki_note_open_failed':
         return 'Impossible d\'ouvrir la carte dans Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Type de note';
       case 'anki_note_viewer_empty':
         return 'Cette carte n\'a pas de champs lisibles.';
       case 'anki_note_viewer_open_in_anki':
         return 'Ouvrir dans Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carte existante';
       case 'anki_open_no_card':
@@ -496267,20 +495664,8 @@ extension on _StringsFr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -496303,9 +495688,6 @@ extension on _StringsFr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -496322,8 +495704,6 @@ extension on _StringsFr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -496342,8 +495722,6 @@ extension on _StringsFr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -496355,8 +495733,6 @@ extension on _StringsFr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -496365,10 +495741,6 @@ extension on _StringsFr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -497042,16 +496414,10 @@ extension on _StringsFr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -503297,10 +502663,16 @@ extension on _StringsId {
         return 'Timpa kartu ini';
       case 'anki_mined_action_view':
         return 'Lihat / buka di Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Pilih apa yang dilakukan dengan kartu yang cocok.';
       case 'anki_mined_card_title':
         return 'Kartu sudah ada di Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Catatan mining dihapus';
       case 'anki_mined_multiple_matches':
@@ -503313,12 +502685,16 @@ extension on _StringsId {
         return 'Ketuk Segarkan untuk memuat dek dan tipe catatan Anki kamu.';
       case 'anki_note_open_failed':
         return 'Tidak dapat membuka kartu di Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipe Catatan';
       case 'anki_note_viewer_empty':
         return 'Kartu ini tidak memiliki bidang yang bisa dibaca.';
       case 'anki_note_viewer_open_in_anki':
         return 'Buka di Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Kartu yang sudah ada';
       case 'anki_open_no_card':
@@ -516945,20 +516321,8 @@ extension on _StringsId {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -516981,9 +516345,6 @@ extension on _StringsId {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -517000,8 +516361,6 @@ extension on _StringsId {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -517020,8 +516379,6 @@ extension on _StringsId {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -517033,8 +516390,6 @@ extension on _StringsId {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -517043,10 +516398,6 @@ extension on _StringsId {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -517720,16 +517071,10 @@ extension on _StringsId {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -523963,10 +523308,16 @@ extension on _StringsIt {
         return 'Sovrascrivi questa carta';
       case 'anki_mined_action_view':
         return 'Visualizza / apri in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Scegli cosa fare con la carta corrispondente.';
       case 'anki_mined_card_title':
         return 'Carta già in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro del mining cancellato';
       case 'anki_mined_multiple_matches':
@@ -523979,12 +523330,16 @@ extension on _StringsIt {
         return 'Tocca Aggiorna per caricare i tuoi mazzi e tipi di nota di Anki.';
       case 'anki_note_open_failed':
         return 'Impossibile aprire la carta in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo di nota';
       case 'anki_note_viewer_empty':
         return 'Questa carta non ha campi leggibili.';
       case 'anki_note_viewer_open_in_anki':
         return 'Apri in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Carta esistente';
       case 'anki_open_no_card':
@@ -537632,20 +536987,8 @@ extension on _StringsIt {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -537668,9 +537011,6 @@ extension on _StringsIt {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -537687,8 +537027,6 @@ extension on _StringsIt {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -537707,8 +537045,6 @@ extension on _StringsIt {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -537720,8 +537056,6 @@ extension on _StringsIt {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -537730,10 +537064,6 @@ extension on _StringsIt {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -538407,16 +537737,10 @@ extension on _StringsIt {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -544654,10 +543978,16 @@ extension on _StringsJa {
         return 'このカードを上書き';
       case 'anki_mined_action_view':
         return '表示 / Anki で開く';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '一致するカードの処理方法を選択してください。';
       case 'anki_mined_card_title':
         return 'Anki にカードが既にあります';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'カード作成の記録を消去しました';
       case 'anki_mined_multiple_matches':
@@ -544670,12 +544000,16 @@ extension on _StringsJa {
         return '「更新」をタップして Anki のデッキとノートタイプを読み込んでください。';
       case 'anki_note_open_failed':
         return 'Anki でカードを開けませんでした。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ノートタイプ';
       case 'anki_note_viewer_empty':
         return 'このカードには読み取り可能なフィールドがありません。';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki で開く';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '既存のカード';
       case 'anki_open_no_card':
@@ -558253,20 +557587,8 @@ extension on _StringsJa {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -558289,9 +557611,6 @@ extension on _StringsJa {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -558308,8 +557627,6 @@ extension on _StringsJa {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -558328,8 +557645,6 @@ extension on _StringsJa {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -558341,8 +557656,6 @@ extension on _StringsJa {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -558351,10 +557664,6 @@ extension on _StringsJa {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -559028,16 +558337,10 @@ extension on _StringsJa {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -565219,10 +564522,16 @@ extension on _StringsKo {
         return '이 카드 덮어쓰기';
       case 'anki_mined_action_view':
         return 'Anki에서 보기 / 열기';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '일치하는 카드의 처리 방법을 선택하세요.';
       case 'anki_mined_card_title':
         return 'Anki에 이미 있는 카드';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '마이닝 기록을 지웠습니다';
       case 'anki_mined_multiple_matches':
@@ -565235,12 +564544,16 @@ extension on _StringsKo {
         return '「새로고침」을 눌러 Anki 덱과 노트 유형을 불러오세요.';
       case 'anki_note_open_failed':
         return 'Anki에서 카드를 열 수 없습니다.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '노트 유형';
       case 'anki_note_viewer_empty':
         return '이 카드에 읽을 수 있는 필드가 없습니다.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki에서 열기';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '기존 카드';
       case 'anki_open_no_card':
@@ -578823,20 +578136,8 @@ extension on _StringsKo {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -578859,9 +578160,6 @@ extension on _StringsKo {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -578878,8 +578176,6 @@ extension on _StringsKo {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -578898,8 +578194,6 @@ extension on _StringsKo {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -578911,8 +578205,6 @@ extension on _StringsKo {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -578921,10 +578213,6 @@ extension on _StringsKo {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -579598,16 +578886,10 @@ extension on _StringsKo {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -585813,10 +585095,16 @@ extension on _StringsNl {
         return 'Deze kaart overschrijven';
       case 'anki_mined_action_view':
         return 'Bekijken / openen in Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Kies wat je wilt doen met de overeenkomende kaart.';
       case 'anki_mined_card_title':
         return 'Kaart al in Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Miningrecord gewist';
       case 'anki_mined_multiple_matches':
@@ -585829,12 +585117,16 @@ extension on _StringsNl {
         return 'Tik op Vernieuwen om je Anki-decks en notitietypen te laden.';
       case 'anki_note_open_failed':
         return 'Kon de kaart niet openen in Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Notitietype';
       case 'anki_note_viewer_empty':
         return 'Deze kaart heeft geen leesbare velden.';
       case 'anki_note_viewer_open_in_anki':
         return 'Openen in Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Bestaande kaart';
       case 'anki_open_no_card':
@@ -599483,20 +598775,8 @@ extension on _StringsNl {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -599519,9 +598799,6 @@ extension on _StringsNl {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -599538,8 +598815,6 @@ extension on _StringsNl {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -599558,8 +598833,6 @@ extension on _StringsNl {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -599571,8 +598844,6 @@ extension on _StringsNl {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -599581,10 +598852,6 @@ extension on _StringsNl {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -600258,16 +599525,10 @@ extension on _StringsNl {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -606508,10 +605769,16 @@ extension on _StringsPtBr {
         return 'Sobrescrever este cartão';
       case 'anki_mined_action_view':
         return 'Ver / abrir no Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Escolha o que fazer com o cartão correspondente.';
       case 'anki_mined_card_title':
         return 'Cartão já existe no Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Registro de mineração apagado';
       case 'anki_mined_multiple_matches':
@@ -606524,12 +605791,16 @@ extension on _StringsPtBr {
         return 'Toque em Atualizar para carregar seus baralhos e tipos de nota do Anki.';
       case 'anki_note_open_failed':
         return 'Não foi possível abrir o cartão no Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Tipo de nota';
       case 'anki_note_viewer_empty':
         return 'Este cartão não tem campos legíveis.';
       case 'anki_note_viewer_open_in_anki':
         return 'Abrir no Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Cartão existente';
       case 'anki_open_no_card':
@@ -620174,20 +619445,8 @@ extension on _StringsPtBr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -620210,9 +619469,6 @@ extension on _StringsPtBr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -620229,8 +619485,6 @@ extension on _StringsPtBr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -620249,8 +619503,6 @@ extension on _StringsPtBr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -620262,8 +619514,6 @@ extension on _StringsPtBr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -620272,10 +619522,6 @@ extension on _StringsPtBr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -620949,16 +620195,10 @@ extension on _StringsPtBr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -627196,10 +626436,16 @@ extension on _StringsRu {
         return 'Перезаписать эту карточку';
       case 'anki_mined_action_view':
         return 'Просмотреть / открыть в Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Выберите действие с найденной карточкой.';
       case 'anki_mined_card_title':
         return 'Карточка уже в Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Запись о создании очищена';
       case 'anki_mined_multiple_matches':
@@ -627212,12 +626458,16 @@ extension on _StringsRu {
         return 'Нажмите «Обновить», чтобы загрузить ваши колоды и типы заметок Anki.';
       case 'anki_note_open_failed':
         return 'Не удалось открыть карточку в Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Тип заметки';
       case 'anki_note_viewer_empty':
         return 'У этой карточки нет читаемых полей.';
       case 'anki_note_viewer_open_in_anki':
         return 'Открыть в Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Существующая карточка';
       case 'anki_open_no_card':
@@ -640869,20 +640119,8 @@ extension on _StringsRu {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -640905,9 +640143,6 @@ extension on _StringsRu {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -640924,8 +640159,6 @@ extension on _StringsRu {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -640944,8 +640177,6 @@ extension on _StringsRu {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -640957,8 +640188,6 @@ extension on _StringsRu {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -640967,10 +640196,6 @@ extension on _StringsRu {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -641644,16 +640869,10 @@ extension on _StringsRu {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -647884,10 +647103,16 @@ extension on _StringsTh {
         return 'เขียนทับบัตรนี้';
       case 'anki_mined_action_view':
         return 'ดู / เปิดใน Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'เลือกสิ่งที่จะทำกับบัตรที่ตรงกัน';
       case 'anki_mined_card_title':
         return 'บัตรมีอยู่ใน Anki แล้ว';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'ล้างบันทึกการสร้างการ์ดแล้ว';
       case 'anki_mined_multiple_matches':
@@ -647900,12 +647125,16 @@ extension on _StringsTh {
         return 'แตะรีเฟรชเพื่อโหลดเด็คและชนิดโน้ต Anki ของคุณ';
       case 'anki_note_open_failed':
         return 'ไม่สามารถเปิดบัตรใน Anki ได้';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'ประเภทโน้ต';
       case 'anki_note_viewer_empty':
         return 'บัตรนี้ไม่มีฟิลด์ที่อ่านได้';
       case 'anki_note_viewer_open_in_anki':
         return 'เปิดใน Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'บัตรที่มีอยู่';
       case 'anki_open_no_card':
@@ -661524,20 +660753,8 @@ extension on _StringsTh {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -661560,9 +660777,6 @@ extension on _StringsTh {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -661579,8 +660793,6 @@ extension on _StringsTh {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -661599,8 +660811,6 @@ extension on _StringsTh {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -661612,8 +660822,6 @@ extension on _StringsTh {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -661622,10 +660830,6 @@ extension on _StringsTh {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -662299,16 +661503,10 @@ extension on _StringsTh {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -668537,10 +667735,16 @@ extension on _StringsTr {
         return 'Bu kartın üzerine yaz';
       case 'anki_mined_action_view':
         return 'Anki\'de görüntüle / aç';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Eşleşen kartla ne yapılacağını seçin.';
       case 'anki_mined_card_title':
         return 'Kart zaten Anki\'de mevcut';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Kart oluşturma kaydı temizlendi';
       case 'anki_mined_multiple_matches':
@@ -668553,12 +667757,16 @@ extension on _StringsTr {
         return 'Anki destelerinizi ve not türlerinizi yüklemek için Yenile\'ye dokunun.';
       case 'anki_note_open_failed':
         return 'Kart Anki\'de açılamadı.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Not Türü';
       case 'anki_note_viewer_empty':
         return 'Bu kartın okunabilir alanı yok.';
       case 'anki_note_viewer_open_in_anki':
         return 'Anki\'de aç';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Mevcut kart';
       case 'anki_open_no_card':
@@ -682197,20 +681405,8 @@ extension on _StringsTr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -682233,9 +681429,6 @@ extension on _StringsTr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -682252,8 +681445,6 @@ extension on _StringsTr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -682272,8 +681463,6 @@ extension on _StringsTr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -682285,8 +681474,6 @@ extension on _StringsTr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -682295,10 +681482,6 @@ extension on _StringsTr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -682972,16 +682155,10 @@ extension on _StringsTr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -689216,10 +688393,16 @@ extension on _StringsVi {
         return 'Ghi đè thẻ này';
       case 'anki_mined_action_view':
         return 'Xem / mở trong Anki';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return 'Chọn thao tác với thẻ trùng khớp.';
       case 'anki_mined_card_title':
         return 'Thẻ đã có trong Anki';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return 'Đã xóa bản ghi tạo thẻ';
       case 'anki_mined_multiple_matches':
@@ -689232,12 +688415,16 @@ extension on _StringsVi {
         return 'Nhấn Làm mới để tải các bộ thẻ và loại ghi chú Anki của bạn.';
       case 'anki_note_open_failed':
         return 'Không thể mở thẻ trong Anki.';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return 'Loại ghi chú';
       case 'anki_note_viewer_empty':
         return 'Thẻ này không có trường có thể đọc.';
       case 'anki_note_viewer_open_in_anki':
         return 'Mở trong Anki';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return 'Thẻ hiện có';
       case 'anki_open_no_card':
@@ -702865,20 +702052,8 @@ extension on _StringsVi {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -702901,9 +702076,6 @@ extension on _StringsVi {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -702920,8 +702092,6 @@ extension on _StringsVi {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -702940,8 +702110,6 @@ extension on _StringsVi {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -702953,8 +702121,6 @@ extension on _StringsVi {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -702963,10 +702129,6 @@ extension on _StringsVi {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -703640,16 +702802,10 @@ extension on _StringsVi {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -709852,10 +709008,16 @@ extension on _StringsZhCn {
         return '覆写这张卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打开';
+      case 'anki_mined_action_view_only':
+        return '查看卡片';
+      case 'anki_mined_action_view_review':
+        return '查看 / 在 Fushi 复习中打开';
       case 'anki_mined_card_subtitle':
         return '选择对这张已存在的卡片做什么。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return '卡片已在 Fushi 复习中';
       case 'anki_mined_forget_done':
         return '已清除制卡记录';
       case 'anki_mined_multiple_matches':
@@ -709868,12 +709030,16 @@ extension on _StringsZhCn {
         return '点击「刷新」加载你的 Anki 牌组与笔记类型。';
       case 'anki_note_open_failed':
         return '无法在 Anki 中打开这张卡片。';
+      case 'anki_note_open_failed_review':
+        return '无法在 Fushi 复习中打开这张卡片。';
       case 'anki_note_type':
         return '笔记类型';
       case 'anki_note_viewer_empty':
         return '这张卡片没有可读取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打开';
+      case 'anki_note_viewer_open_in_review':
+        return '在 Fushi 复习中打开';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
@@ -723347,20 +722513,8 @@ extension on _StringsZhCn {
         return '字段名';
       case 'srs_note_types_field_rename':
         return '重命名字段';
-      case 'srs_note_types_field_term_tag':
-        return '查词用';
-      case 'srs_note_types_field_unused':
-        return '没上卡面';
       case 'srs_note_types_fields':
         return '字段';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => '字段（${n}）';
-      case 'srs_note_types_fields_hint':
-        return '每条笔记要填的内容；点开字段能看到它在卡面的位置';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => '开关字段（${n}）';
-      case 'srs_note_types_flag_fields_hint':
-        return '填任意字符即开启对应的卡面样式';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -723383,9 +722537,6 @@ extension on _StringsZhCn {
         return '字段名不能包含 : { } "，也不能以 # /  开头';
       case 'srs_note_types_name_reserved':
         return '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_preview':
         return '预览';
       case 'srs_note_types_preview_empty':
@@ -723402,8 +722553,6 @@ extension on _StringsZhCn {
         return '背面';
       case 'srs_note_types_side_front':
         return '正面';
-      case 'srs_note_types_side_none':
-        return '（没有字段）';
       case 'srs_note_types_stock_basic':
         return '问答';
       case 'srs_note_types_stock_cloze':
@@ -723422,8 +722571,6 @@ extension on _StringsZhCn {
         }) => '${notes} 条笔记 · ${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_template_add':
         return '添加卡片模板';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => '背面：${fields}';
       case 'srs_note_types_template_cloze_single':
         return '填空类型只有一个卡片模板';
       case 'srs_note_types_template_delete':
@@ -723435,8 +722582,6 @@ extension on _StringsZhCn {
         return '编辑卡片模板';
       case 'srs_note_types_template_error':
         return ({required Object error}) => '模板有错误：${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => '正面：${fields}';
       case 'srs_note_types_template_last':
         return '笔记类型至少要有一个卡片模板';
       case 'srs_note_types_template_name':
@@ -723445,10 +722590,6 @@ extension on _StringsZhCn {
         return '重命名卡片模板';
       case 'srs_note_types_templates':
         return '卡片模板';
-      case 'srs_note_types_templates_hint':
-        return '每个模板生成一张卡；点进去改它的版面';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => '查词按：${name}';
       case 'srs_note_types_term_field':
         return '词条字段';
       case 'srs_note_types_term_field_hint':
@@ -724118,16 +723259,10 @@ extension on _StringsZhCn {
         return '靠右';
       case 'srs_visual_align_start':
         return '靠左';
-      case 'srs_visual_builtin_body':
-        return '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
-      case 'srs_visual_builtin_fushi_note':
-        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
-      case 'srs_visual_builtin_other_note':
-        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
-      case 'srs_visual_builtin_title':
-        return '这是内置模板，用代码写成';
       case 'srs_visual_convert_body':
         return '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
+      case 'srs_visual_convert_builtin_note':
+        return '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
       case 'srs_visual_convert_title':
         return '这个模板是用代码写的';
       case 'srs_visual_delete':
@@ -730264,10 +729399,16 @@ extension on _StringsZhHk {
         return '覆寫這張卡';
       case 'anki_mined_action_view':
         return '查看 / 在 Anki 中打開';
+      case 'anki_mined_action_view_only':
+        return 'View card';
+      case 'anki_mined_action_view_review':
+        return 'View / open in Fushi review';
       case 'anki_mined_card_subtitle':
         return '選擇對這張已存在的卡片做什麼。';
       case 'anki_mined_card_title':
         return '卡片已在 Anki 中';
+      case 'anki_mined_card_title_review':
+        return 'Card already in Fushi review';
       case 'anki_mined_forget_done':
         return '已清除制卡記錄';
       case 'anki_mined_multiple_matches':
@@ -730280,12 +729421,16 @@ extension on _StringsZhHk {
         return '點按「重新整理」載入你的 Anki 牌組與筆記類型。';
       case 'anki_note_open_failed':
         return '無法在 Anki 中打開這張卡片。';
+      case 'anki_note_open_failed_review':
+        return 'Could not open the card in Fushi review.';
       case 'anki_note_type':
         return '筆記類型';
       case 'anki_note_viewer_empty':
         return '這張卡片沒有可讀取的字段。';
       case 'anki_note_viewer_open_in_anki':
         return '在 Anki 中打開';
+      case 'anki_note_viewer_open_in_review':
+        return 'Open in Fushi review';
       case 'anki_note_viewer_title':
         return '已存在的卡片';
       case 'anki_open_no_card':
@@ -743834,20 +742979,8 @@ extension on _StringsZhHk {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
-      case 'srs_note_types_field_term_tag':
-        return 'Lookup';
-      case 'srs_note_types_field_unused':
-        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
-      case 'srs_note_types_fields_count':
-        return ({required Object n}) => 'Fields (${n})';
-      case 'srs_note_types_fields_hint':
-        return 'What each note holds; open a field to see where it shows on the card';
-      case 'srs_note_types_flag_fields':
-        return ({required Object n}) => 'Switch fields (${n})';
-      case 'srs_note_types_flag_fields_hint':
-        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -743870,9 +743003,6 @@ extension on _StringsZhHk {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
-      case 'srs_note_types_overview_counts':
-        return ({required Object fields, required Object cards}) =>
-            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -743889,8 +743019,6 @@ extension on _StringsZhHk {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
-      case 'srs_note_types_side_none':
-        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -743909,8 +743037,6 @@ extension on _StringsZhHk {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
-      case 'srs_note_types_template_back_fields':
-        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -743922,8 +743048,6 @@ extension on _StringsZhHk {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
-      case 'srs_note_types_template_front_fields':
-        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -743932,10 +743056,6 @@ extension on _StringsZhHk {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
-      case 'srs_note_types_templates_hint':
-        return 'Each template makes one card; open one to change its layout';
-      case 'srs_note_types_term_chip':
-        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -744609,16 +743729,10 @@ extension on _StringsZhHk {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
-      case 'srs_visual_builtin_body':
-        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
-      case 'srs_visual_builtin_fushi_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
-      case 'srs_visual_builtin_other_note':
-        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
-      case 'srs_visual_builtin_title':
-        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
