@@ -1,4 +1,6 @@
-/// 复习（SRS）同步的调度：什么时候、用哪个后端跑一轮 [SrsSyncEngine]。
+/// 复习（SRS）同步的调度：什么时候、用哪个后端跑一轮同步 v2（`srsSync2Round`，
+/// docs/specs/2026-10-25-srs-sync-v2-design.md）。每条已认证的同步通道就是一个存储位置（同步 + 媒体用途，
+/// 设计 §6.5 的「已登录过的网盘账号直接复用」），布局 `fushi-srs/<profileUid>/v2/`。
 ///
 /// 三个触发点，都只在复习模块开着时存在（由 `srs_app_runtime.dart` 装配）：
 /// 1. 常规同步每条通道成功后（`syncChannelPostRunHook`，与常规同步同一把互斥锁、同一个
@@ -21,17 +23,25 @@
 /// 服务器时间（报告 error = `server time unavailable`）时提示一次「当前同步后端不支持
 /// 复习数据同步」；可信时间与墙钟偏差超过 10 分钟时提示一次「系统时间不准」。
 /// 没配置任何同步后端时什么都不做。
+///
+/// 每个目录跑引擎之前先做 profile 关联（[SrsProfileLinker]，铁律 E）：profileUid 是每台设备
+/// 本机随机生成的，不关联的话两台设备各写各的 `fushi-srs/<profileUid>/`，互联 / 云盘「同步成功」
+/// 而复习数据从不互通。跑完再在本机写入者目录里发布 profile 说明文件（必须在引擎之后：引擎靠
+/// 「本机写入者目录不见了」判断自己被当作退役设备清理过，先建目录会把这个信号盖掉）。
 library;
 
 import 'dart:async';
 import 'dart:io';
 
 import 'package:fushi/utils.dart' show ErrorLogService;
-import 'package:fushi_engine/srs/srs_asset_store_directory.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
+import 'package:fushi_engine/srs/sync2/srs_folder_location.dart';
+import 'package:fushi_engine/srs/sync2/srs_location_crypto.dart';
+import 'package:fushi_engine/srs/sync2/srs_location_store.dart';
+import 'package:fushi_engine/srs/sync2/srs_sync2_round.dart';
 import 'package:fushi_engine/srs/srs_media_sync.dart';
+import 'package:fushi_engine/srs/srs_profile_link.dart';
 import 'package:fushi_engine/sync/sync_asset_store.dart';
-import 'package:fushi_srs/fushi_srs.dart';
 
 /// 两次「进入复习 tab」触发之间的最小间隔。
 const Duration kSrsSyncMinInterval = Duration(seconds: 60);
@@ -39,8 +49,11 @@ const Duration kSrsSyncMinInterval = Duration(seconds: 60);
 /// 可信时间与系统时钟的偏差超过它就提示一次。
 const int kSrsClockSkewWarnMs = 10 * 60 * 1000;
 
-/// [SrsSyncEngine] 报告「后端拿不到服务器时间」时的错误串（fushi_srs 的契约）。
+/// 后端拿不到服务器时间时的错误串（v2 不依赖服务器时间同步，保留给只想校时的调用方识别）。
 const String kSrsSyncServerTimeUnavailable = 'server time unavailable';
+
+/// 位置上的数据来自更新版本、本机读不了（设计 §8：停写并提示升级，不覆盖任何一方）。
+const String kSrsSyncNeedsUpgrade = 'srs sync data needs a newer app';
 
 /// 后端所指同步目录的稳定身份暂时拿不到（例如云盘账户还没认出来）：这一轮不同步它。
 const String kSrsSyncDirectoryIdentityUnavailable =
@@ -49,31 +62,44 @@ const String kSrsSyncDirectoryIdentityUnavailable =
 /// 本机的 SRS 副本此刻打不开（模块关着 / 还在打开 / 调度器已卸下）：这一轮没同步。
 const String kSrsSyncStoreUnavailable = 'srs store unavailable';
 
+/// 升级到同步 v2 后还没确认过首次同步（设计 §13 第 5 条：首次 v2 同步弹窗确认一次，说明「并入、不覆盖」）。
+const String kSrsSyncAwaitingConfirm = 'srs first v2 sync not confirmed';
+
 /// 已配对设备往本机 host 的 SRS 目录写入后，等这么久没有新写入再跑一次本机目录。
 /// 一轮客户端同步会连写探针 / 批次 / cursor 几个文件，去抖把它们并成一次。
 const Duration kSrsHostWriteDebounce = Duration(seconds: 3);
 
-/// 一次 SRS 同步（测试注入假实现）。[directoryKey] 是 [backend] 所指同步目录的稳定身份。
+/// 一次 SRS 同步（测试注入假实现）。[directoryKey] 是 [backend] 所指同步目录的稳定身份；[locationKey] = 本机为
+/// 这个位置记的密钥（调度器一律传进来，注入的实现与生产实现走同一条加密路径）。
 typedef SrsSyncRunner =
-    Future<SrsSyncReport> Function(
+    Future<SrsSync2Report> Function(
       SyncAssetStore backend,
       SrsDbStore store,
-      String directoryKey,
-    );
+      String directoryKey, {
+      SrsLocationKey? locationKey,
+    });
 
-/// 生产实现：现有同步后端上的 SRS 目录 + 同步引擎跑一轮。
-Future<SrsSyncReport> srsDefaultSyncRunner(
+/// 生产实现：现有同步后端上的 v2 集合根（`fushi-srs/<profileUid>/v2/`）跑一轮同步 v2。[directoryKey] 就是
+/// 这个位置的稳定身份（本机按它记每个位置传到了哪）。
+Future<SrsSync2Report> srsDefaultSyncRunner(
   SyncAssetStore backend,
   SrsDbStore store,
-  String directoryKey,
-) => SrsSyncEngine(
-  directory: SrsAssetStoreDirectory(
-    store: backend,
-    profileUid: store.profileUid,
-  ),
-  directoryKey: directoryKey,
-  replica: store,
-).syncOnce();
+  String directoryKey, {
+  SrsLocationKey? locationKey,
+}) async {
+  final SrsSync2Report r = await srsSync2Round(
+    host: store,
+    location: SrsAssetLocationStore(
+      store: backend,
+      profileUid: store.profileUid,
+    ),
+    locationId: directoryKey,
+    nowMs: () => store.now().$1,
+    key: locationKey,
+  );
+  if (r.needsUpgrade) r.error = kSrsSyncNeedsUpgrade;
+  return r;
+}
 
 /// 本机直接读写的同步目录：本机作为互联 host 时，别的设备经互联写进来的就是这块目录，
 /// 本机自己的复习数据也要在这里发布、从这里读别人的（它不是任何一条同步通道）。
@@ -84,20 +110,28 @@ class SrsLocalDirectory {
   final SyncAssetStore store;
 }
 
-/// 一轮媒体同步（测试注入假实现）。
+/// 一轮媒体同步（测试注入假实现）。[cipher] = 位置开了加密时的媒体封装（调度器一律传进来）。
 typedef SrsMediaSyncRunner =
     Future<SrsMediaSyncReport> Function(
       SyncAssetStore backend,
       SrsDbStore store,
-      Directory mediaRoot,
-    );
+      Directory mediaRoot, {
+      SrsMediaCipher? cipher,
+    });
 
 /// 生产实现：见 packages/fushi_engine/lib/srs/srs_media_sync.dart。
 Future<SrsMediaSyncReport> srsDefaultMediaSyncRunner(
   SyncAssetStore backend,
   SrsDbStore store,
-  Directory mediaRoot,
-) => srsSyncMedia(backend: backend, store: store, mediaRoot: mediaRoot);
+  Directory mediaRoot, {
+  SrsMediaCipher? cipher,
+}) => srsSyncMedia(
+  cipher: cipher,
+  location: SrsAssetLocationStore(store: backend, profileUid: store.profileUid),
+  store: store,
+  mediaRoot: mediaRoot,
+  legacy: srsLegacyMediaReader(backend, store.profileUid),
+);
 
 /// 「对所有已认证通道跑一次」的入口（生产：`runOnAuthenticatedSyncChannels`）。
 /// 返回跑成功的通道数与抛错通道的异常。
@@ -127,6 +161,28 @@ class SrsSyncNowResult {
   bool get unconfigured => ran == 0 && errors.isEmpty;
 }
 
+/// 一个位置最近一轮的加密状态。
+class SrsLocationCryptoState {
+  const SrsLocationCryptoState({this.kdf, this.encrypted = false, this.error});
+
+  /// 位置开了加密时它的参数（输入口令时用同一份盐派生）。
+  final SrsKdf? kdf;
+
+  /// 这一轮用密钥收发了。
+  final bool encrypted;
+
+  /// [kSrsLocationCryptoErrors] 之一，或 null。
+  final String? error;
+}
+
+/// 位置的加密握手没过、这一轮不同步该位置的原因（同步与历史页按它提示用户）。
+const Set<String> kSrsLocationCryptoErrors = <String>{
+  kSrsSync2NeedsKey,
+  kSrsSync2WrongKey,
+  kSrsSync2EncryptionMissing,
+  kSrsSync2BadKdf,
+};
+
 /// 只提示一次的通知类别。
 enum SrsSyncNotice {
   /// 当前同步后端拿不到服务器时间，复习数据没法同步。
@@ -134,6 +190,13 @@ enum SrsSyncNotice {
 
   /// 系统时间与可信时间偏差超过 10 分钟。
   clockSkew,
+
+  /// 同步目录里有另一台设备的同一个 profile，但两边都有用户笔记，没法自动关联
+  /// （[SrsSyncScheduler.lastUnlinkedProfile] 是对方的 profile 名）。
+  profileNotLinked,
+
+  /// 升级到同步 v2 后首次同步还没确认（[kSrsSyncAwaitingConfirm]），复习数据暂不同步。
+  awaitingConfirm,
 }
 
 class SrsSyncScheduler {
@@ -144,18 +207,33 @@ class SrsSyncScheduler {
     required void Function() onDataChanged,
     required void Function(SrsSyncNotice notice) onNotice,
     Future<List<SrsLocalDirectory>> Function()? localDirectories,
+    Future<List<SrsFolderLocation>> Function()? folderLocations,
+    SrsProfileLinker? profileLinker,
     SrsSyncRunner runner = srsDefaultSyncRunner,
     Future<Directory?> Function()? readMediaRoot,
     SrsMediaSyncRunner mediaRunner = srsDefaultMediaSyncRunner,
     DateTime Function()? clock,
     Duration hostWriteDebounce = kSrsHostWriteDebounce,
-  }) : _hostWriteDebounce = hostWriteDebounce,
+    bool Function()? canRun,
+    bool Function()? firstSyncConfirmed,
+    void Function()? onLocalDirectoryPublished,
+    SrsLocationKey? Function(String locationId)? locationKey,
+    Future<void> Function(String locationId, SrsLocationKey key)?
+    onEncryptionEnabled,
+  }) : _profileLinker = profileLinker,
+       _locationKey = locationKey,
+       _onEncryptionEnabled = onEncryptionEnabled,
+       _onLocalDirectoryPublished = onLocalDirectoryPublished,
+       _firstSyncConfirmed = firstSyncConfirmed ?? _alwaysRun,
+       _canRun = canRun ?? _alwaysRun,
+       _hostWriteDebounce = hostWriteDebounce,
        _readMediaRoot = readMediaRoot,
        _mediaRunner = mediaRunner,
        _readStore = readStore,
        _channels = channels,
        _directoryKeyOf = directoryKeyOf,
        _localDirectories = localDirectories,
+       _folderLocations = folderLocations,
        _onDataChanged = onDataChanged,
        _onNotice = onNotice,
        _runner = runner,
@@ -164,12 +242,17 @@ class SrsSyncScheduler {
   final Future<SrsDbStore?> Function() _readStore;
   final SrsChannelRunner _channels;
   final Future<String?> Function(SyncAssetStore backend) _directoryKeyOf;
+  final SrsProfileLinker? _profileLinker;
   final Duration _hostWriteDebounce;
   Timer? _hostWriteTimer;
 
   /// 坏文件只记一次日志（每轮都会再跳过同一个文件）。
   final Set<String> _loggedSkipped = <String>{};
   final Future<List<SrsLocalDirectory>> Function()? _localDirectories;
+  final Future<List<SrsFolderLocation>> Function()? _folderLocations;
+
+  /// 每个文件夹位置最近一次的错误（同步与历史页显示；成功一轮即清掉）。
+  final Map<String, Object> folderErrors = <String, Object>{};
   final void Function() _onDataChanged;
   final void Function(SrsSyncNotice notice) _onNotice;
   final SrsSyncRunner _runner;
@@ -179,7 +262,75 @@ class SrsSyncScheduler {
 
   final Set<SrsSyncNotice> _noticed = <SrsSyncNotice>{};
   DateTime? _lastThrottledAt;
+
+  /// 最近一次 [SrsSyncNotice.profileNotLinked] 说的那个对方 profile 名。
+  String? lastUnlinkedProfile;
   bool _disposed = false;
+
+  /// 底层库此刻能不能用（app 侧 = 库已打开）。关库（备份恢复 / 数据根迁移 / 退出）
+  /// 期间为 false：新一轮不开、在跑的一轮在下一个检查点收手；重开后自动恢复。
+  final bool Function() _canRun;
+
+  static bool _alwaysRun() => true;
+
+  /// 首次 v2 同步是否已确认（没确认前一轮也不跑，见 [kSrsSyncAwaitingConfirm]）。
+  final bool Function() _firstSyncConfirmed;
+
+  /// 本机目录（本机作为互联 host 时）的一轮传上了新段：app 据此唤醒已配对设备的长轮询。
+  final void Function()? _onLocalDirectoryPublished;
+
+  /// 每个位置的本机密钥（设计 §9：每个位置一个可选的端到端加密开关；见 srs_location_crypto.dart）。
+  final SrsLocationKey? Function(String locationId)? _locationKey;
+
+  /// 本机刚开的加密已写进位置的 `meta.json`：调用方把密钥标成已生效。
+  final Future<void> Function(String locationId, SrsLocationKey key)?
+  _onEncryptionEnabled;
+
+  /// 各位置最近一轮看到的加密状态（同步与历史页显示「已加密 / 需要口令 / 口令不对」）。
+  final Map<String, SrsLocationCryptoState> locationCrypto =
+      <String, SrsLocationCryptoState>{};
+
+  /// 已经上报过摘要不一致的设备（每次启动每台只报一次）。
+  final Set<String> _digestReported = <String>{};
+
+  /// 设计 §4.5：两台设备在同一版本向量下派生状态摘要不同 = 确定性 bug，自动上报日志（不让用户处理）。
+  Future<void> _reportDigestMismatch(SrsDbStore store) async {
+    try {
+      final Map<String, Object?> status = await store.sync2Status();
+      for (final Object? d
+          in (status['devices'] as List?) ?? const <Object?>[]) {
+        if (d is! Map || d['digestMismatch'] != true) continue;
+        final String id = d['device'] as String? ?? '';
+        if (!_digestReported.add(id)) continue;
+        ErrorLogService.instance.log(
+          'SrsSync2.digestMismatch',
+          StateError(
+            'SRS state digest differs from device $id at the same version vector',
+          ),
+          StackTrace.current,
+        );
+      }
+    } catch (e, stack) {
+      ErrorLogService.instance.log('SrsSyncScheduler.digest', e, stack);
+    }
+  }
+
+  /// 记下一轮的加密结论；本机刚开的加密生效了就交给调用方保存。
+  Future<void> _noteCrypto(String locationId, SrsSync2Report? r) async {
+    if (r == null) return;
+    locationCrypto[locationId] = SrsLocationCryptoState(
+      kdf: r.kdf,
+      encrypted: r.encrypted,
+      error: kSrsLocationCryptoErrors.contains(r.error) ? r.error : null,
+    );
+    final SrsLocationKey? k = _locationKey?.call(locationId);
+    if (r.encryptionEnabled && k != null) {
+      await _onEncryptionEnabled?.call(locationId, k.enabled());
+    }
+  }
+
+  /// 调度器已卸下，或库正关着：这一轮不该开始 / 不该继续。
+  bool get _halted => _disposed || !_canRun();
 
   /// 已经提示过的通知（测试读）。
   Set<SrsSyncNotice> get noticed => Set<SrsSyncNotice>.unmodifiable(_noticed);
@@ -188,6 +339,18 @@ class SrsSyncScheduler {
     _disposed = true;
     _hostWriteTimer?.cancel();
     _hostWriteTimer = null;
+  }
+
+  /// 关库前调用：撤掉待触发的本机目录同步，等在跑（及已排队）的一轮结束。
+  ///
+  /// 调用方先让 [canRun] 变 false（app 侧先把库标成未初始化），排队中的轮次一进来就
+  /// 收手；在跑的一轮在下一个检查点收手，并且它此刻还持着 store 独占区——关库若不等
+  /// 它，就会在半截同步上把连接关掉（反馈 OMWOurRQKb 日志：`SrsDbStore._loadLocal`
+  /// 「connection was closed」）。
+  Future<void> quiesce() async {
+    _hostWriteTimer?.cancel();
+    _hostWriteTimer = null;
+    await _tail;
   }
 
   /// 已配对设备往本机 host 的 SRS 目录写了文件：去抖后只跑本机目录（见文件头第 4 条）。
@@ -213,49 +376,86 @@ class SrsSyncScheduler {
   /// 用一个已认证后端跑一轮（常规同步的通道后置步骤直接调它）。store 打不开（或调度器已卸下）
   /// 时这一轮没跑，报告带 [kSrsSyncStoreUnavailable]——「立即同步」据此如实报未同步，不算成功。
   /// [directoryKey] 缺省时按后端算（[directoryKeyOf]）。
-  Future<SrsSyncReport> syncWithBackend(
+  Future<SrsSync2Report> syncWithBackend(
     SyncAssetStore backend, {
     String? directoryKey,
   }) => _serially(() => _syncWithBackend(backend, directoryKey));
 
-  Future<SrsSyncReport> _syncWithBackend(
+  Future<SrsSync2Report> _syncWithBackend(
     SyncAssetStore backend,
     String? directoryKey,
   ) async {
-    if (_disposed) return SrsSyncReport()..error = kSrsSyncStoreUnavailable;
-    final SrsDbStore? store = await _readStore();
-    if (store == null || _disposed) {
-      return SrsSyncReport()..error = kSrsSyncStoreUnavailable;
+    if (_halted) return SrsSync2Report()..error = kSrsSyncStoreUnavailable;
+    if (!_firstSyncConfirmed()) {
+      _noticeOnce(SrsSyncNotice.awaitingConfirm);
+      return SrsSync2Report()..error = kSrsSyncAwaitingConfirm;
+    }
+    SrsDbStore? store = await _readStore();
+    if (store == null || _halted) {
+      return SrsSync2Report()..error = kSrsSyncStoreUnavailable;
     }
     final String? key = directoryKey ?? await _directoryKeyOf(backend);
     if (key == null) {
-      // 同一个物理目录换了个身份就会被当成新目录（重新起步、可能全量重发）：宁可这轮不同步。
-      return SrsSyncReport()..error = kSrsSyncDirectoryIdentityUnavailable;
+      // 位置身份拿不到：上传进度按身份记，换个身份只是多传一遍（段名唯一、内容不变），但宁可这轮不同步。
+      return SrsSync2Report()..error = kSrsSyncDirectoryIdentityUnavailable;
     }
-    final SrsSyncReport report = await _runner(backend, store, key);
-    for (final String f in report.skippedFiles) {
+    final SrsProfileLinker? linker = _profileLinker;
+    bool adopted = false;
+    if (linker != null) {
+      final SrsProfileLinkOutcome link = await linker.link(backend, store);
+      adopted = !identical(link.store, store);
+      store = link.store;
+      final String? unlinked = link.unlinkedProfileName;
+      if (unlinked != null) {
+        lastUnlinkedProfile = unlinked;
+        _noticeOnce(SrsSyncNotice.profileNotLinked);
+      }
+      if (_halted) return SrsSync2Report()..error = kSrsSyncStoreUnavailable;
+    }
+    // 引擎在一轮开头写探针取服务器时间，整轮（上传 / 拉取 / 快照，大库能跑几十分钟）跑完才回来：
+    // 校时按开跑那一刻的单调时钟算，误差只剩探针前的一次列目录，而不是整轮耗时。
+    // 放在 profile 关联之后：关联可能换成另一个 store，校时落在真正跑同步的那个上。
+    final int probedAtMono = store.trustedClock.monotonicNowMs();
+    final SrsLocationKey? locKey = _locationKey?.call(key);
+    final SrsSync2Report report = await _runner(
+      backend,
+      store,
+      key,
+      locationKey: locKey,
+    );
+    await _noteCrypto(key, report);
+    if (linker != null && report.error == null && !_halted) {
+      try {
+        await linker.publish(backend, store, key);
+      } catch (e, stack) {
+        // 说明文件只用来让别的设备认出同一个 profile，写失败下一轮再写。
+        ErrorLogService.instance.log('SrsSyncScheduler.profileInfo', e, stack);
+      }
+    }
+    for (final String f in report.errors) {
       if (_loggedSkipped.add('$key|$f')) {
         ErrorLogService.instance.log(
           'SrsSyncScheduler.skippedFile',
-          StateError('SRS sync skipped a malformed file in $key: $f'),
+          StateError('SRS sync skipped a segment in $key: $f'),
           StackTrace.current,
         );
       }
     }
     final int? serverTime = report.serverTimeMs;
     if (serverTime != null) {
-      await store.anchorTime(serverTime);
+      await store.anchorTime(serverTime, atMonotonicMs: probedAtMono);
       final int? skew = store.trustedClock.wallSkewMs;
       if (skew != null && skew.abs() > kSrsClockSkewWarnMs) {
         _noticeOnce(SrsSyncNotice.clockSkew);
       }
     }
-    if (report.error == kSrsSyncServerTimeUnavailable) {
+    if (report.error == kSrsSyncNeedsUpgrade) {
       _noticeOnce(SrsSyncNotice.backendUnsupported);
     }
+    if (report.error == null && !_halted) await _reportDigestMismatch(store);
     bool mediaChanged = false;
     final Future<Directory?> Function()? readMediaRoot = _readMediaRoot;
-    if (report.error == null && readMediaRoot != null && !_disposed) {
+    if (report.error == null && readMediaRoot != null && !_halted) {
       // 媒体跟在事件之后：先拿到引用它们的笔记，再按内容哈希补齐两边缺的文件。
       // 媒体失败只记日志，不影响复习数据本身的同步结果。
       try {
@@ -265,6 +465,9 @@ class SrsSyncScheduler {
             backend,
             store,
             root,
+            cipher: report.encrypted && locKey != null
+                ? SrsMediaCipher(store, locKey.keyHex)
+                : null,
           );
           mediaChanged = media.downloaded > 0;
         }
@@ -272,9 +475,10 @@ class SrsSyncScheduler {
         ErrorLogService.instance.log('SrsSyncScheduler.media', e, stack);
       }
     }
-    if (report.applied > 0 ||
-        report.published > 0 ||
-        report.reincarnated ||
+    if (adopted ||
+        report.changed ||
+        report.applied > 0 ||
+        report.fork ||
         mediaChanged) {
       _onDataChanged();
     }
@@ -284,7 +488,7 @@ class SrsSyncScheduler {
   /// 对所有已认证通道、以及本机直接读写的目录（本机作为互联 host 时）各跑一轮（不节流）。
   /// 通道抛错与报告里带回错误的目录都记进 [SrsSyncNowResult.errors]，不算同步成功。
   Future<SrsSyncNowResult> syncNow() async {
-    if (_disposed) return const SrsSyncNowResult(ran: 0);
+    if (_halted) return const SrsSyncNowResult(ran: 0);
     int reportFailures = 0;
     final List<Object> errors = <Object>[];
     final ({int ran, List<Object> errors}) channels = await _channels((
@@ -299,28 +503,81 @@ class SrsSyncScheduler {
     errors.addAll(channels.errors);
     final SrsSyncNowResult local = await syncLocalDirectories();
     errors.addAll(local.errors);
+    final SrsSyncNowResult folders = await syncFolderLocations();
+    errors.addAll(folders.errors);
     return SrsSyncNowResult(
-      ran: channels.ran - reportFailures + local.ran,
+      ran: channels.ran - reportFailures + local.ran + folders.ran,
       errors: errors,
     );
   }
 
+  /// 跑用户加的文件夹存储位置（设计 §6.5：U 盘 / NAS / 被别的同步工具同步的目录）。文件夹此刻不在
+  /// （U 盘没插）只记进 [folderErrors]，不算这轮「立即同步」失败——它是可选的冗余副本。
+  Future<SrsSyncNowResult> syncFolderLocations() => _serially(() async {
+    final Future<List<SrsFolderLocation>> Function()? read = _folderLocations;
+    if (read == null || _halted || !_firstSyncConfirmed()) {
+      return const SrsSyncNowResult(ran: 0);
+    }
+    final SrsDbStore? store = await _readStore();
+    if (store == null || _halted) return const SrsSyncNowResult(ran: 0);
+    final Directory? mediaRoot = await _readMediaRoot?.call();
+    int ran = 0;
+    bool changed = false;
+    for (final SrsFolderLocation l in await read()) {
+      if (l.idle || _halted) continue;
+      try {
+        final SrsFolderSyncReport r = await srsSyncFolderLocation(
+          location: l,
+          store: store,
+          mediaRoot: mediaRoot,
+          key: _locationKey?.call(l.locationId),
+        );
+        await _noteCrypto(l.locationId, r.crypto);
+        // 握手没过但不是口令类问题（meta.json 读不到 / 位置来自更新版本）：如实记成这个位置没同步成。
+        // 口令类问题由 [locationCrypto] 显示（需要口令 / 口令不对 / 加密设置不见了）。
+        final String? error = (r.crypto?.needsUpgrade ?? false)
+            ? kSrsSyncNeedsUpgrade
+            : r.crypto?.error;
+        if (error != null && !kSrsLocationCryptoErrors.contains(error)) {
+          folderErrors[l.id] = SrsSyncReportError(error);
+          continue;
+        }
+        folderErrors.remove(l.id);
+        ran++;
+        final SrsSync2Report? ops = r.ops;
+        if (ops != null && (ops.changed || ops.applied > 0 || ops.fork)) {
+          changed = true;
+        }
+        if ((r.media?.downloaded ?? 0) > 0) changed = true;
+      } catch (e, stack) {
+        folderErrors[l.id] = e;
+        if (e is! FileSystemException) {
+          ErrorLogService.instance.log('SrsSyncScheduler.folder', e, stack);
+        }
+      }
+    }
+    if (changed) _onDataChanged();
+    return SrsSyncNowResult(ran: ran);
+  });
+
   /// 只跑本机直接读写的目录（本机作为互联 host 时）。
   Future<SrsSyncNowResult> syncLocalDirectories() async {
     final Future<List<SrsLocalDirectory>> Function()? local = _localDirectories;
-    if (local == null || _disposed) return const SrsSyncNowResult(ran: 0);
+    if (local == null || _halted) return const SrsSyncNowResult(ran: 0);
     int ran = 0;
     final List<Object> errors = <Object>[];
     for (final SrsLocalDirectory d in await local()) {
       try {
-        final String? error = (await syncWithBackend(
+        final SrsSync2Report report = await syncWithBackend(
           d.store,
           directoryKey: d.directoryKey,
-        )).error;
+        );
+        final String? error = report.error;
         if (error != null) {
           errors.add(SrsSyncReportError(error));
         } else {
           ran++;
+          if (report.uploaded > 0) _onLocalDirectoryPublished?.call();
         }
       } catch (e, stack) {
         errors.add(e);

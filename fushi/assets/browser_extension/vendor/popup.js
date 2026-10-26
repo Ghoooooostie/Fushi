@@ -295,6 +295,78 @@ function applySrsStatusBadge(badge, status) {
     setInlineButtonTip(badge, String(status.tooltip || status.dueLabel || ''));
 }
 
+// 复习词状态的小批合并（srs_followup K）：一轮 IntersectionObserver 回调里进入可见 /
+// 预取范围的词条是同步逐个 start 的，它们的 fetchState 在同一个微任务前排进队列，
+// 微任务里合成一次 `srsTermStatusBatch`（{terms:[{expression,reading}]} →
+// {statuses:[null|{...}]}，等长同序）。只合并「已经被调度起跑」的词条：没进可见范围
+// 的隐藏词条根本没有 fetchState 调用，延迟加载不变；去重 / epoch / 元素版本检查仍由
+// scheduleEntryStateCheck 负责（同 key 在途请求共用一个 promise，不会重复入队）。
+// 只有一个词时直接走单条 `srsTermStatus`（同样一次往返）。批量回包不是等长数组
+// （老宿主没有这根桥 / 宿主出错）→ 本批退回逐条，本次渲染内不再试批量。
+const SRS_STATUS_BATCH_MAX = 32;
+let srsStatusBatchQueue = [];
+let srsStatusBatchScheduled = false;
+let srsStatusBatchUnsupported = false;
+
+function fetchSrsTermStatusSingle(bridge, term) {
+    return bridge.callHandler('srsTermStatus', term);
+}
+
+function fetchSrsTermStatusBatched(bridge, expression, reading) {
+    const term = { expression: expression || '', reading: reading || '' };
+    if (srsStatusBatchUnsupported) return fetchSrsTermStatusSingle(bridge, term);
+    return new Promise((resolve, reject) => {
+        srsStatusBatchQueue.push({ bridge, term, resolve, reject });
+        if (srsStatusBatchScheduled) return;
+        srsStatusBatchScheduled = true;
+        Promise.resolve().then(flushSrsStatusBatchQueue);
+    });
+}
+
+function flushSrsStatusBatchQueue() {
+    srsStatusBatchScheduled = false;
+    const queue = srsStatusBatchQueue;
+    srsStatusBatchQueue = [];
+    for (let i = 0; i < queue.length; i += SRS_STATUS_BATCH_MAX) {
+        runSrsStatusBatch(queue.slice(i, i + SRS_STATUS_BATCH_MAX));
+    }
+}
+
+function settleSrsStatusSingles(items) {
+    for (const item of items) {
+        let pending;
+        try {
+            pending = Promise.resolve(fetchSrsTermStatusSingle(item.bridge, item.term));
+        } catch (error) {
+            pending = Promise.reject(error);
+        }
+        pending.then(item.resolve, item.reject);
+    }
+}
+
+async function runSrsStatusBatch(items) {
+    if (items.length === 1 || srsStatusBatchUnsupported) {
+        settleSrsStatusSingles(items);
+        return;
+    }
+    let reply = null;
+    try {
+        reply = await items[0].bridge.callHandler('srsTermStatusBatch', {
+            terms: items.map((item) => item.term),
+        });
+    } catch (_) {
+        reply = null;
+    }
+    const statuses = reply && typeof reply === 'object' && Array.isArray(reply.statuses) &&
+        reply.statuses.length === items.length ? reply.statuses : null;
+    if (!statuses) {
+        srsStatusBatchUnsupported = true;
+        settleSrsStatusSingles(items);
+        return;
+    }
+    items.forEach((item, index) => item.resolve(statuses[index] ?? null));
+}
+
 function createSrsStatusBadge(expression, reading) {
     if (window.__fushiSrsEnabled === false) return null;
     const bridge = window.flutter_inappwebview;
@@ -320,8 +392,9 @@ function createSrsStatusBadge(expression, reading) {
             }
         },
     });
-    const fetchStatus = () => bridge.callHandler(
-        'srsTermStatus', { expression: expression || '', reading: reading || '' });
+    // 单条刷新（制卡 / 改卡后）走单条桥，立即发出、不等批次。
+    const fetchStatus = () => fetchSrsTermStatusSingle(
+        bridge, { expression: expression || '', reading: reading || '' });
     badge.__fushiRefreshSrsStatus = async () => {
         try {
             invalidateEntryStateCheck(badge);
@@ -334,10 +407,120 @@ function createSrsStatusBadge(expression, reading) {
     scheduleEntryStateCheck(
         badge,
         `srs\u0000${mineEntryKey(expression, reading)}`,
-        fetchStatus,
+        () => fetchSrsTermStatusBatched(bridge, expression, reading),
         (status) => applySrsStatusBadge(badge, status),
     );
     return badge;
+}
+
+// 「我库里的例句」（作品图谱 L4）：这个词在用户自己的书 / 字幕 / 歌词 / 游戏台词里出现过的
+// 句子，按模块分组，点一条回到出处。
+//
+// 数据全在宿主：librarySentences 桥回 null（没有 / 关着 / 宿主不支持）或
+// {title, groups: [{kind, label, total, items: [{text, hl: [[start, len]], source, ref}]}]}。
+// 文案（title / label / source）由宿主本地化好再下发，本文件不带任何语言串；ref 是宿主给的
+// 不透明定位，点击时原样交回 librarySentenceOpen。
+// 开关：宿主注入 window.__fushiLibrarySentencesEnabled（设置 → 查词 →「我库里的例句」）。
+// **false 时既不渲染也不发桥调用**。浏览器扩展没有注入通道 → undefined → 照常问桥，扩展
+// shim 对未知桥回 null，区块就不出现（例句索引只在 app 本机，扩展暂不支持）。
+// 与复习标记同一套懒查：进入视口预取边距才问，同词并发共用一个请求。
+function applyLibrarySentences(section, data) {
+    section.replaceChildren();
+    const groups = data && typeof data === 'object' && Array.isArray(data.groups)
+        ? data.groups.filter((g) => g && Array.isArray(g.items) && g.items.length > 0)
+        : [];
+    if (groups.length === 0) {
+        section.classList.add('library-sentences-hidden');
+        return;
+    }
+    const bridge = window.flutter_inappwebview;
+    section.appendChild(el('div', {
+        className: 'library-sentences-title',
+        textContent: String(data.title || ''),
+    }));
+    for (const group of groups) {
+        const groupDiv = el('div', { className: 'library-sentences-group' });
+        const label = String(group.label || '');
+        if (label) {
+            groupDiv.appendChild(el('div', {
+                className: 'library-sentences-group-label',
+                textContent: label,
+            }));
+        }
+        for (const item of group.items) {
+            const text = String(item.text || '');
+            const row = el('button', {
+                className: 'library-sentence',
+                type: 'button',
+                onclick: async (event) => {
+                    event.stopPropagation();
+                    if (!bridge || typeof bridge.callHandler !== 'function') return;
+                    if (row.dataset.busy === '1') return;
+                    row.dataset.busy = '1';
+                    try {
+                        await bridge.callHandler('librarySentenceOpen', item.ref || {});
+                    } catch (e) {
+                        console.error('librarySentenceOpen failed', e);
+                    } finally {
+                        row.dataset.busy = '';
+                    }
+                },
+            });
+            const textSpan = el('span', { className: 'library-sentence-text' });
+            const spans = Array.isArray(item.hl)
+                ? item.hl
+                    .filter((h) => Array.isArray(h) && h.length === 2)
+                    .map((h) => [Number(h[0]) || 0, Number(h[1]) || 0])
+                    .sort((a, b) => a[0] - b[0])
+                : [];
+            let at = 0;
+            for (const [start, len] of spans) {
+                if (start < at || len <= 0 || start + len > text.length) continue;
+                if (start > at) textSpan.appendChild(document.createTextNode(text.slice(at, start)));
+                textSpan.appendChild(el('mark', {
+                    className: 'library-sentence-hl',
+                    textContent: text.slice(start, start + len),
+                }));
+                at = start + len;
+            }
+            if (at < text.length) textSpan.appendChild(document.createTextNode(text.slice(at)));
+            row.appendChild(textSpan);
+            const source = String(item.source || '');
+            if (source) {
+                row.appendChild(el('span', {
+                    className: 'library-sentence-source',
+                    textContent: source,
+                }));
+            }
+            groupDiv.appendChild(row);
+        }
+        section.appendChild(groupDiv);
+    }
+    section.classList.remove('library-sentences-hidden');
+    // 进场：下一帧摘掉 entering，透明度 / 位移过渡到静息（减弱动态效果时不挂 entering）。
+    if (!__fushiPopupReducedMotion()) {
+        section.classList.add('library-sentences-entering');
+        requestAnimationFrame(() => requestAnimationFrame(
+            () => section.classList.remove('library-sentences-entering')));
+    }
+}
+
+function createLibrarySentencesSection(expression, reading) {
+    if (window.__fushiLibrarySentencesEnabled === false) return null;
+    const bridge = window.flutter_inappwebview;
+    if (!bridge || typeof bridge.callHandler !== 'function') return null;
+    if (!expression) return null;
+    const section = el('div', {
+        className: 'library-sentences library-sentences-hidden',
+    });
+    scheduleEntryStateCheck(
+        section,
+        `library\u0000${mineEntryKey(expression, reading)}`,
+        () => bridge.callHandler(
+            'librarySentences', { expression: expression || '', reading: reading || '' }),
+        (data) => applyLibrarySentences(section, data),
+    );
+    return section;
 }
 
 // BUG-1833 follow-up: favorite/Anki state is decoration for each result header,
@@ -365,6 +548,8 @@ function resetEntryStateChecks() {
     entryStateCheckJobs = new WeakMap();
     entryStateCheckRuns = new WeakMap();
     entryStateCheckPromises.clear();
+    // 新一轮渲染重新试批量（上一轮宿主出错不该让整个 WebView 生命期都退回逐条）。
+    srsStatusBatchUnsupported = false;
 }
 
 function invalidateEntryStateCheck(anchor) {
@@ -483,9 +668,41 @@ function parseMineResult(reply) {
             message,
             duplicate: reply.duplicate === true,
             queued: reply.queued === true,
+            // BUG-3652 续：宿主发现发起制卡的弹窗已不在屏上，已自己 toast 过这次失败
+            // （MineFailureNotice.settle）。这里就不能再说第二遍。
+            hostReported: reply.hostReported === true,
         };
     }
     return { ankiConnect: reply === true, noteId: null, message: '', duplicate: false };
+}
+
+// BUG-3652 续：制卡失败的原因**恰好说一次**。
+//
+// 宿主把原因随回包带来（MinePopupResult.message），失败时不另弹 toast——否则同一次失败
+// 报两遍。但回包到达时，发起制卡的那颗按钮可能已经不在页面上了：同一个弹窗里换了词、
+// 原地跳转、热槽复用重渲染（renderPopup 清空 #entries-container）。这时把提示锚到一颗
+// 脱离文档的按钮上，要么画在错的地方、要么根本看不见，用户就什么都没收到。
+//
+//   * hostReported —— 宿主已经判定弹窗不在并 toast 过了，什么都不做；
+//   * 按钮还在页面上 —— 就地说（showInlineHint）；
+//   * 按钮已被摘掉 —— 不画，交回宿主（mineFailureUnseen）由它 toast 一次。
+function reportMineFailure(button, result) {
+    if (result && result.hostReported) return;
+    const message = (result && result.message) || window.i18nMineFailed || '制卡失败';
+    // 没有 isConnected 的老引擎按「还在页面上」处理（与改动前同样就地说）。
+    if (button.isConnected !== false) {
+        showInlineHint(button, message);
+        return;
+    }
+    try {
+        const pending = window.flutter_inappwebview.callHandler('mineFailureUnseen', {
+            message,
+            duplicate: !!(result && result.duplicate === true),
+        });
+        if (pending && typeof pending.catch === 'function') pending.catch(() => {});
+    } catch (e) {
+        console.error('mine failure: mineFailureUnseen failed', e);
+    }
 }
 
 // Records the just-mined word as the editable "latest" card when the backend
@@ -821,6 +1038,32 @@ function openExternalLink(url) {
 /** 当前钉住的那枚 .deinflection-tag；null = 未钉住（hover 预览态或已收起）。 */
 let _grammarPinnedAnchor = null;
 
+// BUG-3667：浏览器扩展把弹窗画在网页的 shadow root 里，浮层挂在 shadow root 顶层
+// （__fushiOverlayParent），**不是** #entries-container 的后代；而主题变量（--surface-
+// container-high / --outline-variant / --text-color …）只落在 #entries-container 上。
+// 语法说明浮层于是拿不到底色和描边：点「被动形」这类变形标签，说明文字直接叠在词典
+// 正文上读不了。与「选择音频源」菜单（applyAudioMenuTheme）同一修法：每次显示前从弹窗
+// 容器把浮层用到的变量与明暗抄过来。app 内 / app 外整窗 WebView 浮层挂在 <body> 下、
+// 本来就继承 <html> 上的变量，这里不动它们。
+const GRAMMAR_TOOLTIP_THEME_VARS = [
+    '--text-color', '--surface-container-high', '--outline-variant',
+    '--on-surface-variant',
+];
+function applyGrammarTooltipTheme(tooltip) {
+    const container = __fushiContainer();
+    if (!window.__fushiRoot || !container || !tooltip || !tooltip.style) return;
+    try {
+        const cs = getComputedStyle(container);
+        for (const name of GRAMMAR_TOOLTIP_THEME_VARS) {
+            const v = cs.getPropertyValue(name);
+            if (v && v.trim()) tooltip.style.setProperty(name, v.trim());
+        }
+        if (cs.fontFamily) tooltip.style.fontFamily = cs.fontFamily;
+    } catch (_) { /* 无样式信息：保持现状 */ }
+    const theme = container.getAttribute && container.getAttribute('data-theme');
+    if (theme) tooltip.setAttribute('data-theme', theme);
+}
+
 /** 语法说明是否处于钉住（点击）态。可观测状态，供 dismiss 分支与测试使用。 */
 function isGrammarTooltipPinned() {
     return _grammarPinnedAnchor != null;
@@ -898,6 +1141,7 @@ function showGrammarTooltip(element, pinned) {
     if (!description) return;
 
     const tooltip = ensureGrammarTooltip();
+    applyGrammarTooltipTheme(tooltip);
     const root = __fushiRootNode();
     const bodyEl = root.querySelector('.grammar-tooltip-body');
     const titleEl = root.querySelector('.grammar-tooltip-title');
@@ -1315,6 +1559,10 @@ function setStructuredContentElementStyle(element, style) {
         if (isFlowEscapingStructuredContentStyle(property, value)) {
             continue;
         }
+        // BUG-3765：background-image 之类的 url() 会让每次查词都请求外部地址。
+        if (!isSafeStructuredContentStyleValue(value)) {
+            continue;
+        }
         if ((property === 'marginTop' || property === 'marginLeft' || property === 'marginRight' || property === 'marginBottom') && typeof value === 'number') {
             element.style[property] = `${value}em`;
         } else {
@@ -1699,8 +1947,11 @@ function constructSingleGlossaryHtml(entryIndex) {
         let html = `<div style="text-align: left;" class="yomitan-glossary"><ol>${currentGlossary}</ol>`;
         const css = window.dictionaryStyles?.[lastDict] ?? '';
         if (css) {
-            const scopedCss = constructDictCss(css, lastDict, `.yomitan-glossary [data-dictionary="${lastDict}"]`);
+            const scopedCss = constructDictCss(stripDictCssRemoteRefs(css), lastDict, `.yomitan-glossary [data-dictionary="${lastDict}"]`);
+            // BUG-3762：拼进卡片 HTML 的是字符串，词典 CSS 里的 `</style>` 会闭合标签、
+            // 把后面的内容当 HTML（含脚本）写进用户的 Anki 卡片。
             const formatted = scopedCss
+            .replace(/<\/style/gi, '<\\/style')
             .replace(/\s+/g, ' ')
             .replace(/\s*\{\s*/g, ' { ')
             .replace(/\s*\}\s*/g, ' }\n')
@@ -1739,7 +1990,7 @@ function constructSingleGlossaryHtml(entryIndex) {
                 renderStructuredContent(tempDiv, JSON.parse(g.content), dictionaryLanguageOf(dictName), dictName, true);
             } catch {
                 if (/<[a-z][\s\S]*>/i.test(g.content)) {
-                    tempDiv.innerHTML = sanitizeHtml(g.content);
+                    tempDiv.replaceChildren(sanitizeHtmlFragment(g.content));
                     structured = false;
                 } else {
                     renderStructuredContent(tempDiv, g.content, dictionaryLanguageOf(dictName), dictName, true);
@@ -1802,7 +2053,7 @@ function constructGlossaryHtml(entryIndex) {
                 renderStructuredContent(tempDiv, JSON.parse(g.content), dictionaryLanguageOf(dictName), dictName, true);
             } catch {
                 if (/<[a-z][\s\S]*>/i.test(g.content)) {
-                    tempDiv.innerHTML = sanitizeHtml(g.content);
+                    tempDiv.replaceChildren(sanitizeHtmlFragment(g.content));
                     structured = false;
                 } else {
                     renderStructuredContent(tempDiv, g.content, dictionaryLanguageOf(dictName), dictName, true);
@@ -1845,8 +2096,10 @@ function constructGlossaryHtml(entryIndex) {
     result += '</ol>';
     
     for (const [dictName, css] of Object.entries(styles)) {
-        const scopedCss = constructDictCss(css, dictName, `.yomitan-glossary [data-dictionary="${dictName}"]`);
+        const scopedCss = constructDictCss(stripDictCssRemoteRefs(css), dictName, `.yomitan-glossary [data-dictionary="${dictName}"]`);
+        // BUG-3762：同上，`</style>` 不能闭合导出卡片里的样式标签。
         const formatted = scopedCss
+        .replace(/<\/style/gi, '<\\/style')
         .replace(/\s+/g, ' ')
         .replace(/\s*\{\s*/g, ' { ')
         .replace(/\s*\}\s*/g, ' }\n')
@@ -2783,7 +3036,14 @@ function showInlineHint(button, message) {
     setTimeout(() => {
         hint.classList.remove('visible');
         setTimeout(() => hint.remove(), 220);
-    }, 1800);
+    }, inlineHintDurationMs(message));
+}
+
+// 制卡失败的原因（宿主经 reply.message 带来的一整句）读完要时间：短提示照旧 1.8s，
+// 长句按字数延长，封顶 6s。宿主不再另弹 toast，这里是这次失败唯一的说法。
+function inlineHintDurationMs(message) {
+    const length = String(message || '').length;
+    return Math.min(6000, Math.max(1800, 1200 + length * 60));
 }
 
 // BUG-2051：↗「在 Anki 中打开这个词的卡」——**唯一**一条车道，app 内外同一根桥。
@@ -2841,11 +3101,11 @@ const INLINE_HTML_RE = /<(?:ruby|rt|rp|b|i|em|strong|span|sup|sub|br)\b[^>]*>/i;
 const URL_RE = /(?:https?:\/\/|(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:com|org|net|edu|gov|io|dev|app|jp|uk|de|fr|info|me|co)\/)[^\s<>　，、。！））)]+/gi;
 const SAFE_TAGS = new Set(['ruby','rt','rp','b','i','em','strong','span','sup','sub','br','a']);
 
-function sanitizeHtml(html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    doc.querySelectorAll('script,iframe,object,embed,form,meta,link,style,svg,math').forEach(el => el.remove());
-    doc.querySelectorAll('*').forEach(el => {
+// 导出 / 内联两条路径共用的净化（只在惰性树上动，见 parseDictHtmlInert）。
+function sanitizeHtmlTree(root) {
+    root.querySelectorAll('script,iframe,object,embed,form,meta,link,style,svg,math,template,base')
+        .forEach(el => el.remove());
+    root.querySelectorAll('*').forEach(el => {
         for (const attr of [...el.attributes]) {
             if (attr.name.startsWith('on') || attr.name === 'srcdoc' ||
                 (attr.name === 'href' && /^\s*(javascript|data):/i.test(attr.value)) ||
@@ -2854,13 +3114,22 @@ function sanitizeHtml(html) {
             }
         }
     });
-    return doc.body.innerHTML;
 }
 
-function sanitizeInlineHtml(html) {
-    const tmp = document.createElement('div');
-    tmp.innerHTML = sanitizeHtml(html);
-    tmp.querySelectorAll('*').forEach(el => {
+// 导出卡片用：净化后的 DocumentFragment。BUG-3762：原实现 DOMParser 净化后
+// `body.innerHTML` 序列化、调用方再 `tempDiv.innerHTML = …` 解析回来——两次解析的
+// 上下文不同，mXSS 结构会在第二次解析时复活 `<img onerror>`，而 tempDiv 属于主文档，
+// 脚本照样在主文档里跑。
+function sanitizeHtmlFragment(html) {
+    const root = parseDictHtmlInert(html).content;
+    sanitizeHtmlTree(root);
+    return document.importNode(root, true);
+}
+
+function sanitizeInlineFragment(html) {
+    const root = parseDictHtmlInert(html).content;
+    sanitizeHtmlTree(root);
+    root.querySelectorAll('*').forEach(el => {
         const tag = el.tagName.toLowerCase();
         if (!SAFE_TAGS.has(tag)) {
             el.replaceWith(...el.childNodes);
@@ -2872,17 +3141,514 @@ function sanitizeInlineHtml(html) {
             }
         });
     });
-    return tmp.innerHTML;
+    return document.importNode(root, true);
 }
 
-function linkifyUrls(html) {
-    return html.replace(URL_RE, url => {
-        const href = /^https?:\/\//i.test(url) ? url : 'https://' + url;
-        if (/^\s*(javascript|data|vbscript):/i.test(href)) return url;
-        const escapedHref = href.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-        const escapedText = url.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return `<a href="${escapedHref}">${escapedText}</a>`;
+/* ---------------------------------------------------------------------------
+   词典内容的安全边界（BUG-3762 / BUG-3765，设计见
+   docs/specs/2026-10-23-dictionary-script-sandbox.md）。
+
+   词典是外来数据：结构化内容的标签名、MDX 的整段 HTML、styles.css 都由词典作者
+   决定。弹窗主文档握着原生桥（制卡 / 改卡 / 打开链接），所以主文档里**不允许**
+   出现任何词典可控的脚本：
+   - 结构化内容只认 Yomitan 规范的标签，`href` 拒危险 scheme，style 拒外部 url()；
+   - 不带 <script> 的 HTML 释义净化后留在主文档（交互、选词、导出照旧）；
+   - 带 <script> 的 HTML 释义整块进 `sandbox="allow-scripts"`（**无**
+     allow-same-origin）的 iframe，而且只在宿主确认「桥已锁到顶层 frame」之后才挂载
+     ——Android 的 addJavascriptInterface 等桥对所有 frame 可见，光有 sandbox 不够；
+     锁不上（旧插件 / 不支持的宿主）就只显示净化后的静态内容。
+--------------------------------------------------------------------------- */
+
+// Yomitan structured-content 规范的标签，外加几种常见内联标签容错。其余标签按
+// span 渲染（保留内容，丢掉标签语义），绝不 createElement 一个词典给的任意名字。
+const STRUCTURED_CONTENT_TAGS = new Set([
+    'br', 'ruby', 'rb', 'rt', 'rtc', 'rp', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th',
+    'span', 'div', 'ol', 'ul', 'li', 'details', 'summary', 'a', 'img',
+    'b', 'i', 'u', 's', 'em', 'strong', 'small', 'sub', 'sup', 'p', 'code',
+]);
+
+function structuredContentTagName(tag) {
+    const name = typeof tag === 'string' ? tag.toLowerCase() : '';
+    return STRUCTURED_CONTENT_TAGS.has(name) ? name : 'span';
+}
+
+// 浏览器解析 URL 前会剥掉控制字符与空白，`java\tscript:` 照样是 javascript:。
+function isDangerousDictUrl(value) {
+    const compact = `${value}`.replace(/[\u0000- \u007f-\u009f]+/g, '');
+    return /^(?:javascript|vbscript|data|livescript|mocha):/i.test(compact) &&
+        !/^data:image\/(?:png|gif|jpe?g|webp|avif|bmp);/i.test(compact);
+}
+
+// 外部网络引用：http(s):// 与协议相对 //。词典内容一旦能发外部请求，每次查词都会
+// 把用户查了什么词泄露出去（BUG-3765）。
+const DICT_REMOTE_URL_RE = /^\s*(?:https?:)?\/\//i;
+// 正则里的引号一律写成 Unicode 转义：源码守卫的词法器不认正则字面量，裸引号会被当成
+// 串的开头、把后面整段源码掩码掉。
+const DICT_CSS_REMOTE_URL_RE = /url\(\s*[\u0027\u0022]?\s*(?:https?:)?\/\/[^)]*\)/gi;
+
+function isRemoteDictUrl(value) {
+    return DICT_REMOTE_URL_RE.test(`${value}`);
+}
+
+// styles.css / 内联 <style> / style 属性里的外部引用：@import 整条丢（相对路径的
+// @import 在弹窗里本来也解析不到词典目录），外部 url() 换成空 url()。
+function stripDictCssRemoteRefs(css) {
+    if (!css) return css;
+    return `${css}`
+        .replace(/@import\b[^;]*;?/gi, '')
+        .replace(DICT_CSS_REMOTE_URL_RE, 'url()');
+}
+
+function isSafeStructuredContentStyleValue(value) {
+    if (typeof value !== 'string') return true;
+    return !/url\s*\(|image-set\s*\(|expression\s*\(|javascript:/i.test(value);
+}
+
+// 主文档里不允许存在的元素：能执行脚本、能导航、能嵌入外部文档或改写文档基址的。
+// math / svg 整个命名空间不要：外来命名空间与 HTML 的解析规则交错（mglyph / mtext /
+// foreignObject 里的 <style> 是文本还是标签取决于上下文）是 mXSS 的温床，词典里也
+// 几乎用不到（BUG-3762 审查复现过 math 路径的绕过）。
+const DICT_HTML_BLOCKED_SELECTOR = [
+    'script', 'iframe', 'frame', 'frameset', 'object', 'embed', 'applet', 'portal',
+    'base', 'meta', 'form', 'noscript', 'template', 'math', 'svg',
+].join(',');
+
+// 会让浏览器自动发起请求的属性（不需要用户点击）。
+const DICT_AUTO_FETCH_ATTRS = new Set([
+    'src', 'srcset', 'imagesrcset', 'poster', 'background', 'lowsrc', 'dynsrc', 'data', 'ping',
+]);
+
+// 词典 HTML → 惰性 DOM。<template> 解析不跑脚本、不加载资源，<link>/<style> 也留在原位
+// （DOMParser 会把它们挪进 head 丢掉）。净化与改写都在这棵树上做，最后 importNode 挂进
+// 文档——**不再序列化成字符串再 innerHTML**：两次解析的上下文不同就是 mXSS。
+function parseDictHtmlInert(html) {
+    const template = document.createElement('template');
+    template.innerHTML = `${html}`;
+    return template;
+}
+
+function sanitizeDictElementAttributes(element) {
+    const tag = element.tagName.toLowerCase();
+    for (const attr of [...element.attributes]) {
+        const name = attr.name.toLowerCase();
+        const value = attr.value;
+        if (name.startsWith('on') || name === 'srcdoc' || name === 'formaction' ||
+            name === 'action' || name === 'http-equiv') {
+            element.removeAttribute(attr.name);
+            continue;
+        }
+        const isUrlAttr = name === 'href' || name === 'xlink:href' || DICT_AUTO_FETCH_ATTRS.has(name);
+        if (isUrlAttr && isDangerousDictUrl(value)) {
+            element.removeAttribute(attr.name);
+            continue;
+        }
+        // 外链 <a href="https://…"> 是用户点了才走 openLink 的正常交叉引用，保留；
+        // 其余元素上的外部地址会被浏览器自动请求，一律去掉。
+        const isNavigationHref = (name === 'href' || name === 'xlink:href') &&
+            (tag === 'a' || tag === 'area');
+        if (isUrlAttr && !isNavigationHref && name !== 'srcset' && name !== 'imagesrcset' &&
+            isRemoteDictUrl(value)) {
+            element.removeAttribute(attr.name);
+            continue;
+        }
+        if ((name === 'srcset' || name === 'imagesrcset') && /(?:https?:)?\/\//i.test(value)) {
+            element.removeAttribute(attr.name);
+            continue;
+        }
+        if (name === 'style') {
+            const stripped = stripDictCssRemoteRefs(value);
+            if (/expression\s*\(|javascript:/i.test(stripped)) {
+                element.removeAttribute(attr.name);
+            } else if (stripped !== value) {
+                element.setAttribute(attr.name, stripped);
+            }
+        }
+    }
+    if (tag === 'style') {
+        element.textContent = stripDictCssRemoteRefs(element.textContent);
+    }
+}
+
+// 词典 HTML → 可以直接挂进主文档的 DocumentFragment（净化 + 媒体链接改写都在惰性树上）。
+function dictHtmlFragment(html, dictName) {
+    const root = parseDictHtmlInert(html).content;
+    root.querySelectorAll(DICT_HTML_BLOCKED_SELECTOR).forEach(node => node.remove());
+    root.querySelectorAll('*').forEach(sanitizeDictElementAttributes);
+    rewriteDictLinksInTree(root, dictName);
+    return document.importNode(root, true);
+}
+
+// 沙箱 iframe 里的 HTML（序列化后进 srcdoc——在沙箱里重新解析无所谓，那边本来就
+// 允许脚本）：脚本与内联事件就是要保留的东西，只去掉能逃出沙箱语义或嵌入外部文档的
+// 元素，并切断外部网络引用（iframe 自己的 CSP 再兜一层）。
+function dictSandboxHtml(html, dictName) {
+    const template = parseDictHtmlInert(html);
+    const root = template.content;
+    root.querySelectorAll('iframe,frame,frameset,object,embed,applet,portal,base,meta')
+        .forEach(node => node.remove());
+    root.querySelectorAll('*').forEach(element => {
+        for (const attr of [...element.attributes]) {
+            const name = attr.name.toLowerCase();
+            if (name === 'srcdoc') element.removeAttribute(attr.name);
+            if (name === 'style') {
+                element.setAttribute(attr.name, stripDictCssRemoteRefs(attr.value));
+            }
+            if (DICT_AUTO_FETCH_ATTRS.has(name) && isRemoteDictUrl(attr.value)) {
+                element.removeAttribute(attr.name);
+            }
+        }
+        if (element.tagName.toLowerCase() === 'style') {
+            element.textContent = stripDictCssRemoteRefs(element.textContent);
+        }
     });
+    rewriteDictLinksInTree(root, dictName);
+    return template.innerHTML;
+}
+
+function dictHtmlHasScript(html) {
+    return /<script\b/i.test(`${html}`);
+}
+
+// 主文档 CSP（BUG-3765）：外联的兜底不能只靠改字符串——CSS 转义（`\75rl(`、`@\69mport`）、
+// image-set、各种 *srcset、.mdd 里原样返回的样式表，正则永远追不完。图片 / 样式 / 字体
+// 只认本机来源；frame-src 'none' 让沙箱 iframe 的自导航在请求发出**之前**就被拦（srcdoc
+// 不是网络导航，不受影响）。
+//
+// media-src 刻意放开 http(s)：桌面 / iOS 的词条发音就是弹窗里 `new Audio(远程 URL)` 播的
+// （只有 Android 交给原生播放器），限死成本地会让在线发音全部失效。词典内容本身没有发起
+// 媒体请求的通路——净化器删掉媒体元素上的外部 src，CSS 也载不了媒体。
+//
+// 不管 script-src：Windows / iOS 把脚本内联注入、其余平台走 file:// 或自定义 scheme，
+// 没有真机覆盖就收紧脚本来源，可能让某个平台整页白屏；主文档脚本由净化 + DOM 直挂兜住。
+const FUSHI_POPUP_LOCAL_SOURCES =
+    "'self' image: dictmedia: data: blob: file: fushi-popup: https://fushi.local https://hibiki.popup";
+const FUSHI_POPUP_DOCUMENT_CSP = [
+    `img-src ${FUSHI_POPUP_LOCAL_SOURCES}`,
+    `font-src ${FUSHI_POPUP_LOCAL_SOURCES}`,
+    `style-src 'unsafe-inline' ${FUSHI_POPUP_LOCAL_SOURCES}`,
+    `media-src ${FUSHI_POPUP_LOCAL_SOURCES} https: http:`,
+    "frame-src 'none'",
+].join('; ');
+
+// 脚本插入的 <meta http-equiv="Content-Security-Policy"> 照样生效，所以一处装载覆盖所有
+// 宿主（内联 HTML / file:// / 自定义 scheme / app 外查词宿主 / 弹窗 Activity / 样式预览）。
+function __fushiInstallDocumentCsp() {
+    try {
+        if (typeof document === 'undefined' || !document.head ||
+            typeof document.createElement !== 'function') return;
+        // 浏览器扩展里本脚本跑在别人的网页（content script）或扩展页上：往宿主网页塞 CSP
+        // 等于改写别人的站点。扩展不执行词典脚本，外联由净化器管。
+        if (typeof chrome !== 'undefined' && chrome && chrome.runtime && chrome.runtime.id) return;
+        if (document.querySelector('meta[data-fushi-popup-csp]')) return;
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'Content-Security-Policy');
+        meta.setAttribute('data-fushi-popup-csp', '');
+        meta.setAttribute('content', FUSHI_POPUP_DOCUMENT_CSP);
+        document.head.appendChild(meta);
+    } catch (_) { /* 装不上就只剩内容层净化，不能因此毁掉渲染 */ }
+}
+__fushiInstallDocumentCsp();
+
+const FUSHI_BRIDGE_LOCKED = 'fushi-bridge-locked-v1';
+let __fushiBridgeLockPromise = null;
+
+// 让宿主把原生桥锁到本文档：锁定后宿主只认带令牌的调用，沙箱 iframe 即使摸得到桥
+// 对象也调不动。只认专用返回值——没实现锁定的宿主对未知 handler 可能回 true / null，
+// 那都不算锁住。每个文档只锁一次（宿主在新文档提交时清令牌）。
+//
+// 这里不判「自己是不是顶层 frame」：Windows app 外查词宿主把本页放在一个同源子 frame
+// 里、由宿主页代为锁定；该拒的子 frame 请求由各平台的桥脚本自己拒。
+function fushiLockBridge() {
+    if (__fushiBridgeLockPromise) return __fushiBridgeLockPromise;
+    __fushiBridgeLockPromise = (async () => {
+        const bridge = window.flutter_inappwebview;
+        if (!bridge || typeof bridge.callHandler !== 'function') return false;
+        try {
+            return (await bridge.callHandler('_fushiLockBridge')) === FUSHI_BRIDGE_LOCKED;
+        } catch (_) {
+            return false;
+        }
+    })();
+    return __fushiBridgeLockPromise;
+}
+
+const __dictSandboxFrames = new Set();
+let __dictSandboxListening = false;
+let __dictSandboxLastAction = 0;
+
+// iframe 内的辅助脚本（我们自己的，排在词典脚本之前）：把高度、链接点击、点词
+// 交给父页面。它和词典脚本同处沙箱，父页面因此只把这些消息当「用户在 iframe 里点了
+// 什么」的提示：类型白名单、长度封顶、要求真实用户激活、限频。
+const DICT_SANDBOX_HELPER_JS = `(function () {
+  function post(message) {
+    message.__fushiDictSandbox = 1;
+    try { parent.postMessage(message, '*'); } catch (e) {}
+  }
+  var lastHeight = -1;
+  function reportHeight() {
+    var root = document.documentElement;
+    var height = Math.ceil(Math.max(root.scrollHeight, document.body ? document.body.scrollHeight : 0));
+    if (height !== lastHeight) { lastHeight = height; post({ type: 'height', value: height }); }
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    reportHeight();
+    try { new ResizeObserver(reportHeight).observe(document.documentElement); }
+    catch (e) { setInterval(reportHeight, 500); }
+  });
+  window.addEventListener('load', reportHeight);
+  window.addEventListener('error', function (event) {
+    post({ type: 'error', message: String(event && event.message || '') });
+  });
+  function rectOf(x, y, element) {
+    var r = element ? element.getBoundingClientRect() : null;
+    return r ? { x: r.left, y: r.top, width: r.width, height: r.height }
+             : { x: x, y: y, width: 0, height: 0 };
+  }
+  function baseText(anchor) {
+    var clone = anchor.cloneNode(true);
+    var ruby = clone.querySelectorAll('rt,rp');
+    for (var i = 0; i < ruby.length; i++) ruby[i].remove();
+    return (clone.textContent || '').trim();
+  }
+  var stop = /[\\s\\u3000-\\u3002\\uff01\\uff0c\\uff0e\\uff1a\\uff1b\\uff1f\\u300c-\\u300f.,;:!?()\\[\\]{}\\u0022\\u0027<>]/;
+  function isJapanese(code) {
+    return (code >= 0x3040 && code <= 0x30ff) || (code >= 0x3400 && code <= 0x9fff) ||
+           (code >= 0xf900 && code <= 0xfaff) || (code >= 0xff66 && code <= 0xff9f);
+  }
+  document.addEventListener('click', function (event) {
+    if (event.defaultPrevented) return;
+    var target = event.target && event.target.nodeType === 3 ? event.target.parentElement : event.target;
+    var anchor = target && target.closest ? target.closest('a[href]') : null;
+    if (anchor) {
+      event.preventDefault();
+      post({ type: 'link', href: anchor.getAttribute('href') || '', text: baseText(anchor),
+             rect: rectOf(event.clientX, event.clientY, anchor) });
+      return;
+    }
+    if (!document.caretRangeFromPoint) return;
+    var range = document.caretRangeFromPoint(event.clientX, event.clientY);
+    if (!range || range.startContainer.nodeType !== 3) return;
+    var data = range.startContainer.data;
+    var start = range.startOffset;
+    if (start >= data.length) return;
+    if (!isJapanese(data.charCodeAt(start))) {
+      while (start > 0 && !stop.test(data[start - 1])) start--;
+    }
+    var end = start;
+    while (end < data.length && end - start < 20 && !stop.test(data[end])) end++;
+    if (end <= start) return;
+    post({ type: 'select', text: data.slice(start, end),
+           rect: { x: event.clientX, y: event.clientY, width: 0, height: 0 } });
+  });
+})();`;
+
+function __dictSandboxEnsureListener() {
+    if (__dictSandboxListening) return;
+    __dictSandboxListening = true;
+    window.addEventListener('message', __dictSandboxOnMessage);
+    // 宿主在顶层新文档提交时清令牌；页面若被 bfcache 留下再恢复，本文档以为自己还
+    // 锁着、原生侧却已解锁。离开时就拆掉所有沙箱，恢复后桥闭包里还留着旧令牌、
+    // 再锁会被拒，于是不会再挂新的沙箱——只剩静态内容，偏安全那一侧。
+    window.addEventListener('pagehide', () => {
+        for (const frame of __dictSandboxFrames) frame.remove();
+        __dictSandboxFrames.clear();
+    });
+}
+
+function __dictSandboxFrameFor(source) {
+    for (const frame of __dictSandboxFrames) {
+        if (!frame.isConnected) {
+            __dictSandboxFrames.delete(frame);
+            continue;
+        }
+        if (frame.contentWindow === source) return frame;
+    }
+    return null;
+}
+
+// 只放行「用户刚在 iframe 里交互过」时的动作消息：用户在子 frame 里点击会把激活
+// 传播到祖先 frame；不支持 userActivation 的引擎退回「焦点在这个 iframe 上」。
+function __dictSandboxUserActive(frame) {
+    const activation = navigator.userActivation;
+    if (activation && typeof activation.isActive === 'boolean') return activation.isActive;
+    return document.activeElement === frame;
+}
+
+function __dictSandboxOnMessage(event) {
+    const data = event.data;
+    if (!data || typeof data !== 'object' || data.__fushiDictSandbox !== 1) return;
+    // 沙箱 iframe 没有 allow-same-origin，它的文档是不透明源，发来的消息 origin 恒为字面量
+    // 'null'。frame 一旦被导航到真实站点，origin 就不再是 'null'——与「二次 load 即移除」
+    // 互为兜底，导航后的页面发来的消息一律不认。
+    if (event.origin !== 'null') return;
+    const frame = __dictSandboxFrameFor(event.source);
+    if (!frame) return;
+    const dictName = frame.getAttribute('data-dictionary') || '';
+    if (data.type === 'height') {
+        const height = Number(data.value);
+        if (Number.isFinite(height)) {
+            frame.style.height = `${Math.max(0, Math.min(height, 20000))}px`;
+        }
+        return;
+    }
+    if (data.type === 'error') {
+        reportDictScriptError(dictName, 'sandbox', { message: `${data.message || ''}`.slice(0, 500) });
+        return;
+    }
+    if (data.type !== 'link' && data.type !== 'select') return;
+    if (!__dictSandboxUserActive(frame)) return;
+    const href = `${data.href || ''}`.trim().slice(0, 2048);
+    // 沙箱来源的 link 消息**不放行外链**：上面的激活判据只证明「用户刚在页面里点过
+    // 一下」，证明不了点的就是这条链接——沙箱脚本完全掌控自己的文档，可以在用户随便
+    // 点一下释义时伪造一条带参的 https 链接把查词内容外带出去。父页面看不见沙箱内部，
+    // 没有可靠判据区分「用户点了链接」与「脚本借机发消息」，所以只认回查词和
+    // sound: 本地音频；外链在这里直接丢弃（静态释义里的外链不经沙箱，不受影响）。
+    // 必须在下面的动作节流**之前**丢：被丢弃的消息不是动作，若先占了节流时间戳，
+    // 沙箱抢先发一条外链就能把紧随其后的真实查词吞掉。
+    if (data.type === 'link' && /^https?:\/\//i.test(href)) return;
+    const now = Date.now();
+    if (now - __dictSandboxLastAction < 300) return;
+    __dictSandboxLastAction = now;
+
+    const frameRect = frame.getBoundingClientRect();
+    const raw = data.rect && typeof data.rect === 'object' ? data.rect : {};
+    const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
+    const rect = {
+        x: frameRect.left + num(raw.x),
+        y: frameRect.top + num(raw.y),
+        width: num(raw.width),
+        height: num(raw.height),
+    };
+    const bridge = window.flutter_inappwebview;
+    if (!bridge || typeof bridge.callHandler !== 'function') return;
+
+    if (data.type === 'select') {
+        const text = `${data.text || ''}`.slice(0, 64);
+        if (!text) return;
+        if (window.__hasChildPopup) {
+            bridge.callHandler('tapOutside');
+            return;
+        }
+        bridge.callHandler('textSelected', text, rect);
+        return;
+    }
+
+    if (/^sound:/i.test(href)) {
+        const soundPath = href.replace(/^sound:\/{0,}/i, '');
+        const soundUrl = soundPath ? rewriteDictionaryMediaPath(soundPath, dictName) : null;
+        if (soundUrl) playWordAudio(soundUrl);
+        return;
+    }
+    if (isDangerousDictUrl(href)) return;
+    const query = `${data.text || ''}`.trim().slice(0, 128);
+    if (!query) return;
+    bridge.callHandler('onLinkClick', query, rect);
+}
+
+// 外链 <script src> 的源码由父页面经桥取回、内联进 srcdoc（沙箱里没有桥）。
+async function __dictSandboxInlineScripts(html, dictName) {
+    const pattern = /<script\b([^>]*)\bsrc\s*=\s*([\u0027\u0022])([^\u0027\u0022]*)\2([^>]*)>\s*<\/script\s*>/gi;
+    const matches = [...`${html}`.matchAll(pattern)];
+    let out = `${html}`;
+    for (const match of matches) {
+        const code = await fetchDictAsset(dictName, normalizeDictMediaPath(match[3]));
+        const replacement = code
+            ? `<script>${code.replace(/<\/script/gi, '<\\/script')}</script>`
+            : '';
+        out = out.replace(match[0], () => replacement);
+    }
+    return out;
+}
+
+// 沙箱文档的 CSP。srcdoc 里的 meta 只管初始文档；同一份策略再挂成 iframe 的嵌入方
+// `csp` 属性（Chromium 的 CSP Embedded Enforcement），frame 导航到别处后的文档也受约束。
+// 真正挡住「自导航把查词带出去」的是主文档 CSP 的 frame-src（见 __fushiInstallDocumentCsp），
+// 它在请求发出前生效；这里与「第二次 load 即移除」是后两道。
+const DICT_SANDBOX_CSP = "default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval'; " +
+    "style-src 'unsafe-inline' image: dictmedia: data:; img-src image: dictmedia: data: blob:; " +
+    "font-src image: dictmedia: data:; media-src image: dictmedia: data: blob:; " +
+    "connect-src 'none'; form-action 'none'; base-uri 'none'";
+
+function __dictSandboxDocument(bodyHtml, dictName, host) {
+    let color = '';
+    let font = '';
+    try {
+        const computed = getComputedStyle(host);
+        color = computed.color;
+        font = `${computed.fontSize} ${computed.fontFamily}`;
+    } catch (_) { /* 宿主未挂载时用浏览器默认 */ }
+    const dictCss = stripDictCssRemoteRefs(window.dictionaryStyles?.[dictName] ?? '');
+    const escapeStyle = (css) => `${css}`.replace(/<\/style/gi, '<\\/style');
+    return '<!doctype html><html><head><meta charset="utf-8">' +
+        `<meta http-equiv="Content-Security-Policy" content="${DICT_SANDBOX_CSP}">` +
+        '<style>html,body{margin:0;padding:0;background:transparent;overflow:hidden;}' +
+        `body{color:${color};font:${font};word-break:break-word;}</style>` +
+        `<style>${escapeStyle(dictCss)}</style>` +
+        `<script>${DICT_SANDBOX_HELPER_JS}</script>` +
+        `</head><body>${bodyHtml}</body></html>`;
+}
+
+// 带脚本的 HTML 释义：先放净化后的静态内容，桥锁定成功后再换成沙箱 iframe。
+function mountDictScriptSandbox(wrapper, html, dictName) {
+    wrapper.replaceChildren(dictHtmlFragment(html, dictName));
+    fushiLockBridge().then(async (locked) => {
+        if (!locked) return;
+        const body = await __dictSandboxInlineScripts(dictSandboxHtml(html, dictName), dictName);
+        if (!wrapper.isConnected) return;
+        const frame = document.createElement('iframe');
+        frame.setAttribute('sandbox', 'allow-scripts');
+        frame.setAttribute('csp', DICT_SANDBOX_CSP);
+        frame.setAttribute('referrerpolicy', 'no-referrer');
+        frame.setAttribute('data-dictionary', dictName);
+        frame.className = 'dict-script-sandbox';
+        frame.style.cssText = 'display:block;width:100%;height:0;border:0;background:transparent;';
+        // srcdoc 只加载一次；再来一次 load 说明 frame 被词典脚本导航走了——那已经不是
+        // 我们的文档，立刻拆掉，它发来的消息也不再被认（__dictSandboxFrameFor 只认在册 frame）。
+        let loads = 0;
+        frame.addEventListener('load', () => {
+            loads += 1;
+            if (loads < 2) return;
+            __dictSandboxFrames.delete(frame);
+            frame.remove();
+            reportDictScriptError(dictName, 'sandbox', { message: 'sandbox navigated away; removed' });
+        });
+        frame.srcdoc = __dictSandboxDocument(body, dictName, wrapper);
+        __dictSandboxEnsureListener();
+        __dictSandboxFrames.add(frame);
+        wrapper.replaceChildren(frame);
+    }).catch((error) => reportDictScriptError(dictName, 'sandbox', error));
+}
+
+// 把文本节点里的裸 URL 换成 <a>——直接建节点，不拼 HTML 串再解析。
+function linkifyTextNodes(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    for (const textNode of textNodes) {
+        const text = textNode.textContent;
+        URL_RE.lastIndex = 0;
+        if (!URL_RE.test(text)) continue;
+        URL_RE.lastIndex = 0;
+        const pieces = document.createDocumentFragment();
+        let last = 0;
+        for (const match of text.matchAll(URL_RE)) {
+            const url = match[0];
+            const href = /^https?:\/\//i.test(url) ? url : 'https://' + url;
+            pieces.append(text.slice(last, match.index));
+            if (/^\s*(javascript|data|vbscript):/i.test(href)) {
+                pieces.append(url);
+            } else {
+                const anchor = document.createElement('a');
+                anchor.setAttribute('href', href);
+                anchor.textContent = url;
+                pieces.append(anchor);
+            }
+            last = match.index + url.length;
+        }
+        pieces.append(text.slice(last));
+        textNode.replaceWith(pieces);
+    }
+    URL_RE.lastIndex = 0;
 }
 
 function appendRichTextLine(parent, line) {
@@ -2893,30 +3659,21 @@ function appendRichTextLine(parent, line) {
         parent.appendChild(document.createTextNode(line));
         return;
     }
-    let html = hasHtml ? sanitizeInlineHtml(line) : line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    if (hasUrl || URL_RE.test(html)) {
-        URL_RE.lastIndex = 0;
-        const tmp2 = document.createElement('div');
-        tmp2.innerHTML = html;
-        const walker = document.createTreeWalker(tmp2, NodeFilter.SHOW_TEXT);
-        const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
-        textNodes.forEach(tn => {
-            if (URL_RE.test(tn.textContent)) {
-                URL_RE.lastIndex = 0;
-                const span = document.createElement('span');
-                span.innerHTML = linkifyUrls(tn.textContent.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'));
-                tn.replaceWith(...span.childNodes);
-            }
-        });
-        html = tmp2.innerHTML;
+    // BUG-3762：全程在 DOM 上做（净化 → 链接化 → 挂载），不再「净化成串 → innerHTML」。
+    let fragment;
+    if (hasHtml) {
+        fragment = sanitizeInlineFragment(line);
+    } else {
+        fragment = document.createDocumentFragment();
+        fragment.appendChild(document.createTextNode(line));
     }
+    linkifyTextNodes(fragment);
     if (hasHtml && window.__fushiPopupDebug) {
-        console.log('[RICHTEXT_HTML] input=' + line.substring(0, 150) + ' | sanitized=' + html.substring(0, 150));
+        const probe = document.createElement('span');
+        probe.appendChild(fragment.cloneNode(true));
+        console.log('[RICHTEXT_HTML] input=' + line.substring(0, 150) + ' | sanitized=' + probe.innerHTML.substring(0, 150));
     }
-    const frag = document.createElement('span');
-    frag.innerHTML = html;
-    while (frag.firstChild) parent.appendChild(frag.firstChild);
+    parent.appendChild(fragment);
 }
 
 function renderStructuredContent(parent, node, language = null, dictName = null, exporting = false) {
@@ -3005,12 +3762,13 @@ function renderStructuredContent(parent, node, language = null, dictName = null,
         return;
     }
     
-    const tagName = node.tag || 'span';
+    // BUG-3762：标签名来自词典，只认白名单（`{"tag":"script"}` 曾原样 createElement）。
+    const tagName = structuredContentTagName(node.tag || 'span');
     const element = document.createElement(tagName);
     element.classList.add(`gloss-sc-${tagName}`);
     let nextLanguage = language;
-    
-    if (node.href) {
+
+    if (node.href && typeof node.href === 'string' && !isDangerousDictUrl(node.href)) {
         element.setAttribute('href', node.href);
         const isExternal = /^https?:\/\//i.test(node.href);
         element.onclick = (e) => {
@@ -4475,9 +5233,8 @@ function createEntryHeader(entry, idx) {
     if (window.__fushiLookupLanguage) {
         expressionSpan.setAttribute('lang', window.__fushiLookupLanguage);
     }
-    let needsScroll = false;
     if (reading && reading !== expression) {
-        needsScroll = buildFuriganaEl(expressionSpan, expression, reading);
+        buildFuriganaEl(expressionSpan, expression, reading);
     } else {
         expressionSpan.textContent = expression;
         // 没有注音的词头（なんて / すたすた）不需要注音预留带：popup.css 据此收掉
@@ -4508,14 +5265,16 @@ function createEntryHeader(entry, idx) {
     // 用户 10-09：词头右边原本是一大片空白，频率与「音调 · N / 读音」两行却各占一整行
     // 压在词头下面，顶部留白很多。改成左簇内 flex-wrap：宽度够时元数据列贴在词头右侧，
     // 不够（窄弹窗 / 长词头）时整列自然换到词头下方——纯布局自适应，不量宽、不分支。
+    //
+    // 词头一律套 .expression-scroll（不折行、超长横向滚动）。曾经只有「整词一段注音」才套，
+    // 多段注音（手心を加える）与无注音词头是可逐字折行的裸 span：左簇的 min-content 下限
+    // （BUG-3320「词头本身永远不被挤压」）对它失效，按钮组挤上同一行把词头压到折行，频率
+    // chip 一枚一行（用户 10-24 录屏的那一态），还让 updateEntryHeaderMetaLayout 读到随
+    // 布局变化的词头宽而每帧来回切。
     const headerMain = el('div', { className: 'entry-header-main' });
-    if (needsScroll) {
-        const expressionScroll = el('div', { className: 'expression-scroll' });
-        expressionScroll.appendChild(expressionSpan);
-        headerMain.appendChild(expressionScroll);
-    } else {
-        headerMain.appendChild(expressionSpan);
-    }
+    const expressionScroll = el('div', { className: 'expression-scroll' });
+    expressionScroll.appendChild(expressionSpan);
+    headerMain.appendChild(expressionScroll);
     header.appendChild(headerMain);
     
     const buttonsContainer = el('div', { className: 'header-buttons' });
@@ -4708,9 +5467,7 @@ function createEntryHeader(entry, idx) {
                     // 都还在，所以 ✓ 是真的；失败时 result.noteId 为 null，上一行的
                     // rememberLatestMined 已经把「最新可改」降级回普通 ✓。要补的只是原因。
                     if (!result.ankiConnect) {
-                        showInlineHint(
-                            mineButton,
-                            result.message || window.i18nMineFailed || '制卡失败');
+                        reportMineFailure(mineButton, result);
                     }
                     setMineState(true);
                     return;
@@ -4758,7 +5515,7 @@ function createEntryHeader(entry, idx) {
                             // ——取消不带 message，所以判据是 message 非空，而不是
                             // !ankiConnect（否则取消会被误报成失败）。
                             if (action.result.message) {
-                                showInlineHint(mineButton, action.result.message);
+                                reportMineFailure(mineButton, action.result);
                             }
                             const stillMined = await window.flutter_inappwebview.callHandler('duplicateCheck', { expression, reading });
                             setMineState(stillMined);
@@ -4821,9 +5578,8 @@ function createEntryHeader(entry, idx) {
                     //
                     // showInlineHint 正是 BUG-1064 为「app 外没有 Flutter toast 可用」
                     // 建的页内车道，锚在按钮屏幕坐标上，窗口被裁到卡片 bbox 也可见。
-                    showInlineHint(
-                        mineButton,
-                        result.message || window.i18nMineFailed || '制卡失败');
+                    // BUG-3652 续：按钮已被换掉 / 宿主已 toast 时不在这里画，见 reportMineFailure。
+                    reportMineFailure(mineButton, result);
                     // TODO-448 原样保住：失败/不确定**绝不**回查 Anki 再把按钮翻成 ✓
                     // （addNote 到了 Anki 但响应连接断了那次，延迟 duplicateCheck 会让用户
                     // 先看到「失败」再看到 ✓）。所以这里不发任何 duplicateCheck。
@@ -4888,7 +5644,13 @@ function createEntryHeader(entry, idx) {
         }
     });
     setButtonIcon(openAnkiButton, 'openInAnki');
-    if (miningEnabled) {
+    // 制卡目标 = Fushi 复习（宿主注入 __fushiSrsMiningTarget）时，↗ 走的是
+    // SrsMiningAnkiRepository.openWordInAnki → 复习笔记编辑页，与上面复习状态标记
+    // （「新卡」/「复习中 · 3天后」）点开的是同一张笔记：两颗按钮去同一个地方，只留
+    // 带状态文案的那颗。制卡目标 = Anki 时两者去处不同（Anki / Fushi 复习），照旧都在。
+    const srsOwnsOpenCard = srsBadge !== null &&
+        window.__fushiSrsMiningTarget === true;
+    if (miningEnabled && !srsOwnsOpenCard) {
         buttonsContainer.appendChild(openAnkiButton);
     }
     // Lookup-time detection: query Anki's real card existence for THIS word as
@@ -5515,7 +6277,7 @@ function createGlossarySection(dictName, contents, dictIdx, entryIdx, totalDicts
         }
     `.trim();
     if (dictStyle) {
-        styleText += '\n' + constructDictCss(dictStyle, dictName);
+        styleText += '\n' + constructDictCss(stripDictCssRemoteRefs(dictStyle), dictName);
     }
     ensureDictionaryStyle(dictName, styleText);
 
@@ -5527,7 +6289,13 @@ function createGlossarySection(dictName, contents, dictIdx, entryIdx, totalDicts
             } catch {
                 if (/<[a-z][\s\S]*>/i.test(content)) {
                     const wrapper = el('div');
-                    wrapper.innerHTML = rewriteDictLinks(content, dictName);
+                    // BUG-3762：词典 HTML 不再原样进主文档。带脚本的进沙箱 iframe，
+                    // 其余净化后留在这里（事件属性 / 危险 URL / 外部请求都去掉）。
+                    if (dictHtmlHasScript(content)) {
+                        mountDictScriptSandbox(wrapper, content, dictName);
+                    } else {
+                        wrapper.replaceChildren(dictHtmlFragment(content, dictName));
+                    }
                     parent.appendChild(wrapper);
                 } else {
                     renderStructuredContent(parent, content, null, dictName);
@@ -5583,10 +6351,8 @@ function createGlossarySection(dictName, contents, dictIdx, entryIdx, totalDicts
     __fushiChunkLongGlossary(dictWrapper, dictName);
 
     // MDX 词典的条目 HTML 自带 <script>（NLT 的頻度条形图、OALDPEX 的配置界面和
-    // 中文翻译开关）。经 innerHTML 插入的 script 按规范不会执行，这里补上——作用域
-    // 根就是 dictWrapper，所以脚本的 document 查询看不到别的词典。取源码要过桥，
-    // 是异步的；渲染不等它，脚本就绪后自行改写自己的子树。
-    runDictScripts(dictWrapper, dictName);
+    // 中文翻译开关）。它们只在沙箱 iframe 里跑（renderContent → mountDictScriptSandbox，
+    // BUG-3762），主文档里不执行任何词典脚本。
 
     return details;
 }
@@ -5624,28 +6390,34 @@ function buildEntryElement(entry, idx, maximumDictionaryBlocks = Infinity) {
     entryDiv.appendChild(createEntryHeader(entry, idx));
 
     const exprTags = createExpressionTagsSection(entry);
-    if (exprTags) {
-        entryDiv.appendChild(exprTags);
-    }
 
     const deinflection = createDeinflectionSection(entry);
     if (deinflection) {
         entryDiv.appendChild(deinflection);
     }
 
-    // 频率 / 音调进词头右侧的元数据列（见 createEntryHeader 的 .entry-header-main）。
+    // 频率 / 音调 / 词形标签进词头右侧的元数据列（见 createEntryHeader 的
+    // .entry-header-main）。词形标签（用户 10-23）原本在元数据列下方独占一整行，
+    // 跟在音调后面收进同一列，元数据列铺满整行时与其它 chip 共用宽度。
     const freqSection = createFrequencySection(entry.frequencies);
     const pitchSection = createPitchSection(entry.pitches, entry.reading);
-    if (freqSection || pitchSection) {
+    if (freqSection || pitchSection || exprTags) {
         const meta = el('div', { className: 'entry-header-meta' });
         if (freqSection) meta.appendChild(freqSection);
         if (pitchSection) meta.appendChild(pitchSection);
+        if (exprTags) meta.appendChild(exprTags);
         const headerMain = entryDiv.querySelector('.entry-header-main');
         (headerMain || entryDiv).appendChild(meta);
+        if (headerMain) observeEntryHeaderMetaLayout(headerMain.parentNode);
     }
 
     const { details, body, grouped, dictNames } = glossaryWrapper;
     entryDiv.appendChild(details);
+    // 「我库里的例句」：词条末尾（释义之后），没有命中时整块不出现。
+    const librarySentences = createLibrarySentencesSection(entry.expression, entry.reading);
+    if (librarySentences) {
+        entryDiv.appendChild(librarySentences);
+    }
     const dictionaryBlockLimit = Number.isFinite(maximumDictionaryBlocks)
         ? Math.max(0, Math.min(dictNames.length, Math.floor(maximumDictionaryBlocks)))
         : dictNames.length;
@@ -5668,6 +6440,79 @@ function buildEntryElement(entry, idx, maximumDictionaryBlocks = Infinity) {
     }
 
     return entryDiv;
+}
+
+// 用户 10-23：元数据列放不进词头右侧、换到词头下方时，它仍住在左簇里，而左簇与按钮组
+// 共用词头那一行——按钮组下方那一截宽度被白白让掉，窄弹窗里元数据列只剩一百多 px，
+// 频率 chip 一枚一行、音调来源药丸与读音也各占一行，右侧整片空白。纯 CSS 拿不到
+// 「元数据列换行了没有」这个由内容宽度决定的状态，这里量一次：
+//   · 词头 + 元数据列（14em 下限，与 .entry-header-meta 的 flex-basis 一致）+ 按钮组
+//     放得进一行 → 维持原布局（元数据列贴词头右侧）；
+//   · 词头 + 按钮组放得下、元数据列放不下 → 挂 .meta-stacked：左簇 display:contents，
+//     元数据列独占词头行下方的整行宽（含按钮组下方）；
+//   · 词头 + 按钮组本身放不下 → 维持原布局（按钮组整组换行，见 BUG-3320）。
+// 判据只读词头 / 按钮组 / 词头行三者的宽度，挂不挂类名都不改变它们，不会来回振荡。
+// 由 ResizeObserver 驱动：content-visibility 跳过的尾批词条不渲染就不量（BUG-3274）。
+//
+// 「词头宽不随类名变」靠的是词头**必须**是 .expression-scroll（createEntryHeader 一律套）：
+// 用户 10-24 录屏里弹窗词头区每帧来回切、一直闪，就是因为多段注音词头曾是可折行的裸 span——
+// 不挂类时被左簇压到「行宽 − 按钮组 − gap」并折行，scrollWidth 报压缩宽 → 挂类；挂上后
+// 按整宽参与换行 → 摘类……压缩宽 + gap + 按钮组恰好等于行宽，翻不翻只看整数取整。
+// 不是滚动容器的词头（理论上不该出现）不判定，宁可不铺满也不振荡。
+var __fushiHeaderMetaObserver = null;
+
+function entryHeaderChildByClass(parent, className) {
+    const kids = parent && parent.children;
+    if (!kids) return null;
+    for (let i = 0; i < kids.length; i++) {
+        if (kids[i].classList && kids[i].classList.contains(className)) return kids[i];
+    }
+    return null;
+}
+
+function updateEntryHeaderMetaLayout(header) {
+    if (!header || !header.isConnected) return;
+    const main = entryHeaderChildByClass(header, 'entry-header-main');
+    const buttons = entryHeaderChildByClass(header, 'header-buttons');
+    const meta = entryHeaderChildByClass(main, 'entry-header-meta');
+    const headword = main && main.firstElementChild;
+    if (!buttons || !meta || !headword || headword === meta) return;
+    if (!headword.classList.contains('expression-scroll')) return;
+    const rowWidth = header.clientWidth;
+    if (!rowWidth) return;
+    const headerGap = parseFloat(getComputedStyle(header).columnGap) || 0;
+    const mainGap = parseFloat(getComputedStyle(main).columnGap) || 0;
+    const metaMin = 14 * (parseFloat(getComputedStyle(meta).fontSize) || 16);
+    // 滚动容器的 scrollWidth 是词头完整单行宽：被压缩、被 100cqw 封顶、挂不挂类都一样。
+    const headwordWidth = headword.scrollWidth;
+    const buttonsWidth = buttons.offsetWidth;
+    const headwordRow = headwordWidth + headerGap + buttonsWidth;
+    const stacked = headwordRow <= rowWidth
+        && headwordRow + mainGap + metaMin > rowWidth;
+    header.classList.toggle('meta-stacked', stacked);
+}
+
+function observeEntryHeaderMetaLayout(header) {
+    if (!header || typeof ResizeObserver !== 'function') return;
+    if (!__fushiHeaderMetaObserver) {
+        __fushiHeaderMetaObserver = new ResizeObserver(records => {
+            const headers = new Set();
+            records.forEach(record => {
+                const target = record.target;
+                const header = target.classList && target.classList.contains('entry-header')
+                    ? target
+                    : target.closest && target.closest('.entry-header');
+                if (header) headers.add(header);
+            });
+            headers.forEach(updateEntryHeaderMetaLayout);
+        });
+    }
+    const main = entryHeaderChildByClass(header, 'entry-header-main');
+    const buttons = entryHeaderChildByClass(header, 'header-buttons');
+    __fushiHeaderMetaObserver.observe(header);
+    // 词头字体晚到 / 按钮组增删会改它们的宽度而不改词头行宽，单独观察。
+    if (main && main.firstElementChild) __fushiHeaderMetaObserver.observe(main.firstElementChild);
+    if (buttons) __fushiHeaderMetaObserver.observe(buttons);
 }
 
 function appendNextDeferredGlossaryBlock(entryDiv) {
@@ -5900,8 +6745,11 @@ function __fushiPruneDetachedTone() {
 }
 
 // 主题变化后的可逆重调色：复原 → 按当前明暗重做。宿主热更新主题后也可直接调用。
+// 复原不在这里同步做，而是挂起到重调那一帧开头（__fushiM3eRestorePending）：同步复原、
+// 下一帧才重调，中间那一帧画出来的就是词典原色——暗色下每次滚动 / nudge 都闪一下浅底。
+var __fushiM3eRestorePending = false;
 function __fushiRetoneDictColors() {
-    __fushiRestoreDictTone();
+    __fushiM3eRestorePending = true;
     const roots = __fushiM3eKnownRoots ? [...__fushiM3eKnownRoots] : [];
     const container = __fushiContainer();
     if (container && !roots.includes(container)) roots.push(container);
@@ -5931,6 +6779,11 @@ function __fushiObserveM3eToneHosts() {
                 const dark = __fushiM3eDarkSurface();
                 // 明暗没变且当前也没有调过色的节点：无事可做。
                 if (dark === __fushiM3eLastDark && !(dark && __fushiM3eTonedNodes && __fushiM3eTonedNodes.size)) return;
+                // 调色输入没变：无事可做。滚动指示每个 scroll 事件都 classList.add
+                // popup-scroll-active（类已在也照样产生 mutation 记录）、nudge 写 opacity、
+                // 宽度 / zoom 注入也落在 style 上，它们都不影响颜色。
+                const signature = __fushiM3eToneSignature();
+                if (signature !== null && signature === __fushiM3eLastToneSignature) return;
                 __fushiRetoneDictColors();
             });
         });
@@ -5943,6 +6796,36 @@ function __fushiObserveM3eToneHosts() {
     }
 }
 var __fushiM3eLastDark = null;
+var __fushiM3eLastToneSignature = null;
+
+// 调色依赖的全部输入拼成的签名：明暗、统一开关，以及两个主题载体上的 data-theme、去掉
+// 瞬态类后的 class、与颜色相关的内联声明（CSS 变量 / *color* / background* / filter）。
+// 读不出（非浏览器测试壳等）返回 null：调用方一律当作「变了」，退回照常重调。
+var __FUSHI_M3E_TRANSIENT_CLASSES = ['popup-scroll-active'];
+function __fushiM3eToneSignature() {
+    try {
+        const parts = [__fushiM3eDarkSurface() ? 'd' : 'l', __fushiDictUnifiedEnabled() ? 'u' : '-'];
+        for (const host of [document.documentElement, __fushiContainer()]) {
+            if (!host) { parts.push('∅'); continue; }
+            parts.push(host.getAttribute('data-theme') || '');
+            parts.push([...host.classList]
+                .filter((c) => !__FUSHI_M3E_TRANSIENT_CLASSES.includes(c)).sort().join(' '));
+            const style = host.style;
+            const decls = [];
+            for (let i = 0; style && i < style.length; i++) {
+                const prop = style[i];
+                if (prop.startsWith('--') || prop.includes('color') ||
+                    prop.startsWith('background') || prop === 'filter') {
+                    decls.push(prop + ':' + style.getPropertyValue(prop));
+                }
+            }
+            parts.push(decls.sort().join(';'));
+        }
+        return parts.join('|');
+    } catch (_) {
+        return null;
+    }
+}
 
 function __fushiM3eDarkSurface() {
     try {
@@ -5972,8 +6855,15 @@ function __fushiScheduleM3eDictTone(root) {
         __fushiM3eToneRaf = 0;
         const roots = [...__fushiM3eToneRoots];
         __fushiM3eToneRoots.clear();
+        // 重调色挂起的复原与重调落在同一帧：先复原（下面读计算色才是词典原色），再按当前
+        // 明暗重做，绘制前完成，不露出中间态。
+        if (__fushiM3eRestorePending) {
+            __fushiM3eRestorePending = false;
+            __fushiRestoreDictTone();
+        }
         const dark = __fushiM3eDarkSurface();
         __fushiM3eLastDark = dark;
+        __fushiM3eLastToneSignature = __fushiM3eToneSignature();
         // 词典样式统一（开着时）：颜色整体交给 popup.css 的令牌规则，暗色调色这层不再
         // 需要——先复原它写过的内联色，否则统一层量到的是调过色的值而不是词典原色。
         if (__fushiDictUnifiedEnabled()) {
@@ -7222,6 +8112,8 @@ window.__fushiPrepareRealmForReuse = () => {
 
 // 宿主改列数 / 外部触发时可调；渲染钩子已在 _firePopupRendered / updatePopupIncremental 里调。
 window.fushiRelayoutDictionaries = () => {
+    // 宿主改了弹窗宽（扩展拖拽把手 / 尺寸设置）：grid 列数跟着重算（BUG-3666）。
+    updateEffectiveDictColumns();
     observeMasonryTargets();
     scheduleMasonryAll();
 };
@@ -7285,11 +8177,32 @@ function effectiveDictColumns() {
     // 列宽门槛是 CSS px，比较对象必须是**布局**宽度：A−/A+（documentElement.style.zoom）
     // 改的是 CSS px 与屏幕 px 的比例，视口物理宽不变、可排版的 CSS px 却按 1/zoom 变化。
     // 拿物理宽比，放大字号后仍按小字号时的列数排，卡片被挤成一字一行（反向缩小时少排列）。
-    const width = __fushiViewportWidth() / __fushiDocumentZoom();
+    const width = __fushiColumnLayoutWidth();
     const fit = width > 0
         ? Math.max(1, Math.floor(width / colFloor))
         : configured;
     return Math.min(configured, fit);
+}
+// 词典列实际分到的布局宽度（CSS px）。
+// BUG-3666：浏览器扩展把弹窗画进网页里的 shadow root（window.__fushiRoot），这时
+// window.innerWidth 是**整张网页**的宽度（桌面上 1000+ px），按它算「装得下几列」永远
+// 装得下用户设的上限——370px 宽的弹窗里硬挤三列词典，每列一百来 px、一字一行。
+// shadow 宿主的 style.width 是弹窗基准宽（未乘宿主自己的 zoom，正是内容排版用的 CSS px），
+// 再按 `max-width: calc(100vw - 16px)` 的视口上限折算；其余宿主（app 内 / app 外整窗
+// WebView）弹窗即视口，沿用视口宽 ÷ 文档 zoom。
+function __fushiColumnLayoutWidth() {
+    const root = window.__fushiRoot;
+    const host = root && root.host;
+    if (host && host.style) {
+        const base = parseFloat(host.style.width);
+        if (base > 0) {
+            const hostZoom = parseFloat(host.style.zoom);
+            const z = (hostZoom > 0 && isFinite(hostZoom)) ? hostZoom : 1;
+            const vw = window.innerWidth || 0;
+            return vw > 0 ? Math.min(base, Math.max(0, vw - 16) / z) : base;
+        }
+    }
+    return __fushiViewportWidth() / __fushiDocumentZoom();
 }
 // documentElement 上的 CSS zoom（A−/A+ 与「词典字号」注入写在这里）；非法值按 1。
 function __fushiDocumentZoom() {
@@ -7476,6 +8389,10 @@ window.renderPopup = function() {
     // observeMasonryTargets 重新观察（幂等）。
     if (masonryObserver) {
         try { masonryObserver.disconnect(); } catch (_) { /* no-op */ }
+    }
+    // 同理：词头元数据布局的观察目标随旧词条一起换代。
+    if (__fushiHeaderMetaObserver) {
+        try { __fushiHeaderMetaObserver.disconnect(); } catch (_) { /* no-op */ }
     }
     masonryDirtyBodies.clear();
     masonryDirtyAll = false;

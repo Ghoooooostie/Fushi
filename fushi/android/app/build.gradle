@@ -64,15 +64,21 @@ def prepareMihonSourceApi = tasks.register("prepareMihonSourceApi") {
 // are vendored with the desktop sidecar (third_party/m_extension_server);
 // compiling the same files here keeps Android and the desktop sidecar on one
 // ABI. The sidecar build layers `overlay/` over `upstream_src/` (overlay wins),
-// and so does this task: the overlay holds Fushi's lib 14 + lib 16 union of
-// the ABI (data-class `Video`, hoster API, `SEpisode.fillermark`, ...) plus the
-// shared host loader `animesource/host/AnimeVideoLoader.kt`. It is a plain
-// copy of files already in the repository: no download, no hash.
+// and so does this task: the overlay holds Fushi's lib 14 + 16 + 17 union of
+// the ABI (`Video` with and without `memo`, hoster API, `SEpisode.fillermark`,
+// combined `getAnimeEpisodeUpdate`, ...) plus the shared host loader
+// `animesource/host/AnimeVideoLoader.kt` and the `torrentutils` helper that
+// extensions link against. It is a plain copy of files already in the
+// repository: no download, no hash. The one file not shared is the lib-17
+// `animesource/model/HttpServer.kt`: the sidecar's extends NanoHTTPD, which
+// the app does not ship, so the app compiles its own (same FQCN) from
+// src/main/kotlin and the loader reports local-server videos as unplayable.
 // `util/lang/CoroutinesExtensions.kt` comes along because the anime sources
 // import `eu.kanade.tachiyomi.util.lang.awaitSingle`, which Mihon's source-api
 // does not provide (its awaitSingle lives in `eu.kanade.tachiyomi.util`).
 def aniyomiSourceRoot = rootProject.file("../../third_party/m_extension_server/upstream_src/server/src/main/kotlin")
 def aniyomiOverlayRoot = rootProject.file("../../third_party/m_extension_server/overlay/server/src/main/kotlin")
+def aniyomiOverlayJavaRoot = rootProject.file("../../third_party/m_extension_server/overlay/server/src/main/java")
 def aniyomiSourceOutput = layout.buildDirectory.dir("generated/aniyomiSourceApi")
 def prepareAniyomiSourceApi = tasks.register("prepareAniyomiSourceApi", Sync) {
     File upstreamAnime = new File(aniyomiSourceRoot, "eu/kanade/tachiyomi/animesource")
@@ -87,11 +93,18 @@ def prepareAniyomiSourceApi = tasks.register("prepareAniyomiSourceApi", Sync) {
     }
     from(overlayAnime) {
         into "eu/kanade/tachiyomi/animesource"
+        exclude "model/HttpServer.kt"
+    }
+    from(new File(aniyomiOverlayRoot, "eu/kanade/tachiyomi/torrentutils")) {
+        into "eu/kanade/tachiyomi/torrentutils"
+    }
+    from(new File(aniyomiOverlayJavaRoot, "eu/kanade/tachiyomi/torrentutils")) {
+        into "eu/kanade/tachiyomi/torrentutils"
     }
     from(new File(aniyomiSourceRoot, "eu/kanade/tachiyomi/util/lang")) {
         into "eu/kanade/tachiyomi/util/lang"
     }
-    include "**/*.kt"
+    include "**/*.kt", "**/*.java"
     into aniyomiSourceOutput
 }
 
@@ -221,6 +234,12 @@ android {
         // RWKV-Instant 排程推理（**硬依赖**，AGPL-3.0-or-later）：native/fushi_rwkv/build_android_so.*
         // 产出 prebuilt/android/<abi>/libfushi_rwkv.so 随包；缺任一 ABI 时 checkFushiRwkvNative 让构建失败。
         main.jniLibs.srcDirs += '../../../native/fushi_rwkv/prebuilt/android'
+        // 音乐胖核心（曲库扫描 / 标签 / CUE，**硬依赖**）：native/fushi_music/build_android_so.*
+        // 产出 prebuilt/android/<abi>/libfushi_music.so 随包；缺任一 ABI 时 checkFushiMusicNative 让构建失败。
+        main.jniLibs.srcDirs += '../../../native/fushi_music/prebuilt/android'
+        // 语料胖核心（「我库里的例句」倒排索引，**硬依赖**）：native/fushi_corpus/build_android_so.*
+        // 产出 prebuilt/android/<abi>/libfushi_corpus.so 随包；缺任一 ABI 时 checkFushiCorpusNative 让构建失败。
+        main.jniLibs.srcDirs += '../../../native/fushi_corpus/prebuilt/android'
     }
 
     defaultConfig {
@@ -441,6 +460,48 @@ def checkFushiRwkvNative = tasks.register("checkFushiRwkvNative") {
     }
 }
 
+// 音乐胖核心 fushi_music：与 fushi_rwkv 同为硬依赖、同一判据。
+def fushiMusicAndroidDir = file('../../../native/fushi_music/prebuilt/android')
+def checkFushiMusicNative = tasks.register("checkFushiMusicNative") {
+    doLast {
+        String platforms = (project.findProperty('target-platform') ?: 'android-arm,android-arm64,android-x64').toString()
+        List<String> abis = platforms.split(',').collect { it.trim() }.findAll { !it.isEmpty() }
+            .collect { fushiComputeAbiOfPlatform[it] ?: it }
+        List<String> missing = abis.findAll { abi ->
+            !new File(fushiMusicAndroidDir, "${abi}/libfushi_music.so").isFile()
+        }
+        if (!missing.isEmpty()) {
+            throw new GradleException(
+                "fushi_music is a required native dependency, but libfushi_music.so is missing for ABI(s) " +
+                "${missing.join(', ')} under ${fushiMusicAndroidDir}. Build it first: " +
+                "native/fushi_music/build_android_so.ps1 -Abis ${abis.join(',')} (Windows) or " +
+                "bash native/fushi_music/build_android_so.sh <ndk-root> ${abis.join(' ')} " +
+                "(needs Rust + cargo-ndk; see docs/agent/build.md).")
+        }
+    }
+}
+
+// 语料胖核心 fushi_corpus：与 fushi_music 同为硬依赖、同一判据。
+def fushiCorpusAndroidDir = file('../../../native/fushi_corpus/prebuilt/android')
+def checkFushiCorpusNative = tasks.register("checkFushiCorpusNative") {
+    doLast {
+        String platforms = (project.findProperty('target-platform') ?: 'android-arm,android-arm64,android-x64').toString()
+        List<String> abis = platforms.split(',').collect { it.trim() }.findAll { !it.isEmpty() }
+            .collect { fushiComputeAbiOfPlatform[it] ?: it }
+        List<String> missing = abis.findAll { abi ->
+            !new File(fushiCorpusAndroidDir, "${abi}/libfushi_corpus.so").isFile()
+        }
+        if (!missing.isEmpty()) {
+            throw new GradleException(
+                "fushi_corpus is a required native dependency, but libfushi_corpus.so is missing for ABI(s) " +
+                "${missing.join(', ')} under ${fushiCorpusAndroidDir}. Build it first: " +
+                "native/fushi_corpus/build_android_so.ps1 -Abis ${abis.join(',')} (Windows) or " +
+                "bash native/fushi_corpus/build_android_so.sh <ndk-root> ${abis.join(' ')} " +
+                "(needs Rust + cargo-ndk; see docs/agent/build.md).")
+        }
+    }
+}
+
 tasks.configureEach { task ->
     if (task.name.startsWith("compile") && task.name.endsWith("Kotlin")) {
         task.dependsOn(prepareMihonSourceApi)
@@ -449,5 +510,7 @@ tasks.configureEach { task ->
     if (task.name == "preBuild") {
         task.dependsOn(checkFushiComputeNative)
         task.dependsOn(checkFushiRwkvNative)
+        task.dependsOn(checkFushiMusicNative)
+        task.dependsOn(checkFushiCorpusNative)
     }
 }

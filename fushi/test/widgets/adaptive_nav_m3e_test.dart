@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_navigation.dart';
+import 'package:fushi/src/utils/adaptive/nav_shape.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/utils/misc/platform_utils.dart';
 
@@ -12,7 +13,9 @@ import 'package:fushi/src/utils/misc/platform_utils.dart';
 //
 // MD3 设计系统的应用级导航按 M3 Expressive 规格：
 // - 宽屏 navigation rail 有收起（96）/ 展开（220，取代旧侧边抽屉）两态，顶部
-//   菜单钮切换，宽度走 spatial 弹簧；两态都恒显示文字标签；
+//   菜单钮切换，宽度走 spatial 弹簧；展开态恒显示文字标签，收起态纯图标
+//   （2026-10-23 用户「侧边栏收起不显示文字」，PR #2476 的 M3E 侧栏），名称
+//   进 tooltip 与无障碍语义；
 // - 底栏（flexible navigation bar）64 高、标签恒显示（首页 ≥600 走 rail，
 //   M3E 的横排目的地不在底栏里做）；
 // - 活动指示器选中时按 expressive 弹簧展开，悬停 / 按压状态层与指示器同框；
@@ -120,10 +123,32 @@ void main() {
       expect(tester.takeException(), isNull);
     });
 
-    testWidgets('两态都恒显示全部文字标签', (WidgetTester tester) async {
+    testWidgets('收起态纯图标、名称进 tooltip 与语义；展开态恒显示全部文字标签', (
+      WidgetTester tester,
+    ) async {
+      final SemanticsHandle semantics = tester.ensureSemantics();
       final ValueNotifier<bool> expanded = await pumpToggleRail(tester);
       for (final AdaptiveNavItem item in items) {
-        expect(labelPainted(tester, item.label), isTrue, reason: item.label);
+        expect(
+          find.text(item.label),
+          findsNothing,
+          reason: '${item.label}：收起态不画文字',
+        );
+        expect(find.byIcon(item.icon), findsOneWidget, reason: item.label);
+        // 收起格的 tooltip 不进语义（名称由外层 Semantics 报），flutter_test 的
+        // byTooltip 只认 SDK 旧 Tooltip 类型，这里直接按 material_ui 的 Tooltip 找。
+        expect(
+          find.byWidgetPredicate(
+            (Widget w) => w is Tooltip && w.message == item.label,
+          ),
+          findsOneWidget,
+          reason: '${item.label}：名称要进 tooltip',
+        );
+        expect(
+          find.bySemanticsLabel(item.label),
+          findsOneWidget,
+          reason: '${item.label}：名称仍要进无障碍语义',
+        );
       }
       expanded.value = true;
       await tester.pumpAndSettle();
@@ -135,6 +160,7 @@ void main() {
       final Rect label = tester.getRect(find.text('视频'));
       expect(icon.right, lessThan(label.left));
       expect((icon.center.dy - label.center.dy).abs(), lessThan(2));
+      semantics.dispose();
     });
 
     testWidgets('减弱动态效果下宽度同帧到位', (WidgetTester tester) async {
@@ -315,7 +341,7 @@ void main() {
 
     testWidgets('手机宽：竖排目的地、按标签行高精确适配、全部标签可见', (WidgetTester tester) async {
       await pumpBar(tester, width: 420);
-      // 胶囊高 = max(64, 药丸 32 + 缝 4 + 标签实际行高 + 上下留白)（fb665edc33a：
+      // 胶囊高 = max(64, 选中多边形 40 + 缝 2 + 标签实际行高 + 上下留白)（fb665edc33a：
       // 按标签行高撑开，免得标签下半截被圆角裁掉），不再是恒 64。
       final Rect bar = tester.getRect(find.byKey(fushiMaterialNavKey));
       final double capsule =
@@ -323,7 +349,7 @@ void main() {
           kAdaptiveNavBarFloatingTopGap -
           kAdaptiveNavFloatingMargin;
       // 64 是下限而非唯一尺寸，但不能只断言 >= 64：任意多出的空白也会假绿。
-      // fb665edc33a 的几何契约：上下各 10、药丸、间隔 4、真实标签行高，
+      // fb665edc33a 的几何契约：上下各 10、多边形槽 40、间隔 2、真实标签行高，
       // 向上取整后至少 64；字体度量来自当前宿主，不能按此次 CI 的 88 硬编码。
       final BuildContext barContext = tester.element(
         find.byKey(fushiMaterialNavKey),
@@ -342,13 +368,11 @@ void main() {
       final double labelHeight = labelMeasure.height;
       labelMeasure.dispose();
       const double verticalPadding = 10;
-      const double labelGap = 4;
+      const double shapeSlot = 40;
+      const double labelGap = 2;
       final double expectedCapsule = math.max(
         kAdaptiveNavBarContentHeight,
-        (2 * verticalPadding +
-                AdaptiveNavTileMetrics.pillHeight +
-                labelGap +
-                labelHeight)
+        (2 * verticalPadding + shapeSlot + labelGap + labelHeight)
             .ceilToDouble(),
       );
       expect(capsule, expectedCapsule, reason: '胶囊只为标签行高让位，不得凭空增加高度');
@@ -368,20 +392,17 @@ void main() {
           reason: '${item.label} 标签完整落在胶囊里',
         );
       }
-      // 悬停 / 按压状态层与活动指示器同框（56×32 全圆角药丸）。
+      // 悬停 / 按压状态层与选中多边形同框（带标签时 40 的方槽，圆形裁剪）。
       for (final AdaptiveNavItem item in items) {
         expect(
           stateLayerRect(tester, item.label).size,
-          const Size(
-            AdaptiveNavTileMetrics.fullPillWidth,
-            AdaptiveNavTileMetrics.pillHeight,
-          ),
+          const Size.square(40),
           reason: item.label,
         );
       }
     });
 
-    testWidgets('活动指示器按弹簧展开：中途介于两端，落点精确 56 且实底', (WidgetTester tester) async {
+    testWidgets('选中高亮是专属多边形：墨滴滑动途中不画，落定后在新项由圆变出', (WidgetTester tester) async {
       int index = 0;
       tester.view.physicalSize = const Size(420, 800);
       tester.view.devicePixelRatio = 1;
@@ -405,65 +426,44 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      Container pillOf(IconData icon) => tester.widget<Container>(
-        find
-            .ancestor(
-              of: find.byIcon(icon),
-              matching: find.byWidgetPredicate(
-                (Widget w) => w is Container && w.decoration is BoxDecoration,
-              ),
-            )
-            .first,
+      List<NavMorphShape> visibleShapes() => tester
+          .widgetList<NavMorphShape>(find.byType(NavMorphShape))
+          .where((NavMorphShape w) => w.visible)
+          .toList();
+      Rect visibleShapeRect() => tester.getRect(
+        find.byWidgetPredicate((Widget w) => w is NavMorphShape && w.visible),
       );
-      double pillWidthOf(IconData icon) => tester
-          .getSize(
-            find
-                .ancestor(
-                  of: find.byIcon(icon),
-                  matching: find.byWidgetPredicate(
-                    (Widget w) =>
-                        w is Container && w.decoration is BoxDecoration,
-                  ),
-                )
-                .first,
-          )
-          .width;
+
+      expect(visibleShapes(), hasLength(1));
+      expect(
+        visibleShapeRect().contains(
+          tester.getCenter(find.byIcon(Icons.home).hitTestable()),
+        ),
+        isTrue,
+      );
 
       await tester.tap(find.text('书架'));
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 40));
-      final double mid = pillWidthOf(Icons.menu_book_outlined);
-      expect(mid, greaterThan(AdaptiveNavTileMetrics.pillHeight));
-      expect(mid, lessThan(AdaptiveNavTileMetrics.fullPillWidth));
-
-      // 回弹最多超出 8（画在格内边距里），不会无限扩张。
-      double maxSeen = 0;
-      for (int i = 0; i < 30; i++) {
-        await tester.pump(const Duration(milliseconds: 16));
-        final double w = pillWidthOf(Icons.menu_book_outlined);
-        if (w > maxSeen) maxSeen = w;
-      }
-      expect(
-        maxSeen,
-        lessThanOrEqualTo(AdaptiveNavTileMetrics.fullPillWidth + 8),
-      );
+      // 墨滴在路上：两格都不画自己的多边形。
+      expect(visibleShapes(), isEmpty);
 
       await tester.pumpAndSettle();
+      final List<NavMorphShape> settled = visibleShapes();
+      expect(settled, hasLength(1));
+      expect(settled.single.color, ThemeData().colorScheme.tertiary);
       expect(
-        pillWidthOf(Icons.menu_book_outlined),
-        AdaptiveNavTileMetrics.fullPillWidth,
+        settled.single.shape,
+        isNot(MaterialShapes.circle),
+        reason: '落定后是专属形状而不是圆',
       );
-      final BoxDecoration settled =
-          pillOf(Icons.menu_book_outlined).decoration! as BoxDecoration;
       expect(
-        settled.color,
-        ThemeData().colorScheme.tertiary,
-        reason: '静止后与目标色逐值相同',
+        visibleShapeRect().contains(
+          tester.getCenter(find.byIcon(Icons.menu_book_outlined).hitTestable()),
+        ),
+        isTrue,
+        reason: '多边形落在新选中项的图标背后',
       );
-      // 取消选中的那一格收拢成透明。
-      final BoxDecoration old =
-          pillOf(Icons.home_outlined).decoration! as BoxDecoration;
-      expect(old.color, Colors.transparent);
     });
   });
 }

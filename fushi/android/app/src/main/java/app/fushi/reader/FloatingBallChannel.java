@@ -32,6 +32,10 @@ import io.flutter.plugin.common.MethodChannel;
  *       {@code ocr_hint / ocr_no_text / ocr_model_unavailable / ocr_failed /
  *       ocr_notification}（截屏 OCR 的提示文案），都缺省回退英文；</li>
  *   <li>{@code startScreenOcr.labels}：同上的 OCR 文案，缺省时沿用系统球已存的 labels。</li>
+ *   <li>{@code startSystemBall.tapAction}：收起态点球直接执行的动作（{@code clipboard} /
+ *       {@code screen_ocr}），此时长按才展开按钮；缺省 / 空 = 点球展开。</li>
+ *   <li>{@code startSystemBall.showLabels}：展开时按钮旁带文字，缺省 true；
+ *       {@code startSystemBall.showOpenApp}：菜单里有「打开 Fushi」，缺省 true。</li>
  *   <li>{@code startSystemBall.icons}：按钮 id → Material Icons 码位（与应用内球同一颗
  *       IconData），{@code startSystemBall.colors}：{@code surface / onSurface / primary}
  *       的 ARGB。都用来把系统球画得和应用内球一样（BUG-2793），缺省回退首字 / 默认配色。</li>
@@ -48,6 +52,12 @@ final class FloatingBallChannel {
     static final String METHOD_OPEN_CAMERA_OCR = "openCameraOcr";
     /** 原生 → Dart：系统球「立即同步」，Fushi 已被拉到前台，请跑一轮同步。 */
     static final String METHOD_OPEN_SYNC = "openSync";
+    /** 原生 → Dart：系统球「切换配置」，Fushi 已被拉到前台，请弹出配置选择。 */
+    static final String METHOD_OPEN_PROFILE_SWITCH = "openProfileSwitch";
+    /** 原生 → Dart：系统球「切换配置」要在球旁弹菜单，请回配置列表 {@code [{id, label, checked}]}。 */
+    static final String METHOD_GET_PROFILE_MENU = "getProfileMenu";
+    /** 原生 → Dart：在那个菜单里选了 {@code {id}}，请原地切过去并回一句 Toast 文案。 */
+    static final String METHOD_SWITCH_PROFILE_TO = "switchProfileTo";
     /** 原生 → Dart：截屏 OCR 报模型未就绪，Fushi 已被拉到前台，请打开系统 OCR 配置。 */
     static final String METHOD_OPEN_SYSTEM_OCR_SETUP = "openSystemOcrSetup";
     /** 原生 → Dart：用户在系统球 / 常驻通知上点了关闭，请关掉「应用外」开关。 */
@@ -71,6 +81,8 @@ final class FloatingBallChannel {
 
     /** 同 {@link #pendingOpenLookupPage}，排的是系统球「立即同步」。只在主线程读写。 */
     private static boolean pendingSync = false;
+    /** 同 {@link #pendingOpenLookupPage}，排的是系统球「切换配置」。只在主线程读写。 */
+    private static boolean pendingProfileSwitch = false;
     /** 同 {@link #pendingOpenLookupPage}，排的是「打开系统 OCR 配置」。只在主线程读写。 */
     private static boolean pendingSystemOcrSetup = false;
 
@@ -198,6 +210,146 @@ final class FloatingBallChannel {
         }
     }
 
+    /** 系统球配置菜单的一项（Dart {@code getProfileMenu} 回来的）。 */
+    static final class ProfileMenuItem {
+        final int id;
+        final String label;
+        final boolean checked;
+
+        ProfileMenuItem(int id, String label, boolean checked) {
+            this.id = id;
+            this.label = label;
+            this.checked = checked;
+        }
+    }
+
+    interface ProfileMenuCallback {
+        /** Dart 回了配置列表（可能为空）。主线程。 */
+        void onItems(List<ProfileMenuItem> items);
+
+        /** 主引擎不在 / Dart 没接住：调用方退回「拉起 Fushi 再选」。主线程。 */
+        void onUnavailable();
+    }
+
+    interface MessageCallback {
+        void onMessage(String message);
+    }
+
+    /**
+     * 系统球「切换配置」：向主引擎上的 Dart 要配置列表，好在球旁弹菜单、不拉起
+     * Fushi。主引擎不在（或调用失败）走 {@link ProfileMenuCallback#onUnavailable}。
+     * 主线程调用。
+     */
+    static void requestProfileMenu(@NonNull ProfileMenuCallback callback) {
+        MethodChannel ch = channel;
+        if (ch == null) {
+            Log.i(TAG, "getProfileMenu: main engine not attached; falling back");
+            callback.onUnavailable();
+            return;
+        }
+        try {
+            ch.invokeMethod(METHOD_GET_PROFILE_MENU, null, new MethodChannel.Result() {
+                @Override
+                public void success(@Nullable Object result) {
+                    List<ProfileMenuItem> items = parseProfileMenu(result);
+                    if (items == null) {
+                        Log.w(TAG, "getProfileMenu: Dart returned no list (" + result + ")");
+                        callback.onUnavailable();
+                    } else {
+                        callback.onItems(items);
+                    }
+                }
+
+                @Override
+                public void error(@NonNull String code, @Nullable String message,
+                        @Nullable Object details) {
+                    Log.w(TAG, "getProfileMenu failed: " + code + " " + message);
+                    callback.onUnavailable();
+                }
+
+                @Override
+                public void notImplemented() {
+                    Log.w(TAG, "getProfileMenu: not implemented on the Dart side");
+                    callback.onUnavailable();
+                }
+            });
+        } catch (RuntimeException e) {
+            Log.w(TAG, "getProfileMenu could not be delivered", e);
+            callback.onUnavailable();
+        }
+    }
+
+    /** {@code getProfileMenu} 的回值；不是列表（Dart 没装处理器回了 null）返回 null。 */
+    @Nullable
+    private static List<ProfileMenuItem> parseProfileMenu(@Nullable Object raw) {
+        if (!(raw instanceof List)) return null;
+        List<ProfileMenuItem> items = new ArrayList<>();
+        for (Object entry : (List<?>) raw) {
+            if (!(entry instanceof Map)) continue;
+            Map<?, ?> map = (Map<?, ?>) entry;
+            Object id = map.get("id");
+            Object label = map.get("label");
+            if (!(id instanceof Number) || !(label instanceof String)) continue;
+            items.add(new ProfileMenuItem(
+                    ((Number) id).intValue(),
+                    (String) label,
+                    Boolean.TRUE.equals(map.get("checked"))));
+        }
+        return items;
+    }
+
+    /**
+     * 系统球配置菜单里选了 [profileId]：交给 Dart 原地切，把它回的一句话（成功 /
+     * 失败）交给 [onMessage] 显示。主引擎此刻不在就什么也不做（菜单刚由它给出）。
+     * 主线程调用。
+     */
+    static void switchProfileTo(int profileId, @NonNull MessageCallback onMessage) {
+        MethodChannel ch = channel;
+        if (ch == null) return;
+        Map<String, Object> args = new HashMap<>();
+        args.put("id", profileId);
+        try {
+            ch.invokeMethod(METHOD_SWITCH_PROFILE_TO, args, new MethodChannel.Result() {
+                @Override
+                public void success(@Nullable Object result) {
+                    if (result instanceof String && !((String) result).isEmpty()) {
+                        onMessage.onMessage((String) result);
+                    }
+                }
+
+                @Override
+                public void error(@NonNull String code, @Nullable String message,
+                        @Nullable Object details) {
+                    Log.w(TAG, "switchProfileTo failed: " + code + " " + message);
+                }
+
+                @Override
+                public void notImplemented() {}
+            });
+        } catch (RuntimeException e) {
+            Log.w(TAG, "switchProfileTo could not be delivered", e);
+        }
+    }
+
+    /**
+     * 系统球「切换配置」的退路（主引擎不在、没法在球旁弹菜单）：主引擎在就直接推
+     * {@code openProfileSwitch}（Fushi 随后被拉到前台，Dart 弹配置选择）；不在就排队，
+     * 由冷启动的 Dart 经 {@code takePendingProfileSwitch} 来取。主线程调用。
+     */
+    static void requestSwitchProfile() {
+        MethodChannel ch = channel;
+        if (ch == null) {
+            pendingProfileSwitch = true;
+            return;
+        }
+        try {
+            ch.invokeMethod(METHOD_OPEN_PROFILE_SWITCH, null);
+        } catch (RuntimeException e) {
+            Log.w(TAG, "openProfileSwitch could not be delivered; queued", e);
+            pendingProfileSwitch = true;
+        }
+    }
+
     /**
      * 截屏 OCR 报模型未就绪（BUG-2906）：主引擎在就直接推 {@code openSystemOcrSetup}
      * （Fushi 随后被拉到前台，Dart 弹配置）；不在就排队，由冷启动的 Dart 经
@@ -262,7 +414,10 @@ final class FloatingBallChannel {
                         stringMap(call.argument("labels")),
                         intMap(call.argument("icons")),
                         intMap(call.argument("colors")),
-                        call.argument("ocrLanguage"));
+                        call.argument("ocrLanguage"),
+                        call.argument("tapAction"),
+                        call.argument("showLabels"),
+                        call.argument("showOpenApp"));
                 if (FloatingBallService.getInstance() == null) {
                     Intent svc = new Intent(app, FloatingBallService.class);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -291,6 +446,15 @@ final class FloatingBallChannel {
                 FloatingBallService.startPopupLookup(context);
                 result.success(null);
                 return;
+            case "setScreenOcrOptions": {
+                // 截屏识字的两个用户选项（保持截屏会话 / 制卡带图），见 ScreenOcrOptions。
+                Boolean keep = call.argument("keepSession");
+                Boolean cardImage = call.argument("cardImage");
+                ScreenOcrOptions.save(app, keep != null && keep,
+                        cardImage == null || cardImage);
+                result.success(null);
+                return;
+            }
             case "takePendingOpenLookupPage": {
                 boolean pending = pendingOpenLookupPage;
                 pendingOpenLookupPage = false;
@@ -306,6 +470,12 @@ final class FloatingBallChannel {
             case "takePendingSync": {
                 boolean pending = pendingSync;
                 pendingSync = false;
+                result.success(pending);
+                return;
+            }
+            case "takePendingProfileSwitch": {
+                boolean pending = pendingProfileSwitch;
+                pendingProfileSwitch = false;
                 result.success(pending);
                 return;
             }

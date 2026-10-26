@@ -19,6 +19,8 @@ import 'package:fushi/src/anki/anki_view_model.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/lookup/gal_hook_text_overlay_controller.dart';
 import 'package:fushi/src/lookup/gal_lookup_surface_profile.dart';
+import 'package:fushi/src/lookup/overlay_stat_source.dart'
+    show overlayMinedSentenceGameOrigin;
 import 'package:fushi/src/lookup/sentence_extraction.dart';
 import 'package:fushi/src/mining/advanced_mining/advanced_mining_capabilities.dart';
 import 'package:fushi/src/mining/gal_hook_failure_text.dart';
@@ -718,6 +720,21 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
   @override
   String get dictionarySourceType => kStatSourceGame;
 
+  /// 制卡历史记下「哪个游戏」：与 app 外浮窗同一判据（有归属的 galgame 会话）。
+  @override
+  ({String key, String? title})? get minedSentenceOrigin {
+    final ({String gameId, String? title})? game =
+        overlayMinedSentenceGameOrigin();
+    return game == null ? null : (key: game.gameId, title: game.title);
+  }
+
+  @override
+  CardSourceLink? get miningCardSourceLink {
+    final ({String gameId, String? title})? game =
+        overlayMinedSentenceGameOrigin();
+    return game == null ? null : CardSourceLink.tryGame(gameId: game.gameId);
+  }
+
   @override
   ModuleId? get popupDockModule => ModuleId.games;
 
@@ -883,7 +900,10 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
       unawaited(recordMined());
       unawaited(recordMinedSentence(effectiveFields, outcome.noteId));
     }
-    FushiToast.showMine(msg: described.message, status: described.status);
+    // 失败原因交给弹窗就地说，不另弹 toast（见 MinePopupResult.message）。
+    if (described.success) {
+      FushiToast.showMine(msg: described.message, status: described.status);
+    }
     if (result.sentenceAudioMissing) {
       // 卡片建成了、只是缺句子音频 = 部分成功。
       FushiToast.show(
@@ -903,7 +923,7 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
     if (described.success) {
       return MinePopupResult.mined(outcome);
     }
-    return MinePopupResult.failed(outcome);
+    return MinePopupResult.failed(outcome, message: described.message);
   }
 
   Future<void> _toggleExternalWindowMode() async {
@@ -1644,6 +1664,29 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
 
   @override
   Widget build(BuildContext context) {
+    // BUG-3685：探针挂在本页路由里，路由被压住 / 回到栈顶时刷新根 Overlay 浮层。
+    return LookupOwnerRouteProbe(
+      onChanged: _onLookupOwnerRouteChanged,
+      child: _buildPage(context),
+    );
+  }
+
+  /// BUG-3685（反馈 5yWS2o6U6q）：查词浮层挂在根 Overlay、跟随本页路由。别的整页
+  /// 推上来（设置 / 反馈……）时本页不再是栈顶，[DictionaryPageMixin] 把浮层停靠屏外、
+  /// 撤掉整屏 barrier——否则 `Overlay.rearrange` 把浮层排回最顶，压住新页面、吃掉点击。
+  @override
+  ModalRoute<Object?>? get lookupOwnerRoute =>
+      mounted ? ModalRoute.of(context) : null;
+
+  /// [LookupOwnerRouteProbe] 回报本页路由栈顶状态变了：帧后刷新根 Overlay 浮层 entry
+  /// （它只在自己 build 时读 [lookupOwnerRoute]；探针回调在 build 阶段，不能同步刷新）。
+  void _onLookupOwnerRouteChanged() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _syncPopupOverlay();
+    });
+  }
+
+  Widget _buildPage(BuildContext context) {
     final bool captureSetupVisible = TickerMode.of(context);
     final List<TexthookerTextThread> textThreads = _session.textThreads;
     final String? selectedTextThreadKey = _session.selectedTextThreadKey;
@@ -1992,6 +2035,13 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
                     compact: compact,
                     actions: sessionActions,
                     footer: <Widget>[
+                      // 色块嵌在 footer 的 surface 容器里：四周留白，别贴着容器边
+                      // 和下方的游戏内查词行。
+                      if (state.knifeTextServiceIniPath != null)
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                          child: _buildKnifeTextServiceNotice(state),
+                        ),
                       if (Platform.isWindows)
                         GalAttachedLookupWorkbench(
                           controller: GalHookTextOverlayController
@@ -2160,6 +2210,30 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
               remember: true,
             ),
       ),
+    );
+  }
+
+  /// knife 的台词服务没开（附着到已在运行的游戏）：说明原因，并经用户点击把开关写进
+  /// knife.ini。写入后要重启游戏才生效——服务只在游戏启动时读开关。
+  Widget _buildKnifeTextServiceNotice(GalHookSessionState state) {
+    if (state.knifeTextServiceIniWritten) {
+      return FushiInlineNotice(
+        severity: FushiNoticeSeverity.success,
+        message: t.game_knife_text_service_written,
+      );
+    }
+    return FushiInlineNotice(
+      severity: FushiNoticeSeverity.warning,
+      title: t.game_knife_text_service_off_title,
+      message: state.knifeTextServiceIniWriteFailed
+          ? t.game_knife_text_service_write_failed
+          : t.game_knife_text_service_off_body,
+      actions: <Widget>[
+        FushiFilledButton.tonal(
+          onPressed: _session.enableKnifeTextServiceInIni,
+          child: Text(t.game_knife_text_service_enable_action),
+        ),
+      ],
     );
   }
 
@@ -3250,7 +3324,10 @@ class _SessionHeroBadge extends StatelessWidget {
         decoration: ShapeDecoration(
           color: eink ? Colors.transparent : fill,
           shape: active
-              ? FushiCookieBorder(lobes: 4, side: side)
+              ? MaterialShapeBorder(
+                  shape: MaterialShapes.cookie4Sided,
+                  side: side,
+                )
               : CircleBorder(side: side),
         ),
         child: SizedBox.square(

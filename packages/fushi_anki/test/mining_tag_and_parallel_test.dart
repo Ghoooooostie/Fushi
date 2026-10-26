@@ -128,6 +128,35 @@ void main() {
       expect(await tagsForConnect('fushi extra'), <String>['fushi', 'extra']);
     });
 
+    // 反馈 ORHr4_WDOy：全局标签（所有 Profile）+ Profile 标签叠加，全局在前、去重。
+    test('global tags are added before profile tags, de-duplicated', () async {
+      final service = _RecordingAnkiConnectService();
+      final repo = _ConfiguredAnkiConnectRepository(
+        service: service,
+        settings: _settingsWithTags(
+          'lapis shared',
+        ).copyWith(globalTags: 'jp shared'),
+      );
+      final outcome = await repo.mineEntry(
+        rawPayloadJson: _payload,
+        context: const AnkiMiningContext(sentence: ''),
+      );
+      expect(outcome.result, MineResult.success);
+      expect(service.addedTags.single, <String>[
+        'jp',
+        'shared',
+        'lapis',
+        'fushi',
+      ]);
+    });
+
+    test('globalTags round-trips through JSON and defaults to empty', () {
+      const AnkiSettings s = AnkiSettings(tags: 'a', globalTags: 'g');
+      expect(AnkiSettings.fromJson(s.toJson()).globalTags, 'g');
+      expect(AnkiSettings.fromJson(const <String, dynamic>{}).globalTags, '');
+      expect(const AnkiSettings(tags: 'a').noteTags, 'a');
+    });
+
     test('AnkiDroid backend appends fushi identically', () async {
       TestWidgetsFlutterBinding.ensureInitialized();
       const MethodChannel channel = MethodChannel('app.fushi.reader/anki');
@@ -251,6 +280,17 @@ void main() {
         },
       );
 
+      // 所有者 2026-10-24：音乐卡单独打 `music`，不再沿用 `book`。
+      test(
+        'music source -> appends both fushi and music (AnkiConnect)',
+        () async {
+          expect(
+            await tagsForConnect('', source: AnkiMiningSource.music),
+            <String>['fushi', 'music'],
+          );
+        },
+      );
+
       test(
         'null source -> only fushi, no category tag (AnkiConnect)',
         () async {
@@ -290,6 +330,10 @@ void main() {
         expect(await tagsForDroid('', source: AnkiMiningSource.game), <String>[
           'fushi',
           'game',
+        ]);
+        expect(await tagsForDroid('', source: AnkiMiningSource.music), <String>[
+          'fushi',
+          'music',
         ]);
         expect(await tagsForDroid('foo', source: null), <String>[
           'foo',

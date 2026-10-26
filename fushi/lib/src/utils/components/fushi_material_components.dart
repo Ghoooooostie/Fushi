@@ -194,6 +194,7 @@ class FushiCard extends StatefulWidget {
     this.variant = FushiCardVariant.filled,
     this.tone = FushiCardTone.neutral,
     this.morph,
+    this.stateLayer = true,
   });
 
   /// M3 卡片三类容器（填充 / 抬升 / 描边），默认填充。调用点显式 [color] /
@@ -209,6 +210,11 @@ class FushiCard extends StatefulWidget {
   /// null = 分组列表格（[grouped]）开、独立卡片关——M3E 的形变是列表分段的
   /// 语言，独立卡片的反馈是抬升 + 按压回弹。
   final bool? morph;
+
+  /// false = 悬停 / 按下不画状态层（MD3 InkWell 透明、无水波；Apple 行不铺
+  /// 底色）。封面卡（[shelfCoverCard]）用：卡面透明，状态层会在封面后面露出
+  /// 一块底板，悬停反馈改由 FushiHoverLift 放大与材质扫光承担。
+  final bool stateLayer;
 
   final Widget child;
   final EdgeInsetsGeometry? padding;
@@ -480,9 +486,16 @@ class _FushiCardState extends State<FushiCard>
                     borderRadius: radius,
                     // 柔和状态层（悬停 8% / 按下 10% onSurface），水波
                     // 由外层 Material 裁在圆角里；墨水屏交回默认。
-                    overlayColor: eink
+                    overlayColor: !widget.stateLayer
+                        ? const WidgetStatePropertyAll<Color>(
+                            Colors.transparent,
+                          )
+                        : eink
                         ? null
                         : fushiMd3ContentStateLayer(scheme),
+                    splashFactory: widget.stateLayer
+                        ? null
+                        : NoSplash.splashFactory,
                     child: content,
                   ),
           ),
@@ -514,6 +527,7 @@ class _FushiCardState extends State<FushiCard>
         selected: widget.selected,
         // 卡片选中靠下面的强调色描边，不铺选中底。
         selectedBackground: Colors.transparent,
+        stateBackground: widget.stateLayer,
         focusable: FushiFocusRoot.maybeControllerOf(context) == null,
         borderRadius: radius,
         child: body,
@@ -1091,6 +1105,7 @@ class FushiSearchField extends StatelessWidget {
           tooltip: t.clear,
           size: iconSize,
           padding: padding,
+          padTouchTarget: true,
           onTap: () {
             onClear?.call();
             if (focusNode.canRequestFocus) {
@@ -1477,7 +1492,9 @@ class FushiTouchTargetPadding extends StatelessWidget {
       container: true,
       child: _FushiTouchTargetBox(
         minSize: Size(minWidth, minHeight),
-        child: child,
+        // 让出的边距里的触点会转发进 [child]：里面的紧凑动作钮据此把命中 /
+        // 语义区域竖向撑满这条带（[FushiIconButton.padTouchTarget]）。
+        child: FushiTouchTargetBand(height: minHeight, child: child),
       ),
     );
   }
@@ -1763,6 +1780,7 @@ class _FushiTextFieldState extends State<FushiTextField> {
             tooltip: t.clear,
             size: iconSize,
             padding: padding,
+            padTouchTarget: true,
             onTap: () {
               controller.clear();
               widget.onChanged?.call('');
@@ -1777,6 +1795,7 @@ class _FushiTextFieldState extends State<FushiTextField> {
                 : t.text_field_password_hide,
             size: iconSize,
             padding: padding,
+            padTouchTarget: true,
             onTap: () => setState(() => _obscured = !_obscured),
           ),
         if (assist != null) assist,
@@ -1945,6 +1964,7 @@ Widget? _fushiTextFieldInputSuffix({
   ValueChanged<String>? onChanged,
   double? iconSize,
   EdgeInsets? padding,
+  bool padTouchTarget = true,
 }) {
   if (controller == null) return null;
   final TargetPlatform platform = Theme.of(context).platform;
@@ -1958,6 +1978,7 @@ Widget? _fushiTextFieldInputSuffix({
       tooltip: t.on_screen_keyboard,
       size: iconSize,
       padding: padding,
+      padTouchTarget: padTouchTarget,
       onTap: () =>
           showGamepadKeyboard(context, controller, onChanged: onChanged),
     );
@@ -1967,6 +1988,7 @@ Widget? _fushiTextFieldInputSuffix({
     tooltip: t.paste,
     size: iconSize,
     padding: padding,
+    padTouchTarget: padTouchTarget,
     onTap: () async {
       if (await gamepadKeyboardPaste(controller)) {
         onChanged?.call(controller.text);
@@ -4288,7 +4310,7 @@ bool fushiIsCollapsibleHeaderAction(Widget item) =>
     item is FushiIconButton &&
     item.onTap != null &&
     !item.alwaysVisible &&
-    !item.selected;
+    item.selected != true;
 
 /// [actions] 里可收纳动作的收纳顺序（最先收的在前）：
 /// [FushiIconButton.overflowPriority] 低的先收，同优先级越靠后越先收。纯函数。
@@ -7036,9 +7058,14 @@ class FushiCompactSearchRow extends StatelessWidget {
     final String closeTooltip = MaterialLocalizations.of(
       context,
     ).closeButtonTooltip;
+    // 这一行的粘贴钮不是输入框尾部动作，而是与关闭 / 搜索钮（36）并排的
+    // 行内按钮：跟它们同一尺寸，不单独撑到 48（单独撑高会让它成为整行最靠上
+    // 的焦点目标，初始焦点从关闭钮跳到粘贴钮）。这一行三枚 36 钮的触控区是
+    // 另一处待补的缺口。
     final Widget? keyboardSuffix = _fushiTextFieldInputSuffix(
       context: context,
       controller: controller,
+      padTouchTarget: false,
     );
     // 与 [FushiSearchField] 同一形态语言：MD3 是 surfaceContainerHigh 填充胶囊。
     // Apple 复用 [FushiSearchField] 的 Apple 分支（[FushiTextFieldControl] 认出

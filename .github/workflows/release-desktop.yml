@@ -382,6 +382,7 @@ jobs:
           dandanplay-app-secret: ${{ secrets.DANDANPLAY_APP_SECRET }}
           tmdb-api-key: ${{ secrets.TMDB_API_KEY }}
           opensubtitles-api-key: ${{ secrets.OPENSUBTITLES_API_KEY }}
+          acoustid-api-key: ${{ secrets.ACOUSTID_API_KEY }}
       - name: Flutter pub get
         working-directory: fushi
         run: flutter pub get
@@ -606,6 +607,18 @@ jobs:
         run: |
           powershell -ExecutionPolicy Bypass -File native/fushi_rwkv/build_windows_dll.ps1
           if ($LASTEXITCODE -ne 0) { throw "build_windows_dll.ps1 (fushi_rwkv) failed" }
+      # 音乐胖核心 fushi_music（曲库扫描 / 标签 / CUE）同为 app 硬依赖：与上一步 fushi_rwkv 同一口径。
+      - name: Build fushi_music DLL
+        shell: pwsh
+        run: |
+          powershell -ExecutionPolicy Bypass -File native/fushi_music/build_windows_dll.ps1
+          if ($LASTEXITCODE -ne 0) { throw "build_windows_dll.ps1 (fushi_music) failed" }
+      # 语料胖核心 fushi_corpus（「我库里的例句」倒排索引）同为 app 硬依赖：与上一步 fushi_corpus 同一口径。
+      - name: Build fushi_corpus DLL
+        shell: pwsh
+        run: |
+          powershell -ExecutionPolicy Bypass -File native/fushi_corpus/build_windows_dll.ps1
+          if ($LASTEXITCODE -ne 0) { throw "build_windows_dll.ps1 (fushi_corpus) failed" }
       # BUG-1589 根因（run 31700342531 的 -v 日志确证）：`aot_elf_release` 阶段
       # gen_snapshot.exe 以 -1073741571 = 0xC00000FD（栈溢出）退出——本仓 AOT 规模
       # 超出其默认栈保留。本机 SDK 早已用 `editbin /STACK:128M` 打过同款补丁
@@ -694,6 +707,24 @@ jobs:
           $dll = "fushi\build\windows\x64\runner\Release\fushi_rwkv.dll"
           if (-not (Test-Path -LiteralPath $dll -PathType Leaf)) {
             throw "$dll missing — fushi/windows/CMakeLists.txt did not bundle native/fushi_rwkv/prebuilt/windows-x64"
+          }
+          Get-Item -LiteralPath $dll | Select-Object FullName, Length
+      # 音乐胖核心 fushi_music（曲库扫描 / 标签 / CUE）同为 app 硬依赖：与上一步 fushi_rwkv 同一口径。
+      - name: Verify fushi_music is in the Windows bundle
+        shell: pwsh
+        run: |
+          $dll = "fushi\build\windows\x64\runner\Release\fushi_music.dll"
+          if (-not (Test-Path -LiteralPath $dll -PathType Leaf)) {
+            throw "$dll missing — fushi/windows/CMakeLists.txt did not bundle native/fushi_music/prebuilt/windows-x64"
+          }
+          Get-Item -LiteralPath $dll | Select-Object FullName, Length
+      # 语料胖核心 fushi_corpus（「我库里的例句」倒排索引）同为 app 硬依赖：与上一步 fushi_corpus 同一口径。
+      - name: Verify fushi_corpus is in the Windows bundle
+        shell: pwsh
+        run: |
+          $dll = "fushi\build\windows\x64\runner\Release\fushi_corpus.dll"
+          if (-not (Test-Path -LiteralPath $dll -PathType Leaf)) {
+            throw "$dll missing — fushi/windows/CMakeLists.txt did not bundle native/fushi_corpus/prebuilt/windows-x64"
           }
           Get-Item -LiteralPath $dll | Select-Object FullName, Length
       # 持久库理由与名字契约见 build-multiplatform.yml windows job 同名步骤（名字逐字一致）。
@@ -1198,6 +1229,15 @@ jobs:
           Get-Process -Name 'fushi' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
           Write-Host "[verify] 安装完成，耗时 $([math]::Round($sw.Elapsed.TotalSeconds,1))s"
           if (-not (Test-Path -LiteralPath "$dst\fushi.exe")) { throw "装出来的目录里没有 fushi.exe: $dst" }
+          # runner 的原生测试 exe 是构建期门禁，不是产品：3.0 及更早曾因与 fushi.exe 同输出目录
+          # 被 fushi.iss 整目录收进安装包（29 个 *_test.exe 装进用户 {app}）。
+          # 输出目录已在 fushi/windows/runner/CMakeLists.txt 末尾挪出 bundle，这里按用户实际拿到的东西回验。
+          [string[]] $shippedTests = Get-ChildItem -LiteralPath $dst -Recurse -File -Filter '*_test.exe' |
+            ForEach-Object { $_.FullName.Substring($dst.Length + 1) }
+          if ($shippedTests.Count -gt 0) {
+            $shippedTests | ForEach-Object { Write-Host "  测试程序进了安装包: $_" }
+            throw "安装包里混入了 $($shippedTests.Count) 个测试 exe。"
+          }
 
           $files = Get-ChildItem -LiteralPath $dst -Recurse -File |
             Where-Object { $_.Extension -in '.exe', '.dll' } |
@@ -1514,6 +1554,7 @@ jobs:
           dandanplay-app-secret: ${{ secrets.DANDANPLAY_APP_SECRET }}
           tmdb-api-key: ${{ secrets.TMDB_API_KEY }}
           opensubtitles-api-key: ${{ secrets.OPENSUBTITLES_API_KEY }}
+          acoustid-api-key: ${{ secrets.ACOUSTID_API_KEY }}
       # TODO-1208: cache CocoaPods spec repos + downloaded pod source and the
       # generated Pods dirs. Keyed on the Podfile.lock/pubspec.lock so a pod bump
       # invalidates it; CocoaPods re-installs on a mismatch, and a miss just
@@ -1643,6 +1684,20 @@ jobs:
           set -euo pipefail
           bash native/fushi_rwkv/build_macos_dylib.sh
           bash native/fushi_rwkv/verify_abi.sh native/fushi_rwkv/prebuilt/macos/libfushi_rwkv.dylib nm
+      # 音乐胖核心 fushi_music（曲库扫描 / 标签 / CUE）同为 app 硬依赖：与上一步 fushi_rwkv 同一口径。
+      - name: Build fushi_music (macOS arm64 dylib)
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash native/fushi_music/build_macos_dylib.sh
+          bash native/fushi_music/verify_abi.sh native/fushi_music/prebuilt/macos/libfushi_music.dylib nm
+      # 语料胖核心 fushi_corpus（「我库里的例句」倒排索引）同为 app 硬依赖：与上一步 fushi_corpus 同一口径。
+      - name: Build fushi_corpus (macOS arm64 dylib)
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash native/fushi_corpus/build_macos_dylib.sh
+          bash native/fushi_corpus/verify_abi.sh native/fushi_corpus/prebuilt/macos/libfushi_corpus.dylib nm
       # 内置 torrent 引擎 bridge（libtorrent，vcpkg 静态链）arm64 dylib：Runner 的
       # 「Bundle fushi_torrent dylib」构建阶段 copy-if-present 进 Contents/Frameworks，之后由
       # 下面的 Developer ID 签名循环随其它 Mach-O 一起签。此前 macOS 包从没带过它，内置引擎
@@ -1774,13 +1829,15 @@ jobs:
           archs="$(lipo -archs "$dylib")"
           if [ "$archs" != "arm64" ]; then echo "::error::$dylib must be arm64-only (has: $archs)"; exit 1; fi
           bash native/fushi_compute/verify_abi.sh "$dylib" nm
-          DYLIB_PATH="$dylib" python3 - <<'PY'
+          abi="$(sed -n 's/^pub const ABI_VERSION: i32 = \([0-9][0-9]*\);.*/\1/p' native/fushi_compute/src/lib.rs)"
+          test -n "$abi" || { echo "::error::cannot read ABI_VERSION from native/fushi_compute/src/lib.rs"; exit 1; }
+          DYLIB_PATH="$dylib" ABI_EXPECTED="$abi" python3 - <<'PY'
           import ctypes
           import os
           lib = ctypes.CDLL(os.environ["DYLIB_PATH"])
           lib.ffc_abi_version.restype = ctypes.c_int32
           abi = lib.ffc_abi_version()
-          if abi != 1:
+          if abi != int(os.environ["ABI_EXPECTED"]):
               raise SystemExit(f"ffc_abi_version returned {abi}")
           print("fushi_compute dylib smoke ok: abi", abi)
           PY
@@ -1805,6 +1862,52 @@ jobs:
           if abi != int(os.environ["ABI_EXPECTED"]):
               raise SystemExit(f"frwkv_abi_version returned {abi}")
           print("fushi_rwkv dylib smoke ok: abi", abi)
+          PY
+      # 音乐胖核心 fushi_music（曲库扫描 / 标签 / CUE）同为 app 硬依赖：与上一步 fushi_rwkv 同一口径。
+      - name: Verify fushi_music is in the macOS bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          dylib="fushi/build/macos/Build/Products/Release/fushi.app/Contents/Frameworks/libfushi_music.dylib"
+          test -f "$dylib" || { echo "::error::$dylib missing — the Runner 'Bundle fushi_music dylib' phase did not copy it"; exit 1; }
+          test "$(otool -D "$dylib" | grep -v ':$' | sort -u)" = "@rpath/libfushi_music.dylib"
+          archs="$(lipo -archs "$dylib")"
+          if [ "$archs" != "arm64" ]; then echo "::error::$dylib must be arm64-only (has: $archs)"; exit 1; fi
+          bash native/fushi_music/verify_abi.sh "$dylib" nm
+          abi="$(sed -n 's/^pub const ABI_VERSION: i32 = \([0-9][0-9]*\);.*/\1/p' native/fushi_music/src/lib.rs)"
+          test -n "$abi" || { echo "::error::cannot read ABI_VERSION from native/fushi_music/src/lib.rs"; exit 1; }
+          MUSIC_LIB="$dylib" ABI_EXPECTED="$abi" python3 - <<'PY'
+          import ctypes
+          import os
+          lib = ctypes.CDLL(os.environ["MUSIC_LIB"])
+          lib.ffm_abi_version.restype = ctypes.c_int32
+          abi = lib.ffm_abi_version()
+          if abi != int(os.environ["ABI_EXPECTED"]):
+              raise SystemExit(f"ffm_abi_version returned {abi}")
+          print("fushi_music dylib smoke ok: abi", abi)
+          PY
+      # 语料胖核心 fushi_corpus（「我库里的例句」倒排索引）同为 app 硬依赖：与上一步 fushi_corpus 同一口径。
+      - name: Verify fushi_corpus is in the macOS bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          dylib="fushi/build/macos/Build/Products/Release/fushi.app/Contents/Frameworks/libfushi_corpus.dylib"
+          test -f "$dylib" || { echo "::error::$dylib missing — the Runner 'Bundle fushi_corpus dylib' phase did not copy it"; exit 1; }
+          test "$(otool -D "$dylib" | grep -v ':$' | sort -u)" = "@rpath/libfushi_corpus.dylib"
+          archs="$(lipo -archs "$dylib")"
+          if [ "$archs" != "arm64" ]; then echo "::error::$dylib must be arm64-only (has: $archs)"; exit 1; fi
+          bash native/fushi_corpus/verify_abi.sh "$dylib" nm
+          abi="$(sed -n 's/^pub const ABI_VERSION: i32 = \([0-9][0-9]*\);.*/\1/p' native/fushi_corpus/src/lib.rs)"
+          test -n "$abi" || { echo "::error::cannot read ABI_VERSION from native/fushi_corpus/src/lib.rs"; exit 1; }
+          MUSIC_LIB="$dylib" ABI_EXPECTED="$abi" python3 - <<'PY'
+          import ctypes
+          import os
+          lib = ctypes.CDLL(os.environ["MUSIC_LIB"])
+          lib.fcorp_abi_version.restype = ctypes.c_int32
+          abi = lib.fcorp_abi_version()
+          if abi != int(os.environ["ABI_EXPECTED"]):
+              raise SystemExit(f"fcorp_abi_version returned {abi}")
+          print("fushi_corpus dylib smoke ok: abi", abi)
           PY
       - name: Save fushi_p2p dylib to native artifact store
         if: steps.p2p_store.outputs.hit != 'true'
@@ -1841,7 +1944,9 @@ jobs:
           test -f "$dylib" || { echo "::error::$dylib missing — the Runner 'Bundle fushi_aacs dylib' phase did not copy it"; exit 1; }
           test "$(otool -D "$dylib" | grep -v ':$' | sort -u)" = "@rpath/libaacs.dylib"
           lipo -info "$dylib"
-          DYLIB_PATH="$dylib" python3 -c 'import ctypes, os; lib = ctypes.CDLL(os.environ["DYLIB_PATH"]); assert lib.fushi_aacs_abi_version() == 1; assert lib.aacs_open2 and lib.aacs_decrypt_unit; print("fushi_aacs dylib smoke ok")'
+          abi="$(sed -n 's/^#define FUSHI_AACS_ABI_VERSION \([0-9][0-9]*\).*/\1/p' native/fushi_aacs/src/fushi_aacs.c)"
+          test -n "$abi" || { echo "::error::cannot read FUSHI_AACS_ABI_VERSION from native/fushi_aacs/src/fushi_aacs.c"; exit 1; }
+          DYLIB_PATH="$dylib" ABI_EXPECTED="$abi" python3 -c 'import ctypes, os; lib = ctypes.CDLL(os.environ["DYLIB_PATH"]); assert lib.fushi_aacs_abi_version() == int(os.environ["ABI_EXPECTED"]); assert lib.aacs_open2 and lib.aacs_decrypt_unit; print("fushi_aacs dylib smoke ok")'
       - name: Save torrent bridge dylib to native artifact store
         if: steps.torrent_store.outputs.hit != 'true'
         continue-on-error: true
@@ -2583,6 +2688,7 @@ jobs:
           dandanplay-app-secret: ${{ secrets.DANDANPLAY_APP_SECRET }}
           tmdb-api-key: ${{ secrets.TMDB_API_KEY }}
           opensubtitles-api-key: ${{ secrets.OPENSUBTITLES_API_KEY }}
+          acoustid-api-key: ${{ secrets.ACOUSTID_API_KEY }}
       # TODO-1208: cache CocoaPods spec repos + downloaded pod source and the
       # generated Pods dirs. Keyed on the Podfile.lock/pubspec.lock so a pod bump
       # invalidates it; CocoaPods re-installs on a mismatch, and a miss just
@@ -2645,7 +2751,7 @@ jobs:
         with:
           workspaces: native/fushi_ios_umbrella -> target
           key: fushi-ios-umbrella
-      - name: Build iOS umbrella staticlib (fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv, device)
+      - name: Build iOS umbrella staticlib (fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv + fushi_music + fushi_corpus, device)
         if: steps.ios_native_store.outputs.hit != 'true'
         shell: bash
         run: |
@@ -2661,7 +2767,7 @@ jobs:
           --dart-define="FUSHI_BUILD_VERSION=${{ steps.channel.outputs.build_version_name }}"
       # 静态库 + -force_load 的失败形态是「链接成功、符号被 dead-strip / strip 掉」，
       # Release 配置下 dead-strip 与 strip 都开着，所以查的是真正要发出去的 Runner。
-      - name: Verify fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv symbols are linked into Runner (iOS release)
+      - name: Verify fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv + fushi_music + fushi_corpus symbols are linked into Runner (iOS release)
         if: github.event.inputs.testflight_only != 'true'
         shell: bash
         run: |
@@ -2671,6 +2777,8 @@ jobs:
           bash native/fushi_compute/verify_abi.sh fushi/build/ios/iphoneos/Runner.app/Runner nm
           bash native/fushi_web_core/verify_abi.sh fushi/build/ios/iphoneos/Runner.app/Runner nm
           bash native/fushi_rwkv/verify_abi.sh fushi/build/ios/iphoneos/Runner.app/Runner nm
+          bash native/fushi_music/verify_abi.sh fushi/build/ios/iphoneos/Runner.app/Runner nm
+          bash native/fushi_corpus/verify_abi.sh fushi/build/ios/iphoneos/Runner.app/Runner nm
       # 只在上面那道 Release Runner 符号核对真跑过之后才存（testflight_only 的 run 不走它）。
       - name: Save iOS umbrella staticlib to native artifact store
         if: steps.ios_native_store.outputs.hit != 'true' && github.event.inputs.testflight_only != 'true'
@@ -2944,7 +3052,7 @@ jobs:
           --build-name "${{ steps.channel.outputs.apple_build_version_name }}"
           --build-number "${{ steps.channel.outputs.release_sequence }}"
           --dart-define="FUSHI_BUILD_VERSION=${{ steps.channel.outputs.build_version_name }}"
-      - name: Verify fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv symbols are linked into Runner (App Store archive)
+      - name: Verify fushi_p2p + fushi_fsrs + fushi_compute + fushi_web_core + fushi_rwkv + fushi_music + fushi_corpus symbols are linked into Runner (App Store archive)
         if: steps.signing.outputs.testflight == 'true'
         shell: bash
         run: |
@@ -2955,6 +3063,8 @@ jobs:
           bash native/fushi_compute/verify_abi.sh "$runner" nm
           bash native/fushi_web_core/verify_abi.sh "$runner" nm
           bash native/fushi_rwkv/verify_abi.sh "$runner" nm
+          bash native/fushi_music/verify_abi.sh "$runner" nm
+          bash native/fushi_corpus/verify_abi.sh "$runner" nm
       # TestFlight 上传是不可回收的外发，搬到下面的 `testflight` job：正式 / 测试版
       # dispatch 在那里等审批，这里只把签名 IPA 交给它。artifact 名刻意不叫
       # desktop-artifacts-*：publish job 按那个前缀收 Release 资产，App Store 签名包

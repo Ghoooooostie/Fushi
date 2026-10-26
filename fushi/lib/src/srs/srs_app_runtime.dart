@@ -23,6 +23,7 @@ import 'package:fushi_anki/fushi_anki_core.dart'
 import 'package:fushi_engine/srs/ankiconnect/srs_ankiconnect_endpoint.dart';
 import 'package:fushi_engine/srs/ankiconnect/srs_ankiconnect_handler.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
+import 'package:fushi_engine/srs/srs_profile_link.dart';
 import 'package:fushi_engine/sync/local_directory_asset_store.dart';
 import 'package:fushi_engine/sync/sync_asset_store.dart';
 import 'package:fushi_srs/fushi_srs.dart';
@@ -31,13 +32,16 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/home_tab.dart';
 import 'package:fushi/src/pages/implementations/home_page.dart'
     show homeShellTabNotifier;
+import 'package:fushi/src/profile/profile_view_model.dart';
 import 'package:fushi/src/srs/srs_app_host.dart';
-import 'package:fushi/src/srs/srs_backup.dart';
+import 'package:fushi/src/srs/srs_legacy_backup_cleanup.dart';
 import 'package:fushi/src/srs/srs_directory_key.dart';
+import 'package:fushi/src/srs/srs_interconnect_watch.dart';
 import 'package:fushi/src/srs/srs_media_store.dart';
 import 'package:fushi/src/srs/srs_optimization_scheduler.dart';
 import 'package:fushi/src/srs/srs_providers.dart';
 import 'package:fushi/src/srs/srs_sync_scheduler.dart';
+import 'package:fushi/src/sync/interconnect_sync_backend.dart';
 import 'package:fushi/src/sync/sync_auto_trigger.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
@@ -68,12 +72,24 @@ final Provider<SrsAppRuntime?> srsAppRuntimeProvider = Provider<SrsAppRuntime?>(
       },
       engine: () => ref.read(srsEngineProvider),
       bumpRevision: () => ref.read(srsRevisionProvider.notifier).state++,
-      backup: ref.read(srsBackupControllerProvider),
+      // 同步前的 profile 关联（铁律 E）：采用目录里已有的 uid 后按新身份重开 store。
+      profileLinker: SrsDbProfileLinker(
+        db: app.database,
+        activeProfileId: () async {
+          final int id = ref.read(profileViewModelProvider).activeProfileId;
+          return id > 0 ? id : app.database.resolveActiveProfileId();
+        },
+        reopenStore: () async {
+          ref.invalidate(srsStoreProvider);
+          return ref.read(srsStoreProvider.future);
+        },
+        onError: ErrorLogService.instance.log,
+      ),
     );
-    // 自动备份：库有变动（本机写 / 同步进来）就看一眼要不要备份（见 srs_backup.dart）。
+    // 本机复习数据有变动（本机写 / 同步进来）：去抖后经互联快速通道推一轮（设计 §6.3）。
     ref.listen<int>(
       srsRevisionProvider,
-      (int? previous, int next) => runtime.backup.onDataChanged(),
+      (int? previous, int next) => runtime.localPush.trigger(),
     );
     // RWKV 排程服务随模块常驻（store.rwkv 由它装配；对象很轻，重活按需启动）。
     ref.listen<AsyncValue<Object?>>(
@@ -103,8 +119,9 @@ class SrsAppRuntime {
     required Future<SrsMediaStore?> Function() readMedia,
     required FsrsEngine? Function() engine,
     required void Function() bumpRevision,
-    required this.backup,
-  }) : _readStore = readStore,
+    SrsProfileLinker? profileLinker,
+  }) : _profileLinker = profileLinker,
+       _readStore = readStore,
        _readMedia = readMedia,
        _engine = engine,
        _bumpRevision = bumpRevision;
@@ -114,9 +131,7 @@ class SrsAppRuntime {
   final Future<SrsMediaStore?> Function() _readMedia;
   final FsrsEngine? Function() _engine;
   final void Function() _bumpRevision;
-
-  /// 自动备份（离开 SRS 界面、库有变动时触发；见 srs_backup.dart）。
-  final SrsBackupController backup;
+  final SrsProfileLinker? _profileLinker;
 
   late final SrsSyncScheduler sync = SrsSyncScheduler(
     readStore: _readStore,
@@ -128,10 +143,58 @@ class SrsAppRuntime {
     directoryKeyOf: (SyncAssetStore backend) =>
         srsDirectoryKeyOf(backend, SyncRepository(app.database)),
     localDirectories: _localDirectories,
+    folderLocations: () async => app.srsFolderLocations,
+    profileLinker: _profileLinker,
     onDataChanged: _bumpRevision,
     onNotice: _showSyncNotice,
     readMediaRoot: () async => (await _readMedia())?.root,
+    // 库关着（备份恢复 / 数据根迁移 / 退出）时不开新一轮；重开后自动恢复。
+    canRun: () => app.isInitialised,
+    // 首次 v2 同步要用户确认一次（复习页弹窗，见 ensureSrsFirstSyncConfirmed）。
+    firstSyncConfirmed: () => app.srsSync2MergeConfirmed,
+    // 本机作为 host 发布了新数据：唤醒连着它的设备（长轮询 /api/srs/changes）。
+    onLocalDirectoryPublished: app.syncServerController.notifySrsChanged,
+    // 每个位置的端到端加密密钥（设备本地凭据；同步与历史页里开 / 输入口令）。
+    locationKey: (String id) => app.srsLocationKeys[id],
+    onEncryptionEnabled: app.setSrsLocationKey,
   );
+
+  /// 互联快速通道（srs_interconnect_watch.dart）：长轮询所连 host，有新数据立刻同步这一条通道。
+  late final SrsInterconnectWatcher interconnectWatch = SrsInterconnectWatcher(
+    ready: _interconnectReady,
+    wait: InterconnectSyncBackend.instance.waitSrsChanges,
+    onChange: () async {
+      await sync.syncWithBackend(InterconnectSyncBackend.instance);
+    },
+  );
+
+  /// 本机变动后去抖推送：连着互联 host 就同步那条通道；本机自己是 host 就跑本机目录（唤醒连它的设备）。
+  late final SrsLocalPush localPush = SrsLocalPush(push: _pushInterconnect);
+
+  Future<bool> _interconnectReady() async {
+    if (!app.isInitialised || !app.srsSync2MergeConfirmed) return false;
+    final AppLifecycleState? state = WidgetsBinding.instance.lifecycleState;
+    if (state != null && state != AppLifecycleState.resumed) return false;
+    final SyncRepository repo = SyncRepository(app.database);
+    if (!await repo.isInterconnectEnabled()) return false;
+    final InterconnectSyncBackend backend = InterconnectSyncBackend.instance;
+    await backend.restoreAuth(repo);
+    return backend.isAuthenticated;
+  }
+
+  Future<void> _pushInterconnect() async {
+    try {
+      if (await _interconnectReady()) {
+        await sync.syncWithBackend(InterconnectSyncBackend.instance);
+      }
+      await sync.syncLocalDirectories();
+    } catch (e, stack) {
+      ErrorLogService.instance.log('SrsAppRuntime.pushInterconnect', e, stack);
+    }
+  }
+
+  /// 关库前等 SRS 同步收尾（登记到 [AppModel.addDatabaseCloseQuiescer]）。
+  late final Future<void> Function() _quiesceSync = sync.quiesce;
 
   late final SrsOptimizationScheduler optimizer = SrsOptimizationScheduler(
     readStore: _readStore,
@@ -202,13 +265,19 @@ class SrsAppRuntime {
     srsActiveReviewSessions.addListener(_onReviewSessionsChanged);
     _lifecycle = AppLifecycleListener(onStateChange: _onLifecycle);
     optimizer.start();
+    app.addDatabaseCloseQuiescer(_quiesceSync);
     _hostWrites = app.syncServerController.clientSyncWrites.listen(
       _onHostClientWrite,
     );
-    // 启动就停在 SRS 底栏时自动备份先让路（离开时补）。
-    _syncBackupUse();
-    // 启动时看一次：上次退出前的改动还没备份、且已满间隔就补一份。
-    backup.onDataChanged();
+    interconnectWatch.start();
+    // 旧版定时备份已由同步 v2 的时间线 / 归档 / 手动导出取代：本机旧备份文件（仍可经「导入」恢复）从升级后
+    // 第一次看到起留 30 天再清（起算时刻持久化在目录里的标记文件，见 srs_legacy_backup_cleanup.dart）。
+    unawaited(
+      srsCleanupLegacyBackups().catchError((Object e, StackTrace stack) {
+        ErrorLogService.instance.log('srsCleanupLegacyBackups', e, stack);
+        return 0;
+      }),
+    );
   }
 
   void dispose() {
@@ -219,8 +288,11 @@ class SrsAppRuntime {
     _lifecycle?.dispose();
     _lifecycle = null;
     optimizer.dispose();
+    app.removeDatabaseCloseQuiescer(_quiesceSync);
     unawaited(_hostWrites?.cancel());
     _hostWrites = null;
+    interconnectWatch.stop();
+    localPush.dispose();
     sync.dispose();
     if (identical(syncChannelPostRunHook, _postRunHook)) {
       syncChannelPostRunHook = null;
@@ -274,32 +346,7 @@ class SrsAppRuntime {
   /// 牌组列表「立即同步」：对所有已认证通道跑一轮（结果区分没配置 / 失败 / 成功）。
   Future<SrsSyncNowResult> syncNow() => sync.syncNow();
 
-  /// SRS 界面正在用：app 在前台，且有复习页开着或 SRS 底栏在显示（牌组列表的计数同样会被
-  /// 备份读快照的事务挡住）。
-  bool get _srsInUse {
-    final AppLifecycleState? state = WidgetsBinding.instance.lifecycleState;
-    if (state != null && state != AppLifecycleState.resumed) return false;
-    return srsActiveReviewSessions.value > 0 ||
-        homeShellTabNotifier.value == HomeTab.srs;
-  }
-
-  bool _lastSrsInUse = false;
-
-  /// 自动备份让路：开始用时叫停在做的那一份；不用了（离开 SRS 界面 / app 退到后台）立即补一份
-  /// （BUG-3579：以前离开复习页就开始备份，回到牌组列表、再点下一个牌组全被挡二三十秒）。
-  void _syncBackupUse() {
-    final bool inUse = _srsInUse;
-    if (inUse == _lastSrsInUse) return;
-    _lastSrsInUse = inUse;
-    if (inUse) {
-      backup.onSrsInUse();
-    } else {
-      backup.onSrsIdle();
-    }
-  }
-
   void _onHomeTabChanged() {
-    _syncBackupUse();
     if (homeShellTabNotifier.value != HomeTab.srs) return;
     unawaited(
       sync.syncThrottled().catchError((Object e, StackTrace stack) {
@@ -312,12 +359,12 @@ class SrsAppRuntime {
   void _onReviewSessionsChanged() {
     final int now = srsActiveReviewSessions.value;
     if (now > 0) optimizer.cancel();
-    _syncBackupUse();
   }
 
   void _onLifecycle(AppLifecycleState state) {
-    _syncBackupUse();
     if (state != AppLifecycleState.resumed) optimizer.cancel();
+    // 回到前台：快速通道马上重新挂上（不等空闲重查的间隔）。
+    if (state == AppLifecycleState.resumed) interconnectWatch.nudge();
   }
 
   /// 自动优化的空闲判据：app 在前台、不在复习页。
@@ -332,6 +379,10 @@ class SrsAppRuntime {
       msg: switch (notice) {
         SrsSyncNotice.backendUnsupported => t.srs_sync_backend_unsupported,
         SrsSyncNotice.clockSkew => t.srs_sync_clock_skew,
+        SrsSyncNotice.profileNotLinked => t.srs_sync_profile_not_linked(
+          name: sync.lastUnlinkedProfile ?? '',
+        ),
+        SrsSyncNotice.awaitingConfirm => t.srs_sync_awaiting_confirm,
       },
       severity: ToastSeverity.warning,
     );

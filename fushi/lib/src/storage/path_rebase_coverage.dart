@@ -133,6 +133,8 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       PathRebaseKind.notAPath, '成员键与合集快照 JSON，无路径。'),
   PathRebaseColumn('LibraryOrganizeChanges', 'source', PathRebaseKind.notAPath,
       '`rule` / `ai` 来源标记，不是来源路径。'),
+  PathRebaseColumn('MediaLinks', 'source', PathRebaseKind.notAPath,
+      '作品图谱连接来源（manual / mal / ai …），不是来源路径。'),
   PathRebaseColumn('MediaOpenHistory', 'mediaSource', PathRebaseKind.notAPath,
       '媒体源标识（MediaSource.uniqueKey），不是路径。'),
   PathRebaseColumn(
@@ -464,6 +466,26 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
   PathRebaseColumn('WebMineQueue', 'fieldsJson', PathRebaseKind.notAPath,
       '弹窗点击时冻结的 Anki 字段映射 JSON（词头/释义/句子文本），不含本机路径。'),
 
+  // ── web_browser_*（schema v128，内置浏览器）──────────────────────────
+  PathRebaseColumn('WebBrowserHistory', 'url', PathRebaseKind.notAPath,
+      '浏览历史的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserBookmarks', 'url', PathRebaseKind.notAPath,
+      '书签的网页 URL（NULL = 文件夹），不是本机路径。'),
+  PathRebaseColumn('WebBrowserSessionTabs', 'url', PathRebaseKind.notAPath,
+      '标签页会话里的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserClosedTabs', 'url', PathRebaseKind.notAPath,
+      '最近关闭标签页的网页 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserDownloads', 'url', PathRebaseKind.notAPath,
+      '下载来源的远端 URL，不是本机路径。'),
+  PathRebaseColumn('WebBrowserDownloads', 'fileName', PathRebaseKind.notAPath,
+      '下载文件的裸文件名（展示用），不是绝对路径。'),
+  PathRebaseColumn(
+      'WebBrowserDownloads',
+      'savedPath',
+      PathRebaseKind.externalUserPath,
+      '浏览器下载落盘位置在系统下载目录 / 用户选的目录，不在数据根内；数据根迁移不搬'
+          '下载文件，也绝不能改写这一列（改了反而指向不存在的文件）。'),
+
   // ── pending_mine_queue（schema v116，设备端待发制卡队列，device-local）──
   PathRebaseColumn(
       'PendingMineQueue',
@@ -472,41 +494,9 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       '128-bit 随机 hex 行身份；载荷文件 <support>/pending_mine_queue/<id>.json 的文件名'
           '由它派生，表内不存任何路径列——数据根迁移整目录搬 support 即可，无需改写。'),
 
-  // ── srs_*（schema v117，Fushi SRS；docs/specs/2026-10-14-fushi-srs-design.md）──
-  // 全部是身份 / 规范事件 JSON / 本机状态 JSON。笔记字段里的媒体引用按 Anki 约定只存
-  // 文件名（媒体在 SRS 自己的目录里），不存本机绝对路径，数据根迁移无需改写。
-  PathRebaseColumn('SrsEntities', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsFieldEdits', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsReviewLogs', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsUnknownEvents', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsEventLocal', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsLocalState', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsNotesCache', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsCardsCache', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsSentBatches', 'profileUid', PathRebaseKind.notAPath,
-      'profile 全局身份 UUIDv7（撞正则是因为 profile 里含 file），不是路径。'),
-  PathRebaseColumn('SrsSentBatches', 'writerId', PathRebaseKind.notAPath,
-      'SRS 写入者身份（deviceId#化身号），不是路径。'),
-  PathRebaseColumn('SrsEntities', 'payloadJson', PathRebaseKind.notAPath,
-      '身份记录（牌组 / 笔记类型 / 笔记）的规范 JSON：id、名字、模板、字段文本，不含本机路径。'),
-  PathRebaseColumn('SrsFieldEdits', 'json', PathRebaseKind.notAPath,
-      '修改记录事件的规范 JSON（因果上下文 / 字段键 / 值 / HLC），值是字段文本或标量，不含本机路径。'),
-  PathRebaseColumn('SrsReviewLogs', 'json', PathRebaseKind.notAPath,
-      '复习日志事件的规范 JSON（评分 / 时刻 / 排程参数），不含路径。'),
-  PathRebaseColumn('SrsUnknownEvents', 'json', PathRebaseKind.notAPath,
-      '本机不认识的同步事件原文，原样保留转写；按协议不承载本机路径。'),
-  PathRebaseColumn('SrsLocalState', 'json', PathRebaseKind.notAPath,
-      '本机同步 / 写入者状态 JSON（写入者 id、seq、已应用上下文、HLC、时间锚点），不含路径。'),
-  PathRebaseColumn('SrsNotesCache', 'tagsJson', PathRebaseKind.notAPath,
-      '笔记标签字符串数组 JSON，不是路径。'),
+  // SRS（v117 起的 9 张表）2026-10-23 起不在 tables.dart 里：归 Rust 的 srs.db
+  // （docs/specs/2026-10-23-srs-rust-store.md）。那些列全是身份 / 规范事件 JSON / 本机状态，
+  // 笔记字段里的媒体引用只存文件名，数据根迁移随 support 目录整搬 srs.db 即可，无需改写。
 
   // ── video_download_*（schema v78，device-local 持久流水线）────────
   PathRebaseColumn('VideoDownloadJobs', 'resourceProvider',

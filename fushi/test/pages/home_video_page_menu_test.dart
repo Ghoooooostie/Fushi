@@ -30,6 +30,8 @@ import 'package:fushi_engine/sync/fushi_library_host_service.dart'
     show videoRemotePositionAtPrefKey;
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/pages/implementations/home_video_page.dart';
+import 'package:fushi/src/pages/implementations/media_item_dialog_page.dart'
+    show MediaItemDialogFrame;
 import 'package:fushi/src/pages/implementations/tag_filter_bar.dart';
 import 'package:fushi/src/platform/platform_providers.dart';
 import 'package:fushi/src/platform/platform_services.dart';
@@ -66,6 +68,8 @@ class _CoverSearchScrapeRunner extends _IdleScrapeRunner
     required String workTitle,
     String? workStableKey,
     required String query,
+    VideoMetadataProviderKind? provider,
+    VideoMetadataMediaKind? mediaKind,
   }) async {
     queries.add(query);
     return const <VideoSourceScrapeConfirmationCandidate>[];
@@ -104,10 +108,12 @@ class PausingBatchDeleteVideoBookRepository extends VideoBookRepository {
   Future<List<VideoBookRow>> deleteVideoBooks(
     Iterable<String> bookUids, {
     DeleteScope scope = DeleteScope.keepLocalOnly,
+    bool removeFromCollections = true,
   }) async {
     final List<VideoBookRow> deleted = await super.deleteVideoBooks(
       bookUids,
       scope: scope,
+      removeFromCollections: removeFromCollections,
     );
     deleteCalls += deleted.length;
     if (deleteCalls >= pauseAfterDeleteCount && !deletesCommitted.isCompleted) {
@@ -233,7 +239,11 @@ void main() {
   }
 
   Directory writeEmbeddedSubtitleCache(File video) {
-    final Directory dir = embeddedSubtitleCacheDir(video.path);
+    // 同步拿 stat 走纯函数那一半：widget 测试的 fake-async 里不能 await 真 IO。
+    final Directory dir = embeddedSubtitleCacheDirForStat(
+      video.path,
+      video.statSync(),
+    );
     dir.createSync(recursive: true);
     File(
       p.join(dir.path, 'sub_0.srt'),
@@ -378,19 +388,19 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('视频卡渲染所挂的共享标签 chip', (WidgetTester tester) async {
+  testWidgets('视频卡副行渲染所挂的共享标签（色点 + tooltip）', (WidgetTester tester) async {
     await seedTaggedVideo();
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
     expect(find.text('My Episode'), findsOneWidget);
     // 标签来自共享 BookTags 池，经 video_book_tag_mappings 映射。
-    // 卡片与顶部筛选条现都用同款共享 FushiTagChip，故按卡片范围定位避免与
-    // 筛选条里的同名标签冲突。
+    // 2026-10-25 库页材质定版：封面上不再压标签 chip，标签收成封面下副行尾部
+    // 的色点，全名在 tooltip 里；按卡片范围定位避免与筛选条里的同名标签冲突。
     expect(
       find.descendant(
         of: videoCard('video/1'),
-        matching: find.widgetWithText(FushiTagChip, 'Anime'),
+        matching: find.byTooltip('Anime'),
       ),
       findsOneWidget,
     );
@@ -457,8 +467,10 @@ void main() {
     await tester.tap(videoCard('video/1'), buttons: kSecondaryButton);
     await tester.pumpAndSettle();
 
-    // 右键与长按同链路（都走 _showVideoMenu）：应弹出同一封面背景动作面板。
-    expect(find.byType(FushiDialogFrame), findsOneWidget);
+    // 右键与长按同链路（都走 _showVideoMenu）、同一份动作。2026-10-25 起鼠标右键
+    // 在指针处弹右键菜单（设计稿 E），不再是居中对话框。
+    expect(find.byType(MediaItemDialogFrame), findsOneWidget);
+    expect(find.byType(FushiDialogFrame), findsNothing);
     expect(find.text(t.tag_label), findsOneWidget);
     expect(find.text(t.video_rename), findsOneWidget);
     expect(find.text(t.srt_import_pick_cover), findsOneWidget);
@@ -845,7 +857,7 @@ void main() {
     expect(
       find.descendant(
         of: find.byKey(const ValueKey<String>('home_video_video/1')),
-        matching: find.widgetWithText(FushiTagChip, 'Anime'),
+        matching: find.byTooltip('Anime'),
       ),
       findsOneWidget,
     );

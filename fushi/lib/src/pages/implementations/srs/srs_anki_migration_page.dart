@@ -14,6 +14,7 @@ import 'dart:io';
 
 import 'package:external_app_launcher/external_app_launcher.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi_engine/foundation/pref_store.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_import.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
 import 'package:material_ui/material_ui.dart';
@@ -21,8 +22,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 import 'package:fushi/src/models/app_model.dart';
-import 'package:fushi/src/pages/implementations/srs/srs_backups_page.dart'
-    show srsBackupTimeLabel;
+import 'package:fushi/src/pages/implementations/srs/srs_anki_migration_setup_page.dart';
 import 'package:fushi/src/pages/implementations/srs/srs_ui.dart';
 import 'package:fushi/src/srs/srs_anki_migration.dart';
 import 'package:fushi/src/srs/srs_import_entry.dart' show srsImportReportLines;
@@ -214,28 +214,23 @@ class _SrsAnkiMigrationPageState extends ConsumerState<SrsAnkiMigrationPage>
       }
       if (!mounted) return;
       final AnkiCollectionStats s = snapshot.stats;
-      final bool go = await showFushiConfirmDialog(
-        context: context,
-        title: t.srs_anki_migrate_confirm_title(name: profile.name),
-        message: <String>[
-          t.srs_anki_migrate_confirm_body(
-            notes: s.notes,
-            cards: s.cards,
-            reviews: s.reviews,
-          ),
-          if (snapshot.sourceProbablyOpen) t.srs_anki_migrate_open_warning,
-        ].join('\n\n'),
-        icon: FushiIcons.importFile,
-        confirmLabel: t.srs_anki_migrate_start,
-        cancelLabel: t.cancel,
+      final SrsAnkiMigrationSettings? settings = await _askSettings(
+        sourceName: profile.name,
+        summary: t.srs_anki_migrate_confirm_body(
+          notes: s.notes,
+          cards: s.cards,
+          reviews: s.reviews,
+        ),
+        sourceProbablyOpen: snapshot.sourceProbablyOpen,
       );
-      if (!go || !mounted) return;
+      if (settings == null || !mounted) return;
       // 快照归后台任务所有：任务结束（成功或失败）时由它丢弃，用户中途离开本页也一样。
       final AnkiCollectionSnapshot owned = snapshot;
       snapshot = null;
       await _run(
         SrsAnkiMigrationFromCollection(owned),
         displayName: profile.name,
+        settings: settings,
         cleanup: owned.discard,
       );
     } finally {
@@ -251,26 +246,41 @@ class _SrsAnkiMigrationPageState extends ConsumerState<SrsAnkiMigrationPage>
       allowedExtensions: const <String>{'colpkg', 'apkg'},
     );
     if (path == null || !mounted) return;
-    final bool go = await showFushiConfirmDialog(
-      context: context,
-      title: t.srs_anki_migrate,
-      message: t.srs_anki_migrate_confirm_file(
-        name: File(path).uri.pathSegments.last,
-      ),
-      icon: FushiIcons.importFile,
-      confirmLabel: t.srs_anki_migrate_start,
-      cancelLabel: t.cancel,
+    final String name = File(path).uri.pathSegments.last;
+    final SrsAnkiMigrationSettings? settings = await _askSettings(
+      sourceName: name,
+      summary: t.srs_anki_migrate_confirm_file(name: name),
     );
-    if (!go || !mounted) return;
+    if (settings == null || !mounted) return;
     setState(() => _busy = true);
     try {
       await _run(
         SrsAnkiMigrationFromPackage(File(path)),
-        displayName: File(path).uri.pathSegments.last,
+        displayName: name,
+        settings: settings,
       );
     } finally {
       if (mounted) setState(() => _busy = false);
     }
+  }
+
+  /// 「迁移设置」页：上次的选择作初值，确认后记下来。取消返回 null。
+  Future<SrsAnkiMigrationSettings?> _askSettings({
+    required String sourceName,
+    required String summary,
+    bool sourceProbablyOpen = false,
+  }) async {
+    final PrefStore prefs = ref.read(appProvider).prefsRepo;
+    final SrsAnkiMigrationSettings? settings =
+        await openSrsAnkiMigrationSetupPage(
+          context,
+          sourceName: sourceName,
+          summary: summary,
+          initial: readSrsAnkiMigrationSettings(prefs),
+          sourceProbablyOpen: sourceProbablyOpen,
+        );
+    if (settings != null) await writeSrsAnkiMigrationSettings(prefs, settings);
+    return settings;
   }
 
   /// 排进后台导入队列（[srsImportControllerProvider]）→ [runSrsAnkiMigration]。
@@ -281,6 +291,7 @@ class _SrsAnkiMigrationPageState extends ConsumerState<SrsAnkiMigrationPage>
   Future<void> _run(
     SrsAnkiMigrationSource source, {
     required String displayName,
+    required SrsAnkiMigrationSettings settings,
     Future<void> Function()? cleanup,
   }) async {
     final SrsDbStore? store = await readSrsStore(ref);
@@ -301,6 +312,12 @@ class _SrsAnkiMigrationPageState extends ConsumerState<SrsAnkiMigrationPage>
       return;
     }
     final SrsMediaStore lockedMedia = media;
+    final AppModel app = ref.read(appProvider);
+    // 迁移完成后切卡片去向：任务可能在本页关掉之后才结束，偏好写入口在入队时就绑好。
+    final SrsCardTargetSwitch cardTargetSwitch = SrsCardTargetSwitch(
+      setMiningTarget: app.setSrsMiningTarget,
+      setMineToServer: app.setMineToServer,
+    );
     final SrsImportTask task = ref
         .read(srsImportControllerProvider)
         .enqueueJob(
@@ -313,6 +330,8 @@ class _SrsAnkiMigrationPageState extends ConsumerState<SrsAnkiMigrationPage>
                 store: store,
                 media: lockedMedia,
                 source: source,
+                settings: settings,
+                cardTargetSwitch: cardTargetSwitch,
                 onProgress: onProgress,
                 shouldStop: shouldStop,
               ),
@@ -639,7 +658,7 @@ class _ProfileRow extends StatelessWidget {
               size: FushiByteFormat.bytes(
                 profile.collectionBytes + profile.walBytes,
               ),
-              time: srsBackupTimeLabel(context, profile.modified),
+              time: srsTimeLabel(context, profile.modified),
             ),
           ),
         ]),

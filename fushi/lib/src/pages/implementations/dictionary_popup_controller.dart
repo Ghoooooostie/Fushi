@@ -109,6 +109,15 @@ class DictionaryPopupEntry {
   /// 都重新判定，不跨查词沿用。
   Duration? searchPlaceholderShownFor;
 
+  /// 本层的入场淡入是否已走完、满不透明地画在屏上（隐藏即复位 false）。由
+  /// `parkedPopupLayer` 的 `onEntranceSettled` 回报、宿主写入。
+  ///
+  /// 只有满足它的层才进更下层的 `occluders`（`PopupOccluderClip` 把下层被盖住的部分
+  /// 整块裁掉）。反馈 iZupbhhdNV：曾按 [visible] 判，上层一翻可见、下层同一帧就被挖洞，
+  /// 而上层此时正从透明度 0 淡入——那 200ms 里洞口什么都不挡，视频画面直接透出来
+  /// （「视频查词框内出现播放画面，很短的一下，次级查词才有」）。
+  bool entranceSettled = false;
+
   /// 该层是否正在（增量/分页）搜索中。
   bool isSearching = false;
 
@@ -350,6 +359,15 @@ class DictionaryPopupController extends ChangeNotifier {
 
   bool get hasVisiblePopup =>
       _entries.any((DictionaryPopupEntry e) => e.visible);
+
+  /// BUG-3652 续：[entry] 这一层此刻是否仍在屏上——仍在栈里（没被关 / 清栈）且未
+  /// 停驻（常驻热槽在两次查词之间 `visible=false` 隐身）。读的是模型而不是已建好的
+  /// widget 树：用户刚关掉弹窗、重建帧还没跑时，制卡回包看到的也是「已不在」。
+  ///
+  /// 对话框期间宿主把弹窗挪到屏外（`_popupHidingDialogDepth`）**不算**不在：那是同一
+  /// 次查词，对话框一关它就回来，失败原因仍该由它就地说。
+  bool isEntryOnScreen(DictionaryPopupEntry entry) =>
+      entry.visible && _entries.contains(entry);
 
   /// 最顶层**可见**条目的下标，无可见层返回 -1（常驻隐藏热槽不算）。
   int get lastVisibleIndex {

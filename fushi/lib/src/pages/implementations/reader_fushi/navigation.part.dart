@@ -850,6 +850,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   /// [flattenTtuTocEntries] 之外，于是同一章下的每一条目录项都只跳到章首——
   /// 用户看到的「章节跳转不准」。
   Future<void> _jumpToChapterAnchor(int index, String? fragment) async {
+    await _recordTextJumpDeparture();
     if (_lyricsMode) {
       await _jumpToChapterInLyricsMode(index);
       return;
@@ -1855,6 +1856,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
 
   Future<void> _jumpToGlobalCharOffset(int globalOffset) async {
     if (_chapterCumulativeChars.isEmpty || _controller == null) return;
+    await _recordTextJumpDeparture();
 
     // 进度条拖动是跳转不是阅读：不播种（旧标量水位要在此播种）。跨章走
     // [_beginNavigation] 的 `leave()`；同章 `restoreProgress` 不经导航，得在这里自己
@@ -1945,7 +1947,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       studyClockMayRun(
         manualPause: _studyClockManualPause,
         lifecycleStopped: _studyClockLifecycleStopped,
-        modalDepth: _studyClockModalDepth,
+        modalDepth: _studyClockModalDepth + (_studyClockCoveredByRoute ? 1 : 0),
         audiobookPlaying: _audiobookController?.isPlaying ?? false,
       );
 

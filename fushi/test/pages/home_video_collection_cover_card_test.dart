@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -20,6 +21,7 @@ import 'package:fushi/src/pages/implementations/media_collection_detail_page.dar
 import 'package:fushi/src/pages/implementations/tag_filter_bar.dart';
 import 'package:fushi/src/platform/platform_providers.dart';
 import 'package:fushi/src/platform/platform_services.dart';
+import 'package:fushi/src/utils/components/cover_badge.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -151,6 +153,22 @@ void main() {
     return cid;
   }
 
+  /// BUG-3756：封面存在性改为 async 探测（build 里不再同步 stat），真实 IO 在
+  /// fakeAsync 下不会完成。回退链每级候选一次探测 + 一次重建，按链深各给一轮
+  /// runAsync + pump；最后让 FileImage 在真实事件循环里读完（Windows 下 tearDown
+  /// 删临时目录要求句柄已关）。
+  Future<void> settleCoverProbes(WidgetTester tester, {int rounds = 4}) async {
+    // 封面链每级一次探测 + 一次重建；之后封面图源的真实文件读取（打开 → 读 → 关）
+    // 每一步的续体都排在 fakeAsync 里，要 runAsync 让 IO 回话、再 pump 跑续体，多给
+    // 几轮让句柄关掉，否则 tearDown 删临时目录会撞「文件被占用」（Windows）。
+    for (int i = 0; i < rounds + 6; i++) {
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 40)),
+      );
+      await tester.pump();
+    }
+  }
+
   Widget buildApp() => ProviderScope(
     overrides: <Override>[
       platformServicesProvider.overrideWithValue(platformServices),
@@ -178,6 +196,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
+    await settleCoverProbes(tester);
   }
 
   Finder cardFinder(int cid) =>
@@ -217,8 +236,9 @@ void main() {
       of: cardFinder(cid),
       matching: find.byType(Image),
     );
-    expect(images, findsOneWidget, reason: '合集卡必须渲染成员封面');
-    final Image image = tester.widget<Image>(images);
+    // 材质库页：合集是碟盒叠层（后两层 + 前层），前层最后绘制 = 最后一张。
+    expect(images, findsWidgets, reason: '合集卡必须渲染成员封面');
+    final Image image = tester.widget<Image>(images.last);
     final ImageProvider provider = image.image;
     final FileImage fileImage =
         (provider is ResizeImage ? provider.imageProvider : provider)
@@ -248,8 +268,9 @@ void main() {
 
     await pumpPage(tester);
 
+    // 叠层前层最后绘制 = 最后一张 Image。
     final Image image = tester.widget<Image>(
-      find.descendant(of: cardFinder(cid), matching: find.byType(Image)),
+      find.descendant(of: cardFinder(cid), matching: find.byType(Image)).last,
     );
     final ImageProvider provider = image.image;
     final FileImage fileImage =
@@ -279,8 +300,9 @@ void main() {
 
     await pumpPage(tester);
 
+    // 叠层前层最后绘制 = 最后一张 Image。
     final Image image = tester.widget<Image>(
-      find.descendant(of: cardFinder(cid), matching: find.byType(Image)),
+      find.descendant(of: cardFinder(cid), matching: find.byType(Image)).last,
     );
     final ImageProvider provider = image.image;
     final FileImage fileImage =
@@ -305,8 +327,9 @@ void main() {
 
     await pumpPage(tester);
 
+    // 叠层前层最后绘制 = 最后一张 Image。
     final Image image = tester.widget<Image>(
-      find.descendant(of: cardFinder(cid), matching: find.byType(Image)),
+      find.descendant(of: cardFinder(cid), matching: find.byType(Image)).last,
     );
     final ImageProvider provider = image.image;
     final FileImage fileImage =
@@ -315,9 +338,7 @@ void main() {
     expect(fileImage.file.path, memberCover.path);
   });
 
-  testWidgets('无封面 → 占位图标；集数角标 = 全部成员数；默认进度「已看完 0/N」', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('无封面 → 占位图标；封面无角标；默认副行「已看完 0/N」', (WidgetTester tester) async {
     await seedEpisode('video/ep1', '第1集');
     await seedEpisode('video/ep2', '第2集');
     final int cid = await seedCollection(<String>['video/ep1', 'video/ep2']);
@@ -330,16 +351,15 @@ void main() {
         of: cardFinder(cid),
         matching: find.byIcon(FushiIcons.video),
       ),
-      findsOneWidget,
-      reason: '全员无封面 → 占位（与散卡同款 movie 图标）',
+      findsWidgets,
+      reason: '全员无封面 → 占位（与散卡同款 movie 图标，叠层每层都是占位）',
     );
+    // 2026-10-25「全部都不用角标设计」：封面上不再有集数角标，成员数进副行
+    // （「已看完 x/N」的 N）。
     expect(
-      find.descendant(
-        of: cardFinder(cid),
-        matching: find.text(t.video_playlist_episodes(count: 2)),
-      ),
-      findsOneWidget,
-      reason: '集数角标 = 全部成员数',
+      find.descendant(of: cardFinder(cid), matching: find.byType(CoverBadge)),
+      findsNothing,
+      reason: '合集封面上不压任何角标',
     );
     expect(
       find.descendant(
@@ -365,7 +385,7 @@ void main() {
     expect(
       find.descendant(
         of: cardFinder(cid),
-        matching: find.text(t.collection_continue_progress(n: 2)),
+        matching: find.textContaining(t.collection_continue_progress(n: 2)),
       ),
       findsOneWidget,
       reason: 'ep1 看完 → 继续看候选落在第2集（continueMemberIndex 同源）',
@@ -426,7 +446,7 @@ void main() {
     expect(
       find.descendant(
         of: cardFinder(cid),
-        matching: find.text(t.collection_continue_progress(n: 1)),
+        matching: find.textContaining(t.collection_continue_progress(n: 1)),
       ),
       findsOneWidget,
       reason:
@@ -447,7 +467,7 @@ void main() {
     expect(
       find.descendant(
         of: cardFinder(cid),
-        matching: find.text(t.collection_continue_progress(n: 2)),
+        matching: find.textContaining(t.collection_continue_progress(n: 2)),
       ),
       findsOneWidget,
       reason: '锚点集已完成 → 推进到下一集（第2集），与详情页 hero 同答案',
@@ -500,4 +520,76 @@ void main() {
       reason: '拖标签到封面卡必须写穿合集标签（原横排行行头能力保留）',
     );
   });
+
+  testWidgets('BUG-3756：合集海报在网络盘上 → build 零同步文件调用，探测落定后回落成员封面', (
+    WidgetTester tester,
+  ) async {
+    // 合集自有海报落在「网络盘」（rclone / SMB 挂载）：冷目录一次同步 stat 要数秒，
+    // 旧实现在合集卡 build 里 existsSync，整页与同 isolate 的互联 host 一起冻结。
+    // 这里网络盘上的任何同步文件 API 都记账；海报在网络盘上已不存在（搬家后的悬空
+    // 路径），探测落定后必须回落到成员封面。
+    final String netPoster = '${storeDir.path}/__fushi_net_mount__/poster.jpg';
+    final File memberCover = File('${storeDir.path}/ep1_member.png')
+      ..writeAsBytesSync(onePixelPng);
+    await seedEpisode('video/ep1', '第1集', coverPath: memberCover.path);
+    final int cid = await seedCollection(<String>['video/ep1']);
+    await db.updateMediaCollectionCoverPath(cid, netPoster);
+
+    final List<String> syncCalls = <String>[];
+    final List<String> asyncProbes = <String>[];
+    final Zone outer = Zone.current;
+    await IOOverrides.runZoned<Future<void>>(
+      () async {
+        await pumpPage(tester);
+        // 多重建几轮（库数据变更 / 滚动），同一候选不得重复探测。
+        await tester.pump(const Duration(milliseconds: 300));
+        await tester.pump(const Duration(milliseconds: 300));
+      },
+      createFile: (String path) => path.contains('__fushi_net_mount__')
+          ? _NetMountFile(path, syncCalls, asyncProbes)
+          : outer.run(() => File(path)),
+    );
+
+    expect(tester.takeException(), isNull);
+    expect(syncCalls, isEmpty, reason: 'build 路径不得对网络盘封面做同步文件调用');
+    // 首探一次；书架行重取（回填结束刷新）时「已知不在」的路径会 revalidateMissing
+    // 再探一次。关键是全走 async，且不随每次 build 重探。
+    expect(asyncProbes.toSet(), <String>{netPoster});
+    expect(
+      asyncProbes.length,
+      lessThanOrEqualTo(2),
+      reason: '结果进缓存，不随 build 重探',
+    );
+    // 叠层前层最后绘制 = 最后一张 Image。
+    final Image image = tester.widget<Image>(
+      find.descendant(of: cardFinder(cid), matching: find.byType(Image)).last,
+    );
+    final ImageProvider provider = image.image;
+    final FileImage fileImage =
+        (provider is ResizeImage ? provider.imageProvider : provider)
+            as FileImage;
+    expect(fileImage.file.path, memberCover.path);
+  });
+}
+
+/// BUG-3756 用的「网络盘」假文件：同步 API 记账并抛错，`exists()` 记账后回 false。
+class _NetMountFile implements File {
+  _NetMountFile(this.path, this.syncCalls, this.asyncProbes);
+
+  @override
+  final String path;
+  final List<String> syncCalls;
+  final List<String> asyncProbes;
+
+  @override
+  Future<bool> exists() async {
+    asyncProbes.add(path);
+    return false;
+  }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) {
+    syncCalls.add('${invocation.memberName} $path');
+    throw StateError('unexpected File.${invocation.memberName} on $path');
+  }
 }

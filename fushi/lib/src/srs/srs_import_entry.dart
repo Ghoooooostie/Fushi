@@ -7,7 +7,7 @@
 ///   [SrsMediaStore] 按内容哈希落盘。新格式包而排程内核不可用时报「需要排程内核」。
 /// - 导出：选项（学习进度 / 牌组预设 / 兼容 Anki，见 srs_export_options_dialog.dart；
 ///   记住上次的选择；范围里有 FSRS-7 牌组时对话框内提示「Anki 里会改用 FSRS-6」）→
-///   `exportAnkiPackage` → 桌面「另存为」/ 移动端系统分享。
+///   `exportAnkiPackageFile`（流式写暂存文件）→ 桌面「另存为」/ 移动端系统分享。
 /// - 从制卡历史导入：`mined_sentences` → 当前 profile 的默认牌组（见
 ///   srs_mined_history_import.dart），确认框写明导入到哪个 profile。
 ///
@@ -26,6 +26,7 @@ import 'package:fushi_engine/srs/apkg/srs_export_options.dart';
 import 'package:fushi_engine/foundation/pref_store.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_import.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
+import 'package:fushi_engine/srs/sync2/srs_location_crypto.dart';
 import 'package:fushi_srs/fushi_srs.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:path_provider/path_provider.dart';
@@ -81,6 +82,12 @@ List<String> srsImportReportLines(SrsImportReport r) => <String>[
     updated: r.notesUpdated,
     skipped: r.notesSkipped,
   ),
+  if (r.notesRestored > 0) t.srs_import_report_restored(n: r.notesRestored),
+  if (r.lapisNotesMigrated > 0)
+    t.srs_import_report_lapis_migrated(n: r.lapisNotesMigrated),
+  if (r.lapisDecksRenamed > 0)
+    t.srs_import_report_lapis_decks_renamed(n: r.lapisDecksRenamed),
+  if (r.lapisMigrationFailed) t.srs_import_report_lapis_failed,
   if (r.cardsAdded > 0) t.srs_import_report_cards(n: r.cardsAdded),
   if (r.cardsResetToNew > 0)
     t.srs_import_report_reset_new(n: r.cardsResetToNew),
@@ -131,9 +138,10 @@ List<String> srsImportReportLines(SrsImportReport r) => <String>[
 
 /// 一次导出的产物。
 class SrsAnkiExport {
-  const SrsAnkiExport({required this.bytes, required this.usesFsrs7});
+  const SrsAnkiExport({required this.file, required this.usesFsrs7});
 
-  final Uint8List bytes;
+  /// 写好的 .apkg（调用方给的路径）。
+  final File file;
 
   /// 范围里有用 FSRS-7 的参数组（Anki 里会改用 FSRS-6，需要提示）。
   final bool usesFsrs7;
@@ -155,21 +163,24 @@ Future<bool> srsExportScopeUsesFsrs7(SrsDbStore store, {String? deckId}) async {
   return false;
 }
 
-/// 导出 [deckId] 子树（null = 全部）为 .apkg 字节；媒体从 [media] 读。
+/// 导出 [deckId] 子树（null = 全部）为 .apkg，流式写到 [file]（整包不进内存）；媒体从
+/// [media] 读。
 Future<SrsAnkiExport> buildSrsAnkiExport({
   required SrsDbStore store,
   required SrsMediaStore? media,
+  required File file,
   String? deckId,
   SrsAnkiExportOptions options = const SrsAnkiExportOptions(),
 }) async {
-  final Uint8List bytes = await exportAnkiPackage(
+  await exportAnkiPackageFile(
     store: store,
+    file: file,
     deckId: deckId,
     loadMedia: media == null ? null : (String name) => media.load(name),
     options: options,
   );
   return SrsAnkiExport(
-    bytes: bytes,
+    file: file,
     usesFsrs7: await srsExportScopeUsesFsrs7(store, deckId: deckId),
   );
 }
@@ -348,15 +359,20 @@ Future<void> openSrsExport(BuildContext context, WidgetRef ref) async {
   if (options == null || !context.mounted) return;
   await writeSrsExportOptions(prefs, options);
   try {
+    const String fileName = 'fushi-review.apkg';
+    final Directory staging = await (await getTemporaryDirectory()).createTemp(
+      'fushi_srs_export_',
+    );
     final SrsAnkiExport export = await buildSrsAnkiExport(
       store: store,
       media: media,
+      file: File('${staging.path}${Platform.pathSeparator}$fileName'),
       options: options,
     );
     if (!context.mounted) return;
-    final bool saved = await _saveOrShareBytes(
-      bytes: export.bytes,
-      fileName: 'fushi-review.apkg',
+    final bool saved = await _saveOrShareFile(
+      file: export.file,
+      fileName: fileName,
     );
     if (saved) {
       FushiToast.show(msg: t.srs_export_done, severity: ToastSeverity.success);
@@ -371,16 +387,14 @@ bool get _isDesktop =>
     Platform.isWindows || Platform.isMacOS || Platform.isLinux;
 
 /// 桌面「另存为」/ 移动端系统分享（与收藏导出、日志导出同一套平台分流：Linux 没有
-/// share_plus 注册，桌面绝不触分享）。返回是否真的存 / 分享了。
-Future<bool> _saveOrShareBytes({
-  required Uint8List bytes,
+/// share_plus 注册，桌面绝不触分享）。[file] 在一个专用暂存目录里（桌面存完即删整个目录）。
+/// 返回是否真的存 / 分享了。
+Future<bool> _saveOrShareFile({
+  required File file,
   required String fileName,
 }) async {
-  final Directory staging = await (await getTemporaryDirectory()).createTemp(
-    'fushi_srs_export_',
-  );
-  final File tmp = File('${staging.path}${Platform.pathSeparator}$fileName');
-  await tmp.writeAsBytes(bytes, flush: true);
+  final Directory staging = file.parent;
+  final File tmp = file;
   try {
     if (_isDesktop) {
       final String? savePath = await FilePicker.platform.saveFile(
@@ -471,6 +485,18 @@ String srsSyncErrorReason(Object error) => switch (error) {
     t.srs_sync_directory_unidentified,
   SrsSyncReportError(message: kSrsSyncStoreUnavailable) =>
     t.srs_sync_store_unavailable,
+  SrsSyncReportError(message: kSrsSyncAwaitingConfirm) =>
+    t.srs_sync_awaiting_confirm,
+  SrsSyncReportError(message: kSrsSync2NeedsKey) =>
+    t.srs_timeline_location_needs_key,
+  SrsSyncReportError(message: kSrsSync2WrongKey) =>
+    t.srs_timeline_location_wrong_key,
+  SrsSyncReportError(message: kSrsSync2EncryptionMissing) =>
+    t.srs_timeline_location_encryption_missing,
+  SrsSyncReportError(message: kSrsSync2BadKdf) =>
+    t.srs_timeline_location_bad_kdf,
+  SrsSyncReportError(message: kSrsSync2MetaUnavailable) =>
+    t.srs_sync_location_meta_unavailable,
   _ => friendlySyncErrorDetail(error),
 };
 

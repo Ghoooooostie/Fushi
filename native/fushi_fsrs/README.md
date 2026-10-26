@@ -10,12 +10,12 @@ Fushi SRS（间隔重复）的排程内核：[fsrs-rs](https://github.com/open-s
 | 符号 | 作用 |
 |---|---|
 | `ffsrs_call(const char*) -> char*` | 请求 JSON → 响应 JSON，按 `op` 分派（见下） |
-| `ffsrs_compute_parameters(const char*, AtomicI32* cancel, AtomicI64* progress[2]) -> char*` | 参数优化，阻塞；`cancel` 写非 0 即取消，`progress` 持续写 `[已处理, 总数]`，两者可空 |
+| `ffsrs_fit(const char* req, const u8* ratings, const float* delta_days, usize n_reviews, const u32* card_offsets, const i64* card_ids, usize n_cards, const u32* item_cards, const u32* item_lengths, usize n_items, AtomicI32* cancel, AtomicI64* progress[2]) -> char*` | 参数优化 / 评估，阻塞；`req` 是 `{"op","algorithm","params"?}`（op：`compute_parameters` / `evaluate` / `evaluate_tss`）；训练集打包传（见下）；`card_ids` 可空，只给参数优化用；`cancel` 写非 0 即取消，`progress` 持续写 `[已处理, 总数]`，两者可空 |
 | `ffsrs_retrievability_batch(const char* model, const float* s, const float* d, const float* sf, const float* elapsed, usize n, float* out) -> char*` | 同一组参数下批量算可提取度（统计页）：`model` 是 `{"algorithm","params"}`，四个输入数组与 `out` 长度均为 `n`，`sf` 可空（取 `s`）；返回 `{"ok":n}` / `{"error"}`，结果与逐张调 `retrievability` op 逐位一致 |
 | `ffsrs_free_string(char*)` | 释放上面三个返回的串 |
 | `ffsrs_zstd_decompress(const u8*, usize, usize* out_len) -> u8*` | zstd 解码（.apkg 新格式），失败返回 NULL |
 | `ffsrs_free_bytes(u8*, usize)` | 释放解码缓冲区 |
-| `ffsrs_abi_version() -> i32` | ABI 版本（当前 1）；Dart 侧不一致即判不可用 |
+| `ffsrs_abi_version() -> i32` | ABI 版本（当前 2）；Dart 侧不一致即判不可用 |
 | `ffsrs_search_corpus_new(const u8* text, usize, const u32* layout, usize, char** err) -> Corpus*` | Anki 搜索语料的结构：笔记类型 / 字段名 / 标签 / 牌组 / 模板名（UTF-8 拼接）与字段排布（u32 布局，见 `src/search.rs` `Corpus::new`），**不含字段值**；失败返回 NULL 并在 `err`（可空）写错误串。句柄内部带锁，可跨线程调用 |
 | `ffsrs_search_corpus_free(Corpus*)` | 释放语料（Dart 侧挂在 `NativeFinalizer` 上） |
 | `ffsrs_search_corpus_needs(const Corpus*, const char* query) -> char*` | 一条查询要哪些字段值：`{"ok":{"all":true}}`（未限定字段的文本 / `re:`）或 `{"ok":{"all":false,"names":[字段名 id…]}}`；查询不合法时与 match 同形报错。只读建语料时定死的字段名表、**不拿语料锁**：另一线程上的 match 正在求值（持锁）时也立即返回 |
@@ -24,12 +24,34 @@ Fushi SRS（间隔重复）的排程内核：[fsrs-rs](https://github.com/open-s
 | `ffsrs_search_corpus_set_ints / _set_floats(Corpus*, i32 col, const i64*/const f64*, usize n) -> i32` | 卡片数值列（状态位、id、日序号、间隔、到期、复习 / 遗忘次数；稳定性 / 难度，NaN = 无），查询用到才传；成功 0 |
 | `ffsrs_search_corpus_match(const Corpus*, const char* query, u8* out, usize n) -> char*` | 整批求值一条搜索（语法树 JSON，由 Dart 解析器产出）：`out[i]` 写 1 / 0；返回 `{"ok":命中数}` / `{"error","kind":"syntax"\|"internal","at"}`。最近一次结果缓存在句柄里（语料一改就清），后台 isolate 预求值后 UI isolate 再调只是取结果 |
 | `ffsrs_search_dupe_norm_batch(const u8*, usize, const u32* offs, usize n, usize* out_len) -> u8*` | AnkiConnect 查重的首字段规范形（样式去重 → 去 HTML → trim），批量；返回 `[u32 LE 偏移 × (n+1)][UTF-8]`，用 `ffsrs_free_bytes` 释放 |
+| `ffsrs_history_states(const u8* text, usize, const u32* offs, const i64* servers, usize n_logs, const u32* groups, usize n_groups, usize* out_len, char** err) -> u8*` | 卡片历史内核（`src/history.rs`）：落库日志原文 + 服务器时刻 → 每份历史的当前排程状态（定长记录 + 串表），批量；失败返回 NULL 并写 `err` |
+| `ffsrs_history_select(const i64* ints, usize n_logs, const u8* text, usize, const u32* offs, const u32* groups, usize n_groups, usize* out_len, char** err) -> u8*` | 卡片历史内核（列模式）：排序与每条日志的选取标记（有效 / 撤销 / 等价导入 / 撤销者 / 排序键被钳位），批量 |
+| `ffsrs_import_equivalent(const u8* text, usize, const u32* offs, usize n_logs, const u32* groups, usize n_groups, usize* out_len, char** err) -> u8*` | Anki 导入器入库前判重：每组（导入日志, 原生日志…）的落库 JSON → 每组一个字节；判据与卡片历史的等价导入是同一个函数 |
+| `ffsrs_materialize(const u8* header, usize, const u8* text, usize, const u32* offs, const i64* servers, usize n_items, usize* out_len, char** err) -> u8*` | 字段寄存器内核（`src/registers.rs`）：组描述 JSON + 修改记录落库原文 / 服务器时刻 → 寄存器（支配、排序键、冲突候选、删除优先）与笔记 / 卡片标志（按前身血统继承）/ 笔记类型 / 牌组的物化视图，以及落库支配裁剪、no-op 的「值相同」；结果是 JSON，批量。排序键（`src/ordering.rs`）与释义样式去重规范形（`src/style_dedup.rs`）与卡片历史 / 查重共用一份 |
+| `ffsrs_memory_input(const i64* ints, usize n_logs, i32 alg, i32 utc_offset_min, i32 rollover_hour, usize* out_len, char** err) -> u8*` | 记忆状态输入（铁律 A，`src/projection.rs` `memory_input`，排程用）：一份历史的有效日志（列模式，每条 14 个 i64，已排序）→ 评审序列（rating, 小数 / 整数天）与起点（同算法记忆状态 / SM-2 换算）、是否完整；`alg` 0 fsrs6 / 1 fsrs7 / 2 rwkv。与优化器直读命令同一个函数 |
+| `ffsrs_rwkv_now_rows(const i64* ints, usize n_rows, i32 utc_offset_min, i32 rollover_hour, usize* out_len, char** err) -> u8*` | RWKV「此刻」行（ease 0，RWKV-Instant 排队 / 作答）：每行 9 个 i64（四个数字 id、最后保留评分、队列、此刻）→ 80 字节 `FrwkvReview`（packages/fushi_rwkv `RwkvRows` 布局；本库不链接 RWKV）|
+| `ffsrs_store_open(const u8* path, usize, SrsCore** out, char** err) -> i32` / `ffsrs_store_close(SrsCore*)` | 打开 / 关闭 Rust 独占的 `srs.db`（`src/store/`，rusqlite bundled；设计 `docs/specs/2026-10-23-srs-rust-store.md`）。一条写连接 + 一条读连接，WAL；只开 srs.db，绝不开主库 |
+| `ffsrs_store_exec` / `ffsrs_store_exec_batch` / `ffsrs_store_in_transaction` | Drift 执行器后端：写连接上执行语句（行页编码见 `src/store/rows.rs`）|
+| `ffsrs_store_history_states(SrsCore*, const u8* groups, usize, usize n_groups, u8** out, usize*, char**) -> i32` | 缓存刷新：Rust 在写连接上直读日志 + 服务器时刻并选取（含事务里未提交的行），输出布局同 `ffsrs_history_states` |
+| `ffsrs_store_optimizer_items(SrsCore*, const u8* page, usize, const i64* args, usize, u8** out, usize*, char**) -> i32` | 优化器训练集（P6，`src/store/projections.rs`）：读连接上一个读事务里直读血统的日志 + 服务器时刻，选取、记忆状态输入、「时间不确定」过滤，输出列式训练集（序列 + 前缀条目，按评分时刻排序）。`page` 两列 `[下标, 文本]`（g ≥ 0 血统里的卡，-1 profile），`args = [n, alg, utcOffsetMin, rolloverHour, 卡数字 id × n]` |
+| `ffsrs_store_rwkv_rows` | RWKV 回放行（P6）：mode 0 逐卡（保留评分行、日志 ID、有效评分数、最后保留评分），mode 1 全量回放（本 profile 日志一条语句扫出，指纹与行同一快照，按评分时刻稳定排序，另报列卡之后才出现的「漏卡」）；签名同上，`args = [n, mode, utcOffsetMin, rolloverHour, since, 数字 id × 4n]` |
+| `ffsrs_store_rwkv_log_tail` | RWKV 对齐：本 profile 日志的 (行数, 最大 rowid, since 之后的行数)，可选连同这些新行（id / 卡 / kind（review / undo / 其它）/ 撤销目标 / 时刻）；签名同上，`args = [since, with_rows, incremental?]`，incremental 时只数 since 之后的行（O(新增)） |
+| `ffsrs_store_stat_projection` | 有效复习投影（`srs_stat_reviews` 的行）：写连接直读日志，一批归属组（归属卡 + 归它的前身卡）一次调用，按合并历史投影，回 9 列行页 |
+| `ffsrs_store_legacy_state` / `_legacy_begin` / `_legacy_page` / `_legacy_commit` / `_legacy_abort` / `_legacy_mark_none` | 主库旧 srs_* 表的一次性搬迁（Dart 读、Rust 写，一个事务）|
+| `ffsrs_store_snapshot(SrsCore*, const u8* path, usize, i32 strip_device_local, char**) -> i32` | 备份快照（`VACUUM INTO`，可清空设备本地表）|
+| `ffsrs_store_debug_query` | 只读调试查询（测试 / 诊断）|
+| `ffsrs_store_read_begin` / `_read_query` / `_read_end` | 只读会话：另开一条只读连接 + 一个读事务（开会话时快照即定），在里面跑只读查询（编码同 debug_query），结束回滚并关闭。备份读快照用（后台 isolate） |
 
 响应恒为 `{"ok": …}` 或 `{"error": "…"}`；panic 一律接住转成 error，不越过 FFI。每个 op 带
 `algorithm`（`"fsrs6"` 21 参 / `"fsrs7"` 34 参），`params` 空或缺省 = 该算法默认参数；elapsed
 一律**小数天**。`op`：`version` / `defaults` / `validate` / `next_states` / `memory_state` /
-`memory_state_from_sm2` / `retrievability` / `next_interval` / `evaluate` / `evaluate_tss`。
-`ffsrs_compute_parameters` 的请求是 `{"algorithm", "items": [[{"rating","deltaT"},…],…], "cardIds"?}`，
+`memory_state_from_sm2` / `retrievability` / `next_interval`。
+
+`ffsrs_fit` 的训练集（BUG-3745）：每张卡只传一份完整历史（`ratings` / `delta_days` 按 `card_offsets`
+切段，长 `n_cards + 1`），外加按评分时刻排好序的条目 `(item_cards[i], item_lengths[i])` = 卡
+`item_cards[i]` 的前 `item_lengths[i]` 次评分。fsrs-rs 的 API 收每条自带前缀的 `Vec<FSRSItem>`，前缀在
+Rust 里展开：过边界与 Dart 侧都是 O(总评分数)，展开后的 O(Σ 前缀长度)（每条评分 8 字节）只在本次调用
+期间存在；fsrs-rs 内部 FSRS-6 训练 / 两种评估仍逐条前缀计算，这部分计算量仍是 O(Σ 前缀长度)。
 取消后返回 `{"error":"cancelled"}`。
 
 ### Anki 搜索（`src/search.rs`）
@@ -92,7 +114,7 @@ native lib 目录、macOS `Contents/Frameworks`、Linux `bundle/lib/`）；iOS �
 同时 `-force_load` 进 Runner 会撞重复符号（`rust_eh_personality`、`__rdl_alloc` …），不
 `-force_load` 又会被当无用成员整个丢掉。所以 iOS 走 `native/fushi_ios_umbrella`：一个 crate
 依赖两个 path crate、re-export 两边，编成**一个** staticlib，std 只有一份，同时导出
-`fp2p_*`（12 个）与 `ffsrs_*`（17 个）。为此 `native/fushi_p2p/Cargo.toml` 的 crate-type 加了
+`fp2p_*`（12 个）与 `ffsrs_*`（18 个）。为此 `native/fushi_p2p/Cargo.toml` 的 crate-type 加了
 `rlib`（只用来被伞形 crate 依赖，其余平台产物不变）。伞形 crate 的 `Cargo.lock` 以两个 crate
 各自的锁文件合并为种子再解析：fushi_p2p 那边的版本全部保持；fushi_fsrs 那边有 7 个
 semver 兼容的小版本被统一到 fushi_p2p 锁的版本（libc、serde_json、syn 3.x、unicode-ident、

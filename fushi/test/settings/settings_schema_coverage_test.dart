@@ -49,6 +49,92 @@ const String _kFloatingBallSceneButtons =
     '各场景的勾选互不影响 / 勾选了但页面此刻没提供的专属按钮跳过';
 
 const Map<String, String> kCoveredElsewhere = <String, String>{
+  // app 内浏览器（系统 › 浏览器）：生效点在全屏浏览页 / 标签页 WebView，harness 设置页
+  // 没有浏览页。浏览页每次打开现读这些偏好。
+  'system/Tab style':
+      'test/pages/fushi_web_browser_shell_test.dart（桌面侧边栏 ↔ 顶部标签栏、偏好写穿）',
+  'system/Hide toolbar while scrolling':
+      'test/web_browser/web_browser_layout_test.dart（收起状态机 / 可收起判据）+ '
+      'test/pages/fushi_web_browser_shell_test.dart（往下滚收成小地址条）',
+  'system/Search engine':
+      'test/web_browser/web_browser_search_engines_test.dart（选中引擎决定搜索地址）',
+  'system/Dark mode for web pages':
+      'test/web_browser/tab_view/web_browser_tab_view_logic_test.dart（forceDark 进 WebView 设置）',
+  'system/Open desktop sites by default':
+      'test/pages/fushi_web_browser_shell_test.dart（新标签页默认桌面版）',
+  'system/Restore tabs from last time':
+      'test/web_browser/web_browser_tabs_controller_test.dart（关闭会话持久化时不读不写）+ '
+      'test/pages/fushi_web_browser_shell_test.dart（恢复上次的标签页）',
+  // 音乐播放（无缝 / ReplayGain）：生效点是音乐引擎下发给独立 libmpv 实例的属性
+  // （gapless-audio / prefetch-playlist / replaygain），harness 里没有在播的 mpv。
+  // 设置值 → 引擎输出设置 → mpv 属性这条链由 music_player_engine_test 咬住。
+  'music/Gapless playback': 'test/media/music/music_player_engine_test.dart',
+  'music/ReplayGain': 'test/media/music/music_player_engine_test.dart',
+  // 交叉淡入：设置值 → 引擎判衔接（crossfadeNext）→ 双实例编排由 music_crossfade_test
+  // 咬住；真 libmpv 上的样本级曲线 / 实时对齐在 music_crossfade_real_test。
+  'music/Crossfade': 'test/media/music/music_crossfade_test.dart',
+  'music/Crossfade gapless tracks too':
+      'test/media/music/music_crossfade_test.dart',
+  // 预放大 / 独占 / DSD 采样率：设置值 → 引擎输出设置 → mpv 属性由
+  // music_player_engine_test 咬住；真 libmpv 上的实际效果（volume-gain 电平、
+  // WASAPI 独占 audio-out-params、DSD 逐文件 audio-samplerate）在
+  // music_mpv_backend_real_test。
+  'music/ReplayGain pre-amp': 'test/media/music/music_player_engine_test.dart',
+  'music/Exclusive (bit-perfect) output':
+      'test/media/music/music_player_engine_test.dart',
+  'music/DSD to PCM sample rate':
+      'test/media/music/music_player_engine_test.dart',
+  // 响度扫描开关：生效点是后台 FFmpeg ebur128 写库，harness 没有 FFmpeg 与曲目。
+  'music/Measure loudness of untagged tracks':
+      'test/media/music/music_loudness_scanner_test.dart',
+  // 在线歌词（LRCLIB）：生效点是 MusicLyricsService.resolve 是否出网，harness 没有在播的
+  // 曲目。开关关闭即不出网、打开按标题 / 艺人 / 专辑 / 时长精确匹配由
+  // music_lyrics_service_test 咬住。
+  'music/Online lyrics (LRCLIB)':
+      'test/media/music/lyrics/music_lyrics_service_test.dart',
+  // 查词时暂停：生效点在歌词页查词回调（musicLyricsShouldPauseForLookup），harness
+  // 设置页没有歌词页；判据由 music_lyrics_page_logic_test 咬住。
+  // 开关值经 MusicScrapeService 的 vgmdbEnabled 读取器交给 VgmdbProvider（关 = 不发请求）。
+  'music/VGMdb lookup':
+      'test/media/music/metadata/music_scrape_service_test.dart',
+  'music/Pause while looking up words':
+      'test/media/music/lyrics/music_lyrics_page_logic_test.dart',
+  // 服务器曲库的码率上限：生效点是播放服务器曲目时向服务器要的流（直出 / 转码），harness
+  // 里没有服务器。设置值 → musicServerBitrateLimit → streamFor 的直出 / 转码与信号路径源
+  // 属性由 music_server_test 咬住。
+  'music/Server streaming quality':
+      'test/media/music/server/music_server_test.dart',
+  // 图示均衡器：生效点是音乐 libmpv 实例的 `af`，harness 里没有在播的 mpv。偏好串 → 均衡
+  // 设置 → `af` 链由 music_equalizer_test 咬住；真 libmpv 上的增益 / 关时逐样本不变 /
+  // 与交叉淡入同链在 music_equalizer_real_test。
+  'music/Enable equalizer': 'test/media/music/music_equalizer_test.dart',
+  'music/31 Hz': 'test/media/music/music_equalizer_test.dart',
+  'music/62 Hz': 'test/media/music/music_equalizer_test.dart',
+  'music/125 Hz': 'test/media/music/music_equalizer_test.dart',
+  'music/250 Hz': 'test/media/music/music_equalizer_test.dart',
+  'music/500 Hz': 'test/media/music/music_equalizer_test.dart',
+  'music/1 kHz': 'test/media/music/music_equalizer_test.dart',
+  'music/2 kHz': 'test/media/music/music_equalizer_test.dart',
+  'music/4 kHz': 'test/media/music/music_equalizer_test.dart',
+  'music/8 kHz': 'test/media/music/music_equalizer_test.dart',
+  'music/16 kHz': 'test/media/music/music_equalizer_test.dart',
+  // ASS 卡拉 OK 字幕默认显示：生效点是卡拉 OK 字幕页打开时选哪种叠加
+  // （musicKaraokeDefaultOverlay），harness 设置页没有在播的曲目与 mpv；设置值 → 默认
+  // 叠加的判据由 karaoke_stage_plan_test 咬住。
+  'music/ASS karaoke subtitles':
+      'test/media/music/karaoke/karaoke_stage_plan_test.dart',
+  // 桌面歌词 / 锁屏歌词：生效点是 MusicLyricsLive（解析当前曲目歌词、按位置推当前行到
+  // 原生悬浮窗 / 媒体会话副标题），harness 没有在播的曲目与原生窗口。开关开 = 弹窗推
+  // 双行块与已唱高亮、关 = 隐藏 / 不给副标题、两项都关 = 不解析，由
+  // music_lyrics_live_test 咬住。
+  'music/Desktop lyrics': 'test/media/music/lyrics/music_lyrics_live_test.dart',
+  'music/Lyrics on the lock screen':
+      'test/media/music/lyrics/music_lyrics_live_test.dart',
+  // 听歌计入学习（D4）：生效点是 MusicStudyTracker 起停 StudyClock、写 study_segments，
+  // harness 没有在播的曲目。开 = 在播即计、关 = 只在学习动作后的空闲窗口内计，由
+  // music_study_tracker_test 咬住。
+  'music/Count listening as study time':
+      'test/media/music/music_study_tracker_test.dart',
   // 网页广告拦截：生效点在 InAppWebView 的逐请求拦截 / cosmetic 注入，harness 设置页
   // 没有 WebView。总开关、订阅集、白名单都是 Rust 核心（fushi_web_core）的状态，行改动经
   // WebAdblockService 转成命令，由 web_adblock_service_test（开关 / 白名单下一次请求即生效、
@@ -99,6 +185,13 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
   // 启动轮照查」。
   'system/Auto-update extensions in the background':
       'test/updates/mihon_extension_update_probe_test.dart（关着不装 / 开着且空闲才装 / dueOnStart）',
+  // 媒体库在线作品自动补新集（video_library_auto_update，PR#2493）：写 prefsRepo
+  // （changed=true），生效点是后台调度器里番剧新集域的补集探针——要联网取媒体服务器
+  // / 在线源的新集，harness 观测不到。接线 updateCheckKindGate 由调度器用例咬住：
+  // 关掉它提醒开着也不跑、关提醒不停补集。
+  'system/Auto-add new episodes to the video library':
+      'test/updates/update_check_scheduler_test.dart（番剧新集域只看 '
+      'video_library_auto_update，不看提醒开关）',
   'system/Notify about app releases':
       'test/updates/update_feed_service_test.dart（关掉的域整批丢弃）',
   'system/System notifications':
@@ -413,6 +506,27 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
   // 写盘前的对齐钩子（AppModel.alignDownloadedSubtitle = gatedAutomaticSubtitleAligner，
   // 每次调用现读开关）——要下载 + 真视频内嵌轨，不是 reader CSS / 主题树，无适用
   // 探针；由专项测试咬住（关=原样返回且不调用对齐器、运行中改开关下一次即生效）。
+  // 原盘会话三项（BD/DVD 原盘交互改造第 8 项）。写 prefsRepo（changed=true），生效点
+  // 都不在 harness 能观测的树里：自动全屏要真窗口（runner 的 SetFullscreen 与退出时的
+  // WINDOWPLACEMENT 还原）、启动动画只在从库里进原盘会话的播放页出现、「默认进入菜单」
+  // 决定原盘作品详情页主按钮——各由专项测试咬住判据，真窗口那条走 Windows itest。
+  'video/Full screen for disc playback':
+      'integration_test/bluray_disc_session_itest.dart'
+      '（真窗口：进原盘自动全屏、退出恢复尺寸 / 位置 / 最大化；需真盘）',
+  'video/Disc launch animation':
+      'test/media/video/disc/disc_session_controls_test.dart'
+      '（DiscLaunchCoverTransition：放大铺满再淡出、减弱动效下不画）',
+  'video/Open disc menu by default':
+      'test/media/video/disc/disc_session_entry_test.dart'
+      '（resolveDiscPrimaryKind：设置关 = 主按钮直接播正片）',
+  // 作品图谱 L2 两项（OP / ED 声纹识别后的播放行为）。写 prefsRepo（changed=true），
+  // 生效点在视频页覆盖层的状态机：harness 里没有带识别结果的正在播放的视频。
+  'video/Skip intros and credits automatically':
+      'test/media/video/video_theme_song_overlay_test.dart'
+      '（VideoThemeSongTracker：开关每次现读，只在刚进段 3 s 内自动跳一次）',
+  'video/Show the theme song title':
+      'test/media/video/video_theme_song_overlay_test.dart'
+      '（VideoThemeSongOverlay.showNowPlaying：关掉只剩跳过按钮）',
   'video/Auto-align downloaded subtitles':
       'test/media/video/embedded_reference_subtitle_sync_test.dart'
       '（gatedAutomaticSubtitleAligner：开关每次现读）',
@@ -563,6 +677,8 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
       'test/floating_ball/app_floating_ball_host_test.dart: 立即同步走与设置页同一个手动同步入口 / 唤起主窗再走手动同步入口 / Android openSync',
   'floatingBall/Feedback':
       'test/floating_ball/app_floating_ball_host_test.dart: 反馈按钮打开反馈中心 / 场景勾选里去掉反馈：球上没有反馈按钮',
+  'floatingBall/Switch profile':
+      'test/floating_ball/app_floating_ball_host_test.dart: 切换配置（桌面系统球原地切 / 选当前配置或关菜单不切 / Android 回 Toast）',
   // 阅读器 / 漫画 / 视频三个场景的专属按钮勾选。三组与上面几行是同一个
   // `_buttonsSection` 生成器（写 floatingBallButtons(scope)），生效点同样在宿主按
   // 当前场景挑按钮。这组分区只在对应模块（书 / 漫画 / 视频）开着时出现：#2198 之前
@@ -573,6 +689,7 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
   'floatingBall/Back': _kFloatingBallSceneButtons,
   'floatingBall/Lyrics mode': _kFloatingBallSceneButtons,
   'floatingBall/Navigation': _kFloatingBallSceneButtons,
+  'floatingBall/Bookmarks & saved sentences': _kFloatingBallSceneButtons,
   'floatingBall/Browse illustrations': _kFloatingBallSceneButtons,
   'floatingBall/Reading statistics': _kFloatingBallSceneButtons,
   'floatingBall/Pause / resume reading timer': _kFloatingBallSceneButtons,
@@ -598,11 +715,20 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
   'floatingBall/Favorite current sentence': _kFloatingBallSceneButtons,
   'floatingBall/Screenshot': _kFloatingBallSceneButtons,
   // 应用外开关（2026-09-30 起桌面也可见）：生效点是宿主起停原生系统球。
+  // 截屏识字制卡带图：生效点是制卡那一刻（词典弹窗 mixin / 覆盖窗委托读偏好、按截图
+  // 裁卡图），设置页里没有制卡面。裁图与通道载荷由专项测试钉住。
+  'floatingBall/Add screenshot to cards':
+      'test/floating_ball/screen_ocr_card_image_test.dart + '
+      'test/floating_ball/screen_ocr_session_and_card_image_guard_test.dart',
   'floatingBall/Show over other apps':
       'test/floating_ball/app_floating_ball_host_test.dart: 桌面应用外球：打开开关即起原生球…；Android 原生服务见 BUG-2793 真机记录',
   // 关闭后自动恢复三态：生效点是宿主处理「关闭」与回到前台。
   'floatingBall/Auto-restore floating ball':
       'test/floating_ball/app_floating_ball_host_test.dart: 自动恢复含应用内 / 不自动恢复 / 桌面应用外球「应用内外」三条',
+  // 「我库里的例句」开关：生效点是弹窗注入 window.__fushiLibrarySentencesEnabled（popup.js
+  // 据此不渲染 / 不发桥）与语料喂入门（LibraryCorpusService.enabled）。
+  'lookup/Sentences from your library':
+      'test/pages/popup_settings_injection_memo_test.dart',
   'lookup/Popup max width': 'test/pages/dictionary_popup_layer_test.dart',
   // 弹出查词 / 浏览器扩展弹窗的独立尺寸：生效点是有效尺寸解析（解锁前跟随
   // app 内共享值、解锁后用自身宽高），由 AppModel 接线测试咬住；窗口真尺寸要
@@ -716,6 +842,17 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
       'test/anki/anki_overwrite_scope_test.dart + test/srs/srs_mining_test.dart',
   'cardCreation/Compact glossaries':
       'test/anki/anki_compact_glossaries_guard_test.dart',
+  // 「制卡提示」两个开关（反馈 zNuGKLIhmT / aK5wv0CnWf）：写的是内存 DB 里的偏好，
+  // changed / persisted 已由本测试证实；效果（哪类 toast 不弹）在 widget 树里看不见
+  // （FushiToast 走全局 navigatorKey 的 overlay），由纯函数裁决 + 接线源码守卫咬住。
+  'cardCreation/Show mining confirmations':
+      'test/anki/mine_notice_toggle_test.dart',
+  'cardCreation/Show duplicate-card notices':
+      'test/anki/mine_notice_toggle_test.dart',
+  // 「动图只播放一次」（反馈 ZxyIMK-C5V）：效果在 ffmpeg 产物的循环计数里，widget
+  // 树看不到；参数映射与两条动图链的接线由专项测试咬住（-loop 口径已实测）。
+  'cardCreation/Play animated images once':
+      'test/mining/mining_animated_play_once_test.dart',
   'cardCreation/Add "fushi" tag':
       'packages/fushi_anki/test/mining_tag_and_parallel_test.dart',
   'cardCreation/Add source category tag':
@@ -824,6 +961,9 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
       'test/torrent/download_http_client_proxy_test.dart',
   'syncBackup/Auto sync': 'test/sync/sync_gating_test.dart',
   'syncBackup/Sync statistics': 'test/sync/sync_gating_test.dart',
+  // 设备级「同步浏览历史」：生效点是聚合快照按族裁剪（云 / 互联 client / host 三条路径）。
+  'syncBackup/Sync browsing history':
+      'test/sync/aggregate_web_history_share_gate_test.dart',
   'syncBackup/Upload book files': 'test/sync/sync_gating_test.dart',
   // 「上传漫画文件」（书籍和漫画分开，2026-10-21）：按格式分流的上传 / 不上传、旧名
   // `.epub` 漫画包去重都在这条专项测试里咬住。
@@ -941,6 +1081,9 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
   // 直通：下发值由 mpv 配置测试咬住；真正的码流直通要接功放 / 回音壁才能验。
   'video/Dolby / DTS passthrough':
       'test/media/video/video_mpv_config_test.dart',
+  // 音量上限（W-qZRr3lwK）：volume-max 下发与编解码由 mpv 配置测试咬住，各音量入口
+  // 按上限 clamp 由控制器测试咬住；实际放大响度要真机听。
+  'video/Volume limit': 'test/media/video/video_player_controller_test.dart',
   // TODO-1247：尊重 .ass 自带样式开关平移到首页（videoRespectAssStyle 纯 pref）；
   // 生效点在字幕 overlay 标记渲染，由 video_subtitle_overlay_markup_test.dart 咬住。
   "video/Respect subtitle's own style":
@@ -1372,6 +1515,10 @@ const Map<String, String> kCoveredElsewhere = <String, String>{
       'test/sync/interconnect_share_scope_test.dart',
   'interconnect/Share favorites':
       'test/sync/interconnect_share_scope_test.dart',
+  // 互联通道自己的自动同步（反馈 5nWEirdCs2 / BUG-3668）：开关写 interconnect_sync_auto，
+  // 效果是自动路径只跑开着的通道（关互联云照跑 / 关云互联照跑），迁移三态在
+  // sync_repository_test。
+  'interconnect/Auto sync': 'test/sync/sync_channel_isolation_test.dart',
   // service-config 同步：开关是请求前的进场门（关 = 连请求都不发），且是设备本地键。
   'interconnect/Sync service configuration from host':
       'test/sync/interconnect_service_config_test.dart',

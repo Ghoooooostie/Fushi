@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:drift/drift.dart' show Value;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -109,6 +111,48 @@ void main() {
   });
 
   test(
+    'library items carry the cover version only when there is a cover',
+    () async {
+      final Directory dir = await Directory.systemTemp.createTemp('vr_cover');
+      addTearDown(() => dir.delete(recursive: true));
+      final File cover = File('${dir.path}/a.jpg')..writeAsBytesSync(<int>[1]);
+      cover.setLastModifiedSync(DateTime.fromMillisecondsSinceEpoch(1234000));
+      library = <VideoRemoteLibraryItem>[
+        VideoRemoteLibraryItem(bookUid: 'a', title: 'A', coverPath: cover.path),
+        VideoRemoteLibraryItem(
+          bookUid: 'b',
+          title: 'B',
+          coverPath: '${dir.path}/gone.jpg',
+        ),
+        const VideoRemoteLibraryItem(bookUid: 'c', title: 'C'),
+      ];
+      final List<Object?> items = (await call('library'))['items']! as List;
+      expect(items[0], containsPair('coverVersion', 1234000));
+      // 本机路径永不外发。
+      expect(items[0].toString(), isNot(contains(dir.path)));
+      expect(items[1], isNot(contains('coverVersion')));
+      expect(items[2], isNot(contains('coverVersion')));
+    },
+  );
+
+  test('cover version is the cover file mtime, null without a file', () async {
+    final Directory dir = await Directory.systemTemp.createTemp('vr_cover');
+    addTearDown(() => dir.delete(recursive: true));
+    final File cover = File('${dir.path}/cover.jpg')
+      ..writeAsBytesSync(<int>[1]);
+    final DateTime mtime = DateTime.fromMillisecondsSinceEpoch(1700000000000);
+    cover.setLastModifiedSync(mtime);
+    expect(
+      await videoRemoteCoverVersion(cover.path),
+      mtime.millisecondsSinceEpoch,
+    );
+    expect(await videoRemoteCoverVersion('${dir.path}/missing.jpg'), isNull);
+    expect(await videoRemoteCoverVersion(dir.path), isNull);
+    expect(await videoRemoteCoverVersion(null), isNull);
+    expect(await videoRemoteCoverVersion(''), isNull);
+  });
+
+  test(
     'openVideo hands the bookUid to the app without an open video',
     () async {
       expect(await call('openVideo', <String, dynamic>{'bookUid': 'b'}), {
@@ -143,6 +187,58 @@ void main() {
       expect(opened, isEmpty);
     },
   );
+
+  test(
+    'discMenu: refused when the host cannot open discs (never plays instead)',
+    () async {
+      await expectLater(
+        call('openVideo', <String, dynamic>{'bookUid': 'a', 'discMenu': true}),
+        throwsA(
+          isA<VideoRemoteException>().having(
+            (VideoRemoteException e) => e.code,
+            'code',
+            videoRemoteActionUnsupported,
+          ),
+        ),
+      );
+      expect(opened, isEmpty, reason: '老口径不能把标题当普通视频直接播');
+    },
+  );
+
+  test('discMenu: advertised and routed to openDisc', () async {
+    final List<String> discs = <String>[];
+    final VideoRemoteHost discHost = VideoRemoteHost(
+      favorites: () => FavoriteSentenceRepository(db),
+      library: VideoRemoteLibrary(
+        list: () async => library,
+        open: (String bookUid) async => opened.add(bookUid),
+        openDisc: (String bookUid) async => discs.add(bookUid),
+      ),
+    );
+    addTearDown(discHost.dispose);
+    final Map<String, Object?> snapshot = await discHost.handle(
+      'snapshot',
+      <String, dynamic>{},
+      'phone',
+    );
+    expect(
+      snapshot['capabilities'],
+      containsAll(<String>[
+        videoRemoteCapabilityOpenVideo,
+        videoRemoteCapabilityOpenDiscMenu,
+      ]),
+    );
+    expect(
+      await discHost.handle('openVideo', <String, dynamic>{
+        'requestId': 'r1',
+        'bookUid': 'a',
+        'discMenu': true,
+      }, 'phone'),
+      <String, Object?>{'ok': true},
+    );
+    expect(discs, <String>['a']);
+    expect(opened, isEmpty);
+  });
 
   test('a host without a library neither advertises nor answers', () async {
     final VideoRemoteHost bare = VideoRemoteHost(

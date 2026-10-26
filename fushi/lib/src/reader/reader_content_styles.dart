@@ -708,8 +708,8 @@ body::after {
         contentLanguage,
       );
     }
-    // BUG-3606：竖排时标点子集排在链首，「」、。等一律取带 `vert` 的竖排字形——正文
-    // 字体缺 `vert` 时 Blink 不旋转、直接画横排字形，同页与 ー …… 方向不一致。横排不注入。
+    // BUG-3606：竖排时标点子集排在链首，「」、。ー 等一律取带 `vert` 的竖排字形——正文
+    // 字体缺 `vert` 时 Blink 不旋转、直接画横排字形，同页与 …… 方向不一致。横排不注入。
     // 三种布局（翻页 / 滚动 / VN）共用这一份 resolvedFontFamily。
     // 繁体中文竖排不注入，判据见 [ReaderVerticalPunctuationFont.appliesTo]。
     if (ReaderVerticalPunctuationFont.appliesTo(
@@ -1746,7 +1746,18 @@ body {
 .fushi-vn-content, .fushi-vn-content * {
   hanging-punctuation: none !important;
 }
-/* The reveal (M1) hides not-yet-typed text by collapsing the trailing span. */
+/* The reveal (M1) hides not-yet-typed text. BUG-3778: engines with CSS
+   Highlight paint the unrevealed Range transparent so the DOM (and Blink's
+   ruby line boxes) never change mid-reveal; old WebViews fall back to the
+   trailing visibility:hidden span. */
+::highlight(fushi-vn-unrevealed) {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+  text-decoration-color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+}
 [data-fushi-visual-novel-unrevealed] {
   visibility: hidden !important;
 }

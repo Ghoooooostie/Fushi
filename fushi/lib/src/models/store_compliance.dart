@@ -51,7 +51,14 @@ enum StoreRestrictedCapability {
   /// 一致：报「码流仍是 AACS 加密」，不读取、不下载任何播放配置；已解密的副本与
   /// 未加密的原盘照常播放。引擎侧开关是 `aacsDecryptionAvailable`
   /// （`installEngineHostBindings()` 用本值赋值）。
-  aacsDecryption;
+  aacsDecryption,
+
+  /// 应用内的外部打赏 / 赞助入口（GitHub Sponsors、Ko-fi）。
+  ///
+  /// 审核指南 3.1.1：应用内向开发者付款（含打赏 / 小费）只能走 App 内购买，
+  /// 引导到外部支付页的按钮属于会被拒绝上架的形态（只有获批的非营利组织
+  /// 募捐例外）。iOS 上设置页不渲染这些入口；仓库 README 等应用外渠道不受影响。
+  externalDonation;
 
   /// 本能力在目标平台上**是否存在**（与用户意愿、与运行时能否跑起来都无关）。
   ///
@@ -66,3 +73,19 @@ enum StoreRestrictedCapability {
   /// 别依赖宿主真实平台——否则同一条用例在 Windows 本机与 macOS CI 上结论相反。
   bool get isAvailable => availableOn(isIOS: Platform.isIOS);
 }
+
+/// DVD CSS 解密（随包 libdvdcss，`tool/dvd`）**不是**受限能力：所有者 2026-10-24
+/// 拍板五端一致随包，iOS 也链接 libdvdcss（见
+/// `docs/specs/2026-10-24-dvd-original-menu.md`「风险」）。
+///
+/// 这里是预留判据，不是散落的开关：若 App Store 审核以「绕过复制保护」拒绝，回退
+/// 办法是 ① 本函数改成 `!isIOS`（或并入 [StoreRestrictedCapability] 作为新值）；
+/// ② iOS 的 DVD 库改用 `DVD_MESON_ARGS=-Dlibdvdcss=disabled` 构建
+/// （`tool/dvd/build_dvd_libs.sh` 届时放开对 libdvdcss 的硬检查），只播未加密 /
+/// 已解密的 ISO。消费端（加密盘的报错文案、能力提示）一律问这里，不另写
+/// `Platform.isIOS`。
+bool dvdCssDecryptionAvailableOn({required bool isIOS}) => true;
+
+/// 真实平台上的 [dvdCssDecryptionAvailableOn]。
+bool get dvdCssDecryptionAvailable =>
+    dvdCssDecryptionAvailableOn(isIOS: Platform.isIOS);

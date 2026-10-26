@@ -4,7 +4,6 @@ library;
 import 'dart:io';
 
 import 'package:drift/drift.dart';
-import 'package:drift/native.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_import.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
@@ -16,6 +15,7 @@ import '../apkg/apkg_test_support.dart';
 import '../apkg/srs_apkg_import_bench_test.dart' show benchApkg;
 import '../apkg/srs_apkg_import_test.dart' show kBasic, kFullOptions;
 import 'srs_query_counter.dart';
+import 'srs_test_storage.dart';
 
 const String kBulkUid = '01928c3e-0000-7000-8000-0000000b0175';
 
@@ -32,40 +32,37 @@ SrsTrustedClock fixedTrustedClock() => SrsTrustedClock(
 class BulkFixture {
   BulkFixture._(this.db, this.store, this.counter);
 
-  final FushiDatabase db;
+  final SrsDatabase db;
   final SrsDbStore store;
   final CountingInterceptor counter;
 
-  /// 打开内存库并导入 [notes] 条笔记（每条两张卡、分在 Lang 与 Lang::JP，每卡 3 条日志）。
+  /// 打开临时 srs.db 并导入 [notes] 条笔记（每条两张卡、分在 Lang 与 Lang::JP，每卡 3 条日志）。
   ///
   /// [background]：库开在临时文件上、走后台 isolate（与 app 同一种连接，语句真的跨 isolate
-  /// 往返、与别的异步任务交错）；默认内存库。
+  /// 往返、与别的异步任务交错）；默认同 isolate 执行。
   static Future<BulkFixture> open({
     required int notes,
     String deviceId = 'dev',
     bool background = false,
   }) async {
     final CountingInterceptor counter = CountingInterceptor();
-    final QueryExecutor executor;
-    if (background) {
-      final Directory tmp = Directory.systemTemp.createTempSync('srs_bulk_');
-      addTearDown(() {
-        try {
-          tmp.deleteSync(recursive: true);
-        } on FileSystemException {
-          // 句柄晚释放。
-        }
-      });
-      executor = NativeDatabase.createInBackground(File('${tmp.path}/b.db'));
-    } else {
-      executor = NativeDatabase.memory();
-    }
-    final FushiDatabase db = FushiDatabase.forTesting(
-      executor.interceptWith(counter),
+    final Directory tmp = Directory.systemTemp.createTempSync('srs_bulk_');
+    addTearDown(() {
+      try {
+        tmp.deleteSync(recursive: true);
+      } on FileSystemException {
+        // 句柄晚释放。
+      }
+    });
+    final TestSrs srs = await openTestSrsAt(
+      '${tmp.path}/srs.db',
+      interceptor: counter,
+      inline: !background,
     );
-    addTearDown(db.close);
+    final SrsDatabase db = srs.db;
     final SrsDbStore store = await SrsDbStore.open(
       db: db,
+      core: srs.core,
       profileUid: kBulkUid,
       deviceId: deviceId,
       engine: const FakeFsrsEngine(),
@@ -154,11 +151,18 @@ Future<ChangeSpec> reversedChange(SrsDbStore s) async {
 /// 本 profile 的全部 SRS 行（事件表、发件箱、本机状态、两张缓存），可逐条比较：
 /// 只抹掉本机「写入时刻」两列（receivedAt / updatedAt，墙钟，与语义无关），
 /// 本机产生的日志 ID（随机 UUIDv7）按 (卡, HLC) 顺序换成序号。
-Future<Map<String, List<String>>> dumpSrsState(FushiDatabase db) async {
+Future<Map<String, List<String>>> dumpSrsState(SrsDatabase db) async {
   Future<List<String>> rows(String sql) async => <String>[
     for (final QueryRow r in await db.customSelect(sql).get())
       r.data.values.join('|'),
   ];
+  final List<String> devices = await rows('SELECT device FROM sync2_self');
+  final String device = devices.isEmpty
+      ? '\u0000'
+      : _uuidText(
+          (await db.customSelect('SELECT device FROM sync2_self').getSingle())
+              .read<Uint8List>('device'),
+        );
 
   // 排序键不能含 ID 本身（随机）：按 (卡, 抹掉 ID 的规范 JSON) 排。
   final List<(String, String)> logs = <(String, String)>[
@@ -188,10 +192,17 @@ Future<Map<String, List<String>>> dumpSrsState(FushiDatabase db) async {
       'SELECT id, profile_uid, kind, payload_json, created_at '
       'FROM srs_entities ORDER BY id',
     ),
-    'edits': await rows(
-      'SELECT id, entity_kind, entity_id, field_key, writer_id, seq, json '
-      'FROM srs_field_edits ORDER BY id',
-    ),
+    // 同步 v2：修改记录的 dot 是 (本机 v2 设备 ID, op seq)，设备 ID 每个库随机生成；ID 由 dot 派生。
+    // 设备 ID 换成占位、按 (实体, 字段键, seq) 排、不比 ID 列——比的是语义（同样的写入、同样的先后）。
+    'edits': <String>[
+      for (final String r in await rows(
+        'SELECT entity_kind, entity_id, field_key, writer_id, seq, json '
+        'FROM srs_field_edits ORDER BY entity_kind, entity_id, field_key, seq',
+      ))
+        r
+            .replaceAll(device, 'DEV')
+            .replaceAll(RegExp(r'"id":"[0-9a-f-]{36}",'), ''),
+    ],
     'logs': (await rows(
       'SELECT id, card_id, kind, rating, occurred_at, review_type, origin, '
       'duration_ms, json FROM srs_review_logs',
@@ -241,4 +252,12 @@ void expectSameState(
     }
     expect(a.length, e.length, reason: '$label$table row count');
   }
+}
+
+String _uuidText(Uint8List b) {
+  final String h = <String>[
+    for (final int x in b) x.toRadixString(16).padLeft(2, '0'),
+  ].join();
+  return '${h.substring(0, 8)}-${h.substring(8, 12)}-${h.substring(12, 16)}-'
+      '${h.substring(16, 20)}-${h.substring(20)}';
 }

@@ -204,6 +204,22 @@ add_custom_target(fushi_windows_activation_policy_gate
 )
 add_dependencies(${BINARY_NAME} fushi_windows_activation_policy_gate)
 
+# BUG-3768: the FUSHI_TEST_HIDDEN window must stay where the runner parked it;
+# Dart startup placement (setBounds / maximize) otherwise pulls it onto the
+# user's desktop. Keep the pin policy executable on every Windows runner build.
+add_executable(fushi_windows_test_window_origin_pin_test
+  "tests/test_window_origin_pin_test.cpp"
+)
+apply_standard_settings(fushi_windows_test_window_origin_pin_test)
+target_compile_definitions(fushi_windows_test_window_origin_pin_test PRIVATE
+  "NOMINMAX")
+add_custom_target(fushi_windows_test_window_origin_pin_gate
+  COMMAND "$<TARGET_FILE:fushi_windows_test_window_origin_pin_test>"
+  DEPENDS fushi_windows_test_window_origin_pin_test
+  VERBATIM
+)
+add_dependencies(${BINARY_NAME} fushi_windows_test_window_origin_pin_gate)
+
 # BUG-2462: the Flutter child resize gate (child_resize_gate.h) closes the
 # engine's resize-synchroniser hazard (A -> B -> A while Dart is busy pins the
 # resize target and drops every frame = frozen window when entering fullscreen
@@ -644,3 +660,18 @@ add_custom_target(fushi_windows_game_stream_input_gate
   DEPENDS fushi_windows_game_stream_input_test
   VERBATIM
 )
+
+# 原生测试 exe 只是构建期门禁（上面各 *_gate 经 $<TARGET_FILE:> 调用），不是产品。
+# 它们与 fushi.exe 同在一个 CMakeLists 里，默认输出到同一个 runner/<Config>/——
+# 而那个目录就是 Flutter 的 bundle，fushi.iss 用 `Source: "{#SourceDir}\*"` 整目录
+# 收包，于是 29 个 *_test.exe 曾随安装包装进用户的 {app}（全局鼠标钩子 / PrintWindow
+# 截屏 / 读剪贴板之类的测试程序，徒增安装体积与杀软启发式命中面）。
+# 统一改输出到 bundle 之外；放在文件末尾，按命名约定兜住上面及 include 进来的全部测试目标，
+# 新增测试不必逐个记得设置。
+get_property(_fushi_runner_targets DIRECTORY PROPERTY BUILDSYSTEM_TARGETS)
+foreach(_fushi_target IN LISTS _fushi_runner_targets)
+  if(_fushi_target MATCHES "^fushi_windows_.+_test$")
+    set_target_properties(${_fushi_target} PROPERTIES
+      RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/native_tests")
+  endif()
+endforeach()

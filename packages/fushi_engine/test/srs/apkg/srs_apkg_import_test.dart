@@ -2,20 +2,28 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:drift/drift.dart' show driftRuntimeOptions;
-import 'package:drift/native.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/srs/apkg/srs_anki_package.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_common.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_export.dart';
 import 'package:fushi_engine/srs/apkg/srs_apkg_import.dart';
 import 'package:fushi_engine/srs/apkg/srs_protobuf.dart';
+import 'package:fushi_engine/srs/srs_browse_ops.dart';
 import 'package:fushi_engine/srs/srs_builtin.dart';
 import 'package:fushi_engine/srs/srs_db_store.dart';
+import 'package:fushi_engine/srs/srs_legacy_lapis_migration.dart';
+import 'package:fushi_engine/srs/srs_note_type_store.dart';
+import 'package:fushi_engine/srs/srs_stats.dart';
+import 'package:fushi_engine/srs/srs_stats_loader.dart';
+import 'package:fushi_engine/srs/sync2/srs_location_store.dart';
 import 'package:fushi_srs/fushi_srs.dart';
 import 'package:sqlite3/sqlite3.dart';
 import 'package:test/test.dart';
 
 import 'apkg_test_support.dart';
+import '../support/srs_sync2_peers.dart';
+import '../support/srs_test_storage.dart';
+import 'package:fushi_engine/srs/srs_storage.dart';
 
 const String kProfile = '01928c3e-0000-7000-8000-000000000001';
 const String kProfile2 = '01928c3e-0000-7000-8000-000000000002';
@@ -284,7 +292,7 @@ Uint8List customApkg(
 void main() {
   driftRuntimeOptions.dontWarnAboutMultipleDatabases = true;
   int t = ms(2026, 10, 14, 12);
-  late MemoryDir dir;
+  late SrsMemoryLocationStore dir;
   late List<String> stored;
 
   Future<String> storeMedia(String name, Uint8List bytes) async {
@@ -294,7 +302,7 @@ void main() {
 
   setUp(() {
     t = ms(2026, 10, 14, 12);
-    dir = MemoryDir(() => t);
+    dir = SrsMemoryLocationStore();
     stored = <String>[];
   });
 
@@ -310,17 +318,8 @@ void main() {
     zstdDecompress: (Uint8List b) => null,
   );
 
-  Future<void> syncAll(List<SrsDbStore> stores) async {
-    for (int round = 0; round < 3; round++) {
-      for (final SrsDbStore s in stores) {
-        await SrsSyncEngine(
-          directoryKey: 'test',
-          directory: dir,
-          replica: s,
-        ).syncOnce();
-      }
-    }
-  }
+  Future<void> syncAll(List<SrsDbStore> stores) =>
+      srsSyncPeers(stores, dir, rounds: 3);
 
   String basicNt(String profile) => SrsIds.noteType(profile, kBasic);
   String clozeNt(String profile) => SrsIds.noteType(profile, kCloze);
@@ -523,6 +522,69 @@ void main() {
     expect(upd.notesUpdated, 1);
     expect(upd.notesSkipped, 2);
     expect((await s.note(n1))!.field(back), 'cat');
+  });
+
+  test('删牌组（保留卡片）+ 删笔记后再导入：笔记恢复、卡片回原牌组', () async {
+    final SrsDbStore s = await openTestStore(
+      profileUid: kProfile,
+      deviceId: 'a',
+      now: () => t,
+    );
+    await importInto(s, legacyApkg(t));
+    final List<SrsNoteCacheRow> imported = await s.listNotes();
+    final List<String> noteIds = <String>[
+      for (final SrsNoteCacheRow n in imported) n.id,
+    ];
+    final Map<String, String> deckOf = <String, String>{
+      for (final SrsCardCacheRow c in await s.allCardRows())
+        if (!c.hidden) c.id: c.deckId,
+    };
+    expect(deckOf, isNotEmpty);
+    // 用户的路径：先把导入的牌组都删掉（保留卡片 → 卡移到默认牌组），再批量删笔记。
+    final SrsDeckTree tree = await s.deckTree();
+    String rootOf(String id) {
+      String cur = id;
+      for (String? p = tree.parentOf(cur); p != null; p = tree.parentOf(cur)) {
+        cur = p;
+      }
+      return cur;
+    }
+
+    for (final String root in <String>{
+      for (final String deck in deckOf.values)
+        if (deck != s.defaultDeckId) rootOf(deck),
+    }) {
+      await s.deleteDeck(root);
+    }
+    expect(
+      <String>{
+        for (final SrsCardCacheRow c in await s.allCardRows())
+          if (!c.hidden) c.deckId,
+      },
+      <String>{s.defaultDeckId},
+    );
+    await srsBatchDeleteNotes(s, noteIds);
+    expect(await s.listNotes(), isEmpty);
+
+    final SrsImportReport rep = await importInto(s, legacyApkg(t));
+    expect(rep.notesAdded, 0);
+    expect(rep.notesRestored, noteIds.length);
+    expect(rep.notesSkipped, 0);
+    expect(
+      <String>[for (final SrsNoteCacheRow n in await s.listNotes()) n.id]
+        ..sort(),
+      List<String>.of(noteIds)..sort(),
+    );
+    for (final MapEntry<String, String> e in deckOf.entries) {
+      final SrsCardCacheRow? row = await s.cardRow(e.key);
+      expect(row, isNotNull);
+      expect(row!.hidden, isFalse, reason: 'card ${e.key} still hidden');
+      expect(row.deckId, e.value, reason: 'card ${e.key} not back in deck');
+    }
+    // 再导入一次：已经恢复的不再计入恢复。
+    final SrsImportReport again = await importInto(s, legacyApkg(t));
+    expect(again.notesRestored, 0);
+    expect(again.notesSkipped, noteIds.length);
   });
 
   test('笔记类型 kind 不一致（普通 ↔ 填空）：不更新，笔记进冲突报告', () async {
@@ -1750,6 +1812,66 @@ void main() {
     expect(deck('NoConf').reviewsPerDay, 250);
   });
 
+  group('子牌组参数继承', () {
+    /// 子牌组 Lang::JP 改用预设 3：JP preset 的复制品，[edit] 再改它。
+    Future<SrsDeckTree> importWithCopiedPreset(
+      void Function(Map<String, Object?> preset) edit,
+    ) async {
+      final Map<String, Object?> dconf = legacyDconf();
+      final Map<String, Object?> copy =
+          jsonDecode(jsonEncode(dconf['2'])) as Map<String, Object?>;
+      copy
+        ..['id'] = 3
+        ..['name'] = 'JP preset copy';
+      edit(copy);
+      dconf['3'] = copy;
+      final Map<String, Object?> decks = legacyDecks();
+      (decks['$kDeckJp']! as Map<String, Object?>)['conf'] = 3;
+      final SrsDbStore s = await openTestStore(
+        profileUid: kProfile,
+        deviceId: 'a',
+        now: () => t,
+      );
+      await importInto(
+        s,
+        zipOf(<String, List<int>>{
+          'collection.anki21': buildLegacyCollection(
+            crtSecs: crtSecs,
+            conf: <String, Object?>{'rollover': 4, 'localOffset': 0},
+            models: legacyModels(),
+            decks: decks,
+            dconf: dconf,
+            notes: fixtureNotes(t),
+          ),
+          'media': utf8.encode('{}'),
+        }),
+      );
+      return s.deckTree();
+    }
+
+    test('预设 id 不同但排程设置相同 → 继承（每日上限仍是子牌组自己的）', () async {
+      final SrsDeckTree tree = await importWithCopiedPreset(
+        (Map<String, Object?> p) =>
+            (p['new']! as Map<String, Object?>)['perDay'] = 30,
+      );
+      final String lang = srsImportedDeckId(kProfile, 'Lang');
+      final String jp = srsImportedDeckId(kProfile, 'Lang::JP');
+      expect(tree[jp]!.ownParams, isFalse);
+      expect(tree.paramsOwner(jp).id, lang);
+      expect(tree[jp]!.newPerDay, 30);
+      expect(tree[lang]!.newPerDay, 15);
+    });
+
+    test('记忆率不同 → 单独设置', () async {
+      final SrsDeckTree tree = await importWithCopiedPreset(
+        (Map<String, Object?> p) => p['desiredRetention'] = 0.9,
+      );
+      final String jp = srsImportedDeckId(kProfile, 'Lang::JP');
+      expect(tree[jp]!.ownParams, isTrue);
+      expect(tree[jp]!.desiredRetention, 0.9);
+    });
+  });
+
   group('牌组音频设置（Anki autoplay / replayq）', () {
     test('旧格式 JSON：预设的 autoplay / replayq 写到 own 牌组，子牌组随继承', () async {
       final Map<String, Object?> dconf = legacyDconf();
@@ -1903,8 +2025,10 @@ void main() {
 
   test('建牌组途中失败：牌组与它的设置同一事务，重导时设置照样写上（BUG-3552）', () async {
     final _FailFirstValidate engine = _FailFirstValidate();
+    final SrsStorage srsStorage = await openTestSrsStorage();
     final SrsDbStore s = await SrsDbStore.open(
-      db: FushiDatabase.forTesting(NativeDatabase.memory()),
+      db: srsStorage.db,
+      core: srsStorage.core,
       profileUid: kProfile,
       deviceId: 'a',
       engine: engine,
@@ -1978,5 +2102,232 @@ void main() {
     expect(await s.entityIds(SrsEntityKind.note), hasLength(63));
     expect(rep.notesAdded, 62, reason: 'x59 落库时已存在，不算新增');
     expect(rep.cardsAdded, 5 + 59);
+  });
+
+  test('Lapis 牌组迁移改名成 Fushi Card 后再迁移：认回改名的牌组，不另建 Lapis、卡不拆走', () async {
+    final SrsDbStore s = await openTestStore(
+      profileUid: kProfile,
+      deviceId: 'a',
+      now: () => t,
+    );
+    // Anki 那边的牌组叫「Lapis」/「Lapis::JP」，迁移之后也一直叫这个名字。
+    Uint8List lapisApkg() => zipOf(<String, List<int>>{
+      'collection.anki21': buildLegacyCollection(
+        crtSecs: crtSecs,
+        conf: <String, Object?>{'rollover': 4, 'localOffset': 0, 'fsrs': true},
+        models: legacyModels(),
+        decks: <String, Object?>{
+          ...legacyDecks(),
+          '$kDeckLang': <String, Object?>{
+            'id': kDeckLang,
+            'name': 'Lapis',
+            'dyn': 0,
+            'conf': 2,
+          },
+          '$kDeckJp': <String, Object?>{
+            'id': kDeckJp,
+            'name': 'Lapis::JP',
+            'dyn': 0,
+            'conf': 2,
+          },
+        },
+        dconf: legacyDconf(),
+        notes: fixtureNotes(t),
+      ),
+      'media': utf8.encode(jsonEncode(<String, String>{})),
+    });
+
+    await importInto(s, lapisApkg());
+    expect(await s.renameLapisDecks(), 1);
+    Map<String, String> cardDecks(
+      SrsDeckTree tree,
+      List<SrsCardCacheRow> rows,
+    ) => <String, String>{
+      for (final SrsCardCacheRow c in rows)
+        if (!c.hidden) c.id: tree.fullName(c.deckId),
+    };
+    final SrsDeckTree renamedTree = await s.deckTree();
+    final Map<String, String> before = cardDecks(
+      renamedTree,
+      await s.allCardRows(),
+    );
+    expect(
+      before.values,
+      containsAll(<String>['Fushi Card', 'Fushi Card::JP']),
+    );
+    final int deckCount = renamedTree.decks.length;
+
+    // 重跑迁移（导入 + 改名）两次：都落回改过名的牌组。
+    for (int round = 0; round < 2; round++) {
+      await importInto(s, lapisApkg());
+      expect(await s.renameLapisDecks(), 0, reason: 'round $round');
+      final SrsDeckTree tree = await s.deckTree();
+      expect(
+        <String>[for (final SrsDeckView d in tree.decks) tree.fullName(d.id)]
+          ..sort(),
+        <String>[
+          for (final SrsDeckView d in renamedTree.decks)
+            renamedTree.fullName(d.id),
+        ]..sort(),
+        reason: 'round $round: 没有另建 Lapis',
+      );
+      expect(tree.decks, hasLength(deckCount));
+      expect(
+        tree.decks.where((SrsDeckView d) => d.name == 'Fushi Card'),
+        hasLength(1),
+      );
+      expect(
+        tree.decks.where((SrsDeckView d) => d.name.toLowerCase() == 'lapis'),
+        isEmpty,
+      );
+      expect(cardDecks(tree, await s.allCardRows()), before);
+    }
+  });
+
+  group('从 Anki 迁移的复习数据与新卡顺序（Lapis 用户反馈）', () {
+    // 三条新卡：笔记越早建、在 Anki 里排得越靠后（Anki 里按词频重排过）。
+    Uint8List newCardsApkg() => zipOf(<String, List<int>>{
+      'collection.anki21': buildLegacyCollection(
+        crtSecs: crtSecs,
+        conf: <String, Object?>{'rollover': 4, 'localOffset': 0, 'fsrs': true},
+        models: legacyModels(),
+        decks: legacyDecks(),
+        dconf: legacyDconf(),
+        notes: <FxNote>[
+          for (int i = 0; i < 3; i++)
+            FxNote(
+              id: ms(2026, 1, 1 + i),
+              guid: 'pos$i',
+              mid: kBasic,
+              fields: <String>['語$i', 'w$i'],
+              cards: <FxCard>[
+                FxCard(id: 900 + i, ord: 0, did: kDeckJp, due: 30 - 10 * i),
+              ],
+            ),
+          FxNote(
+            id: ms(2026, 2, 1),
+            guid: 'rev',
+            mid: kBasic,
+            fields: <String>['既習', 'seen'],
+            cards: <FxCard>[
+              FxCard(
+                id: 990,
+                ord: 0,
+                did: kDeckJp,
+                type: 2,
+                queue: 2,
+                due: 70,
+                ivl: 10,
+                reps: 2,
+                data: '{"s":12.5,"d":5.1}',
+                revlog: <FxRevlog>[
+                  FxRevlog(ms(2026, 3, 1), type: 0, ease: 3, ivl: 1),
+                  FxRevlog(ms(2026, 3, 2), type: 1, ease: 3, ivl: 10),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+      'media': utf8.encode(jsonEncode(<String, String>{})),
+    });
+
+    /// 新卡按出卡顺序的前 3 条笔记（夹具的 Basic 有两个模板，同一笔记的卡只记一次）。
+    Future<List<String>> newOrder(SrsDbStore s) async {
+      final SrsDeckTree tree = await s.deckTree();
+      final String deck = tree.decks
+          .firstWhere((SrsDeckView d) => tree.fullName(d.id).endsWith('JP'))
+          .id;
+      final List<String> out = <String>[];
+      final Set<String> seen = <String>{};
+      String? id;
+      while (out.length < 3 &&
+          (id = await s.nextCard(deck, exclude: seen)) != null) {
+        seen.add(id!);
+        final SrsCardCacheRow c = (await s.cardRow(id))!;
+        if (c.queue != SrsQueue.newCard.wire) continue;
+        final String word = (await s.note(c.noteId))!.fields.values.first;
+        if (!out.contains(word)) out.add(word);
+      }
+      return out;
+    }
+
+    /// 把这些笔记换成别的笔记类型（旧 Lapis 迁到 Fushi 卡片同一条路：新卡继承旧卡的历史）。
+    Future<void> changeType(SrsDbStore s, List<String> guids) async {
+      final List<String> noteIds = <String>[
+        for (final SrsNoteView n in await s.allNoteViews())
+          if (guids.contains(n.guid)) n.id,
+      ];
+      final SrsNoteTypeView from = await s.sourceTypeOf(noteIds);
+      final SrsNoteTypeView to = (await s.noteType(
+        await s.cloneNoteType(from.id, 'Converted'),
+      ))!;
+      await s.changeNoteType(
+        noteIds: noteIds,
+        targetTypeId: to.id,
+        fieldMap: <String, String?>{
+          for (int i = 0; i < to.fields.length; i++)
+            to.fields[i].id: from.fields[i].id,
+        },
+        templateMap: <String, String?>{
+          to.templates.first.id: from.templates.first.id,
+        },
+      );
+    }
+
+    test('新卡按 Anki 里的位置出，而不是按笔记创建时刻', () async {
+      final SrsDbStore s = await openTestStore(
+        profileUid: kProfile,
+        deviceId: 'a',
+        now: () => t,
+      );
+      await importInto(s, newCardsApkg());
+      expect(await newOrder(s), <String>['語2', '語1', '語0']);
+    });
+
+    test('换笔记类型后：牌组统计里的复习记在继承历史的新卡上，总数不变', () async {
+      final SrsDbStore s = await openTestStore(
+        profileUid: kProfile,
+        deviceId: 'a',
+        now: () => t,
+      );
+      await importInto(s, newCardsApkg());
+      final int before = (await loadSrsStats(s)).data.reviews.length;
+      expect(before, 2);
+      await changeType(s, <String>['rev']);
+      final SrsStatsData data = (await loadSrsStats(s)).data;
+      expect(data.reviews, hasLength(before), reason: '不重复计数');
+      final Set<String> visible = <String>{
+        for (final SrsStatCard c in data.cards) c.id,
+      };
+      expect(
+        data.reviews.every((SrsStatReview r) => visible.contains(r.cardId)),
+        isTrue,
+        reason: '复习记在可见的新卡上，牌组筛选时不丢',
+      );
+    });
+
+    test('已迁移（没带位置、又换过笔记类型）的用户再迁一次：补上位置，不动排过的', () async {
+      final SrsDbStore s = await openTestStore(
+        profileUid: kProfile,
+        deviceId: 'a',
+        now: () => t,
+      );
+      // 旧版迁移的结果：卡都在、没有新卡位置（不含排程导入同样不写位置）。
+      await importInto(
+        s,
+        newCardsApkg(),
+        options: const SrsAnkiImportOptions(
+          updateNotes: SrsImportUpdateCondition.never,
+        ),
+      );
+      await changeType(s, <String>['pos0', 'pos1', 'pos2']);
+      expect(await newOrder(s), <String>['語0', '語1', '語2']);
+      final SrsImportReport r = await importInto(s, newCardsApkg());
+      expect(r.newPositionsRepaired, 3);
+      expect(await newOrder(s), <String>['語2', '語1', '語0']);
+      // 再迁一次：已经有位置的不再写。
+      expect((await importInto(s, newCardsApkg())).newPositionsRepaired, 0);
+    });
   });
 }

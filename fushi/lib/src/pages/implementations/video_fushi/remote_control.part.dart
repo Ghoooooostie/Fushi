@@ -74,12 +74,15 @@ extension _VideoRemoteControl on _VideoFushiPageState {
     _videoRemoteBinding = null;
   }
 
+  /// 遥控会话身份：作品 / 集 / 视频路径 / 制卡来源任一变了就是新会话。
+  String _videoRemoteIdentity(VideoPlayerController controller) =>
+      '$_activeBookUid|$_currentEpisode|$_currentVideoPath|'
+      '${controller.miningSource}';
+
   void _registerVideoRemote(VideoPlayerController controller) {
     _unregisterVideoRemote();
     final VideoRemotePlaybackBinding binding = VideoRemotePlaybackBinding(
-      identity: () =>
-          '$_activeBookUid|$_currentEpisode|$_currentVideoPath|'
-          '${controller.miningSource}',
+      identity: () => _videoRemoteIdentity(controller),
       title: () => _videoMiningDocumentTitle() ?? '',
       bookUid: () => _activeBookUid,
       sectionIndex: () => _favoriteSectionIndex ?? 0,
@@ -104,6 +107,8 @@ extension _VideoRemoteControl on _VideoFushiPageState {
         'volume': _volumeDisplay.value.round(),
         'episodeIndex': _currentEpisode,
         'episodeCount': _episodes.length,
+        // 选词光标在哪（手机触控板据此切换手势）。
+        'caret': _remoteCaretSurface,
       },
       command: (String action, Map<String, dynamic> body) async {
         switch (action) {
@@ -114,9 +119,12 @@ extension _VideoRemoteControl on _VideoFushiPageState {
           case 'seek':
           case 'seekCue':
             final int position = (body['positionMs'] as num).toInt();
-            await controller.seekMs(
-              position.clamp(0, controller.durationMs ?? position),
+            final int target = position.clamp(
+              0,
+              controller.durationMs ?? position,
             );
+            _recordVideoJumpDeparture(target);
+            await controller.seekMs(target);
             if (action == 'seekCue') await controller.play();
           default:
             throw const VideoRemoteException(400, 'invalid_action');
@@ -150,6 +158,18 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       switchEpisode: _switchRemoteControlledEpisode,
       subtitleTracks: _remoteSubtitleOptions,
       selectSubtitleTrack: _selectRemoteSubtitleOption,
+      // 在线搜字幕：与字幕工作台「本集」同一组默认值与检索请求，下载后走同一个
+      // [_applyDownloadedSubtitles]。
+      searchSubtitles: _searchRemoteOnlineSubtitles,
+      downloadSubtitle: (String id) =>
+          _downloadRemoteOnlineSubtitle(controller, id),
+      // 手机触控板驱动的是本页的字幕选词光标（与键盘 / 手柄同一套），查词卡弹在
+      // 电脑屏幕上。
+      caret: (String step) => _runRemoteCaretStep(controller, step),
+      // 手机选集的封面与本页剧集面板同一份图源。
+      episodeCover: _remoteEpisodeCover,
+      // 手机「关闭视频」：与点播换片同一条媒体切换队列、同一个退出流程（落进度）。
+      close: _closeForRemote,
     );
     _videoRemoteBinding = binding;
     appModel.videoRemoteHost.register(binding);
@@ -162,8 +182,52 @@ extension _VideoRemoteControl on _VideoFushiPageState {
         index: i,
         title: _episodes[i].displayTitle ?? _episodes[i].title,
         current: i == _currentEpisode,
+        hasCover: _remoteEpisodeHasCover(_episodes[i]),
       ),
   ];
+
+  /// 这一集有没有可给手机预览的封面（与剧集面板同一份图源）。
+  bool _remoteEpisodeHasCover(_PlaylistEpisodeRef episode) =>
+      (episode.coverPath?.isNotEmpty ?? false) ||
+      ((episode.coverUrl?.isNotEmpty ?? false) && _episodeCoverFetcher != null);
+
+  /// 手机选集的封面字节：本地集读 `coverPath`，远端集经剧集面板同一个取图器拉
+  /// `coverUrl`；都没有返回 null（电脑回 `cover_missing`，手机画占位）。远端取图
+  /// 失败记诊断日志并回 `502 cover_unavailable`（与「没有封面」分开），手机同样画
+  /// 占位、下次进入视野再问。
+  Future<Uint8List?> _remoteEpisodeCover(int index) async {
+    if (index < 0 || index >= _episodes.length) return null;
+    final _PlaylistEpisodeRef episode = _episodes[index];
+    final String? path = episode.coverPath;
+    if (path != null && path.isNotEmpty) {
+      final File file = File(path);
+      if (await file.exists()) return file.readAsBytes();
+    }
+    final String? url = episode.coverUrl;
+    final RemoteCoverFetcher? fetcher = _episodeCoverFetcher;
+    if (url == null || url.isEmpty || fetcher == null) return null;
+    try {
+      return await fetcher.fetchRemoteCover(url);
+    } on Object catch (error) {
+      ErrorLogService.instance.logDiagnostic(
+        'VideoFushiPage.remoteEpisodeCover',
+        error,
+      );
+      throw const VideoRemoteException(502, 'cover_unavailable');
+    }
+  }
+
+  /// 手机「关闭视频」：只关被遥控的这一页。别的媒体页压在它上面（当前登记的不是
+  /// 本页）或本页退出被拦下（落进度失败、压着对话框）都回 `host_busy`，不硬拆。
+  Future<void> _closeForRemote() =>
+      ExternalMediaNavigation.instance.navigate(() async {
+        if (!mounted || !ExternalMediaNavigation.instance.isActive(this)) {
+          throw const VideoRemoteException(409, 'host_busy');
+        }
+        if (!await ExternalMediaNavigation.instance.closeActive()) {
+          throw const VideoRemoteException(409, 'host_busy');
+        }
+      });
 
   /// 手机选集：与剧集列表点选同一入口（[_switchEpisode]，listSelect）。不等它
   /// 完成——本地换集是 pushReplacement 到新页，其 Future 要等新页退出才 settle，
@@ -229,6 +293,94 @@ extension _VideoRemoteControl on _VideoFushiPageState {
     } on VideoRemoteFailure catch (failure) {
       throw _remoteSubtitleException(failure);
     }
+  }
+
+  /// 选词光标所在的表面，按遥控协议的取值（`none` / `video` / `popup`）。
+  String get _remoteCaretSurface => switch (_videoCaret.surface) {
+    CaretSurface.video => 'video',
+    CaretSurface.popup => 'popup',
+    CaretSurface.none || CaretSurface.reader || CaretSurface.lyrics => 'none',
+  };
+
+  /// 手机触控板的一步（`videoRemoteCaretActions`）→ 字幕选词光标动作。与手柄
+  /// 同一个执行体（[_enterSubtitleCaret] / [_runVideoCaretAction]）：主面上左右
+  /// 按阅读顺序逐字挪、确认即查词（查词卡弹出后光标转进卡里），卡里确认按下
+  /// 光标所在的按钮（＋ = 制卡），后退逐层关卡、最后退出光标并恢复它暂停的播放。
+  /// 光标没开时只认 `enter`，其余步是空操作（手机据回报的 `none` 退回空闲手势）。
+  Future<String> _runRemoteCaretStep(
+    VideoPlayerController controller,
+    String step,
+  ) async {
+    if (!mounted) throw const VideoRemoteException(409, 'no_video');
+    if (step == 'enter') {
+      if (!_videoCaretActive) _enterSubtitleCaret(controller);
+      return _remoteCaretSurface;
+    }
+    if (!_videoCaretActive) return _remoteCaretSurface;
+    await _runVideoCaretAction(switch (step) {
+      'left' => CaretAction.stepBackward,
+      'right' => CaretAction.stepForward,
+      'up' => CaretAction.moveUp,
+      'down' => CaretAction.moveDown,
+      'activate' => CaretAction.activate,
+      'longPress' => CaretAction.longPress,
+      _ => CaretAction.dismissOrExit,
+    });
+    return _remoteCaretSurface;
+  }
+
+  /// 手机「在线搜索字幕」：默认值取本页的番名 / 身份种子 / 集号 / 季号（与
+  /// [_openSubtitleWorkbench] 同源）。算不出番名时回空结果，手机自己填词再搜。
+  Future<VideoRemoteOnlineSubtitleSearch> _searchRemoteOnlineSubtitles(
+    String? query,
+    int? episode,
+  ) async {
+    final String series = _jimakuQuery() ?? '';
+    final SubtitleSearchSeed seed = series.isEmpty
+        ? const SubtitleSearchSeed()
+        : await _buildJimakuSeed(series);
+    if (!mounted) throw const VideoRemoteException(409, 'no_video');
+    return _remoteOnlineSubtitles.search(
+      RemoteOnlineSubtitleContext(
+        seriesQuery: series,
+        seed: seed,
+        episode: _jimakuEpisodeNumber(),
+        season: _jimakuSeasonNumber(),
+        videoPath: _isRemote ? null : _currentVideoPath,
+      ),
+      query: query,
+      episode: episode,
+    );
+  }
+
+  /// 手机选中一条在线字幕：电脑下载落盘（本机视频按内嵌轨对齐），返回「应用」
+  /// 一步，由遥控宿主核过会话后在命令队列里执行，与字幕工作台下载完成同一入口
+  /// 登记并应用。
+  ///
+  /// 下载期间手机可能已经换集（新集可能就在本页换 controller，也可能
+  /// pushReplacement 到新页、本页还没 dispose）：应用前核对本页仍登记着发起时
+  /// 那份绑定、controller 与会话身份都没变，否则回 409 `session_changed`，
+  /// 绝不把上一集的字幕套到新集 / 已释放的 controller 上。
+  Future<VideoRemoteSubtitleApply> _downloadRemoteOnlineSubtitle(
+    VideoPlayerController controller,
+    String id,
+  ) async {
+    final VideoRemotePlaybackBinding? binding = _videoRemoteBinding;
+    final String identity = _videoRemoteIdentity(controller);
+    final String path = await _remoteOnlineSubtitles.download(
+      id,
+      videoPath: _isRemote ? null : _currentVideoPath,
+    );
+    return () async {
+      if (!mounted) throw const VideoRemoteException(409, 'no_video');
+      if (binding == null ||
+          !identical(_videoRemoteBinding, binding) ||
+          !identical(_controller, controller) ||
+          _videoRemoteIdentity(controller) != identity) {
+        throw const VideoRemoteException(409, 'session_changed');
+      }
+      await _applyDownloadedSubtitles(controller, <String>[path]);
+    };
   }
 
   /// 遥控制卡 / 试听共用的音频与画面窗：字幕时基区间 `[startMs, endMs]`（[anchor] 所在
@@ -436,7 +588,9 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       if (cue == null) {
         throw const VideoRemoteException(404, 'favorite_subtitle_missing');
       }
-      await controller.seekMs(miningClipTimeMs(cue.startMs, cue.delayMs));
+      final int favoriteMs = miningClipTimeMs(cue.startMs, cue.delayMs);
+      _recordVideoJumpDeparture(favoriteMs);
+      await controller.seekMs(favoriteMs);
       await controller.play();
       return;
     }

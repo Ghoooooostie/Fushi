@@ -72,7 +72,7 @@ extension _VideoDanmaku on _VideoFushiPageState {
       return;
     }
 
-    final String? sidecarPath = findDanmakuSidecar(videoPath);
+    final String? sidecarPath = await findDanmakuSidecar(videoPath);
     if (sidecarPath != null) {
       final VideoDanmakuLoadResult local = await loadDanmakuSidecarFile(
         File(sidecarPath),
@@ -95,8 +95,10 @@ extension _VideoDanmaku on _VideoFushiPageState {
     }
 
     if (!appModel.videoDanmakuOnlineEnabled) return;
+    // 弹幕指纹读的是媒体文件头 16 MiB：DVD title / 网络流没有这个文件。async：视频
+    // 可能在网络盘上，同步 stat 会冻结 UI isolate（BUG-3756）。
+    if (!await hasLocalMediaFile(videoPath)) return;
     final File file = File(videoPath);
-    if (!file.existsSync()) return;
     await _loadOnlineDanmaku(seq, () => dandanplayFileKeyOf(file));
   }
 

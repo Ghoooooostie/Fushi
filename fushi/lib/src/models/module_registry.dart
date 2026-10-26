@@ -30,6 +30,7 @@ ModuleId? moduleOfHomeTab(HomeTab tab) => switch (tab) {
   HomeTab.books => ModuleId.books,
   HomeTab.manga => ModuleId.manga,
   HomeTab.video => ModuleId.video,
+  HomeTab.music => ModuleId.music,
   HomeTab.browse => ModuleId.browse,
   HomeTab.dictionaries => ModuleId.lookup,
   HomeTab.srs => ModuleId.srs,
@@ -49,6 +50,7 @@ HomeTab? homeTabOfModule(ModuleId module) => switch (module) {
   ModuleId.books => HomeTab.books,
   ModuleId.manga => HomeTab.manga,
   ModuleId.video => HomeTab.video,
+  ModuleId.music => HomeTab.music,
   ModuleId.browse => HomeTab.browse,
   ModuleId.lookup => HomeTab.dictionaries,
   ModuleId.srs => HomeTab.srs,
@@ -115,6 +117,7 @@ ModuleId? moduleOfSettingsDestination(SettingsDestinationId id) => switch (id) {
   SettingsDestinationId.models => null,
   SettingsDestinationId.manga => ModuleId.manga,
   SettingsDestinationId.video => ModuleId.video,
+  SettingsDestinationId.music => ModuleId.music,
   SettingsDestinationId.cardCreation => ModuleId.cardCreation,
   SettingsDestinationId.downloads => ModuleId.browse,
   SettingsDestinationId.game => ModuleId.games,
@@ -164,11 +167,16 @@ ModuleId? moduleOfShortcutScope(ShortcutScope scope) => switch (scope) {
   ShortcutScope.home => null,
   ShortcutScope.gamepad => null,
   ShortcutScope.dictionaryPopup => null,
+  // app 内浏览器不只从「浏览器」模块（WebHubPage）进入：视频站点入口在拿不到底层
+  // 合成时也改用它打开站点（video_fushi/web_source.part.dart）。跟着 web 模块藏起
+  // 来就会出现「浏览器能用、快捷键却没处改」，故与 dictionaryPopup 同判恒在。
+  ShortcutScope.webBrowser => null,
   ShortcutScope.globalExternal => ModuleId.lookup,
   ShortcutScope.reader => ModuleId.books,
   ShortcutScope.audiobook => ModuleId.listening,
   ShortcutScope.manga => ModuleId.manga,
   ShortcutScope.video => ModuleId.video,
+  ShortcutScope.music => ModuleId.music,
 };
 
 bool isShortcutScopeVisible(ShortcutScope scope, ModuleVisibility visibility) =>

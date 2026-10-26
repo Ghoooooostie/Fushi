@@ -26,8 +26,9 @@ bool get isDesktopSystemBallPlatform =>
 /// 应用外（系统级）悬浮球此刻是否该给应用内球让位（隐藏）。两颗球同时出现在
 /// Fushi 里是重复入口（群反馈：歌词页右侧并排两颗球），所以：
 ///
-///  - 只在「应用内悬浮球」开关开着时让位（[inAppBallEnabled]）——用户关了应用内
-///    球，前台也保留应用外球，否则 Fushi 里一颗球都没有。页面临时不画球（场景
+///  - 只在「应用内悬浮球」开关开着、且当前场景还勾着按钮时让位（[inAppBallEnabled]，
+///    宿主把两者合在一起传）——用户关了应用内球、或把这一场景的按钮全取消了（应用
+///    内球因此不画，BUG-3687），前台也保留应用外球，否则 Fushi 里一颗球都没有。页面临时不画球（场景
 ///    要求隐藏、本页点了关闭、截屏中）不算关掉，照样让位：那是页面 / 用户此刻
 ///    不要球，不是要另一颗球顶上。
 ///  - 「在前台」按平台分：
@@ -200,6 +201,11 @@ enum FloatingBallGlobalAction {
   /// 冲突裁决与重新登录提示都在主窗里给。
   sync('sync'),
 
+  /// 切换配置（Profile）：弹出配置列表，点一项即切过去——与查词弹窗顶栏「制卡
+  /// 目标」菜单、设置页配置选择器同一条 `ProfileViewModel.switchProfile`。应用外球
+  /// 把 Fushi 唤到前台再弹（配置在主窗的数据库里）。
+  switchProfile('switch_profile'),
+
   /// 反馈：截下当前画面后打开反馈中心（与首页顶栏的反馈按钮同一个入口
   /// `openFeedbackCenter`）。只在应用内球上：截图截的是 Fushi 自己的页面，应用外
   /// 球浮在别的程序上，截不到也没有页面可附。
@@ -212,7 +218,7 @@ enum FloatingBallGlobalAction {
   /// 在 [scope] 的球上出厂勾不勾上（都能在 设置 → 悬浮球 里自己勾 / 取消）：
   ///
   /// - 同步各场景都不勾：多数人没配同步后端，出厂就塞一颗点了只会说「同步不可用」
-  ///   的按钮是噪音。
+  ///   的按钮是噪音。切换配置同理：多数人只有一份配置。
   /// - 应用外球：其余全勾——它本来就是给别的程序用的这些入口。
   /// - 阅读器 / 漫画 / 视频只勾「查词」与「反馈」：球上已有一整排本页专属按钮，
   ///   再叠上应用外查词 / 剪贴板 / 截屏识字 / 拍照这些与当前媒体无关的入口，漫画页
@@ -220,7 +226,7 @@ enum FloatingBallGlobalAction {
   /// - 其它应用内页面：除「应用外查词」外都勾——在 Fushi 里面它只是另开一个独立
   ///   查词窗，与「查词」重复。
   bool onByDefaultIn(FloatingBallScope scope) {
-    if (this == sync) return false;
+    if (this == sync || this == switchProfile) return false;
     if (scope == FloatingBallScope.system) return true;
     if (scope.isMediaScene) return this == lookup || this == feedback;
     return this != popupLookup;
@@ -273,10 +279,44 @@ enum FloatingBallGlobalAction {
         FloatingBallGlobalAction.clipboard => true,
         FloatingBallGlobalAction.cameraOcr => false,
         FloatingBallGlobalAction.sync => true,
+        FloatingBallGlobalAction.switchProfile => true,
         FloatingBallGlobalAction.feedback => false,
       };
     }
     return availableOn(isAndroid: isAndroid, isIOS: isIOS);
+  }
+}
+
+/// Android 应用外悬浮球收起态「点一下」做什么。除 [expand] 外都是一步直达的单个
+/// 功能，此时长按才展开按钮（只用某一个功能的人不必点两下，反馈 9bdhVTgq3A）。
+/// 线协议值即动作 id（原生 `FloatingBallService.TAP_ACTIONS`），[expand] 发空串。
+enum FloatingBallTapAction {
+  /// 出厂：点球展开按钮。
+  expand(''),
+
+  /// 直接查剪贴板（旧版「点球查剪贴板」开关）。
+  clipboard('clipboard'),
+
+  /// 直接截屏识字。
+  screenOcr('screen_ocr');
+
+  const FloatingBallTapAction(this.storageValue);
+
+  final String storageValue;
+
+  static const FloatingBallTapAction fallback = expand;
+
+  /// 持久化值 → 档位。[legacyTapClipboard] 是旧版 bool 偏好
+  /// `floating_ball.tap_clipboard`：新键从没写过（null）时沿用它。
+  static FloatingBallTapAction fromStorage(
+    Object? raw, {
+    bool legacyTapClipboard = false,
+  }) {
+    if (raw is! String) return legacyTapClipboard ? clipboard : fallback;
+    for (final FloatingBallTapAction value in values) {
+      if (value.storageValue == raw) return value;
+    }
+    return fallback;
   }
 }
 

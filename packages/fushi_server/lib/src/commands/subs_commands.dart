@@ -29,6 +29,7 @@ import 'dart:typed_data';
 
 import 'package:args/args.dart';
 import 'package:fushi_core/fushi_core.dart';
+import 'package:fushi_engine/media/video/video_member_file.dart';
 import 'package:fushi_engine/foundation/pref_store.dart';
 import 'package:fushi_engine/media/external_provider.dart';
 import 'package:fushi_engine/media/video/download/video_subtitle_registry.dart';
@@ -294,12 +295,12 @@ class JimakuCliSubtitleProvider implements VideoSubtitleProvider {
 
   @override
   Future<ProviderBatchResult<VideoSubtitleCandidate>> search(VideoSubtitleSearchRequest request) async {
-    final List<String> titles = <String>{
+    final List<String> titles = jimakuQueryVariants(<String>[
       request.effectiveQuery,
       ...request.alternateTitles,
-    }.where((String t) => t.trim().isNotEmpty).toList();
+    ]);
     try {
-      final List<JimakuEntry> entries = await _client.searchEntries(
+      final List<JimakuEntry> found = await _client.searchEntries(
         queryFallbacks: titles,
         throwOnError: true,
         animeFilter: switch (request.anime) {
@@ -308,11 +309,13 @@ class JimakuCliSubtitleProvider implements VideoSubtitleProvider {
           null => JimakuAnimeFilter.either,
         },
       );
+      // 与 app 侧 provider 同一条配额约束：只列与标题最像的几个条目。
+      final List<JimakuEntry> entries = pickJimakuEntriesForTitles(found, titles);
       final List<VideoSubtitleCandidate> out = <VideoSubtitleCandidate>[];
       for (final JimakuEntry entry in entries) {
         final List<JimakuFile> files = await _client.listFiles(
           entry.id,
-          episode: request.effectiveEpisode,
+          episode: entry.flags.movie ? null : request.effectiveEpisode,
           throwOnError: true,
         );
         for (final JimakuFile file in files) {
@@ -496,7 +499,7 @@ Future<int> subsSearch(ArgResults sub, {required ServerRuntime rt, required CliI
     final VideoBookRow? book = await rt.db.getVideoBookByBookUid(target);
     if (book == null) return io.fail(kExitNoInput, '既不是文件也不是库内视频 id: $target');
     libraryTitle = book.title;
-    if (File(book.videoPath).existsSync()) videoPath = book.videoPath;
+    if (videoPathFileExistsSync(book.videoPath)) videoPath = book.videoPath;
   }
   final VideoNameInfo? parsed = videoPath == null ? null : parseVideoFilename(p.basename(videoPath));
   final String query = ((sub['query'] as String?)?.trim().isNotEmpty ?? false)

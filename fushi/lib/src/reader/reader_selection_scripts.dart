@@ -420,7 +420,13 @@ if (!window.__fushiLiveRanges) {
         if (r && typeof r.setStart === 'function' && out.indexOf(r) < 0) out.push(r);
       };
       if (typeof CSS !== 'undefined' && CSS.highlights) {
-        CSS.highlights.forEach(function(hl) { hl.forEach(add); });
+        // 遍历拿到的是交给引擎绘制的那份；窄条层在 Blink 上会剔掉一部分文字另存一份（BUG-3776），
+        // get 读回的调用方原件也要一起写回。
+        CSS.highlights.forEach(function(hl, name) {
+          hl.forEach(add);
+          var own = CSS.highlights.get(name);
+          if (own && own !== hl) own.forEach(add);
+        });
       }
       var pending = window.__fushiHighlightRangeMap;
       if (pending) {
@@ -561,6 +567,20 @@ if (!window.__fushiLiveRanges) {
 // Range 登记在 tracked() 里，正文其它 DOM 手术（__fushiLiveRanges.moveNodes）会把它们写回而不塌缩。
 // Blink 与不支持 CSS Highlight 的旧 WebView 继续走包裹。window.__fushiSentenceAudioRangeMode
 // （布尔）可强制开关，供测试在 Chrome 里跑这条路径。
+// BUG-3778：VN 逐字显现时未显现的字只是被 ::highlight(fushi-vn-unrevealed) 画成透明，仍在 DOM
+// 里、照样能被 caretPositionFromPoint 命中。window.__fushiRevealRange 是那段未显现正文的
+// live Range（VN shell 维护，其余时候为 null）；查词命中与窄条层都经这里认出「还看不见」的字。
+if (typeof window.__fushiTextUnrevealed !== 'function') {
+  window.__fushiTextUnrevealed = function(node, offset) {
+    var range = window.__fushiRevealRange;
+    if (!range) return false;
+    try {
+      return range.comparePoint(node, offset) === 0;
+    } catch (_) {
+      return false;
+    }
+  };
+}
 if (!window.__fushiCueRanges) {
   window.__fushiCueRanges = (function() {
     var HIGHLIGHT = 'fushi-sentence-audio';
@@ -574,6 +594,24 @@ if (!window.__fushiCueRanges) {
         if (!window.__fushiCssHighlightsSupported || typeof Highlight !== 'function') return false;
         var forced = window.__fushiSentenceAudioRangeMode;
         return typeof forced === 'boolean' ? forced : isWebKit();
+      },
+      // BUG-3741：VN 播放到哪句才处理哪句，任何引擎上切 DOM 都发生在句子已经显示之后——Blink
+      // 包裹段落里后一句的文本节点会让同段含 ruby 的那一列行盒差出 6px，整屏跟着居中平移。
+      // 所以 VN 只要引擎支持 CSS Highlight 就走 Range（分页 / 滚动开章即整章包裹，不受影响）。
+      availableForLiveText: function() {
+        if (!window.__fushiCssHighlightsSupported || typeof Highlight !== 'function') return false;
+        return window.__fushiSentenceAudioRangeMode !== false;
+      },
+      // BUG-3776：Blink 用 CSS Highlight 换字色时把字形墨迹裁进文字片段盒（傍点、墨迹宽的字体被切边，
+      // 见窄条层 paintable）。当前句真要换字色（用户设了自定义字色）时，VN 改在换屏、显示之前把屏上
+      // 各句包裹好，字色走 wrapper 的 class，播放中只切 class。sample 取正文里的一个元素，比较它的
+      // ::highlight 计算字色与本身字色。
+      recolorClipsInk: function(sample) {
+        if (!sample || isWebKit()) return false;
+        var ua = typeof navigator !== 'undefined' && navigator.userAgent || '';
+        if (!/(Chrome|Chromium)\//.test(ua)) return false;
+        var color = getComputedStyle(sample, '::highlight(' + HIGHLIGHT + ')').color;
+        return !!color && color !== getComputedStyle(sample).color;
       },
       // 分段 {node, start, end} → Range（建 Range 前让文本可被 ::highlight 绘制，见 BUG-3323）。
       build: function(segments) {
@@ -1019,6 +1057,13 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       if (!parent || end <= start) return;
       // VN 逐字显现时未显现的字（data-fushi-visual-novel-unrevealed）是 visibility:hidden 的，窄条不能先露出来。
       if (parent.closest('rt, rp, [data-fushi-visual-novel-unrevealed], ' + HOST)) return;
+      // Range 版逐字显现（BUG-3778）：未显现的部分同样不画，只留已显现的那截。
+      var unrevealed = window.__fushiRevealRange;
+      if (unrevealed && typeof window.__fushiTextUnrevealed === 'function') {
+        if (window.__fushiTextUnrevealed(node, start)) return;
+        if (unrevealed.startContainer === node && unrevealed.startOffset < end) end = unrevealed.startOffset;
+        if (end <= start) return;
+      }
       if (seen) {
         if (seen.indexOf(node) >= 0) return;
         seen.push(node);
@@ -1082,7 +1127,8 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       var start = vertical
         ? box.top + (parseFloat(cs.borderTopWidth) || 0) + (parseFloat(cs.paddingTop) || 0) - body.scrollTop
         : box.left + (parseFloat(cs.borderLeftWidth) || 0) + (parseFloat(cs.paddingLeft) || 0) - body.scrollLeft;
-      return { v: vertical, start: start, step: width + (parseFloat(cs.columnGap) || 0), width: width };
+      var gap = parseFloat(cs.columnGap) || 0;
+      return { v: vertical, start: start, step: width + gap, width: width, gap: gap };
     };
     var lanes = function(pieces, join) {
       var annCache = [];
@@ -1099,10 +1145,21 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
           rubies: p.ruby ? [p.ruby] : []
         };
         if (frame && frame.v === p.v && frame.step > 0) {
-          // 按片段起点归栏（悬挂字形只会伸出栏尾），再把两端收进这一栏。
-          it.col = Math.floor((it.a + 0.5 - frame.start) / frame.step);
+          // 按片段起点归栏（悬挂字形只会伸出栏尾），只把栏尾收进这一栏。
+          //
+          // DEHOXVOYVQ（安卓翻页：当前句只亮第一行，折到下一行的部分全没了）：算出来的栏
+          // 网格 start + k·step 与浏览器真实排出的栏并不逐像素重合——计算样式里的
+          // column-width 是 calc 的浮点结果，而 Blink 排栏用 1/64px 的定点数，每一栏差
+          // 不到 1/64px，翻到第 k 页就累积 k 倍；scrollLeft 又按设备像素取整。几十页后
+          // 每行行首（恰在真实栏起点）就落到算出的栏起点左边超过 0.5px，旧的 `+ 0.5`
+          // 容差把它归进前一栏，再被收到前一栏栏尾、宽度归零被滤掉——一句话折行后只剩
+          // 第一行（行中起头的那段起点离栏界远，不受影响）。
+          // 正文片段的起点永远在某一栏内（悬挂标点也只从栏尾往外伸），从不落在列间距
+          // 前半段之外，所以归栏容差放宽到半个列间距：网格误差远小于它，归栏不再错。
+          // 栏头不再收（片段不会从栏头之前开始，收它只会把漂移量削进字里）。
+          var tol = Math.max(0.5, Math.min(frame.gap / 2, frame.step / 4));
+          it.col = Math.floor((it.a + tol - frame.start) / frame.step);
           var colStart = frame.start + it.col * frame.step;
-          it.a = Math.max(it.a, colStart);
           it.b = Math.min(it.b, colStart + frame.width);
         }
         return it;
@@ -1661,16 +1718,118 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
     // 通知、不重画（BUG-3506）。hookedRegistry 由 flush 每次经 hookRegistry 读到，保证它活着；万一引擎
     // 仍换了对象，hookRegistry 给新对象补装。
     var hookedRegistry = null;
+    // BUG-3776：Blink 上任何生效的 CSS Custom Highlight 都把它覆盖的文字裁进文字片段盒里重画——墨迹伸出
+    // 片段盒的部分一律丢掉：着重号（傍点）只剩一角，墨迹宽的字体（圆体 / Meiryo 等）在 ruby 基字与行首字上
+    // 被切平（::highlight 规则为空也一样，Chromium 实测；WebKit 不受影响）。底色本来就由窄条层画，所以注册表
+    // 入口按元素核对这层 ::highlight 的计算样式：对这段字什么都不改（字色相同、无底色 / 装饰 / 阴影 / 描边）
+    // 的文字不交给引擎绘制；带着重号的文字也不交（宁可不换字色，也不能把傍点裁掉）。窄条层仍读调用方给的
+    // 完整范围（painted 记着名字 → 原件，get 读回原件）。调用方都是建好整份 Highlight 再 set、之后不再改，剔一次即可。
+    var painted = new Map();
+    var clipsInk = (function() {
+      var ua = typeof navigator !== 'undefined' && navigator.userAgent || '';
+      return /(Chrome|Chromium)\//.test(ua);
+    })();
+    var clearColor = function(c) {
+      return c === 'transparent' || /^rgba\(.*,\s*0(\.0+)?\)$/.test(c);
+    };
+    // 这一元素里的字不交给引擎绘制：带着重号，或这层高亮对它是空操作。读不到 ::highlight 计算样式的旧内核
+    // 返回空串，按「会改」处理（照旧交给引擎）。
+    var unpainted = function(el, name, memo) {
+      if (!el) return false;
+      if (memo.has(el)) return memo.get(el);
+      var cs = getComputedStyle(el);
+      var hs = getComputedStyle(el, '::highlight(' + name + ')');
+      var emphasis = (cs.textEmphasisStyle || cs.webkitTextEmphasisStyle || 'none') !== 'none';
+      var noop = !!hs.color && hs.color === cs.color && clearColor(hs.backgroundColor) &&
+          hs.textDecorationLine === 'none' && hs.textShadow === 'none' &&
+          !(parseFloat(hs.webkitTextStrokeWidth) > 0);
+      var hit = emphasis || noop;
+      memo.set(el, hit);
+      return hit;
+    };
+    // range 里的文字按元素切开，返回仍要交给引擎绘制的那几段；整段都要绘制返回 null（原样用）。
+    var paintedParts = function(range, name, memo) {
+      if (!range || range.collapsed || typeof range.intersectsNode !== 'function') return null;
+      var root = range.commonAncestorContainer;
+      var nodes = [];
+      if (root.nodeType === 3) {
+        nodes.push(root);
+      } else {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        for (var n = walker.nextNode(); n; n = walker.nextNode()) {
+          if (range.intersectsNode(n)) nodes.push(n);
+        }
+      }
+      var out = [];
+      var cut = false;
+      var run = null;
+      for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        var s = node === range.startContainer ? range.startOffset : 0;
+        var e = node === range.endContainer ? range.endOffset : node.length;
+        if (e <= s) continue;
+        if (unpainted(node.parentElement, name, memo)) {
+          cut = true;
+          if (run) out.push(run);
+          run = null;
+          continue;
+        }
+        if (!run) {
+          run = document.createRange();
+          run.setStart(node, s);
+        }
+        run.setEnd(node, e);
+      }
+      if (run) out.push(run);
+      return cut ? out : null;
+    };
+    // VN 逐字显现的「未显现」高亮（fushi-vn-unrevealed）本意就是把字画成透明：剔掉带着重号的元素会让
+    // 傍点字在轮到它之前就露出来，所以它整份原样交给引擎。
+    var paintable = function(name, value) {
+      if (name === 'fushi-vn-unrevealed') return value;
+      if (!clipsInk || !value || typeof value.forEach !== 'function' || typeof Highlight !== 'function') return value;
+      var memo = new Map();
+      var ranges = [];
+      var cut = false;
+      value.forEach(function(range) {
+        var parts = paintedParts(range, name, memo);
+        if (parts) {
+          cut = true;
+          for (var i = 0; i < parts.length; i++) ranges.push(parts[i]);
+        } else {
+          ranges.push(range);
+        }
+      });
+      if (!cut) return value;
+      var h = new Highlight();
+      for (var i = 0; i < ranges.length; i++) h.add(ranges[i]);
+      h.priority = value.priority;
+      if (value.type) h.type = value.type;
+      return h;
+    };
     var hookRegistry = function() {
       var reg = registry();
       if (!reg || reg === hookedRegistry) return;
       hookedRegistry = reg;
       if (reg.__fushiLanesHooked) return;
       reg.__fushiLanesHooked = true;
-      var set = reg.set, del = reg.delete, clear = reg.clear;
-      reg.set = function(name, value) { var res = set.call(this, name, value); schedule(name); return res; };
-      reg.delete = function(name) { var res = del.call(this, name); schedule(name); return res; };
-      reg.clear = function() { var res = clear.call(this); schedule(); return res; };
+      var set = reg.set, get = reg.get, del = reg.delete, clear = reg.clear;
+      // 读回的是调用方 set 进来的原件（窄条层、跟读 / 查词各处都按原件取范围）；剔过的那份只给引擎绘制。
+      reg.get = function(name) {
+        var value = get.call(this, name);
+        var entry = painted.get(name);
+        return entry && entry.paint === value ? entry.value : value;
+      };
+      reg.set = function(name, value) {
+        var paint = paintable(name, value);
+        if (paint !== value) painted.set(name, { paint: paint, value: value });
+        else painted.delete(name);
+        var res = set.call(this, name, paint);
+        schedule(name);
+        return res;
+      };
+      reg.delete = function(name) { painted.delete(name); var res = del.call(this, name); schedule(name); return res; };
+      reg.clear = function() { painted.clear(); var res = clear.call(this); schedule(); return res; };
     };
     hookRegistry();
     var repaintAll = function() { schedule(); };
@@ -1756,6 +1915,18 @@ window.fushiSelection = {
   isScanBoundary: function(char) {
     return this.isScanWhitespace(char) || this.isScanStop(char);
   },
+  // BUG-3664：点词时「回退到词首」的终点。除了 [isScanBoundary]，还要停在**词内连字符**
+  // 上：`time-blackened` 点 blackened，旧逻辑跨过 `-` 一路退到 time 的 t，把
+  // 「time-blackened oak…」交给引擎，词典里没有复合词就只匹配出前半截 time
+  // （用户报「只能查到前面」）。连字符只截回退、不截前向扫描：点 time 仍把整串交给
+  // 引擎，`well-known` 这类有词条的复合词照样能查到。与 Dart 侧
+  // `latin_word_lookup.dart`（只回退拉丁字母/数字）和长按选词
+  // [spaceDelimitedWordBounds]（只回退空格分词字母）同一口径。软连字符 U+00AD 不在其列
+  // （它不可见，是排版断词点而不是词间连接符）。
+  wordHyphenPattern: /[\-\u2010\u2011\u2012\u2013\u2014\u2015\u2212\uFE63\uFF0D]/,
+  isTokenStartBoundary: function(char) {
+    return this.isScanBoundary(char) || this.wordHyphenPattern.test(char || '');
+  },
 
   // BUG-2056：撇号在**词内**时不是词边界。英语的缩合形与所有格（don’t / it’s /
   // John’s / we’ve）在真实 EPUB 里几乎都用排版撇号 U+2019，而它和 ASCII ' 一样躺在
@@ -1825,6 +1996,30 @@ window.fushiSelection = {
     // 没有任何块级祖先：绝不放到整个 body 上游走，退到选区容器的父元素（最坏情况也
     // 只覆盖词所在的直接父节点，绝不跨整篇）。
     return el.parentElement || el;
+  },
+  // 字幕合成书（`CuesToEpub`：独立 SRT 书 / 语音转录产物）把相邻 cue 拼进同一个 <p>，每条
+  // cue 一个 [data-cue-id] span。听写稿常常整段没有句末标点，只按标点切句会把整段（几十条
+  // cue）当成一句塞进卡片。cue 是转录器按停顿 / 时长切好的语音单元，是没有标点时唯一可靠的
+  // 句界，所以：相邻两条 cue **都**不含句末标点时，它们之间的边界算句界。只要任一侧有标点
+  // （正常带标点的稿、被停顿切开的半句「今日は天気が」|「いいですね。」），照旧按标点取句，
+  // 不受影响。
+  cueSpanOf: function(node) {
+    var el = node && node.nodeType === Node.TEXT_NODE ? node.parentElement : node;
+    return el && el.closest ? el.closest('[data-cue-id]') : null;
+  },
+  hasSentenceDelimiter: function(text) {
+    if (!text) return false;
+    for (var i = 0; i < text.length; i++) {
+      if (this.sentenceDelimiters.includes(text[i])) return true;
+    }
+    return false;
+  },
+  isUnpunctuatedCueBoundary: function(a, b) {
+    var cueA = this.cueSpanOf(a);
+    var cueB = this.cueSpanOf(b);
+    if (!cueA || !cueB || cueA === cueB) return false;
+    return !this.hasSentenceDelimiter(cueA.textContent) &&
+      !this.hasSentenceDelimiter(cueB.textContent);
   },
   createWalker: function(rootNode) {
     var root = rootNode || document.body;
@@ -1930,6 +2125,8 @@ window.fushiSelection = {
   // 就是上千次强制 reflow。拿不到盒（无 body / 退化几何）一律返回 true —— 这道守卫只负责
   // 拦下**确证不可见**的字符，绝不在几何未知时把正常查词一起拦掉。
   charRangeVisible: function(charRange, box) {
+    if (typeof window.__fushiTextUnrevealed === 'function' &&
+        window.__fushiTextUnrevealed(charRange.startContainer, charRange.startOffset)) return false;
     if (box === undefined) box = this.visibleContentBox();
     if (!box) return true;
     var rects = charRange.getClientRects();
@@ -2455,6 +2652,8 @@ window.fushiSelection = {
       sStartOffset = 0;
       var laterNode = node;
       node = walker.previousNode();
+      // 无标点听写稿：cue 边界即句界（见 isUnpunctuatedCueBoundary）。
+      if (node && this.isUnpunctuatedCueBoundary(node, laterNode)) break;
       if (node) {
         limit = node.textContent.length;
         // BUG-3453：被跳过的空白缝还原成一个空格（partsBefore 最后反转拼接）。
@@ -2491,6 +2690,7 @@ window.fushiSelection = {
       var earlierNode = node;
       node = walker.nextNode();
       start = 0;
+      if (node && this.isUnpunctuatedCueBoundary(earlierNode, node)) break;
       // BUG-3453：同上，向后拼接时也把被跳过的空白缝还原成一个空格。
       if (node && this.hasSkippedWhitespaceBetween(earlierNode, node) &&
           this.isWordGapBetweenChars(earlierNode.textContent, node.textContent)) {
@@ -2952,7 +3152,7 @@ window.fushiSelection = {
       var content = hit.node.textContent;
       var offset = hit.offset;
       if (offset < content.length && !this.isCodePointJapanese(content.codePointAt(offset))) {
-        while (offset > 0 && !this.isScanBoundary(content[offset - 1])) offset--;
+        while (offset > 0 && !this.isTokenStartBoundary(content[offset - 1])) offset--;
       }
       if (hit.node === this.selection.startNode && offset === this.selection.startOffset) return null;
     }
@@ -2982,7 +3182,7 @@ window.fushiSelection = {
     var startOffset = offset;
     var hitContent = startNode.textContent;
     if (startOffset < hitContent.length && !this.isCodePointJapanese(hitContent.codePointAt(startOffset))) {
-      while (startOffset > 0 && !this.isScanBoundary(hitContent[startOffset - 1])) {
+      while (startOffset > 0 && !this.isTokenStartBoundary(hitContent[startOffset - 1])) {
         startOffset--;
       }
     }
@@ -3032,6 +3232,10 @@ window.fushiSelection = {
     }
     if (!text) return null;
     this.selection = { startNode: startNode, startOffset: startOffset, ranges: ranges, text: text };
+    // BUG-3665：记下点击点，[highlightSelection] 用它挑出用户点中的那一段字形当锚点。
+    if (typeof x === 'number' && typeof y === 'number' && isFinite(x) && isFinite(y)) {
+      this.selection.point = { x: x, y: y };
+    }
     return this.fireTextSelected(x, y, fromHover);
   },
   // Build the onTextSelected/onSelectionMenu payload for the current
@@ -3660,6 +3864,64 @@ window.fushiSelection = {
     var rect = rects.find(function(rect) { return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom; }) || range.getBoundingClientRect();
     return { x: rect.x, y: rect.y, width: rect.width, height: rect.height };
   },
+  isVerticalTextNode: function(node) {
+    var el = node && (node.nodeType === Node.TEXT_NODE ? node.parentElement : node);
+    if (!el || !window.getComputedStyle) return false;
+    var mode = window.getComputedStyle(el).writingMode || '';
+    return mode.indexOf('vertical') === 0 || mode.indexOf('tb') === 0;
+  },
+  // BUG-3665：查词弹窗的锚点矩形 = 被查词「用户看得见、点中的那一段」字形，而不是
+  // 全部字形片段的并集。一个词被断在两栏 / 两页（`su-` 在上一页末行、`perfluous` 在
+  // 本页首行）时，旧实现把屏外那段也并进来：并集从页顶一直拉到页底，弹窗上下都没空间，
+  // 被 calcPopupPosition 的「绝不压词」挤成贴底的一条（用户报「在边缘查词，卡片位置
+  // 不合适」）。规则：
+  //   1. 只看与视口相交的片段（翻页模式下别的页在屏外）；一个都不相交时退回全部片段。
+  //   2. 锚段 = 含点击点的片段，没有点击点（键盘 / 手柄光标）或都不含时取第一段。
+  //   3. 从锚段出发，只并入交叉轴上与已并区间相距不超过两行的片段——同一栏里折到下一行
+  //      的半个词仍并进来（弹窗不压它），隔栏 / 隔半页的另一段不并。
+  anchoredWordBounds: function(rects, point, vertical) {
+    var list = [];
+    for (var i = 0; i < rects.length; i++) {
+      var r = rects[i];
+      if (r && r.width > 0 && r.height > 0) list.push(r);
+    }
+    if (!list.length) return null;
+    var vw = window.innerWidth || document.documentElement.clientWidth || 0;
+    var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+    var visible = list.filter(function(r) {
+      return r.right > 0 && r.bottom > 0 && (!vw || r.left < vw) && (!vh || r.top < vh);
+    });
+    if (!visible.length) visible = list;
+    var anchor = null;
+    if (point) {
+      anchor = visible.find(function(r) {
+        return point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom;
+      }) || null;
+    }
+    if (!anchor) anchor = visible[0];
+    var bounds = { left: anchor.left, top: anchor.top, right: anchor.right, bottom: anchor.bottom };
+    var lineSize = vertical ? anchor.width : anchor.height;
+    var maxGap = lineSize * 2;
+    var pending = visible.filter(function(r) { return r !== anchor; });
+    var grew = true;
+    while (grew && pending.length) {
+      grew = false;
+      for (var k = pending.length - 1; k >= 0; k--) {
+        var c = pending[k];
+        var gap = vertical
+          ? Math.max(0, Math.max(c.left, bounds.left) - Math.min(c.right, bounds.right))
+          : Math.max(0, Math.max(c.top, bounds.top) - Math.min(c.bottom, bounds.bottom));
+        if (gap > maxGap) continue;
+        if (c.left < bounds.left) bounds.left = c.left;
+        if (c.top < bounds.top) bounds.top = c.top;
+        if (c.right > bounds.right) bounds.right = c.right;
+        if (c.bottom > bounds.bottom) bounds.bottom = c.bottom;
+        pending.splice(k, 1);
+        grew = true;
+      }
+    }
+    return bounds;
+  },
   highlightSelection: function(charCount) {
     if (!this.selection || !this.selection.ranges.length) return null;
     var trimmedRanges = [];
@@ -3676,25 +3938,19 @@ window.fushiSelection = {
       trimmedRanges.push({ node: r.node, start: r.start, end: end });
     }
     this.selection.matchedRanges = trimmedRanges;
-    var bounds = null;
+    var wordRects = [];
     for (var i = 0; i < trimmedRanges.length; i++) {
       var seg = trimmedRanges[i];
       var bRange = document.createRange();
       bRange.setStart(seg.node, seg.start);
       bRange.setEnd(seg.node, seg.end);
       var rects = bRange.getClientRects();
-      for (var j = 0; j < rects.length; j++) {
-        var r = rects[j];
-        if (!bounds) {
-          bounds = { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
-        } else {
-          if (r.left < bounds.left) bounds.left = r.left;
-          if (r.top < bounds.top) bounds.top = r.top;
-          if (r.right > bounds.right) bounds.right = r.right;
-          if (r.bottom > bounds.bottom) bounds.bottom = r.bottom;
-        }
-      }
+      for (var j = 0; j < rects.length; j++) wordRects.push(rects[j]);
     }
+    var firstSeg = trimmedRanges.length ? trimmedRanges[0] : null;
+    var bounds = this.anchoredWordBounds(
+      wordRects, this.selection.point || null,
+      firstSeg ? this.isVerticalTextNode(firstSeg.node) : false);
     if (window.__fushiCssHighlightsSupported) {
       // BUG-110：<ruby> 内的字不放进 ::highlight（竖排下 ::highlight 把 ruby 基字盒
       // 画两遍 → 半透明叠加成深色带遮字），改给 <ruby> 元素加 class 单次绘背景。

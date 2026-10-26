@@ -11,6 +11,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fushi_anki/fushi_anki.dart'
     show AnkiOpenWordOutcome, MineOutcome, MineResult, MiningRequestOverrides;
 import 'package:fushi_dictionary/fushi_dictionary.dart';
+import 'package:fushi/src/corpus/library_sentences_bridge.dart';
+import 'package:fushi/src/anki/anki_view_model.dart'
+    show ankiRepositoryChainLabel, ankiRepositoryProvider;
+import 'package:fushi/src/anki/mine_failure_notice.dart';
 import 'package:fushi/src/anki/mined_state_signal.dart';
 import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/src/diagnostics/lookup_perf_trace.dart';
@@ -61,6 +65,19 @@ const bool kSentenceContextPickerEnabled = false;
 const Duration kPopupNativeSelectLongPressDuration =
     Duration(milliseconds: 250);
 
+/// BUG-2790 根因修复（Android）：查词 WebView 是否走老式 Hybrid Composition。
+///
+/// app 外查词窗（`:popup` 进程，`popupMain`）的引擎缓存在 `FlutterEngineCache` 里、关窗
+/// 只 detach 不销毁。HC 平台视图一出现，引擎就把 raster 线程并进 platform 线程，GL 上下文
+/// 在 platform 线程上 make current；detach 时 `Rasterizer::Teardown` 先 reset surface，
+/// Impeller 的 `~GPUSurfaceGLImpeller` 不像 Skia 那样清当前上下文，上下文永远挂在 platform
+/// 线程上，下一个 Activity 挂回热引擎后每帧 `EGL_BAD_ACCESS`（flutter#174495）。
+/// Texture Layer Hybrid Composition（`useHybridComposition: false`）不合并线程，这条路径
+/// 根本不出现——热引擎里的查词 WebView 一律走它（`popupMain` 置 false）。主进程的引擎
+/// 从不 detach / 复挂，保持原有 HC 行为。之前的兼容层是 `:popup` 引擎单独关 Impeller；
+/// 全线 Impeller 后（2026-10-24 拍板，不留 Skia 回退）改为这里。
+bool dictionaryPopupWebViewUsesHybridComposition = true;
+
 /// P1-B（2026-10-20）：in-app 弹窗能否让页面经宿主资源拦截器 `fetch` 词条 JSON。
 ///
 /// 与 [kInAppPopupFontUrlSupported]（字体 URL 投递）是**同一种能力**：页面向
@@ -94,7 +111,8 @@ class MinePopupResult {
     this.ankiConnect = false,
     this.noteId,
     this.duplicate = false,
-  }) : queued = false;
+  }) : queued = false,
+       message = null;
 
   /// 制卡请求已接下、在后台进行（在线视频：抽媒体要时间，弹窗不陪着等）。
   ///
@@ -105,7 +123,8 @@ class MinePopupResult {
       : ankiConnect = false,
         noteId = null,
         duplicate = false,
-        queued = true;
+        queued = true,
+        message = null;
 
   /// 一次**被收下**的制卡结果（成功，或进了待发制卡队列）。
   ///
@@ -134,7 +153,10 @@ class MinePopupResult {
   /// 正文与覆写 / PDF / texthooker / 视频页 / gal 浮窗）此前各自散写
   /// `MinePopupResult(duplicate: outcome.result == MineResult.duplicate)`，
   /// 漏一处就是漏一个用户可见的表面——用户实报的正是被漏掉的视频页。
-  MinePopupResult.failed(MineOutcome outcome)
+  ///
+  /// [message] 是给用户看的失败原因（`describeMineOutcome(...).message`，已本地化），
+  /// 弹窗在制卡按钮旁就地显示它；不传则弹窗退回通用的「导出卡片失败」。
+  MinePopupResult.failed(MineOutcome outcome, {this.message})
       : ankiConnect = false,
         noteId = null,
         duplicate = outcome.result == MineResult.duplicate,
@@ -161,6 +183,14 @@ class MinePopupResult {
   /// 见 [MinePopupResult.queued]。
   final bool queued;
 
+  /// 失败原因（仅 [MinePopupResult.failed] 传入时非空），见那里。
+  ///
+  /// 弹窗发起的制卡，失败**只在弹窗里**说一次（宿主只在被收下时弹 toast）：此前
+  /// 宿主另弹一条 Flutter toast、弹窗再冒一个不带原因的「导出卡片失败。」，同一次失败
+  /// 报两遍；iOS 上那条 toast 还落在底部停靠的弹窗上，被弹窗边缘裁掉半截（用户
+  /// 2026-10-21 截图）。
+  final String? message;
+
   /// 序列化成 JS 可读的 Map（经 inappwebview callHandler 回传）。
   Map<String, Object?> toJson() => <String, Object?>{
         'ankiConnect': ankiConnect,
@@ -169,6 +199,7 @@ class MinePopupResult {
         // 同解，省一个恒 false 的字段；守卫 popup_mine_failure_hint_test 逐字钉这行。
         if (duplicate) 'duplicate': true,
         if (queued) 'queued': true,
+        if (message != null && message!.isNotEmpty) 'message': message,
       };
 
   /// 这次制卡被收下了：成功落卡（[MinePopupResult.mined] 恒带 `ankiConnect: true`，
@@ -318,6 +349,7 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
     this.onTapOutside,
     this.onMineEntry,
     this.onUpdateEntry,
+    this.isSessionOnScreen,
     this.onDuplicateCheck,
     this.onOverwriteTargetNoteId,
     this.onMinedCardAction,
@@ -398,6 +430,12 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// 内容。返回 [MinePopupResult]（成功时带回同一 [noteId]，保持 ✓ 第三态）。
   final Future<MinePopupResult> Function(
       int noteId, Map<String, String> fields)? onUpdateEntry;
+
+  /// BUG-3652 续：这一层弹窗此刻是否仍在屏上（宿主模型真值：仍在弹窗栈里且未停驻，
+  /// 见 [DictionaryPopupController.isEntryOnScreen]）。制卡 / 覆写 / 已制卡动作的
+  /// 失败回包回来时据此决定原因由弹窗就地说，还是弹窗已不在、改由宿主 toast（见
+  /// [MineFailureNotice]）。null = 本 WebView 挂载期间一直在屏上（整页嵌入的查词结果区）。
+  final bool Function()? isSessionOnScreen;
   final Future<bool> Function(String expression, String reading)?
       onDuplicateCheck;
 
@@ -642,6 +680,46 @@ class DictionaryPopupWebViewState extends ConsumerState<DictionaryPopupWebView>
       mounted &&
       _isCurrentPopupController(controller) &&
       _documentGeneration == generation;
+
+  /// BUG-3652 续：制卡 / 覆写发起这一刻记下「是哪个弹窗、哪份文档」，回包时问它还在
+  /// 不在屏上：State 已卸载（弹窗被关 / 页面被导航销毁）、文档已重载、这一层已离栈
+  /// 或停驻（热槽在两次查词之间隐身）都算不在。「同一层里换了词」由 popup.js 按发起
+  /// 按钮是否还在页面上自己判（见 popup.js `reportMineFailure`）。
+  MineOriginOnScreen _captureMineOrigin() {
+    final int generation = _documentGeneration;
+    final Object? platform = _controller?.platform;
+    return () =>
+        mounted &&
+        _documentGeneration == generation &&
+        identical(_controller?.platform, platform) &&
+        (widget.isSessionOnScreen?.call() ?? true);
+  }
+
+  /// 制卡 / 覆写 / 已制卡动作三根桥共用的收尾：发起前记下弹窗身份，交给宿主，回包时
+  /// 经 [MineFailureNotice.settle] 决定失败原因由弹窗就地说还是宿主 toast。
+  ///
+  /// [afterHostEntered] 在 [hostCall] 同步前缀跑完之后、首个 await 之前调用（BUG-2634：
+  /// 宿主担保在首个 await 前读完草稿时据此提前关「高级制卡」对话框）。
+  Future<Map<String, Object?>> _runMineBridge(
+    Future<MinePopupResult> Function() hostCall, {
+    VoidCallback? afterHostEntered,
+  }) async {
+    final MineOriginOnScreen origin = _captureMineOrigin();
+    final Future<MinePopupResult> pending = hostCall();
+    afterHostEntered?.call();
+    final MinePopupResult result = await pending;
+    return MineFailureNotice.settle(result.toJson(), originOnScreen: origin());
+  }
+
+  /// 测试入口：走与 `mineEntry` / `updateEntry` / `minedCardAction` 三根桥**同一条**
+  /// 收尾（[_runMineBridge]），返回交给 popup.js 的回包。真 WebView 的 JS 桥在单测
+  /// 里建不起来（假平台从不触发 onWebViewCreated），只有这条路能在 widget 测试里验证
+  /// 「弹窗还在 / 已关」两种回包。
+  @visibleForTesting
+  Future<Map<String, Object?>> debugRunMineBridge(
+    Future<MinePopupResult> Function() hostCall,
+  ) =>
+      _runMineBridge(hostCall);
 
   double? _layoutWidth;
   double? _layoutHeight;
@@ -2447,6 +2525,9 @@ JSON.stringify((function(){
       },
       initialSettings: InAppWebViewSettings(
         transparentBackground: true,
+        // BUG-2790：热引擎（:popup）里走 TLHC，见
+        // [dictionaryPopupWebViewUsesHybridComposition]。只对 Android 有意义。
+        useHybridComposition: dictionaryPopupWebViewUsesHybridComposition,
         supportZoom: false,
         horizontalScrollBarEnabled: false,
         allowFileAccessFromFileURLs: true,
@@ -2896,19 +2977,34 @@ JSON.stringify((function(){
                 // 时宿主已经跑完它的同步前缀。**只有担保「草稿在首个 await 之前读完」
                 // 的宿主**（`releaseWhenPayloadConsumed`）才据此提前关窗；不担保的
                 // （阅读器经制卡串行队列入队）在内部降级成「只解除超时」。
-                final Future<MinePopupResult> pending =
-                    widget.onMineEntry!(fields);
-                _markConfirmMinePayloadConsumed();
-                final MinePopupResult result = await pending;
                 // TODO-270 D：回传结构化结果（ankiConnect + noteId）给 popup.js，
-                // 让它把刚制的这张标记为「最新可改」第三态。
-                return result.toJson();
+                // 让它把刚制的这张标记为「最新可改」第三态。失败原因经
+                // MineFailureNotice 恰好说一次（弹窗已不在就改由宿主 toast）。
+                return await _runMineBridge(
+                  () => widget.onMineEntry!(fields),
+                  afterHostEntered: _markConfirmMinePayloadConsumed,
+                );
               }
             } catch (e, stack) {
               ErrorLogService.instance
                   .log('DictPopupWebview.mineEntry', e, stack);
             }
             return const MinePopupResult().toJson();
+          },
+        );
+
+        // BUG-3652 续：失败回包到达时发起制卡的按钮已被重渲染摘掉（同一层换了词 /
+        // 原地跳转 / 热槽复用），popup.js 不画提示，回这条桥让宿主 toast 一次。
+        controller.addJavaScriptHandler(
+          handlerName: 'mineFailureUnseen',
+          callback: (args) {
+            try {
+              MineFailureNotice.reportUnseen(args.isNotEmpty ? args[0] : null);
+            } catch (e, stack) {
+              ErrorLogService.instance
+                  .log('DictPopupWebview.mineFailureUnseen', e, stack);
+            }
+            return null;
           },
         );
 
@@ -2945,9 +3041,9 @@ JSON.stringify((function(){
                 // 对话框在整条链路落地时关，这正是这条路该有的样子：用户本来就在
                 // 上面那张模态单里忙着。
                 _markConfirmMineHostEntered();
-                final MinePopupResult result =
-                    await widget.onMinedCardAction!(fields);
-                return result.toJson();
+                return await _runMineBridge(
+                  () => widget.onMinedCardAction!(fields),
+                );
               }
             } catch (e, stack) {
               ErrorLogService.instance
@@ -3017,6 +3113,19 @@ JSON.stringify((function(){
                 final reading = (data['reading'] ?? '').toString();
                 final AnkiOpenWordOutcome outcome =
                     await widget.onOpenInAnki!(expression, reading);
+                if (outcome == AnkiOpenWordOutcome.failed) {
+                  // 反馈 6lORfLyhXd：「找到了卡却打不开」此前只在弹窗里提示一句、日志里
+                  // 什么都没有，反馈带回来的日志无从判断是哪一步、哪个后端。
+                  final String backend = ankiRepositoryChainLabel(
+                    ref.read(ankiRepositoryProvider),
+                  );
+                  ErrorLogService.instance.log(
+                    'DictPopupWebview.openInAnki',
+                    'openWordInAnki failed '
+                        '(backend: $backend, expression: $expression)',
+                    null,
+                  );
+                }
                 return outcome.name;
               }
             } catch (e, stack) {
@@ -3061,11 +3170,10 @@ JSON.stringify((function(){
                     _dictionaryMediaForLocalMining(fields));
                 // BUG-2634：与 mineEntry 同一条纪律（覆写路径同样在首个 await 之前
                 // 读走草稿），同样按宿主的担保决定是提前关窗还是只解除超时。
-                final Future<MinePopupResult> pending =
-                    widget.onUpdateEntry!(noteId, fields);
-                _markConfirmMinePayloadConsumed();
-                final MinePopupResult result = await pending;
-                return result.toJson();
+                return await _runMineBridge(
+                  () => widget.onUpdateEntry!(noteId, fields),
+                  afterHostEntered: _markConfirmMinePayloadConsumed,
+                );
               }
             } catch (e, stack) {
               ErrorLogService.instance
@@ -3112,6 +3220,16 @@ JSON.stringify((function(){
             () => srsHandleTermStatusBridge(args, SrsAppHost.current),
           ),
         );
+        // 批量版：popup.js 把一轮可见 / 预取范围内的词合成一次桥往返。
+        controller.addJavaScriptHandler(
+          handlerName: 'srsTermStatusBatch',
+          callback: (args) => _guardJsBridge<Map<String, Object?>?>(
+            'DictPopupWebview.srsTermStatusBatch',
+            null,
+            ErrorLogService.instance,
+            () => srsHandleTermStatusBatchBridge(args, SrsAppHost.current),
+          ),
+        );
         controller.addJavaScriptHandler(
           handlerName: 'srsOpenCard',
           callback: (args) => _guardJsBridge<bool>(
@@ -3119,6 +3237,31 @@ JSON.stringify((function(){
             false,
             ErrorLogService.instance,
             () => srsHandleOpenCardBridge(args, SrsAppHost.current),
+          ),
+        );
+
+        // 「我库里的例句」（popup.js createLibrarySentencesSection，作品图谱 L4）。同上：
+        // 所有挂本 WebView 的表面在这里一次接上。开关关着时注入的
+        // __fushiLibrarySentencesEnabled=false 已让 JS 不发这两根桥，这里照样秒回 null / false。
+        controller.addJavaScriptHandler(
+          handlerName: 'librarySentences',
+          callback: (args) => _guardJsBridge<Map<String, Object?>?>(
+            'DictPopupWebview.librarySentences',
+            null,
+            ErrorLogService.instance,
+            () => librarySentencesHandleBridge(
+              args,
+              ref.read(appProvider).moduleVisibility,
+            ),
+          ),
+        );
+        controller.addJavaScriptHandler(
+          handlerName: 'librarySentenceOpen',
+          callback: (args) => _guardJsBridge<bool>(
+            'DictPopupWebview.librarySentenceOpen',
+            false,
+            ErrorLogService.instance,
+            () => librarySentenceOpenHandleBridge(args),
           ),
         );
 

@@ -70,6 +70,7 @@ class BookImportDialog extends StatefulWidget {
     this.initialSubtitlePath,
     this.initialAudioPaths,
     this.imageArchiveProbe,
+    this.requireBook = false,
     super.key,
   });
 
@@ -94,6 +95,12 @@ class BookImportDialog extends StatefulWidget {
   /// 记住「引用原文件（不复制）」上次选择的偏好仓库（[PreferencesRepository.
   /// audiobookImportReferenceOriginal]）。null = 不读不写（测试 / 无应用上下文）。
   final PreferencesRepository? prefs;
+
+  /// 本次导入必须带书籍文件（「给字幕书添加书籍文件」入口，见
+  /// `srt_book_attach_epub.dart`）：字幕与音频已由原书预填，没选书时点导入若照常
+  /// 落进字幕书分支，就会悄悄再生成一本与原书一模一样的字幕书。为真时没选书就
+  /// 先弹书籍选择器，选了才继续。
+  final bool requireBook;
   @override
   State<BookImportDialog> createState() => _BookImportDialogState();
 }
@@ -194,6 +201,7 @@ class _BookImportDialogState extends State<BookImportDialog>
             : p.basenameWithoutExtension(epub),
         ImportTitleSource.epub,
       );
+      unawaited(_fillTitleFromEpubMetadata(epub));
     }
     final String? sub = widget.initialSubtitlePath;
     if (sub != null) {
@@ -361,6 +369,7 @@ class _BookImportDialogState extends State<BookImportDialog>
     // 拖入主书文件时顺带扫同目录 sidecar（仅填空、不覆盖）；拖入音频时抽内嵌封面。
     if (droppedEpub != null) {
       _autoAttachSidecars(droppedEpub);
+      unawaited(_fillTitleFromEpubMetadata(droppedEpub));
     }
     if (gotAudio) {
       if (_coverPath == null) {
@@ -625,6 +634,30 @@ class _BookImportDialogState extends State<BookImportDialog>
     }
   }
 
+  /// 选中的书是 EPUB 时，把文件名派生的书名换成 OPF `dc:title`（BUG-3774）。
+  /// 入库书名本来就取 OPF（[EpubImporter] 只在 OPF 没写书名时退回文件名），标题框
+  /// 却一直显示文件名，用户看到的和最终入库的不一致。走 [_autoFillTitle] 的同一
+  /// 来源（epub）：用户手打过的标题不动；读取期间重选了别的文件也不回写。读取在
+  /// 后台 isolate；包坏了照旧保留文件名并记日志，真正的失败交给导入那一步报。
+  Future<void> _fillTitleFromEpubMetadata(String path) async {
+    if (_classifyCarrier(path) != ImportCarrier.epub) return;
+    final String? title;
+    try {
+      title = await readEpubTitleInBackground(path);
+    } catch (error, stack) {
+      developer.log(
+        'read EPUB title for import dialog failed: $path',
+        name: 'fushi.import',
+        error: error,
+        stackTrace: stack,
+      );
+      return;
+    }
+    if (!mounted || title == null || _epubPath != path) return;
+    final String metadataTitle = title;
+    setState(() => _autoFillTitle(metadataTitle, ImportTitleSource.epub));
+  }
+
   /// 没有 .srt 时用设备端语音模型从已选音频生成一份，回填到字幕位；之后的导入
   /// 路径与用户自带 SRT 完全相同（解析 → 匹配 → 落库）。
   Future<void> _transcribeSubtitleFromAudio() async {
@@ -731,6 +764,7 @@ class _BookImportDialogState extends State<BookImportDialog>
             ImportTitleSource.epub,
           );
         });
+        unawaited(_fillTitleFromEpubMetadata(path));
         await _autoAttachSidecars(path);
       }
     } finally {
@@ -1047,6 +1081,10 @@ class _BookImportDialogState extends State<BookImportDialog>
   }
 
   Future<void> _doImport() async {
+    if (widget.requireBook && _epubPath == null) {
+      await _pickEpub();
+      if (!mounted || _epubPath == null) return;
+    }
     final AudioOnlyImportHint audioOnly = _audioOnlyHint;
     if (audioOnly == AudioOnlyImportHint.transcribeToBook) {
       // 只有音频：没有书也能导入——转录出字幕后接着走字幕书路径自动生成书籍，
@@ -1376,6 +1414,13 @@ enum ImportTitleSource {
   /// 用户在标题框手动输入的标题——永不被自动派生覆盖。
   user,
 }
+
+/// 后台 isolate 里读 EPUB 的 OPF `dc:title`（[EpubParser.readTitleSync]）。
+///
+/// 必须是顶层函数：写在 State 方法里的 `Isolate.run` 闭包会和同一方法里引用 `this`
+/// 的闭包（如 `setState`）共享捕获上下文，把整个 State 带过 isolate 边界、发送失败。
+Future<String?> readEpubTitleInBackground(String path) =>
+    Isolate.run(() => EpubParser.readTitleSync(path));
 
 /// 选/重选导入文件后，标题框应显示的书名及其来源（纯函数，TODO-1362 可测核心）。
 ///

@@ -1064,9 +1064,11 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       pos: pos,
       // 被更上层查词卡盖住的部分裁掉：上层的模糊才采到正文而不是本层面板
       // （[PopupOccluderClip]，玻璃叠玻璃）。
+      // 只算已淡入完成的上层（[DictionaryPopupEntry.entranceSettled]）：上层还在
+      // 淡入时就挖洞，洞口会透出正文 / 视频（反馈 iZupbhhdNV）。
       occluders: <Rect>[
         for (int j = index + 1; j < stack.length; j++)
-          if (stack[j].visible)
+          if (stack[j].visible && stack[j].entranceSettled)
             _calculatePopupPosition(
               stack[j].selectionRect,
               screen,
@@ -1080,6 +1082,10 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       // 已制卡动作 / 打开卡片选择）期间把弹窗停靠屏外，否则原生平台视图
       // （WebView2 / Android platform view）盖住 showAppDialog 弹的对话框（层级不对）。
       visible: item.visible && _popupHidingDialogDepth == 0,
+      onEntranceSettled: (bool settled) {
+        if (!mounted || item.entranceSettled == settled) return;
+        setState(() => item.entranceSettled = settled);
+      },
       screen: screen,
       child: DictionaryPopupLayer(
         result: item.result,
@@ -1231,6 +1237,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
               )
             : _mineBlockedByModuleGate,
         onUpdateEntry: cardCreationEnabled ? onUpdateFromPopup : null,
+        // BUG-3652 续：制卡失败回包回来时这一层已关 / 停驻，原因就改由宿主 toast。
+        isSessionOnScreen: () => _popup.isEntryOnScreen(item),
         // 用户建议 #fiwDIpFep7：顶栏就地切配置 / 牌组，随制卡模块开关。
         showMiningTargetSwitch: cardCreationEnabled,
         // TODO-948②：阅读器/有声书弹窗收藏按钮接线（视频走 mixin，不经此处）。
@@ -1606,6 +1614,9 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       bottomReserve: popupBottomReserve,
       topReserve: popupTopReserve,
       verticalWriting: verticalWriting,
+      // 与弹窗外壳的实际下限同口径（自适应收高 / 拖拽把手都按界面大小缩放它）。
+      minPopupWidth: kLookupPopupMinWidth * appModel.appUiScale,
+      minPopupHeight: kLookupPopupMinHeight * appModel.appUiScale,
     );
   }
 
@@ -1724,6 +1735,9 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
     // 「新增」分支的原始结果：进了待发队列时要原样交回弹窗（queued 画 ✓、不回查
     // Anki），下面那个二元组装不下这个状态。
     MinePopupResult? minedNew;
+    // 新增 / 覆写失败时的原结果：失败原因（MinePopupResult.message）只在弹窗里说，
+    // 下面那个二元组装不下它，失败时原样交回。
+    MinePopupResult? failed;
     final r = await runAnkiMinedCardAction(
       context: context,
       repo: repo,
@@ -1737,16 +1751,19 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
           AnkiMiningPayload.withAllowDuplicate(fields),
         );
         minedNew = res;
+        if (!res.accepted) failed = res;
         return (ankiConnect: res.ankiConnect, noteId: res.noteId);
       },
       overwrite: (noteId) async {
         final res = await onUpdateFromPopup(noteId, fields);
+        if (!res.accepted) failed = res;
         return (ankiConnect: res.ankiConnect, noteId: res.noteId);
       },
       // BUG-1040：对话框期间停靠查词弹窗，否则原生平台视图盖住它（用户报「看不见」）。
       runHidden: runWithLookupPopupHidden,
     );
     if (minedNew?.queued ?? false) return minedNew!;
+    if (!r.ankiConnect && failed != null) return failed!;
     return MinePopupResult(ankiConnect: r.ankiConnect, noteId: r.noteId);
   }
 

@@ -1,6 +1,8 @@
 /// 牌组设置的物化视图、牌组树与参数继承。
 library;
 
+import 'dart:math' as math;
+
 import 'algorithm.dart';
 import 'entities.dart';
 import 'field_edit.dart';
@@ -45,6 +47,91 @@ class SrsParamSet {
   }
 }
 
+/// RWKV-Instant 的排队设置（[SrsFieldKeys.deckRwkvQueue]），默认值 = 上游 kuma3 默认。
+class SrsRwkvQueueSettings {
+  const SrsRwkvQueueSettings({
+    this.minReviewsPerDay = 0,
+    this.repeatMinReviews = 5,
+    this.repeatMinSeconds = 30,
+    this.refreshEvery = 1,
+  });
+
+  /// 每天最少复习数：今天在这个牌组复习过的卡不到这个数时，从回忆率高于目标保留率（本不该出）
+  /// 的复习卡里按回忆率从低到高补足。0 = 不启用。
+  final int minReviewsPerDay;
+
+  /// 同日重复：今天答过的卡，之后这组牌组里别的卡至少要有这么多次作答才再出。
+  final int repeatMinReviews;
+
+  /// 同日重复：今天答过的卡，距上次作答至少这么多秒才再出。
+  final int repeatMinSeconds;
+
+  /// 每答几题整表刷新一次 RWKV 分数（上游 JSchoreels/anki「Update the RWKV queue every」，
+  /// 默认 1 = 每题）。数的是模型状态真正推进的次数（作答与撤回），刷新在后台跑、下一次排队
+  /// 生效（`SrsRwkvService`）。调大能减少复习时 RWKV 的计算，代价是队列在两次刷新之间用的是
+  /// 较旧的估计。最小 1。
+  final int refreshEvery;
+
+  static const int maxMinReviewsPerDay = 9999;
+  static const int maxRepeatMinReviews = 999;
+  static const int maxRepeatMinSeconds = 86400;
+  static const int maxRefreshEvery = 10000;
+
+  /// 缺项 / 坏值回落到默认值，越界的夹到合法范围。
+  static SrsRwkvQueueSettings fromValue(Object? v) {
+    const SrsRwkvQueueSettings d = SrsRwkvQueueSettings();
+    if (v is! Map) return d;
+    int read(String key, int fallback, int max) => switch (v[key]) {
+      final int n => n.clamp(0, max),
+      _ => fallback,
+    };
+    return SrsRwkvQueueSettings(
+      minReviewsPerDay: read(
+        'minReviews',
+        d.minReviewsPerDay,
+        maxMinReviewsPerDay,
+      ),
+      repeatMinReviews: read(
+        'repeatReviews',
+        d.repeatMinReviews,
+        maxRepeatMinReviews,
+      ),
+      repeatMinSeconds: read(
+        'repeatSeconds',
+        d.repeatMinSeconds,
+        maxRepeatMinSeconds,
+      ),
+      refreshEvery: math.max(
+        1,
+        read('refreshEvery', d.refreshEvery, maxRefreshEvery),
+      ),
+    );
+  }
+
+  Map<String, Object?> toValue() => <String, Object?>{
+    'minReviews': minReviewsPerDay,
+    'repeatReviews': repeatMinReviews,
+    'repeatSeconds': repeatMinSeconds,
+    'refreshEvery': refreshEvery,
+  };
+
+  @override
+  bool operator ==(Object other) =>
+      other is SrsRwkvQueueSettings &&
+      other.minReviewsPerDay == minReviewsPerDay &&
+      other.repeatMinReviews == repeatMinReviews &&
+      other.repeatMinSeconds == repeatMinSeconds &&
+      other.refreshEvery == refreshEvery;
+
+  @override
+  int get hashCode => Object.hash(
+    minReviewsPerDay,
+    repeatMinReviews,
+    repeatMinSeconds,
+    refreshEvery,
+  );
+}
+
 /// 物化后的牌组。
 class SrsDeckView {
   SrsDeckView({
@@ -65,6 +152,7 @@ class SrsDeckView {
     required this.maxIntervalDays,
     this.autoplayAudio = true,
     this.replayQuestionAudio = true,
+    this.rwkvQueue = const SrsRwkvQueueSettings(),
     required this.optimizeBaselineAt,
     required this.optimizeBaselineCount,
     required this.deletedAt,
@@ -120,6 +208,9 @@ class SrsDeckView {
   /// 答案面重播时先播问题音频（Anki 默认；false = 「重播答案时跳过问题」）。
   /// 只看 own 祖先上的值。
   final bool replayQuestionAudio;
+
+  /// RWKV-Instant 排队设置。只看 own 祖先上的值（[SrsDeckTree.paramsOwner]）。
+  final SrsRwkvQueueSettings rwkvQueue;
   final int? optimizeBaselineAt;
   final int? optimizeBaselineCount;
   final int? deletedAt;
@@ -137,62 +228,6 @@ class SrsDeckView {
     SrsAlgorithm.fsrs6 => fsrs6,
     SrsAlgorithm.fsrs7 || SrsAlgorithm.rwkv => fsrs7,
   };
-
-  static SrsDeckView materialize(SrsEntityRecord record, SrsEntityEdits edits) {
-    final Object? limits = edits.value(SrsFieldKeys.deckLimits);
-    final Object? steps = edits.value(SrsFieldKeys.deckSteps);
-    final Object? alg = edits.value(SrsFieldKeys.deckAlgorithm);
-    final Object? baseline = edits.value(SrsFieldKeys.deckOptimizeBaseline);
-    List<double> listOf(Object? v, List<double> fallback) => v is List
-        ? srsSanitizeSteps(
-            v.whereType<num>().map((num x) => x.toDouble()).toList(),
-            fallback,
-          )
-        : fallback;
-    final String? parent = edits.value(SrsFieldKeys.deckParent) as String?;
-    return SrsDeckView(
-      id: record.id,
-      name: (edits.value(SrsFieldKeys.name) as String?) ?? 'Default',
-      parentId: parent,
-      ownParams:
-          parent == null || edits.value(SrsFieldKeys.deckParamsMode) == 'own',
-      newPerDay: limits is Map ? (limits['new'] as int?) ?? 20 : 20,
-      reviewsPerDay: limits is Map ? (limits['review'] as int?) ?? 200 : 200,
-      learnSteps: listOf(
-        steps is Map ? steps['learn'] : null,
-        defaultLearnSteps,
-      ),
-      relearnSteps: listOf(
-        steps is Map ? steps['relearn'] : null,
-        defaultRelearnSteps,
-      ),
-      desiredRetention:
-          ((edits.value(SrsFieldKeys.deckRetention) as num?) ?? 0.8).toDouble(),
-      algorithmWire: alg is Map
-          ? (alg['alg'] as String?) ?? srsDefaultAlgorithm.wire
-          : srsDefaultAlgorithm.wire,
-      algorithmAuto: alg is Map ? alg['auto'] != false : true,
-      fsrs6: SrsParamSet.fromValue(edits.value(SrsFieldKeys.deckFsrs6Params)),
-      fsrs7: SrsParamSet.fromValue(edits.value(SrsFieldKeys.deckFsrs7Params)),
-      autoOptimize: edits.value(SrsFieldKeys.deckAutoOptimize) != false,
-      maxIntervalDays:
-          (edits.value(SrsFieldKeys.deckMaxInterval) as int?) ?? 36500,
-      collapsed: edits.value(SrsFieldKeys.deckCollapsed) == true,
-      position: switch (edits.value(SrsFieldKeys.deckPosition)) {
-        final num v when v.isFinite => v.toDouble(),
-        _ => null,
-      },
-      autoplayAudio: edits.value(SrsFieldKeys.deckAutoplay) != false,
-      replayQuestionAudio:
-          edits.value(SrsFieldKeys.deckReplayQuestion) != false,
-      optimizeBaselineAt: baseline is Map ? baseline['at'] as int? : null,
-      optimizeBaselineCount: baseline is Map ? baseline['n'] as int? : null,
-      deletedAt: edits.deletedAt,
-      builtinKey: record.payload['builtin'] as String?,
-      createdAt: record.createdAt,
-      edits: edits,
-    );
-  }
 }
 
 /// 牌组树：父子关系、成环打破、参数继承。

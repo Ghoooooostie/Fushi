@@ -246,7 +246,7 @@ class _DedupPlan {
 }
 
 class AnkiConnectRepository extends BaseAnkiRepository {
-  AnkiConnectRepository({AnkiConnectService? service})
+  AnkiConnectRepository({AnkiConnectService? service, super.settingsStore})
     : _fixedService = service;
 
   final AnkiConnectService? _fixedService;
@@ -468,7 +468,7 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       // the user's configured tags (de-duped, order preserved) via the shared
       // base helper, so both backends behave identically.
       final tags = buildNoteTags(
-        settings.tags,
+        settings.noteTags,
         source: context.source,
         includeHibiki: settings.tagIncludeHibiki,
         includeCategory: settings.tagIncludeCategory,
@@ -490,6 +490,7 @@ class AnkiConnectRepository extends BaseAnkiRepository {
         return MineOutcome.failure(
           'All fields are empty — refusing to create a blank card. '
           'Check your note type field mappings.',
+          errorCode: AnkiErrorCode.allFieldsEmpty,
         );
       }
       // BUG-1900：字段名必须与**当前**笔记类型求交后再送出。AnkiDroid 后端一直是按
@@ -791,13 +792,14 @@ class AnkiConnectRepository extends BaseAnkiRepository {
         return MineOutcome.failure(
           'All fields are empty — refusing to clear an existing card. '
           'Check your note type field mappings.',
+          errorCode: AnkiErrorCode.allFieldsEmpty,
         );
       }
 
       // BUG-2606：与 [mineEntry] 同一组标签、同一个 helper——覆盖后的卡不该比新制
       // 的少 `fushi` / 分类 / 书名标签。
       final List<String> tags = buildNoteTags(
-        settings.tags,
+        settings.noteTags,
         source: context.source,
         includeHibiki: settings.tagIncludeHibiki,
         includeCategory: settings.tagIncludeCategory,

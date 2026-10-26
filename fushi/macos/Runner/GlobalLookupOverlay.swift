@@ -974,7 +974,8 @@ final class GlobalLookupOverlayController: NSObject, WKScriptMessageHandler, WKN
     "favoriteCheck",
     "mineEntry", "duplicateCheck", "overwriteTargetNoteId", "updateEntry",
     "findMinedMatches", "openMinedNote", "openInAnki",
-    "srsTermStatus", "srsOpenCard",
+    "srsTermStatus", "srsTermStatusBatch", "srsOpenCard",
+    "librarySentences", "librarySentenceOpen",
   ]
 
   func userContentController(

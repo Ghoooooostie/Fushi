@@ -247,17 +247,17 @@ void main() {
     final SrsAnkiExport export = await buildSrsAnkiExport(
       store: store,
       media: media,
+      file: File('${tmp.path}/out.apkg'),
     );
     expect(export.usesFsrs7, isTrue);
-    expect(export.bytes, isNotEmpty);
+    expect(export.file.lengthSync(), greaterThan(0));
 
     final (FushiDatabase db2, SrsDbStore other) = await openSrsTestStore(
       profileUid: '01928c3e-0000-7000-8000-0000000000ee',
       deviceId: 'other',
     );
     addTearDown(db2.close);
-    final File file = File('${tmp.path}/out.apkg')
-      ..writeAsBytesSync(export.bytes);
+    final File file = export.file;
     final SrsImportReport back = await runSrsAnkiImport(
       store: other,
       media: SrsMediaStore(Directory('${tmp.path}/media2')),
@@ -297,8 +297,8 @@ void main() {
             reading: const Value<String>('あめ'),
             source: 'video',
             bookKey: const Value<String?>('video/ep1'),
-            normCharOffset: const Value<int?>(5000),
-            normCharLength: const Value<int?>(1500),
+            positionMs: const Value<int?>(5000),
+            durationMs: const Value<int?>(1500),
             dateKey: '2026-09-02',
             createdAt: t0 + 1000,
           ),

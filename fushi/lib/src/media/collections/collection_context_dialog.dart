@@ -60,6 +60,7 @@ Future<void> showCollectionContextDialog({
   String? deleteMembersStatisticsSubtitle,
   DeletionDisclosure? deleteMembersDisclosure,
   List<DialogListAction> extraListActions = const <DialogListAction>[],
+  List<DialogListAction> leadingListActions = const <DialogListAction>[],
   Widget? cover,
   ImageProvider? coverImage,
 }) async {
@@ -76,7 +77,7 @@ Future<void> showCollectionContextDialog({
               fit: BoxFit.contain,
               errorBuilder: (_, __, ___) => const SizedBox.shrink(),
             ));
-  await showAppDialog<void>(
+  await showMediaItemActions<void>(
     context: context,
     builder: (BuildContext dialogContext) {
       void closeThen(void Function() action) {
@@ -92,6 +93,13 @@ Future<void> showCollectionContextDialog({
         launchLabel: t.collection_view_all,
         onLaunch: () => closeThen(onOpenDetail),
         listActions: <DialogListAction>[
+          // 媒体特有的首项（视频原盘合集：「进入原盘菜单」）。同样统一包 closeThen。
+          for (final DialogListAction action in leadingListActions)
+            DialogListAction(
+              label: action.label,
+              icon: action.icon,
+              onPressed: () => closeThen(action.onPressed),
+            ),
           DialogListAction(
             label: t.rename_collection,
             icon: Icons.drive_file_rename_outline,
@@ -135,6 +143,7 @@ Future<void> showCollectionContextDialog({
           DialogListAction(
             label: t.media_stats_action,
             icon: Icons.insights_outlined,
+            group: DialogActionGroup.progress,
             onPressed: () => closeThen(
               () => _openCollectionStatistics(
                 context: context,

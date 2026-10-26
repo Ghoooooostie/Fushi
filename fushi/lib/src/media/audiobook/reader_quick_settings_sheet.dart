@@ -19,6 +19,7 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/pages/implementations/book_css_editor_page.dart';
 import 'package:fushi/src/reader/reader_audiobook_panel.dart';
+import 'package:fushi/src/reader/reader_bookmark_logic.dart';
 import 'package:fushi/src/reader/reader_navigation_widgets.dart';
 import 'package:fushi/src/reader/reader_panel_kit.dart';
 import 'package:fushi/src/reader/reader_settings_ia.dart';
@@ -92,6 +93,13 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
     this.onDeleteFavorite,
     this.onJumpToFavorite,
     this.onPlayFavorite,
+    this.bookmarks = const <Bookmark>[],
+    this.resolveBookmarkPage,
+    this.openBookmarks = false,
+    this.onAddBookmark,
+    this.onDeleteBookmark,
+    this.onJumpToBookmark,
+    this.bookmarkChapterLabel,
     this.showMediaNotification = true,
     this.onToggleMediaNotification,
     this.showFloatingLyric = false,
@@ -110,6 +118,7 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
     this.onStyleChanged,
     this.lyricsMode = false,
     this.onToggleLyricsMode,
+    this.onOpenLyricsControlLayout,
     this.extractDir,
     this.onReloadChapter,
     this.onLyricsReload,
@@ -166,6 +175,28 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
   final Future<void> Function(FavoriteSentence fav)? onDeleteFavorite;
   final Future<void> Function(FavoriteSentence fav)? onJumpToFavorite;
   final Future<void> Function(FavoriteSentence fav)? onPlayFavorite;
+
+  /// 本书书签（导航面板「收藏」页的「书签」段；面板内按创建时间倒序显示）。页面
+  /// 在整个面板会话里持有这份列表并在 [onAddBookmark] / [onDeleteBookmark] 里同步
+  /// 写回，面板按种类重建本组件时据此恢复最新状态。
+  final List<Bookmark> bookmarks;
+
+  /// 现取当前页的章内字符区间（判「当前页有没有书签」，见 [readerBookmarkOnPage]）；
+  /// 拿不到时回 null（不判，按钮为「添加」）。书签段第一次出现时取一次，点「添加 /
+  /// 移除」前再取一次——面板开着时有声书跟读 / 改排版都会挪页，不能用开面板时的快照。
+  final Future<ReaderBookmarkPageRange?> Function()? resolveBookmarkPage;
+
+  /// 打开即落在「收藏」页的「书签」段（工具栏「书签」按钮）。
+  final bool openBookmarks;
+
+  /// 在当前页加书签并落库，返回带 id 的书签；拿不到位置时 null。为 null（书没有
+  /// 稳定 uid）时整段书签不出现，「收藏」页只显示收藏句（旧形态）。
+  final Future<Bookmark?> Function()? onAddBookmark;
+  final Future<void> Function(Bookmark bookmark)? onDeleteBookmark;
+  final Future<void> Function(Bookmark bookmark)? onJumpToBookmark;
+
+  /// 书签行标题（章节名，按阅读器的目录反查）；null 时用书签存的 [Bookmark.label]。
+  final String Function(Bookmark bookmark)? bookmarkChapterLabel;
   final bool showMediaNotification;
   final VoidCallback? onToggleMediaNotification;
   final bool showFloatingLyric;
@@ -175,7 +206,7 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
   final bool floatingLyricClickLookup;
   final ValueChanged<bool>? onFloatingLyricClickLookupChanged;
   final Future<void> Function(BookSearchResult result, String query)?
-      onSearchJump;
+  onSearchJump;
   final Future<void> Function(int globalCharOffset)? onJumpToCharOffset;
   final (int current, int total)? charProgress;
   final VoidCallback? onPageMarginChanged;
@@ -186,6 +217,9 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
 
   final bool lyricsMode;
   final VoidCallback? onToggleLyricsMode;
+
+  /// 「歌词模式」页的「按钮布局」：打开歌词页次要按钮的布局编辑器。null = 不显示。
+  final VoidCallback? onOpenLyricsControlLayout;
 
   /// When true, skip AudiobookBridge JS calls and disable ttu-only features.
   final bool isFushiReader;
@@ -316,8 +350,97 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   /// 纯按窗口宽高确定性判定（>= 共享常量阈值），与视频设置同条件。
   bool _isWide = false;
 
-  late List<FavoriteSentence> _favorites =
-      List<FavoriteSentence>.of(widget.favoriteSentences);
+  late List<FavoriteSentence> _favorites = List<FavoriteSentence>.of(
+    widget.favoriteSentences,
+  );
+
+  /// 书签段的本地镜像（新的在上）；加 / 删在面板里即时反映。
+  late List<Bookmark> _bookmarks = readerBookmarksNewestFirst(widget.bookmarks);
+
+  /// 本次面板会话里在当前页新加的书签：页区间快照拿不到（重锚在飞）时，它仍能让
+  /// 「添加 / 移除」按钮知道当前页已有书签。
+  Bookmark? _addedPageBookmark;
+
+  /// 加 / 删书签的异步写库期间禁用按钮，防连点加出两条。
+  bool _bookmarkBusy = false;
+
+  /// 最近一次现取的当前页区间（[ReaderQuickSettingsSheet.resolveBookmarkPage]）。
+  ReaderBookmarkPageRange? _bookmarkPageRange;
+
+  /// 书签段是否已发起过首次取页区间（只在书签段真正出现时取，开设置 / 有声书面板
+  /// 不多跑一次 JS 求值）。
+  bool _bookmarkPageRequested = false;
+
+  Future<ReaderBookmarkPageRange?> _refreshBookmarkPageRange() async {
+    final ReaderBookmarkPageRange? range = await widget.resolveBookmarkPage
+        ?.call();
+    if (mounted) setState(() => _bookmarkPageRange = range);
+    return range;
+  }
+
+  bool get _bookmarksEnabled => widget.onAddBookmark != null;
+
+  /// 「收藏」页当前分段。初值：工具栏「书签」键 → 书签；没有书签段 → 收藏句；没有
+  /// 书签但有收藏句 → 收藏句（老用户打开不扑空）；其余 → 书签（第一段）。
+  late _ReaderFavoritesSegment _favoritesSegment = !_bookmarksEnabled
+      ? _ReaderFavoritesSegment.favorites
+      : widget.openBookmarks
+      ? _ReaderFavoritesSegment.bookmarks
+      : (_bookmarks.isEmpty && _favorites.isNotEmpty)
+      ? _ReaderFavoritesSegment.favorites
+      : _ReaderFavoritesSegment.bookmarks;
+
+  /// 当前页上的书签（没有为 null）。
+  Bookmark? get _currentPageBookmark {
+    final Bookmark? added = _addedPageBookmark;
+    if (added != null && _bookmarks.contains(added)) return added;
+    return readerBookmarkOnPage(_bookmarks, _bookmarkPageRange);
+  }
+
+  Future<void> _toggleCurrentPageBookmark() async {
+    if (_bookmarkBusy) return;
+    setState(() => _bookmarkBusy = true);
+    try {
+      // 判定前现取页区间：显示的「添加 / 移除」可能是几秒前的页。
+      await _refreshBookmarkPageRange();
+      if (!mounted) return;
+      final Bookmark? existing = _currentPageBookmark;
+      if (existing != null) {
+        await widget.onDeleteBookmark?.call(existing);
+        if (!mounted) return;
+        setState(() {
+          _bookmarks = List<Bookmark>.of(_bookmarks)..remove(existing);
+          if (identical(_addedPageBookmark, existing)) {
+            _addedPageBookmark = null;
+          }
+        });
+        FushiToast.show(msg: t.reader_bookmark_removed);
+        return;
+      }
+      final Bookmark? added = await widget.onAddBookmark?.call();
+      if (!mounted || added == null) return;
+      setState(() {
+        _bookmarks = <Bookmark>[added, ..._bookmarks];
+        _addedPageBookmark = added;
+      });
+      FushiToast.show(
+        msg: t.reader_bookmark_added,
+        severity: ToastSeverity.success,
+      );
+    } finally {
+      if (mounted) setState(() => _bookmarkBusy = false);
+    }
+  }
+
+  Future<void> _deleteBookmark(Bookmark bookmark) async {
+    await widget.onDeleteBookmark?.call(bookmark);
+    if (!mounted) return;
+    setState(() {
+      _bookmarks = List<Bookmark>.of(_bookmarks)..remove(bookmark);
+      if (identical(_addedPageBookmark, bookmark)) _addedPageBookmark = null;
+    });
+    FushiToast.show(msg: t.reader_bookmark_removed);
+  }
 
   /// 2026-10 体验优化：收藏句删除改为「先标记 + 撤销窗口」，窗口到期（或面板
   /// 关闭）才真正调 [ReaderQuickSettingsSheet.onDeleteFavorite] 落库；此前
@@ -368,8 +491,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   @override
   void dispose() {
     // 面板关闭时仍在撤销窗口里的删除照常落库（用户没点撤销 = 确认删除）。
-    for (final FavoriteSentence fav
-        in List<FavoriteSentence>.of(_pendingFavoriteDeletes.keys)) {
+    for (final FavoriteSentence fav in List<FavoriteSentence>.of(
+      _pendingFavoriteDeletes.keys,
+    )) {
       unawaited(_commitFavoriteDelete(fav));
     }
     _sideSheetTabController?.dispose();
@@ -442,7 +566,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         'pageColumns',
         'spreadMode',
         'spreadDirection',
-        'prioritizeReaderStyles'
+        'prioritizeReaderStyles',
       };
       if (layoutKeys.contains(key)) {
         await _reloadLayoutLive();
@@ -544,7 +668,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     final TabController? existing = _navTabController;
     if (existing != null) return existing;
     // Ctrl+F（autofocusSearch）直达搜索页；其余落目录（没有目录时落第一页）。
-    final int initial = widget.autofocusSearch
+    // 工具栏「书签」键直达「收藏」页（分段初值见 [_favoritesSegment]）。
+    final int initial = widget.openBookmarks
+        ? _navTabs.indexOf(_ReaderNavTab.favorites)
+        : widget.autofocusSearch
         ? _navTabs.indexOf(_ReaderNavTab.search)
         : 0;
     return _navTabController = TabController(
@@ -556,12 +683,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   }
 
   String _navTabLabel(_ReaderNavTab tab) => switch (tab) {
-        _ReaderNavTab.contents => t.reader_nav_tab_contents,
-        _ReaderNavTab.favorites => _favorites.isEmpty
-            ? t.reader_nav_tab_favorites
-            : '${t.reader_nav_tab_favorites} ${_favorites.length}',
-        _ReaderNavTab.search => t.reader_nav_tab_search,
-      };
+    _ReaderNavTab.contents => t.reader_nav_tab_contents,
+    // 计数 = 书签 + 收藏句（两段同在这一页）。
+    _ReaderNavTab.favorites =>
+      _favoritesTabCount == 0
+          ? t.reader_nav_tab_favorites
+          : '${t.reader_nav_tab_favorites} $_favoritesTabCount',
+    _ReaderNavTab.search => t.reader_nav_tab_search,
+  };
 
   /// 「导航」侧板（宽窗贴左 / 窄窗底部 sheet）：页头下固定「阅读进度」卡 + 分页
   /// 标签（目录 / 收藏 / 搜索），每页各自滚动。目录打开即滚到当前章那一行；当前章
@@ -595,17 +724,18 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       right: tokens.spacing.page - tokens.spacing.gap / 2,
     );
     Widget page(_ReaderNavTab tab, Widget child) => SingleChildScrollView(
-          key: PageStorageKey<String>('fushi_nav_tab_${tab.name}'),
-          padding: pagePadding,
-          child: FushiEntranceScope(
-            child: FushiStaggeredEntrance(index: 0, child: child),
-          ),
-        );
+      key: PageStorageKey<String>('fushi_nav_tab_${tab.name}'),
+      padding: pagePadding,
+      child: FushiEntranceScope(
+        child: FushiStaggeredEntrance(index: 0, child: child),
+      ),
+    );
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         // 矮面板（底部 sheet 半屏档 / 横屏手机）：进度 hero 收成单行，把高度
         // 让给列表。sheet 拖到另一档时外壳按新高度重新布局，这里随之换档。
-        final bool compact = constraints.maxHeight.isFinite &&
+        final bool compact =
+            constraints.maxHeight.isFinite &&
             constraints.maxHeight < kReaderNavCompactHeroBelow;
         return ReaderSideSheet(
           title: t.section_navigation,
@@ -628,7 +758,11 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                   duration: fushiMotionDuration(context, FushiMotion.medium),
                   curve: FushiMotion.release,
                   alignment: Alignment.topCenter,
-                  child: _buildNavProgressCard(context, theme, compact: compact),
+                  child: _buildNavProgressCard(
+                    context,
+                    theme,
+                    compact: compact,
+                  ),
                 ),
               ),
               if (_navTabs.length > 1)
@@ -663,18 +797,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
             children: <Widget>[
               for (final _ReaderNavTab tab in _navTabs)
                 switch (tab) {
-                  _ReaderNavTab.contents =>
-                    page(tab, _buildTocSection(context, theme)),
+                  _ReaderNavTab.contents => page(
+                    tab,
+                    _buildTocSection(context, theme),
+                  ),
                   _ReaderNavTab.favorites => page(
-                      tab,
-                      _favorites.isEmpty
-                          ? _buildNavEmptyState(
-                              theme,
-                              icon: FushiIcons.star,
-                              message: t.reader_nav_favorites_empty,
-                            )
-                          : _buildFavoritesSection(context, theme),
-                    ),
+                    tab,
+                    _buildFavoritesTabPage(context, theme),
+                  ),
                   _ReaderNavTab.search => page(tab, _buildNavSearchPage(theme)),
                 },
             ],
@@ -684,10 +814,168 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     );
   }
 
+  int get _favoritesTabCount =>
+      _favorites.length + (_bookmarksEnabled ? _bookmarks.length : 0);
+
+  /// 「收藏」页：顶部全宽分段「书签 | 收藏句子」，下面按分段显示各自的列表 / 空态；
+  /// 切分段交叉淡入（时长走 [fushiMotionDuration]，墨水屏 / 减弱动态效果归零）。
+  /// 没有书签段（书没有稳定 uid）时与旧形态一致：只有收藏句。
+  Widget _buildFavoritesTabPage(BuildContext context, ThemeData theme) {
+    if (!_bookmarksEnabled) return _buildFavoriteSentencesBody(context, theme);
+    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SizedBox(
+          key: const ValueKey<String>('fushi_nav_favorites_segments'),
+          width: double.infinity,
+          child: adaptiveSegmentedButton<_ReaderFavoritesSegment>(
+            context: context,
+            segments: <ButtonSegment<_ReaderFavoritesSegment>>[
+              ButtonSegment<_ReaderFavoritesSegment>(
+                value: _ReaderFavoritesSegment.bookmarks,
+                label: Text(t.reader_nav_segment_bookmarks),
+              ),
+              ButtonSegment<_ReaderFavoritesSegment>(
+                value: _ReaderFavoritesSegment.favorites,
+                label: Text(t.reader_nav_segment_favorites),
+              ),
+            ],
+            selected: <_ReaderFavoritesSegment>{_favoritesSegment},
+            onSelectionChanged: (Set<_ReaderFavoritesSegment> v) {
+              if (v.isEmpty) return;
+              setState(() => _favoritesSegment = v.first);
+            },
+          ),
+        ),
+        SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2),
+        AnimatedSwitcher(
+          duration: fushiMotionDuration(context, FushiMotion.medium),
+          switchInCurve: FushiMotion.enter,
+          switchOutCurve: FushiMotion.exit,
+          layoutBuilder: (Widget? current, List<Widget> previous) => Stack(
+            alignment: Alignment.topCenter,
+            children: <Widget>[...previous, if (current != null) current],
+          ),
+          child: KeyedSubtree(
+            key: ValueKey<_ReaderFavoritesSegment>(_favoritesSegment),
+            child: FushiEntranceScope(
+              child: switch (_favoritesSegment) {
+                _ReaderFavoritesSegment.bookmarks => _buildBookmarksBody(
+                  context,
+                  theme,
+                ),
+                _ReaderFavoritesSegment.favorites =>
+                  _buildFavoriteSentencesBody(context, theme),
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// 收藏句分段：列表或空态（旧「收藏」页的全部内容）。
+  Widget _buildFavoriteSentencesBody(BuildContext context, ThemeData theme) {
+    if (_favorites.isEmpty) {
+      return _buildNavEmptyState(
+        theme,
+        icon: FushiIcons.star,
+        message: t.reader_nav_favorites_empty,
+      );
+    }
+    return _buildFavoritesSection(context, theme);
+  }
+
+  /// 书签分段：顶部「添加 / 移除书签」（按当前页有没有书签切换）+ 书签列表（新的在
+  /// 上，错峰进场）或空态。
+  Widget _buildBookmarksBody(BuildContext context, ThemeData theme) {
+    if (!_bookmarkPageRequested) {
+      _bookmarkPageRequested = true;
+      unawaited(Future<void>.microtask(_refreshBookmarkPageRange));
+    }
+    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    final bool onPage = _currentPageBookmark != null;
+    final DateFormat fmt = DateFormat('MM/dd HH:mm');
+    final Widget toggle = FushiFilledButton.tonalIcon(
+      key: const ValueKey<String>('fushi_nav_bookmark_toggle'),
+      onPressed: _bookmarkBusy
+          ? null
+          : () => unawaited(_toggleCurrentPageBookmark()),
+      icon: FushiIcon(
+        onPage
+            ? FushiIcons.filled(FushiIcons.bookmark)
+            : FushiIcons.bookmarkAdd,
+        size: 18,
+      ),
+      label: Text(onPage ? t.reader_bookmark_remove : t.reader_bookmark_add),
+    );
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        FushiStaggeredEntrance(index: 0, child: toggle),
+        SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2),
+        if (_bookmarks.isEmpty)
+          FushiStaggeredEntrance(
+            index: 1,
+            child: _buildNavEmptyState(
+              theme,
+              icon: FushiIcons.bookmarks,
+              message: t.reader_bookmarks_empty,
+            ),
+          )
+        else
+          for (final (int i, Bookmark bookmark) in _bookmarks.indexed)
+            Padding(
+              padding: EdgeInsets.only(bottom: tokens.spacing.gap),
+              child: FushiStaggeredEntrance(
+                index: i + 1,
+                child: _InBookBookmarkRow(
+                  key: ValueKey<String>(
+                    'in_book_bookmark_${bookmark.id ?? bookmark.createdAt.millisecondsSinceEpoch}',
+                  ),
+                  title: _bookmarkTitle(bookmark),
+                  meta: _bookmarkMetaLabel(bookmark, fmt),
+                  onJump: widget.onJumpToBookmark == null
+                      ? null
+                      : () async {
+                          Navigator.of(context).pop();
+                          await widget.onJumpToBookmark?.call(bookmark);
+                        },
+                  onDelete: () => unawaited(_deleteBookmark(bookmark)),
+                ),
+              ),
+            ),
+      ],
+    );
+  }
+
+  String _bookmarkTitle(Bookmark bookmark) {
+    final String? resolved = widget.bookmarkChapterLabel?.call(bookmark);
+    if (resolved != null && resolved.isNotEmpty) return resolved;
+    return bookmark.label.isEmpty ? t.untitled_chapter : bookmark.label;
+  }
+
+  /// 书签行副标题：「第 N/M 页 · 时间」（连续模式没有页码，只报时间）。
+  String _bookmarkMetaLabel(Bookmark bookmark, DateFormat fmt) {
+    final int? page = bookmark.pageInChapter;
+    final int? total = bookmark.totalPagesInChapter;
+    return <String>[
+      if (page != null)
+        t.reader_bookmark_page_label(
+          page: total != null && total > 0 ? '$page/$total' : '$page',
+        ),
+      fmt.format(bookmark.createdAt),
+    ].join(' · ');
+  }
+
   /// 搜索页：书内搜索（结果带上下文）+ 按字数跳转；还没搜过时给一句用法提示。
   Widget _buildNavSearchPage(ThemeData theme) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final bool canSearch = widget.epubBook != null && widget.onSearchJump != null;
+    final bool canSearch =
+        widget.epubBook != null && widget.onSearchJump != null;
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -733,15 +1021,16 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     final double? fraction = cp != null && cp.$2 > 0
         ? (cp.$1 / cp.$2).clamp(0.0, 1.0)
         : rp != null && rp.$2 > 0
-            ? ((rp.$1 + 1) / rp.$2).clamp(0.0, 1.0)
-            : null;
+        ? ((rp.$1 + 1) / rp.$2).clamp(0.0, 1.0)
+        : null;
     final String? chapter = widget.chapterLabel?.trim();
     final NumberFormat count = NumberFormat.decimalPattern();
     // 百分比只出现一个（hero 大数字）；读数行只报位置，不再重复百分比。
     final List<String> readouts = <String>[
       if (rp != null && rp.$2 > 0)
         t.reader_nav_progress_chapter(current: rp.$1 + 1, total: rp.$2),
-      if (pp != null && pp.$2 > 0) t.page_progress(current: pp.$1, total: pp.$2),
+      if (pp != null && pp.$2 > 0)
+        t.page_progress(current: pp.$1, total: pp.$2),
       if (cp != null && cp.$2 > 0)
         t.reader_nav_progress_chars(
           current: count.format(cp.$1),
@@ -772,7 +1061,8 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   late final List<ReaderSettingsTab> _settingsTabs = readerSettingsTabs(
     lyricsMode: widget.lyricsMode,
     listeningEnabled: _listeningEnabled,
-    lyricsAvailable: widget.onToggleLyricsMode != null &&
+    lyricsAvailable:
+        widget.onToggleLyricsMode != null &&
         (widget.controller != null || widget.lyricsMode),
   );
 
@@ -883,23 +1173,23 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     final List<Widget> blocks = switch (tab) {
       ReaderSettingsTab.lyrics => _buildLyricsTabBlocks(context),
       _ => <Widget>[
-          if (tab == ReaderSettingsTab.appearance) ...<Widget>[
-            if (!widget.lyricsMode)
-              Padding(
-                padding: EdgeInsets.only(bottom: tokens.spacing.gap * 2),
-                child: _buildReaderPreview(),
-              ),
-            _buildThemeSelectorSection(),
-          ],
-          // 有声书的播放设置（音量 / 速度 / 延迟 / 插图暂停 / 跳转方式 / 播放条 /
-          // 换音频）置于「有声书」页顶：它们原在有声书面板的「设置」子页签，与本页
-          // 重复入口，2026-10-09 起只留这一处（面板只剩章节）。
-          if (tab == ReaderSettingsTab.listening)
-            _buildAudiobookSettingsSection(Theme.of(context)),
-          _buildReaderTabSchema(tab),
-          if (tab == ReaderSettingsTab.appearance && widget.extractDir != null)
-            _buildBookCssEditorSection(),
+        if (tab == ReaderSettingsTab.appearance) ...<Widget>[
+          if (!widget.lyricsMode)
+            Padding(
+              padding: EdgeInsets.only(bottom: tokens.spacing.gap * 2),
+              child: _buildReaderPreview(),
+            ),
+          _buildThemeSelectorSection(),
         ],
+        // 有声书的播放设置（音量 / 速度 / 延迟 / 插图暂停 / 跳转方式 / 播放条 /
+        // 换音频）置于「有声书」页顶：它们原在有声书面板的「设置」子页签，与本页
+        // 重复入口，2026-10-09 起只留这一处（面板只剩章节）。
+        if (tab == ReaderSettingsTab.listening)
+          _buildAudiobookSettingsSection(Theme.of(context)),
+        _buildReaderTabSchema(tab),
+        if (tab == ReaderSettingsTab.appearance && widget.extractDir != null)
+          _buildBookCssEditorSection(),
+      ],
     };
     return FushiEntranceScope(
       child: Column(
@@ -992,16 +1282,30 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         titlePlacement: SettingsSectionTitlePlacement.inside,
         collapsible: true,
         initiallyExpanded: false,
-        children: <Widget>[
-          _lyricsVerticalRow(),
-          ..._lyricsMarginRows(),
-        ],
+        children: <Widget>[_lyricsVerticalRow(), ..._lyricsMarginRows()],
       ),
       AdaptiveSettingsSection(
         key: const ValueKey<String>('reader_panel_lyrics_listening'),
         title: t.reader_panel_lyrics_section_listening,
         children: <Widget>[_lyricsBlurRow()],
       ),
+      if (widget.onOpenLyricsControlLayout != null)
+        AdaptiveSettingsSection(
+          children: <Widget>[
+            AdaptiveSettingsNavigationRow(
+              key: const ValueKey<String>('reader_lyrics_control_layout'),
+              title: t.lyrics_control_layout,
+              subtitle: t.lyrics_control_layout_hint,
+              icon: FushiIcons.dashboardCustomize,
+              showIcon: true,
+              onTap: () {
+                // 先关设置面板再开编辑器：编辑器是同一外壳的侧板，叠两层没意义。
+                Navigator.of(context).pop();
+                widget.onOpenLyricsControlLayout!();
+              },
+            ),
+          ],
+        ),
     ];
   }
 
@@ -1281,8 +1585,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   /// 可选「编辑书籍 CSS」行。窄窗 push 子页与宽窗右 pane 共用（经
   /// [_subPageContent] 的 'layout' 分支）。
   Widget _buildLayoutDetail() {
-    final Widget layoutContent =
-        _buildReaderGroupContent(ReaderGroup.layout, t.section_layout);
+    final Widget layoutContent = _buildReaderGroupContent(
+      ReaderGroup.layout,
+      t.section_layout,
+    );
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1337,12 +1643,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     if (rp != null && rp.$2 > 0) {
       final int displayIdx = rp.$1 + 1;
       final double pct = (displayIdx / rp.$2) * 100;
-      lines.add(t.chapter_progress(
-        idx: displayIdx,
-        total: rp.$2,
-        suffix: '',
-        pct: pct.toStringAsFixed(1),
-      ));
+      lines.add(
+        t.chapter_progress(
+          idx: displayIdx,
+          total: rp.$2,
+          suffix: '',
+          pct: pct.toStringAsFixed(1),
+        ),
+      );
     }
 
     final (int, int)? pp = widget.pageProgress;
@@ -1366,11 +1674,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           t.reading_progress,
           padding: EdgeInsets.only(bottom: tokens.spacing.gap),
         ),
-        if (hasTitle)
-          Text(
-            rawTitle,
-            style: theme.textTheme.titleSmall,
-          ),
+        if (hasTitle) Text(rawTitle, style: theme.textTheme.titleSmall),
         if (hasChapter)
           Text(
             rawChapter,
@@ -1460,7 +1764,8 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
 
   Widget _buildSearchSection(ThemeData theme) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final bool navPanel = widget.presentation ==
+    final bool navPanel =
+        widget.presentation ==
         ReaderQuickSettingsPresentation.sideSheetNavigation;
     final bool glass = isGlassDesign(context);
     return Column(
@@ -1502,8 +1807,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                     ? SizedBox(
                         width: 22,
                         height: 22,
-                        child:
-                            adaptiveIndicator(context: context, strokeWidth: 2),
+                        child: adaptiveIndicator(
+                          context: context,
+                          strokeWidth: 2,
+                        ),
                       )
                     : FushiIconButton(
                         icon: FushiIcons.forward,
@@ -1561,8 +1868,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                 final String chapterLabel = tocRow != null
                     ? toc[tocRow].label
                     : t.go_to_chapter(n: rawIdx + 1);
-                final int matchEnd =
-                    (r.matchStart + query.length).clamp(0, r.context.length);
+                final int matchEnd = (r.matchStart + query.length).clamp(
+                  0,
+                  r.context.length,
+                );
                 return FushiStaggeredEntrance(
                   index: i,
                   child: _InBookSearchResultRow(
@@ -1593,10 +1902,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                   ),
                 ),
               ),
-              FushiTextButton(
-                onPressed: _doSearch,
-                child: Text(t.retry),
-              ),
+              FushiTextButton(onPressed: _doSearch, child: Text(t.retry)),
             ],
           ),
         ] else if (!_isSearching &&
@@ -1616,7 +1922,8 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     final int? total = widget.charProgress?.$2;
     final bool hasProgress = current != null && total != null && total > 0;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final bool navPanel = widget.presentation ==
+    final bool navPanel =
+        widget.presentation ==
         ReaderQuickSettingsPresentation.sideSheetNavigation;
     final NumberFormat count = NumberFormat.decimalPattern();
 
@@ -1792,8 +2099,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
               padding: EdgeInsets.all(tokens.spacing.rowHorizontal),
               child: Text(
                 t.reader_volume_peek_failed,
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.error),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.error,
+                ),
               ),
             ),
           );
@@ -1818,8 +2126,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
             rows.add(
               _InBookTocRow(
                 entry: toc[i],
-                onTap:
-                    toc[i].isHeader ? null : () => unawaited(jump(toc[i].index)),
+                onTap: toc[i].isHeader
+                    ? null
+                    : () => unawaited(jump(toc[i].index)),
               ),
             );
           }
@@ -1856,8 +2165,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     // 层级与折叠（[readerTocHierarchy]）：旧口径 depth >= 2 与真实 EPUB 压平后
     // 只剩的 `parent` 链两套来源取其一；子项挂在父项下，任一祖先未展开则不画。
     // 当前章所在的祖先链自动展开。
-    final ({List<int> levels, List<int> parents}) tree =
-        readerTocHierarchy(toc);
+    final ({List<int> levels, List<int> parents}) tree = readerTocHierarchy(
+      toc,
+    );
     final Set<int> autoExpanded = <int>{};
     if (currentRow != null) {
       for (int p = tree.parents[currentRow]; p >= 0; p = tree.parents[p]) {
@@ -1892,34 +2202,31 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
             state: currentRow == null
                 ? ReaderTocRowState.unread
                 : i == currentRow
-                    ? ReaderTocRowState.current
-                    : i < currentRow
-                        ? ReaderTocRowState.read
-                        : ReaderTocRowState.unread,
+                ? ReaderTocRowState.current
+                : i < currentRow
+                ? ReaderTocRowState.read
+                : ReaderTocRowState.unread,
             foldable: hasFoldableChildren(i),
             expanded: hasFoldableChildren(i) && isExpanded(i),
             onToggleExpanded: hasFoldableChildren(i)
                 ? () => setState(() {
-                      final String label = toc[i].label;
-                      // 当前章所在的父项默认展开；收起它记进 _collapsedTocParents，
-                      // 否则下次 build 又被自动展开。
-                      if (isExpanded(i)) {
-                        _expandedTocParents.remove(label);
-                        _collapsedTocParents.add(label);
-                      } else {
-                        _expandedTocParents.add(label);
-                        _collapsedTocParents.remove(label);
-                      }
-                    })
+                    final String label = toc[i].label;
+                    // 当前章所在的父项默认展开；收起它记进 _collapsedTocParents，
+                    // 否则下次 build 又被自动展开。
+                    if (isExpanded(i)) {
+                      _expandedTocParents.remove(label);
+                      _collapsedTocParents.add(label);
+                    } else {
+                      _expandedTocParents.add(label);
+                      _collapsedTocParents.remove(label);
+                    }
+                  })
                 : null,
             onTap: toc[i].isHeader
                 ? null
                 : () async {
                     Navigator.of(context).pop();
-                    await widget.onJumpSection(
-                      toc[i].index,
-                      toc[i].fragment,
-                    );
+                    await widget.onJumpSection(toc[i].index, toc[i].fragment);
                   },
           ),
     ];
@@ -2071,12 +2378,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       title: t.skip_action,
       icon: FushiIcons.skipNext,
       options: _skipActionOptions
-          .map((s) => AdaptiveSettingsPickerOption<int>(
-                value: s,
-                label: s == 0
-                    ? t.skip_action_sentence
-                    : t.skip_action_seconds(n: s),
-              ))
+          .map(
+            (s) => AdaptiveSettingsPickerOption<int>(
+              value: s,
+              label: s == 0
+                  ? t.skip_action_sentence
+                  : t.skip_action_seconds(n: s),
+            ),
+          )
           .toList(),
       selected: current,
       onChanged: (int value) {
@@ -2096,11 +2405,13 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           icon: FushiIcons.image,
           controlBelow: true,
           segments: _imagePauseOptions
-              .map((s) => ButtonSegment<int>(
-                    value: s,
-                    label: Text(s == 0 ? t.image_pause_off : '${s}s'),
-                    tooltip: s == 0 ? t.image_pause_off : '${s}s',
-                  ))
+              .map(
+                (s) => ButtonSegment<int>(
+                  value: s,
+                  label: Text(s == 0 ? t.image_pause_off : '${s}s'),
+                  tooltip: s == 0 ? t.image_pause_off : '${s}s',
+                ),
+              )
               .toList(),
           selected: sec,
           onChanged: ctrl.setImagePauseSec,
@@ -2119,6 +2430,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       children: [
         AdaptiveSettingsSwitchRow(
           title: t.show_media_notification,
+          subtitle: t.show_media_notification_hint,
           value: _localShowMediaNotification,
           onChanged: (_) {
             widget.onToggleMediaNotification?.call();
@@ -2245,9 +2557,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   Widget _buildLyricsMarginSection() {
     return AdaptiveSettingsSection(
       children: [
-        AdaptiveSettingsRow(
-          title: t.lyrics_font_size_hint,
-        ),
+        AdaptiveSettingsRow(title: t.lyrics_font_size_hint),
         _lyricsVerticalRow(),
         _lyricsBlurRow(),
         _lyricsFontSizeRow(),
@@ -2336,11 +2646,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         _src.setLyricsMarginBottom,
       ),
       margin(t.margin_left, _src.lyricsMarginLeft, _src.setLyricsMarginLeft),
-      margin(
-        t.margin_right,
-        _src.lyricsMarginRight,
-        _src.setLyricsMarginRight,
-      ),
+      margin(t.margin_right, _src.lyricsMarginRight, _src.setLyricsMarginRight),
     ];
   }
 
@@ -2384,29 +2690,29 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           ? LayoutBuilder(
               builder:
                   (BuildContext layoutContext, BoxConstraints constraints) {
-                final double pickerWidth = constraints.maxWidth.clamp(
-                  0.0,
-                  MediaQuery.of(layoutContext).size.width - 64,
-                );
-                return ColorPicker(
-                  pickerColor: current,
-                  onColorChanged: (Color c) {
-                    // 强制不透明（也保证非哨兵 0）。
-                    _src.setLyricsHighlightColor(
-                      0xFF000000 | (c.toARGB32() & 0xFFFFFF),
+                    final double pickerWidth = constraints.maxWidth.clamp(
+                      0.0,
+                      MediaQuery.of(layoutContext).size.width - 64,
                     );
-                    setState(() {});
-                    widget.onStyleChanged?.call();
+                    return ColorPicker(
+                      pickerColor: current,
+                      onColorChanged: (Color c) {
+                        // 强制不透明（也保证非哨兵 0）。
+                        _src.setLyricsHighlightColor(
+                          0xFF000000 | (c.toARGB32() & 0xFFFFFF),
+                        );
+                        setState(() {});
+                        widget.onStyleChanged?.call();
+                      },
+                      portraitOnly: true,
+                      colorPickerWidth: pickerWidth,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: false,
+                      displayThumbColor: true,
+                      hexInputBar: true,
+                      labelTypes: const <ColorLabelType>[],
+                    );
                   },
-                  portraitOnly: true,
-                  colorPickerWidth: pickerWidth,
-                  pickerAreaHeightPercent: 0.5,
-                  enableAlpha: false,
-                  displayThumbColor: true,
-                  hexInputBar: true,
-                  labelTypes: const <ColorLabelType>[],
-                );
-              },
             )
           : null,
     );
@@ -2426,8 +2732,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       onChanged: (bool enabled) {
         if (enabled) {
           // 开启自定义：种一个不透明的初始色（用当前主题文字色），避免落哨兵 0。
-          final Color seed =
-              Color(0xFF000000 | (themeFallback.value & 0xFFFFFF));
+          final Color seed = Color(
+            0xFF000000 | (themeFallback.value & 0xFFFFFF),
+          );
           _src.setLyricsTextColor(seed.value);
         } else {
           _src.clearLyricsTextColor();
@@ -2449,29 +2756,30 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           ? LayoutBuilder(
               builder:
                   (BuildContext layoutContext, BoxConstraints constraints) {
-                final double pickerWidth = constraints.maxWidth.clamp(
-                  0.0,
-                  MediaQuery.of(layoutContext).size.width - 64,
-                );
-                return ColorPicker(
-                  pickerColor: current,
-                  onColorChanged: (Color c) {
-                    // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
-                    final Color opaque =
-                        Color(0xFF000000 | (c.value & 0xFFFFFF));
-                    _src.setLyricsTextColor(opaque.value);
-                    setState(() {});
-                    widget.onStyleChanged?.call();
+                    final double pickerWidth = constraints.maxWidth.clamp(
+                      0.0,
+                      MediaQuery.of(layoutContext).size.width - 64,
+                    );
+                    return ColorPicker(
+                      pickerColor: current,
+                      onColorChanged: (Color c) {
+                        // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
+                        final Color opaque = Color(
+                          0xFF000000 | (c.value & 0xFFFFFF),
+                        );
+                        _src.setLyricsTextColor(opaque.value);
+                        setState(() {});
+                        widget.onStyleChanged?.call();
+                      },
+                      portraitOnly: true,
+                      colorPickerWidth: pickerWidth,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: false,
+                      displayThumbColor: true,
+                      hexInputBar: true,
+                      labelTypes: const <ColorLabelType>[],
+                    );
                   },
-                  portraitOnly: true,
-                  colorPickerWidth: pickerWidth,
-                  pickerAreaHeightPercent: 0.5,
-                  enableAlpha: false,
-                  displayThumbColor: true,
-                  hexInputBar: true,
-                  labelTypes: const <ColorLabelType>[],
-                );
-              },
             )
           : null,
     );
@@ -2542,7 +2850,8 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   Widget _buildAudioHighlightTextColorRow(BuildContext context) {
     final int stored = _src.audioHighlightTextColor;
     final bool custom = stored != 0;
-    final Color seedFallback = widget.appModel.audioHighlightColor ??
+    final Color seedFallback =
+        widget.appModel.audioHighlightColor ??
         Theme.of(context).colorScheme.primary;
     final Color current = custom ? Color(stored) : seedFallback;
     return AdaptiveSettingsSwitchActionRow(
@@ -2573,28 +2882,28 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           ? LayoutBuilder(
               builder:
                   (BuildContext layoutContext, BoxConstraints constraints) {
-                final double pickerWidth = constraints.maxWidth.clamp(
-                  0.0,
-                  MediaQuery.of(layoutContext).size.width - 64,
-                );
-                return ColorPicker(
-                  pickerColor: current,
-                  onColorChanged: (Color c) {
-                    _src.setAudioHighlightTextColor(
-                      0xFF000000 | (c.toARGB32() & 0xFFFFFF),
+                    final double pickerWidth = constraints.maxWidth.clamp(
+                      0.0,
+                      MediaQuery.of(layoutContext).size.width - 64,
                     );
-                    setState(() {});
-                    widget.onStyleChanged?.call();
+                    return ColorPicker(
+                      pickerColor: current,
+                      onColorChanged: (Color c) {
+                        _src.setAudioHighlightTextColor(
+                          0xFF000000 | (c.toARGB32() & 0xFFFFFF),
+                        );
+                        setState(() {});
+                        widget.onStyleChanged?.call();
+                      },
+                      portraitOnly: true,
+                      colorPickerWidth: pickerWidth,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: false,
+                      displayThumbColor: true,
+                      hexInputBar: true,
+                      labelTypes: const <ColorLabelType>[],
+                    );
                   },
-                  portraitOnly: true,
-                  colorPickerWidth: pickerWidth,
-                  pickerAreaHeightPercent: 0.5,
-                  enableAlpha: false,
-                  displayThumbColor: true,
-                  hexInputBar: true,
-                  labelTypes: const <ColorLabelType>[],
-                );
-              },
             )
           : null,
     );
@@ -2949,12 +3258,44 @@ class _InBookFavoriteRow extends StatelessWidget {
   }
 }
 
+/// 书签行：引文卡（正文 = 章节名，元信息 = 页码 · 时间）；整卡点击跳转，右下删除。
+class _InBookBookmarkRow extends StatelessWidget {
+  const _InBookBookmarkRow({
+    required this.title,
+    required this.meta,
+    required this.onDelete,
+    this.onJump,
+    super.key,
+  });
+
+  final String title;
+  final String meta;
+  final VoidCallback? onJump;
+  final VoidCallback onDelete;
+
+  @override
+  Widget build(BuildContext context) {
+    return ReaderQuoteCard(
+      quote: Text(title, maxLines: 2, overflow: TextOverflow.ellipsis),
+      meta: meta,
+      onTap: onJump,
+      focusIdPrefix: 'reader-bookmark',
+      actions: <Widget>[
+        _InBookIconButton(
+          materialIcon: FushiIcons.delete,
+          cupertinoIcon: CupertinoIcons.delete,
+          tooltip: t.reader_bookmark_delete,
+          destructive: true,
+          onPressed: onDelete,
+        ),
+      ],
+    );
+  }
+}
+
 /// 2026-10 体验优化：收藏句删除后的撤销窗口行——原文划线 + 「撤销」按钮。
 class _InBookFavoriteUndoRow extends StatelessWidget {
-  const _InBookFavoriteUndoRow({
-    required this.favorite,
-    required this.onUndo,
-  });
+  const _InBookFavoriteUndoRow({required this.favorite, required this.onUndo});
 
   final FavoriteSentence favorite;
   final VoidCallback onUndo;
@@ -2983,10 +3324,7 @@ class _InBookFavoriteUndoRow extends StatelessWidget {
             ),
           ),
           SizedBox(width: tokens.spacing.gap),
-          FushiTextButton(
-            onPressed: onUndo,
-            child: Text(t.undo),
-          ),
+          FushiTextButton(onPressed: onUndo, child: Text(t.undo)),
         ],
       ),
     );
@@ -3013,11 +3351,11 @@ class _InBookIconButton extends StatelessWidget {
     final bool cupertino = isCupertinoPlatform(context);
     final Color color = destructive
         ? (cupertino
-            ? CupertinoColors.destructiveRed.resolveFrom(context)
-            : Theme.of(context).colorScheme.error)
+              ? CupertinoColors.destructiveRed.resolveFrom(context)
+              : Theme.of(context).colorScheme.error)
         : (cupertino
-            ? CupertinoTheme.of(context).primaryColor
-            : Theme.of(context).colorScheme.onSurfaceVariant);
+              ? CupertinoTheme.of(context).primaryColor
+              : Theme.of(context).colorScheme.onSurfaceVariant);
 
     if (cupertino) {
       return CupertinoButton(
@@ -3169,3 +3507,6 @@ class AudiobookVolumeRow extends StatelessWidget {
 
 /// 导航侧板的分页（目录 / 收藏 / 搜索）。
 enum _ReaderNavTab { contents, favorites, search }
+
+/// 导航面板「收藏」页的分段：书签 / 收藏句子。
+enum _ReaderFavoritesSegment { bookmarks, favorites }

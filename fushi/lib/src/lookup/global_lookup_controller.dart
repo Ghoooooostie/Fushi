@@ -17,6 +17,7 @@ import 'dart:math' as math;
 
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart' hide ModifierKey;
+import 'package:fushi/src/anki/mine_failure_notice.dart';
 import 'package:fushi/src/lookup/overlay_auto_read.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
 import 'package:fushi/src/lookup/global_lookup_channel.dart';
@@ -452,7 +453,29 @@ class GlobalLookupController {
             triggerSelectionLookup(source: 'hotkey'),
         // 相反的取舍：不取任何文本，把主窗唤到前台并落在查词页上。
         ShortcutAction.globalExternalOpenLookupPage: openLookupPageInMainWindow,
+        // 截屏识字：执行体在悬浮球宿主（与桌面应用外球的同名按钮共用）。
+        ShortcutAction.globalExternalScreenOcr: triggerScreenOcr,
       };
+
+  /// 桌面截屏识字的执行体，由常驻的 `AppFloatingBallHost` 装上 / 卸下（截屏、冻结
+  /// 层、点字查词的整套状态都在那边，与应用外悬浮球的「截屏识字」按钮同一条路径）。
+  /// 本控制器只负责把 [ShortcutAction.globalExternalScreenOcr] 的 OS 热键接过去。
+  Future<void> Function()? screenOcrHandler;
+
+  /// [ShortcutAction.globalExternalScreenOcr] 的执行体。宿主还没挂上（不该发生：
+  /// 它挂在 app 根上）时记一条错误日志而不是静默吞键。
+  Future<void> triggerScreenOcr() async {
+    final Future<void> Function()? handler = screenOcrHandler;
+    if (handler == null) {
+      ErrorLogService.instance.log(
+        'GlobalLookupController.screenOcr',
+        StateError('screen OCR hotkey pressed but no host is mounted'),
+        StackTrace.current,
+      );
+      return;
+    }
+    await handler();
+  }
 
   /// TODO-1066 — (un)registers the OS-level hotkeys from the current
   /// [_osHotKeyActions] bindings in the registry. Unregisters everything
@@ -1085,6 +1108,12 @@ class GlobalLookupController {
     final GlobalLookupRoute route = GlobalLookupChannel.currentRoute;
     return route == _activeRoute && GlobalLookupChannel.isRouteValid(route);
   }
+
+  /// BUG-3652 续：制卡回包时「发起它的那张卡还在不在」——[origin] 是派发时捕获的
+  /// 查词 route；真正关窗（[_onOverlayHidden]）与下一次查词（[_activateRoute]）都会
+  /// 作废它，所以「仍是当前 route 且有效」就是这张卡还在屏上。
+  MineOriginOnScreen _mineOriginProbe(GlobalLookupRoute origin) =>
+      () => origin == _activeRoute && GlobalLookupChannel.isRouteValid(origin);
 
   void _notifyRevealed(
     int width,
@@ -1873,6 +1902,9 @@ class GlobalLookupController {
       // sentence）。与句子横幅同一 `_currentSentence`（嵌套子查词无句 → ''）。
       sentenceContext: _currentSentence,
       miningHandler: _currentMiningHandler,
+      // BUG-3652 续：本消息在发起它的查词 route 的 zone 里派发；回包时这张卡还在屏上
+      // ⇔ 那条 route 仍是当前 route 且未作废（关窗、换词都会作废它）。
+      isOriginOnScreen: _mineOriginProbe(GlobalLookupChannel.currentRoute),
     )) {
       return;
     }

@@ -28,6 +28,8 @@ String _moduleItemId(ModuleId module) => switch (module) {
   ModuleId.books => 'system.module_books',
   ModuleId.manga => 'system.module_manga',
   ModuleId.video => 'system.module_video',
+  // 2026-10 新增（音乐模块），跟随同一前缀。
+  ModuleId.music => 'system.module_music',
   ModuleId.games => 'system.module_games',
   ModuleId.browse => 'system.module_downloads',
   ModuleId.lookup => 'system.module_lookup',
@@ -79,6 +81,7 @@ String _moduleItemId(ModuleId module) => switch (module) {
     ModuleId.books ||
     ModuleId.manga ||
     ModuleId.video ||
+    ModuleId.music ||
     ModuleId.games ||
     ModuleId.browse ||
     ModuleId.lookup ||
@@ -172,6 +175,10 @@ SettingsCustomItem _navModuleOrderItem() => SettingsCustomItem(
     settingsContext: settingsContext,
     modules: _orderedNavModules(settingsContext),
     identityOf: moduleNavIdentity,
+    settingsIdentity: (
+      label: homeNavItemFor(HomeTab.settings).label,
+      icon: homeNavItemFor(HomeTab.settings).icon,
+    ),
     hintOf: moduleSwitchHint,
     onEnabledChanged: (ModuleId module, bool enabled) =>
         _applyModuleEnabled(settingsContext, module, enabled),
@@ -509,7 +516,20 @@ SettingsDestination buildAppearanceDestination() {
                 value: AdaptiveNavBarStyle.pager,
                 label: t.home_nav_bar_style_pager,
               ),
+              SettingsSegmentOption<AdaptiveNavBarStyle>(
+                value: AdaptiveNavBarStyle.dial,
+                label: t.home_nav_bar_style_dial,
+              ),
+              SettingsSegmentOption<AdaptiveNavBarStyle>(
+                value: AdaptiveNavBarStyle.drum,
+                label: t.home_nav_bar_style_drum,
+              ),
+              SettingsSegmentOption<AdaptiveNavBarStyle>(
+                value: AdaptiveNavBarStyle.modeStrip,
+                label: t.home_nav_bar_style_mode_strip,
+              ),
             ],
+            dropdown: true,
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.navBarStyle,
             onChanged:

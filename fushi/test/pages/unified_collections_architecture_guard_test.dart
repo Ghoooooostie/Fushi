@@ -45,13 +45,26 @@ void main() {
   // 删除：v38 台阶本身不在了，低于门槛的库直接拒绝打开。）
 
   test('备份合并携带 media_collections（Phase 5a：合集随备份存活）', () {
-    final int mergeFn = mergeSrc.indexOf('Future<void> merge() async {');
-    expect(mergeFn, isNonNegative);
-    final int mergeEnd = mergeSrc.indexOf('\n  }', mergeFn);
-    expect(mergeEnd, isNonNegative);
-    final String body = mergeSrc.substring(mergeFn, mergeEnd);
+    String bodyOf(String signature) {
+      final int start = mergeSrc.indexOf(signature);
+      expect(start, isNonNegative, reason: '找不到 $signature');
+      final int end = mergeSrc.indexOf('\n  }', start);
+      expect(end, isNonNegative);
+      return mergeSrc.substring(start, end);
+    }
+
+    // merge() = 主库事务（_mergeMainDatabase）+ srs.db（另一个文件，不能进主库事务）。
     expect(
-      body.contains('await _mergeMediaCollections();'),
+      bodyOf(
+        'Future<void> merge() async {',
+      ).contains('await _mergeMainDatabase();'),
+      isTrue,
+      reason: 'merge() 必须执行主库合并 _mergeMainDatabase()',
+    );
+    expect(
+      bodyOf(
+        'Future<void> _mergeMainDatabase() async {',
+      ).contains('await _mergeMediaCollections();'),
       isTrue,
       reason: 'merge() 必须合并 media_collections，否则备份恢复后分组全丢',
     );
@@ -501,7 +514,7 @@ void main() {
 
     // ② 占位卡混排进主网格：远端卡渲染入口从主散卡路径调用（书=_ShelfBookSlot.remote
     // → _buildRemoteBookCard；视频=_VideoSlot union 混入 _groupVideos → _buildRemoteVideoCard），
-    // 且带云角标 ☁。
+    // 且带「☁ 未下载」（2026-10-25 起在封面下的副行，不再压封面角标）。
     expect(
       historySrc.contains('slot.remote'),
       isTrue,
@@ -509,9 +522,11 @@ void main() {
     );
     expect(remotePartSrc.contains('_buildRemoteBookCard'), isTrue);
     expect(
-      remotePartSrc.contains('remote_book_cloud_badge'),
+      remotePartSrc.contains('_cloud_badge_') &&
+          remotePartSrc.contains('icon: FushiIcons.cloud,') &&
+          remotePartSrc.contains('shelf_card_meta_not_downloaded'),
       isTrue,
-      reason: '远端书占位卡必须带云角标 ☁',
+      reason: '远端书占位卡必须标出「☁ 未下载」',
     );
     // 断言的是「同一次分组调用同时吃本地与远端两路」，不是某一串写法：形参名与
     // 换行都可能随重构变（曾写死 `_groupVideos(books, remoteVideos` 整串，一次
@@ -755,10 +770,24 @@ void main() {
       isTrue,
       reason: 'BUG-790：memberCount 必须 = group.items.length（本地+远端占位同源）',
     );
+    // 2026-10-25 材质定版后封面上没有集数角标了：成员数进副行（「继续看 第n集
+    // · N 集」/「已看完 x/N」，N = [_collectionProgress] 的 group.items.length）
+    // 与进度条分母（memberCount）。
     expect(
-      cardSrc.contains('_buildPlaylistBadge(memberCount)'),
+      cardSrc.contains('progress.completed / memberCount'),
       isTrue,
-      reason: 'BUG-790：集数角标必须喂 memberCount',
+      reason: 'BUG-790：合集进度分母必须是 memberCount（本地 + 远端占位）',
+    );
+    final int progressFn = homeSrc.indexOf(
+      ' _collectionProgress(\n    CollectionGroup',
+    );
+    expect(progressFn, isNonNegative);
+    expect(
+      homeSrc
+          .substring(progressFn, progressFn + 400)
+          .contains('final int total = group.items.length;'),
+      isTrue,
+      reason: 'BUG-790：副行里的集数必须 = group.items.length',
     );
   });
 }

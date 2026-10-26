@@ -375,10 +375,19 @@ html {
     padding-top: 0;
 }
 
+/* 词头 + 按钮组放不下一行时整组换到下一行（仍右对齐，.header-buttons margin-left:auto），
+   不去挤压词头。BUG-3320 当年只把这套换行写在 html.fushi-m3e 层，墨水屏与 Apple 设计系统
+   走基础层、行不换行，窄弹窗里词头被压进 .expression-scroll 裁掉右半截（BUG-3782）；
+   换行所需的三件（本条 wrap、左簇 min-content 下限、词头 100cqw 封顶）都放在基础层。
+   container-type：.expression-scroll 的 100cqw 按词头行自身宽度解析；词条宽度由弹窗 /
+   网格列决定，不靠内容撑。 */
 .entry-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    row-gap: 4px;
     padding-top: 4px;
+    container-type: inline-size;
 }
 
 /* TODO-1325 #5 part1: 多词条焦点导航——当前词条(.entry-current)在其标题行左侧画一枚
@@ -448,9 +457,18 @@ html {
    全部宽度（flex 1 1 0），簇内 flex-wrap：元数据列至少要 14em 才肯排在词头右边，
    放不下就整列换到词头下方——按真实内容宽度自适应，窄弹窗 / 长词头自动回到上下排。
    词头不伸展（长词头仍由 .expression-scroll 横向滚动）。 */
+/* 反馈 ICrzgr8FsV（BUG-3320）：左簇 flex-basis 是 0，换行判定看到的左簇宽永远是 0，
+   「词头 + 按钮组放不下就整组换行」从来不会触发——按钮组硬挤在同一行，把词头压窄、
+   裁掉。给左簇一个「词头本身放得下」的下限（min-content：词头 nowrap 的整宽、元数据列
+   能折到的最窄宽），放不下时按钮组整组换到下一行；放得下时左簇照旧 flex-grow 吃满剩余
+   宽度。自适应优先级：先把元数据列换到词头下方，再把按钮组换到下一行，词头本身永远不被
+   挤压。左簇的下限被 .expression-scroll 的 100cqw 封顶在整行宽，超长词头不会把卡片撑出
+   横向溢出（cqw 按 .entry-header 自己的宽度解析，不成环）。不认容器单位的旧引擎（iOS 15
+   的 WKWebView）没有这个封顶：比整行还宽的注音词头会撑出卡片横向溢出，换行本身照常生效。
+   不包 @supports：generate-content-css.mjs 不处理嵌套 at-rule。 */
 .entry-header-main {
     flex: 1 1 0;
-    min-width: 0;
+    min-width: min-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -460,6 +478,8 @@ html {
 
 .entry-header-main > .expression-scroll {
     flex: 0 1 auto;
+    /* 长词头封顶在整行宽（见上方 .entry-header-main），超出部分仍横向滚动。 */
+    max-width: 100cqw;
 }
 
 /* 行距沿用各 section 自己的 margin-top（频率→音调那条 BUG-178 的 8px 照旧生效，
@@ -474,6 +494,23 @@ html {
 
 .entry-header-meta > :first-child {
     margin-top: 0;
+}
+
+/* 用户 10-23：元数据列换到词头下方时铺满整行（含按钮组下方），不再只占左簇那一截。
+   .meta-stacked 由 popup.js updateEntryHeaderMetaLayout 按「词头 + 按钮组放得下、再加
+   14em 元数据列放不下」挂上：左簇拆成 contents，词头与按钮组同一行，元数据列独占下一行。 */
+.entry-header.meta-stacked {
+    flex-wrap: wrap;
+    row-gap: 4px;
+}
+
+.entry-header.meta-stacked > .entry-header-main {
+    display: contents;
+}
+
+.entry-header.meta-stacked .entry-header-meta {
+    order: 1;
+    flex: 1 1 100%;
 }
 
 .expression {
@@ -879,6 +916,14 @@ html.global-lookup .mine-button:not(:disabled) {
     transition: opacity 0.18s ease;
 }
 
+/* 制卡失败原因是一整句（宿主经 reply.message 带来）：允许换行，宽度不超出弹窗。
+   短提示仍是一行——只放开换行，宽度按内容。 */
+.inline-hint {
+    max-width: min(300px, calc(100vw - 8px));
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
 .audio-hint.visible,
 .inline-hint.visible,
 .fushi-btn-tip.visible {
@@ -1062,6 +1107,12 @@ html.global-lookup .mine-button:not(:disabled) {
 .entry-tags {
     margin-top: -4px;
     -webkit-user-select: none;
+}
+
+/* 词形标签收进词头元数据列（用户 10-23）时跟在频率 / 音调后面：不再往上拽贴词头，
+   与列内其它 section 同一行距（2px，tag-row 自带 3px）。列首照旧由 :first-child 归零。 */
+.entry-header-meta > .entry-tags:not(:first-child) {
+    margin-top: 2px;
 }
 
 .tag-row {
@@ -2664,6 +2715,120 @@ html.fushi-glass-host.fushi-apple .srs-status-badge.srs-status-suspended {
     color: var(--text-color);
 }
 
+/* 「我库里的例句」（popup.js createLibrarySentencesSection）：词条末尾的一块，按模块分组。
+   M3E：标题用 label 级小字 + 次要色，每条例句是整行可点的低调 tonal 行（hover / focus 状态层
+   + 按下轻缩），命中词用主色淡染高亮。进场：淡入 + 上移 6px（短时长，对齐 FushiMotion.short），
+   减弱动态效果时 JS 不挂 entering；墨水屏由 html.eink 通配压平。Apple 设计系统在下面换成
+   系统灰填充。颜色全部走注入的色角色变量。 */
+.library-sentences {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.18s cubic-bezier(0.2, 0, 0, 1), transform 0.18s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.library-sentences.library-sentences-hidden {
+    display: none;
+}
+
+.library-sentences.library-sentences-entering {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.library-sentences-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--md-sys-color-secondary, var(--text-color));
+    opacity: 0.85;
+    margin-bottom: 4px;
+}
+
+.library-sentences-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.library-sentences-group-label {
+    font-size: 11px;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin: 2px 0 0 2px;
+}
+
+.library-sentence {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 32px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 10px;
+    text-align: start;
+    font: inherit;
+    font-size: 0.92em;
+    line-height: 1.45;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.15s ease, transform 0.18s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+.library-sentence:hover,
+.library-sentence:focus-visible {
+    background-color: color-mix(in srgb, var(--md-primary, var(--primary-color)) 10%, transparent);
+}
+
+.library-sentence:focus-visible {
+    box-shadow: 0 0 0 2px var(--md-primary, var(--primary-color));
+}
+
+.library-sentence:active {
+    transform: scale(0.985);
+    background-color: color-mix(in srgb, var(--md-primary, var(--primary-color)) 16%, transparent);
+    transition-duration: 0.09s;
+}
+
+.library-sentence-text {
+    overflow-wrap: anywhere;
+}
+
+.library-sentence-hl {
+    color: inherit;
+    background-color: color-mix(in srgb, var(--md-primary, var(--primary-color)) 22%, transparent);
+    border-radius: 3px;
+    padding: 0 1px;
+}
+
+.library-sentence-source {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+html.fushi-glass-host.fushi-apple .library-sentence:hover,
+html.fushi-glass-host.fushi-apple .library-sentence:focus-visible {
+    background-color: color-mix(in srgb, var(--text-color) 8%, transparent);
+}
+
+html.fushi-glass-host.fushi-apple .library-sentence:active {
+    transform: none;
+    opacity: 0.55;
+}
+
+html.fushi-glass-host.fushi-apple .library-sentence:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-primary, var(--primary-color)) 55%, transparent);
+}
+
 /* =====================================================================
  * BUG-1064 —— 「卡片已在 Anki 中」页内操作面板（app 外裸窗 / 浏览器扩展）。
  *
@@ -3037,35 +3202,15 @@ html.fushi-m3e .entry-header {
     /* 按钮组单钮尺寸：宽屏 40（M3 标准图标按钮），阅读器 / 视频里的窄弹窗收到 32，
        四五颗按钮不至于把词头挤成横向滚动。 */
     --fushi-m3e-action-size: clamp(32px, 9vw, 40px);
-    /* 词头 + 按钮组放不下一行时整组换到下一行（仍右对齐），不去挤压词头。 */
-    flex-wrap: wrap;
+    /* 换行 / 左簇下限 / 词头封顶在基础层（.entry-header / .entry-header-main），这里只加大
+       列距与最小行高。 */
     column-gap: 12px;
-    row-gap: 4px;
     padding-top: 0;
     min-height: 48px;
-    /* 词头盒 inline-size 包含：.expression-scroll 的 100cqw 按词头行自身宽度解析（见下方
-       .entry-header-main 的说明）。词条宽度由弹窗 / 网格列决定，不靠内容撑。 */
-    container-type: inline-size;
 }
 
 html.fushi-m3e .expression-scroll {
     flex: 0 1 auto;
-    /* 长词头封顶在整行宽（见下方 .entry-header-main），超出部分仍横向滚动。 */
-    max-width: 100cqw;
-}
-
-/* 反馈 ICrzgr8FsV（Android 竖排阅读窄弹窗「查词时文字与 ui 重叠」）：左簇 flex-basis 是 0，
-   换行判定看到的左簇宽永远是 0，「词头 + 按钮组放不下就整组换行」从来不会触发——按钮组
-   硬挤在同一行，把词头压到只剩一个字宽，大字与注音画到按钮底下。给左簇一个「词头本身
-   放得下」的下限（min-content：词头 nowrap 的整宽、元数据列能折到的最窄宽），放不下时
-   按钮组整组换到下一行（仍右对齐）；放得下时左簇照旧 flex-grow 吃满剩余宽度。
-   自适应优先级：先把元数据列换到词头下方，再把按钮组换到下一行，词头本身永远不被挤压。
-   左簇的下限被 .expression-scroll 的 100cqw 封顶在整行宽，超长词头不会把卡片撑出横向溢出
-   （cqw 按 .entry-header 自己的宽度解析，不成环）。不认容器单位的旧引擎（iOS 15 的
-   WKWebView）没有这个封顶：比整行还宽的注音词头会撑出卡片横向溢出，换行本身照常生效。
-   不包 @supports：generate-content-css.mjs 不处理嵌套 at-rule。 */
-html.fushi-m3e .entry-header-main {
-    min-width: min-content;
 }
 
 /* Display small（36）；窄弹窗按视口宽收到 28，长词头不至于一上来就横向滚动。注音
@@ -3194,6 +3339,10 @@ html.fushi-m3e .entry-current .entry-header::before {
    行之间 8。chip 一律 inline-flex 垂直居中——不再靠各自的 line-height / padding 凑高度，
    所以音调行的「N 本辞典」与读音 [n] 落在同一条中线上。 */
 html.fushi-m3e .entry-tags {
+    margin-top: 8px;
+}
+
+html.fushi-m3e .entry-header-meta > .entry-tags:not(:first-child) {
     margin-top: 8px;
 }
 

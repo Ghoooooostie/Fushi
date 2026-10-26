@@ -157,6 +157,16 @@ class Bookmarks extends Table {
   TextColumn get bookTitle => text().nullable()();
   IntColumn get pageInChapter => integer().nullable()();
   IntColumn get totalPagesInChapter => integer().nullable()();
+
+  /// v127：书签所在页首字符的章内精确字符偏移（与 [ReaderPositions.charOffset]
+  /// 同计量）。存字符而不是页码：改字号 / 边距后页码会变，字符位置不变。-1 = 无
+  /// 精确偏移（v127 前的旧书签 / 拿不到页范围），跳转回退 [normCharOffset] 分数。
+  /// 漫画 / PDF 书签按页记，恒 -1。
+  IntColumn get charOffset => integer().withDefault(const Constant(-1))();
+
+  /// v127：在线漫画书签所在章的稳定键（`MangaChapterStates.chapterKey`，Mihon 下是
+  /// 章 url）。章下标会随源更新漂移，按键找章；本地卷 / EPUB / PDF 为 null。
+  TextColumn get chapterKey => text().nullable()();
 }
 
 // ── reading_statistics ──────────────────────────────────────────────
@@ -894,21 +904,34 @@ class MinedSentences extends Table {
   TextColumn get glossary => text().withDefault(const Constant(''))();
   TextColumn get sentence => text().withDefault(const Constant(''))();
 
-  /// 跳转/分流来源标识，与 `kFavoriteSentenceSourceBook` / `Video` 等同值（'book' |
-  /// 'video' | 'audiobook' | 'lyrics'）。统计语义（book/video 桶）也由它派生。
+  /// 跳转/分流来源标识，与 `kFavoriteSentenceSource*` 同值（'book' | 'video' |
+  /// 'audiobook' | 'lyrics' | 'game' | 'manga' | 'music'，见 `SentenceSourceKind`）。
   TextColumn get source => text()();
   TextColumn get documentTitle => text().nullable()();
   TextColumn get chapterLabel => text().nullable()();
 
-  /// 定位锚点（与收藏句同构）：书内是 bookKey，视频是 bookUid。
+  /// 出处身份（按 [source] 分域）：书 / 有声书 / 歌词模式 / 漫画是 bookKey，视频是
+  /// bookUid，游戏是 `galgames.id`，音乐是 `music_tracks.track_uid`。
   TextColumn get bookKey => text().nullable()();
+
+  /// 书内章节下标；视频是集下标（单视频恒 0）。
   IntColumn get sectionIndex => integer().nullable()();
 
-  /// 书内是归一化字符偏移；视频来源里复用为 cue 起点 ms（与收藏句一致）。
+  /// **只**表示章内归一化字符偏移（书 / 有声书 / 歌词模式）。v132 前视频来源把它
+  /// 复用成 cue 起点毫秒，v132 迁移已把那批值搬进 [positionMs] 并清空本列。
   IntColumn get normCharOffset => integer().nullable()();
 
-  /// 视频来源里复用为 cue 时长 ms（书内为选区长度）。
+  /// **只**表示选区字符长度（同 [normCharOffset]）。v132 前视频复用为 cue 时长。
   IntColumn get normCharLength => integer().nullable()();
+
+  /// 媒体时间轴上的起点毫秒（视频 / 音乐；v132）。
+  IntColumn get positionMs => integer().nullable()();
+
+  /// 片段时长毫秒（与 [positionMs] 成对；v132）。
+  IntColumn get durationMs => integer().nullable()();
+
+  /// 漫画页码（0 起；v132）。
+  IntColumn get pageIndex => integer().nullable()();
 
   /// AnkiConnect 成功制卡带回的 note id；AnkiDroid 恒 null。
   IntColumn get noteId => integer().nullable()();
@@ -920,7 +943,9 @@ class MinedSentences extends Table {
 /// TODO-817 网络/本地来源库：一个「来源」是一个媒体根（本地文件夹或网络根），
 /// 扫描后产出多本书/视频（[EpubBooks].sourceId / [VideoBooks].sourceId 反向指向）。
 ///
-/// 🔴 凭据红线：[configJson] **绝不裸存明文密码**。本地来源恒 NULL；网络来源（SFTP/
+/// 🔴 凭据红线：[configJson] **绝不裸存明文密码**。本地来源只在 iOS 上带一条安全
+/// 作用域书签（`iosBookmark`，不是凭据，见 `kSourceConfigIosBookmarkKey`），其余
+/// 平台恒 NULL；网络来源（SFTP/
 /// FTP，TODO-1274 已接入）只存**非敏感连接参数** JSON（host/port/username/useTls）；
 /// 密码/私钥经 SourceLibraryCredentialStore 以 base64 单独落 Preferences（键
 /// `media_source_secret_<id>`，按行 id 隐式引用），绝不进入 configJson。
@@ -948,7 +973,8 @@ class MediaSources extends Table {
   TextColumn get rootPath => text()();
 
   /// 非敏感网络连接参数 JSON（host/port/username/useTls）。**绝不裸存明文密码/
-  /// 私钥**（它们在 Preferences 单独 base64 落库）；本地来源恒 NULL。
+  /// 私钥**（它们在 Preferences 单独 base64 落库）；本地来源恒 NULL（iOS 例外：
+  /// 存 `iosBookmark` 安全作用域书签）。
   TextColumn get configJson => text().nullable()();
 
   /// 截图「媒体数」：上次扫描产出的条目数。
@@ -1226,6 +1252,14 @@ class CollectionMemberTombstones extends Table {
   /// 分不清就会把并掉的当成用户拒绝、把成员丢回散条目（schema v124，spec §8.5）。
   BoolColumn get organizeMerged =>
       boolean().withDefault(const Constant(false))();
+
+  /// 这条墓碑知识**进入本库**的毫秒戳（schema v128，BUG-3743 后续）：本机作互联 host 时
+  /// 清单里的 `publishedAt`（成员墓碑）/ `deletedPublishedAt`（合集级哨兵行），对端用
+  /// 「自己的基线 vs 它」判墓碑是不是新闻。只由同步应用端
+  /// （`applyCollectionLocalChanges`）给**新知识**盖戳，已有同键同 [deletedAt] 的行原值
+  /// 保留、一经确定不刷新。NULL = 本机用户亲手移出 / 删除（进库时刻就是 [deletedAt]，
+  /// 对端回退它判）或升级前的存量行。本机自己同步时不读它（本端侧按 [deletedAt] 裁决）。
+  IntColumn get publishedAt => integer().nullable()();
 
   /// 一 (合集, 成员) 一行；合集级哨兵行天然也唯一。
   @override
@@ -3384,186 +3418,6 @@ class MangaReaderOverrides extends Table {
 }
 
 
-// ── SRS（v117，docs/specs/2026-10-14-fushi-srs-design.md）──────────────
-//
-// 同步的只有三种事件：身份记录（srs_entities）、修改记录（srs_field_edits）、复习日志（srs_review_logs）。
-// 卡片行、笔记缓存都是本机可重建的缓存，不同步。事件创建即不可变：同 ID 内容必须相同。
-
-/// 不可变身份记录（牌组 / 笔记类型 / 笔记）。
-@DataClassName('SrsEntityRow')
-class SrsEntities extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-
-  /// deck / notetype / note（SrsEntityKind.wire）。
-  TextColumn get kind => text()();
-
-  /// 规范 JSON（SrsEntityRecord.payload）。
-  TextColumn get payloadJson => text()();
-  IntColumn get createdAt => integer().withDefault(const Constant(0))();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
-/// 修改记录（铁律 H）。只保留同一字段键上没被支配的记录。
-@DataClassName('SrsFieldEditRow')
-class SrsFieldEdits extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-  TextColumn get entityKind => text()();
-  TextColumn get entityId => text()();
-  TextColumn get fieldKey => text()();
-  TextColumn get writerId => text()();
-  IntColumn get seq => integer()();
-
-  /// 完整事件的规范 JSON（含 ctx / 值 / hlc），读回时整条解析，不靠列拼装。
-  TextColumn get json => text()();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
-/// 复习日志（只追加）。[json] 是完整事件内容（含不认识的字段，原样保留）；其余列只为查询。
-@DataClassName('SrsReviewLogRow')
-class SrsReviewLogs extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-  TextColumn get cardId => text()();
-  TextColumn get kind => text()();
-  IntColumn get rating => integer().nullable()();
-  IntColumn get occurredAt => integer()();
-  TextColumn get reviewType => text()();
-  TextColumn get origin => text()();
-  IntColumn get durationMs => integer().withDefault(const Constant(0))();
-  TextColumn get json => text()();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
-/// 本机不认识的同步事件（更新版本写来的）：原样保留、原样转写。
-@DataClassName('SrsUnknownEventRow')
-class SrsUnknownEvents extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-  TextColumn get json => text()();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
-/// 事件的本机发布元信息（与事件内容分离，不同步）。
-@DataClassName('SrsEventLocalRow')
-class SrsEventLocal extends Table {
-  TextColumn get eventId => text()();
-  TextColumn get profileUid => text()();
-
-  /// 本机产生的事件在发件箱里的顺序；null = 对端来的或已发布。
-  IntColumn get outboxSeq => integer().nullable()();
-
-  /// S(e)：所有已见到的、包含该事件的批次的 S 的最小值。
-  IntColumn get serverTime => integer().nullable()();
-  IntColumn get receivedAt => integer().withDefault(const Constant(0))();
-
-  @override
-  Set<Column> get primaryKey => {eventId};
-}
-
-/// 每个 profile 的本机同步 / 写入者状态（SrsSyncLocalState、写入者 seq、已应用上下文、HLC、时间锚点），JSON。
-@DataClassName('SrsLocalStateRow')
-class SrsLocalState extends Table {
-  TextColumn get profileUid => text()();
-  TextColumn get json => text()();
-
-  @override
-  Set<Column> get primaryKey => {profileUid};
-}
-
-/// v121：本机已冻结批次的留存（不同步、不进备份）。一台设备可以同时用几个同步目录
-/// （云盘、互联 host、本机作 host 时自己的目录），同一个批次要逐字节相同地传到每一个；
-/// 留存到最近同步过的所有目录都确认收到为止（fushi_srs 的 `SrsSyncEngine`）。
-@DataClassName('SrsSentBatchRow')
-class SrsSentBatches extends Table {
-  TextColumn get profileUid => text()();
-  TextColumn get writerId => text()();
-
-  /// 批次号（写入者内从 1 起连续）。
-  IntColumn get batchNo => integer()();
-
-  /// 冻结后的批次文件字节（自校验格式，见 fushi_srs `SrsBatch`）。
-  BlobColumn get bytes => blob()();
-
-  @override
-  Set<Column> get primaryKey => {profileUid, writerId, batchNo};
-}
-
-/// 笔记缓存（本机可重建，不同步）。
-@DataClassName('SrsNoteCacheRow')
-class SrsNotesCache extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-  TextColumn get noteTypeId => text()();
-  TextColumn get guid => text()();
-  IntColumn get createdAt => integer()();
-  TextColumn get deckId => text().nullable()();
-  IntColumn get deletedAt => integer().nullable()();
-
-  /// 词状态索引：词形 / 读音归一化（第六轮审查第 20 条）。
-  TextColumn get termKey => text().withDefault(const Constant(''))();
-  TextColumn get readingKey => text().withDefault(const Constant(''))();
-
-  /// 排序 / 列表显示用的第一个字段（去 HTML）。
-  TextColumn get sortField => text().withDefault(const Constant(''))();
-  TextColumn get tagsJson => text().withDefault(const Constant('[]'))();
-  BoolColumn get pendingDecision =>
-      boolean().withDefault(const Constant(false))();
-  IntColumn get updatedAt => integer().withDefault(const Constant(0))();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
-/// 卡片缓存（本机可重建，不同步）：可编辑字段的生效值 + 最后一条有效日志的排程结果。
-@DataClassName('SrsCardCacheRow')
-class SrsCardsCache extends Table {
-  TextColumn get id => text()();
-  TextColumn get profileUid => text()();
-  TextColumn get noteId => text()();
-  TextColumn get templateId => text()();
-  IntColumn get clozeOrd => integer().withDefault(const Constant(0))();
-  TextColumn get deckId => text()();
-  BoolColumn get suspended => boolean().withDefault(const Constant(false))();
-  IntColumn get buriedUntilDay => integer().nullable()();
-  IntColumn get flag => integer().withDefault(const Constant(0))();
-
-  /// 生成门（铁律 D，第六轮审查第 13 条）：笔记已删 / 模板已删 / 条件模板为空 / cN 已删时为真，
-  /// 查询层据此不显示、不进队列，不写任何同步行。
-  BoolColumn get hidden => boolean().withDefault(const Constant(false))();
-  TextColumn get queue => text().withDefault(const Constant('new'))();
-  IntColumn get dueDay => integer().nullable()();
-  IntColumn get dueAt => integer().nullable()();
-  IntColumn get scheduledDays => integer().withDefault(const Constant(0))();
-  IntColumn get reps => integer().withDefault(const Constant(0))();
-  IntColumn get lapses => integer().withDefault(const Constant(0))();
-  RealColumn get stability => real().nullable()();
-  RealColumn get difficulty => real().nullable()();
-  IntColumn get lastReviewedAt => integer().nullable()();
-  TextColumn get lastLogId => text().nullable()();
-  TextColumn get scheduler => text().withDefault(const Constant('fushi'))();
-
-  /// 新卡出卡顺序的兜底键（笔记 createdAt, cardId）：没有 [newPosition] 的新卡按它排。
-  IntColumn get noteCreatedAt => integer().withDefault(const Constant(0))();
-
-  /// v123：新卡在出卡队列里的位置（卡片修改记录 `newPos` 的生效值，「按词频重排新卡」
-  /// 写它）。NULL = 从没排过：有位置的新卡先出（位置升序），没位置的排在后面并保持
-  /// 原有的（笔记 createdAt, cardId）顺序——老数据出卡顺序不变。
-  IntColumn get newPosition => integer().nullable()();
-
-  @override
-  Set<Column> get primaryKey => {id};
-}
-
 // ── video_subtitle_glossaries（v119：视频字幕 AI 校对的作品级专名表）──────
 /// 视频字幕 AI 校对（docs/specs/2026-10-19-video-asr-llm-subtitle-pipeline.md
 /// 第 3 节 S0）的专名表：一部作品一行，各集共用。[glossaryJson] 是
@@ -3679,4 +3533,147 @@ class LibraryOrganizeChanges extends Table {
 
   /// 撤销时刻；NULL = 未撤销。
   IntColumn get undoneAt => integer().nullable()();
+}
+
+// ── web_browser_*（内置浏览器，schema v128）────────────────────────────
+// 历史 / 书签（含文件夹）随备份走、经聚合快照跨端同步（删除写 sync_deletion_tombstones，
+// 种类 `webhistory` / `webbookmark`）；标签页会话、最近关闭、下载记录是**设备本地**：
+// 不同步、不进备份。无痕标签页的任何数据都不进这几张表。
+
+/// 浏览历史：同一 url 一行（访问合并：标题取最近一次、次数累加）。
+///
+/// 跨端身份就是 [url] 本身；合并按 url 并集，次数取大、最近访问取大、标题跟最近访问走。
+@DataClassName('WebBrowserHistoryRow')
+class WebBrowserHistory extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text().unique()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+
+  /// 最近一次访问的毫秒戳。
+  IntColumn get lastVisitedAt => integer()();
+  IntColumn get visitCount => integer().withDefault(const Constant(1))();
+}
+
+/// 浏览器书签与书签文件夹（[url] 为 NULL = 文件夹）。
+///
+/// [parentId] 是本机自增 id 的逻辑外键（NULL = 根目录），删文件夹由 store 显式级联并
+/// 逐条写墓碑。跨端身份是 [uid]（随机生成、永不改变）；wire 上父级用父文件夹的 uid 表示，
+/// 落地时按 uid 换回本机 id。合并按 uid 取 [updatedAt] 大者（LWW）。
+@DataClassName('WebBrowserBookmarkRow')
+class WebBrowserBookmarks extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get uid => text().unique()();
+  TextColumn get title => text()();
+  TextColumn get url => text().nullable()();
+  IntColumn get parentId => integer().nullable()();
+  IntColumn get position => integer().withDefault(const Constant(0))();
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+}
+
+/// 标签页会话（设备本地）：整份覆盖，[position] 即标签顺序。
+@DataClassName('WebBrowserSessionTabRow')
+class WebBrowserSessionTabs extends Table {
+  IntColumn get position => integer()();
+
+  /// 标签页 id（壳生成的字符串，只在本机有意义）。
+  TextColumn get tabId => text()();
+  TextColumn get url => text()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+
+  /// 是否为当前激活的标签页（至多一行为真）。
+  BoolColumn get active => boolean().withDefault(const Constant(false))();
+
+  @override
+  Set<Column> get primaryKey => <Column>{position};
+}
+
+/// 最近关闭的标签页（设备本地，最多保留 25 条）。
+@DataClassName('WebBrowserClosedTabRow')
+class WebBrowserClosedTabs extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text()();
+  TextColumn get title => text().withDefault(const Constant(''))();
+  IntColumn get closedAt => integer()();
+
+  /// 关闭时在标签列表里的位置（恢复时尽量放回原位）。
+  IntColumn get tabIndex => integer().withDefault(const Constant(0))();
+}
+
+/// 浏览器下载记录（设备本地）。
+@DataClassName('WebBrowserDownloadRow')
+class WebBrowserDownloads extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get url => text()();
+  TextColumn get fileName => text()();
+  TextColumn get mimeType => text().nullable()();
+  IntColumn get totalBytes => integer().nullable()();
+  IntColumn get receivedBytes => integer().withDefault(const Constant(0))();
+
+  /// `running` | `completed` | `failed` | `cancelled`。
+  TextColumn get state => text()();
+
+  /// 下载落盘的本机绝对路径；完成前为 NULL。
+  TextColumn get savedPath => text().nullable()();
+  IntColumn get startedAt => integer()();
+}
+
+// ── media_links（跨模块作品图谱，schema v129）───────────────────────────
+/// 跨模块作品图谱的一条连接（spec `docs/specs/2026-10-24-cross-media-links.md`）：
+/// `(from_kind, from_key) —relation→ (to_kind, to_key)`。不另起「作品」实体取代
+/// 各模块数据，只加一层连接。
+///
+/// 端点种类 / 关系的值域见 `MediaLinkKind` / `MediaLinkRelation`（落库值冻结）；
+/// 键是各模块的**本地**稳定身份（书 bookKey、视频 bookUid、合集 id 字符串、游戏
+/// `Galgames.id`、音乐 uid），跨端换算只在互联同步清单里做（`media_link_sync.dart`），
+/// 与标签映射同一套。端点不设外键：目标条目本机不存在时照常保留（详情页显示「未入库」
+/// 灰卡），宿主删除也不级联。
+///
+/// 一行三态（`MediaLinkState`）：[deletedAt] 非空 = 已删除 / 已否决（墓碑，推断
+/// 不得重复提议同一对条目）；否则 [isUserConfirmed] 决定是「同一作品」事实还是
+/// 「可能相关」建议。跨端合并整行 LWW（按 [updatedAt]），所以删除 / 否决只写墓碑
+/// 不删行——删了就分不清「否决过」和「从没提过」，对端的旧行会把它复活。
+@DataClassName('MediaLinkRow')
+class MediaLinks extends Table {
+  TextColumn get fromKind => text()();
+  TextColumn get fromKey => text()();
+
+  /// `MediaLinkRelation.dbValue`。无方向关系（same_work）落库前两端已按
+  /// `canonicalMediaLinkEndpoints` 排序。
+  TextColumn get relation => text()();
+  TextColumn get toKind => text()();
+  TextColumn get toKey => text()();
+
+  /// 关系内的角色：theme_song 的 `op` / `ed` / `insert` / `theme`，cast 的角色名等。
+  TextColumn get role => text().nullable()();
+
+  /// 适用集数范围（theme_song 用，如 `1-12`）；NULL = 全部。
+  TextColumn get episodeRange => text().nullable()();
+
+  /// `MediaLinkSource`：`manual` 或推断来源名（vndb / mal / ai …）。
+  TextColumn get source => text().withDefault(const Constant('manual'))();
+
+  /// 推断置信度 0..1；手动连接为 NULL。
+  RealColumn get confidence => real().nullable()();
+
+  BoolColumn get isUserConfirmed =>
+      boolean().withDefault(const Constant(false))();
+
+  /// 推断理由（AI 的「为什么认为是同一作品」、确定性判据的证据摘要）。
+  TextColumn get reason => text().nullable()();
+
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  /// 删除 / 否决时刻（墓碑）；NULL = 存活。
+  IntColumn get deletedAt => integer().nullable()();
+
+  @override
+  Set<Column> get primaryKey => <Column>{
+        fromKind,
+        fromKey,
+        relation,
+        toKind,
+        toKey,
+      };
 }

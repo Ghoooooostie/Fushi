@@ -8,6 +8,8 @@ import 'package:fushi_core/fushi_core.dart' show fushiDebugPrint;
 import 'package:meta/meta.dart';
 
 import 'lapis_blocks.dart';
+import 'lapis_preset.dart';
+import 'note_type_default_mappings.dart';
 import 'card_source_link.dart';
 import 'mining_request_overrides.dart';
 
@@ -197,6 +199,7 @@ class AnkiSettings {
     this.availableNoteTypes = const [],
     this.fieldMappings = const {},
     this.tags = '',
+    this.globalTags = '',
     this.tagIncludeHibiki = true,
     this.tagIncludeCategory = true,
     this.allowDupes = false,
@@ -230,7 +233,12 @@ class AnkiSettings {
     this.ankiDesktopExecutable = '',
   });
 
-  factory AnkiSettings.fromJson(Map<String, dynamic> json) => AnkiSettings(
+  /// 载入时顺带修复「映射一个字段都没覆盖到选中的笔记类型」的存量设置（见
+  /// [withDefaultMappingsIfUncovered]）：已经存成空映射的用户不必重选笔记类型。
+  factory AnkiSettings.fromJson(Map<String, dynamic> json) =>
+      AnkiSettings._fromJson(json).withDefaultMappingsIfUncovered();
+
+  factory AnkiSettings._fromJson(Map<String, dynamic> json) => AnkiSettings(
     selectedDeckId: json['selectedDeckId'] as int?,
     selectedDeckName: json['selectedDeckName'] as String?,
     selectedNoteTypeId: json['selectedNoteTypeId'] as int?,
@@ -249,6 +257,7 @@ class AnkiSettings {
       json['fieldMappings'] as Map? ?? {},
     ),
     tags: json['tags'] as String? ?? '',
+    globalTags: json['globalTags'] as String? ?? '',
     tagIncludeHibiki: json['tagIncludeHibiki'] as bool? ?? true,
     tagIncludeCategory: json['tagIncludeCategory'] as bool? ?? true,
     allowDupes: json['allowDupes'] as bool? ?? false,
@@ -307,7 +316,18 @@ class AnkiSettings {
   final List<AnkiDeck> availableDecks;
   final List<AnkiNoteType> availableNoteTypes;
   final Map<String, String> fieldMappings;
+
+  /// 当前 Profile 的自定义标签（空白分隔）。随 Profile 快照切换（`ProfileKeys`）。
   final String tags;
+
+  /// 所有 Profile 共用的自定义标签（反馈 ORHr4_WDOy：「全局标签给所有卡，Profile 标签
+  /// 各配各的」）。**故意不进 Profile 快照**（`ProfileKeys.ankiSettingsToMap`）：切
+  /// Profile 时 `mapToAnkiSettings` 只覆盖快照里有的字段，它因此原样保留 = 全局。
+  final String globalTags;
+
+  /// 制卡时实际要加的自定义标签：全局在前、Profile 在后（[buildNoteTags] 负责去重）。
+  /// 所有后端拼标签一律传它，不要再单传 [tags]——那会把全局标签漏掉。
+  String get noteTags => globalTags.trim().isEmpty ? tags : '$globalTags $tags';
 
   /// 是否给每张 Fushi 制出的卡片追加固定的 `fushi` 默认标签（TODO-117 开关）。
   /// 默认 `true`（保持 TODO-115/062 现状）。
@@ -478,6 +498,21 @@ class AnkiSettings {
     return template != null && template.trim().isNotEmpty;
   }
 
+  /// 选中的笔记类型已知、但 [fieldMappings] 一个字段都没映射到它（空表，或留着别的
+  /// 笔记类型的字段名）时，换成按字段名推出的默认映射；否则原样返回。
+  ///
+  /// 这种设置下每张卡渲染出来都是空卡、必被拒收（反馈 AGLC0BuaKB：选了非 Lapis 笔记
+  /// 类型后映射被置成 `{}`，批量制卡逐条失败）。只要覆盖到一个字段就视为用户自己配过，
+  /// 不动。
+  AnkiSettings withDefaultMappingsIfUncovered() {
+    final AnkiNoteType? noteType = selectedNoteType;
+    if (noteType == null || noteType.fields.isEmpty) return this;
+    if (mappingsCoverNoteType(fieldMappings, noteType)) return this;
+    return copyWith(
+      fieldMappings: LapisPreset.applyDefaults(noteType, const {}),
+    );
+  }
+
   AnkiNoteType? get selectedNoteType =>
       availableNoteTypes.firstWhereOrNull((t) => t.id == selectedNoteTypeId) ??
       (selectedNoteTypeName != null
@@ -497,6 +532,7 @@ class AnkiSettings {
     List<AnkiNoteType>? availableNoteTypes,
     Map<String, String>? fieldMappings,
     String? tags,
+    String? globalTags,
     bool? tagIncludeHibiki,
     bool? tagIncludeCategory,
     bool? allowDupes,
@@ -547,6 +583,7 @@ class AnkiSettings {
     availableNoteTypes: availableNoteTypes ?? this.availableNoteTypes,
     fieldMappings: fieldMappings ?? this.fieldMappings,
     tags: tags ?? this.tags,
+    globalTags: globalTags ?? this.globalTags,
     tagIncludeHibiki: tagIncludeHibiki ?? this.tagIncludeHibiki,
     tagIncludeCategory: tagIncludeCategory ?? this.tagIncludeCategory,
     allowDupes: allowDupes ?? this.allowDupes,
@@ -599,6 +636,7 @@ class AnkiSettings {
     'availableNoteTypes': availableNoteTypes.map((t) => t.toJson()).toList(),
     'fieldMappings': fieldMappings,
     'tags': tags,
+    'globalTags': globalTags,
     'tagIncludeHibiki': tagIncludeHibiki,
     'tagIncludeCategory': tagIncludeCategory,
     'allowDupes': allowDupes,
@@ -831,6 +869,11 @@ enum AnkiMiningSource {
   /// （写入 Anki 的标签字面量为 `game`）。BUG-1137：此前枚举没有游戏来源，
   /// gal 制卡链路吃 `video` 默认值，卡片被误标成视频。
   game,
+
+  /// 音乐模块歌词制卡（歌词页手动制卡 / 收藏夹里的音乐句）—— 归「音乐」分类标签
+  /// （写入 Anki 的标签字面量为 `music`）。所有者 2026-10-24 拍板：此前沿用收藏夹
+  /// 口径打成 `book`；只决定新卡，旧卡不迁移不重写。
+  music,
 }
 
 class AnkiMiningContext {
@@ -849,6 +892,7 @@ class AnkiMiningContext {
     this.clipStartMs,
     this.clipEndMs,
     this.sourceLink,
+    this.sourceUrl,
   });
   final String sentence;
   final String? cueSentence;
@@ -912,6 +956,13 @@ class AnkiMiningContext {
   /// Portable card origin; survives media upload and backend forwarding.
   final CardSourceLink? sourceLink;
 
+  /// 卡片来源的外部网址（app 内浏览器制卡时是当前网页，已去掉 `#片段`）。
+  ///
+  /// 与 [sourceLink] 是两种来源：[sourceLink] 是书库内可回跳的定位，优先；没有库内
+  /// 定位时 `{source-link}` 渲染成指向此网址的 `<a>`（标题取 [documentTitle]），见
+  /// [AnkiHandlebarRenderer.renderSourceLink]。只认 http(s)，其它 scheme 不出链接。
+  final String? sourceUrl;
+
   /// Used when updating an existing note: its marker identity must survive a
   /// newly captured position, and legacy notes must not acquire dangling URLs.
   AnkiMiningContext withSourceLink(CardSourceLink? value) => AnkiMiningContext(
@@ -929,6 +980,7 @@ class AnkiMiningContext {
     clipStartMs: clipStartMs,
     clipEndMs: clipEndMs,
     sourceLink: value,
+    sourceUrl: sourceUrl,
   );
 
   /// 渲染前把两个**本地媒体路径**换成 backend 落盘后的媒体引用
@@ -959,6 +1011,7 @@ class AnkiMiningContext {
     clipStartMs: clipStartMs,
     clipEndMs: clipEndMs,
     sourceLink: sourceLink,
+    sourceUrl: sourceUrl,
   );
 }
 
@@ -1096,12 +1149,31 @@ class AnkiHandlebarRenderer {
     final String title = context.documentTitle ?? '';
     final CardSourceLink? source = context.sourceLink;
     if (source == null) {
+      final Uri? url = webSourceUrlOf(context.sourceUrl);
+      if (url != null) {
+        // 无标题时用主机名作链接文字：同 toHtml 缺省标签，不落任何自然语言。
+        final String label = title.trim().isEmpty ? url.host : title.trim();
+        return '<a href="'
+            '${const HtmlEscape(HtmlEscapeMode.attribute).convert(url.toString())}'
+            '">${const HtmlEscape(HtmlEscapeMode.element).convert(label)}</a>';
+      }
       return const HtmlEscape(HtmlEscapeMode.element).convert(title);
     }
     // 无标题时退回 toHtml 的语言中性缺省标签：这是写进用户 Anki 卡面的文本，
     // 17 种界面语言共用一份模板，不能落任何一种自然语言。
     if (title.trim().isEmpty) return source.toHtml();
     return source.toHtml(label: title);
+  }
+
+  /// [AnkiMiningContext.sourceUrl] 能否作为卡面链接：只认带主机的 http(s) 网址；
+  /// 空 / 解析失败 / `javascript:` 等其它 scheme 一律 null（不往卡面写可执行链接）。
+  static Uri? webSourceUrlOf(String? raw) {
+    final String value = raw?.trim() ?? '';
+    if (value.isEmpty) return null;
+    final Uri? url = Uri.tryParse(value);
+    if (url == null || url.host.isEmpty) return null;
+    if (url.scheme != 'http' && url.scheme != 'https') return null;
+    return url;
   }
 
   /// 把媒体片段起止（毫秒偏移）渲染成人类可读的 `HH:MM:SS - HH:MM:SS`。
@@ -1716,6 +1788,12 @@ class AnkiErrorCode {
   /// `cannot create note because it is empty`）。本地预检把它变成一句能照着做的话。
   static const String firstFieldEmpty = 'ANKI_FIRST_FIELD_EMPTY';
 
+  /// 按字段映射渲染后**一个字段都没有内容**，本地直接拒收（HBK-AUDIT-018 的空卡门）。
+  ///
+  /// 几乎总是映射本身是空的：选了非 Lapis 的笔记类型后映射被重置成 `{}`、从没手动配过。
+  /// 此前这条失败不带码，toast 里直接是后端的英文原文（用户 2026-10-21 iOS 反馈）。
+  static const String allFieldsEmpty = 'ANKI_ALL_FIELDS_EMPTY';
+
   /// BUG-2380：「创建并选用 Lapis」建完之后，Lapis 牌组 / 笔记类型仍然不在后端
   /// 回读的清单里 —— 也就是后端把创建**静默吞掉**了（AnkiDroid 的 `addNewDeck`
   /// 失败返回 null 而 native 侧照样 `result.success`，是已知形态）。
@@ -1732,6 +1810,13 @@ class AnkiErrorCode {
   /// 本机找不到 `fushi-anki-sync`（这个平台 / 安装包没带它）。
   static const String syncClientUnavailable = 'ANKI_SYNC_UNAVAILABLE';
 }
+
+/// [code] 是不是「字段映射配错」一类：映射整体为空、字段名全不属于笔记类型、首字段空。
+/// 这类失败与具体词条无关，同一批里后面每一条都会一样失败，批量制卡应整批中止。
+bool isFieldMappingConfigError(String? code) =>
+    code == AnkiErrorCode.allFieldsEmpty ||
+    code == AnkiErrorCode.fieldMappingMismatch ||
+    code == AnkiErrorCode.firstFieldEmpty;
 
 sealed class AnkiFetchResult {
   const AnkiFetchResult();
