@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169898 (9994 per locale)
+/// Strings: 169031 (9943 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -242,82 +242,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'vol. ${number}';
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
-  String get ai_agent_ask_action => 'Ask AI';
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  String get ai_agent_choice_cancel => 'None of these';
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  String get ai_agent_confirm_approve => 'Run';
-  String get ai_agent_confirm_approved => 'Confirmed';
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  String get ai_agent_confirm_declined => 'Declined';
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  String get ai_agent_confirm_title => 'Confirm before running';
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  String get ai_agent_details => 'Details';
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  String get ai_agent_empty_title => 'What should I do?';
-  String get ai_agent_expand => 'Open as full page';
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  String get ai_agent_history_resume => 'Continue conversation';
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  String get ai_agent_history_title => 'AI action log';
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  String get ai_agent_new_session => 'New conversation';
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  String get ai_agent_open_settings => 'Open settings';
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  String get ai_agent_send => 'Send';
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  String get ai_agent_stop => 'Stop';
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  String get ai_agent_title => 'AI assistant';
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  String get ai_agent_tool_declined => 'Not run';
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  String get ai_agent_tool_running => 'Running…';
-  String get ai_agent_undo => 'Undo';
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  String get ai_agent_undone => 'Undone';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
   String ai_assist_failed({required Object reason}) =>
@@ -341,9 +265,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_acquire => 'AI download';
   String get ai_feature_acquire_summary =>
       'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
-  String get ai_feature_agent => 'AI assistant';
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   String get ai_feature_assigned_unavailable =>
       'Selected provider unavailable (incomplete or disabled)';
   String get ai_feature_audiobook_cast => 'Audiobook casting';
@@ -476,10 +397,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_provider_test_failed({required Object reason}) =>
       'Test failed: ${reason}';
   String get ai_provider_test_ok => 'Connected';
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  String get ai_provider_tool_calling_auto => 'Auto';
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  String get ai_provider_tool_calling_on => 'On';
   String get ai_providers_section => 'Provider configuration';
   String get ai_providers_section_summary =>
       'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
@@ -4118,7 +4035,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object secondField,
   }) => 'The ${field} field used ${secondField} as its fallback search term.';
   String file_count({required Object count}) => '${count} files';
-  String get floating_ball_action_ai => 'AI';
   String get floating_ball_action_camera_ocr => 'Photo lookup';
   String get floating_ball_action_clipboard => 'Look up clipboard';
   String get floating_ball_action_close => 'Close floating ball';
@@ -5532,8 +5448,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Set up dictionaries, import your first book and make your first card in a few minutes.';
   String get home_onboarding_card_dismiss => 'Don\'t show again';
   String get home_onboarding_card_start => 'Continue setup';
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
@@ -9407,7 +9321,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Bring to front and open lookup page';
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
   String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_page_down =>
@@ -10452,7 +10365,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A note type needs at least one field';
   String get srs_note_types_field_name => 'Field name';
   String get srs_note_types_field_rename => 'Rename field';
+  String get srs_note_types_field_term_tag => 'Lookup';
+  String get srs_note_types_field_unused => 'Not on any card';
   String get srs_note_types_fields => 'Fields';
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   String get srs_note_types_front => 'Front template';
   String get srs_note_types_insert_field => 'Insert field';
   String get srs_note_types_kind => 'Kind';
@@ -10466,6 +10388,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Field names can\'t contain : { } " or start with # / ';
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
   String get srs_note_types_preview => 'Preview';
   String get srs_note_types_preview_empty =>
       'The front is empty for this note, so this card won\'t be shown.';
@@ -10477,6 +10403,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_saved => 'Saved';
   String get srs_note_types_side_back => 'Back';
   String get srs_note_types_side_front => 'Front';
+  String get srs_note_types_side_none => '(no fields)';
   String get srs_note_types_stock_basic => 'Basic';
   String get srs_note_types_stock_cloze => 'Cloze';
   String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
@@ -10489,6 +10416,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object cards,
   }) => '${notes} notes · ${fields} fields · ${cards} card types';
   String get srs_note_types_template_add => 'Add card type';
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   String get srs_note_types_template_delete => 'Delete card type';
@@ -10500,11 +10429,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_types_template_edit => 'Edit card type';
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   String get srs_note_types_template_name => 'Card type name';
   String get srs_note_types_template_rename => 'Rename card type';
   String get srs_note_types_templates => 'Card types';
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   String get srs_note_types_term_field => 'Word field';
   String get srs_note_types_term_field_hint =>
       'Review marks in the lookup popup match words against this field';
@@ -10958,10 +10893,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_align_center => 'Center';
   String get srs_visual_align_end => 'Right';
   String get srs_visual_align_start => 'Left';
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   String get srs_visual_convert_title => 'This template is written in code';
   String get srs_visual_delete => 'Remove block';
   String get srs_visual_edited_warning =>
@@ -14534,139 +14475,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
   @override
@@ -14705,11 +14513,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
@@ -14935,14 +14738,6 @@ class _StringsAr extends _StringsEn {
       'فشل الاختبار: ${reason}';
   @override
   String get ai_provider_test_ok => 'متصل';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'إعداد المزودين';
   @override
@@ -21008,8 +20803,6 @@ class _StringsAr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ملفات';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'البحث بالتصوير';
   @override
   String get floating_ball_action_clipboard => 'بحث في الحافظة';
@@ -23424,9 +23217,6 @@ class _StringsAr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'عدم الإظهار مجددًا';
   @override
   String get home_onboarding_card_start => 'متابعة الإعداد';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'تلقائي';
   @override
@@ -30071,8 +29861,6 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'التمرير لأسفل خطوة واحدة';
   @override
@@ -31877,7 +31665,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -31903,6 +31706,11 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -31921,6 +31729,8 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -31941,6 +31751,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -31957,6 +31770,9 @@ class _StringsAr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -31965,6 +31781,12 @@ class _StringsAr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -32743,11 +32565,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -38750,139 +38581,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
   @override
@@ -38924,11 +38622,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
@@ -39154,14 +38847,6 @@ class _StringsDe extends _StringsEn {
       'Test fehlgeschlagen: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbunden';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Anbieterkonfiguration';
   @override
@@ -45326,8 +45011,6 @@ class _StringsDe extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} Dateien';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Foto nachschlagen';
   @override
   String get floating_ball_action_clipboard => 'Zwischenablage nachschlagen';
@@ -47810,9 +47493,6 @@ class _StringsDe extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Nicht mehr anzeigen';
   @override
   String get home_onboarding_card_start => 'Einrichtung fortsetzen';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -54575,8 +54255,6 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Einen Schritt nach unten scrollen';
   @override
@@ -56391,7 +56069,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -56417,6 +56110,11 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -56435,6 +56133,8 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -56455,6 +56155,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -56471,6 +56174,9 @@ class _StringsDe extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -56479,6 +56185,12 @@ class _StringsDe extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -57257,11 +56969,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -63357,139 +63078,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get add_to_collection => 'Añadir a colección';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
   @override
@@ -63531,11 +63119,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'El proveedor seleccionado no está disponible (incompleto o desactivado)';
@@ -63762,14 +63345,6 @@ class _StringsEs extends _StringsEn {
       'La prueba falló: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuración de proveedores';
   @override
@@ -69951,8 +69526,6 @@ class _StringsEs extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} archivos';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
   String get floating_ball_action_clipboard => 'Consultar portapapeles';
@@ -72432,9 +72005,6 @@ class _StringsEs extends _StringsEn {
   String get home_onboarding_card_dismiss => 'No volver a mostrar';
   @override
   String get home_onboarding_card_start => 'Continuar la configuración';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -79207,8 +78777,6 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Desplazar un paso hacia abajo';
   @override
@@ -81028,7 +80596,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -81054,6 +80637,11 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -81072,6 +80660,8 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -81092,6 +80682,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -81108,6 +80701,9 @@ class _StringsEs extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -81116,6 +80712,12 @@ class _StringsEs extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -81894,11 +81496,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -88021,139 +87632,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
   @override
@@ -88194,11 +87672,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
@@ -88424,14 +87897,6 @@ class _StringsFr extends _StringsEn {
       'Échec du test : ${reason}';
   @override
   String get ai_provider_test_ok => 'Connecté';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuration des fournisseurs';
   @override
@@ -94640,8 +94105,6 @@ class _StringsFr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} fichiers';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Recherche par photo';
   @override
   String get floating_ball_action_clipboard => 'Rechercher le presse-papiers';
@@ -97129,9 +96592,6 @@ class _StringsFr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Ne plus afficher';
   @override
   String get home_onboarding_card_start => 'Reprendre la configuration';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatique';
   @override
@@ -103931,8 +103391,6 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Défiler d\'un cran vers le bas';
   @override
@@ -105752,7 +105210,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -105778,6 +105251,11 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -105796,6 +105274,8 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -105816,6 +105296,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -105832,6 +105315,9 @@ class _StringsFr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -105840,6 +105326,12 @@ class _StringsFr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -106618,11 +106110,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -112765,139 +112266,6 @@ class _StringsId extends _StringsEn {
   @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
   @override
@@ -112938,11 +112306,6 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
@@ -113167,14 +112530,6 @@ class _StringsId extends _StringsEn {
       'Pengujian gagal: ${reason}';
   @override
   String get ai_provider_test_ok => 'Terhubung';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Konfigurasi penyedia';
   @override
@@ -119283,8 +118638,6 @@ class _StringsId extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} file';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Pencarian foto';
   @override
   String get floating_ball_action_clipboard => 'Cari papan klip';
@@ -121731,9 +121084,6 @@ class _StringsId extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Jangan tampilkan lagi';
   @override
   String get home_onboarding_card_start => 'Lanjutkan penyiapan';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Otomatis';
   @override
@@ -128434,8 +127784,6 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Gulir turun satu langkah';
   @override
@@ -130240,7 +129588,22 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -130266,6 +129629,11 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -130284,6 +129652,8 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -130304,6 +129674,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -130320,6 +129693,9 @@ class _StringsId extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -130328,6 +129704,12 @@ class _StringsId extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -131106,11 +130488,20 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -137164,139 +136555,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
   @override
@@ -137338,11 +136596,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Il provider selezionato non è disponibile (incompleto o disattivato)';
@@ -137569,14 +136822,6 @@ class _StringsIt extends _StringsEn {
       'Prova non riuscita: ${reason}';
   @override
   String get ai_provider_test_ok => 'Connesso';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configurazione dei provider';
   @override
@@ -143726,8 +142971,6 @@ class _StringsIt extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} file';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Ricerca da foto';
   @override
   String get floating_ball_action_clipboard => 'Cerca negli appunti';
@@ -146195,9 +145438,6 @@ class _StringsIt extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Non mostrare più';
   @override
   String get home_onboarding_card_start => 'Continua la configurazione';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatico';
   @override
@@ -152950,8 +152190,6 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Scorri in basso di un passo';
   @override
@@ -154770,7 +154008,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -154796,6 +154049,11 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -154814,6 +154072,8 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -154834,6 +154094,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -154850,6 +154113,9 @@ class _StringsIt extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -154858,6 +154124,12 @@ class _StringsIt extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -155636,11 +154908,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -161727,139 +161008,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get add_to_collection => 'コレクションに追加';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
   String ai_assist_failed({required Object reason}) =>
@@ -161897,11 +161045,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '選択したプロバイダーを利用できません（設定が不完全、または無効）';
@@ -162121,14 +161264,6 @@ class _StringsJa extends _StringsEn {
       'テストに失敗しました：${reason}';
   @override
   String get ai_provider_test_ok => '接続しました';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'プロバイダー設定';
   @override
@@ -168015,8 +167150,6 @@ class _StringsJa extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ファイル';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => '撮影して検索';
   @override
   String get floating_ball_action_clipboard => 'クリップボードを検索';
@@ -170345,9 +169478,6 @@ class _StringsJa extends _StringsEn {
   String get home_onboarding_card_dismiss => '今後表示しない';
   @override
   String get home_onboarding_card_start => 'セットアップを続ける';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -176807,8 +175937,6 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => '1行下にスクロール';
   @override
   String get shortcut_action_global_scroll_line_up => '1行上にスクロール';
@@ -178589,7 +177717,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -178615,6 +177758,11 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -178633,6 +177781,8 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -178653,6 +177803,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -178669,6 +177822,9 @@ class _StringsJa extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -178677,6 +177833,12 @@ class _StringsJa extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -179455,11 +178617,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -185249,139 +184420,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get add_to_collection => '컬렉션에 추가';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 요청 실패: ${reason}';
@@ -185417,11 +184455,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
@@ -185642,14 +184675,6 @@ class _StringsKo extends _StringsEn {
       '테스트 실패: ${reason}';
   @override
   String get ai_provider_test_ok => '연결됨';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '제공자 설정';
   @override
@@ -191548,8 +190573,6 @@ class _StringsKo extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count}개 파일';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => '사진으로 검색';
   @override
   String get floating_ball_action_clipboard => '클립보드 검색';
@@ -193877,9 +192900,6 @@ class _StringsKo extends _StringsEn {
   String get home_onboarding_card_dismiss => '다시 표시 안 함';
   @override
   String get home_onboarding_card_start => '설정 계속하기';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '자동';
   @override
@@ -200358,8 +199378,6 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => '한 단계 아래로 스크롤';
   @override
   String get shortcut_action_global_scroll_line_up => '한 단계 위로 스크롤';
@@ -202141,7 +201159,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -202167,6 +201200,11 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -202185,6 +201223,8 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -202205,6 +201245,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -202221,6 +201264,9 @@ class _StringsKo extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -202229,6 +201275,12 @@ class _StringsKo extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -203007,11 +202059,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -208839,139 +207900,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
   @override
@@ -209013,11 +207941,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
@@ -209243,14 +208166,6 @@ class _StringsNl extends _StringsEn {
       'Test mislukt: ${reason}';
   @override
   String get ai_provider_test_ok => 'Verbonden';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Providerconfiguratie';
   @override
@@ -215394,8 +214309,6 @@ class _StringsNl extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} bestanden';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Opzoeken via foto';
   @override
   String get floating_ball_action_clipboard => 'Klembord opzoeken';
@@ -217849,9 +216762,6 @@ class _StringsNl extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Niet meer tonen';
   @override
   String get home_onboarding_card_start => 'Instellen hervatten';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -224586,8 +223496,6 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Één stap omlaag scrollen';
   @override
@@ -226401,7 +225309,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -226427,6 +225350,11 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -226445,6 +225373,8 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -226465,6 +225395,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -226481,6 +225414,9 @@ class _StringsNl extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -226489,6 +225425,12 @@ class _StringsNl extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -227267,11 +226209,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -233351,139 +232302,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
   @override
@@ -233525,11 +232343,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Provedor selecionado indisponível (incompleto ou desativado)';
@@ -233757,14 +232570,6 @@ class _StringsPtBr extends _StringsEn {
       'Falha no teste: ${reason}';
   @override
   String get ai_provider_test_ok => 'Conectado';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Configuração de provedores';
   @override
@@ -239923,8 +238728,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} arquivos';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Consulta por foto';
   @override
   String get floating_ball_action_clipboard =>
@@ -242397,9 +241200,6 @@ class _StringsPtBr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Não mostrar novamente';
   @override
   String get home_onboarding_card_start => 'Continuar a configuração';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -249147,8 +247947,6 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Rolar uma etapa para baixo';
   @override
@@ -250962,7 +249760,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -250988,6 +249801,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -251006,6 +249824,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -251026,6 +249846,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -251042,6 +249865,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -251050,6 +249876,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -251828,11 +250660,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -257931,139 +256772,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
   @override
@@ -258104,11 +256812,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Выбранный провайдер недоступен (не настроен полностью или отключён)';
@@ -258333,14 +257036,6 @@ class _StringsRu extends _StringsEn {
       'Проверка не удалась: ${reason}';
   @override
   String get ai_provider_test_ok => 'Подключено';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Настройка провайдеров';
   @override
@@ -264477,8 +263172,6 @@ class _StringsRu extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} файлов';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Поиск по фото';
   @override
   String get floating_ball_action_clipboard => 'Искать из буфера обмена';
@@ -266939,9 +265632,6 @@ class _StringsRu extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Больше не показывать';
   @override
   String get home_onboarding_card_start => 'Продолжить настройку';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Авто';
   @override
@@ -273684,8 +272374,6 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down =>
       'Прокрутить вниз на один шаг';
   @override
@@ -275500,7 +274188,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -275526,6 +274229,11 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -275544,6 +274252,8 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -275564,6 +274274,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -275580,6 +274293,9 @@ class _StringsRu extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -275588,6 +274304,12 @@ class _StringsRu extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -276366,11 +275088,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -282456,139 +281187,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
   @override
@@ -282628,11 +281226,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
@@ -282857,14 +281450,6 @@ class _StringsTh extends _StringsEn {
       'ทดสอบไม่สำเร็จ: ${reason}';
   @override
   String get ai_provider_test_ok => 'เชื่อมต่อแล้ว';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'การตั้งค่าผู้ให้บริการ';
   @override
@@ -288922,8 +287507,6 @@ class _StringsTh extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} ไฟล์';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'ค้นหาจากภาพถ่าย';
   @override
   String get floating_ball_action_clipboard => 'ค้นหาจากคลิปบอร์ด';
@@ -291333,9 +289916,6 @@ class _StringsTh extends _StringsEn {
   String get home_onboarding_card_dismiss => 'ไม่ต้องแสดงอีก';
   @override
   String get home_onboarding_card_start => 'ตั้งค่าต่อ';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'อัตโนมัติ';
   @override
@@ -297987,8 +296567,6 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => 'เลื่อนลงหนึ่งขั้น';
   @override
   String get shortcut_action_global_scroll_line_up => 'เลื่อนขึ้นหนึ่งขั้น';
@@ -299790,7 +298368,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -299816,6 +298409,11 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -299834,6 +298432,8 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -299854,6 +298454,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -299870,6 +298473,9 @@ class _StringsTh extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -299878,6 +298484,12 @@ class _StringsTh extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -300656,11 +299268,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -306659,139 +305280,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
   @override
@@ -306833,11 +305321,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
@@ -307064,14 +305547,6 @@ class _StringsTr extends _StringsEn {
       'Test başarısız oldu: ${reason}';
   @override
   String get ai_provider_test_ok => 'Bağlandı';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Sağlayıcı yapılandırması';
   @override
@@ -313185,8 +311660,6 @@ class _StringsTr extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} dosya';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Fotoğrafla arama';
   @override
   String get floating_ball_action_clipboard => 'Panoyu ara';
@@ -315637,9 +314110,6 @@ class _StringsTr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Bir daha gösterme';
   @override
   String get home_onboarding_card_start => 'Kuruluma devam et';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Otomatik';
   @override
@@ -322337,8 +320807,6 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => 'Bir adım aşağı kaydır';
   @override
   String get shortcut_action_global_scroll_line_up => 'Bir adım yukarı kaydır';
@@ -324145,7 +322613,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -324171,6 +322654,11 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -324189,6 +322677,8 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -324209,6 +322699,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -324225,6 +322718,9 @@ class _StringsTr extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -324233,6 +322729,12 @@ class _StringsTr extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -325011,11 +323513,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -331066,139 +329577,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty =>
       'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
   @override
@@ -331239,11 +329617,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable =>
       'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
@@ -331468,14 +329841,6 @@ class _StringsVi extends _StringsEn {
       'Kiểm tra thất bại: ${reason}';
   @override
   String get ai_provider_test_ok => 'Đã kết nối';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => 'Cấu hình nhà cung cấp';
   @override
@@ -337575,8 +335940,6 @@ class _StringsVi extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} tệp';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => 'Tra từ bằng ảnh chụp';
   @override
   String get floating_ball_action_clipboard => 'Tra từ trong bộ nhớ tạm';
@@ -340017,9 +338380,6 @@ class _StringsVi extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Không hiển thị lại';
   @override
   String get home_onboarding_card_start => 'Tiếp tục thiết lập';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Tự động';
   @override
@@ -346690,8 +345050,6 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => 'Cuộn xuống một bước';
   @override
   String get shortcut_action_global_scroll_line_up => 'Cuộn lên một bước';
@@ -348496,7 +346854,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -348522,6 +346895,11 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -348540,6 +346918,8 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -348560,6 +346940,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -348576,6 +346959,9 @@ class _StringsVi extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -348584,6 +346970,12 @@ class _StringsVi extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -349362,11 +347754,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -355396,128 +353797,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
-  String get ai_agent_ask_action => '问 AI';
-  @override
-  String get ai_agent_attach_screen_text => '附上屏幕文字';
-  @override
-  String get ai_agent_choice_cancel => '都不是';
-  @override
-  String ai_agent_choice_picked({required Object label}) => '已选：${label}';
-  @override
-  String get ai_agent_confirm_approve => '执行';
-  @override
-  String get ai_agent_confirm_approved => '已确认';
-  @override
-  String get ai_agent_confirm_decline => '不执行';
-  @override
-  String get ai_agent_confirm_declined => '已拒绝';
-  @override
-  String get ai_agent_confirm_install_title => '要安装这个扩展吗？';
-  @override
-  String get ai_agent_confirm_irreversible => '这一步无法撤销。';
-  @override
-  String get ai_agent_confirm_title => '执行前请确认';
-  @override
-  String get ai_agent_confirm_undoable => '执行后可以撤销。';
-  @override
-  String ai_agent_context_chip({required Object title}) => '关于：${title}';
-  @override
-  String get ai_agent_details => '详情';
-  @override
-  String get ai_agent_empty_examples => '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
-  @override
-  String get ai_agent_empty_title => '要我做什么？';
-  @override
-  String get ai_agent_expand => '展开成整页';
-  @override
-  String get ai_agent_history_by_user => '经你确认';
-  @override
-  String get ai_agent_history_empty => 'AI 助手还没做过改动。';
-  @override
-  String get ai_agent_history_resume => '继续这场对话';
-  @override
-  String get ai_agent_history_summary => 'AI 助手做过的所有改动，可逐条撤销';
-  @override
-  String get ai_agent_history_title => 'AI 操作记录';
-  @override
-  String get ai_agent_input_hint => '告诉 AI 要做什么…';
-  @override
-  String get ai_agent_new_session => '新对话';
-  @override
-  String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
-  @override
-  String get ai_agent_open_settings => '去设置';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      '${device} 上关闭了 AI 功能。';
-  @override
-  String get ai_agent_remote_lost => '与执行这场对话的设备断开了连接。';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} 还没准备好，请稍后再试。';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      '连不上下载执行设备 ${device}。';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
-  @override
-  String get ai_agent_risk_irreversible => '不可撤销';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) => '屏幕文字（${n} 字）';
-  @override
-  String get ai_agent_screen_text_empty => '屏幕上没有识别到文字';
-  @override
-  String get ai_agent_screen_text_failed => '读取屏幕文字失败';
-  @override
-  String get ai_agent_screen_text_unavailable => '本机的文字识别不可用';
-  @override
-  String get ai_agent_send => '发送';
-  @override
-  String ai_agent_session_summary({required Object n}) => '本次对话做了 ${n} 处改动';
-  @override
-  String get ai_agent_stop => '停止';
-  @override
-  String get ai_agent_stop_cancelled => '已停止。';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'AI 请求失败：${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure => '已停止：同一步连续失败两次。';
-  @override
-  String get ai_agent_stop_token_budget => '已停止：本次对话的 token 预算已用完。';
-  @override
-  String get ai_agent_stop_tool_limit => '已停止：这一轮步骤太多。';
-  @override
-  String get ai_agent_superseded => '之后又被改过，保留现状';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      '已完成：${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      '未完成：${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI 助手';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => '未执行';
-  @override
-  String ai_agent_tool_failed({required Object code}) => '失败：${code}';
-  @override
-  String get ai_agent_tool_running => '执行中…';
-  @override
-  String get ai_agent_undo => '撤销';
-  @override
-  String ai_agent_undo_all({required Object n}) => '全部撤销（${n}）';
-  @override
-  String ai_agent_undo_failed({required Object reason}) => '撤销失败：${reason}';
-  @override
-  String get ai_agent_undone => '已撤销';
-  @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 请求失败：${reason}';
@@ -355553,10 +353832,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
-  @override
-  String get ai_feature_agent => 'AI 助手';
-  @override
-  String get ai_feature_agent_summary => '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
   @override
   String get ai_feature_assigned_unavailable => '所选提供商不可用（未配置完整或已停用）';
   @override
@@ -355760,14 +354035,6 @@ class _StringsZhCn extends _StringsEn {
   String ai_provider_test_failed({required Object reason}) => '测试失败：${reason}';
   @override
   String get ai_provider_test_ok => '连接正常';
-  @override
-  String get ai_provider_tool_calling => '工具调用（AI 助手）';
-  @override
-  String get ai_provider_tool_calling_auto => '自动';
-  @override
-  String get ai_provider_tool_calling_off => '关（JSON 降级）';
-  @override
-  String get ai_provider_tool_calling_on => '开';
   @override
   String get ai_providers_section => '提供商配置';
   @override
@@ -361347,8 +359614,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} 个文件';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => '拍照查词';
   @override
   String get floating_ball_action_clipboard => '剪贴板查词';
@@ -363558,8 +361823,6 @@ class _StringsZhCn extends _StringsEn {
   String get home_onboarding_card_dismiss => '不再显示';
   @override
   String get home_onboarding_card_start => '继续新手引导';
-  @override
-  String get home_panel_ai_agent_hint => '自动：给 AI 助手指派了提供商后显示';
   @override
   String get home_panel_mode_auto => '自动';
   @override
@@ -369703,8 +367966,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_screen_ocr => '截屏识字（全局）';
   @override
-  String get shortcut_action_global_open_ai_assistant => '打开 AI 助手';
-  @override
   String get shortcut_action_global_scroll_line_down => '向下滚动一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滚动一行';
@@ -371373,7 +369634,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_field_rename => '重命名字段';
   @override
+  String get srs_note_types_field_term_tag => '查词用';
+  @override
+  String get srs_note_types_field_unused => '没上卡面';
+  @override
   String get srs_note_types_fields => '字段';
+  @override
+  String srs_note_types_fields_count({required Object n}) => '字段（${n}）';
+  @override
+  String get srs_note_types_fields_hint => '每条笔记要填的内容；点开字段能看到它在卡面的位置';
+  @override
+  String srs_note_types_flag_fields({required Object n}) => '开关字段（${n}）';
+  @override
+  String get srs_note_types_flag_fields_hint => '填任意字符即开启对应的卡面样式';
   @override
   String get srs_note_types_front => '正面模板';
   @override
@@ -371398,6 +369671,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_name_reserved =>
       '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} 个字段 · ${cards} 种卡片';
+  @override
   String get srs_note_types_preview => '预览';
   @override
   String get srs_note_types_preview_empty => '这条笔记的正面为空，这张卡不会出现。';
@@ -371414,6 +369692,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_side_back => '背面';
   @override
   String get srs_note_types_side_front => '正面';
+  @override
+  String get srs_note_types_side_none => '（没有字段）';
   @override
   String get srs_note_types_stock_basic => '问答';
   @override
@@ -371433,6 +369713,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_note_types_template_add => '添加卡片模板';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      '背面：${fields}';
+  @override
   String get srs_note_types_template_cloze_single => '填空类型只有一个卡片模板';
   @override
   String get srs_note_types_template_delete => '删除卡片模板';
@@ -371447,6 +369730,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       '模板有错误：${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      '正面：${fields}';
+  @override
   String get srs_note_types_template_last => '笔记类型至少要有一个卡片模板';
   @override
   String get srs_note_types_template_name => '模板名称';
@@ -371454,6 +369740,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_note_types_template_rename => '重命名卡片模板';
   @override
   String get srs_note_types_templates => '卡片模板';
+  @override
+  String get srs_note_types_templates_hint => '每个模板生成一张卡；点进去改它的版面';
+  @override
+  String srs_note_types_term_chip({required Object name}) => '查词按：${name}';
   @override
   String get srs_note_types_term_field => '词条字段';
   @override
@@ -372167,11 +370457,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_align_start => '靠左';
   @override
+  String get srs_visual_builtin_body =>
+      '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
+  @override
+  String get srs_visual_builtin_other_note =>
+      '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
+  @override
+  String get srs_visual_builtin_title => '这是内置模板，用代码写成';
+  @override
   String get srs_visual_convert_body =>
       '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
   @override
   String get srs_visual_convert_title => '这个模板是用代码写的';
   @override
@@ -377647,139 +375945,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
-  String get ai_agent_ask_action => 'Ask AI';
-  @override
-  String get ai_agent_attach_screen_text => 'Attach screen text';
-  @override
-  String get ai_agent_choice_cancel => 'None of these';
-  @override
-  String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
-  @override
-  String get ai_agent_confirm_approve => 'Run';
-  @override
-  String get ai_agent_confirm_approved => 'Confirmed';
-  @override
-  String get ai_agent_confirm_decline => 'Don\'t run';
-  @override
-  String get ai_agent_confirm_declined => 'Declined';
-  @override
-  String get ai_agent_confirm_install_title => 'Install this extension?';
-  @override
-  String get ai_agent_confirm_irreversible => 'This cannot be undone.';
-  @override
-  String get ai_agent_confirm_title => 'Confirm before running';
-  @override
-  String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
-  @override
-  String ai_agent_context_chip({required Object title}) => 'About: ${title}';
-  @override
-  String get ai_agent_details => 'Details';
-  @override
-  String get ai_agent_empty_examples =>
-      'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-  @override
-  String get ai_agent_empty_title => 'What should I do?';
-  @override
-  String get ai_agent_expand => 'Open as full page';
-  @override
-  String get ai_agent_history_by_user => 'Confirmed by you';
-  @override
-  String get ai_agent_history_empty =>
-      'The AI assistant hasn\'t changed anything yet.';
-  @override
-  String get ai_agent_history_resume => 'Continue conversation';
-  @override
-  String get ai_agent_history_summary =>
-      'Everything the AI assistant changed; undo any of it';
-  @override
-  String get ai_agent_history_title => 'AI action log';
-  @override
-  String get ai_agent_input_hint => 'Tell the assistant what to do…';
-  @override
-  String get ai_agent_new_session => 'New conversation';
-  @override
-  String get ai_agent_no_provider =>
-      'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-  @override
-  String get ai_agent_open_settings => 'Open settings';
-  @override
-  String ai_agent_remote_disabled({required Object device}) =>
-      'AI is turned off on ${device}.';
-  @override
-  String get ai_agent_remote_lost =>
-      'Lost the connection to the device running this conversation.';
-  @override
-  String ai_agent_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-  @override
-  String ai_agent_remote_not_ready({required Object device}) =>
-      '${device} isn\'t ready yet. Try again in a moment.';
-  @override
-  String ai_agent_remote_unreachable({required Object device}) =>
-      'Can\'t reach ${device}, the download execution device.';
-  @override
-  String ai_agent_remote_unsupported({required Object device}) =>
-      '${device} can\'t run the AI assistant. Update Fushi on that device.';
-  @override
-  String get ai_agent_risk_irreversible => 'Cannot be undone';
-  @override
-  String ai_agent_screen_text_chip({required Object n}) =>
-      'Screen text (${n} chars)';
-  @override
-  String get ai_agent_screen_text_empty => 'No text found on the screen';
-  @override
-  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
-  @override
-  String get ai_agent_screen_text_unavailable =>
-      'Text recognition isn\'t available on this device';
-  @override
-  String get ai_agent_send => 'Send';
-  @override
-  String ai_agent_session_summary({required Object n}) =>
-      '${n} changes in this conversation';
-  @override
-  String get ai_agent_stop => 'Stop';
-  @override
-  String get ai_agent_stop_cancelled => 'Stopped.';
-  @override
-  String ai_agent_stop_llm_error({required Object reason}) =>
-      'The AI request failed: ${reason}';
-  @override
-  String get ai_agent_stop_repeated_failure =>
-      'Stopped: the same step failed twice.';
-  @override
-  String get ai_agent_stop_token_budget =>
-      'Stopped: this conversation used up its token budget.';
-  @override
-  String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
-  @override
-  String get ai_agent_superseded => 'Changed again afterwards; left as is';
-  @override
-  String ai_agent_task_done({required Object op, required Object summary}) =>
-      'Finished: ${op} ${summary}';
-  @override
-  String ai_agent_task_failed({required Object op, required Object summary}) =>
-      'Did not finish: ${op} ${summary}';
-  @override
-  String get ai_agent_title => 'AI assistant';
-  @override
-  String ai_agent_tokens({required Object n}) => '${n} tokens';
-  @override
-  String get ai_agent_tool_declined => 'Not run';
-  @override
-  String ai_agent_tool_failed({required Object code}) => 'Failed: ${code}';
-  @override
-  String get ai_agent_tool_running => 'Running…';
-  @override
-  String get ai_agent_undo => 'Undo';
-  @override
-  String ai_agent_undo_all({required Object n}) => 'Undo all (${n})';
-  @override
-  String ai_agent_undo_failed({required Object reason}) =>
-      'Undo failed: ${reason}';
-  @override
-  String get ai_agent_undone => 'Undone';
-  @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
   String ai_assist_failed({required Object reason}) => 'AI 請求失敗：${reason}';
@@ -377815,11 +375980,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_acquire_summary =>
       '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
-  @override
-  String get ai_feature_agent => 'AI assistant';
-  @override
-  String get ai_feature_agent_summary =>
-      'Ask in one sentence and the assistant does it in the app; every change can be undone';
   @override
   String get ai_feature_assigned_unavailable => '所選提供商不可用（未配置完整或已停用）';
   @override
@@ -378029,14 +376189,6 @@ class _StringsZhHk extends _StringsEn {
   String ai_provider_test_failed({required Object reason}) => '測試失敗：${reason}';
   @override
   String get ai_provider_test_ok => '連接正常';
-  @override
-  String get ai_provider_tool_calling => 'Tool calling (AI assistant)';
-  @override
-  String get ai_provider_tool_calling_auto => 'Auto';
-  @override
-  String get ai_provider_tool_calling_off => 'Off (JSON fallback)';
-  @override
-  String get ai_provider_tool_calling_on => 'On';
   @override
   String get ai_providers_section => '提供商配置';
   @override
@@ -383770,8 +381922,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String file_count({required Object count}) => '${count} 個檔案';
   @override
-  String get floating_ball_action_ai => 'AI';
-  @override
   String get floating_ball_action_camera_ocr => '拍照查詞';
   @override
   String get floating_ball_action_clipboard => '剪貼簿查詞';
@@ -386002,9 +384152,6 @@ class _StringsZhHk extends _StringsEn {
   String get home_onboarding_card_dismiss => '不再顯示';
   @override
   String get home_onboarding_card_start => '繼續新手引導';
-  @override
-  String get home_panel_ai_agent_hint =>
-      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -392296,8 +390443,6 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
-  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
-  @override
   String get shortcut_action_global_scroll_line_down => '向下滾動一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滾動一行';
@@ -394075,7 +392220,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_field_rename => 'Rename field';
   @override
+  String get srs_note_types_field_term_tag => 'Lookup';
+  @override
+  String get srs_note_types_field_unused => 'Not on any card';
+  @override
   String get srs_note_types_fields => 'Fields';
+  @override
+  String srs_note_types_fields_count({required Object n}) => 'Fields (${n})';
+  @override
+  String get srs_note_types_fields_hint =>
+      'What each note holds; open a field to see where it shows on the card';
+  @override
+  String srs_note_types_flag_fields({required Object n}) =>
+      'Switch fields (${n})';
+  @override
+  String get srs_note_types_flag_fields_hint =>
+      'Put any character in one to turn that card style on';
   @override
   String get srs_note_types_front => 'Front template';
   @override
@@ -394101,6 +392261,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_name_reserved =>
       'This name is reserved by Anki (FrontSide, Tags, Deck…)';
   @override
+  String srs_note_types_overview_counts({
+    required Object fields,
+    required Object cards,
+  }) => '${fields} fields · ${cards} card types';
+  @override
   String get srs_note_types_preview => 'Preview';
   @override
   String get srs_note_types_preview_empty =>
@@ -394119,6 +392284,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_side_back => 'Back';
   @override
   String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_none => '(no fields)';
   @override
   String get srs_note_types_stock_basic => 'Basic';
   @override
@@ -394139,6 +392306,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_note_types_template_add => 'Add card type';
   @override
+  String srs_note_types_template_back_fields({required Object fields}) =>
+      'Back: ${fields}';
+  @override
   String get srs_note_types_template_cloze_single =>
       'Cloze note types have exactly one card type';
   @override
@@ -394155,6 +392325,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_note_types_template_error({required Object error}) =>
       'Template error: ${error}';
   @override
+  String srs_note_types_template_front_fields({required Object fields}) =>
+      'Front: ${fields}';
+  @override
   String get srs_note_types_template_last =>
       'A note type needs at least one card type';
   @override
@@ -394163,6 +392336,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_note_types_template_rename => 'Rename card type';
   @override
   String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_templates_hint =>
+      'Each template makes one card; open one to change its layout';
+  @override
+  String srs_note_types_term_chip({required Object name}) =>
+      'Lookup matches: ${name}';
   @override
   String get srs_note_types_term_field => 'Word field';
   @override
@@ -394940,11 +393119,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_visual_align_start => 'Left';
   @override
+  String get srs_visual_builtin_body =>
+      'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+  @override
+  String get srs_visual_builtin_fushi_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+  @override
+  String get srs_visual_builtin_other_note =>
+      'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+  @override
+  String get srs_visual_builtin_title =>
+      'This is a built-in template, written in code';
+  @override
   String get srs_visual_convert_body =>
       'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-  @override
-  String get srs_visual_convert_builtin_note =>
-      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
   @override
   String get srs_visual_convert_title => 'This template is written in code';
   @override
@@ -400532,126 +398720,6 @@ extension on _StringsEn {
         return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI did not return a usable result. Try describing it differently.';
       case 'ai_assist_failed':
@@ -400687,10 +398755,6 @@ extension on _StringsEn {
         return 'AI download';
       case 'ai_feature_acquire_summary':
         return 'Tell AI what you want — videos, or books, manga and games in Browse › Discover. It parses the request and picks matching works and versions; videos are then downloaded or subscribed, other media need your confirmation for each download.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Selected provider unavailable (incomplete or disabled)';
       case 'ai_feature_audiobook_cast':
@@ -400879,14 +398943,6 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Test failed: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connected';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Provider configuration';
       case 'ai_providers_section_summary':
@@ -406031,8 +404087,6 @@ extension on _StringsEn {
             'The ${field} field used ${secondField} as its fallback search term.';
       case 'file_count':
         return ({required Object count}) => '${count} files';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Photo lookup';
       case 'floating_ball_action_clipboard':
@@ -408087,8 +406141,6 @@ extension on _StringsEn {
         return 'Don\'t show again';
       case 'home_onboarding_card_start':
         return 'Continue setup';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Auto';
       case 'home_panel_mode_hidden':
@@ -413854,8 +411906,6 @@ extension on _StringsEn {
         return 'Bring to front and open lookup page';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scroll down one step';
       case 'shortcut_action_global_scroll_line_up':
@@ -415442,8 +413492,20 @@ extension on _StringsEn {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -415466,6 +413528,9 @@ extension on _StringsEn {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -415482,6 +413547,8 @@ extension on _StringsEn {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -415500,6 +413567,8 @@ extension on _StringsEn {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -415511,6 +413580,8 @@ extension on _StringsEn {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -415519,6 +413590,10 @@ extension on _StringsEn {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -416192,10 +414267,16 @@ extension on _StringsEn {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -421290,126 +419371,6 @@ extension on _StringsAr {
         return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
       case 'ai_assist_failed':
@@ -421445,10 +419406,6 @@ extension on _StringsAr {
         return 'تنزيل بالذكاء الاصطناعي';
       case 'ai_feature_acquire_summary':
         return 'أخبر الذكاء الاصطناعي بما تريد — فيديو، أو كتب ومانجا وألعاب في تصفح › اكتشاف. يحلّل الطلب ويختار الأعمال والنسخ المطابقة؛ ثم يُنزَّل الفيديو أو يُشترك فيه، أما الوسائط الأخرى فتحتاج إلى تأكيدك لكل تنزيل.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'المزود المحدد غير متاح (غير مكتمل أو معطّل)';
       case 'ai_feature_audiobook_cast':
@@ -421638,14 +419595,6 @@ extension on _StringsAr {
         return ({required Object reason}) => 'فشل الاختبار: ${reason}';
       case 'ai_provider_test_ok':
         return 'متصل';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'إعداد المزودين';
       case 'ai_providers_section_summary':
@@ -426789,8 +424738,6 @@ extension on _StringsAr {
             'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
       case 'file_count':
         return ({required Object count}) => '${count} ملفات';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'البحث بالتصوير';
       case 'floating_ball_action_clipboard':
@@ -428844,8 +426791,6 @@ extension on _StringsAr {
         return 'عدم الإظهار مجددًا';
       case 'home_onboarding_card_start':
         return 'متابعة الإعداد';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'تلقائي';
       case 'home_panel_mode_hidden':
@@ -434608,8 +432553,6 @@ extension on _StringsAr {
         return 'إحضار إلى الواجهة وفتح صفحة البحث';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'التمرير لأسفل خطوة واحدة';
       case 'shortcut_action_global_scroll_line_up':
@@ -436196,8 +434139,20 @@ extension on _StringsAr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -436220,6 +434175,9 @@ extension on _StringsAr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -436236,6 +434194,8 @@ extension on _StringsAr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -436254,6 +434214,8 @@ extension on _StringsAr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -436265,6 +434227,8 @@ extension on _StringsAr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -436273,6 +434237,10 @@ extension on _StringsAr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -436946,10 +434914,16 @@ extension on _StringsAr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -442042,126 +440016,6 @@ extension on _StringsDe {
         return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
       case 'ai_assist_failed':
@@ -442198,10 +440052,6 @@ extension on _StringsDe {
         return 'KI-Download';
       case 'ai_feature_acquire_summary':
         return 'Sag der KI, was du möchtest – Videos oder Bücher, Manga und Spiele unter Durchsuchen › Entdecken. Sie wertet die Anfrage aus und wählt passende Werke und Versionen; Videos werden dann heruntergeladen oder abonniert, bei anderen Medien musst du jeden Download bestätigen.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Gewählter Anbieter nicht verfügbar (unvollständig oder deaktiviert)';
       case 'ai_feature_audiobook_cast':
@@ -442390,14 +440240,6 @@ extension on _StringsDe {
         return ({required Object reason}) => 'Test fehlgeschlagen: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbunden';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Anbieterkonfiguration';
       case 'ai_providers_section_summary':
@@ -447573,8 +445415,6 @@ extension on _StringsDe {
             'Das Feld ${field} hat ${secondField} als Ersatz-Suchbegriff verwendet.';
       case 'file_count':
         return ({required Object count}) => '${count} Dateien';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Foto nachschlagen';
       case 'floating_ball_action_clipboard':
@@ -449630,8 +447470,6 @@ extension on _StringsDe {
         return 'Nicht mehr anzeigen';
       case 'home_onboarding_card_start':
         return 'Einrichtung fortsetzen';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -455418,8 +453256,6 @@ extension on _StringsDe {
         return 'In den Vordergrund holen und Nachschlageseite öffnen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Einen Schritt nach unten scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -457006,8 +454842,20 @@ extension on _StringsDe {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -457030,6 +454878,9 @@ extension on _StringsDe {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -457046,6 +454897,8 @@ extension on _StringsDe {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -457064,6 +454917,8 @@ extension on _StringsDe {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -457075,6 +454930,8 @@ extension on _StringsDe {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -457083,6 +454940,10 @@ extension on _StringsDe {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -457756,10 +455617,16 @@ extension on _StringsDe {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -462870,126 +460737,6 @@ extension on _StringsEs {
         return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
       case 'ai_assist_failed':
@@ -463026,10 +460773,6 @@ extension on _StringsEs {
         return 'Descarga con IA';
       case 'ai_feature_acquire_summary':
         return 'Dile a la IA lo que quieres: vídeos, o libros, manga y juegos en Explorar › Descubrir. Interpreta la solicitud y elige obras y versiones coincidentes; los vídeos se descargan o se suscriben, y los demás medios necesitan tu confirmación en cada descarga.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'El proveedor seleccionado no está disponible (incompleto o desactivado)';
       case 'ai_feature_audiobook_cast':
@@ -463218,14 +460961,6 @@ extension on _StringsEs {
         return ({required Object reason}) => 'La prueba falló: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Configuración de proveedores';
       case 'ai_providers_section_summary':
@@ -468391,8 +466126,6 @@ extension on _StringsEs {
             'El campo ${field} usó ${secondField} como término de búsqueda alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} archivos';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -470448,8 +468181,6 @@ extension on _StringsEs {
         return 'No volver a mostrar';
       case 'home_onboarding_card_start':
         return 'Continuar la configuración';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -476232,8 +473963,6 @@ extension on _StringsEs {
         return 'Traer al frente y abrir la página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Desplazar un paso hacia abajo';
       case 'shortcut_action_global_scroll_line_up':
@@ -477820,8 +475549,20 @@ extension on _StringsEs {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -477844,6 +475585,9 @@ extension on _StringsEs {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -477860,6 +475604,8 @@ extension on _StringsEs {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -477878,6 +475624,8 @@ extension on _StringsEs {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -477889,6 +475637,8 @@ extension on _StringsEs {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -477897,6 +475647,10 @@ extension on _StringsEs {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -478570,10 +476324,16 @@ extension on _StringsEs {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -483680,126 +481440,6 @@ extension on _StringsFr {
         return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
       case 'ai_assist_failed':
@@ -483836,10 +481476,6 @@ extension on _StringsFr {
         return 'Téléchargement par IA';
       case 'ai_feature_acquire_summary':
         return 'Dites à l\'IA ce que vous voulez — des vidéos, ou des livres, manga et jeux dans Parcourir › Découvrir. Elle analyse la demande et choisit les œuvres et versions correspondantes ; les vidéos sont ensuite téléchargées ou suivies par abonnement, les autres médias demandent votre confirmation pour chaque téléchargement.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Fournisseur sélectionné indisponible (incomplet ou désactivé)';
       case 'ai_feature_audiobook_cast':
@@ -484030,14 +481666,6 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Échec du test : ${reason}';
       case 'ai_provider_test_ok':
         return 'Connecté';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Configuration des fournisseurs';
       case 'ai_providers_section_summary':
@@ -489214,8 +486842,6 @@ extension on _StringsFr {
             'Le champ ${field} a utilisé ${secondField} comme terme de recherche de secours.';
       case 'file_count':
         return ({required Object count}) => '${count} fichiers';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Recherche par photo';
       case 'floating_ball_action_clipboard':
@@ -491272,8 +488898,6 @@ extension on _StringsFr {
         return 'Ne plus afficher';
       case 'home_onboarding_card_start':
         return 'Reprendre la configuration';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatique';
       case 'home_panel_mode_hidden':
@@ -497057,8 +494681,6 @@ extension on _StringsFr {
         return 'Mettre au premier plan et ouvrir la page de recherche';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Défiler d\'un cran vers le bas';
       case 'shortcut_action_global_scroll_line_up':
@@ -498645,8 +496267,20 @@ extension on _StringsFr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -498669,6 +496303,9 @@ extension on _StringsFr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -498685,6 +496322,8 @@ extension on _StringsFr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -498703,6 +496342,8 @@ extension on _StringsFr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -498714,6 +496355,8 @@ extension on _StringsFr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -498722,6 +496365,10 @@ extension on _StringsFr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -499395,10 +497042,16 @@ extension on _StringsFr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -504508,126 +502161,6 @@ extension on _StringsId {
         return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
       case 'ai_assist_failed':
@@ -504663,10 +502196,6 @@ extension on _StringsId {
         return 'Unduhan AI';
       case 'ai_feature_acquire_summary':
         return 'Beri tahu AI apa yang Anda inginkan — video, atau buku, manga, dan game di Jelajahi › Temukan. AI mengurai permintaan dan memilih karya dan versi yang cocok; video lalu diunduh atau dilanggan, media lain memerlukan konfirmasi Anda untuk setiap unduhan.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Penyedia terpilih tidak tersedia (tidak lengkap atau dinonaktifkan)';
       case 'ai_feature_audiobook_cast':
@@ -504855,14 +502384,6 @@ extension on _StringsId {
         return ({required Object reason}) => 'Pengujian gagal: ${reason}';
       case 'ai_provider_test_ok':
         return 'Terhubung';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Konfigurasi penyedia';
       case 'ai_providers_section_summary':
@@ -510018,8 +507539,6 @@ extension on _StringsId {
             'Field ${field} menggunakan ${secondField} sebagai kata pencarian cadangan.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Pencarian foto';
       case 'floating_ball_action_clipboard':
@@ -512074,8 +509593,6 @@ extension on _StringsId {
         return 'Jangan tampilkan lagi';
       case 'home_onboarding_card_start':
         return 'Lanjutkan penyiapan';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatis';
       case 'home_panel_mode_hidden':
@@ -517842,8 +515359,6 @@ extension on _StringsId {
         return 'Bawa ke depan dan buka halaman pencarian';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Gulir turun satu langkah';
       case 'shortcut_action_global_scroll_line_up':
@@ -519430,8 +516945,20 @@ extension on _StringsId {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -519454,6 +516981,9 @@ extension on _StringsId {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -519470,6 +517000,8 @@ extension on _StringsId {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -519488,6 +517020,8 @@ extension on _StringsId {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -519499,6 +517033,8 @@ extension on _StringsId {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -519507,6 +517043,10 @@ extension on _StringsId {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -520180,10 +517720,16 @@ extension on _StringsId {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -525280,126 +522826,6 @@ extension on _StringsIt {
         return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
       case 'ai_assist_failed':
@@ -525436,10 +522862,6 @@ extension on _StringsIt {
         return 'Download con IA';
       case 'ai_feature_acquire_summary':
         return 'Dì all\'IA cosa vuoi — video, oppure libri, manga e giochi in Sfoglia › Scopri. Analizza la richiesta e sceglie opere e versioni corrispondenti; i video vengono poi scaricati o seguiti con un\'iscrizione, mentre per gli altri media serve la tua conferma a ogni download.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Il provider selezionato non è disponibile (incompleto o disattivato)';
       case 'ai_feature_audiobook_cast':
@@ -525628,14 +523050,6 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Prova non riuscita: ${reason}';
       case 'ai_provider_test_ok':
         return 'Connesso';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Configurazione dei provider';
       case 'ai_providers_section_summary':
@@ -530800,8 +528214,6 @@ extension on _StringsIt {
             'Il campo ${field} ha usato ${secondField} come termine di ricerca di riserva.';
       case 'file_count':
         return ({required Object count}) => '${count} file';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Ricerca da foto';
       case 'floating_ball_action_clipboard':
@@ -532857,8 +530269,6 @@ extension on _StringsIt {
         return 'Non mostrare più';
       case 'home_onboarding_card_start':
         return 'Continua la configurazione';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatico';
       case 'home_panel_mode_hidden':
@@ -538636,8 +536046,6 @@ extension on _StringsIt {
         return 'Porta in primo piano e apri la pagina di ricerca';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scorri in basso di un passo';
       case 'shortcut_action_global_scroll_line_up':
@@ -540224,8 +537632,20 @@ extension on _StringsIt {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -540248,6 +537668,9 @@ extension on _StringsIt {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -540264,6 +537687,8 @@ extension on _StringsIt {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -540282,6 +537707,8 @@ extension on _StringsIt {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -540293,6 +537720,8 @@ extension on _StringsIt {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -540301,6 +537730,10 @@ extension on _StringsIt {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -540974,10 +538407,16 @@ extension on _StringsIt {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -546088,126 +543527,6 @@ extension on _StringsJa {
         return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -546242,10 +543561,6 @@ extension on _StringsJa {
         return 'AI ダウンロード';
       case 'ai_feature_acquire_summary':
         return '欲しいものを AI に伝えます：動画、または「ブラウズ › 発見」の小説・漫画・ゲーム。要望を解析し、一致する作品とバージョンから選びます。動画はそのままダウンロードまたは購読し、それ以外は毎回ダウンロード前に確認します。';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '選択したプロバイダーを利用できません（設定が不完全、または無効）';
       case 'ai_feature_audiobook_cast':
@@ -546434,14 +543749,6 @@ extension on _StringsJa {
         return ({required Object reason}) => 'テストに失敗しました：${reason}';
       case 'ai_provider_test_ok':
         return '接続しました';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'プロバイダー設定';
       case 'ai_providers_section_summary':
@@ -551563,8 +548870,6 @@ extension on _StringsJa {
             '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
       case 'file_count':
         return ({required Object count}) => '${count} ファイル';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '撮影して検索';
       case 'floating_ball_action_clipboard':
@@ -553619,8 +550924,6 @@ extension on _StringsJa {
         return '今後表示しない';
       case 'home_onboarding_card_start':
         return 'セットアップを続ける';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -559364,8 +556667,6 @@ extension on _StringsJa {
         return '前面に出して辞書検索ページを開く';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '1行下にスクロール';
       case 'shortcut_action_global_scroll_line_up':
@@ -560952,8 +558253,20 @@ extension on _StringsJa {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -560976,6 +558289,9 @@ extension on _StringsJa {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -560992,6 +558308,8 @@ extension on _StringsJa {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -561010,6 +558328,8 @@ extension on _StringsJa {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -561021,6 +558341,8 @@ extension on _StringsJa {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -561029,6 +558351,10 @@ extension on _StringsJa {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -561702,10 +559028,16 @@ extension on _StringsJa {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -566761,126 +564093,6 @@ extension on _StringsKo {
         return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
       case 'ai_assist_failed':
@@ -566915,10 +564127,6 @@ extension on _StringsKo {
         return 'AI 다운로드';
       case 'ai_feature_acquire_summary':
         return '원하는 것을 AI에게 알려 주세요. 비디오, 또는 찾아보기 › 발견의 책, 만화, 게임이 해당됩니다. 요청을 분석해 알맞은 작품과 버전을 고르며, 비디오는 다운로드하거나 구독하고 다른 미디어는 다운로드마다 확인이 필요합니다.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '선택한 제공자를 사용할 수 없음(설정 미완료 또는 비활성화됨)';
       case 'ai_feature_audiobook_cast':
@@ -567107,14 +564315,6 @@ extension on _StringsKo {
         return ({required Object reason}) => '테스트 실패: ${reason}';
       case 'ai_provider_test_ok':
         return '연결됨';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return '제공자 설정';
       case 'ai_providers_section_summary':
@@ -572240,8 +569440,6 @@ extension on _StringsKo {
             '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
       case 'file_count':
         return ({required Object count}) => '${count}개 파일';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '사진으로 검색';
       case 'floating_ball_action_clipboard':
@@ -574295,8 +571493,6 @@ extension on _StringsKo {
         return '다시 표시 안 함';
       case 'home_onboarding_card_start':
         return '설정 계속하기';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '자동';
       case 'home_panel_mode_hidden':
@@ -580041,8 +577237,6 @@ extension on _StringsKo {
         return '앞으로 가져와 검색 페이지 열기';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '한 단계 아래로 스크롤';
       case 'shortcut_action_global_scroll_line_up':
@@ -581629,8 +578823,20 @@ extension on _StringsKo {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -581653,6 +578859,9 @@ extension on _StringsKo {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -581669,6 +578878,8 @@ extension on _StringsKo {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -581687,6 +578898,8 @@ extension on _StringsKo {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -581698,6 +578911,8 @@ extension on _StringsKo {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -581706,6 +578921,10 @@ extension on _StringsKo {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -582379,10 +579598,16 @@ extension on _StringsKo {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -587450,126 +584675,6 @@ extension on _StringsNl {
         return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
       case 'ai_assist_failed':
@@ -587605,10 +584710,6 @@ extension on _StringsNl {
         return 'AI-download';
       case 'ai_feature_acquire_summary':
         return 'Vertel de AI wat je wilt — video\'s, of boeken, manga en games in Bladeren › Ontdekken. Het verzoek wordt geanalyseerd en passende werken en versies worden gekozen; video\'s worden daarna gedownload of geabonneerd, bij andere media is voor elke download jouw bevestiging nodig.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Geselecteerde provider niet beschikbaar (onvolledig of uitgeschakeld)';
       case 'ai_feature_audiobook_cast':
@@ -587797,14 +584898,6 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Test mislukt: ${reason}';
       case 'ai_provider_test_ok':
         return 'Verbonden';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Providerconfiguratie';
       case 'ai_providers_section_summary':
@@ -592968,8 +590061,6 @@ extension on _StringsNl {
             'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
       case 'file_count':
         return ({required Object count}) => '${count} bestanden';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Opzoeken via foto';
       case 'floating_ball_action_clipboard':
@@ -595024,8 +592115,6 @@ extension on _StringsNl {
         return 'Niet meer tonen';
       case 'home_onboarding_card_start':
         return 'Instellen hervatten';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -600808,8 +597897,6 @@ extension on _StringsNl {
         return 'Naar voren halen en opzoekpagina openen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Één stap omlaag scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -602396,8 +599483,20 @@ extension on _StringsNl {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -602420,6 +599519,9 @@ extension on _StringsNl {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -602436,6 +599538,8 @@ extension on _StringsNl {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -602454,6 +599558,8 @@ extension on _StringsNl {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -602465,6 +599571,8 @@ extension on _StringsNl {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -602473,6 +599581,10 @@ extension on _StringsNl {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -603146,10 +600258,16 @@ extension on _StringsNl {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -608253,126 +605371,6 @@ extension on _StringsPtBr {
         return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
       case 'ai_assist_failed':
@@ -608409,10 +605407,6 @@ extension on _StringsPtBr {
         return 'Download com IA';
       case 'ai_feature_acquire_summary':
         return 'Diga à IA o que você quer — vídeos, ou livros, mangás e jogos em Navegar › Descobrir. Ela interpreta o pedido e escolhe obras e versões correspondentes; os vídeos são então baixados ou assinados, e as outras mídias precisam da sua confirmação a cada download.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Provedor selecionado indisponível (incompleto ou desativado)';
       case 'ai_feature_audiobook_cast':
@@ -608601,14 +605595,6 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Falha no teste: ${reason}';
       case 'ai_provider_test_ok':
         return 'Conectado';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Configuração de provedores';
       case 'ai_providers_section_summary':
@@ -613770,8 +610756,6 @@ extension on _StringsPtBr {
             'O campo ${field} usou ${secondField} como termo de busca alternativo.';
       case 'file_count':
         return ({required Object count}) => '${count} arquivos';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Consulta por foto';
       case 'floating_ball_action_clipboard':
@@ -615826,8 +612810,6 @@ extension on _StringsPtBr {
         return 'Não mostrar novamente';
       case 'home_onboarding_card_start':
         return 'Continuar a configuração';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -621606,8 +618588,6 @@ extension on _StringsPtBr {
         return 'Trazer para frente e abrir a página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Rolar uma etapa para baixo';
       case 'shortcut_action_global_scroll_line_up':
@@ -623194,8 +620174,20 @@ extension on _StringsPtBr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -623218,6 +620210,9 @@ extension on _StringsPtBr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -623234,6 +620229,8 @@ extension on _StringsPtBr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -623252,6 +620249,8 @@ extension on _StringsPtBr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -623263,6 +620262,8 @@ extension on _StringsPtBr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -623271,6 +620272,10 @@ extension on _StringsPtBr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -623944,10 +620949,16 @@ extension on _StringsPtBr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -629048,126 +626059,6 @@ extension on _StringsRu {
         return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
       case 'ai_assist_failed':
@@ -629202,10 +626093,6 @@ extension on _StringsRu {
         return 'ИИ-загрузка';
       case 'ai_feature_acquire_summary':
         return 'Скажите ИИ, что вам нужно — видео либо книги, мангу и игры в разделе «Обзор › Поиск». Он разбирает запрос и подбирает подходящие произведения и версии; видео затем скачиваются или оформляется подписка, для остальных медиа каждая загрузка требует вашего подтверждения.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Выбранный провайдер недоступен (не настроен полностью или отключён)';
       case 'ai_feature_audiobook_cast':
@@ -629394,14 +626281,6 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Проверка не удалась: ${reason}';
       case 'ai_provider_test_ok':
         return 'Подключено';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Настройка провайдеров';
       case 'ai_providers_section_summary':
@@ -634572,8 +631451,6 @@ extension on _StringsRu {
             'Поле ${field} использовало ${secondField} в качестве резервного запроса.';
       case 'file_count':
         return ({required Object count}) => '${count} файлов';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Поиск по фото';
       case 'floating_ball_action_clipboard':
@@ -636628,8 +633505,6 @@ extension on _StringsRu {
         return 'Больше не показывать';
       case 'home_onboarding_card_start':
         return 'Продолжить настройку';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Авто';
       case 'home_panel_mode_hidden':
@@ -642408,8 +639283,6 @@ extension on _StringsRu {
         return 'Вывести на передний план и открыть страницу поиска';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Прокрутить вниз на один шаг';
       case 'shortcut_action_global_scroll_line_up':
@@ -643996,8 +640869,20 @@ extension on _StringsRu {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -644020,6 +640905,9 @@ extension on _StringsRu {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -644036,6 +640924,8 @@ extension on _StringsRu {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -644054,6 +640944,8 @@ extension on _StringsRu {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -644065,6 +640957,8 @@ extension on _StringsRu {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -644073,6 +640967,10 @@ extension on _StringsRu {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -644746,10 +641644,16 @@ extension on _StringsRu {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -649848,126 +646752,6 @@ extension on _StringsTh {
         return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
       case 'ai_assist_failed':
@@ -650003,10 +646787,6 @@ extension on _StringsTh {
         return 'ดาวน์โหลดด้วย AI';
       case 'ai_feature_acquire_summary':
         return 'บอก AI ว่าคุณต้องการอะไร — วิดีโอ หรือหนังสือ มังงะ และเกมใน เรียกดู › ค้นพบ AI จะแยกคำขอและเลือกผลงานและเวอร์ชันที่ตรงกัน จากนั้นวิดีโอจะถูกดาวน์โหลดหรือสมัครรับ ส่วนสื่ออื่นต้องให้คุณยืนยันทุกการดาวน์โหลด';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'ผู้ให้บริการที่เลือกไม่พร้อมใช้งาน (ตั้งค่าไม่ครบหรือปิดอยู่)';
       case 'ai_feature_audiobook_cast':
@@ -650195,14 +646975,6 @@ extension on _StringsTh {
         return ({required Object reason}) => 'ทดสอบไม่สำเร็จ: ${reason}';
       case 'ai_provider_test_ok':
         return 'เชื่อมต่อแล้ว';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'การตั้งค่าผู้ให้บริการ';
       case 'ai_providers_section_summary':
@@ -655348,8 +652120,6 @@ extension on _StringsTh {
             'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
       case 'file_count':
         return ({required Object count}) => '${count} ไฟล์';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'ค้นหาจากภาพถ่าย';
       case 'floating_ball_action_clipboard':
@@ -657404,8 +654174,6 @@ extension on _StringsTh {
         return 'ไม่ต้องแสดงอีก';
       case 'home_onboarding_card_start':
         return 'ตั้งค่าต่อ';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'อัตโนมัติ';
       case 'home_panel_mode_hidden':
@@ -663170,8 +659938,6 @@ extension on _StringsTh {
         return 'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'เลื่อนลงหนึ่งขั้น';
       case 'shortcut_action_global_scroll_line_up':
@@ -664758,8 +661524,20 @@ extension on _StringsTh {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -664782,6 +661560,9 @@ extension on _StringsTh {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -664798,6 +661579,8 @@ extension on _StringsTh {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -664816,6 +661599,8 @@ extension on _StringsTh {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -664827,6 +661612,8 @@ extension on _StringsTh {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -664835,6 +661622,10 @@ extension on _StringsTh {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -665508,10 +662299,16 @@ extension on _StringsTh {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -670604,126 +667401,6 @@ extension on _StringsTr {
         return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
       case 'ai_assist_failed':
@@ -670759,10 +667436,6 @@ extension on _StringsTr {
         return 'Yapay zeka ile indirme';
       case 'ai_feature_acquire_summary':
         return 'Yapay zekaya ne istediğinizi söyleyin — videolar veya Gözat › Keşfet\'teki kitaplar, manga ve oyunlar. İsteği ayrıştırır ve eşleşen eserleri ile sürümleri seçer; videolar ardından indirilir veya abone olunur, diğer medyalar her indirme için onayınızı ister.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Seçilen sağlayıcı kullanılamıyor (eksik veya devre dışı)';
       case 'ai_feature_audiobook_cast':
@@ -670952,14 +667625,6 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Test başarısız oldu: ${reason}';
       case 'ai_provider_test_ok':
         return 'Bağlandı';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Sağlayıcı yapılandırması';
       case 'ai_providers_section_summary':
@@ -676121,8 +672786,6 @@ extension on _StringsTr {
             '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
       case 'file_count':
         return ({required Object count}) => '${count} dosya';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Fotoğrafla arama';
       case 'floating_ball_action_clipboard':
@@ -678178,8 +674841,6 @@ extension on _StringsTr {
         return 'Bir daha gösterme';
       case 'home_onboarding_card_start':
         return 'Kuruluma devam et';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatik';
       case 'home_panel_mode_hidden':
@@ -683950,8 +680611,6 @@ extension on _StringsTr {
         return 'Öne getir ve arama sayfasını aç';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Bir adım aşağı kaydır';
       case 'shortcut_action_global_scroll_line_up':
@@ -685538,8 +682197,20 @@ extension on _StringsTr {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -685562,6 +682233,9 @@ extension on _StringsTr {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -685578,6 +682252,8 @@ extension on _StringsTr {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -685596,6 +682272,8 @@ extension on _StringsTr {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -685607,6 +682285,8 @@ extension on _StringsTr {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -685615,6 +682295,10 @@ extension on _StringsTr {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -686288,10 +682972,16 @@ extension on _StringsTr {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -691391,126 +688081,6 @@ extension on _StringsVi {
         return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
       case 'ai_assist_failed':
@@ -691545,10 +688115,6 @@ extension on _StringsVi {
         return 'Tải bằng AI';
       case 'ai_feature_acquire_summary':
         return 'Hãy nói với AI điều bạn muốn — video, hoặc sách, manga và game trong Duyệt › Khám phá. Nó phân tích yêu cầu và chọn tác phẩm cùng phiên bản phù hợp; video sau đó được tải hoặc đăng ký, còn các loại phương tiện khác cần bạn xác nhận cho từng lượt tải.';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return 'Nhà cung cấp đã chọn không khả dụng (chưa đầy đủ hoặc bị tắt)';
       case 'ai_feature_audiobook_cast':
@@ -691737,14 +688303,6 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Kiểm tra thất bại: ${reason}';
       case 'ai_provider_test_ok':
         return 'Đã kết nối';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return 'Cấu hình nhà cung cấp';
       case 'ai_providers_section_summary':
@@ -696901,8 +693459,6 @@ extension on _StringsVi {
             'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
       case 'file_count':
         return ({required Object count}) => '${count} tệp';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return 'Tra từ bằng ảnh chụp';
       case 'floating_ball_action_clipboard':
@@ -698957,8 +695513,6 @@ extension on _StringsVi {
         return 'Không hiển thị lại';
       case 'home_onboarding_card_start':
         return 'Tiếp tục thiết lập';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Tự động';
       case 'home_panel_mode_hidden':
@@ -704725,8 +701279,6 @@ extension on _StringsVi {
         return 'Đưa lên trước và mở trang tra từ';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Cuộn xuống một bước';
       case 'shortcut_action_global_scroll_line_up':
@@ -706313,8 +702865,20 @@ extension on _StringsVi {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -706337,6 +702901,9 @@ extension on _StringsVi {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -706353,6 +702920,8 @@ extension on _StringsVi {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -706371,6 +702940,8 @@ extension on _StringsVi {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -706382,6 +702953,8 @@ extension on _StringsVi {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -706390,6 +702963,10 @@ extension on _StringsVi {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -707063,10 +703640,16 @@ extension on _StringsVi {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
@@ -712160,124 +708743,6 @@ extension on _StringsZhCn {
         return '卷';
       case 'add_to_collection':
         return '加入合集';
-      case 'ai_agent_ask_action':
-        return '问 AI';
-      case 'ai_agent_attach_screen_text':
-        return '附上屏幕文字';
-      case 'ai_agent_choice_cancel':
-        return '都不是';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => '已选：${label}';
-      case 'ai_agent_confirm_approve':
-        return '执行';
-      case 'ai_agent_confirm_approved':
-        return '已确认';
-      case 'ai_agent_confirm_decline':
-        return '不执行';
-      case 'ai_agent_confirm_declined':
-        return '已拒绝';
-      case 'ai_agent_confirm_install_title':
-        return '要安装这个扩展吗？';
-      case 'ai_agent_confirm_irreversible':
-        return '这一步无法撤销。';
-      case 'ai_agent_confirm_title':
-        return '执行前请确认';
-      case 'ai_agent_confirm_undoable':
-        return '执行后可以撤销。';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => '关于：${title}';
-      case 'ai_agent_details':
-        return '详情';
-      case 'ai_agent_empty_examples':
-        return '例如：「把字幕调大」「给这集找字幕」「装一个能看 X 的源」';
-      case 'ai_agent_empty_title':
-        return '要我做什么？';
-      case 'ai_agent_expand':
-        return '展开成整页';
-      case 'ai_agent_history_by_user':
-        return '经你确认';
-      case 'ai_agent_history_empty':
-        return 'AI 助手还没做过改动。';
-      case 'ai_agent_history_resume':
-        return '继续这场对话';
-      case 'ai_agent_history_summary':
-        return 'AI 助手做过的所有改动，可逐条撤销';
-      case 'ai_agent_history_title':
-        return 'AI 操作记录';
-      case 'ai_agent_input_hint':
-        return '告诉 AI 要做什么…';
-      case 'ai_agent_new_session':
-        return '新对话';
-      case 'ai_agent_no_provider':
-        return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
-      case 'ai_agent_open_settings':
-        return '去设置';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => '${device} 上关闭了 AI 功能。';
-      case 'ai_agent_remote_lost':
-        return '与执行这场对话的设备断开了连接。';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) => '${device} 还没准备好，请稍后再试。';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) => '连不上下载执行设备 ${device}。';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
-      case 'ai_agent_risk_irreversible':
-        return '不可撤销';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => '屏幕文字（${n} 字）';
-      case 'ai_agent_screen_text_empty':
-        return '屏幕上没有识别到文字';
-      case 'ai_agent_screen_text_failed':
-        return '读取屏幕文字失败';
-      case 'ai_agent_screen_text_unavailable':
-        return '本机的文字识别不可用';
-      case 'ai_agent_send':
-        return '发送';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '本次对话做了 ${n} 处改动';
-      case 'ai_agent_stop':
-        return '停止';
-      case 'ai_agent_stop_cancelled':
-        return '已停止。';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'AI 请求失败：${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return '已停止：同一步连续失败两次。';
-      case 'ai_agent_stop_token_budget':
-        return '已停止：本次对话的 token 预算已用完。';
-      case 'ai_agent_stop_tool_limit':
-        return '已停止：这一轮步骤太多。';
-      case 'ai_agent_superseded':
-        return '之后又被改过，保留现状';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            '已完成：${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            '未完成：${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI 助手';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return '未执行';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => '失败：${code}';
-      case 'ai_agent_tool_running':
-        return '执行中…';
-      case 'ai_agent_undo':
-        return '撤销';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => '全部撤销（${n}）';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => '撤销失败：${reason}';
-      case 'ai_agent_undone':
-        return '已撤销';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -712312,10 +708777,6 @@ extension on _StringsZhCn {
         return 'AI 下载';
       case 'ai_feature_acquire_summary':
         return '跟 AI 说想要什么：视频，或在「浏览 › 发现」里的小说、漫画、游戏。它解析你的要求、在匹配的作品与版本里选择；视频随后下载或订阅，其它媒体每次下载由你确认。';
-      case 'ai_feature_agent':
-        return 'AI 助手';
-      case 'ai_feature_agent_summary':
-        return '一句话让 AI 代办 app 里的操作；每个改动都能撤销';
       case 'ai_feature_assigned_unavailable':
         return '所选提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -712504,14 +708965,6 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '测试失败：${reason}';
       case 'ai_provider_test_ok':
         return '连接正常';
-      case 'ai_provider_tool_calling':
-        return '工具调用（AI 助手）';
-      case 'ai_provider_tool_calling_auto':
-        return '自动';
-      case 'ai_provider_tool_calling_off':
-        return '关（JSON 降级）';
-      case 'ai_provider_tool_calling_on':
-        return '开';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
@@ -717572,8 +714025,6 @@ extension on _StringsZhCn {
             '${field} 字段使用 ${secondField} 作为备选搜索词。';
       case 'file_count':
         return ({required Object count}) => '${count} 个文件';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查词';
       case 'floating_ball_action_clipboard':
@@ -719625,8 +716076,6 @@ extension on _StringsZhCn {
         return '不再显示';
       case 'home_onboarding_card_start':
         return '继续新手引导';
-      case 'home_panel_ai_agent_hint':
-        return '自动：给 AI 助手指派了提供商后显示';
       case 'home_panel_mode_auto':
         return '自动';
       case 'home_panel_mode_hidden':
@@ -725340,8 +721789,6 @@ extension on _StringsZhCn {
         return '唤起主窗并打开查词页';
       case 'shortcut_action_global_external_screen_ocr':
         return '截屏识字（全局）';
-      case 'shortcut_action_global_open_ai_assistant':
-        return '打开 AI 助手';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滚动一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -726900,8 +723347,20 @@ extension on _StringsZhCn {
         return '字段名';
       case 'srs_note_types_field_rename':
         return '重命名字段';
+      case 'srs_note_types_field_term_tag':
+        return '查词用';
+      case 'srs_note_types_field_unused':
+        return '没上卡面';
       case 'srs_note_types_fields':
         return '字段';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => '字段（${n}）';
+      case 'srs_note_types_fields_hint':
+        return '每条笔记要填的内容；点开字段能看到它在卡面的位置';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => '开关字段（${n}）';
+      case 'srs_note_types_flag_fields_hint':
+        return '填任意字符即开启对应的卡面样式';
       case 'srs_note_types_front':
         return '正面模板';
       case 'srs_note_types_insert_field':
@@ -726924,6 +723383,9 @@ extension on _StringsZhCn {
         return '字段名不能包含 : { } "，也不能以 # /  开头';
       case 'srs_note_types_name_reserved':
         return '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_preview':
         return '预览';
       case 'srs_note_types_preview_empty':
@@ -726940,6 +723402,8 @@ extension on _StringsZhCn {
         return '背面';
       case 'srs_note_types_side_front':
         return '正面';
+      case 'srs_note_types_side_none':
+        return '（没有字段）';
       case 'srs_note_types_stock_basic':
         return '问答';
       case 'srs_note_types_stock_cloze':
@@ -726958,6 +723422,8 @@ extension on _StringsZhCn {
         }) => '${notes} 条笔记 · ${fields} 个字段 · ${cards} 种卡片';
       case 'srs_note_types_template_add':
         return '添加卡片模板';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => '背面：${fields}';
       case 'srs_note_types_template_cloze_single':
         return '填空类型只有一个卡片模板';
       case 'srs_note_types_template_delete':
@@ -726969,6 +723435,8 @@ extension on _StringsZhCn {
         return '编辑卡片模板';
       case 'srs_note_types_template_error':
         return ({required Object error}) => '模板有错误：${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => '正面：${fields}';
       case 'srs_note_types_template_last':
         return '笔记类型至少要有一个卡片模板';
       case 'srs_note_types_template_name':
@@ -726977,6 +723445,10 @@ extension on _StringsZhCn {
         return '重命名卡片模板';
       case 'srs_note_types_templates':
         return '卡片模板';
+      case 'srs_note_types_templates_hint':
+        return '每个模板生成一张卡；点进去改它的版面';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => '查词按：${name}';
       case 'srs_note_types_term_field':
         return '词条字段';
       case 'srs_note_types_term_field_hint':
@@ -727646,10 +724118,16 @@ extension on _StringsZhCn {
         return '靠右';
       case 'srs_visual_align_start':
         return '靠左';
+      case 'srs_visual_builtin_body':
+        return '它用到了卡型开关（单词卡 / 句子卡 / 点击卡 / 听音卡）和脚本，可视化编辑器画不出来，所以这里显示的是代码。没改过的内置模板会随 Fushi 一起更新。';
+      case 'srs_visual_builtin_fushi_note':
+        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用更新，复习时也不再使用 Fushi 原生卡面。';
+      case 'srs_visual_builtin_other_note':
+        return '按字段生成并保存后，这个模板就成了你自己的版本：不再随应用和上游模板更新。';
+      case 'srs_visual_builtin_title':
+        return '这是内置模板，用代码写成';
       case 'srs_visual_convert_body':
         return '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
-      case 'srs_visual_convert_builtin_note':
-        return '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
       case 'srs_visual_convert_title':
         return '这个模板是用代码写的';
       case 'srs_visual_delete':
@@ -732675,126 +729153,6 @@ extension on _StringsZhHk {
         return 'Volume';
       case 'add_to_collection':
         return '加入合集';
-      case 'ai_agent_ask_action':
-        return 'Ask AI';
-      case 'ai_agent_attach_screen_text':
-        return 'Attach screen text';
-      case 'ai_agent_choice_cancel':
-        return 'None of these';
-      case 'ai_agent_choice_picked':
-        return ({required Object label}) => 'Picked: ${label}';
-      case 'ai_agent_confirm_approve':
-        return 'Run';
-      case 'ai_agent_confirm_approved':
-        return 'Confirmed';
-      case 'ai_agent_confirm_decline':
-        return 'Don\'t run';
-      case 'ai_agent_confirm_declined':
-        return 'Declined';
-      case 'ai_agent_confirm_install_title':
-        return 'Install this extension?';
-      case 'ai_agent_confirm_irreversible':
-        return 'This cannot be undone.';
-      case 'ai_agent_confirm_title':
-        return 'Confirm before running';
-      case 'ai_agent_confirm_undoable':
-        return 'You can undo it afterwards.';
-      case 'ai_agent_context_chip':
-        return ({required Object title}) => 'About: ${title}';
-      case 'ai_agent_details':
-        return 'Details';
-      case 'ai_agent_empty_examples':
-        return 'For example: “Make subtitles bigger”, “Find subtitles for this episode”, “Install a source that has X”';
-      case 'ai_agent_empty_title':
-        return 'What should I do?';
-      case 'ai_agent_expand':
-        return 'Open as full page';
-      case 'ai_agent_history_by_user':
-        return 'Confirmed by you';
-      case 'ai_agent_history_empty':
-        return 'The AI assistant hasn\'t changed anything yet.';
-      case 'ai_agent_history_resume':
-        return 'Continue conversation';
-      case 'ai_agent_history_summary':
-        return 'Everything the AI assistant changed; undo any of it';
-      case 'ai_agent_history_title':
-        return 'AI action log';
-      case 'ai_agent_input_hint':
-        return 'Tell the assistant what to do…';
-      case 'ai_agent_new_session':
-        return 'New conversation';
-      case 'ai_agent_no_provider':
-        return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
-      case 'ai_agent_open_settings':
-        return 'Open settings';
-      case 'ai_agent_remote_disabled':
-        return ({required Object device}) => 'AI is turned off on ${device}.';
-      case 'ai_agent_remote_lost':
-        return 'Lost the connection to the device running this conversation.';
-      case 'ai_agent_remote_no_provider':
-        return ({required Object device}) =>
-            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
-      case 'ai_agent_remote_not_ready':
-        return ({required Object device}) =>
-            '${device} isn\'t ready yet. Try again in a moment.';
-      case 'ai_agent_remote_unreachable':
-        return ({required Object device}) =>
-            'Can\'t reach ${device}, the download execution device.';
-      case 'ai_agent_remote_unsupported':
-        return ({required Object device}) =>
-            '${device} can\'t run the AI assistant. Update Fushi on that device.';
-      case 'ai_agent_risk_irreversible':
-        return 'Cannot be undone';
-      case 'ai_agent_screen_text_chip':
-        return ({required Object n}) => 'Screen text (${n} chars)';
-      case 'ai_agent_screen_text_empty':
-        return 'No text found on the screen';
-      case 'ai_agent_screen_text_failed':
-        return 'Couldn\'t read the screen text';
-      case 'ai_agent_screen_text_unavailable':
-        return 'Text recognition isn\'t available on this device';
-      case 'ai_agent_send':
-        return 'Send';
-      case 'ai_agent_session_summary':
-        return ({required Object n}) => '${n} changes in this conversation';
-      case 'ai_agent_stop':
-        return 'Stop';
-      case 'ai_agent_stop_cancelled':
-        return 'Stopped.';
-      case 'ai_agent_stop_llm_error':
-        return ({required Object reason}) => 'The AI request failed: ${reason}';
-      case 'ai_agent_stop_repeated_failure':
-        return 'Stopped: the same step failed twice.';
-      case 'ai_agent_stop_token_budget':
-        return 'Stopped: this conversation used up its token budget.';
-      case 'ai_agent_stop_tool_limit':
-        return 'Stopped: too many steps in one turn.';
-      case 'ai_agent_superseded':
-        return 'Changed again afterwards; left as is';
-      case 'ai_agent_task_done':
-        return ({required Object op, required Object summary}) =>
-            'Finished: ${op} ${summary}';
-      case 'ai_agent_task_failed':
-        return ({required Object op, required Object summary}) =>
-            'Did not finish: ${op} ${summary}';
-      case 'ai_agent_title':
-        return 'AI assistant';
-      case 'ai_agent_tokens':
-        return ({required Object n}) => '${n} tokens';
-      case 'ai_agent_tool_declined':
-        return 'Not run';
-      case 'ai_agent_tool_failed':
-        return ({required Object code}) => 'Failed: ${code}';
-      case 'ai_agent_tool_running':
-        return 'Running…';
-      case 'ai_agent_undo':
-        return 'Undo';
-      case 'ai_agent_undo_all':
-        return ({required Object n}) => 'Undo all (${n})';
-      case 'ai_agent_undo_failed':
-        return ({required Object reason}) => 'Undo failed: ${reason}';
-      case 'ai_agent_undone':
-        return 'Undone';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -732829,10 +729187,6 @@ extension on _StringsZhHk {
         return 'AI 下載';
       case 'ai_feature_acquire_summary':
         return '跟 AI 說想要甚麼：影片，或在「瀏覽 › 發現」裡的小說、漫畫、遊戲。它解析你的要求、在相符的作品與版本裡選擇；影片隨後下載或訂閱，其他媒體每次下載由你確認。';
-      case 'ai_feature_agent':
-        return 'AI assistant';
-      case 'ai_feature_agent_summary':
-        return 'Ask in one sentence and the assistant does it in the app; every change can be undone';
       case 'ai_feature_assigned_unavailable':
         return '所選提供商不可用（未配置完整或已停用）';
       case 'ai_feature_audiobook_cast':
@@ -733021,14 +729375,6 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '測試失敗：${reason}';
       case 'ai_provider_test_ok':
         return '連接正常';
-      case 'ai_provider_tool_calling':
-        return 'Tool calling (AI assistant)';
-      case 'ai_provider_tool_calling_auto':
-        return 'Auto';
-      case 'ai_provider_tool_calling_off':
-        return 'Off (JSON fallback)';
-      case 'ai_provider_tool_calling_on':
-        return 'On';
       case 'ai_providers_section':
         return '提供商配置';
       case 'ai_providers_section_summary':
@@ -738116,8 +734462,6 @@ extension on _StringsZhHk {
             '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
       case 'file_count':
         return ({required Object count}) => '${count} 個檔案';
-      case 'floating_ball_action_ai':
-        return 'AI';
       case 'floating_ball_action_camera_ocr':
         return '拍照查詞';
       case 'floating_ball_action_clipboard':
@@ -740171,8 +736515,6 @@ extension on _StringsZhHk {
         return '不再顯示';
       case 'home_onboarding_card_start':
         return '繼續新手引導';
-      case 'home_panel_ai_agent_hint':
-        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -745908,8 +742250,6 @@ extension on _StringsZhHk {
         return '喚起主視窗並開啟查詞頁';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
-      case 'shortcut_action_global_open_ai_assistant':
-        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滾動一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -747494,8 +743834,20 @@ extension on _StringsZhHk {
         return 'Field name';
       case 'srs_note_types_field_rename':
         return 'Rename field';
+      case 'srs_note_types_field_term_tag':
+        return 'Lookup';
+      case 'srs_note_types_field_unused':
+        return 'Not on any card';
       case 'srs_note_types_fields':
         return 'Fields';
+      case 'srs_note_types_fields_count':
+        return ({required Object n}) => 'Fields (${n})';
+      case 'srs_note_types_fields_hint':
+        return 'What each note holds; open a field to see where it shows on the card';
+      case 'srs_note_types_flag_fields':
+        return ({required Object n}) => 'Switch fields (${n})';
+      case 'srs_note_types_flag_fields_hint':
+        return 'Put any character in one to turn that card style on';
       case 'srs_note_types_front':
         return 'Front template';
       case 'srs_note_types_insert_field':
@@ -747518,6 +743870,9 @@ extension on _StringsZhHk {
         return 'Field names can\'t contain : { } " or start with # / ';
       case 'srs_note_types_name_reserved':
         return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_overview_counts':
+        return ({required Object fields, required Object cards}) =>
+            '${fields} fields · ${cards} card types';
       case 'srs_note_types_preview':
         return 'Preview';
       case 'srs_note_types_preview_empty':
@@ -747534,6 +743889,8 @@ extension on _StringsZhHk {
         return 'Back';
       case 'srs_note_types_side_front':
         return 'Front';
+      case 'srs_note_types_side_none':
+        return '(no fields)';
       case 'srs_note_types_stock_basic':
         return 'Basic';
       case 'srs_note_types_stock_cloze':
@@ -747552,6 +743909,8 @@ extension on _StringsZhHk {
         }) => '${notes} notes · ${fields} fields · ${cards} card types';
       case 'srs_note_types_template_add':
         return 'Add card type';
+      case 'srs_note_types_template_back_fields':
+        return ({required Object fields}) => 'Back: ${fields}';
       case 'srs_note_types_template_cloze_single':
         return 'Cloze note types have exactly one card type';
       case 'srs_note_types_template_delete':
@@ -747563,6 +743922,8 @@ extension on _StringsZhHk {
         return 'Edit card type';
       case 'srs_note_types_template_error':
         return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_template_front_fields':
+        return ({required Object fields}) => 'Front: ${fields}';
       case 'srs_note_types_template_last':
         return 'A note type needs at least one card type';
       case 'srs_note_types_template_name':
@@ -747571,6 +743932,10 @@ extension on _StringsZhHk {
         return 'Rename card type';
       case 'srs_note_types_templates':
         return 'Card types';
+      case 'srs_note_types_templates_hint':
+        return 'Each template makes one card; open one to change its layout';
+      case 'srs_note_types_term_chip':
+        return ({required Object name}) => 'Lookup matches: ${name}';
       case 'srs_note_types_term_field':
         return 'Word field';
       case 'srs_note_types_term_field_hint':
@@ -748244,10 +744609,16 @@ extension on _StringsZhHk {
         return 'Right';
       case 'srs_visual_align_start':
         return 'Left';
+      case 'srs_visual_builtin_body':
+        return 'It uses card-type switches (word / sentence / click / audio card) and scripts that the visual editor cannot express, so it is shown as code. Untouched built-in templates update together with Fushi.';
+      case 'srs_visual_builtin_fushi_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates, and reviews stop using the native Fushi card face.';
+      case 'srs_visual_builtin_other_note':
+        return 'Generating a layout and saving makes this template your own version: it no longer follows app updates or the upstream template.';
+      case 'srs_visual_builtin_title':
+        return 'This is a built-in template, written in code';
       case 'srs_visual_convert_body':
         return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
-      case 'srs_visual_convert_builtin_note':
-        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
       case 'srs_visual_convert_title':
         return 'This template is written in code';
       case 'srs_visual_delete':
