@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 168776 (9928 per locale)
+/// Strings: 168810 (9930 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14150,6 +14150,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_microphone => 'Microphone';
   String get web_browser_permission_notifications => 'Notifications';
   String get web_browser_permission_popups => 'Pop-ups and redirects';
+  String get web_browser_permission_protected_content => 'Protected content';
   String get web_browser_permission_request_allow => 'Allow';
   String get web_browser_permission_request_block => 'Block';
   String get web_browser_permission_request_camera => 'your camera';
@@ -14159,6 +14160,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_permission_request_geolocation => 'your location';
   String get web_browser_permission_request_microphone => 'your microphone';
   String get web_browser_permission_request_notifications => 'notifications';
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   String get web_browser_permission_request_remember =>
       'Remember for this site';
   String web_browser_permission_request_title({
@@ -38072,6 +38075,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -38088,6 +38093,9 @@ class _StringsAr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -62526,6 +62534,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -62542,6 +62552,9 @@ class _StringsDe extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -87035,6 +87048,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -87051,6 +87066,9 @@ class _StringsEs extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -111625,6 +111643,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -111641,6 +111661,9 @@ class _StringsFr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -135874,6 +135897,8 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -135890,6 +135915,9 @@ class _StringsId extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -160281,6 +160309,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -160297,6 +160327,9 @@ class _StringsIt extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -183655,6 +183688,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => '保護されたコンテンツ';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -183671,6 +183706,9 @@ class _StringsJa extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      '保護されたコンテンツの再生';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -207092,6 +207130,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -207108,6 +207148,9 @@ class _StringsKo extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -231447,6 +231490,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -231463,6 +231508,9 @@ class _StringsNl extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -255875,6 +255923,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -255891,6 +255941,9 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -280248,6 +280301,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -280264,6 +280319,9 @@ class _StringsRu extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -304298,6 +304356,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -304314,6 +304374,9 @@ class _StringsTh extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -328551,6 +328614,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -328567,6 +328632,9 @@ class _StringsTr extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -352732,6 +352800,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => 'Protected content';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -352748,6 +352818,9 @@ class _StringsVi extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content =>
+      'protected content playback';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -374865,6 +374938,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_permission_popups => '弹出式窗口和重定向';
   @override
+  String get web_browser_permission_protected_content => '受保护内容';
+  @override
   String get web_browser_permission_request_allow => '允许';
   @override
   String get web_browser_permission_request_block => '阻止';
@@ -374880,6 +374955,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_permission_request_microphone => '麦克风';
   @override
   String get web_browser_permission_request_notifications => '通知';
+  @override
+  String get web_browser_permission_request_protected_content => '受保护内容播放';
   @override
   String get web_browser_permission_request_remember => '记住对此网站的选择';
   @override
@@ -397624,6 +397701,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_permission_popups => 'Pop-ups and redirects';
   @override
+  String get web_browser_permission_protected_content => '受保護內容';
+  @override
   String get web_browser_permission_request_allow => 'Allow';
   @override
   String get web_browser_permission_request_block => 'Block';
@@ -397640,6 +397719,8 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_permission_request_microphone => 'your microphone';
   @override
   String get web_browser_permission_request_notifications => 'notifications';
+  @override
+  String get web_browser_permission_request_protected_content => '受保護內容播放';
   @override
   String get web_browser_permission_request_remember =>
       'Remember for this site';
@@ -418273,6 +418354,8 @@ extension on _StringsEn {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -418289,6 +418372,8 @@ extension on _StringsEn {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -438887,6 +438972,8 @@ extension on _StringsAr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -438903,6 +438990,8 @@ extension on _StringsAr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -459577,6 +459666,8 @@ extension on _StringsDe {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -459593,6 +459684,8 @@ extension on _StringsDe {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -480249,6 +480342,8 @@ extension on _StringsEs {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -480265,6 +480360,8 @@ extension on _StringsEs {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -500939,6 +501036,8 @@ extension on _StringsFr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -500955,6 +501054,8 @@ extension on _StringsFr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -521573,6 +521674,8 @@ extension on _StringsId {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -521589,6 +521692,8 @@ extension on _StringsId {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -542243,6 +542348,8 @@ extension on _StringsIt {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -542259,6 +542366,8 @@ extension on _StringsIt {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -562781,6 +562890,8 @@ extension on _StringsJa {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return '保護されたコンテンツ';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -562797,6 +562908,8 @@ extension on _StringsJa {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return '保護されたコンテンツの再生';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -583332,6 +583445,8 @@ extension on _StringsKo {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -583348,6 +583463,8 @@ extension on _StringsKo {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -603994,6 +604111,8 @@ extension on _StringsNl {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -604010,6 +604129,8 @@ extension on _StringsNl {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -624651,6 +624772,8 @@ extension on _StringsPtBr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -624667,6 +624790,8 @@ extension on _StringsPtBr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -645313,6 +645438,8 @@ extension on _StringsRu {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -645329,6 +645456,8 @@ extension on _StringsRu {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -665931,6 +666060,8 @@ extension on _StringsTh {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -665947,6 +666078,8 @@ extension on _StringsTh {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -686580,6 +686713,8 @@ extension on _StringsTr {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -686596,6 +686731,8 @@ extension on _StringsTr {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -707212,6 +707349,8 @@ extension on _StringsVi {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return 'Protected content';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -707228,6 +707367,8 @@ extension on _StringsVi {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return 'protected content playback';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
@@ -727597,6 +727738,8 @@ extension on _StringsZhCn {
         return '通知';
       case 'web_browser_permission_popups':
         return '弹出式窗口和重定向';
+      case 'web_browser_permission_protected_content':
+        return '受保护内容';
       case 'web_browser_permission_request_allow':
         return '允许';
       case 'web_browser_permission_request_block':
@@ -727613,6 +727756,8 @@ extension on _StringsZhCn {
         return '麦克风';
       case 'web_browser_permission_request_notifications':
         return '通知';
+      case 'web_browser_permission_request_protected_content':
+        return '受保护内容播放';
       case 'web_browser_permission_request_remember':
         return '记住对此网站的选择';
       case 'web_browser_permission_request_title':
@@ -748066,6 +748211,8 @@ extension on _StringsZhHk {
         return 'Notifications';
       case 'web_browser_permission_popups':
         return 'Pop-ups and redirects';
+      case 'web_browser_permission_protected_content':
+        return '受保護內容';
       case 'web_browser_permission_request_allow':
         return 'Allow';
       case 'web_browser_permission_request_block':
@@ -748082,6 +748229,8 @@ extension on _StringsZhHk {
         return 'your microphone';
       case 'web_browser_permission_request_notifications':
         return 'notifications';
+      case 'web_browser_permission_request_protected_content':
+        return '受保護內容播放';
       case 'web_browser_permission_request_remember':
         return 'Remember for this site';
       case 'web_browser_permission_request_title':
