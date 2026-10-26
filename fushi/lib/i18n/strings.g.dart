@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169660 (9980 per locale)
+/// Strings: 169694 (9982 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -285,6 +285,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Stopped: this conversation used up its token budget.';
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   String get ai_agent_title => 'AI assistant';
   String ai_agent_tokens({required Object n}) => '${n} tokens';
   String get ai_agent_tool_declined => 'Not run';
@@ -14587,6 +14591,12 @@ class _StringsAr extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -38765,6 +38775,12 @@ class _StringsDe extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -63334,6 +63350,12 @@ class _StringsEs extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -87960,6 +87982,12 @@ class _StringsFr extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -112667,6 +112695,12 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI assistant';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -137027,6 +137061,12 @@ class _StringsIt extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -161553,6 +161593,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI assistant';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -185036,6 +185082,12 @@ class _StringsKo extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -208588,6 +208640,12 @@ class _StringsNl extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -233062,6 +233120,12 @@ class _StringsPtBr extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -257605,6 +257669,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI assistant';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -282092,6 +282162,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI assistant';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -306256,6 +306332,12 @@ class _StringsTr extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -330626,6 +330708,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI assistant';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -354911,6 +354999,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_superseded => '之后又被改过，保留现状';
   @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      '已完成：${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      '未完成：${op} ${summary}';
+  @override
   String get ai_agent_title => 'AI 助手';
   @override
   String ai_agent_tokens({required Object n}) => '${n} tokens';
@@ -377133,6 +377227,12 @@ class _StringsZhHk extends _StringsEn {
   String get ai_agent_stop_tool_limit => 'Stopped: too many steps in one turn.';
   @override
   String get ai_agent_superseded => 'Changed again afterwards; left as is';
+  @override
+  String ai_agent_task_done({required Object op, required Object summary}) =>
+      'Finished: ${op} ${summary}';
+  @override
+  String ai_agent_task_failed({required Object op, required Object summary}) =>
+      'Did not finish: ${op} ${summary}';
   @override
   String get ai_agent_title => 'AI assistant';
   @override
@@ -399973,6 +400073,12 @@ extension on _StringsEn {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -420697,6 +420803,12 @@ extension on _StringsAr {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -441415,6 +441527,12 @@ extension on _StringsDe {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -462209,6 +462327,12 @@ extension on _StringsEs {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -482985,6 +483109,12 @@ extension on _StringsFr {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -503779,6 +503909,12 @@ extension on _StringsId {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -524517,6 +524653,12 @@ extension on _StringsIt {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -545291,6 +545433,12 @@ extension on _StringsJa {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -565930,6 +566078,12 @@ extension on _StringsKo {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -586585,6 +586739,12 @@ extension on _StringsNl {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -607354,6 +607514,12 @@ extension on _StringsPtBr {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -628115,6 +628281,12 @@ extension on _StringsRu {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -648881,6 +649053,12 @@ extension on _StringsTh {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -669603,6 +669781,12 @@ extension on _StringsTr {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -690356,6 +690540,12 @@ extension on _StringsVi {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
@@ -711091,6 +711281,12 @@ extension on _StringsZhCn {
         return '已停止：这一轮步骤太多。';
       case 'ai_agent_superseded':
         return '之后又被改过，保留现状';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            '已完成：${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            '未完成：${op} ${summary}';
       case 'ai_agent_title':
         return 'AI 助手';
       case 'ai_agent_tokens':
@@ -731574,6 +731770,12 @@ extension on _StringsZhHk {
         return 'Stopped: too many steps in one turn.';
       case 'ai_agent_superseded':
         return 'Changed again afterwards; left as is';
+      case 'ai_agent_task_done':
+        return ({required Object op, required Object summary}) =>
+            'Finished: ${op} ${summary}';
+      case 'ai_agent_task_failed':
+        return ({required Object op, required Object summary}) =>
+            'Did not finish: ${op} ${summary}';
       case 'ai_agent_title':
         return 'AI assistant';
       case 'ai_agent_tokens':
