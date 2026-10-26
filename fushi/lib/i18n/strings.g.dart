@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169643 (9979 per locale)
+/// Strings: 169660 (9980 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5509,6 +5509,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Set up dictionaries, import your first book and make your first card in a few minutes.';
   String get home_onboarding_card_dismiss => 'Don\'t show again';
   String get home_onboarding_card_start => 'Continue setup';
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
@@ -23362,6 +23364,9 @@ class _StringsAr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'عدم الإظهار مجددًا';
   @override
   String get home_onboarding_card_start => 'متابعة الإعداد';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'تلقائي';
   @override
@@ -47707,6 +47712,9 @@ class _StringsDe extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Nicht mehr anzeigen';
   @override
   String get home_onboarding_card_start => 'Einrichtung fortsetzen';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -72288,6 +72296,9 @@ class _StringsEs extends _StringsEn {
   String get home_onboarding_card_dismiss => 'No volver a mostrar';
   @override
   String get home_onboarding_card_start => 'Continuar la configuración';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -96945,6 +96956,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Reprendre la configuration';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Automatique';
   @override
   String get home_panel_mode_hidden => 'Masquer';
@@ -121506,6 +121520,9 @@ class _StringsId extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Lanjutkan penyiapan';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Otomatis';
   @override
   String get home_panel_mode_hidden => 'Sembunyikan';
@@ -145929,6 +145946,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Continua la configurazione';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Automatico';
   @override
   String get home_panel_mode_hidden => 'Nascondi';
@@ -170038,6 +170058,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'セットアップを続ける';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => '自動';
   @override
   String get home_panel_mode_hidden => '非表示';
@@ -193528,6 +193551,9 @@ class _StringsKo extends _StringsEn {
   String get home_onboarding_card_dismiss => '다시 표시 안 함';
   @override
   String get home_onboarding_card_start => '설정 계속하기';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => '자동';
   @override
@@ -217459,6 +217485,9 @@ class _StringsNl extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Niet meer tonen';
   @override
   String get home_onboarding_card_start => 'Instellen hervatten';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -241967,6 +241996,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Continuar a configuração';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Automático';
   @override
   String get home_panel_mode_hidden => 'Ocultar';
@@ -266468,6 +266500,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Продолжить настройку';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Авто';
   @override
   String get home_panel_mode_hidden => 'Скрыть';
@@ -290821,6 +290856,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'ตั้งค่าต่อ';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'อัตโนมัติ';
   @override
   String get home_panel_mode_hidden => 'ซ่อน';
@@ -315083,6 +315121,9 @@ class _StringsTr extends _StringsEn {
   String get home_onboarding_card_dismiss => 'Bir daha gösterme';
   @override
   String get home_onboarding_card_start => 'Kuruluma devam et';
+  @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
   @override
   String get home_panel_mode_auto => 'Otomatik';
   @override
@@ -339423,6 +339464,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_onboarding_card_start => 'Tiếp tục thiết lập';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => 'Tự động';
   @override
   String get home_panel_mode_hidden => 'Ẩn';
@@ -362926,6 +362970,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_onboarding_card_start => '继续新手引导';
   @override
+  String get home_panel_ai_agent_hint => '自动：给 AI 助手指派了提供商后显示';
+  @override
   String get home_panel_mode_auto => '自动';
   @override
   String get home_panel_mode_hidden => '隐藏';
@@ -385330,6 +385376,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_onboarding_card_start => '繼續新手引導';
   @override
+  String get home_panel_ai_agent_hint =>
+      'Auto: shown once an AI provider is assigned to the assistant';
+  @override
   String get home_panel_mode_auto => '自動';
   @override
   String get home_panel_mode_hidden => '隱藏';
@@ -407377,6 +407426,8 @@ extension on _StringsEn {
         return 'Don\'t show again';
       case 'home_onboarding_card_start':
         return 'Continue setup';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Auto';
       case 'home_panel_mode_hidden':
@@ -428098,6 +428149,8 @@ extension on _StringsAr {
         return 'عدم الإظهار مجددًا';
       case 'home_onboarding_card_start':
         return 'متابعة الإعداد';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'تلقائي';
       case 'home_panel_mode_hidden':
@@ -448848,6 +448901,8 @@ extension on _StringsDe {
         return 'Nicht mehr anzeigen';
       case 'home_onboarding_card_start':
         return 'Einrichtung fortsetzen';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -469630,6 +469685,8 @@ extension on _StringsEs {
         return 'No volver a mostrar';
       case 'home_onboarding_card_start':
         return 'Continuar la configuración';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -490418,6 +490475,8 @@ extension on _StringsFr {
         return 'Ne plus afficher';
       case 'home_onboarding_card_start':
         return 'Reprendre la configuration';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatique';
       case 'home_panel_mode_hidden':
@@ -511184,6 +511243,8 @@ extension on _StringsId {
         return 'Jangan tampilkan lagi';
       case 'home_onboarding_card_start':
         return 'Lanjutkan penyiapan';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatis';
       case 'home_panel_mode_hidden':
@@ -531931,6 +531992,8 @@ extension on _StringsIt {
         return 'Non mostrare più';
       case 'home_onboarding_card_start':
         return 'Continua la configurazione';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatico';
       case 'home_panel_mode_hidden':
@@ -552657,6 +552720,8 @@ extension on _StringsJa {
         return '今後表示しない';
       case 'home_onboarding_card_start':
         return 'セットアップを続ける';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -573297,6 +573362,8 @@ extension on _StringsKo {
         return '다시 표시 안 함';
       case 'home_onboarding_card_start':
         return '설정 계속하기';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '자동';
       case 'home_panel_mode_hidden':
@@ -593990,6 +594057,8 @@ extension on _StringsNl {
         return 'Niet meer tonen';
       case 'home_onboarding_card_start':
         return 'Instellen hervatten';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -614756,6 +614825,8 @@ extension on _StringsPtBr {
         return 'Não mostrar novamente';
       case 'home_onboarding_card_start':
         return 'Continuar a configuração';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -635522,6 +635593,8 @@ extension on _StringsRu {
         return 'Больше не показывать';
       case 'home_onboarding_card_start':
         return 'Продолжить настройку';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Авто';
       case 'home_panel_mode_hidden':
@@ -656262,6 +656335,8 @@ extension on _StringsTh {
         return 'ไม่ต้องแสดงอีก';
       case 'home_onboarding_card_start':
         return 'ตั้งค่าต่อ';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'อัตโนมัติ';
       case 'home_panel_mode_hidden':
@@ -677000,6 +677075,8 @@ extension on _StringsTr {
         return 'Bir daha gösterme';
       case 'home_onboarding_card_start':
         return 'Kuruluma devam et';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Otomatik';
       case 'home_panel_mode_hidden':
@@ -697743,6 +697820,8 @@ extension on _StringsVi {
         return 'Không hiển thị lại';
       case 'home_onboarding_card_start':
         return 'Tiếp tục thiết lập';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return 'Tự động';
       case 'home_panel_mode_hidden':
@@ -718377,6 +718456,8 @@ extension on _StringsZhCn {
         return '不再显示';
       case 'home_onboarding_card_start':
         return '继续新手引导';
+      case 'home_panel_ai_agent_hint':
+        return '自动：给 AI 助手指派了提供商后显示';
       case 'home_panel_mode_auto':
         return '自动';
       case 'home_panel_mode_hidden':
@@ -738887,6 +738968,8 @@ extension on _StringsZhHk {
         return '不再顯示';
       case 'home_onboarding_card_start':
         return '繼續新手引導';
+      case 'home_panel_ai_agent_hint':
+        return 'Auto: shown once an AI provider is assigned to the assistant';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
