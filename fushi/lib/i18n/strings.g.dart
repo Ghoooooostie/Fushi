@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 169694 (9982 per locale)
+/// Strings: 169898 (9994 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -242,6 +242,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'vol. ${number}';
   String get adaptation_progress_unit_volume_label => 'Volume';
   String get add_to_collection => 'Add to collection';
+  String get ai_agent_ask_action => 'Ask AI';
   String get ai_agent_attach_screen_text => 'Attach screen text';
   String get ai_agent_choice_cancel => 'None of these';
   String ai_agent_choice_picked({required Object label}) => 'Picked: ${label}';
@@ -271,7 +272,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_no_provider =>
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   String get ai_agent_open_settings => 'Open settings';
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   String get ai_agent_send => 'Send';
   String ai_agent_session_summary({required Object n}) =>
       '${n} changes in this conversation';
@@ -9388,6 +9407,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Bring to front and open lookup page';
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
   String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_page_down =>
@@ -14514,6 +14534,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get add_to_collection => 'إضافة إلى مجموعة';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -14568,7 +14590,35 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -30021,6 +30071,8 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'التمرير لأسفل خطوة واحدة';
   @override
@@ -38698,6 +38750,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get add_to_collection => 'Zur Sammlung hinzufügen';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -38752,7 +38806,35 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -54493,6 +54575,8 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Einen Schritt nach unten scrollen';
   @override
@@ -63273,6 +63357,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get add_to_collection => 'Añadir a colección';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -63327,7 +63413,35 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -79093,6 +79207,8 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Desplazar un paso hacia abajo';
   @override
@@ -87905,6 +88021,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get add_to_collection => 'Ajouter à la collection';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -87959,7 +88077,35 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -103785,6 +103931,8 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Défiler d\'un cran vers le bas';
   @override
@@ -112617,6 +112765,8 @@ class _StringsId extends _StringsEn {
   @override
   String get add_to_collection => 'Tambah ke koleksi';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -112671,7 +112821,35 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -128256,6 +128434,8 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Gulir turun satu langkah';
   @override
@@ -136984,6 +137164,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get add_to_collection => 'Aggiungi alla raccolta';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -137038,7 +137220,35 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -152740,6 +152950,8 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Scorri in basso di un passo';
   @override
@@ -161515,6 +161727,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get add_to_collection => 'コレクションに追加';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -161569,7 +161783,35 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -176565,6 +176807,8 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '1行下にスクロール';
   @override
   String get shortcut_action_global_scroll_line_up => '1行上にスクロール';
@@ -185005,6 +185249,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get add_to_collection => '컬렉션에 추가';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -185059,7 +185305,35 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -200084,6 +200358,8 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '한 단계 아래로 스크롤';
   @override
   String get shortcut_action_global_scroll_line_up => '한 단계 위로 스크롤';
@@ -208563,6 +208839,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get add_to_collection => 'Aan collectie toevoegen';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -208617,7 +208895,35 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -224280,6 +224586,8 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Één stap omlaag scrollen';
   @override
@@ -233043,6 +233351,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get add_to_collection => 'Adicionar à coleção';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -233097,7 +233407,35 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -248809,6 +249147,8 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Rolar uma etapa para baixo';
   @override
@@ -257591,6 +257931,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get add_to_collection => 'Добавить в коллекцию';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -257645,7 +257987,35 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -273314,6 +273684,8 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down =>
       'Прокрутить вниз на один шаг';
   @override
@@ -282084,6 +282456,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get add_to_collection => 'เพิ่มในคอลเลกชัน';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -282138,7 +282512,35 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -297585,6 +297987,8 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'เลื่อนลงหนึ่งขั้น';
   @override
   String get shortcut_action_global_scroll_line_up => 'เลื่อนขึ้นหนึ่งขั้น';
@@ -306255,6 +306659,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get add_to_collection => 'Koleksiyona ekle';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -306309,7 +306715,35 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -321903,6 +322337,8 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'Bir adım aşağı kaydır';
   @override
   String get shortcut_action_global_scroll_line_up => 'Bir adım yukarı kaydır';
@@ -330630,6 +331066,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get add_to_collection => 'Thêm vào bộ sưu tập';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -330684,7 +331122,35 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -346224,6 +346690,8 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => 'Cuộn xuống một bước';
   @override
   String get shortcut_action_global_scroll_line_up => 'Cuộn lên một bước';
@@ -354928,6 +355396,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_ask_action => '问 AI';
+  @override
   String get ai_agent_attach_screen_text => '附上屏幕文字';
   @override
   String get ai_agent_choice_cancel => '都不是';
@@ -354978,7 +355448,32 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_agent_open_settings => '去设置';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      '${device} 上关闭了 AI 功能。';
+  @override
+  String get ai_agent_remote_lost => '与执行这场对话的设备断开了连接。';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} 还没准备好，请稍后再试。';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      '连不上下载执行设备 ${device}。';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
+  @override
   String get ai_agent_risk_irreversible => '不可撤销';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) => '屏幕文字（${n} 字）';
+  @override
+  String get ai_agent_screen_text_empty => '屏幕上没有识别到文字';
+  @override
+  String get ai_agent_screen_text_failed => '读取屏幕文字失败';
+  @override
+  String get ai_agent_screen_text_unavailable => '本机的文字识别不可用';
   @override
   String get ai_agent_send => '发送';
   @override
@@ -369208,6 +369703,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_screen_ocr => '截屏识字（全局）';
   @override
+  String get shortcut_action_global_open_ai_assistant => '打开 AI 助手';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滚动一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滚动一行';
@@ -377150,6 +377647,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get add_to_collection => '加入合集';
   @override
+  String get ai_agent_ask_action => 'Ask AI';
+  @override
   String get ai_agent_attach_screen_text => 'Attach screen text';
   @override
   String get ai_agent_choice_cancel => 'None of these';
@@ -377204,7 +377703,35 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_agent_open_settings => 'Open settings';
   @override
+  String ai_agent_remote_disabled({required Object device}) =>
+      'AI is turned off on ${device}.';
+  @override
+  String get ai_agent_remote_lost =>
+      'Lost the connection to the device running this conversation.';
+  @override
+  String ai_agent_remote_no_provider({required Object device}) =>
+      '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+  @override
+  String ai_agent_remote_not_ready({required Object device}) =>
+      '${device} isn\'t ready yet. Try again in a moment.';
+  @override
+  String ai_agent_remote_unreachable({required Object device}) =>
+      'Can\'t reach ${device}, the download execution device.';
+  @override
+  String ai_agent_remote_unsupported({required Object device}) =>
+      '${device} can\'t run the AI assistant. Update Fushi on that device.';
+  @override
   String get ai_agent_risk_irreversible => 'Cannot be undone';
+  @override
+  String ai_agent_screen_text_chip({required Object n}) =>
+      'Screen text (${n} chars)';
+  @override
+  String get ai_agent_screen_text_empty => 'No text found on the screen';
+  @override
+  String get ai_agent_screen_text_failed => 'Couldn\'t read the screen text';
+  @override
+  String get ai_agent_screen_text_unavailable =>
+      'Text recognition isn\'t available on this device';
   @override
   String get ai_agent_send => 'Send';
   @override
@@ -391769,6 +392296,8 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_external_screen_ocr =>
       'Screen OCR (anywhere)';
   @override
+  String get shortcut_action_global_open_ai_assistant => 'Open AI assistant';
+  @override
   String get shortcut_action_global_scroll_line_down => '向下滾動一行';
   @override
   String get shortcut_action_global_scroll_line_up => '向上滾動一行';
@@ -400003,6 +400532,8 @@ extension on _StringsEn {
         return 'Volume';
       case 'add_to_collection':
         return 'Add to collection';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -400053,8 +400584,32 @@ extension on _StringsEn {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -413299,6 +413854,8 @@ extension on _StringsEn {
         return 'Bring to front and open lookup page';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scroll down one step';
       case 'shortcut_action_global_scroll_line_up':
@@ -420733,6 +421290,8 @@ extension on _StringsAr {
         return 'Volume';
       case 'add_to_collection':
         return 'إضافة إلى مجموعة';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -420783,8 +421342,32 @@ extension on _StringsAr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -434025,6 +434608,8 @@ extension on _StringsAr {
         return 'إحضار إلى الواجهة وفتح صفحة البحث';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'التمرير لأسفل خطوة واحدة';
       case 'shortcut_action_global_scroll_line_up':
@@ -441457,6 +442042,8 @@ extension on _StringsDe {
         return 'Volume';
       case 'add_to_collection':
         return 'Zur Sammlung hinzufügen';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -441507,8 +442094,32 @@ extension on _StringsDe {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -454807,6 +455418,8 @@ extension on _StringsDe {
         return 'In den Vordergrund holen und Nachschlageseite öffnen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Einen Schritt nach unten scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -462257,6 +462870,8 @@ extension on _StringsEs {
         return 'Volume';
       case 'add_to_collection':
         return 'Añadir a colección';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -462307,8 +462922,32 @@ extension on _StringsEs {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -475593,6 +476232,8 @@ extension on _StringsEs {
         return 'Traer al frente y abrir la página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Desplazar un paso hacia abajo';
       case 'shortcut_action_global_scroll_line_up':
@@ -483039,6 +483680,8 @@ extension on _StringsFr {
         return 'Volume';
       case 'add_to_collection':
         return 'Ajouter à la collection';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -483089,8 +483732,32 @@ extension on _StringsFr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -496390,6 +497057,8 @@ extension on _StringsFr {
         return 'Mettre au premier plan et ouvrir la page de recherche';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Défiler d\'un cran vers le bas';
       case 'shortcut_action_global_scroll_line_up':
@@ -503839,6 +504508,8 @@ extension on _StringsId {
         return 'Volume';
       case 'add_to_collection':
         return 'Tambah ke koleksi';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -503889,8 +504560,32 @@ extension on _StringsId {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -517147,6 +517842,8 @@ extension on _StringsId {
         return 'Bawa ke depan dan buka halaman pencarian';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Gulir turun satu langkah';
       case 'shortcut_action_global_scroll_line_up':
@@ -524583,6 +525280,8 @@ extension on _StringsIt {
         return 'Volume';
       case 'add_to_collection':
         return 'Aggiungi alla raccolta';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -524633,8 +525332,32 @@ extension on _StringsIt {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -537913,6 +538636,8 @@ extension on _StringsIt {
         return 'Porta in primo piano e apri la pagina di ricerca';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scorri in basso di un passo';
       case 'shortcut_action_global_scroll_line_up':
@@ -545363,6 +546088,8 @@ extension on _StringsJa {
         return 'Volume';
       case 'add_to_collection':
         return 'コレクションに追加';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -545413,8 +546140,32 @@ extension on _StringsJa {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -558613,6 +559364,8 @@ extension on _StringsJa {
         return '前面に出して辞書検索ページを開く';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '1行下にスクロール';
       case 'shortcut_action_global_scroll_line_up':
@@ -566008,6 +566761,8 @@ extension on _StringsKo {
         return 'Volume';
       case 'add_to_collection':
         return '컬렉션에 추가';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -566058,8 +566813,32 @@ extension on _StringsKo {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -579262,6 +580041,8 @@ extension on _StringsKo {
         return '앞으로 가져와 검색 페이지 열기';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '한 단계 아래로 스크롤';
       case 'shortcut_action_global_scroll_line_up':
@@ -586669,6 +587450,8 @@ extension on _StringsNl {
         return 'Volume';
       case 'add_to_collection':
         return 'Aan collectie toevoegen';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -586719,8 +587502,32 @@ extension on _StringsNl {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -600001,6 +600808,8 @@ extension on _StringsNl {
         return 'Naar voren halen en opzoekpagina openen';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Één stap omlaag scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -607444,6 +608253,8 @@ extension on _StringsPtBr {
         return 'Volume';
       case 'add_to_collection':
         return 'Adicionar à coleção';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -607494,8 +608305,32 @@ extension on _StringsPtBr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -620771,6 +621606,8 @@ extension on _StringsPtBr {
         return 'Trazer para frente e abrir a página de consulta';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Rolar uma etapa para baixo';
       case 'shortcut_action_global_scroll_line_up':
@@ -628211,6 +629048,8 @@ extension on _StringsRu {
         return 'Volume';
       case 'add_to_collection':
         return 'Добавить в коллекцию';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -628261,8 +629100,32 @@ extension on _StringsRu {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -641545,6 +642408,8 @@ extension on _StringsRu {
         return 'Вывести на передний план и открыть страницу поиска';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Прокрутить вниз на один шаг';
       case 'shortcut_action_global_scroll_line_up':
@@ -648983,6 +649848,8 @@ extension on _StringsTh {
         return 'Volume';
       case 'add_to_collection':
         return 'เพิ่มในคอลเลกชัน';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -649033,8 +649900,32 @@ extension on _StringsTh {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -662279,6 +663170,8 @@ extension on _StringsTh {
         return 'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'เลื่อนลงหนึ่งขั้น';
       case 'shortcut_action_global_scroll_line_up':
@@ -669711,6 +670604,8 @@ extension on _StringsTr {
         return 'Volume';
       case 'add_to_collection':
         return 'Koleksiyona ekle';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -669761,8 +670656,32 @@ extension on _StringsTr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -683031,6 +683950,8 @@ extension on _StringsTr {
         return 'Öne getir ve arama sayfasını aç';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Bir adım aşağı kaydır';
       case 'shortcut_action_global_scroll_line_up':
@@ -690470,6 +691391,8 @@ extension on _StringsVi {
         return 'Volume';
       case 'add_to_collection':
         return 'Thêm vào bộ sưu tập';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -690520,8 +691443,32 @@ extension on _StringsVi {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -703778,6 +704725,8 @@ extension on _StringsVi {
         return 'Đưa lên trước và mở trang tra từ';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return 'Cuộn xuống một bước';
       case 'shortcut_action_global_scroll_line_up':
@@ -711211,6 +712160,8 @@ extension on _StringsZhCn {
         return '卷';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_ask_action':
+        return '问 AI';
       case 'ai_agent_attach_screen_text':
         return '附上屏幕文字';
       case 'ai_agent_choice_cancel':
@@ -711261,8 +712212,30 @@ extension on _StringsZhCn {
         return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
       case 'ai_agent_open_settings':
         return '去设置';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => '${device} 上关闭了 AI 功能。';
+      case 'ai_agent_remote_lost':
+        return '与执行这场对话的设备断开了连接。';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} 还没有给「AI 助手」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) => '${device} 还没准备好，请稍后再试。';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) => '连不上下载执行设备 ${device}。';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} 不支持 AI 助手，请更新那台设备上的 Fushi。';
       case 'ai_agent_risk_irreversible':
         return '不可撤销';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => '屏幕文字（${n} 字）';
+      case 'ai_agent_screen_text_empty':
+        return '屏幕上没有识别到文字';
+      case 'ai_agent_screen_text_failed':
+        return '读取屏幕文字失败';
+      case 'ai_agent_screen_text_unavailable':
+        return '本机的文字识别不可用';
       case 'ai_agent_send':
         return '发送';
       case 'ai_agent_session_summary':
@@ -724367,6 +725340,8 @@ extension on _StringsZhCn {
         return '唤起主窗并打开查词页';
       case 'shortcut_action_global_external_screen_ocr':
         return '截屏识字（全局）';
+      case 'shortcut_action_global_open_ai_assistant':
+        return '打开 AI 助手';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滚动一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -731700,6 +732675,8 @@ extension on _StringsZhHk {
         return 'Volume';
       case 'add_to_collection':
         return '加入合集';
+      case 'ai_agent_ask_action':
+        return 'Ask AI';
       case 'ai_agent_attach_screen_text':
         return 'Attach screen text';
       case 'ai_agent_choice_cancel':
@@ -731750,8 +732727,32 @@ extension on _StringsZhHk {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_remote_disabled':
+        return ({required Object device}) => 'AI is turned off on ${device}.';
+      case 'ai_agent_remote_lost':
+        return 'Lost the connection to the device running this conversation.';
+      case 'ai_agent_remote_no_provider':
+        return ({required Object device}) =>
+            '${device} has no AI provider assigned to the AI assistant. Assign one in Settings › Models › LLM on that device.';
+      case 'ai_agent_remote_not_ready':
+        return ({required Object device}) =>
+            '${device} isn\'t ready yet. Try again in a moment.';
+      case 'ai_agent_remote_unreachable':
+        return ({required Object device}) =>
+            'Can\'t reach ${device}, the download execution device.';
+      case 'ai_agent_remote_unsupported':
+        return ({required Object device}) =>
+            '${device} can\'t run the AI assistant. Update Fushi on that device.';
       case 'ai_agent_risk_irreversible':
         return 'Cannot be undone';
+      case 'ai_agent_screen_text_chip':
+        return ({required Object n}) => 'Screen text (${n} chars)';
+      case 'ai_agent_screen_text_empty':
+        return 'No text found on the screen';
+      case 'ai_agent_screen_text_failed':
+        return 'Couldn\'t read the screen text';
+      case 'ai_agent_screen_text_unavailable':
+        return 'Text recognition isn\'t available on this device';
       case 'ai_agent_send':
         return 'Send';
       case 'ai_agent_session_summary':
@@ -744907,6 +745908,8 @@ extension on _StringsZhHk {
         return '喚起主視窗並開啟查詞頁';
       case 'shortcut_action_global_external_screen_ocr':
         return 'Screen OCR (anywhere)';
+      case 'shortcut_action_global_open_ai_assistant':
+        return 'Open AI assistant';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滾動一行';
       case 'shortcut_action_global_scroll_line_up':
