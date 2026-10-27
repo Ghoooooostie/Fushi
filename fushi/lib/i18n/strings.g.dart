@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172771 (10163 per locale)
+/// Strings: 172839 (10167 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7274,6 +7274,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
+  String get media_server_continue_menu_details => 'Open details';
+  String get media_server_continue_menu_resume => 'Resume';
   String get media_server_item_folder => 'Folder';
   String media_server_item_unplayed_episodes({required Object n}) =>
       '${n} unwatched';
@@ -7290,6 +7292,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_servers_title => 'Choose a server';
   String get media_server_sort_date_added => 'Date added';
   String get media_server_sort_name => 'Name';
+  String media_server_version_count({required Object n}) => '${n} versions';
+  String get media_server_version_pick_title => 'Choose a version';
   String get media_server_versions => 'Versions';
   String get media_source_add => 'Add source';
   String get media_source_add_local_folder => 'Local folder';
@@ -26619,6 +26623,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'مجلد';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -26648,6 +26656,10 @@ class _StringsAr extends _StringsEn {
   String get media_server_sort_date_added => 'تاريخ الإضافة';
   @override
   String get media_server_sort_name => 'الاسم';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -51463,6 +51475,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Ordner';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -51494,6 +51510,10 @@ class _StringsDe extends _StringsEn {
   String get media_server_sort_date_added => 'Hinzugefügt am';
   @override
   String get media_server_sort_name => 'Name';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -76501,6 +76521,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Carpeta';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -76532,6 +76556,10 @@ class _StringsEs extends _StringsEn {
   String get media_server_sort_date_added => 'Fecha de adición';
   @override
   String get media_server_sort_name => 'Nombre';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -101610,6 +101638,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Dossier';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -101641,6 +101673,10 @@ class _StringsFr extends _StringsEn {
   String get media_server_sort_date_added => 'Date d\'ajout';
   @override
   String get media_server_sort_name => 'Nom';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -126569,6 +126605,10 @@ class _StringsId extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Folder';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -126599,6 +126639,10 @@ class _StringsId extends _StringsEn {
   String get media_server_sort_date_added => 'Tanggal ditambahkan';
   @override
   String get media_server_sort_name => 'Nama';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -151462,6 +151506,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Cartella';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -151493,6 +151541,10 @@ class _StringsIt extends _StringsEn {
   String get media_server_sort_date_added => 'Data di aggiunta';
   @override
   String get media_server_sort_name => 'Nome';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -175886,6 +175938,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'フォルダー';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -175914,6 +175970,10 @@ class _StringsJa extends _StringsEn {
   String get media_server_sort_date_added => '追加日';
   @override
   String get media_server_sort_name => '名前';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -199836,6 +199896,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => '폴더';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -199864,6 +199928,10 @@ class _StringsKo extends _StringsEn {
   String get media_server_sort_date_added => '추가한 날짜';
   @override
   String get media_server_sort_name => '이름';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -224322,6 +224390,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Map';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -224353,6 +224425,10 @@ class _StringsNl extends _StringsEn {
   String get media_server_sort_date_added => 'Datum toegevoegd';
   @override
   String get media_server_sort_name => 'Naam';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -249284,6 +249360,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Pasta';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -249315,6 +249395,10 @@ class _StringsPtBr extends _StringsEn {
   String get media_server_sort_date_added => 'Data de adição';
   @override
   String get media_server_sort_name => 'Nome';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -274222,6 +274306,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Папка';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -274252,6 +274340,10 @@ class _StringsRu extends _StringsEn {
   String get media_server_sort_date_added => 'Дата добавления';
   @override
   String get media_server_sort_name => 'Название';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -298979,6 +299071,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'โฟลเดอร์';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -299008,6 +299104,10 @@ class _StringsTh extends _StringsEn {
   String get media_server_sort_date_added => 'วันที่เพิ่ม';
   @override
   String get media_server_sort_name => 'ชื่อ';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -323710,6 +323810,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Klasör';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -323739,6 +323843,10 @@ class _StringsTr extends _StringsEn {
   String get media_server_sort_date_added => 'Eklenme tarihi';
   @override
   String get media_server_sort_name => 'Ad';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -348484,6 +348592,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => 'Thư mục';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -348514,6 +348626,10 @@ class _StringsVi extends _StringsEn {
   String get media_server_sort_date_added => 'Ngày thêm';
   @override
   String get media_server_sort_name => 'Tên';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -372201,6 +372317,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_server_browse_by_title => '按作品浏览';
   @override
+  String get media_server_continue_menu_details => '打开详情';
+  @override
+  String get media_server_continue_menu_resume => '继续播放';
+  @override
   String get media_server_item_folder => '文件夹';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -372229,6 +372349,10 @@ class _StringsZhCn extends _StringsEn {
   String get media_server_sort_date_added => '添加时间';
   @override
   String get media_server_sort_name => '名称';
+  @override
+  String media_server_version_count({required Object n}) => '${n} 个版本';
+  @override
+  String get media_server_version_pick_title => '选择版本';
   @override
   String get media_server_versions => '版本';
   @override
@@ -395089,6 +395213,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
   @override
+  String get media_server_continue_menu_details => 'Open details';
+  @override
+  String get media_server_continue_menu_resume => 'Resume';
+  @override
   String get media_server_item_folder => '資料夾';
   @override
   String media_server_item_unplayed_episodes({required Object n}) =>
@@ -395117,6 +395245,10 @@ class _StringsZhHk extends _StringsEn {
   String get media_server_sort_date_added => '新增時間';
   @override
   String get media_server_sort_name => '名稱';
+  @override
+  String media_server_version_count({required Object n}) => '${n} versions';
+  @override
+  String get media_server_version_pick_title => 'Choose a version';
   @override
   String get media_server_versions => 'Versions';
   @override
@@ -417317,6 +417449,10 @@ extension on _StringsEn {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Folder';
       case 'media_server_item_unplayed_episodes':
@@ -417345,6 +417481,10 @@ extension on _StringsEn {
         return 'Date added';
       case 'media_server_sort_name':
         return 'Name';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -438418,6 +438558,10 @@ extension on _StringsAr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'مجلد';
       case 'media_server_item_unplayed_episodes':
@@ -438446,6 +438590,10 @@ extension on _StringsAr {
         return 'تاريخ الإضافة';
       case 'media_server_sort_name':
         return 'الاسم';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -459566,6 +459714,10 @@ extension on _StringsDe {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Ordner';
       case 'media_server_item_unplayed_episodes':
@@ -459594,6 +459746,10 @@ extension on _StringsDe {
         return 'Hinzugefügt am';
       case 'media_server_sort_name':
         return 'Name';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -480728,6 +480884,10 @@ extension on _StringsEs {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Carpeta';
       case 'media_server_item_unplayed_episodes':
@@ -480756,6 +480916,10 @@ extension on _StringsEs {
         return 'Fecha de adición';
       case 'media_server_sort_name':
         return 'Nombre';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -501900,6 +502064,10 @@ extension on _StringsFr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Dossier';
       case 'media_server_item_unplayed_episodes':
@@ -501928,6 +502096,10 @@ extension on _StringsFr {
         return 'Date d\'ajout';
       case 'media_server_sort_name':
         return 'Nom';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -523045,6 +523217,10 @@ extension on _StringsId {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Folder';
       case 'media_server_item_unplayed_episodes':
@@ -523073,6 +523249,10 @@ extension on _StringsId {
         return 'Tanggal ditambahkan';
       case 'media_server_sort_name':
         return 'Nama';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -544179,6 +544359,10 @@ extension on _StringsIt {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Cartella';
       case 'media_server_item_unplayed_episodes':
@@ -544207,6 +544391,10 @@ extension on _StringsIt {
         return 'Data di aggiunta';
       case 'media_server_sort_name':
         return 'Nome';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -565271,6 +565459,10 @@ extension on _StringsJa {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'フォルダー';
       case 'media_server_item_unplayed_episodes':
@@ -565299,6 +565491,10 @@ extension on _StringsJa {
         return '追加日';
       case 'media_server_sort_name':
         return '名前';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -586295,6 +586491,10 @@ extension on _StringsKo {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return '폴더';
       case 'media_server_item_unplayed_episodes':
@@ -586323,6 +586523,10 @@ extension on _StringsKo {
         return '추가한 날짜';
       case 'media_server_sort_name':
         return '이름';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -607395,6 +607599,10 @@ extension on _StringsNl {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Map';
       case 'media_server_item_unplayed_episodes':
@@ -607423,6 +607631,10 @@ extension on _StringsNl {
         return 'Datum toegevoegd';
       case 'media_server_sort_name':
         return 'Naam';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -628541,6 +628753,10 @@ extension on _StringsPtBr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Pasta';
       case 'media_server_item_unplayed_episodes':
@@ -628569,6 +628785,10 @@ extension on _StringsPtBr {
         return 'Data de adição';
       case 'media_server_sort_name':
         return 'Nome';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -649691,6 +649911,10 @@ extension on _StringsRu {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Папка';
       case 'media_server_item_unplayed_episodes':
@@ -649719,6 +649943,10 @@ extension on _StringsRu {
         return 'Дата добавления';
       case 'media_server_sort_name':
         return 'Название';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -670810,6 +671038,10 @@ extension on _StringsTh {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'โฟลเดอร์';
       case 'media_server_item_unplayed_episodes':
@@ -670838,6 +671070,10 @@ extension on _StringsTh {
         return 'วันที่เพิ่ม';
       case 'media_server_sort_name':
         return 'ชื่อ';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -691935,6 +692171,10 @@ extension on _StringsTr {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Klasör';
       case 'media_server_item_unplayed_episodes':
@@ -691963,6 +692203,10 @@ extension on _StringsTr {
         return 'Eklenme tarihi';
       case 'media_server_sort_name':
         return 'Ad';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -713058,6 +713302,10 @@ extension on _StringsVi {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return 'Thư mục';
       case 'media_server_item_unplayed_episodes':
@@ -713086,6 +713334,10 @@ extension on _StringsVi {
         return 'Ngày thêm';
       case 'media_server_sort_name':
         return 'Tên';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
@@ -734047,6 +734299,10 @@ extension on _StringsZhCn {
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
         return '按作品浏览';
+      case 'media_server_continue_menu_details':
+        return '打开详情';
+      case 'media_server_continue_menu_resume':
+        return '继续播放';
       case 'media_server_item_folder':
         return '文件夹';
       case 'media_server_item_unplayed_episodes':
@@ -734075,6 +734331,10 @@ extension on _StringsZhCn {
         return '添加时间';
       case 'media_server_sort_name':
         return '名称';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} 个版本';
+      case 'media_server_version_pick_title':
+        return '选择版本';
       case 'media_server_versions':
         return '版本';
       case 'media_source_add':
@@ -754946,6 +755206,10 @@ extension on _StringsZhHk {
         return 'Browse by folder';
       case 'media_server_browse_by_title':
         return 'Browse shows and movies';
+      case 'media_server_continue_menu_details':
+        return 'Open details';
+      case 'media_server_continue_menu_resume':
+        return 'Resume';
       case 'media_server_item_folder':
         return '資料夾';
       case 'media_server_item_unplayed_episodes':
@@ -754974,6 +755238,10 @@ extension on _StringsZhHk {
         return '新增時間';
       case 'media_server_sort_name':
         return '名稱';
+      case 'media_server_version_count':
+        return ({required Object n}) => '${n} versions';
+      case 'media_server_version_pick_title':
+        return 'Choose a version';
       case 'media_server_versions':
         return 'Versions';
       case 'media_source_add':
