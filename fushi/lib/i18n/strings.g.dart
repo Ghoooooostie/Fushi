@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172567 (10151 per locale)
+/// Strings: 172720 (10160 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -255,6 +255,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_confirm_title => 'Confirm before running';
   String get ai_agent_confirm_undoable => 'You can undo it afterwards.';
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
   String get ai_agent_details => 'Details';
   String get ai_agent_empty_title => 'What should I do?';
   String get ai_agent_expand => 'Open as full page';
@@ -319,6 +320,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_agent_undo_failed({required Object reason}) =>
       'Undo failed: ${reason}';
   String get ai_agent_undone => 'Undone';
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   String get ai_assist_empty =>
       'AI did not return a usable result. Try describing it differently.';
   String ai_assist_failed({required Object reason}) =>
@@ -465,6 +473,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_provider_models_fetched({required Object count}) =>
       'Found ${count} models';
   String get ai_provider_name => 'Name';
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  String get ai_provider_pricing => 'Pricing';
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   String get ai_provider_protocol => 'Protocol';
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   String get ai_provider_rate_limit => 'Requests per minute';
@@ -14775,6 +14791,8 @@ class _StringsAr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -14883,6 +14901,14 @@ class _StringsAr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
@@ -15130,6 +15156,21 @@ class _StringsAr extends _StringsEn {
       'تم العثور على ${count} نموذج';
   @override
   String get ai_provider_name => 'الاسم';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'البروتوكول';
   @override
@@ -39363,6 +39404,8 @@ class _StringsDe extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -39471,6 +39514,14 @@ class _StringsDe extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
@@ -39720,6 +39771,21 @@ class _StringsDe extends _StringsEn {
       '${count} Modelle gefunden';
   @override
   String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokoll';
   @override
@@ -64342,6 +64408,8 @@ class _StringsEs extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -64450,6 +64518,14 @@ class _StringsEs extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
@@ -64701,6 +64777,21 @@ class _StringsEs extends _StringsEn {
       'Se encontraron ${count} modelos';
   @override
   String get ai_provider_name => 'Nombre';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocolo';
   @override
@@ -89378,6 +89469,8 @@ class _StringsFr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -89486,6 +89579,14 @@ class _StringsFr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
@@ -89735,6 +89836,21 @@ class _StringsFr extends _StringsEn {
       '${count} modèles trouvés';
   @override
   String get ai_provider_name => 'Nom';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocole';
   @override
@@ -114494,6 +114610,8 @@ class _StringsId extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -114602,6 +114720,14 @@ class _StringsId extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
@@ -114850,6 +114976,21 @@ class _StringsId extends _StringsEn {
       'Ditemukan ${count} model';
   @override
   String get ai_provider_name => 'Nama';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokol';
   @override
@@ -139265,6 +139406,8 @@ class _StringsIt extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -139373,6 +139516,14 @@ class _StringsIt extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
@@ -139624,6 +139775,21 @@ class _StringsIt extends _StringsEn {
       'Trovati ${count} modelli';
   @override
   String get ai_provider_name => 'Nome';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocollo';
   @override
@@ -164200,6 +164366,8 @@ class _StringsJa extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -164308,6 +164476,14 @@ class _StringsJa extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
@@ -164548,6 +164724,21 @@ class _StringsJa extends _StringsEn {
       '${count} 個のモデルが見つかりました';
   @override
   String get ai_provider_name => '名前';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'プロトコル';
   @override
@@ -188098,6 +188289,8 @@ class _StringsKo extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -188206,6 +188399,14 @@ class _StringsKo extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
   @override
@@ -188445,6 +188646,21 @@ class _StringsKo extends _StringsEn {
       '모델 ${count}개를 찾았습니다';
   @override
   String get ai_provider_name => '이름';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => '프로토콜';
   @override
@@ -212063,6 +212279,8 @@ class _StringsNl extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -212171,6 +212389,14 @@ class _StringsNl extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
@@ -212420,6 +212646,21 @@ class _StringsNl extends _StringsEn {
       '${count} modellen gevonden';
   @override
   String get ai_provider_name => 'Naam';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocol';
   @override
@@ -236947,6 +237188,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -237055,6 +237298,14 @@ class _StringsPtBr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
@@ -237306,6 +237557,21 @@ class _StringsPtBr extends _StringsEn {
       '${count} modelos encontrados';
   @override
   String get ai_provider_name => 'Nome';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protocolo';
   @override
@@ -261899,6 +262165,8 @@ class _StringsRu extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -262007,6 +262275,14 @@ class _StringsRu extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
@@ -262255,6 +262531,21 @@ class _StringsRu extends _StringsEn {
       'Найдено моделей: ${count}';
   @override
   String get ai_provider_name => 'Название';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Протокол';
   @override
@@ -286796,6 +287087,8 @@ class _StringsTh extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -286904,6 +287197,14 @@ class _StringsTh extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
@@ -287150,6 +287451,21 @@ class _StringsTh extends _StringsEn {
       'พบ ${count} โมเดล';
   @override
   String get ai_provider_name => 'ชื่อ';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'โปรโตคอล';
   @override
@@ -311371,6 +311687,8 @@ class _StringsTr extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -311479,6 +311797,14 @@ class _StringsTr extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
@@ -311729,6 +312055,21 @@ class _StringsTr extends _StringsEn {
       '${count} model bulundu';
   @override
   String get ai_provider_name => 'Ad';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Protokol';
   @override
@@ -336150,6 +336491,8 @@ class _StringsVi extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -336258,6 +336601,14 @@ class _StringsVi extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty =>
       'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
@@ -336506,6 +336857,21 @@ class _StringsVi extends _StringsEn {
       'Tìm thấy ${count} mô hình';
   @override
   String get ai_provider_name => 'Tên';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => 'Giao thức';
   @override
@@ -360852,6 +361218,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => '关于：${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '约 ${amount}';
+  @override
   String get ai_agent_details => '详情';
   @override
   String get ai_agent_empty_title => '要我做什么？';
@@ -360950,6 +361318,13 @@ class _StringsZhCn extends _StringsEn {
   String ai_agent_undo_failed({required Object reason}) => '撤销失败：${reason}';
   @override
   String get ai_agent_undone => '已撤销';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) => '输入 ${input} · 输出 ${output} · 缓存读取 ${cacheRead} · 缓存写入 ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
@@ -361173,6 +361548,21 @@ class _StringsZhCn extends _StringsEn {
       '找到 ${count} 个模型';
   @override
   String get ai_provider_name => '名称';
+  @override
+  String get ai_provider_price_cache_read => '缓存读取（每百万 token）';
+  @override
+  String get ai_provider_price_cache_write => '缓存写入（每百万 token）';
+  @override
+  String get ai_provider_price_currency => '币种（如 USD、CNY）';
+  @override
+  String get ai_provider_price_input => '输入（每百万 token）';
+  @override
+  String get ai_provider_price_output => '输出（每百万 token）';
+  @override
+  String get ai_provider_pricing => '价格';
+  @override
+  String get ai_provider_pricing_summary =>
+      '照着厂商价目表填上这个模型的单价，AI 助手就会显示每场对话花了多少钱。不填只显示 token 数；缓存单价不填按输入单价算。';
   @override
   String get ai_provider_protocol => '协议';
   @override
@@ -383446,6 +383836,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String ai_agent_context_chip({required Object title}) => 'About: ${title}';
   @override
+  String ai_agent_cost({required Object amount}) => '≈ ${amount}';
+  @override
   String get ai_agent_details => 'Details';
   @override
   String get ai_agent_empty_title => 'What should I do?';
@@ -383554,6 +383946,14 @@ class _StringsZhHk extends _StringsEn {
       'Undo failed: ${reason}';
   @override
   String get ai_agent_undone => 'Undone';
+  @override
+  String ai_agent_usage_breakdown({
+    required Object input,
+    required Object output,
+    required Object cacheRead,
+    required Object cacheWrite,
+  }) =>
+      'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
   @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
@@ -383784,6 +384184,21 @@ class _StringsZhHk extends _StringsEn {
       '找到 ${count} 個模型';
   @override
   String get ai_provider_name => '名稱';
+  @override
+  String get ai_provider_price_cache_read => 'Cache read (per 1M tokens)';
+  @override
+  String get ai_provider_price_cache_write => 'Cache write (per 1M tokens)';
+  @override
+  String get ai_provider_price_currency => 'Currency (e.g. USD, CNY)';
+  @override
+  String get ai_provider_price_input => 'Input (per 1M tokens)';
+  @override
+  String get ai_provider_price_output => 'Output (per 1M tokens)';
+  @override
+  String get ai_provider_pricing => 'Pricing';
+  @override
+  String get ai_provider_pricing_summary =>
+      'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
   @override
   String get ai_provider_protocol => '協議';
   @override
@@ -406706,6 +407121,8 @@ extension on _StringsEn {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -406802,6 +407219,14 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI did not return a usable result. Try describing it differently.';
       case 'ai_assist_failed':
@@ -407009,6 +407434,20 @@ extension on _StringsEn {
         return ({required Object count}) => 'Found ${count} models';
       case 'ai_provider_name':
         return 'Name';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocol';
       case 'ai_provider_protocol_locked':
@@ -427785,6 +428224,8 @@ extension on _StringsAr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -427881,6 +428322,14 @@ extension on _StringsAr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'لم يُرجع الذكاء الاصطناعي نتيجة صالحة. حاول وصفها بطريقة مختلفة.';
       case 'ai_assist_failed':
@@ -428089,6 +428538,20 @@ extension on _StringsAr {
         return ({required Object count}) => 'تم العثور على ${count} نموذج';
       case 'ai_provider_name':
         return 'الاسم';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'البروتوكول';
       case 'ai_provider_protocol_locked':
@@ -448858,6 +449321,8 @@ extension on _StringsDe {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -448954,6 +449419,14 @@ extension on _StringsDe {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'Die KI hat kein brauchbares Ergebnis zurückgegeben. Versuche es mit einer anderen Beschreibung.';
       case 'ai_assist_failed':
@@ -449162,6 +449635,20 @@ extension on _StringsDe {
         return ({required Object count}) => '${count} Modelle gefunden';
       case 'ai_provider_name':
         return 'Name';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokoll';
       case 'ai_provider_protocol_locked':
@@ -470007,6 +470494,8 @@ extension on _StringsEs {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -470103,6 +470592,14 @@ extension on _StringsEs {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'La IA no devolvió un resultado utilizable. Prueba a describirlo de otra forma.';
       case 'ai_assist_failed':
@@ -470311,6 +470808,20 @@ extension on _StringsEs {
         return ({required Object count}) => 'Se encontraron ${count} modelos';
       case 'ai_provider_name':
         return 'Nombre';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocolo';
       case 'ai_provider_protocol_locked':
@@ -491138,6 +491649,8 @@ extension on _StringsFr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -491234,6 +491747,14 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'L\'IA n\'a pas renvoyé de résultat exploitable. Essayez de le décrire autrement.';
       case 'ai_assist_failed':
@@ -491444,6 +491965,20 @@ extension on _StringsFr {
         return ({required Object count}) => '${count} modèles trouvés';
       case 'ai_provider_name':
         return 'Nom';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocole';
       case 'ai_provider_protocol_locked':
@@ -512287,6 +512822,8 @@ extension on _StringsId {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -512383,6 +512920,14 @@ extension on _StringsId {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI tidak mengembalikan hasil yang dapat digunakan. Coba jelaskan dengan cara lain.';
       case 'ai_assist_failed':
@@ -512590,6 +513135,20 @@ extension on _StringsId {
         return ({required Object count}) => 'Ditemukan ${count} model';
       case 'ai_provider_name':
         return 'Nama';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokol';
       case 'ai_provider_protocol_locked':
@@ -533380,6 +533939,8 @@ extension on _StringsIt {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -533476,6 +534037,14 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'L\'IA non ha restituito un risultato utilizzabile. Prova a descriverlo in modo diverso.';
       case 'ai_assist_failed':
@@ -533684,6 +534253,20 @@ extension on _StringsIt {
         return ({required Object count}) => 'Trovati ${count} modelli';
       case 'ai_provider_name':
         return 'Nome';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocollo';
       case 'ai_provider_protocol_locked':
@@ -554509,6 +555092,8 @@ extension on _StringsJa {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -554605,6 +555190,14 @@ extension on _StringsJa {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -554811,6 +555404,20 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} 個のモデルが見つかりました';
       case 'ai_provider_name':
         return '名前';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'プロトコル';
       case 'ai_provider_protocol_locked':
@@ -575503,6 +576110,8 @@ extension on _StringsKo {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -575599,6 +576208,14 @@ extension on _StringsKo {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI가 사용할 수 있는 결과를 반환하지 않았습니다. 다른 방식으로 설명해 보세요.';
       case 'ai_assist_failed':
@@ -575805,6 +576422,20 @@ extension on _StringsKo {
         return ({required Object count}) => '모델 ${count}개를 찾았습니다';
       case 'ai_provider_name':
         return '이름';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return '프로토콜';
       case 'ai_provider_protocol_locked':
@@ -596513,6 +597144,8 @@ extension on _StringsNl {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -596609,6 +597242,14 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI gaf geen bruikbaar resultaat terug. Probeer het anders te beschrijven.';
       case 'ai_assist_failed':
@@ -596816,6 +597457,20 @@ extension on _StringsNl {
         return ({required Object count}) => '${count} modellen gevonden';
       case 'ai_provider_name':
         return 'Naam';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocol';
       case 'ai_provider_protocol_locked':
@@ -617637,6 +618292,8 @@ extension on _StringsPtBr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -617733,6 +618390,14 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'A IA não retornou um resultado utilizável. Tente descrever de outra forma.';
       case 'ai_assist_failed':
@@ -617941,6 +618606,20 @@ extension on _StringsPtBr {
         return ({required Object count}) => '${count} modelos encontrados';
       case 'ai_provider_name':
         return 'Nome';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protocolo';
       case 'ai_provider_protocol_locked':
@@ -638753,6 +639432,8 @@ extension on _StringsRu {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -638849,6 +639530,14 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'ИИ не вернул пригодного результата. Попробуйте описать иначе.';
       case 'ai_assist_failed':
@@ -639055,6 +639744,20 @@ extension on _StringsRu {
         return ({required Object count}) => 'Найдено моделей: ${count}';
       case 'ai_provider_name':
         return 'Название';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Протокол';
       case 'ai_provider_protocol_locked':
@@ -659874,6 +660577,8 @@ extension on _StringsTh {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -659970,6 +660675,14 @@ extension on _StringsTh {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI ไม่ส่งผลลัพธ์ที่ใช้ได้กลับมา ลองอธิบายด้วยวิธีอื่น';
       case 'ai_assist_failed':
@@ -660177,6 +660890,20 @@ extension on _StringsTh {
         return ({required Object count}) => 'พบ ${count} โมเดล';
       case 'ai_provider_name':
         return 'ชื่อ';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'โปรโตคอล';
       case 'ai_provider_protocol_locked':
@@ -680951,6 +681678,8 @@ extension on _StringsTr {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -681047,6 +681776,14 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'Yapay zeka kullanılabilir bir sonuç döndürmedi. Farklı şekilde anlatmayı deneyin.';
       case 'ai_assist_failed':
@@ -681255,6 +681992,20 @@ extension on _StringsTr {
         return ({required Object count}) => '${count} model bulundu';
       case 'ai_provider_name':
         return 'Ad';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Protokol';
       case 'ai_provider_protocol_locked':
@@ -702059,6 +702810,8 @@ extension on _StringsVi {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -702155,6 +702908,14 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI không trả về kết quả dùng được. Hãy thử mô tả theo cách khác.';
       case 'ai_assist_failed':
@@ -702361,6 +703122,20 @@ extension on _StringsVi {
         return ({required Object count}) => 'Tìm thấy ${count} mô hình';
       case 'ai_provider_name':
         return 'Tên';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return 'Giao thức';
       case 'ai_provider_protocol_locked':
@@ -723149,6 +723924,8 @@ extension on _StringsZhCn {
         return '执行后可以撤销。';
       case 'ai_agent_context_chip':
         return ({required Object title}) => '关于：${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '约 ${amount}';
       case 'ai_agent_details':
         return '详情';
       case 'ai_agent_empty_title':
@@ -723243,6 +724020,14 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '撤销失败：${reason}';
       case 'ai_agent_undone':
         return '已撤销';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            '输入 ${input} · 输出 ${output} · 缓存读取 ${cacheRead} · 缓存写入 ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -723449,6 +724234,20 @@ extension on _StringsZhCn {
         return ({required Object count}) => '找到 ${count} 个模型';
       case 'ai_provider_name':
         return '名称';
+      case 'ai_provider_price_cache_read':
+        return '缓存读取（每百万 token）';
+      case 'ai_provider_price_cache_write':
+        return '缓存写入（每百万 token）';
+      case 'ai_provider_price_currency':
+        return '币种（如 USD、CNY）';
+      case 'ai_provider_price_input':
+        return '输入（每百万 token）';
+      case 'ai_provider_price_output':
+        return '输出（每百万 token）';
+      case 'ai_provider_pricing':
+        return '价格';
+      case 'ai_provider_pricing_summary':
+        return '照着厂商价目表填上这个模型的单价，AI 助手就会显示每场对话花了多少钱。不填只显示 token 数；缓存单价不填按输入单价算。';
       case 'ai_provider_protocol':
         return '协议';
       case 'ai_provider_protocol_locked':
@@ -743982,6 +744781,8 @@ extension on _StringsZhHk {
         return 'You can undo it afterwards.';
       case 'ai_agent_context_chip':
         return ({required Object title}) => 'About: ${title}';
+      case 'ai_agent_cost':
+        return ({required Object amount}) => '≈ ${amount}';
       case 'ai_agent_details':
         return 'Details';
       case 'ai_agent_empty_title':
@@ -744078,6 +744879,14 @@ extension on _StringsZhHk {
         return ({required Object reason}) => 'Undo failed: ${reason}';
       case 'ai_agent_undone':
         return 'Undone';
+      case 'ai_agent_usage_breakdown':
+        return ({
+          required Object input,
+          required Object output,
+          required Object cacheRead,
+          required Object cacheWrite,
+        }) =>
+            'Input ${input} · Output ${output} · Cache read ${cacheRead} · Cache write ${cacheWrite}';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -744284,6 +745093,20 @@ extension on _StringsZhHk {
         return ({required Object count}) => '找到 ${count} 個模型';
       case 'ai_provider_name':
         return '名稱';
+      case 'ai_provider_price_cache_read':
+        return 'Cache read (per 1M tokens)';
+      case 'ai_provider_price_cache_write':
+        return 'Cache write (per 1M tokens)';
+      case 'ai_provider_price_currency':
+        return 'Currency (e.g. USD, CNY)';
+      case 'ai_provider_price_input':
+        return 'Input (per 1M tokens)';
+      case 'ai_provider_price_output':
+        return 'Output (per 1M tokens)';
+      case 'ai_provider_pricing':
+        return 'Pricing';
+      case 'ai_provider_pricing_summary':
+        return 'Copy this model\'s prices from the provider\'s price list to see what each AI assistant conversation costs. Leave them empty to show tokens only; empty cache prices count at the input price.';
       case 'ai_provider_protocol':
         return '協議';
       case 'ai_provider_protocol_locked':
