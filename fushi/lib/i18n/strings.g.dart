@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172771 (10163 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14607,6 +14607,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_login_import => 'Import login from browser';
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
@@ -39185,6 +39202,27 @@ class _StringsAr extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -64187,6 +64225,27 @@ class _StringsDe extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -89244,6 +89303,27 @@ class _StringsEs extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -114384,6 +114464,27 @@ class _StringsFr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -139179,6 +139280,27 @@ class _StringsId extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -164136,6 +164258,27 @@ class _StringsIt extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -188059,6 +188202,27 @@ class _StringsJa extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -212046,6 +212210,27 @@ class _StringsKo extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -236952,6 +237137,27 @@ class _StringsNl extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -261928,6 +262134,27 @@ class _StringsPtBr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -286849,6 +287076,27 @@ class _StringsRu extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -311446,6 +311694,27 @@ class _StringsTh extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
   @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
@@ -336248,6 +336517,27 @@ class _StringsTr extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -360977,6 +361267,27 @@ class _StringsVi extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       'Imported ${count} login cookies from the browser';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background =>
       'Making the card in the background (cut straight from the YouTube stream)';
   @override
@@ -383593,6 +383904,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String web_video_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => '空闲时已自动制卡：成功 ${ok} 张，失败 ${failed} 张';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) => '你回来了，已暂停：成功 ${ok} 张，失败 ${failed} 张，队列还剩 ${count} 张';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) => '空闲自动制卡中 ${done}/${total} · 有任何操作即暂停';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      '无法静音录制卡片音频（需要 Windows 11，详见错误日志），本次运行不再空闲自动制卡';
   @override
   String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
   @override
@@ -406920,6 +407250,27 @@ class _StringsZhHk extends _StringsEn {
   String web_video_login_import_received({required Object count}) =>
       '已從瀏覽器匯入 ${count} 條登入資訊';
   @override
+  String web_video_mine_auto_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Created cards while you were away: ${ok} done, ${failed} failed';
+  @override
+  String web_video_mine_auto_paused({
+    required Object ok,
+    required Object failed,
+    required Object count,
+  }) =>
+      'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+  @override
+  String web_video_mine_auto_running({
+    required Object done,
+    required Object total,
+  }) =>
+      'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+  @override
+  String get web_video_mine_auto_unavailable =>
+      'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
+  @override
   String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
   @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
@@ -428021,6 +428372,21 @@ extension on _StringsEn {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -449112,6 +449478,21 @@ extension on _StringsAr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -470279,6 +470660,21 @@ extension on _StringsDe {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -491428,6 +491824,21 @@ extension on _StringsEs {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -512595,6 +513006,21 @@ extension on _StringsFr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -533706,6 +534132,21 @@ extension on _StringsId {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -554853,6 +555294,21 @@ extension on _StringsIt {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -575868,6 +576324,21 @@ extension on _StringsJa {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -596896,6 +597367,21 @@ extension on _StringsKo {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -618035,6 +618521,21 @@ extension on _StringsNl {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -639169,6 +639670,21 @@ extension on _StringsPtBr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -660308,6 +660824,21 @@ extension on _StringsRu {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -681403,6 +681934,21 @@ extension on _StringsTh {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -702529,6 +703075,21 @@ extension on _StringsTr {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -723638,6 +724199,21 @@ extension on _StringsVi {
       case 'web_video_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} login cookies from the browser';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
@@ -744492,6 +745068,20 @@ extension on _StringsZhCn {
         return '从浏览器导入登录';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            '空闲时已自动制卡：成功 ${ok} 张，失败 ${failed} 张';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) => '你回来了，已暂停：成功 ${ok} 张，失败 ${failed} 张，队列还剩 ${count} 张';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            '空闲自动制卡中 ${done}/${total} · 有任何操作即暂停';
+      case 'web_video_mine_auto_unavailable':
+        return '无法静音录制卡片音频（需要 Windows 11，详见错误日志），本次运行不再空闲自动制卡';
       case 'web_video_mine_background':
         return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
@@ -765439,6 +766029,21 @@ extension on _StringsZhHk {
         return '從瀏覽器匯入登入';
       case 'web_video_login_import_received':
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
+      case 'web_video_mine_auto_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Created cards while you were away: ${ok} done, ${failed} failed';
+      case 'web_video_mine_auto_paused':
+        return ({
+          required Object ok,
+          required Object failed,
+          required Object count,
+        }) =>
+            'Paused when you came back: ${ok} done, ${failed} failed, ${count} still queued';
+      case 'web_video_mine_auto_running':
+        return ({required Object done, required Object total}) =>
+            'Creating queued cards while you are away ${done}/${total} · any input pauses it';
+      case 'web_video_mine_auto_unavailable':
+        return 'Couldn\'t record card audio silently (needs Windows 11; see the error log), so auto card creation was skipped until restart';
       case 'web_video_mine_background':
         return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
