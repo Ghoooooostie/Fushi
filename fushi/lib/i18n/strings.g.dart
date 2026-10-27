@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172703 (10159 per locale)
+/// Strings: 172686 (10158 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10025,8 +10025,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_layout => 'Layout';
   String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   String get srs_card_appearance_show_frequency => 'Frequency';
   String get srs_card_appearance_show_picture => 'Picture';
   String get srs_card_appearance_show_source => 'Source';
@@ -31396,9 +31394,6 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -56305,9 +56300,6 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -81337,9 +81329,6 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -106457,9 +106446,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -131339,9 +131325,6 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -156265,9 +156248,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -180480,9 +180460,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -204430,9 +204407,6 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -229087,9 +229061,6 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -254044,9 +254015,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -278977,9 +278945,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -303661,9 +303626,6 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
-  @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
   @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
@@ -328412,9 +328374,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -353158,9 +353117,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -376490,8 +376446,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
-  String get srs_card_appearance_sentence_furigana => '例句注音常显';
-  @override
   String get srs_card_appearance_show_frequency => '词频';
   @override
   String get srs_card_appearance_show_picture => '图片';
@@ -399496,9 +399450,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
-  String get srs_card_appearance_sentence_furigana =>
-      'Always show sentence furigana';
-  @override
   String get srs_card_appearance_show_frequency => 'Frequency';
   @override
   String get srs_card_appearance_show_picture => 'Picture';
@@ -421357,8 +421308,6 @@ extension on _StringsEn {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -442450,8 +442399,6 @@ extension on _StringsAr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -463599,8 +463546,6 @@ extension on _StringsDe {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -484752,8 +484697,6 @@ extension on _StringsEs {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -505916,8 +505859,6 @@ extension on _StringsFr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -527040,8 +526981,6 @@ extension on _StringsId {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -548173,8 +548112,6 @@ extension on _StringsIt {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -569240,8 +569177,6 @@ extension on _StringsJa {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -590256,8 +590191,6 @@ extension on _StringsKo {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -611362,8 +611295,6 @@ extension on _StringsNl {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -632499,8 +632430,6 @@ extension on _StringsPtBr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -653640,8 +653569,6 @@ extension on _StringsRu {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -674741,8 +674668,6 @@ extension on _StringsTh {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -695860,8 +695785,6 @@ extension on _StringsTr {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -716974,8 +716897,6 @@ extension on _StringsVi {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
@@ -737920,8 +737841,6 @@ extension on _StringsZhCn {
         return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
-      case 'srs_card_appearance_sentence_furigana':
-        return '例句注音常显';
       case 'srs_card_appearance_show_frequency':
         return '词频';
       case 'srs_card_appearance_show_picture':
@@ -758830,8 +758749,6 @@ extension on _StringsZhHk {
         return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
-      case 'srs_card_appearance_sentence_furigana':
-        return 'Always show sentence furigana';
       case 'srs_card_appearance_show_frequency':
         return 'Frequency';
       case 'srs_card_appearance_show_picture':
