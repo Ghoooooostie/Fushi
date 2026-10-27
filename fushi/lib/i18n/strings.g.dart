@@ -3377,8 +3377,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_audiobookshelf_not_abs =>
       'That address doesn\'t look like an Audiobookshelf server';
   String get discovery_audiobookshelf_password_label => 'Password';
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
   String get discovery_audiobookshelf_server_add => 'Add server';
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
   String get discovery_audiobookshelf_server_remove => 'Remove server';
@@ -3399,6 +3397,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
   String get discovery_audiobookshelf_url_http_optin_required =>
@@ -19930,9 +19930,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -19965,6 +19962,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -44504,9 +44504,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -44539,6 +44536,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -69407,9 +69407,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -69442,6 +69439,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -94378,9 +94378,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -94413,6 +94410,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -119319,9 +119319,6 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -119354,6 +119351,9 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -144032,9 +144032,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -144067,6 +144064,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -168665,9 +168665,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -168700,6 +168697,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -192469,9 +192469,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -192504,6 +192501,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -216554,9 +216554,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -216589,6 +216586,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -241359,9 +241359,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -241394,6 +241391,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -266201,9 +266201,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -266236,6 +266233,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -290939,9 +290939,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -290974,6 +290971,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -315472,9 +315472,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -315507,6 +315504,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -340147,9 +340147,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -340182,6 +340179,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -364298,9 +364298,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => '密码';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      '这台服务器只允许单点登录，请改用 API 密钥登录';
-  @override
   String get discovery_audiobookshelf_server_add => '添加服务器';
   @override
   String get discovery_audiobookshelf_server_enabled => '启用';
@@ -364332,6 +364329,9 @@ class _StringsZhCn extends _StringsEn {
       '在书库的 Audiobookshelf 标签里流式收听自建服务器上的有声书和播客；「发现」页只列有声书库';
   @override
   String get discovery_audiobookshelf_settings_title => 'Audiobookshelf 服务器';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      '这台服务器只允许单点登录，请改用 API 密钥登录';
   @override
   String get discovery_audiobookshelf_url_hint =>
       '例如 http://192.168.1.10:13378';
@@ -386965,9 +386965,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_audiobookshelf_password_label => 'Password';
   @override
-  String get discovery_audiobookshelf_password_login_unavailable =>
-      'This server only allows single sign-on. Sign in with an API key instead.';
-  @override
   String get discovery_audiobookshelf_server_add => 'Add server';
   @override
   String get discovery_audiobookshelf_server_enabled => 'Enabled';
@@ -387000,6 +386997,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_audiobookshelf_settings_title =>
       'Audiobookshelf servers';
+  @override
+  String get discovery_audiobookshelf_sso_only_hint =>
+      'This server only allows single sign-on. Sign in with an API key instead.';
   @override
   String get discovery_audiobookshelf_url_hint =>
       'For example http://192.168.1.10:13378';
@@ -409615,8 +409615,6 @@ extension on _StringsEn {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -409644,6 +409642,8 @@ extension on _StringsEn {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -430614,8 +430614,6 @@ extension on _StringsAr {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -430643,6 +430641,8 @@ extension on _StringsAr {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -451634,8 +451634,6 @@ extension on _StringsDe {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -451663,6 +451661,8 @@ extension on _StringsDe {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -472693,8 +472693,6 @@ extension on _StringsEs {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -472722,6 +472720,8 @@ extension on _StringsEs {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -493753,8 +493753,6 @@ extension on _StringsFr {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -493782,6 +493780,8 @@ extension on _StringsFr {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -514801,8 +514801,6 @@ extension on _StringsId {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -514830,6 +514828,8 @@ extension on _StringsId {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -535822,8 +535822,6 @@ extension on _StringsIt {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -535851,6 +535849,8 @@ extension on _StringsIt {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -556833,8 +556833,6 @@ extension on _StringsJa {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -556862,6 +556860,8 @@ extension on _StringsJa {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -577747,8 +577747,6 @@ extension on _StringsKo {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -577776,6 +577774,8 @@ extension on _StringsKo {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -598712,8 +598712,6 @@ extension on _StringsNl {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -598741,6 +598739,8 @@ extension on _StringsNl {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -619754,8 +619754,6 @@ extension on _StringsPtBr {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -619783,6 +619781,8 @@ extension on _StringsPtBr {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -640794,8 +640794,6 @@ extension on _StringsRu {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -640823,6 +640821,8 @@ extension on _StringsRu {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -661811,8 +661811,6 @@ extension on _StringsTh {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -661840,6 +661838,8 @@ extension on _StringsTh {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -682824,8 +682824,6 @@ extension on _StringsTr {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -682853,6 +682851,8 @@ extension on _StringsTr {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -703843,8 +703843,6 @@ extension on _StringsVi {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -703872,6 +703870,8 @@ extension on _StringsVi {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -724780,8 +724780,6 @@ extension on _StringsZhCn {
         return '这个地址看起来不是 Audiobookshelf 服务器';
       case 'discovery_audiobookshelf_password_label':
         return '密码';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return '这台服务器只允许单点登录，请改用 API 密钥登录';
       case 'discovery_audiobookshelf_server_add':
         return '添加服务器';
       case 'discovery_audiobookshelf_server_enabled':
@@ -724808,6 +724806,8 @@ extension on _StringsZhCn {
         return '在书库的 Audiobookshelf 标签里流式收听自建服务器上的有声书和播客；「发现」页只列有声书库';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf 服务器';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return '这台服务器只允许单点登录，请改用 API 密钥登录';
       case 'discovery_audiobookshelf_url_hint':
         return '例如 http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
@@ -745551,8 +745551,6 @@ extension on _StringsZhHk {
         return 'That address doesn\'t look like an Audiobookshelf server';
       case 'discovery_audiobookshelf_password_label':
         return 'Password';
-      case 'discovery_audiobookshelf_password_login_unavailable':
-        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_server_add':
         return 'Add server';
       case 'discovery_audiobookshelf_server_enabled':
@@ -745580,6 +745578,8 @@ extension on _StringsZhHk {
         return 'Stream audiobooks and podcasts from your own Audiobookshelf server in the Books tab. Discover only lists audiobook libraries';
       case 'discovery_audiobookshelf_settings_title':
         return 'Audiobookshelf servers';
+      case 'discovery_audiobookshelf_sso_only_hint':
+        return 'This server only allows single sign-on. Sign in with an API key instead.';
       case 'discovery_audiobookshelf_url_hint':
         return 'For example http://192.168.1.10:13378';
       case 'discovery_audiobookshelf_url_http_optin_required':
