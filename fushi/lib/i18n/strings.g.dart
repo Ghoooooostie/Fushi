@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 173009 (10177 per locale)
+/// Strings: 173094 (10182 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6551,6 +6551,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => '${sentences} sentences from ${documents} sources';
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   String get lookup_popup_close_after_mining_hint =>
@@ -25381,6 +25390,20 @@ class _StringsAr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -50231,6 +50254,20 @@ class _StringsDe extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -75300,6 +75337,20 @@ class _StringsEs extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -100441,6 +100492,20 @@ class _StringsFr extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -125462,6 +125527,20 @@ class _StringsId extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -150372,6 +150451,20 @@ class _StringsIt extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -174895,6 +174988,20 @@ class _StringsJa extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -198870,6 +198977,20 @@ class _StringsKo extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -223353,6 +223474,20 @@ class _StringsNl extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -248346,6 +248481,20 @@ class _StringsPtBr extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -273324,6 +273473,20 @@ class _StringsRu extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -298136,6 +298299,20 @@ class _StringsTh extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -322891,6 +323068,20 @@ class _StringsTr extends _StringsEn {
   @override
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
+  @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
   @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
@@ -347707,6 +347898,20 @@ class _StringsVi extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -371547,6 +371752,17 @@ class _StringsZhCn extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       '我库里的例句 · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard => '进入查词页时自动聚焦搜索框';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      '打开查词页或清空查询后自动聚焦搜索框（手机上会弹出键盘）；关闭后点搜索框才开始输入';
+  @override
+  String get lookup_page_hide_keyboard => '收起键盘';
+  @override
+  String get lookup_page_pull_to_clear => '结果顶部下拉清空查询';
+  @override
+  String get lookup_page_pull_to_clear_hint => '结果滚到顶后继续下拉，会清空查询并回到搜索历史';
+  @override
   String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
   @override
   String get lookup_popup_close_after_mining_hint =>
@@ -394444,6 +394660,20 @@ class _StringsZhHk extends _StringsEn {
   String lookup_library_sentences_title({required Object count}) =>
       'From your library · ${count}';
   @override
+  String get lookup_page_auto_show_keyboard =>
+      'Focus search when opening Lookup';
+  @override
+  String get lookup_page_auto_show_keyboard_hint =>
+      'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+  @override
+  String get lookup_page_hide_keyboard => 'Hide keyboard';
+  @override
+  String get lookup_page_pull_to_clear =>
+      'Pull down at the top to clear the search';
+  @override
+  String get lookup_page_pull_to_clear_hint =>
+      'Pulling down past the top of the results clears the query and returns to search history';
+  @override
   String get lookup_popup_close_after_mining =>
       'Close lookup popup after creating a card';
   @override
@@ -416798,6 +417028,16 @@ extension on _StringsEn {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -437929,6 +438169,16 @@ extension on _StringsAr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -459101,6 +459351,16 @@ extension on _StringsDe {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -480294,6 +480554,16 @@ extension on _StringsEs {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -501497,6 +501767,16 @@ extension on _StringsFr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -522675,6 +522955,16 @@ extension on _StringsId {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -543837,6 +544127,16 @@ extension on _StringsIt {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -564963,6 +565263,16 @@ extension on _StringsJa {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -586018,6 +586328,16 @@ extension on _StringsKo {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -607140,6 +607460,16 @@ extension on _StringsNl {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -628318,6 +628648,16 @@ extension on _StringsPtBr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -649498,6 +649838,16 @@ extension on _StringsRu {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -670651,6 +671001,16 @@ extension on _StringsTh {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -691804,6 +692164,16 @@ extension on _StringsTr {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -712959,6 +713329,16 @@ extension on _StringsVi {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
@@ -733986,6 +734366,16 @@ extension on _StringsZhCn {
             '已索引 ${documents} 份来源、${sentences} 句';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => '我库里的例句 · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return '进入查词页时自动聚焦搜索框';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return '打开查词页或清空查询后自动聚焦搜索框（手机上会弹出键盘）；关闭后点搜索框才开始输入';
+      case 'lookup_page_hide_keyboard':
+        return '收起键盘';
+      case 'lookup_page_pull_to_clear':
+        return '结果顶部下拉清空查询';
+      case 'lookup_page_pull_to_clear_hint':
+        return '结果滚到顶后继续下拉，会清空查询并回到搜索历史';
       case 'lookup_popup_close_after_mining':
         return '制卡后关闭查词弹窗';
       case 'lookup_popup_close_after_mining_hint':
@@ -754909,6 +755299,16 @@ extension on _StringsZhHk {
             '${sentences} sentences from ${documents} sources';
       case 'lookup_library_sentences_title':
         return ({required Object count}) => 'From your library · ${count}';
+      case 'lookup_page_auto_show_keyboard':
+        return 'Focus search when opening Lookup';
+      case 'lookup_page_auto_show_keyboard_hint':
+        return 'Opening Lookup or clearing a search puts the cursor in the search box (on phones this pops up the keyboard). When off, tap the search box to type';
+      case 'lookup_page_hide_keyboard':
+        return 'Hide keyboard';
+      case 'lookup_page_pull_to_clear':
+        return 'Pull down at the top to clear the search';
+      case 'lookup_page_pull_to_clear_hint':
+        return 'Pulling down past the top of the results clears the query and returns to search history';
       case 'lookup_popup_close_after_mining':
         return 'Close lookup popup after creating a card';
       case 'lookup_popup_close_after_mining_hint':
