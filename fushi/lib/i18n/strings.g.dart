@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 171105 (10065 per locale)
+/// Strings: 171156 (10068 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -272,6 +272,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_agent_no_provider =>
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   String get ai_agent_open_settings => 'Open settings';
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
   String get ai_agent_remote_lost =>
@@ -14315,10 +14318,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_link_open_new_tab => 'Open in new tab';
   String get web_browser_link_share => 'Share link';
   String get web_browser_login_import => 'Import sign-in from browser';
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
   String get web_browser_menu_bookmarks => 'Bookmarks';
@@ -14690,6 +14695,11 @@ class _StringsAr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -38544,11 +38554,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -39078,6 +39091,11 @@ class _StringsDe extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -63323,11 +63341,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -63857,6 +63878,11 @@ class _StringsEs extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -88157,11 +88183,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -88693,6 +88722,11 @@ class _StringsFr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -113072,11 +113106,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -113609,6 +113646,11 @@ class _StringsId extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -137646,11 +137688,14 @@ class _StringsId extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -138180,6 +138225,11 @@ class _StringsIt extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -162378,11 +162428,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -162915,6 +162968,11 @@ class _StringsJa extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -186080,11 +186138,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -186612,6 +186673,11 @@ class _StringsKo extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -209844,11 +209910,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -210376,6 +210445,11 @@ class _StringsNl extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -234524,11 +234598,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -235060,6 +235137,11 @@ class _StringsPtBr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -259277,11 +259359,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -259812,6 +259897,11 @@ class _StringsRu extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -283975,11 +284065,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -284509,6 +284602,11 @@ class _StringsTh extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -308350,11 +308448,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -308884,6 +308985,11 @@ class _StringsTr extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -332928,11 +333034,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -333463,6 +333572,11 @@ class _StringsVi extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -357434,11 +357548,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -357961,6 +358078,11 @@ class _StringsZhCn extends _StringsEn {
   String get ai_agent_no_provider => 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
   @override
   String get ai_agent_open_settings => '去设置';
+  @override
+  String get ai_agent_peer_access => '允许已配对设备使用 AI 助手';
+  @override
+  String get ai_agent_peer_access_hint =>
+      '本机当互联主机时，已配对设备可以在这台设备上开 AI 助手会话：用的是本机的 AI 提供商，能改本机的库和设置（每条改动都能在「AI 操作记录」里撤销）。默认关闭。';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       '${device} 上关闭了 AI 功能。';
@@ -379867,11 +379989,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_browser_login_import => '从浏览器导入登录';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       '已从浏览器导入 ${count} 条登录信息';
   @override
-  String get web_browser_login_import_waiting =>
-      '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+  String get web_browser_login_import_write_failed => '没能写入浏览器送来的登录信息';
   @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
@@ -380373,6 +380497,11 @@ class _StringsZhHk extends _StringsEn {
       'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
   @override
   String get ai_agent_open_settings => 'Open settings';
+  @override
+  String get ai_agent_peer_access => 'Let paired devices use the AI assistant';
+  @override
+  String get ai_agent_peer_access_hint =>
+      'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
   @override
   String ai_agent_remote_disabled({required Object device}) =>
       'AI is turned off on ${device}.';
@@ -402951,11 +403080,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_login_import => 'Import sign-in from browser';
   @override
+  String web_browser_login_import_pending({required Object host}) =>
+      'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
+  @override
   String web_browser_login_import_received({required Object count}) =>
       'Imported ${count} sign-in items from the browser';
   @override
-  String get web_browser_login_import_waiting =>
-      'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+  String get web_browser_login_import_write_failed =>
+      'Couldn\'t save the sign-in from the browser';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
@@ -403429,6 +403561,10 @@ extension on _StringsEn {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -423885,11 +424021,14 @@ extension on _StringsEn {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -424331,6 +424470,10 @@ extension on _StringsAr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -444781,11 +444924,14 @@ extension on _StringsAr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -445227,6 +445373,10 @@ extension on _StringsDe {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -465753,11 +465903,14 @@ extension on _StringsDe {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -466199,6 +466352,10 @@ extension on _StringsEs {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -486707,11 +486864,14 @@ extension on _StringsEs {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -487153,6 +487313,10 @@ extension on _StringsFr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -507679,11 +507843,14 @@ extension on _StringsFr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -508125,6 +508292,10 @@ extension on _StringsId {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -528595,11 +528766,14 @@ extension on _StringsId {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -529041,6 +529215,10 @@ extension on _StringsIt {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -549547,11 +549725,14 @@ extension on _StringsIt {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -549993,6 +550174,10 @@ extension on _StringsJa {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -570367,11 +570552,14 @@ extension on _StringsJa {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -570810,6 +570998,10 @@ extension on _StringsKo {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -591200,11 +591392,14 @@ extension on _StringsKo {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -591643,6 +591838,10 @@ extension on _StringsNl {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -612144,11 +612343,14 @@ extension on _StringsNl {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -612590,6 +612792,10 @@ extension on _StringsPtBr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -633083,11 +633289,14 @@ extension on _StringsPtBr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -633529,6 +633738,10 @@ extension on _StringsRu {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -654027,11 +654240,14 @@ extension on _StringsRu {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -654473,6 +654689,10 @@ extension on _StringsTh {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -674927,11 +675147,14 @@ extension on _StringsTh {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -675373,6 +675596,10 @@ extension on _StringsTr {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -695858,11 +696085,14 @@ extension on _StringsTr {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -696304,6 +696534,10 @@ extension on _StringsVi {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -716772,11 +717006,14 @@ extension on _StringsVi {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
@@ -717217,6 +717454,10 @@ extension on _StringsZhCn {
         return 'AI 助手还没指派提供商，去「设置 › 模型 › LLM」指派';
       case 'ai_agent_open_settings':
         return '去设置';
+      case 'ai_agent_peer_access':
+        return '允许已配对设备使用 AI 助手';
+      case 'ai_agent_peer_access_hint':
+        return '本机当互联主机时，已配对设备可以在这台设备上开 AI 助手会话：用的是本机的 AI 提供商，能改本机的库和设置（每条改动都能在「AI 操作记录」里撤销）。默认关闭。';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => '${device} 上关闭了 AI 功能。';
       case 'ai_agent_remote_lost':
@@ -737437,10 +737678,13 @@ extension on _StringsZhCn {
         return '分享链接';
       case 'web_browser_login_import':
         return '从浏览器导入登录';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            '正在等系统浏览器送回 ${host} 的登录。装了 Fushi 浏览器扩展会自动送来；还没登录就先在浏览器里登录，再点一次导入。';
       case 'web_browser_login_import_received':
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
-      case 'web_browser_login_import_waiting':
-        return '已在系统浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+      case 'web_browser_login_import_write_failed':
+        return '没能写入浏览器送来的登录信息';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
@@ -737875,6 +738119,10 @@ extension on _StringsZhHk {
         return 'The AI assistant has no provider yet. Assign one in Settings › Models › LLM.';
       case 'ai_agent_open_settings':
         return 'Open settings';
+      case 'ai_agent_peer_access':
+        return 'Let paired devices use the AI assistant';
+      case 'ai_agent_peer_access_hint':
+        return 'When this device is the interconnect host, paired devices can run AI assistant sessions here: they use this device\'s AI provider and can change this device\'s library and settings (every change can be undone in AI operation history). Off by default.';
       case 'ai_agent_remote_disabled':
         return ({required Object device}) => 'AI is turned off on ${device}.';
       case 'ai_agent_remote_lost':
@@ -758187,11 +758435,14 @@ extension on _StringsZhHk {
         return 'Share link';
       case 'web_browser_login_import':
         return 'Import sign-in from browser';
+      case 'web_browser_login_import_pending':
+        return ({required Object host}) =>
+            'Waiting for your sign-in on ${host} from the browser. With the Fushi browser extension installed it arrives automatically. Not signed in yet? Sign in there first, then import again.';
       case 'web_browser_login_import_received':
         return ({required Object count}) =>
             'Imported ${count} sign-in items from the browser';
-      case 'web_browser_login_import_waiting':
-        return 'Opened this site in your browser. With the Fushi browser extension installed, your sign-in is sent over automatically; sign in there first if you haven\'t.';
+      case 'web_browser_login_import_write_failed':
+        return 'Couldn\'t save the sign-in from the browser';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
