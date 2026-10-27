@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172771 (10163 per locale)
+/// Strings: 172839 (10167 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1474,6 +1474,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String audiobook_import_error_disk_full({required Object size}) =>
       'Not enough disk space. Required: ${size}';
   String get audiobook_import_success => 'Audiobook imported';
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   String get audiobook_load_error => 'Failed to load audiobook.';
   String get audiobook_material_add_dir => 'Add folder';
   String get audiobook_material_library => 'Audiobook material library';
@@ -16794,6 +16799,15 @@ class _StringsAr extends _StringsEn {
       'مساحة القرص غير كافية. المطلوب: ${size}';
   @override
   String get audiobook_import_success => 'تم استيراد الكتاب المسموع';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'فشل تحميل الكتاب المسموع.';
   @override
@@ -41447,6 +41461,15 @@ class _StringsDe extends _StringsEn {
       'Nicht genügend Speicherplatz. Benötigt: ${size}';
   @override
   String get audiobook_import_success => 'Hörbuch importiert';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Hörbuch konnte nicht geladen werden.';
   @override
@@ -66467,6 +66490,15 @@ class _StringsEs extends _StringsEn {
       'Espacio en disco insuficiente. Requerido: ${size}';
   @override
   String get audiobook_import_success => 'Audiolibro importado';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Error al cargar el audiolibro.';
   @override
@@ -91540,6 +91572,15 @@ class _StringsFr extends _StringsEn {
       'Espace disque insuffisant. Requis : ${size}';
   @override
   String get audiobook_import_success => 'Livre audio importé';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Échec du chargement du livre audio.';
   @override
@@ -116662,6 +116703,15 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_import_success => 'Buku audio diimpor';
   @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
+  @override
   String get audiobook_load_error => 'Gagal memuat buku audio.';
   @override
   String get audiobook_material_add_dir => 'Tambah folder';
@@ -141473,6 +141523,15 @@ class _StringsIt extends _StringsEn {
       'Spazio su disco insufficiente. Richiesto: ${size}';
   @override
   String get audiobook_import_success => 'Audiolibro importato';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Impossibile caricare l\'audiolibro.';
   @override
@@ -166354,6 +166413,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_import_success => 'オーディオブックをインポートしました';
   @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
+  @override
   String get audiobook_load_error => 'オーディオブックの読み込みに失敗しました。';
   @override
   String get audiobook_material_add_dir => 'フォルダを追加';
@@ -190277,6 +190345,15 @@ class _StringsKo extends _StringsEn {
       '디스크 공간이 부족합니다. 필요 용량: ${size}';
   @override
   String get audiobook_import_success => '오디오북 가져오기 완료';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => '오디오북을 불러오지 못했습니다.';
   @override
@@ -214367,6 +214444,15 @@ class _StringsNl extends _StringsEn {
       'Onvoldoende schijfruimte. Vereist: ${size}';
   @override
   String get audiobook_import_success => 'Audioboek geïmporteerd';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Kan audioboek niet laden.';
   @override
@@ -239294,6 +239380,15 @@ class _StringsPtBr extends _StringsEn {
       'Espaço em disco insuficiente. Necessário: ${size}';
   @override
   String get audiobook_import_success => 'Audiolivro importado';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Falha ao carregar o audiolivro.';
   @override
@@ -264268,6 +264363,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_import_success => 'Аудиокнига импортирована';
   @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
+  @override
   String get audiobook_load_error => 'Не удалось загрузить аудиокнигу.';
   @override
   String get audiobook_material_add_dir => 'Добавить папку';
@@ -289162,6 +289266,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_import_success => 'นำเข้าหนังสือเสียงสำเร็จ';
   @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
+  @override
   String get audiobook_load_error => 'โหลดหนังสือเสียงล้มเหลว';
   @override
   String get audiobook_material_add_dir => 'เพิ่มโฟลเดอร์';
@@ -313789,6 +313902,15 @@ class _StringsTr extends _StringsEn {
       'Yeterli disk alanı yok. Gerekli: ${size}';
   @override
   String get audiobook_import_success => 'Sesli kitap içe aktarıldı';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => 'Sesli kitap yüklenemedi.';
   @override
@@ -338594,6 +338716,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_import_success => 'Đã nhập sách nói';
   @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
+  @override
   String get audiobook_load_error => 'Tải sách nói thất bại.';
   @override
   String get audiobook_material_add_dir => 'Thêm thư mục';
@@ -363153,6 +363284,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_import_success => '有声书导入成功';
   @override
+  String get audiobook_jump_threshold => '返回原位置的跳转距离';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      '音频一次跳转至少这么远（拖进度、点句、跳章）才出现「返回原位置」胶囊';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} 分钟';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} 秒';
+  @override
   String get audiobook_load_error => '加载有声书失败。';
   @override
   String get audiobook_material_add_dir => '添加目录';
@@ -385809,6 +385949,15 @@ class _StringsZhHk extends _StringsEn {
       '磁碟空間不足。所需空間：${size}';
   @override
   String get audiobook_import_success => '有聲書匯入成功';
+  @override
+  String get audiobook_jump_threshold => 'Return-to-position jump distance';
+  @override
+  String get audiobook_jump_threshold_hint =>
+      'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+  @override
+  String audiobook_jump_threshold_minutes({required Object n}) => '${n} min';
+  @override
+  String audiobook_jump_threshold_seconds({required Object n}) => '${n} s';
   @override
   String get audiobook_load_error => '載入有聲書失敗。';
   @override
@@ -408913,6 +409062,14 @@ extension on _StringsEn {
             'Not enough disk space. Required: ${size}';
       case 'audiobook_import_success':
         return 'Audiobook imported';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Failed to load audiobook.';
       case 'audiobook_material_add_dir':
@@ -430019,6 +430176,14 @@ extension on _StringsAr {
             'مساحة القرص غير كافية. المطلوب: ${size}';
       case 'audiobook_import_success':
         return 'تم استيراد الكتاب المسموع';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'فشل تحميل الكتاب المسموع.';
       case 'audiobook_material_add_dir':
@@ -451135,6 +451300,14 @@ extension on _StringsDe {
             'Nicht genügend Speicherplatz. Benötigt: ${size}';
       case 'audiobook_import_success':
         return 'Hörbuch importiert';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Hörbuch konnte nicht geladen werden.';
       case 'audiobook_material_add_dir':
@@ -472304,6 +472477,14 @@ extension on _StringsEs {
             'Espacio en disco insuficiente. Requerido: ${size}';
       case 'audiobook_import_success':
         return 'Audiolibro importado';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Error al cargar el audiolibro.';
       case 'audiobook_material_add_dir':
@@ -493468,6 +493649,14 @@ extension on _StringsFr {
             'Espace disque insuffisant. Requis : ${size}';
       case 'audiobook_import_success':
         return 'Livre audio importé';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Échec du chargement du livre audio.';
       case 'audiobook_material_add_dir':
@@ -514635,6 +514824,14 @@ extension on _StringsId {
             'Ruang disk tidak cukup. Diperlukan: ${size}';
       case 'audiobook_import_success':
         return 'Buku audio diimpor';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Gagal memuat buku audio.';
       case 'audiobook_material_add_dir':
@@ -535758,6 +535955,14 @@ extension on _StringsIt {
             'Spazio su disco insufficiente. Richiesto: ${size}';
       case 'audiobook_import_success':
         return 'Audiolibro importato';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Impossibile caricare l\'audiolibro.';
       case 'audiobook_material_add_dir':
@@ -556896,6 +557101,14 @@ extension on _StringsJa {
         return ({required Object size}) => 'ディスク容量が不足しています。必要容量：${size}';
       case 'audiobook_import_success':
         return 'オーディオブックをインポートしました';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'オーディオブックの読み込みに失敗しました。';
       case 'audiobook_material_add_dir':
@@ -577916,6 +578129,14 @@ extension on _StringsKo {
         return ({required Object size}) => '디스크 공간이 부족합니다. 필요 용량: ${size}';
       case 'audiobook_import_success':
         return '오디오북 가져오기 완료';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return '오디오북을 불러오지 못했습니다.';
       case 'audiobook_material_add_dir':
@@ -598972,6 +599193,14 @@ extension on _StringsNl {
             'Onvoldoende schijfruimte. Vereist: ${size}';
       case 'audiobook_import_success':
         return 'Audioboek geïmporteerd';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Kan audioboek niet laden.';
       case 'audiobook_material_add_dir':
@@ -620123,6 +620352,14 @@ extension on _StringsPtBr {
             'Espaço em disco insuficiente. Necessário: ${size}';
       case 'audiobook_import_success':
         return 'Audiolivro importado';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Falha ao carregar o audiolivro.';
       case 'audiobook_material_add_dir':
@@ -641268,6 +641505,14 @@ extension on _StringsRu {
             'Недостаточно места на диске. Требуется: ${size}';
       case 'audiobook_import_success':
         return 'Аудиокнига импортирована';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Не удалось загрузить аудиокнигу.';
       case 'audiobook_material_add_dir':
@@ -662404,6 +662649,14 @@ extension on _StringsTh {
             'พื้นที่ดิสก์ไม่เพียงพอ ต้องการ: ${size}';
       case 'audiobook_import_success':
         return 'นำเข้าหนังสือเสียงสำเร็จ';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'โหลดหนังสือเสียงล้มเหลว';
       case 'audiobook_material_add_dir':
@@ -683517,6 +683770,14 @@ extension on _StringsTr {
             'Yeterli disk alanı yok. Gerekli: ${size}';
       case 'audiobook_import_success':
         return 'Sesli kitap içe aktarıldı';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Sesli kitap yüklenemedi.';
       case 'audiobook_material_add_dir':
@@ -704648,6 +704909,14 @@ extension on _StringsVi {
             'Không đủ dung lượng đĩa. Cần: ${size}';
       case 'audiobook_import_success':
         return 'Đã nhập sách nói';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return 'Tải sách nói thất bại.';
       case 'audiobook_material_add_dir':
@@ -725731,6 +726000,14 @@ extension on _StringsZhCn {
         return ({required Object size}) => '磁盘空间不足。所需空间：${size}';
       case 'audiobook_import_success':
         return '有声书导入成功';
+      case 'audiobook_jump_threshold':
+        return '返回原位置的跳转距离';
+      case 'audiobook_jump_threshold_hint':
+        return '音频一次跳转至少这么远（拖进度、点句、跳章）才出现「返回原位置」胶囊';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} 分钟';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} 秒';
       case 'audiobook_load_error':
         return '加载有声书失败。';
       case 'audiobook_material_add_dir':
@@ -746594,6 +746871,14 @@ extension on _StringsZhHk {
         return ({required Object size}) => '磁碟空間不足。所需空間：${size}';
       case 'audiobook_import_success':
         return '有聲書匯入成功';
+      case 'audiobook_jump_threshold':
+        return 'Return-to-position jump distance';
+      case 'audiobook_jump_threshold_hint':
+        return 'Audio jumps at least this far (dragging the progress bar, tapping a sentence, chapter jumps) offer a return-to-position pill';
+      case 'audiobook_jump_threshold_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'audiobook_jump_threshold_seconds':
+        return ({required Object n}) => '${n} s';
       case 'audiobook_load_error':
         return '載入有聲書失敗。';
       case 'audiobook_material_add_dir':
