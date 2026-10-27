@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 172822 (10166 per locale)
+/// Strings: 172873 (10169 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9679,6 +9679,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_video_toggle_fullscreen => 'Toggle fullscreen';
   String get shortcut_action_video_toggle_immersive_lock =>
       'Toggle immersive lock';
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
@@ -12820,6 +12822,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_connecting => 'Connecting to stream…';
   String get video_loading_preparing => 'Preparing…';
   String get video_loading_subtitle => 'Downloading subtitles…';
+  String get video_loop_cue_badge_label => 'Looping line';
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
@@ -30790,6 +30794,9 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'تبديل قفل الانغماس';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'تبديل عناصر تحكم النافذة المصغّرة';
   @override
@@ -36205,6 +36212,10 @@ class _StringsAr extends _StringsEn {
   String get video_loading_preparing => 'جارٍ التحضير…';
   @override
   String get video_loading_subtitle => 'جارٍ تحميل الترجمات…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -55715,6 +55726,9 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersive Sperre umschalten';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Steuerelemente des Mini-Fensters umschalten';
   @override
@@ -61175,6 +61189,10 @@ class _StringsDe extends _StringsEn {
   String get video_loading_preparing => 'Wird vorbereitet…';
   @override
   String get video_loading_subtitle => 'Untertitel werden heruntergeladen…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -80763,6 +80781,9 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueo inmersivo';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles de la ventana mini';
   @override
@@ -86237,6 +86258,10 @@ class _StringsEs extends _StringsEn {
   String get video_loading_preparing => 'Preparando…';
   @override
   String get video_loading_subtitle => 'Descargando subtítulos…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -105899,6 +105924,9 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Basculer le verrouillage immersif';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Basculer les commandes de la mini-fenêtre';
   @override
@@ -111375,6 +111403,10 @@ class _StringsFr extends _StringsEn {
   String get video_loading_preparing => 'Préparation…';
   @override
   String get video_loading_subtitle => 'Téléchargement des sous-titres…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -130802,6 +130834,9 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alihkan Kunci Imersif';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alihkan kontrol jendela mini';
   @override
@@ -136240,6 +136275,10 @@ class _StringsId extends _StringsEn {
   String get video_loading_preparing => 'Mempersiapkan…';
   @override
   String get video_loading_subtitle => 'Mengunduh subtitle…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -155742,6 +155781,9 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Attiva/disattiva blocco immersivo';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Attiva/disattiva i controlli della mini finestra';
   @override
@@ -161193,6 +161235,10 @@ class _StringsIt extends _StringsEn {
   String get video_loading_preparing => 'Preparazione…';
   @override
   String get video_loading_subtitle => 'Download sottotitoli…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -179982,6 +180028,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock => 'イマーシブロックの切り替え';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome => 'ミニウィンドウのコントロールを切り替え';
   @override
   String get shortcut_action_video_toggle_mini_window => 'ミニウィンドウを切り替え';
@@ -185293,6 +185342,10 @@ class _StringsJa extends _StringsEn {
   String get video_loading_preparing => '準備中…';
   @override
   String get video_loading_subtitle => '字幕をダウンロード中…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -203951,6 +204004,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock => '몰입 잠금 전환';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome => '미니 창 컨트롤 전환';
   @override
   String get shortcut_action_video_toggle_mini_window => '미니 창 전환';
@@ -209263,6 +209319,10 @@ class _StringsKo extends _StringsEn {
   String get video_loading_preparing => '준비 중…';
   @override
   String get video_loading_subtitle => '자막 다운로드 중…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -228616,6 +228676,9 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Immersieve vergrendeling in-/uitschakelen';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bediening van minivenster in-/uitschakelen';
   @override
@@ -234069,6 +234132,10 @@ class _StringsNl extends _StringsEn {
   String get video_loading_preparing => 'Voorbereiden…';
   @override
   String get video_loading_subtitle => 'Ondertitels downloaden…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -253589,6 +253656,9 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Alternar bloqueio imersivo';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Alternar controles da minijanela';
   @override
@@ -259046,6 +259116,10 @@ class _StringsPtBr extends _StringsEn {
   String get video_loading_preparing => 'Preparando…';
   @override
   String get video_loading_subtitle => 'Baixando legendas…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -278540,6 +278614,9 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Иммерсивная блокировка';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Переключить элементы управления мини-окна';
   @override
@@ -283985,6 +284062,10 @@ class _StringsRu extends _StringsEn {
   String get video_loading_preparing => 'Подготовка…';
   @override
   String get video_loading_subtitle => 'Загрузка субтитров…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -303244,6 +303325,9 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'สลับล็อกโหมดดื่มด่ำ';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'สลับตัวควบคุมหน้าต่างเล็ก';
   @override
@@ -308656,6 +308740,10 @@ class _StringsTh extends _StringsEn {
   String get video_loading_preparing => 'กำลังเตรียม…';
   @override
   String get video_loading_subtitle => 'กำลังดาวน์โหลดคำบรรยาย…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -328007,6 +328095,9 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Sürükleyici Kilidi Aç/Kapat';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Mini pencere denetimlerini aç/kapat';
   @override
@@ -333443,6 +333534,10 @@ class _StringsTr extends _StringsEn {
   String get video_loading_preparing => 'Hazırlanıyor…';
   @override
   String get video_loading_subtitle => 'Altyazılar indiriliyor…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -352772,6 +352867,9 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_video_toggle_immersive_lock =>
       'Bật/tắt khóa đắm chìm';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
   @override
@@ -358199,6 +358297,10 @@ class _StringsVi extends _StringsEn {
   String get video_loading_preparing => 'Đang chuẩn bị…';
   @override
   String get video_loading_subtitle => 'Đang tải phụ đề…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -376155,6 +376257,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切换沉浸锁定';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      '循环当前句（开 / 关）';
+  @override
   String get shortcut_action_video_toggle_mini_chrome => '切换小窗控件';
   @override
   String get shortcut_action_video_toggle_mini_window => '切换小窗';
@@ -381136,6 +381241,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_loading_preparing => '正在准备…';
   @override
   String get video_loading_subtitle => '正在下载字幕…';
+  @override
+  String get video_loop_cue_badge_label => '循环当前句';
+  @override
+  String get video_loop_cue_badge_tooltip => '点击停止循环';
   @override
   String get video_media_server_launch_unavailable =>
       '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
@@ -399152,6 +399261,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_immersive_lock => '切換沉浸鎖定';
   @override
+  String get shortcut_action_video_toggle_loop_current_subtitle =>
+      'Loop current line (on / off)';
+  @override
   String get shortcut_action_video_toggle_mini_chrome => '切換小窗控件';
   @override
   String get shortcut_action_video_toggle_mini_window => '切換小窗';
@@ -404376,6 +404488,10 @@ class _StringsZhHk extends _StringsEn {
   String get video_loading_preparing => '正在準備…';
   @override
   String get video_loading_subtitle => '正在下載字幕…';
+  @override
+  String get video_loop_cue_badge_label => 'Looping line';
+  @override
+  String get video_loop_cue_badge_tooltip => 'Click to stop looping';
   @override
   String get video_media_server_launch_unavailable =>
       'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
@@ -421086,6 +421202,8 @@ extension on _StringsEn {
         return 'Toggle fullscreen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Toggle immersive lock';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
       case 'shortcut_action_video_toggle_mini_window':
@@ -425787,6 +425905,10 @@ extension on _StringsEn {
         return 'Preparing…';
       case 'video_loading_subtitle':
         return 'Downloading subtitles…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -442194,6 +442316,8 @@ extension on _StringsAr {
         return 'تبديل ملء الشاشة';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'تبديل قفل الانغماس';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'تبديل عناصر تحكم النافذة المصغّرة';
       case 'shortcut_action_video_toggle_mini_window':
@@ -446892,6 +447016,10 @@ extension on _StringsAr {
         return 'جارٍ التحضير…';
       case 'video_loading_subtitle':
         return 'جارٍ تحميل الترجمات…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -463358,6 +463486,8 @@ extension on _StringsDe {
         return 'Vollbild umschalten';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersive Sperre umschalten';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Steuerelemente des Mini-Fensters umschalten';
       case 'shortcut_action_video_toggle_mini_window':
@@ -468070,6 +468200,10 @@ extension on _StringsDe {
         return 'Wird vorbereitet…';
       case 'video_loading_subtitle':
         return 'Untertitel werden heruntergeladen…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -484526,6 +484660,8 @@ extension on _StringsEs {
         return 'Alternar pantalla completa';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueo inmersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles de la ventana mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -489236,6 +489372,10 @@ extension on _StringsEs {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Descargando subtítulos…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -505705,6 +505845,8 @@ extension on _StringsFr {
         return 'Basculer en plein écran';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Basculer le verrouillage immersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Basculer les commandes de la mini-fenêtre';
       case 'shortcut_action_video_toggle_mini_window':
@@ -510417,6 +510559,10 @@ extension on _StringsFr {
         return 'Préparation…';
       case 'video_loading_subtitle':
         return 'Téléchargement des sous-titres…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -526844,6 +526990,8 @@ extension on _StringsId {
         return 'Alihkan Layar Penuh';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alihkan Kunci Imersif';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alihkan kontrol jendela mini';
       case 'shortcut_action_video_toggle_mini_window':
@@ -531546,6 +531694,10 @@ extension on _StringsId {
         return 'Mempersiapkan…';
       case 'video_loading_subtitle':
         return 'Mengunduh subtitle…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -547992,6 +548144,8 @@ extension on _StringsIt {
         return 'Attiva/disattiva schermo intero';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Attiva/disattiva blocco immersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Attiva/disattiva i controlli della mini finestra';
       case 'shortcut_action_video_toggle_mini_window':
@@ -552706,6 +552860,10 @@ extension on _StringsIt {
         return 'Preparazione…';
       case 'video_loading_subtitle':
         return 'Download sottotitoli…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -569074,6 +569232,8 @@ extension on _StringsJa {
         return '全画面の切り替え';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'イマーシブロックの切り替え';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'ミニウィンドウのコントロールを切り替え';
       case 'shortcut_action_video_toggle_mini_window':
@@ -573754,6 +573914,10 @@ extension on _StringsJa {
         return '準備中…';
       case 'video_loading_subtitle':
         return '字幕をダウンロード中…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -590105,6 +590269,8 @@ extension on _StringsKo {
         return '전체 화면 전환';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '몰입 잠금 전환';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '미니 창 컨트롤 전환';
       case 'shortcut_action_video_toggle_mini_window':
@@ -594789,6 +594955,10 @@ extension on _StringsKo {
         return '준비 중…';
       case 'video_loading_subtitle':
         return '자막 다운로드 중…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -611226,6 +611396,8 @@ extension on _StringsNl {
         return 'Volledig scherm in-/uitschakelen';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Immersieve vergrendeling in-/uitschakelen';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bediening van minivenster in-/uitschakelen';
       case 'shortcut_action_video_toggle_mini_window':
@@ -615931,6 +616103,10 @@ extension on _StringsNl {
         return 'Voorbereiden…';
       case 'video_loading_subtitle':
         return 'Ondertitels downloaden…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -632378,6 +632554,8 @@ extension on _StringsPtBr {
         return 'Alternar tela cheia';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Alternar bloqueio imersivo';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Alternar controles da minijanela';
       case 'shortcut_action_video_toggle_mini_window':
@@ -637082,6 +637260,10 @@ extension on _StringsPtBr {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Baixando legendas…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -653534,6 +653716,8 @@ extension on _StringsRu {
         return 'Полноэкранный режим';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Иммерсивная блокировка';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Переключить элементы управления мини-окна';
       case 'shortcut_action_video_toggle_mini_window':
@@ -658238,6 +658422,10 @@ extension on _StringsRu {
         return 'Подготовка…';
       case 'video_loading_subtitle':
         return 'Загрузка субтитров…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -674650,6 +674838,8 @@ extension on _StringsTh {
         return 'สลับเต็มจอ';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'สลับล็อกโหมดดื่มด่ำ';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'สลับตัวควบคุมหน้าต่างเล็ก';
       case 'shortcut_action_video_toggle_mini_window':
@@ -679351,6 +679541,10 @@ extension on _StringsTh {
         return 'กำลังเตรียม…';
       case 'video_loading_subtitle':
         return 'กำลังดาวน์โหลดคำบรรยาย…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -695784,6 +695978,8 @@ extension on _StringsTr {
         return 'Tam Ekranı Aç/Kapat';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Sürükleyici Kilidi Aç/Kapat';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Mini pencere denetimlerini aç/kapat';
       case 'shortcut_action_video_toggle_mini_window':
@@ -700488,6 +700684,10 @@ extension on _StringsTr {
         return 'Hazırlanıyor…';
       case 'video_loading_subtitle':
         return 'Altyazılar indiriliyor…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -716913,6 +717113,8 @@ extension on _StringsVi {
         return 'Bật/tắt toàn màn hình';
       case 'shortcut_action_video_toggle_immersive_lock':
         return 'Bật/tắt khóa đắm chìm';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Bật/tắt nút điều khiển cửa sổ thu nhỏ';
       case 'shortcut_action_video_toggle_mini_window':
@@ -721616,6 +721818,10 @@ extension on _StringsVi {
         return 'Đang chuẩn bị…';
       case 'video_loading_subtitle':
         return 'Đang tải phụ đề…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
@@ -737879,6 +738085,8 @@ extension on _StringsZhCn {
         return '切换全屏';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切换沉浸锁定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return '循环当前句（开 / 关）';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切换小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -742520,6 +742728,10 @@ extension on _StringsZhCn {
         return '正在准备…';
       case 'video_loading_subtitle':
         return '正在下载字幕…';
+      case 'video_loop_cue_badge_label':
+        return '循环当前句';
+      case 'video_loop_cue_badge_tooltip':
+        return '点击停止循环';
       case 'video_media_server_launch_unavailable':
         return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
@@ -758800,6 +759012,8 @@ extension on _StringsZhHk {
         return '切換全螢幕';
       case 'shortcut_action_video_toggle_immersive_lock':
         return '切換沉浸鎖定';
+      case 'shortcut_action_video_toggle_loop_current_subtitle':
+        return 'Loop current line (on / off)';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切換小窗控件';
       case 'shortcut_action_video_toggle_mini_window':
@@ -763472,6 +763686,10 @@ extension on _StringsZhHk {
         return '正在準備…';
       case 'video_loading_subtitle':
         return '正在下載字幕…';
+      case 'video_loop_cue_badge_label':
+        return 'Looping line';
+      case 'video_loop_cue_badge_tooltip':
+        return 'Click to stop looping';
       case 'video_media_server_launch_unavailable':
         return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
