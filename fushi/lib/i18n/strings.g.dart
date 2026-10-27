@@ -13565,8 +13565,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_torrent_natpmp => 'NAT-PMP port mapping';
   String get video_setting_torrent_section_antileech => 'Anti-leech';
   String get video_setting_torrent_section_session => 'Session';
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   String get video_setting_torrent_seed_ratio_limit => 'Seed ratio limit';
   String get video_setting_torrent_seed_time_hint =>
       'Stop uploading after seeding this long. 0 = unlimited.';
@@ -37501,8 +37501,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'الجلسة';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'إيقاف الرفع عندما تصل نسبة المرفوع/المحمّل إلى هذه القيمة. 0 = بلا حدود.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'حد نسبة البذر';
   @override
@@ -62548,8 +62548,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sitzung';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Upload stoppen, wenn Upload/Download diesen Wert erreicht. 0 = unbegrenzt.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Seed-Verhältnis-Limit';
   @override
@@ -87674,8 +87674,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sesión';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Dejar de subir cuando subido/descargado alcance esto. 0 = sin límite.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Límite de ratio de seeding';
@@ -112874,8 +112874,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Session';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Arrêter l\'envoi quand le ratio envoyé/téléchargé atteint cette valeur. 0 = illimité.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Limite de ratio de seed';
@@ -137772,8 +137772,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sesi';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Berhenti mengunggah saat rasio diunggah/diunduh mencapai ini. 0 = tidak terbatas.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Batas rasio seed';
   @override
@@ -162793,8 +162793,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessione';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Smetti di caricare quando il rapporto upload/download raggiunge questo valore. 0 = illimitato.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Limite rapporto seed';
   @override
@@ -186880,8 +186880,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'セッション';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'アップロード/ダウンロード比がこの値に達したら停止します。0 = 無制限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'シード比率制限';
   @override
@@ -210917,8 +210917,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '세션';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '업로드/다운로드 비율이 이 값에 도달하면 업로드를 중지합니다. 0 = 무제한.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => '시드 비율 제한';
   @override
@@ -235836,8 +235836,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessie';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Stop met uploaden wanneer geüpload/gedownload dit bereikt. 0 = onbeperkt.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Seedratiolimiet';
   @override
@@ -260878,8 +260878,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Sessão';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Parar upload quando upload/download atingir isso. 0 = ilimitado.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit =>
       'Limite de ratio de seed';
@@ -285870,8 +285870,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Сессия';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Прекратить раздачу, когда соотношение отдано/загружено достигнет этого значения. 0 = без ограничений.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Лимит рейтинга раздачи';
   @override
@@ -310570,8 +310570,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'เซสชัน';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'หยุดอัปโหลดเมื่ออัตราส่วนอัปโหลด/ดาวน์โหลดถึงค่านี้ 0 = ไม่จำกัด';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'จำกัดอัตราส่วนซีด';
   @override
@@ -335434,8 +335434,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Oturum';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Yüklenen/indirilen bu orana ulaşınca yüklemeyi durdur. 0 = sınırsız.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Gönderim oranı limiti';
   @override
@@ -360243,8 +360243,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => 'Phiên';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      'Ngừng tải lên khi tỷ lệ tải lên/tải xuống đạt mức này. 0 = không giới hạn.';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => 'Giới hạn tỷ lệ seed';
   @override
@@ -383096,8 +383096,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '会话设置';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '上传/下载比值达到此值后停止上传。0 = 不限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      '上传量/下载量达到此值即停止上传——按种子整个生命周期累计，含下载过程中的上传（下载照常继续）。0 = 不限。';
   @override
   String get video_setting_torrent_seed_ratio_limit => '做种分享率上限';
   @override
@@ -406445,8 +406445,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_torrent_section_session => '會話設定';
   @override
-  String get video_setting_torrent_seed_ratio_hint =>
-      '上傳/下載比值達到此值後停止上傳。0 = 不限。';
+  String get video_setting_torrent_seed_ratio_lifetime_hint =>
+      'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
   @override
   String get video_setting_torrent_seed_ratio_limit => '做種分享率上限';
   @override
@@ -427778,8 +427778,8 @@ extension on _StringsEn {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Session';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Stop uploading when uploaded/downloaded reaches this. 0 = unlimited.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seed ratio limit';
       case 'video_setting_torrent_seed_time_hint':
@@ -448929,8 +448929,8 @@ extension on _StringsAr {
         return 'مكافحة الاستغلال';
       case 'video_setting_torrent_section_session':
         return 'الجلسة';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'إيقاف الرفع عندما تصل نسبة المرفوع/المحمّل إلى هذه القيمة. 0 = بلا حدود.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'حد نسبة البذر';
       case 'video_setting_torrent_seed_time_hint':
@@ -470155,8 +470155,8 @@ extension on _StringsDe {
         return 'Anti-Leech';
       case 'video_setting_torrent_section_session':
         return 'Sitzung';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Upload stoppen, wenn Upload/Download diesen Wert erreicht. 0 = unbegrenzt.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seed-Verhältnis-Limit';
       case 'video_setting_torrent_seed_time_hint':
@@ -491366,8 +491366,8 @@ extension on _StringsEs {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sesión';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Dejar de subir cuando subido/descargado alcance esto. 0 = sin límite.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Límite de ratio de seeding';
       case 'video_setting_torrent_seed_time_hint':
@@ -512594,8 +512594,8 @@ extension on _StringsFr {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Session';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Arrêter l\'envoi quand le ratio envoyé/téléchargé atteint cette valeur. 0 = illimité.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite de ratio de seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -533767,8 +533767,8 @@ extension on _StringsId {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sesi';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Berhenti mengunggah saat rasio diunggah/diunduh mencapai ini. 0 = tidak terbatas.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Batas rasio seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -554973,8 +554973,8 @@ extension on _StringsIt {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessione';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Smetti di caricare quando il rapporto upload/download raggiunge questo valore. 0 = illimitato.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite rapporto seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -576061,8 +576061,8 @@ extension on _StringsJa {
         return 'アンチリーチ';
       case 'video_setting_torrent_section_session':
         return 'セッション';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'アップロード/ダウンロード比がこの値に達したら停止します。0 = 無制限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'シード比率制限';
       case 'video_setting_torrent_seed_time_hint':
@@ -597144,8 +597144,8 @@ extension on _StringsKo {
         return '안티리치';
       case 'video_setting_torrent_section_session':
         return '세션';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '업로드/다운로드 비율이 이 값에 도달하면 업로드를 중지합니다. 0 = 무제한.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return '시드 비율 제한';
       case 'video_setting_torrent_seed_time_hint':
@@ -618338,8 +618338,8 @@ extension on _StringsNl {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessie';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Stop met uploaden wanneer geüpload/gedownload dit bereikt. 0 = onbeperkt.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Seedratiolimiet';
       case 'video_setting_torrent_seed_time_hint':
@@ -639534,8 +639534,8 @@ extension on _StringsPtBr {
         return 'Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'Sessão';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Parar upload quando upload/download atingir isso. 0 = ilimitado.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Limite de ratio de seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -660735,8 +660735,8 @@ extension on _StringsRu {
         return 'Анти-лич';
       case 'video_setting_torrent_section_session':
         return 'Сессия';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Прекратить раздачу, когда соотношение отдано/загружено достигнет этого значения. 0 = без ограничений.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Лимит рейтинга раздачи';
       case 'video_setting_torrent_seed_time_hint':
@@ -681892,8 +681892,8 @@ extension on _StringsTh {
         return 'ป้องกัน Anti-leech';
       case 'video_setting_torrent_section_session':
         return 'เซสชัน';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'หยุดอัปโหลดเมื่ออัตราส่วนอัปโหลด/ดาวน์โหลดถึงค่านี้ 0 = ไม่จำกัด';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'จำกัดอัตราส่วนซีด';
       case 'video_setting_torrent_seed_time_hint':
@@ -703078,8 +703078,8 @@ extension on _StringsTr {
         return 'Sülük önleme';
       case 'video_setting_torrent_section_session':
         return 'Oturum';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Yüklenen/indirilen bu orana ulaşınca yüklemeyi durdur. 0 = sınırsız.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Gönderim oranı limiti';
       case 'video_setting_torrent_seed_time_hint':
@@ -724250,8 +724250,8 @@ extension on _StringsVi {
         return 'Chống leech';
       case 'video_setting_torrent_section_session':
         return 'Phiên';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return 'Ngừng tải lên khi tỷ lệ tải lên/tải xuống đạt mức này. 0 = không giới hạn.';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return 'Giới hạn tỷ lệ seed';
       case 'video_setting_torrent_seed_time_hint':
@@ -745191,8 +745191,8 @@ extension on _StringsZhCn {
         return '反吸血';
       case 'video_setting_torrent_section_session':
         return '会话设置';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '上传/下载比值达到此值后停止上传。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return '上传量/下载量达到此值即停止上传——按种子整个生命周期累计，含下载过程中的上传（下载照常继续）。0 = 不限。';
       case 'video_setting_torrent_seed_ratio_limit':
         return '做种分享率上限';
       case 'video_setting_torrent_seed_time_hint':
@@ -766190,8 +766190,8 @@ extension on _StringsZhHk {
         return '反吸血';
       case 'video_setting_torrent_section_session':
         return '會話設定';
-      case 'video_setting_torrent_seed_ratio_hint':
-        return '上傳/下載比值達到此值後停止上傳。0 = 不限。';
+      case 'video_setting_torrent_seed_ratio_lifetime_hint':
+        return 'Stop uploading once uploaded/downloaded reaches this — counted over the torrent\'s whole lifetime, including uploads while it is still downloading (downloading continues). 0 = unlimited.';
       case 'video_setting_torrent_seed_ratio_limit':
         return '做種分享率上限';
       case 'video_setting_torrent_seed_time_hint':
